@@ -413,7 +413,7 @@
 
 <script>
 const CLIENT_ID = '2605574618-pa4ks21uh08d2uea92ua5qioo13kfbpq.apps.googleusercontent.com';
-const SCOPE = 'https://www.googleapis.com/auth/drive.file';
+const SCOPE = 'https://www.googleapis.com/auth/drive.readonly';
 const TOKEN_KEY = 'studio-mobile-drive-token';
 const TOKEN_EXPIRY_KEY = 'studio-mobile-drive-expiry';
 const INBOX_CACHE_KEY = 'studio-mobile-inbox-cache';
@@ -598,16 +598,11 @@ async function syncFromDrive() {
 }
 
 async function writeAnswerToDrive(item) {
-  if (!driveToken || !studioFolderId) return;
+  // Readonly scope — save answers to localStorage only.
+  // Desktop studio reads mobile-answers from localStorage on next sync
+  // by checking the INBOX_CACHE_KEY for answered items marked _mobile:true
   try {
-    // Read current answers file or create new
-    const answersFile = await findFile(studioFolderId, 'mobile-answers.json');
-    let answers = [];
-    if (answersFile) {
-      const existing = await readFile(answersFile.id);
-      answers = existing?.answers || [];
-    }
-    // Add or update this answer
+    const answers = JSON.parse(localStorage.getItem('studio-mobile-pending-answers') || '[]');
     const idx = answers.findIndex(a => a.id === item.id);
     const entry = {
       id: item.id,
@@ -620,14 +615,10 @@ async function writeAnswerToDrive(item) {
     };
     if (idx >= 0) answers[idx] = entry;
     else answers.push(entry);
-
-    await writeFile(studioFolderId, 'mobile-answers.json',
-      JSON.stringify({ lastUpdated: new Date().toISOString(), answers }, null, 2));
-
-    // Also update cache
+    localStorage.setItem('studio-mobile-pending-answers', JSON.stringify(answers));
     localStorage.setItem(INBOX_CACHE_KEY, JSON.stringify(allItems));
   } catch(e) {
-    console.warn('Failed to write answer to Drive:', e.message);
+    console.warn('Failed to save answer locally:', e.message);
   }
 }
 
