@@ -554,44 +554,69 @@ async function syncFromDrive() {
   setStatus('syncing', 'Syncing from Drive...');
 
   try {
-    // Find root Drive folder
-    const rootData = await driveGet(
+    // Try to find Projects folder — search all of Drive by name
+    let projectsId = null;
+
+    // First try: search anywhere on Drive
+    const search1 = await driveGet(
       `https://www.googleapis.com/drive/v3/files?` +
-      `q=${encodeURIComponent(`name='${PROJECTS_FOLDER}' and mimeType='application/vnd.google-apps.folder' and trashed=false`)}` +
-      `&fields=files(id,name)&pageSize=5`
+      `q=${encodeURIComponent(`name='Projects' and mimeType='application/vnd.google-apps.folder' and trashed=false`)}` +
+      `&fields=files(id,name,parents)&pageSize=10`
     );
-    if (!rootData?.files?.length) throw new Error('Projects folder not found');
-    projectsFolderId = rootData.files[0].id;
 
-    // Find _studio folder
-    const studioFolder = await findFolder(projectsFolderId, '_studio');
-    if (!studioFolder) throw new Error('_studio folder not found');
-    studioFolderId = studioFolder.id;
-
-    // Read mobile-inbox.json (written by studio desktop)
-    let inboxData = null;
-    const inboxFile = await findFile(studioFolderId, 'mobile-inbox.json');
-    if (inboxFile) {
-      inboxData = await readFile(inboxFile.id);
+    if (search1?.files?.length) {
+      // Prefer the one in root/My Drive
+      projectsId = search1.files[0].id;
+      projectsFolderId = projectsId;
+    } else {
+      throw new Error('Projects folder not found on Drive. Make sure Drive is connected on desktop studio and hit Refresh there first.');
     }
 
-    if (inboxData && inboxData.items) {
-      allItems = inboxData.items;
-      localStorage.setItem(INBOX_CACHE_KEY, JSON.stringify(allItems));
-      const pending = allItems.filter(d => d.status !== 'answered' && d.status !== 'deferred').length;
-      setStatus('connected', `Synced — ${pending} pending, ${allItems.length} total`);
-    } else {
-      // Fall back to cached data
-      const cached = localStorage.getItem(INBOX_CACHE_KEY);
-      if (cached) {
-        allItems = JSON.parse(cached);
-        setStatus('connected', `Using cached data — no mobile-inbox.json found on Drive yet`);
-      } else {
-        setStatus('error', 'No inbox data found. Run studio desktop first to export mobile inbox.');
+    // Find _studio folder inside Projects
+    const studioSearch = await driveGet(
+      `https://www.googleapis.com/drive/v3/files?` +
+      `q=${encodeURIComponent(`name='_studio' and mimeType='application/vnd.google-apps.folder' and '${projectsId}' in parents and trashed=false`)}` +
+      `&fields=files(id,name)&pageSize=5`
+    );
+    if (!studioSearch?.files?.length) throw new Error('_studio folder not found inside Projects');
+    studioFolderId = studioSearch.files[0].id;
+
+    // Look for mobile-inbox.json
+    const inboxSearch = await driveGet(
+      `https://www.googleapis.com/drive/v3/files?` +
+      `q=${encodeURIComponent(`name='mobile-inbox.json' and '${studioFolderId}' in parents and trashed=false`)}` +
+      `&fields=files(id,name,modifiedTime)&pageSize=2`
+    );
+
+    if (inboxSearch?.files?.length) {
+      const fileId = inboxSearch.files[0].id;
+      const res = await fetch(
+        `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
+        { headers: { Authorization: `Bearer ${driveToken}` } }
+      );
+      if (res.ok) {
+        const inboxData = await res.json();
+        if (inboxData?.items) {
+          allItems = inboxData.items;
+          localStorage.setItem(INBOX_CACHE_KEY, JSON.stringify(allItems));
+          const pending = allItems.filter(d => d.status !== 'answered' && d.status !== 'deferred').length;
+          setStatus('connected', `Synced — ${pending} pending items`);
+          renderInbox();
+          return;
+        }
       }
     }
 
-    renderInbox();
+    // No mobile-inbox.json yet
+    const cached = localStorage.getItem(INBOX_CACHE_KEY);
+    if (cached) {
+      allItems = JSON.parse(cached);
+      setStatus('connected', 'Using cached data — open desktop studio and hit Refresh to export fresh inbox');
+      renderInbox();
+    } else {
+      setStatus('error', 'No inbox data yet — open desktop studio, connect Drive, hit Refresh to export mobile inbox');
+    }
+
   } catch(e) {
     setStatus('error', `Sync failed: ${e.message}`);
   }
