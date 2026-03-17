@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#080c0a">
+<title>Studio Inbox</title>
+<style>
+  html, body { background: #080c0a !important; }
+  :root {
+    --bg: #080c0a;
+    --panel: #0d1210;
+    --border: rgba(57,255,20,0.12);
+    --green: #39ff14;
+    --green-dim: rgba(57,255,20,0.3);
+    --amber: #ffb700;
+    --red: #ff3a3a;
+    --cyan: #00ffe9;
+    --purple: #a855f7;
+    --orange: #ff6a00;
+    --text: #c8d4c0;
+    --text-dim: #5a6b54;
+    --font: -apple-system, 'Share Tech Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    min-height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* HEADER */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px 8px;
+    padding-top: calc(12px + env(safe-area-inset-top));
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .logo { font-size: 13px; color: var(--green); letter-spacing: 2px; }
+  .badge {
+    font-size: 11px;
+    background: var(--green-dim);
+    color: var(--green);
+    padding: 3px 8px;
+    border-radius: 12px;
+    border: 1px solid var(--green-dim);
+  }
+  .connect-btn {
+    background: none;
+    border: 1px solid var(--green-dim);
+    color: var(--green);
+    font-family: var(--font);
+    font-size: 11px;
+    padding: 6px 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .connect-btn.connected { border-color: var(--border); color: var(--text-dim); }
+
+  /* FILTERS */
+  .filters {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter-btn {
+    flex-shrink: 0;
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--font);
+    font-size: 10px;
+    padding: 4px 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .filter-btn.active {
+    border-color: var(--green-dim);
+    color: var(--green);
+    background: rgba(57,255,20,0.05);
+  }
+  .filter-btn.revenue.active {
+    border-color: rgba(57,255,20,0.5);
+    color: var(--green);
+  }
+
+  /* STATUS BAR */
+  .status {
+    font-size: 10px;
+    color: var(--text-dim);
+    padding: 6px 16px;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: 1px;
+  }
+  .status.error { color: var(--red); }
+  .status.syncing { color: var(--amber); }
+  .status.connected { color: var(--green); }
+
+  /* INBOX LIST */
+  .inbox { padding: 0; }
+
+  .project-header {
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    padding: 10px 16px 4px;
+    background: #060809;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+  }
+
+  .item {
+    border-left: 3px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.1s;
+    position: relative;
+  }
+  .item:active { background: rgba(57,255,20,0.04); }
+  .item.answered { opacity: 0.4; }
+  .item.critical { border-left-color: var(--red); }
+  .item.locked { opacity: 0.5; }
+
+  .item[data-type="decision"] { border-left-color: rgba(255,183,0,0.4); }
+  .item[data-type="janitor"] { border-left-color: rgba(255,106,0,0.4); }
+  .item[data-type="stresstester"] { border-left-color: rgba(255,0,255,0.4); }
+  .item[data-type="compliance"] { border-left-color: rgba(255,58,58,0.5); }
+  .item[data-type="claudecode"] { border-left-color: rgba(57,255,20,0.3); }
+  .item[data-type="scout"] { border-left-color: rgba(0,255,234,0.3); }
+  .item[data-type="orchestrator"] { border-left-color: rgba(0,212,255,0.3); }
+  .item[data-type="proactive"] { border-left-color: rgba(168,85,247,0.4); }
+
+  .item-question {
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .item.answered .item-question { color: var(--text-dim); }
+
+  .item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .type-tag {
+    font-size: 9px;
+    letter-spacing: 1px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+  .importance-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .score-text { font-size: 10px; color: var(--text-dim); }
+  .revenue-tag {
+    font-size: 9px;
+    color: var(--green);
+    border: 1px solid var(--green-dim);
+    padding: 1px 5px;
+    letter-spacing: 1px;
+  }
+  .answer-text {
+    font-size: 10px;
+    color: var(--text-dim);
+    font-style: italic;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .chain-tag { font-size: 10px; color: var(--cyan); }
+  .done-tag { font-size: 10px; color: var(--green); }
+
+  /* EMPTY STATE */
+  .empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* BOTTOM SHEET */
+  .sheet-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+  }
+  .sheet-overlay.open { display: block; }
+  .sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    padding: 0 0 calc(16px + env(safe-area-inset-bottom));
+    max-height: 92vh;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.25s ease;
+    z-index: 201;
+  }
+  .sheet.open { transform: translateY(0); }
+
+  .sheet-handle {
+    width: 36px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin: 12px auto 0;
+  }
+  .sheet-header {
+    padding: 12px 16px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sheet-project {
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+  .sheet-question {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .sheet-context {
+    font-size: 12px;
+    color: var(--text-dim);
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+  }
+  .sheet-rec {
+    font-size: 11px;
+    color: var(--amber);
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.4;
+  }
+  .options-list { padding: 8px 0; }
+  .option-btn {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 14px;
+    padding: 14px 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+  .option-btn:active { background: rgba(57,255,20,0.06); }
+  .option-btn.selected {
+    color: var(--green);
+    background: rgba(57,255,20,0.06);
+    border-left: 3px solid var(--green);
+  }
+
+  .custom-input {
+    display: block;
+    width: calc(100% - 32px);
+    margin: 8px 16px;
+    background: rgba(57,255,20,0.04);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    outline: none;
+  }
+  .custom-input:focus { border-color: var(--green-dim); }
+
+  .sheet-actions {
+    display: flex;
+    gap: 8px;
+    padding: 8px 16px;
+  }
+  .confirm-btn {
+    flex: 1;
+    background: rgba(57,255,20,0.1);
+    border: 1px solid var(--green-dim);
+    color: var(--green);
+    font-family: var(--font);
+    font-size: 13px;
+    padding: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .confirm-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .defer-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    font-family: var(--font);
+    font-size: 13px;
+    padding: 14px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /* SYNC BUTTON */
+  .sync-fab {
+    position: fixed;
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    right: 20px;
+    background: rgba(57,255,20,0.1);
+    border: 1px solid var(--green-dim);
+    color: var(--green);
+    font-family: var(--font);
+    font-size: 11px;
+    padding: 10px 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 20px;
+    z-index: 50;
+  }
+
+  /* LOADING */
+  .loading {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div class="logo">// STUDIO INBOX</div>
+    <div style="display:flex;gap:8px;align-items:center;">
+      <span class="badge" id="count-badge">0</span>
+      <button class="connect-btn" id="connect-btn" onclick="handleAuth()">☁ CONNECT</button>
+    </div>
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" onclick="setFilter('all',this)">ALL</button>
+    <button class="filter-btn revenue" onclick="setFilter('revenue',this)">$ REVENUE</button>
+    <button class="filter-btn" onclick="setFilter('decision',this)">DECISIONS</button>
+    <button class="filter-btn" onclick="setFilter('janitor',this)">JANITOR</button>
+    <button class="filter-btn" onclick="setFilter('stress',this)">STRESS</button>
+    <button class="filter-btn" onclick="setFilter('answered',this)">DONE</button>
+  </div>
+</div>
+
+<div class="status" id="status-bar">Not connected — tap CONNECT to sync inbox</div>
+
+<div id="inbox-root"></div>
+
+<button class="sync-fab" id="sync-fab" onclick="syncFromDrive()" style="display:none">⟳ SYNC</button>
+
+<!-- BOTTOM SHEET -->
+<div class="sheet-overlay" id="sheet-overlay" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-header">
+    <div class="sheet-project" id="s-project"></div>
+    <div class="sheet-question" id="s-question"></div>
+  </div>
+  <div class="sheet-context" id="s-context"></div>
+  <div class="sheet-rec" id="s-rec" style="display:none"></div>
+  <div class="options-list" id="s-options"></div>
+  <input class="custom-input" id="s-custom" placeholder="Custom answer..." oninput="onCustomInput()">
+  <div class="sheet-actions">
+    <button class="confirm-btn" id="s-confirm" onclick="confirmAnswer()" disabled>✓ CONFIRM</button>
+    <button class="defer-btn" onclick="deferItem()">DEFER</button>
+  </div>
+</div>
+
+<script>
+const CLIENT_ID = '2605574618-pa4ks21uh08d2uea92ua5qioo13kfbpq.apps.googleusercontent.com';
+const SCOPE = 'https://www.googleapis.com/auth/drive.file';
+const TOKEN_KEY = 'studio-mobile-drive-token';
+const TOKEN_EXPIRY_KEY = 'studio-mobile-drive-expiry';
+const INBOX_CACHE_KEY = 'studio-mobile-inbox-cache';
+const PROJECTS_FOLDER = 'Projects';
+
+let driveToken = null;
+let allItems = [];
+let currentFilter = 'all';
+let selectedItem = null;
+let selectedAnswer = null;
+let studioFolderId = null;
+let projectsFolderId = null;
+
+// ── AUTH ──────────────────────────────────────────────────────
+
+function handleAuth() {
+  const saved = localStorage.getItem(TOKEN_KEY);
+  const expiry = parseInt(localStorage.getItem(TOKEN_EXPIRY_KEY) || '0');
+  if (saved && Date.now() < expiry) {
+    driveToken = saved;
+    setStatus('connected', 'Connected — syncing...');
+    document.getElementById('connect-btn').textContent = '✓ CONNECTED';
+    document.getElementById('connect-btn').classList.add('connected');
+    document.getElementById('sync-fab').style.display = 'block';
+    syncFromDrive();
+    return;
+  }
+
+  // Check OAuth callback
+  if (checkOAuthCallback()) return;
+
+  // Start OAuth
+  const redirect = window.location.href.split('?')[0].split('#')[0];
+  const url = `https://accounts.google.com/o/oauth2/v2/auth` +
+    `?client_id=${encodeURIComponent(CLIENT_ID)}` +
+    `&redirect_uri=${encodeURIComponent(redirect)}` +
+    `&response_type=token` +
+    `&scope=${encodeURIComponent(SCOPE)}` +
+    `&prompt=consent`;
+  window.location.href = url;
+}
+
+function checkOAuthCallback() {
+  const hash = window.location.hash;
+  if (!hash.includes('access_token')) return false;
+  const params = new URLSearchParams(hash.replace('#','?'));
+  const token = params.get('access_token');
+  const expiresIn = parseInt(params.get('expires_in') || '3600');
+  if (token) {
+    driveToken = token;
+    localStorage.setItem(TOKEN_KEY, token);
+    localStorage.setItem(TOKEN_EXPIRY_KEY, Date.now() + expiresIn * 1000);
+    history.replaceState(null, '', window.location.pathname);
+    document.getElementById('connect-btn').textContent = '✓ CONNECTED';
+    document.getElementById('connect-btn').classList.add('connected');
+    document.getElementById('sync-fab').style.display = 'block';
+    setStatus('connected', 'Connected — syncing...');
+    syncFromDrive();
+    return true;
+  }
+  return false;
+}
+
+// ── DRIVE API ─────────────────────────────────────────────────
+
+async function driveGet(url) {
+  const res = await fetch(url, { headers: { Authorization: `Bearer ${driveToken}` } });
+  if (res.status === 401) {
+    driveToken = null;
+    localStorage.removeItem(TOKEN_KEY);
+    setStatus('error', 'Session expired — tap CONNECT again');
+    document.getElementById('connect-btn').textContent = '☁ CONNECT';
+    document.getElementById('connect-btn').classList.remove('connected');
+    return null;
+  }
+  if (!res.ok) throw new Error(`Drive error ${res.status}`);
+  return res.json();
+}
+
+async function findFolder(parentId, name) {
+  const data = await driveGet(
+    `https://www.googleapis.com/drive/v3/files?` +
+    `q=${encodeURIComponent(`'${parentId}' in parents and name='${name}' and mimeType='application/vnd.google-apps.folder' and trashed=false`)}` +
+    `&fields=files(id,name)&pageSize=5`
+  );
+  return data?.files?.[0] || null;
+}
+
+async function findFile(parentId, name) {
+  const data = await driveGet(
+    `https://www.googleapis.com/drive/v3/files?` +
+    `q=${encodeURIComponent(`'${parentId}' in parents and name='${name}' and trashed=false`)}` +
+    `&fields=files(id,name,modifiedTime)&pageSize=2`
+  );
+  return data?.files?.[0] || null;
+}
+
+async function readFile(fileId) {
+  const res = await fetch(
+    `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
+    { headers: { Authorization: `Bearer ${driveToken}` } }
+  );
+  if (!res.ok) return null;
+  return res.json();
+}
+
+async function writeFile(parentId, filename, content) {
+  const searchData = await driveGet(
+    `https://www.googleapis.com/drive/v3/files?` +
+    `q=${encodeURIComponent(`'${parentId}' in parents and name='${filename}' and trashed=false`)}` +
+    `&fields=files(id)&pageSize=2`
+  );
+  const blob = new Blob([content], { type: 'application/json' });
+  if (searchData?.files?.length > 0) {
+    const fileId = searchData.files[0].id;
+    await fetch(
+      `https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=media`,
+      { method: 'PATCH', headers: { Authorization: `Bearer ${driveToken}`, 'Content-Type': 'application/json' }, body: content }
+    );
+    return fileId;
+  } else {
+    const form = new FormData();
+    form.append('metadata', new Blob([JSON.stringify({ name: filename, parents: [parentId] })], { type: 'application/json' }));
+    form.append('file', blob);
+    const res = await fetch(
+      'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart',
+      { method: 'POST', headers: { Authorization: `Bearer ${driveToken}` }, body: form }
+    );
+    const data = await res.json();
+    return data.id;
+  }
+}
+
+// ── SYNC ─────────────────────────────────────────────────────
+
+async function syncFromDrive() {
+  if (!driveToken) return;
+  setStatus('syncing', 'Syncing from Drive...');
+
+  try {
+    // Find root Drive folder
+    const rootData = await driveGet(
+      `https://www.googleapis.com/drive/v3/files?` +
+      `q=${encodeURIComponent(`name='${PROJECTS_FOLDER}' and mimeType='application/vnd.google-apps.folder' and trashed=false`)}` +
+      `&fields=files(id,name)&pageSize=5`
+    );
+    if (!rootData?.files?.length) throw new Error('Projects folder not found');
+    projectsFolderId = rootData.files[0].id;
+
+    // Find _studio folder
+    const studioFolder = await findFolder(projectsFolderId, '_studio');
+    if (!studioFolder) throw new Error('_studio folder not found');
+    studioFolderId = studioFolder.id;
+
+    // Read mobile-inbox.json (written by studio desktop)
+    let inboxData = null;
+    const inboxFile = await findFile(studioFolderId, 'mobile-inbox.json');
+    if (inboxFile) {
+      inboxData = await readFile(inboxFile.id);
+    }
+
+    if (inboxData && inboxData.items) {
+      allItems = inboxData.items;
+      localStorage.setItem(INBOX_CACHE_KEY, JSON.stringify(allItems));
+      const pending = allItems.filter(d => d.status !== 'answered' && d.status !== 'deferred').length;
+      setStatus('connected', `Synced — ${pending} pending, ${allItems.length} total`);
+    } else {
+      // Fall back to cached data
+      const cached = localStorage.getItem(INBOX_CACHE_KEY);
+      if (cached) {
+        allItems = JSON.parse(cached);
+        setStatus('connected', `Using cached data — no mobile-inbox.json found on Drive yet`);
+      } else {
+        setStatus('error', 'No inbox data found. Run studio desktop first to export mobile inbox.');
+      }
+    }
+
+    renderInbox();
+  } catch(e) {
+    setStatus('error', `Sync failed: ${e.message}`);
+  }
+}
+
+async function writeAnswerToDrive(item) {
+  if (!driveToken || !studioFolderId) return;
+  try {
+    // Read current answers file or create new
+    const answersFile = await findFile(studioFolderId, 'mobile-answers.json');
+    let answers = [];
+    if (answersFile) {
+      const existing = await readFile(answersFile.id);
+      answers = existing?.answers || [];
+    }
+    // Add or update this answer
+    const idx = answers.findIndex(a => a.id === item.id);
+    const entry = {
+      id: item.id,
+      project: item.project,
+      question: item.question,
+      answer: item.answer,
+      status: item.status,
+      answeredAt: new Date().toISOString(),
+      _mobile: true
+    };
+    if (idx >= 0) answers[idx] = entry;
+    else answers.push(entry);
+
+    await writeFile(studioFolderId, 'mobile-answers.json',
+      JSON.stringify({ lastUpdated: new Date().toISOString(), answers }, null, 2));
+
+    // Also update cache
+    localStorage.setItem(INBOX_CACHE_KEY, JSON.stringify(allItems));
+  } catch(e) {
+    console.warn('Failed to write answer to Drive:', e.message);
+  }
+}
+
+// ── RENDER ────────────────────────────────────────────────────
+
+const TYPE_COLORS = {
+  decision: '#ffb700', janitor: '#ff6a00', stresstester: '#ff00ff',
+  compliance: '#ff3a3a', claudecode: '#39ff14', scout: '#00ffe9',
+  orchestrator: '#00d4ff', proactive: '#a855f7'
+};
+
+const TYPE_LABELS = {
+  decision: 'DECISION', janitor: 'JANITOR', stresstester: 'STRESS TEST',
+  compliance: 'COMPLIANCE', claudecode: 'CLAUDE CODE', scout: 'SCOUT',
+  orchestrator: 'ORCHESTRATOR', proactive: 'PROACTIVE'
+};
+
+function getFilteredItems() {
+  return allItems.filter(d => {
+    if (currentFilter === 'all') return d.status !== 'answered' && d.status !== 'deferred';
+    if (currentFilter === 'answered') return d.status === 'answered';
+    if (currentFilter === 'revenue') return d._revenueBlock && d.status !== 'answered';
+    if (currentFilter === 'stress') return d.type === 'stresstester' && d.status !== 'answered';
+    return d.type === currentFilter && d.status !== 'answered';
+  });
+}
+
+function importanceDotColor(score) {
+  if (score >= 8) return 'var(--red)';
+  if (score >= 5) return 'var(--amber)';
+  return 'var(--text-dim)';
+}
+
+function renderInbox() {
+  const root = document.getElementById('inbox-root');
+  const items = getFilteredItems();
+
+  // Update badge
+  const pending = allItems.filter(d => d.status !== 'answered' && d.status !== 'deferred').length;
+  document.getElementById('count-badge').textContent = pending;
+
+  if (items.length === 0) {
+    root.innerHTML = `<div class="empty">
+      ${currentFilter === 'revenue' ? '✓ No revenue-blocking items' : '✓ All clear in this view'}
+      <br><br><span style="font-size:11px;color:var(--text-dim)">Tap ⟳ SYNC to refresh from Drive</span>
+    </div>`;
+    return;
+  }
+
+  // Sort by importance (revenue first, then score)
+  const sorted = [...items].sort((a,b) => {
+    const aRev = a._revenueBlock ? 1 : 0;
+    const bRev = b._revenueBlock ? 1 : 0;
+    if (bRev !== aRev) return bRev - aRev;
+    return (b.importance || b._importanceScore || 3) - (a.importance || a._importanceScore || 3);
+  });
+
+  // Group by project
+  const grouped = {};
+  sorted.forEach(d => {
+    if (!grouped[d.project]) grouped[d.project] = [];
+    grouped[d.project].push(d);
+  });
+
+  root.innerHTML = Object.entries(grouped).map(([project, items]) => {
+    return `<div class="project-header">${project}</div>` +
+      items.map(d => {
+        const score = d.importance || d._importanceScore || 3;
+        const dotColor = importanceDotColor(score);
+        const typeLabel = TYPE_LABELS[d.type] || d.type?.toUpperCase() || 'AGENT';
+        const typeColor = TYPE_COLORS[d.type] || 'var(--text-dim)';
+        const isAnswered = d.status === 'answered';
+        const isLocked = d._chainLocked;
+
+        return `<div class="item ${isAnswered ? 'answered' : ''} ${d.status === 'critical' ? 'critical' : ''} ${isLocked ? 'locked' : ''}"
+          data-type="${d.type || 'decision'}"
+          onclick="${isLocked ? 'alert(\'Waiting on earlier question in chain\')' : `openItem('${d.id}')`}">
+          <div class="item-question">${d.question}</div>
+          <div class="item-meta">
+            <span class="importance-dot" style="background:${dotColor}"></span>
+            <span class="score-text">${score}/10</span>
+            <span class="type-tag" style="color:${typeColor};border-color:${typeColor}33">${typeLabel}</span>
+            ${d._revenueBlock ? '<span class="revenue-tag">$ REVENUE</span>' : ''}
+            ${isAnswered ? `<span class="done-tag">✓ ${(d.answer||'').slice(0,25)}</span>` : ''}
+            ${d._chainId ? `<span class="chain-tag">⛓ ${d._chainPos||'?'}/${d._chainTotal||'?'}</span>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+  }).join('');
+}
+
+// ── ITEM DETAIL ───────────────────────────────────────────────
+
+function openItem(id) {
+  const item = allItems.find(d => d.id === id);
+  if (!item) return;
+  selectedItem = item;
+  selectedAnswer = item.answer || null;
+
+  document.getElementById('s-project').textContent = item.project + ' — ' + (item.type||'').toUpperCase();
+  document.getElementById('s-question').textContent = item.question;
+  document.getElementById('s-context').textContent = item.context || '';
+
+  const rec = document.getElementById('s-rec');
+  if (item.recommendation) {
+    rec.textContent = '→ ' + item.recommendation;
+    rec.style.display = 'block';
+  } else {
+    rec.style.display = 'none';
+  }
+
+  const opts = document.getElementById('s-options');
+  opts.innerHTML = (item.options || []).map(opt => `
+    <button class="option-btn ${item.answer === opt ? 'selected' : ''}"
+      onclick="selectOption('${opt.replace(/'/g,"\\'")}')">
+      ${opt}
+    </button>`).join('');
+
+  document.getElementById('s-custom').value = '';
+  document.getElementById('s-confirm').disabled = !selectedAnswer;
+
+  document.getElementById('sheet-overlay').classList.add('open');
+  document.getElementById('sheet').classList.add('open');
+}
+
+function selectOption(opt) {
+  selectedAnswer = opt;
+  document.querySelectorAll('.option-btn').forEach(b => {
+    b.classList.toggle('selected', b.textContent.trim() === opt);
+  });
+  document.getElementById('s-confirm').disabled = false;
+}
+
+function onCustomInput() {
+  const val = document.getElementById('s-custom').value.trim();
+  if (val) {
+    selectedAnswer = val;
+    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('s-confirm').disabled = false;
+  }
+}
+
+async function confirmAnswer() {
+  const customVal = document.getElementById('s-custom').value.trim();
+  if (customVal) selectedAnswer = customVal;
+  if (!selectedItem || !selectedAnswer) return;
+
+  selectedItem.answer = selectedAnswer;
+  selectedItem.status = 'answered';
+  selectedItem._answeredOnMobile = true;
+  selectedItem._answeredAt = new Date().toISOString();
+
+  document.getElementById('s-confirm').disabled = true;
+  document.getElementById('s-confirm').textContent = 'Saving...';
+
+  await writeAnswerToDrive(selectedItem);
+
+  document.getElementById('s-confirm').textContent = '✓ CONFIRMED';
+  setTimeout(() => {
+    closeSheet();
+    renderInbox();
+    document.getElementById('s-confirm').textContent = '✓ CONFIRM';
+    document.getElementById('s-confirm').disabled = false;
+  }, 800);
+}
+
+function deferItem() {
+  if (!selectedItem) return;
+  selectedItem.status = 'deferred';
+  localStorage.setItem(INBOX_CACHE_KEY, JSON.stringify(allItems));
+  closeSheet();
+  renderInbox();
+}
+
+function closeSheet() {
+  document.getElementById('sheet-overlay').classList.remove('open');
+  document.getElementById('sheet').classList.remove('open');
+  selectedItem = null;
+  selectedAnswer = null;
+}
+
+// ── FILTER ───────────────────────────────────────────────────
+
+function setFilter(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderInbox();
+}
+
+// ── STATUS ───────────────────────────────────────────────────
+
+function setStatus(type, msg) {
+  const el = document.getElementById('status-bar');
+  el.textContent = msg;
+  el.className = 'status ' + type;
+}
+
+// ── INIT ─────────────────────────────────────────────────────
+
+(function init() {
+  // Load cached items immediately
+  const cached = localStorage.getItem(INBOX_CACHE_KEY);
+  if (cached) {
+    try {
+      allItems = JSON.parse(cached);
+      renderInbox();
+      setStatus('', 'Showing cached data — tap CONNECT to sync');
+    } catch(e) {}
+  }
+
+  // Check if returning from OAuth
+  if (window.location.hash.includes('access_token')) {
+    handleAuth();
+    return;
+  }
+
+  // Auto-connect if token valid
+  const saved = localStorage.getItem(TOKEN_KEY);
+  const expiry = parseInt(localStorage.getItem(TOKEN_EXPIRY_KEY) || '0');
+  if (saved && Date.now() < expiry) {
+    driveToken = saved;
+    document.getElementById('connect-btn').textContent = '✓ CONNECTED';
+    document.getElementById('connect-btn').classList.add('connected');
+    document.getElementById('sync-fab').style.display = 'block';
+    syncFromDrive();
+  }
+})();
+</script>
+</body>
+</html>
