@@ -1,0 +1,377 @@
+[
+  {
+    "id": "acuscan-d001",
+    "project": "acuscan-ar",
+    "question": "Use WebXR or Canvas overlay for AR rendering?",
+    "options": ["WebXR", "Canvas overlay on video element"],
+    "type": "decision",
+    "recommendation": "Canvas overlay — broader mobile browser support"
+  },
+  {
+    "id": "acuscan-p001",
+    "project": "acuscan-ar",
+    "question": "If hand tracking lags on older phones — prioritize speed or visual accuracy?",
+    "options": ["Speed — reduce polling rate", "Visual accuracy — keep full fidelity"],
+    "type": "question"
+  },
+  {
+    "id": "acuscan-p002",
+    "project": "acuscan-ar",
+    "question": "Point descriptions: text overlaid on camera or separate info panel below?",
+    "options": ["Text on camera — cleaner", "Panel below — easier to read"],
+    "type": "question"
+  },
+  {
+    "id": "acuscan-p003",
+    "project": "acuscan-ar",
+    "question": "Eventually monetize AcuScan AR or keep it free/personal?",
+    "options": ["Monetize later", "Keep free/personal"],
+    "type": "question"
+  },
+  {
+    "id": "squeeze-d001",
+    "project": "squeeze-empire",
+    "question": "What is the Squeeze Empire win condition / finish line?",
+    "options": ["Reach revenue target + unlock all upgrades", "Unlock all upgrades only", "No win — infinite idle", "Story ending"],
+    "type": "decision",
+    "recommendation": "Revenue target + unlock all upgrades"
+  },
+  {
+    "id": "squeeze-p001",
+    "project": "squeeze-empire",
+    "question": "Should the game save state between sessions or reset each time?",
+    "options": ["Save with localStorage — true idle game", "Reset each time — arcade style"],
+    "type": "question"
+  },
+  {
+    "id": "squeeze-p002",
+    "project": "squeeze-empire",
+    "question": "After late-game is done — release publicly, keep personal, or productize?",
+    "options": ["Release publicly", "Keep personal", "Productize / monetize"],
+    "type": "question"
+  },
+  {
+    "id": "hibid-d001",
+    "project": "hibid-analyzer",
+    "question": "Chrome extension available — attempt textarea via extension first or investigate DOM approach?",
+    "options": ["Extension first — highest success probability", "DOM investigation first", "Both in parallel"],
+    "type": "decision",
+    "recommendation": "Extension first"
+  },
+  {
+    "id": "hibid-p001",
+    "project": "hibid-analyzer",
+    "question": "Should analysis run on all lots automatically or only on a manually triggered lot?",
+    "options": ["Auto-run all lots", "Manual trigger per lot"],
+    "type": "question"
+  },
+  {
+    "id": "hibid-p002",
+    "project": "hibid-analyzer",
+    "question": "What format for watchlist notes? e.g. 'Est: $45-65 | Condition: Good | Items: ceramic vase'",
+    "options": ["That format — structured pipe-delimited", "Free text summary", "Custom format — I'll define it"],
+    "type": "question"
+  },
+  {
+    "id": "hibid-p003",
+    "project": "hibid-analyzer",
+    "question": "Should HiBid Analyzer work on mobile Chrome or desktop only?",
+    "options": ["Desktop only for now", "Mobile Chrome too"],
+    "type": "question"
+  },
+  {
+    "id": "nutrimind-d001",
+    "project": "nutrimind",
+    "question": "What defines NutriMind as complete — what is the finish line?",
+    "options": ["All planned features working", "Personal use ready", "Productize for other users"],
+    "type": "decision",
+    "recommendation": "Personal use ready first, then decide on productizing"
+  },
+  {
+    "id": "nutrimind-p001",
+    "project": "nutrimind",
+    "question": "Should shopping list generation be part of the MVP or post-launch?",
+    "options": ["MVP feature", "Post-launch addition"],
+    "type": "question"
+  },
+  {
+    "id": "nutrimind-p002",
+    "project": "nutrimind",
+    "question": "Should NutriMind remember meal history to avoid repeating recent meals?",
+    "options": ["Yes — localStorage or backend", "No — keep it simple"],
+    "type": "question"
+  },
+  {
+    "id": "jobmatch-p001",
+    "project": "job-match",
+    "question": "Should Talent Insight Engine be SaaS for other job seekers or stay personal/portfolio use?",
+    "options": ["SaaS — build for others", "Personal/portfolio only"],
+    "type": "question"
+  },
+  {
+    "id": "jobmatch-p002",
+    "project": "job-match",
+    "question": "Employer portal — build before or after the scraping engine?",
+    "options": ["Employer portal first", "Scraping engine first"],
+    "type": "question"
+  },
+  {
+    "id": "jobmatch-p003",
+    "project": "job-match",
+    "question": "Scam database — private to the platform or eventually shared/open source?",
+    "options": ["Private — proprietary moat", "Open source — community trust", "Hybrid — open driver, closed platform"],
+    "type": "question"
+  },
+  {
+    "id": "jobmatch-p004",
+    "project": "job-match",
+    "question": "Show job ratings to users in v1 or hold back until v2?",
+    "options": ["Show in v1", "Hold for v2"],
+    "type": "question"
+  },
+  {
+    "id": "whatnot-d001",
+    "project": "whatnot-apps",
+    "question": "Which Whatnot role to apply to first?",
+    "options": ["Trust & Safety Agent", "Fraud Agent", "CX Agent Overnight"],
+    "type": "decision",
+    "recommendation": "Trust & Safety Agent — moderation background is direct differentiator"
+  },
+  {
+    "id": "whatnot-p001",
+    "project": "whatnot-apps",
+    "question": "Do you have the current Whatnot job posting URLs to tailor the resume against?",
+    "options": ["Yes — I have them", "No — need to find them"],
+    "type": "question"
+  },
+  {
+    "id": "whatnot-p002",
+    "project": "whatnot-apps",
+    "question": "Whatnot cover letter — one general letter or three separate role-specific ones?",
+    "options": ["Three separate letters — stronger", "One general letter with swap sections — faster"],
+    "type": "question"
+  },
+  {
+    "id": "arb-d001",
+    "project": "arbitrage-pulse",
+    "question": "What geographic area to monitor for FB Marketplace arbitrage?",
+    "options": ["Tennessee (Atwood/McKenzie area)", "Illinois (Woodstock area)", "Both — separate digests"],
+    "type": "decision",
+    "recommendation": "Both with separate digests"
+  },
+  {
+    "id": "arb-d002",
+    "project": "arbitrage-pulse",
+    "question": "Scraping approach — Apify Actor or Chrome extension automation?",
+    "options": ["Apify — paid, reliable, maintained", "Chrome extension — free, may break with FB updates"],
+    "type": "decision",
+    "recommendation": "Chrome extension first — prove concept free"
+  },
+  {
+    "id": "arb-p001",
+    "project": "arbitrage-pulse",
+    "question": "What categories should Arbitrage Pulse monitor? (tools, electronics, collectibles, furniture, vintage, etc.)",
+    "options": ["Tools + electronics + collectibles", "Furniture + vintage + antiques", "All categories — filter by margin only"],
+    "type": "question"
+  },
+  {
+    "id": "arb-p002",
+    "project": "arbitrage-pulse",
+    "question": "Minimum profit margin to include in daily digest?",
+    "options": ["30%+ margin", "40%+ margin", "50%+ margin"],
+    "type": "question"
+  },
+  {
+    "id": "arb-p003",
+    "project": "arbitrage-pulse",
+    "question": "Digest delivery format — Markdown in Drive, email, or studio dashboard card?",
+    "options": ["Markdown file in Drive", "Email", "Studio dashboard card"],
+    "type": "question"
+  },
+  {
+    "id": "listopt-d001",
+    "project": "listing-optimizer",
+    "question": "eBay Listing Optimizer — personal tool only or productize for other sellers?",
+    "options": ["Personal only — optimize my 572 listings", "Beta test with select sellers", "Full SaaS product"],
+    "type": "decision",
+    "recommendation": "Personal first — prove it on own inventory"
+  },
+  {
+    "id": "listopt-d002",
+    "project": "listing-optimizer",
+    "question": "Input format — eBay bulk export CSV, manual entry, or both?",
+    "options": ["eBay bulk export CSV only", "Manual entry only", "Both"],
+    "type": "decision",
+    "recommendation": "eBay bulk export CSV — highest leverage for 572 listings"
+  },
+  {
+    "id": "listopt-p001",
+    "project": "listing-optimizer",
+    "question": "What are your SKU prefix conventions for physical storage location tracking?",
+    "options": ["I'll tell you the format in session", "No SKU conventions — freestyle", "Use eBay's default SKU"],
+    "type": "question"
+  },
+  {
+    "id": "listopt-p002",
+    "project": "listing-optimizer",
+    "question": "Which categories make up the majority of your 572 listings?",
+    "options": ["Books + media", "Tools + hardware", "Electronics + collectibles", "Mixed — no dominant category"],
+    "type": "question"
+  },
+  {
+    "id": "listopt-p003",
+    "project": "listing-optimizer",
+    "question": "Should the optimizer suggest price adjustments based on recent eBay sold data?",
+    "options": ["Yes — integrate eBay sold API", "No — titles only for now"],
+    "type": "question"
+  },
+  {
+    "id": "sent-core-d001",
+    "project": "sentinel-core",
+    "question": "Primary tech stack for Sentinel shared infrastructure?",
+    "options": ["Electron (desktop)", "Web app (browser-based)", "React Native (mobile-first)"],
+    "type": "decision",
+    "recommendation": "Electron — required for Bluetooth haptic hardware access"
+  },
+  {
+    "id": "sent-core-d002",
+    "project": "sentinel-core",
+    "question": "Payment processor for adult content platform?",
+    "options": ["CCBill", "Segpay", "Epoch", "Crypto only"],
+    "type": "decision",
+    "recommendation": "CCBill — industry standard, most performer-familiar"
+  },
+  {
+    "id": "sent-core-d003",
+    "project": "sentinel-core",
+    "question": "Age verification compliance approach?",
+    "options": ["AgeID integration", "Yoti verification", "Credit card verification only", "ID.me"],
+    "type": "decision",
+    "recommendation": "Yoti — privacy-preserving, no ID stored on your servers"
+  },
+  {
+    "id": "sent-core-d004",
+    "project": "sentinel-core",
+    "question": "Business entity — do you have an LLC to operate Sentinel under?",
+    "options": ["Yes — existing LLC", "No — need to form one", "Sole proprietor for now"],
+    "type": "decision",
+    "recommendation": "Form LLC before accepting any payments — non-negotiable"
+  },
+  {
+    "id": "sent-core-p001",
+    "project": "sentinel-core",
+    "question": "Distribution — web app only, or attempt alternative app stores (APKPure, AltStore, Itch.io)?",
+    "options": ["Web app only", "Alternative app stores too"],
+    "type": "question"
+  },
+  {
+    "id": "sent-core-p002",
+    "project": "sentinel-core",
+    "question": "Open source the haptic driver layer or keep it proprietary?",
+    "options": ["Open source the driver layer", "Keep fully proprietary", "Hybrid — open driver, closed platform"],
+    "type": "question"
+  },
+  {
+    "id": "sent-core-p003",
+    "project": "sentinel-core",
+    "question": "Beta performer recruitment — cold outreach or use existing network?",
+    "options": ["Existing network first", "Cold outreach", "Both simultaneously"],
+    "type": "question"
+  },
+  {
+    "id": "sent-core-p004",
+    "project": "sentinel-core",
+    "question": "Branding — use Sentinel name for both products or develop separate consumer brand for the viewer app?",
+    "options": ["Sentinel for both — unified brand", "Separate consumer brand for viewer app"],
+    "type": "question"
+  },
+  {
+    "id": "sent-perf-d001",
+    "project": "sentinel-performer",
+    "question": "OnlyFans automation — browser extension injection, Puppeteer headless, or hybrid?",
+    "options": ["Browser extension only", "Puppeteer headless only", "Hybrid — extension for UI, Puppeteer for background"],
+    "type": "decision",
+    "recommendation": "Hybrid — reduces ban risk vs pure Puppeteer"
+  },
+  {
+    "id": "sent-perf-d002",
+    "project": "sentinel-performer",
+    "question": "Personality clone training — fine-tune model, few-shot prompting, or RAG?",
+    "options": ["Fine-tune per performer", "Few-shot prompting with chat history", "RAG — retrieve relevant past messages per response"],
+    "type": "decision",
+    "recommendation": "RAG — fastest to build, no training cost, updatable in real-time"
+  },
+  {
+    "id": "sent-perf-d003",
+    "project": "sentinel-performer",
+    "question": "Whale threshold — fixed $100, performer-configurable, or dynamic AI-set?",
+    "options": ["Fixed $100 threshold", "Performer sets their own threshold", "Dynamic — AI suggests based on revenue history"],
+    "type": "decision",
+    "recommendation": "Performer-configurable with AI-suggested default"
+  },
+  {
+    "id": "sent-perf-p001",
+    "project": "sentinel-performer",
+    "question": "AI disclosure for GFE clone — built into chat UI or handled via ToS only?",
+    "options": ["In-UI disclosure — safer legally", "ToS only — cleaner UX"],
+    "type": "question"
+  },
+  {
+    "id": "sent-perf-p002",
+    "project": "sentinel-performer",
+    "question": "Should the performer dashboard be web-based or a desktop app?",
+    "options": ["Web-based — works anywhere", "Desktop app — background processes, local hardware"],
+    "type": "question"
+  },
+  {
+    "id": "sent-perf-p003",
+    "project": "sentinel-performer",
+    "question": "Voice command wake word for ban action — what phrase feels natural but won't be said accidentally on stream?",
+    "options": ["Sentinel-Exile", "Raptor-Purge", "I'll decide this in session"],
+    "type": "question"
+  },
+  {
+    "id": "sent-perf-p004",
+    "project": "sentinel-performer",
+    "question": "Multistreaming — build own relay server or use Restream/Livepeer API?",
+    "options": ["Build own relay — full control", "Restream/Livepeer API — faster to market"],
+    "type": "question"
+  },
+  {
+    "id": "sent-view-d001",
+    "project": "sentinel-viewer",
+    "question": "VPN implementation — WireGuard split tunnel, ProtonVPN/Mullvad API, or user brings own VPN?",
+    "options": ["Build WireGuard split tunnel", "Partner with ProtonVPN API", "User brings own VPN"],
+    "type": "decision",
+    "recommendation": "ProtonVPN API initially — fastest to market, privacy-credible"
+  },
+  {
+    "id": "sent-view-d002",
+    "project": "sentinel-viewer",
+    "question": "Kink analytics data — local device only or opt-in cloud sync?",
+    "options": ["Local only — no cloud", "Opt-in cloud sync with zero-knowledge encryption", "Cloud by default, opt-out available"],
+    "type": "decision",
+    "recommendation": "Local only for v1 — consistent with privacy brand promise"
+  },
+  {
+    "id": "sent-view-p001",
+    "project": "sentinel-viewer",
+    "question": "Should VR conversion be a launch feature or post-launch addition?",
+    "options": ["Launch feature", "Post-launch v2 addition"],
+    "type": "question"
+  },
+  {
+    "id": "sent-view-p002",
+    "project": "sentinel-viewer",
+    "question": "Raptor device fuzzer beta program — public or invite-only initially?",
+    "options": ["Public — more device coverage faster", "Invite-only — controlled, higher quality feedback"],
+    "type": "question"
+  },
+  {
+    "id": "sent-view-p003",
+    "project": "sentinel-viewer",
+    "question": "Amazon affiliate sidebar — automatic video object detection or manual category browsing?",
+    "options": ["Automatic detection — high value, complex", "Manual category browsing — simpler"],
+    "type": "question"
+  }
+]
