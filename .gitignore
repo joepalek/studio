@@ -8,7 +8,7 @@ janitor-report.json
 gateway-log.txt
 
 # Claude Code local settings
-.claude/settings.local.json
+.claude/
 
 # OS junk
 Thumbs.db

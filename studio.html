@@ -1064,6 +1064,13 @@
   </div>
   <div class="inbox-list" id="inbox-list"></div>
   <div class="inbox-add-form">
+    <div style="display:flex;gap:6px;padding:0 10px 6px;">
+      <button onclick="purgeStale()" title="Remove already-answered and stale items from inbox"
+        style="flex:1;background:none;border:1px solid var(--amber-dim);color:var(--amber);
+               font-family:inherit;font-size:9px;letter-spacing:1px;padding:5px;cursor:pointer;
+               border-radius:2px;" onmouseover="this.style.borderColor='var(--amber)'"
+        onmouseout="this.style.borderColor='var(--amber-dim)'">⚡ PURGE STALE</button>
+    </div>
     <button class="inbox-add-toggle" onclick="toggleAddForm()">+ ADD AGENT QUESTION</button>
     <div class="inbox-add-body" id="inbox-add-body">
       <select id="add-agent-type">
@@ -2468,6 +2475,51 @@ function renderInbox() {
 
 function showLockedChainAlert() {
   alert('This question is waiting on an earlier question in its chain to be answered first.');
+}
+
+function markResolved(id) {
+  const resolved = JSON.parse(localStorage.getItem(RESOLVED_FINDINGS_KEY) || '[]');
+  if (!resolved.includes(id)) {
+    resolved.push(id);
+    localStorage.setItem(RESOLVED_FINDINGS_KEY, JSON.stringify(resolved));
+  }
+  // Remove from AGENT_QUESTIONS (mutable); ALL_DECISIONS filtered via resolved registry
+  AGENT_QUESTIONS = AGENT_QUESTIONS.filter(d => d.id !== id);
+  const el = document.getElementById('inbox-' + id);
+  if (el) {
+    el.style.transition = 'opacity 0.3s';
+    el.style.opacity = '0';
+    setTimeout(() => { renderInbox(); }, 300);
+  }
+  addLogEntry({ time: new Date().toISOString().slice(0,16).replace('T',' — '), project: '_STUDIO', text: `Item ${id} marked resolved and removed from inbox` });
+}
+
+function purgeStale() {
+  const resolved = JSON.parse(localStorage.getItem(RESOLVED_FINDINGS_KEY) || '[]');
+  const allItems = getAllItems();
+  let purged = 0;
+
+  // Auto-resolve items that are already answered in state (status === answered)
+  allItems.forEach(d => {
+    if (d.status === 'answered' && !resolved.includes(d.id)) {
+      resolved.push(d.id);
+      purged++;
+    }
+  });
+
+  // Add to resolved registry and purge AGENT_QUESTIONS
+  const resolvedSet = new Set(resolved);
+  AGENT_QUESTIONS = AGENT_QUESTIONS.filter(q => {
+    if (q.status === 'answered' && !resolvedSet.has(q.id)) { resolvedSet.add(q.id); purged++; return false; }
+    return !resolvedSet.has(q.id);
+  });
+
+  localStorage.setItem(RESOLVED_FINDINGS_KEY, JSON.stringify([...resolvedSet]));
+  renderInbox();
+
+  const remaining = getFilteredDecisions().length;
+  addLogEntry({ time: new Date().toISOString().slice(0,16).replace('T',' — '), project: '_STUDIO', text: `Purge Stale: cleared ${purged} answered items. ${remaining} active remain.` });
+  alert('Purge complete.\nCleared: ' + purged + ' answered items\nRemaining: ' + remaining + ' active items');
 }
 
 function openDecisionDetail(id) {
