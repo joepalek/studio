@@ -1,0 +1,165 @@
+{
+  "_schema_version": "1.0",
+  "_project": "PROJECT_NAME",
+  "_folder": "project-folder-name",
+  "_created": "YYYY-MM-DD",
+  "_last_updated": "YYYY-MM-DD",
+
+  "project": {
+    "name": "Project Name",
+    "description": "One sentence description",
+    "status": "active",
+    "complexity_budget": "low",
+    "progress_pct": 0,
+    "persona": "Who uses this. Their life. Their constraints. Their goal.",
+    "promotion_pending": false
+  },
+
+  "files": {
+    "production": "filename.html",
+    "draft": "filename.draft.html",
+    "cache": "filename.cache.html",
+    "last_cache_snapshot": null,
+    "cache_reason": null
+  },
+
+  "session": {
+    "mode": null,
+    "active": false,
+    "started": null,
+    "handoff_note": null
+  },
+
+  "test_lock": {
+    "locked": false,
+    "lock_reason": null,
+    "lock_started": null,
+    "locked_by": null,
+    "unlock_condition": null,
+    "findings_count": 0
+  },
+
+  "decisions": [
+    {
+      "id": "decision_001",
+      "question": "Decision question here",
+      "options": ["A", "B", "C"],
+      "recommendation": "Option A because...",
+      "confidence": "80%",
+      "confidence_reason": "Why this confidence level",
+      "depends_on": null,
+      "status": "pending",
+      "answer": null,
+      "resolved_by": null,
+      "resolved_date": null,
+      "created": "YYYY-MM-DD",
+      "expires_after_sessions": 3,
+      "sessions_pending": 0
+    }
+  ],
+
+  "proactive_questions": [
+    {
+      "id": "proactive_001",
+      "question": "Forward-looking question",
+      "context": "Why this matters later",
+      "answer": null,
+      "answered_date": null,
+      "unlocks": "What work this answer enables"
+    }
+  ],
+
+  "autonomous_backlog": [
+    {
+      "id": "auto_001",
+      "task": "Task description",
+      "size": "small",
+      "size_estimate": "20min",
+      "depends_on": null,
+      "status": "ready",
+      "completed_date": null
+    }
+  ],
+
+  "decision_log": [
+    {
+      "id": "decided_001",
+      "decision": "What was decided",
+      "reason": "Why",
+      "date": "YYYY-MM-DD",
+      "resolved_by": "user_answer"
+    }
+  ],
+
+  "assumption_log": [
+    {
+      "assumption": "Assumption being made",
+      "confirmed": false,
+      "confirmed_date": null
+    }
+  ],
+
+  "scope_flags": [
+    {
+      "item": "Thing outside original scope",
+      "flagged_date": "YYYY-MM-DD",
+      "decision": "pending",
+      "time_estimate": "30min"
+    }
+  ],
+
+  "reusable_findings": [
+    {
+      "finding": "Pattern or solution discovered",
+      "applicable_to": ["other-project-folder"],
+      "date": "YYYY-MM-DD"
+    }
+  ],
+
+  "minimum_viable_tests": [
+    {
+      "feature": "Feature name",
+      "done_means": ["Criterion 1", "Criterion 2"],
+      "verified": false,
+      "verified_date": null
+    }
+  ],
+
+  "adversarial_log": [
+    {
+      "session_id": "adv_001",
+      "date": "YYYY-MM-DD",
+      "mode": "chaos",
+      "iterations": 0,
+      "findings": [],
+      "severity_counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "session_complete": false
+    }
+  ],
+
+  "backups": [
+    {
+      "filename": "_backups/filename-YYYY-MM-DD.html",
+      "date": "YYYY-MM-DD",
+      "reason": "milestone description",
+      "pinned_in_drive": false
+    }
+  ],
+
+  "session_log": [
+    {
+      "date": "YYYY-MM-DD",
+      "mode": "deep_work",
+      "completed": [],
+      "blockers": [],
+      "next_action": ""
+    }
+  ],
+
+  "strategy_notes": []
+}
