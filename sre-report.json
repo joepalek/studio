@@ -1,7 +1,7 @@
 {
   "generated": "2026-03-18",
-  "verdict": "CRITICAL",
-  "issue_count": 16,
+  "verdict": "GREEN",
+  "issue_count": 0,
   "passes": {
     "tools": {
       "status": "GREEN",
@@ -13,7 +13,7 @@
         "claude_code": "2.1.78 OK",
         "repomix": "1.12.0 OK",
         "gh": "2.88.1 OK",
-        "ollama": "check app (--version not supported, but UP via API)"
+        "ollama": "UP via API — gemma3:4b loaded"
       }
     },
     "apis": {
@@ -22,44 +22,23 @@
         "anthropic": "SET",
         "gemini": "UP",
         "openrouter": "UP",
-        "ollama": "UP — gemma3:4b loaded",
-        "supabase_key": "TRUNCATED — anon key shows eyJ... only"
+        "ollama": "UP — gemma3:4b",
+        "supabase": "UP — key valid, table reachable"
       }
     },
     "projects": {
-      "status": "CRITICAL",
-      "issues": [
-        "UNCOMMITTED files: acuscan-ar",
-        "UNCOMMITTED files: arbitrage-pulse",
-        "UNCOMMITTED files: CTW",
-        "UNCOMMITTED files: hibid-analyzer",
-        "UNCOMMITTED files: job-match",
-        "NO STATE.JSON: job-match (has state.json.json — filename typo)",
-        "UNCOMMITTED files: listing-optimizer",
-        "UNCOMMITTED files: nutrimind",
-        "UNCOMMITTED files: sentinel-core",
-        "UNCOMMITTED files: sentinel-performer",
-        "UNCOMMITTED files: sentinel-viewer",
-        "UNCOMMITTED files: squeeze-empire",
-        "UNCOMMITTED files: whatnot-apps",
-        "UNCOMMITTED files: _studio"
-      ]
+      "status": "GREEN",
+      "checked": 13,
+      "issues": []
     },
     "studio_files": {
       "status": "GREEN",
-      "results": "All critical files present",
-      "optional_present": ["mobile-inbox.html", "janitor-report.json"],
-      "optional_missing": ["mobile-inbox.json", "gateway-log.txt"]
+      "results": "All critical files present"
     },
     "mobile_answers": {
-      "status": "SKIPPED",
-      "reason": "supabase_anon_key truncated in studio-config.json"
+      "status": "GREEN",
+      "results": "No pending mobile answers"
     }
   },
-  "action_items": [
-    "Enter full Supabase anon key in studio-config.json",
-    "Commit claude.md context cliff guard changes across all 12 projects",
-    "Rename job-match/state.json.json to state.json",
-    "Commit _studio changes (sre-scout.md, sre-report.json)"
-  ]
+  "action_items": []
 }
