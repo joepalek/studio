@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#39ff14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Studio Inbox">
+<meta name="application-name" content="Studio Inbox">
+<meta name="msapplication-TileColor" content="#0a0c10">
+<meta name="description" content="Studio daily question inbox">
+
+<!-- PWA Icons (inline SVG as data URI — no separate file needed) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0c10'/><text y='.9em' font-size='80' x='10'>📥</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0c10'/><text y='.9em' font-size='80' x='10'>📥</text></svg>">
+
+<title>Studio Inbox</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+  :root {
+    --bg:         #0a0c10;
+    --panel:      #0f1318;
+    --border:     #1e2d1e;
+    --green:      #39ff14;
+    --green-dim:  #1a7a00;
+    --green-glow: rgba(57,255,20,0.10);
+    --amber:      #ffb700;
+    --red:        #ff3a3a;
+    --text:       #c8d8c8;
+    --text-dim:   #506050;
+    --radius:     12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    overflow: hidden;
+    touch-action: pan-y;
+  }
+
+  /* ── LAYOUT ── */
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top, 0) 0 env(safe-area-inset-bottom, 0);
+  }
+
+  /* ── HEADER ── */
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  #header .logo {
+    color: var(--green);
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  #counter {
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── PROGRESS BAR ── */
+  #progress-track {
+    height: 3px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+  #progress-fill {
+    height: 100%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    transition: width 0.35s ease;
+    width: 0%;
+  }
+
+  /* ── CARD AREA ── */
+  #card-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px 28px;
+    width: 100%;
+    max-width: 420px;
+    position: absolute;
+    transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity  0.32s ease;
+    will-change: transform, opacity;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  }
+  .card.hidden   { opacity: 0; pointer-events: none; }
+  .card.slide-left  { transform: translateX(-110%); opacity: 0; }
+  .card.slide-right { transform: translateX(110%);  opacity: 0; }
+  .card.slide-up    { transform: translateY(-80%) scale(0.9); opacity: 0; }
+
+  .card-tag {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .card-question {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 28px;
+    min-height: 3em;
+  }
+  .card-hint {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  /* swipe indicator overlay */
+  .swipe-hint {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 3px solid;
+    opacity: 0;
+    transition: opacity 0.1s;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+  }
+  .swipe-hint.yes { left: 20px;  color: var(--green); border-color: var(--green); }
+  .swipe-hint.no  { right: 20px; color: var(--red);   border-color: var(--red);   }
+
+  /* ── ACTION BUTTONS ── */
+  #actions {
+    display: flex;
+    gap: 12px;
+    padding: 0 20px 24px;
+    flex-shrink: 0;
+  }
+  .btn {
+    flex: 1;
+    padding: 16px 8px;
+    border-radius: var(--radius);
+    border: 1px solid;
+    background: transparent;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s;
+    -webkit-appearance: none;
+  }
+  .btn:active { transform: scale(0.97); }
+
+  .btn-no {
+    color: var(--red);
+    border-color: var(--red);
+  }
+  .btn-no:active, .btn-no:focus {
+    background: rgba(255,58,58,0.12);
+    box-shadow: 0 0 12px rgba(255,58,58,0.25);
+  }
+
+  .btn-skip {
+    color: var(--text-dim);
+    border-color: var(--border);
+    flex: 0.6;
+  }
+  .btn-skip:active {
+    background: rgba(255,255,255,0.04);
+  }
+
+  .btn-yes {
+    color: var(--green);
+    border-color: var(--green);
+  }
+  .btn-yes:active, .btn-yes:focus {
+    background: var(--green-glow);
+    box-shadow: 0 0 16px rgba(57,255,20,0.2);
+  }
+
+  /* ── SUMMARY SCREEN ── */
+  #summary {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 32px 24px;
+    text-align: center;
+    gap: 20px;
+  }
+  #summary.visible { display: flex; }
+  #summary h2 {
+    color: var(--green);
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px var(--green);
+  }
+  #summary-stats {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    background: var(--panel);
+  }
+  .stat-item { display: flex; flex-direction: column; gap: 4px; }
+  .stat-num  { font-size: 28px; line-height: 1; }
+  .stat-lbl  { font-size: 10px; letter-spacing: 0.14em; color: var(--text-dim); text-transform: uppercase; }
+  .stat-yes  .stat-num { color: var(--green); }
+  .stat-no   .stat-num { color: var(--red); }
+  .stat-skip .stat-num { color: var(--text-dim); }
+
+  #summary-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 40vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .summary-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 12px;
+  }
+  .summary-row .ans {
+    flex-shrink: 0;
+    width: 36px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    padding-top: 1px;
+  }
+  .ans-yes  { color: var(--green); }
+  .ans-no   { color: var(--red); }
+  .ans-skip { color: var(--text-dim); }
+
+  #summary-status {
+    font-size: 12px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    min-height: 1.4em;
+  }
+  #summary-status.ok  { color: var(--green); }
+  #summary-status.err { color: var(--red); }
+
+  .btn-restart {
+    width: 100%;
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--green);
+    background: transparent;
+    color: var(--green);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .btn-restart:active { background: var(--green-glow); }
+
+  /* ── LOADING ── */
+  #loading {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+  .spinner {
+    width: 32px; height: 32px;
+    border: 2px solid var(--border);
+    border-top-color: var(--green);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── SCANLINES ── */
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 3px);
+    pointer-events: none;
+    z-index: 9999;
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="header">
+    <span class="logo">&#9632; Studio Inbox</span>
+    <span id="counter"></span>
+  </div>
+  <div id="progress-track"><div id="progress-fill"></div></div>
+
+  <!-- Loading state -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <span>Loading questions...</span>
+  </div>
+
+  <!-- Card area -->
+  <div id="card-area" style="display:none">
+    <div class="swipe-hint yes" id="hint-yes">YES</div>
+    <div class="swipe-hint no"  id="hint-no">NO</div>
+    <div class="card" id="card">
+      <div class="card-tag" id="card-tag"></div>
+      <div class="card-question" id="card-question"></div>
+      <div class="card-hint">swipe right = yes &nbsp;·&nbsp; swipe left = no</div>
+    </div>
+  </div>
+
+  <!-- Answer buttons -->
+  <div id="actions" style="display:none">
+    <button class="btn btn-no"   onclick="answer('no')">✕ No</button>
+    <button class="btn btn-skip" onclick="answer('skip')">— Skip</button>
+    <button class="btn btn-yes"  onclick="answer('yes')">✓ Yes</button>
+  </div>
+
+  <!-- Summary screen -->
+  <div id="summary">
+    <h2>&#10003; Inbox Clear</h2>
+    <div id="summary-stats">
+      <div class="stat-item stat-yes">
+        <span class="stat-num" id="count-yes">0</span>
+        <span class="stat-lbl">Yes</span>
+      </div>
+      <div class="stat-item stat-no">
+        <span class="stat-num" id="count-no">0</span>
+        <span class="stat-lbl">No</span>
+      </div>
+      <div class="stat-item stat-skip">
+        <span class="stat-num" id="count-skip">0</span>
+        <span class="stat-lbl">Skipped</span>
+      </div>
+    </div>
+    <div id="summary-list"></div>
+    <div id="summary-status"></div>
+    <button class="btn-restart" onclick="restart()">&#8635; Start Over</button>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────────
+
+// TODO: Replace with your public Google Drive JSON URL once shared
+const QUESTIONS_URL = null;
+
+// TODO: Add Supabase creds when ready
+const SUPABASE_URL = null;
+const SUPABASE_KEY = null;
+const SUPABASE_TABLE = 'inbox_answers';
+
+// Hardcoded test questions (active when QUESTIONS_URL is null)
+const TEST_QUESTIONS = [
+  { id: 1, tag: 'DAILY CHECK',  text: 'Did you hit your revenue target yesterday?' },
+  { id: 2, tag: 'PROJECTS',     text: 'Is CTW Workbench ready for the next character session?' },
+  { id: 3, tag: 'PROJECTS',     text: 'Did Sentinel Core run without errors this week?' },
+  { id: 4, tag: 'SYSTEMS',      text: 'Is studio-config.json still gitignored and safe?' },
+  { id: 5, tag: 'HEALTH',       text: 'Did you review the gateway log this week?' },
+  { id: 6, tag: 'PROJECTS',     text: 'Does NutriMind need a new iteration this session?' },
+  { id: 7, tag: 'DAILY CHECK',  text: 'Any new inbox items from overnight Ollama runs?' },
+  { id: 8, tag: 'SYSTEMS',      text: 'Are all 12 projects showing clean git status?' },
+];
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+
+let questions = [];
+let current   = 0;
+let answers   = [];   // { id, tag, text, answer, answeredAt }
+
+// ─────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────
+
+async function init() {
+  if (QUESTIONS_URL) {
+    try {
+      const r = await fetch(QUESTIONS_URL);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      questions = await r.json();
+    } catch (e) {
+      console.warn('Failed to fetch questions, falling back to test set:', e);
+      questions = TEST_QUESTIONS;
+    }
+  } else {
+    // Slight delay so loading state is visible
+    await new Promise(r => setTimeout(r, 400));
+    questions = TEST_QUESTIONS;
+  }
+
+  document.getElementById('loading').style.display    = 'none';
+  document.getElementById('card-area').style.display  = 'flex';
+  document.getElementById('actions').style.display    = 'flex';
+  showQuestion();
+}
+
+// ─────────────────────────────────────────────
+// QUESTION DISPLAY
+// ─────────────────────────────────────────────
+
+function showQuestion() {
+  const q = questions[current];
+  document.getElementById('card-tag').textContent      = q.tag || '';
+  document.getElementById('card-question').textContent = q.text;
+  document.getElementById('counter').textContent       = `${current + 1} / ${questions.length}`;
+
+  const pct = (current / questions.length) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+
+  const card = document.getElementById('card');
+  card.classList.remove('slide-left', 'slide-right', 'slide-up', 'hidden');
+  card.style.transform = '';
+  card.style.opacity   = '';
+}
+
+// ─────────────────────────────────────────────
+// ANSWER
+// ─────────────────────────────────────────────
+
+function answer(value) {
+  const q = questions[current];
+  answers.push({ id: q.id, tag: q.tag || '', text: q.text, answer: value, answeredAt: new Date().toISOString() });
+
+  animateCard(value, () => {
+    current++;
+    if (current >= questions.length) {
+      showSummary();
+    } else {
+      showQuestion();
+    }
+  });
+}
+
+function animateCard(value, cb) {
+  const card = document.getElementById('card');
+  if (value === 'yes')  card.classList.add('slide-right');
+  else if (value === 'no') card.classList.add('slide-left');
+  else card.classList.add('slide-up');
+  setTimeout(cb, 320);
+}
+
+// ─────────────────────────────────────────────
+// SWIPE GESTURE
+// ─────────────────────────────────────────────
+
+let touchStartX = 0;
+let touchStartY = 0;
+let isDragging  = false;
+
+const card = document.getElementById('card');
+const hintYes = document.getElementById('hint-yes');
+const hintNo  = document.getElementById('hint-no');
+
+card.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  isDragging  = false;
+}, { passive: true });
+
+card.addEventListener('touchmove', e => {
+  const dx = e.touches[0].clientX - touchStartX;
+  const dy = e.touches[0].clientY - touchStartY;
+
+  if (!isDragging && Math.abs(dx) < 8) return;
+  isDragging = true;
+
+  const rotate = dx * 0.06;
+  card.style.transform = `translateX(${dx}px) rotate(${rotate}deg)`;
+  card.style.transition = 'none';
+
+  const ratio = Math.min(Math.abs(dx) / 80, 1);
+  if (dx > 0) {
+    hintYes.style.opacity = ratio;
+    hintNo.style.opacity  = 0;
+  } else {
+    hintNo.style.opacity  = ratio;
+    hintYes.style.opacity = 0;
+  }
+}, { passive: true });
+
+card.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  card.style.transition = '';
+  hintYes.style.opacity = 0;
+  hintNo.style.opacity  = 0;
+
+  if (Math.abs(dx) > 80) {
+    answer(dx > 0 ? 'yes' : 'no');
+  } else {
+    // snap back
+    card.style.transform = '';
+  }
+}, { passive: true });
+
+// ─────────────────────────────────────────────
+// SUMMARY
+// ─────────────────────────────────────────────
+
+function showSummary() {
+  document.getElementById('card-area').style.display = 'none';
+  document.getElementById('actions').style.display   = 'none';
+  document.getElementById('progress-fill').style.width = '100%';
+  document.getElementById('counter').textContent = `${questions.length} / ${questions.length}`;
+
+  const yes  = answers.filter(a => a.answer === 'yes').length;
+  const no   = answers.filter(a => a.answer === 'no').length;
+  const skip = answers.filter(a => a.answer === 'skip').length;
+
+  document.getElementById('count-yes').textContent  = yes;
+  document.getElementById('count-no').textContent   = no;
+  document.getElementById('count-skip').textContent = skip;
+
+  const list = document.getElementById('summary-list');
+  list.innerHTML = answers.map(a => `
+    <div class="summary-row">
+      <span class="ans ans-${a.answer}">${a.answer.toUpperCase()}</span>
+      <span>${a.text}</span>
+    </div>`).join('');
+
+  document.getElementById('summary').classList.add('visible');
+
+  postToSupabase();
+}
+
+// ─────────────────────────────────────────────
+// SUPABASE POST
+// ─────────────────────────────────────────────
+
+async function postToSupabase() {
+  const statusEl = document.getElementById('summary-status');
+
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    statusEl.textContent = '[ Supabase not configured — answers not saved ]';
+    return;
+  }
+
+  statusEl.textContent = 'Saving answers...';
+
+  const payload = answers.map(a => ({
+    question_id:  a.id,
+    question_tag: a.tag,
+    question_text: a.text,
+    answer:        a.answer,
+    answered_at:   a.answeredAt,
+    session_date:  new Date().toISOString().slice(0, 10),
+  }));
+
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type':  'application/json',
+        'apikey':        SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Prefer':        'return=minimal',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    statusEl.className = 'ok';
+    statusEl.textContent = '✓ Answers saved to Supabase';
+  } catch (e) {
+    statusEl.className = 'err';
+    statusEl.textContent = `✕ Save failed: ${e.message}`;
+    console.error('Supabase error:', e);
+  }
+}
+
+// ─────────────────────────────────────────────
+// RESTART
+// ─────────────────────────────────────────────
+
+function restart() {
+  current = 0;
+  answers = [];
+  document.getElementById('summary').classList.remove('visible');
+  document.getElementById('card-area').style.display = 'flex';
+  document.getElementById('actions').style.display   = 'flex';
+  showQuestion();
+}
+
+// ─────────────────────────────────────────────
+// START
+// ─────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
