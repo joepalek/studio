@@ -18,352 +18,438 @@
   --text: #c8d4c8;
   --text-dim: #5a6e5a;
   --amber: #ffb700;
+  --amber-dim: #7a5500;
   --red: #ff3a3a;
+  --purple: #c084fc;
+  --blue: #00d4ff;
   --font: 'Share Tech Mono', 'Courier New', monospace;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font); overflow: hidden; }
-
-#app { height: 100vh; display: flex; flex-direction: column; }
+html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font); }
 
 /* HEADER */
 #header {
-  padding: 12px 16px 8px;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-shrink: 0;
+  padding: 10px 14px 6px;
 }
+#header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 #header-title { font-size: 11px; letter-spacing: 3px; color: var(--green); }
-#header-count { font-size: 10px; color: var(--text-dim); }
+#header-stats { font-size: 10px; color: var(--text-dim); }
+#progress-bg { height: 2px; background: var(--border); border-radius: 2px; }
+#progress-fill { height: 2px; background: var(--green); border-radius: 2px; transition: width 0.3s; width: 0%; }
 
-/* PROGRESS BAR */
-#progress-wrap { padding: 8px 16px; flex-shrink: 0; }
-#progress-bg { height: 3px; background: var(--border); border-radius: 2px; }
-#progress-fill { height: 3px; background: var(--green); border-radius: 2px; transition: width 0.3s ease; width: 0%; }
+/* FILTER TABS */
+#filters {
+  position: fixed; top: 52px; left: 0; right: 0; z-index: 100;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  display: flex; gap: 0; overflow-x: auto; padding: 0 8px;
+}
+#filters::-webkit-scrollbar { display: none; }
+.filter-tab {
+  font-size: 9px; letter-spacing: 1px; color: var(--text-dim);
+  padding: 8px 12px; cursor: pointer; white-space: nowrap;
+  border-bottom: 2px solid transparent; transition: all 0.15s;
+  background: none; border-top: none; border-left: none; border-right: none;
+  font-family: var(--font);
+}
+.filter-tab.active { color: var(--green); border-bottom-color: var(--green); }
 
-/* CARD AREA */
-#card-area {
-  flex: 1; overflow: hidden; position: relative;
-  display: flex; align-items: stretch;
+/* INBOX LIST */
+#inbox-list {
+  margin-top: 90px;
+  padding: 8px 10px 120px;
 }
-.card {
-  position: absolute; inset: 0;
-  padding: 20px 16px 16px;
-  display: flex; flex-direction: column; gap: 14px;
-  opacity: 0; pointer-events: none; transition: opacity 0.2s;
-  overflow-y: auto;
-}
-.card.active { opacity: 1; pointer-events: all; }
 
-.card-project {
-  font-size: 9px; letter-spacing: 2px; color: var(--green-dim);
-  border: 1px solid var(--green-dim); display: inline-block;
-  padding: 3px 8px; border-radius: 2px; align-self: flex-start;
+/* ITEM */
+.inbox-item {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 6px;
+  background: var(--panel);
+  overflow: hidden;
+  transition: border-color 0.15s;
 }
-.card-question {
-  font-size: 15px; line-height: 1.5; color: var(--text);
+.inbox-item.answered { border-color: rgba(57,255,20,0.3); }
+.inbox-item.expanded { border-color: var(--green-dim); }
+
+.item-header {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex; align-items: flex-start; gap: 8px;
 }
-.card-rec {
-  font-size: 10px; color: var(--text-dim); border-left: 2px solid var(--green-dim);
-  padding-left: 8px; line-height: 1.4;
+.item-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 4px;
 }
-.options { display: flex; flex-direction: column; gap: 8px; }
+.dot-decision { background: var(--amber); }
+.dot-proactive { background: var(--purple); }
+.dot-answered { background: var(--green); }
+
+.item-content { flex: 1; min-width: 0; }
+.item-question {
+  font-size: 12px; line-height: 1.4; color: var(--text);
+  margin-bottom: 4px;
+}
+.item-meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.item-project {
+  font-size: 9px; letter-spacing: 1px; color: var(--text-dim);
+  border: 1px solid var(--border); padding: 1px 5px; border-radius: 2px;
+}
+.item-type {
+  font-size: 9px; letter-spacing: 1px; padding: 1px 5px; border-radius: 2px; border: 1px solid;
+}
+.type-decision { color: var(--amber); border-color: var(--amber-dim); }
+.type-proactive { color: var(--purple); border-color: rgba(192,132,252,0.3); }
+.item-answer-preview {
+  font-size: 10px; color: var(--green); margin-top: 4px;
+}
+
+/* EXPANDED PANEL */
+.item-expand {
+  display: none; padding: 0 12px 12px;
+  border-top: 1px solid var(--border);
+}
+.item-expand.open { display: block; }
+.item-rec {
+  font-size: 10px; color: var(--text-dim);
+  border-left: 2px solid var(--green-dim);
+  padding: 6px 8px; margin: 10px 0 8px;
+  line-height: 1.4;
+}
+.options { display: flex; flex-direction: column; gap: 6px; margin-bottom: 8px; }
 .opt-btn {
-  background: var(--panel); border: 1px solid var(--border);
-  color: var(--text); font-family: var(--font); font-size: 12px;
-  padding: 12px 14px; border-radius: 4px; text-align: left;
+  background: var(--bg); border: 1px solid var(--border);
+  color: var(--text); font-family: var(--font); font-size: 11px;
+  padding: 10px 12px; border-radius: 3px; text-align: left;
   cursor: pointer; transition: all 0.15s; line-height: 1.4;
 }
-.opt-btn:active { transform: scale(0.98); }
-.opt-btn.selected { border-color: var(--green); color: var(--green); background: rgba(57,255,20,0.06); }
-
-.custom-wrap { display: flex; gap: 8px; margin-top: 4px; }
+.opt-btn.selected { border-color: var(--green); color: var(--green); background: rgba(57,255,20,0.05); }
+.custom-wrap { display: flex; gap: 6px; margin-top: 4px; }
 .custom-input {
-  flex: 1; background: var(--panel); border: 1px solid var(--border);
-  color: var(--text); font-family: var(--font); font-size: 12px;
-  padding: 10px 12px; border-radius: 4px; outline: none;
+  flex: 1; background: var(--bg); border: 1px solid var(--border);
+  color: var(--text); font-family: var(--font); font-size: 11px;
+  padding: 9px 10px; border-radius: 3px; outline: none;
 }
 .custom-input:focus { border-color: var(--green-dim); }
 .custom-use {
   background: none; border: 1px solid var(--green-dim); color: var(--green);
-  font-family: var(--font); font-size: 11px; padding: 10px 14px;
-  border-radius: 4px; cursor: pointer; white-space: nowrap;
+  font-family: var(--font); font-size: 10px; padding: 9px 12px;
+  border-radius: 3px; cursor: pointer;
 }
 
-/* NAV */
-#nav {
-  padding: 12px 16px; border-top: 1px solid var(--border);
-  display: flex; gap: 8px; flex-shrink: 0;
+/* BOTTOM BAR */
+#bottom-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--bg); border-top: 1px solid var(--border);
+  padding: 10px 14px 20px;
 }
-.nav-btn {
-  flex: 1; background: none; border: 1px solid var(--border);
-  color: var(--text-dim); font-family: var(--font); font-size: 11px;
-  letter-spacing: 1px; padding: 12px; border-radius: 4px; cursor: pointer;
-  transition: all 0.15s;
+#submit-btn {
+  width: 100%; background: none; border: 1px solid var(--green);
+  color: var(--green); font-family: var(--font); font-size: 11px;
+  letter-spacing: 2px; padding: 13px; border-radius: 4px; cursor: pointer;
 }
-.nav-btn:active { transform: scale(0.98); }
-.nav-btn.primary { border-color: var(--green-dim); color: var(--green); }
-.nav-btn.disabled { opacity: 0.3; pointer-events: none; }
+#submit-btn:disabled { opacity: 0.3; border-color: var(--border); color: var(--text-dim); }
 
-/* LOADING / STATUS SCREENS */
-#loading, #done-screen, #submit-screen {
-  position: absolute; inset: 0; display: flex;
-  flex-direction: column; align-items: center; justify-content: center;
+/* OVERLAY SCREENS */
+.overlay {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: var(--bg); flex-direction: column;
+  align-items: center; justify-content: center;
   gap: 16px; padding: 32px; text-align: center;
 }
-#loading { background: var(--bg); z-index: 10; }
+.overlay.show { display: flex; }
 .spinner {
   width: 32px; height: 32px; border: 2px solid var(--border);
   border-top-color: var(--green); border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-.status-title { font-size: 13px; letter-spacing: 2px; color: var(--green); }
-.status-sub { font-size: 11px; color: var(--text-dim); line-height: 1.5; }
-#done-screen, #submit-screen { display: none; background: var(--bg); z-index: 10; }
-
-.big-btn {
+.ov-title { font-size: 13px; letter-spacing: 3px; }
+.ov-sub { font-size: 11px; color: var(--text-dim); line-height: 1.6; }
+.ov-btn {
   width: 100%; background: none; border: 1px solid var(--green);
-  color: var(--green); font-family: var(--font); font-size: 12px;
-  letter-spacing: 2px; padding: 16px; border-radius: 4px; cursor: pointer;
+  color: var(--green); font-family: var(--font); font-size: 11px;
+  letter-spacing: 2px; padding: 14px; border-radius: 4px; cursor: pointer;
+  margin-top: 4px;
 }
-.big-btn:active { background: rgba(57,255,20,0.1); }
-.big-btn.amber { border-color: var(--amber); color: var(--amber); }
+.ov-btn.amber { border-color: var(--amber); color: var(--amber); }
+#answered-big { font-size: 40px; color: var(--green); letter-spacing: 6px; }
 
-#answered-count { font-size: 28px; color: var(--green); letter-spacing: 4px; }
-
-/* SKIPPED BADGE */
-.skipped-badge {
-  position: absolute; top: 8px; right: 8px;
-  font-size: 9px; letter-spacing: 1px; color: var(--amber);
-  border: 1px solid rgba(255,183,0,0.4); padding: 2px 6px; border-radius: 2px;
+/* SECTION LABELS */
+.section-label {
+  font-size: 9px; letter-spacing: 2px; color: var(--text-dim);
+  padding: 10px 4px 4px;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="app">
-  <div id="header">
+
+<div id="header">
+  <div id="header-top">
     <div id="header-title">// STUDIO INBOX</div>
-    <div id="header-count">—</div>
+    <div id="header-stats">—</div>
   </div>
-  <div id="progress-wrap">
-    <div id="progress-bg"><div id="progress-fill"></div></div>
-  </div>
-  <div id="card-area">
-    <div id="loading">
-      <div class="spinner"></div>
-      <div class="status-title">LOADING INBOX</div>
-      <div class="status-sub">Fetching questions from studio...</div>
-    </div>
-    <div id="done-screen">
-      <div class="status-title">ALL DONE</div>
-      <div id="answered-count">0</div>
-      <div class="status-sub">questions answered this session</div>
-      <button class="big-btn" onclick="submitAnswers()">⬆ SUBMIT TO STUDIO</button>
-      <button class="big-btn amber" style="margin-top:4px" onclick="reviewSkipped()">↩ REVIEW SKIPPED</button>
-    </div>
-    <div id="submit-screen">
-      <div class="spinner" id="submit-spinner"></div>
-      <div class="status-title" id="submit-title">SUBMITTING</div>
-      <div class="status-sub" id="submit-sub">Sending answers to studio...</div>
-      <button class="big-btn" id="submit-close" style="display:none" onclick="location.reload()">✓ DONE</button>
-    </div>
-  </div>
-  <div id="nav">
-    <button class="nav-btn" id="btn-prev" onclick="navigate(-1)">◀ PREV</button>
-    <button class="nav-btn" id="btn-skip" onclick="skipQuestion()">SKIP</button>
-    <button class="nav-btn primary" id="btn-next" onclick="navigate(1)">NEXT ▶</button>
-  </div>
+  <div id="progress-bg"><div id="progress-fill"></div></div>
+</div>
+
+<div id="filters">
+  <button class="filter-tab active" onclick="setFilter('all')">ALL</button>
+  <button class="filter-tab" onclick="setFilter('decision')">DECIDE</button>
+  <button class="filter-tab" onclick="setFilter('proactive')">PROACT</button>
+  <button class="filter-tab" onclick="setFilter('unanswered')">PENDING</button>
+  <button class="filter-tab" onclick="setFilter('answered')">DONE</button>
+</div>
+
+<div id="inbox-list"></div>
+
+<div id="bottom-bar">
+  <button id="submit-btn" onclick="showDone()" disabled>
+    ⬆ SUBMIT ANSWERS TO STUDIO
+  </button>
+</div>
+
+<!-- Loading -->
+<div class="overlay show" id="loading-screen">
+  <div class="spinner"></div>
+  <div class="ov-title" style="color:var(--green)">LOADING INBOX</div>
+  <div class="ov-sub">Fetching questions...</div>
+</div>
+
+<!-- Done / Submit -->
+<div class="overlay" id="done-screen">
+  <div class="ov-title" style="color:var(--green)">ANSWERS READY</div>
+  <div id="answered-big">0</div>
+  <div class="ov-sub" id="done-sub">questions answered this session</div>
+  <button class="ov-btn" onclick="submitAnswers()">⬆ SEND TO STUDIO</button>
+  <button class="ov-btn amber" onclick="hideDone()">↩ KEEP ANSWERING</button>
+</div>
+
+<!-- Submitting -->
+<div class="overlay" id="submit-screen">
+  <div class="spinner" id="sub-spinner"></div>
+  <div class="ov-title" id="sub-title" style="color:var(--green)">SUBMITTING</div>
+  <div class="ov-sub" id="sub-sub">Sending to studio...</div>
+  <button class="ov-btn" id="sub-close" style="display:none" onclick="location.reload()">✓ DONE</button>
 </div>
 
 <script>
-const QUESTIONS = [{"id":"acuscan-d001","project":"acuscan-ar","question":"Use WebXR or Canvas overlay for AR rendering?","options":["WebXR","Canvas overlay on video element"],"type":"decision","recommendation":"Canvas overlay — broader mobile browser support"},{"id":"acuscan-p001","project":"acuscan-ar","question":"If hand tracking lags on older phones — prioritize speed or visual accuracy?","options":["Speed — reduce polling rate","Visual accuracy — keep full fidelity"],"type":"question"},{"id":"acuscan-p002","project":"acuscan-ar","question":"Point descriptions: text overlaid on camera or separate info panel below?","options":["Text on camera — cleaner","Panel below — easier to read"],"type":"question"},{"id":"acuscan-p003","project":"acuscan-ar","question":"Eventually monetize AcuScan AR or keep it free/personal?","options":["Monetize later","Keep free/personal"],"type":"question"},{"id":"squeeze-d001","project":"squeeze-empire","question":"What is the Squeeze Empire win condition / finish line?","options":["Reach revenue target + unlock all upgrades","Unlock all upgrades only","No win — infinite idle","Story ending"],"type":"decision","recommendation":"Revenue target + unlock all upgrades"},{"id":"squeeze-p001","project":"squeeze-empire","question":"Should the game save state between sessions or reset each time?","options":["Save with localStorage — true idle game","Reset each time — arcade style"],"type":"question"},{"id":"squeeze-p002","project":"squeeze-empire","question":"After late-game is done — release publicly, keep personal, or productize?","options":["Release publicly","Keep personal","Productize / monetize"],"type":"question"},{"id":"hibid-d001","project":"hibid-analyzer","question":"Chrome extension available — attempt textarea via extension first or investigate DOM approach?","options":["Extension first — highest success probability","DOM investigation first","Both in parallel"],"type":"decision","recommendation":"Extension first"},{"id":"hibid-p001","project":"hibid-analyzer","question":"Should analysis run on all lots automatically or only on a manually triggered lot?","options":["Auto-run all lots","Manual trigger per lot"],"type":"question"},{"id":"hibid-p002","project":"hibid-analyzer","question":"What format for watchlist notes? e.g. 'Est: $45-65 | Condition: Good | Items: ceramic vase'","options":["That format — structured pipe-delimited","Free text summary","Custom format — I'll define it"],"type":"question"},{"id":"hibid-p003","project":"hibid-analyzer","question":"Should HiBid Analyzer work on mobile Chrome or desktop only?","options":["Desktop only for now","Mobile Chrome too"],"type":"question"},{"id":"nutrimind-d001","project":"nutrimind","question":"What defines NutriMind as complete — what is the finish line?","options":["All planned features working","Personal use ready","Productize for other users"],"type":"decision","recommendation":"Personal use ready first, then decide on productizing"},{"id":"nutrimind-p001","project":"nutrimind","question":"Should shopping list generation be part of the MVP or post-launch?","options":["MVP feature","Post-launch addition"],"type":"question"},{"id":"nutrimind-p002","project":"nutrimind","question":"Should NutriMind remember meal history to avoid repeating recent meals?","options":["Yes — localStorage or backend","No — keep it simple"],"type":"question"},{"id":"jobmatch-p001","project":"job-match","question":"Should Talent Insight Engine be SaaS for other job seekers or stay personal/portfolio use?","options":["SaaS — build for others","Personal/portfolio only"],"type":"question"},{"id":"jobmatch-p002","project":"job-match","question":"Employer portal — build before or after the scraping engine?","options":["Employer portal first","Scraping engine first"],"type":"question"},{"id":"jobmatch-p003","project":"job-match","question":"Scam database — private to the platform or eventually shared/open source?","options":["Private — proprietary moat","Open source — community trust","Hybrid — open driver, closed platform"],"type":"question"},{"id":"jobmatch-p004","project":"job-match","question":"Show job ratings to users in v1 or hold back until v2?","options":["Show in v1","Hold for v2"],"type":"question"},{"id":"whatnot-d001","project":"whatnot-apps","question":"Which Whatnot role to apply to first?","options":["Trust & Safety Agent","Fraud Agent","CX Agent Overnight"],"type":"decision","recommendation":"Trust & Safety Agent — moderation background is direct differentiator"},{"id":"whatnot-p001","project":"whatnot-apps","question":"Do you have the current Whatnot job posting URLs to tailor the resume against?","options":["Yes — I have them","No — need to find them"],"type":"question"},{"id":"whatnot-p002","project":"whatnot-apps","question":"Whatnot cover letter — one general letter or three separate role-specific ones?","options":["Three separate letters — stronger","One general letter with swap sections — faster"],"type":"question"},{"id":"arb-d001","project":"arbitrage-pulse","question":"What geographic area to monitor for FB Marketplace arbitrage?","options":["Tennessee (Atwood/McKenzie area)","Illinois (Woodstock area)","Both — separate digests"],"type":"decision","recommendation":"Both with separate digests"},{"id":"arb-d002","project":"arbitrage-pulse","question":"Scraping approach — Apify Actor or Chrome extension automation?","options":["Apify — paid, reliable, maintained","Chrome extension — free, may break with FB updates"],"type":"decision","recommendation":"Chrome extension first — prove concept free"},{"id":"arb-p001","project":"arbitrage-pulse","question":"What categories should Arbitrage Pulse monitor? (tools, electronics, collectibles, furniture, vintage, etc.)","options":["Tools + electronics + collectibles","Furniture + vintage + antiques","All categories — filter by margin only"],"type":"question"},{"id":"arb-p002","project":"arbitrage-pulse","question":"Minimum profit margin to include in daily digest?","options":["30%+ margin","40%+ margin","50%+ margin"],"type":"question"},{"id":"arb-p003","project":"arbitrage-pulse","question":"Digest delivery format — Markdown in Drive, email, or studio dashboard card?","options":["Markdown file in Drive","Email","Studio dashboard card"],"type":"question"},{"id":"listopt-d001","project":"listing-optimizer","question":"eBay Listing Optimizer — personal tool only or productize for other sellers?","options":["Personal only — optimize my 572 listings","Beta test with select sellers","Full SaaS product"],"type":"decision","recommendation":"Personal first — prove it on own inventory"},{"id":"listopt-d002","project":"listing-optimizer","question":"Input format — eBay bulk export CSV, manual entry, or both?","options":["eBay bulk export CSV only","Manual entry only","Both"],"type":"decision","recommendation":"eBay bulk export CSV — highest leverage for 572 listings"},{"id":"listopt-p001","project":"listing-optimizer","question":"What are your SKU prefix conventions for physical storage location tracking?","options":["I'll tell you the format in session","No SKU conventions — freestyle","Use eBay's default SKU"],"type":"question"},{"id":"listopt-p002","project":"listing-optimizer","question":"Which categories make up the majority of your 572 listings?","options":["Books + media","Tools + hardware","Electronics + collectibles","Mixed — no dominant category"],"type":"question"},{"id":"listopt-p003","project":"listing-optimizer","question":"Should the optimizer suggest price adjustments based on recent eBay sold data?","options":["Yes — integrate eBay sold API","No — titles only for now"],"type":"question"},{"id":"sent-core-d001","project":"sentinel-core","question":"Primary tech stack for Sentinel shared infrastructure?","options":["Electron (desktop)","Web app (browser-based)","React Native (mobile-first)"],"type":"decision","recommendation":"Electron — required for Bluetooth haptic hardware access"},{"id":"sent-core-d002","project":"sentinel-core","question":"Payment processor for adult content platform?","options":["CCBill","Segpay","Epoch","Crypto only"],"type":"decision","recommendation":"CCBill — industry standard, most performer-familiar"},{"id":"sent-core-d003","project":"sentinel-core","question":"Age verification compliance approach?","options":["AgeID integration","Yoti verification","Credit card verification only","ID.me"],"type":"decision","recommendation":"Yoti — privacy-preserving, no ID stored on your servers"},{"id":"sent-core-d004","project":"sentinel-core","question":"Business entity — do you have an LLC to operate Sentinel under?","options":["Yes — existing LLC","No — need to form one","Sole proprietor for now"],"type":"decision","recommendation":"Form LLC before accepting any payments — non-negotiable"},{"id":"sent-core-p001","project":"sentinel-core","question":"Distribution — web app only, or attempt alternative app stores (APKPure, AltStore, Itch.io)?","options":["Web app only","Alternative app stores too"],"type":"question"},{"id":"sent-core-p002","project":"sentinel-core","question":"Open source the haptic driver layer or keep it proprietary?","options":["Open source the driver layer","Keep fully proprietary","Hybrid — open driver, closed platform"],"type":"question"},{"id":"sent-core-p003","project":"sentinel-core","question":"Beta performer recruitment — cold outreach or use existing network?","options":["Existing network first","Cold outreach","Both simultaneously"],"type":"question"},{"id":"sent-core-p004","project":"sentinel-core","question":"Branding — use Sentinel name for both products or develop separate consumer brand for the viewer app?","options":["Sentinel for both — unified brand","Separate consumer brand for viewer app"],"type":"question"},{"id":"sent-perf-d001","project":"sentinel-performer","question":"OnlyFans automation — browser extension injection, Puppeteer headless, or hybrid?","options":["Browser extension only","Puppeteer headless only","Hybrid — extension for UI, Puppeteer for background"],"type":"decision","recommendation":"Hybrid — reduces ban risk vs pure Puppeteer"},{"id":"sent-perf-d002","project":"sentinel-performer","question":"Personality clone training — fine-tune model, few-shot prompting, or RAG?","options":["Fine-tune per performer","Few-shot prompting with chat history","RAG — retrieve relevant past messages per response"],"type":"decision","recommendation":"RAG — fastest to build, no training cost, updatable in real-time"},{"id":"sent-perf-d003","project":"sentinel-performer","question":"Whale threshold — fixed $100, performer-configurable, or dynamic AI-set?","options":["Fixed $100 threshold","Performer sets their own threshold","Dynamic — AI suggests based on revenue history"],"type":"decision","recommendation":"Performer-configurable with AI-suggested default"},{"id":"sent-perf-p001","project":"sentinel-performer","question":"AI disclosure for GFE clone — built into chat UI or handled via ToS only?","options":["In-UI disclosure — safer legally","ToS only — cleaner UX"],"type":"question"},{"id":"sent-perf-p002","project":"sentinel-performer","question":"Should the performer dashboard be web-based or a desktop app?","options":["Web-based — works anywhere","Desktop app — background processes, local hardware"],"type":"question"},{"id":"sent-perf-p003","project":"sentinel-performer","question":"Voice command wake word for ban action — what phrase feels natural but won't be said accidentally on stream?","options":["Sentinel-Exile","Raptor-Purge","I'll decide this in session"],"type":"question"},{"id":"sent-perf-p004","project":"sentinel-performer","question":"Multistreaming — build own relay server or use Restream/Livepeer API?","options":["Build own relay — full control","Restream/Livepeer API — faster to market"],"type":"question"},{"id":"sent-view-d001","project":"sentinel-viewer","question":"VPN implementation — WireGuard split tunnel, ProtonVPN/Mullvad API, or user brings own VPN?","options":["Build WireGuard split tunnel","Partner with ProtonVPN API","User brings own VPN"],"type":"decision","recommendation":"ProtonVPN API initially — fastest to market, privacy-credible"},{"id":"sent-view-d002","project":"sentinel-viewer","question":"Kink analytics data — local device only or opt-in cloud sync?","options":["Local only — no cloud","Opt-in cloud sync with zero-knowledge encryption","Cloud by default, opt-out available"],"type":"decision","recommendation":"Local only for v1 — consistent with privacy brand promise"},{"id":"sent-view-p001","project":"sentinel-viewer","question":"Should VR conversion be a launch feature or post-launch addition?","options":["Launch feature","Post-launch v2 addition"],"type":"question"},{"id":"sent-view-p002","project":"sentinel-viewer","question":"Raptor device fuzzer beta program — public or invite-only initially?","options":["Public — more device coverage faster","Invite-only — controlled, higher quality feedback"],"type":"question"},{"id":"sent-view-p003","project":"sentinel-viewer","question":"Amazon affiliate sidebar — automatic video object detection or manual category browsing?","options":["Automatic detection — high value, complex","Manual category browsing — simpler"],"type":"question"}];
-
 const SUPABASE_URL = 'https://nepnytazalthnjqpyzcx.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5lcG55dGF6YWx0aG5qcXB5emN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3OTU4MDIsImV4cCI6MjA4OTM3MTgwMn0.ojPrZ51Jei32zdL2ORJ4SOVlopfv-9mZDj-U5sDz7rw';
-const SESSION_ID = 'session_' + Date.now();
-const STORAGE_KEY = 'studio_inbox_answers';
+const STORAGE_KEY = 'studio_inbox_v2';
+const SESSION_ID = 'mob_' + Date.now();
 
 let questions = [];
-let current = 0;
 let answers = {};
-let skipped = new Set();
+let currentFilter = 'all';
+let expandedId = null;
 
-// Load saved answers from localStorage
+// ── QUESTIONS (embedded) ──────────────────────────────────────────
+// Will be replaced by Claude Code with actual mobile-inbox.json contents
+const EMBEDDED_QUESTIONS = [{"id":"acuscan-d001","project":"acuscan-ar","question":"Use WebXR or Canvas overlay for AR rendering?","options":["WebXR","Canvas overlay on video element"],"type":"decision","recommendation":"Canvas overlay — broader mobile browser support"},{"id":"acuscan-p001","project":"acuscan-ar","question":"If hand tracking lags on older phones — prioritize speed or visual accuracy?","options":["Speed — reduce polling rate","Visual accuracy — keep full fidelity"],"type":"question"},{"id":"acuscan-p002","project":"acuscan-ar","question":"Point descriptions: text overlaid on camera or separate info panel below?","options":["Text on camera — cleaner","Panel below — easier to read"],"type":"question"},{"id":"acuscan-p003","project":"acuscan-ar","question":"Eventually monetize AcuScan AR or keep it free/personal?","options":["Monetize later","Keep free/personal"],"type":"question"},{"id":"squeeze-d001","project":"squeeze-empire","question":"What is the Squeeze Empire win condition / finish line?","options":["Reach revenue target + unlock all upgrades","Unlock all upgrades only","No win — infinite idle","Story ending"],"type":"decision","recommendation":"Revenue target + unlock all upgrades"},{"id":"squeeze-p001","project":"squeeze-empire","question":"Should the game save state between sessions or reset each time?","options":["Save with localStorage — true idle game","Reset each time — arcade style"],"type":"question"},{"id":"squeeze-p002","project":"squeeze-empire","question":"After late-game is done — release publicly, keep personal, or productize?","options":["Release publicly","Keep personal","Productize / monetize"],"type":"question"},{"id":"hibid-d001","project":"hibid-analyzer","question":"Chrome extension available — attempt textarea via extension first or investigate DOM approach?","options":["Extension first — highest success probability","DOM investigation first","Both in parallel"],"type":"decision","recommendation":"Extension first"},{"id":"hibid-p001","project":"hibid-analyzer","question":"Should analysis run on all lots automatically or only on a manually triggered lot?","options":["Auto-run all lots","Manual trigger per lot"],"type":"question"},{"id":"hibid-p002","project":"hibid-analyzer","question":"What format for watchlist notes? e.g. 'Est: $45-65 | Condition: Good | Items: ceramic vase'","options":["That format — structured pipe-delimited","Free text summary","Custom format — I'll define it"],"type":"question"},{"id":"hibid-p003","project":"hibid-analyzer","question":"Should HiBid Analyzer work on mobile Chrome or desktop only?","options":["Desktop only for now","Mobile Chrome too"],"type":"question"},{"id":"nutrimind-d001","project":"nutrimind","question":"What defines NutriMind as complete — what is the finish line?","options":["All planned features working","Personal use ready","Productize for other users"],"type":"decision","recommendation":"Personal use ready first, then decide on productizing"},{"id":"nutrimind-p001","project":"nutrimind","question":"Should shopping list generation be part of the MVP or post-launch?","options":["MVP feature","Post-launch addition"],"type":"question"},{"id":"nutrimind-p002","project":"nutrimind","question":"Should NutriMind remember meal history to avoid repeating recent meals?","options":["Yes — localStorage or backend","No — keep it simple"],"type":"question"},{"id":"jobmatch-p001","project":"job-match","question":"Should Talent Insight Engine be SaaS for other job seekers or stay personal/portfolio use?","options":["SaaS — build for others","Personal/portfolio only"],"type":"question"},{"id":"jobmatch-p002","project":"job-match","question":"Employer portal — build before or after the scraping engine?","options":["Employer portal first","Scraping engine first"],"type":"question"},{"id":"jobmatch-p003","project":"job-match","question":"Scam database — private to the platform or eventually shared/open source?","options":["Private — proprietary moat","Open source — community trust","Hybrid — open driver, closed platform"],"type":"question"},{"id":"jobmatch-p004","project":"job-match","question":"Show job ratings to users in v1 or hold back until v2?","options":["Show in v1","Hold for v2"],"type":"question"},{"id":"whatnot-d001","project":"whatnot-apps","question":"Which Whatnot role to apply to first?","options":["Trust & Safety Agent","Fraud Agent","CX Agent Overnight"],"type":"decision","recommendation":"Trust & Safety Agent — moderation background is direct differentiator"},{"id":"whatnot-p001","project":"whatnot-apps","question":"Do you have the current Whatnot job posting URLs to tailor the resume against?","options":["Yes — I have them","No — need to find them"],"type":"question"},{"id":"whatnot-p002","project":"whatnot-apps","question":"Whatnot cover letter — one general letter or three separate role-specific ones?","options":["Three separate letters — stronger","One general letter with swap sections — faster"],"type":"question"},{"id":"arb-d001","project":"arbitrage-pulse","question":"What geographic area to monitor for FB Marketplace arbitrage?","options":["Tennessee (Atwood/McKenzie area)","Illinois (Woodstock area)","Both — separate digests"],"type":"decision","recommendation":"Both with separate digests"},{"id":"arb-d002","project":"arbitrage-pulse","question":"Scraping approach — Apify Actor or Chrome extension automation?","options":["Apify — paid, reliable, maintained","Chrome extension — free, may break with FB updates"],"type":"decision","recommendation":"Chrome extension first — prove concept free"},{"id":"arb-p001","project":"arbitrage-pulse","question":"What categories should Arbitrage Pulse monitor? (tools, electronics, collectibles, furniture, vintage, etc.)","options":["Tools + electronics + collectibles","Furniture + vintage + antiques","All categories — filter by margin only"],"type":"question"},{"id":"arb-p002","project":"arbitrage-pulse","question":"Minimum profit margin to include in daily digest?","options":["30%+ margin","40%+ margin","50%+ margin"],"type":"question"},{"id":"arb-p003","project":"arbitrage-pulse","question":"Digest delivery format — Markdown in Drive, email, or studio dashboard card?","options":["Markdown file in Drive","Email","Studio dashboard card"],"type":"question"},{"id":"listopt-d001","project":"listing-optimizer","question":"eBay Listing Optimizer — personal tool only or productize for other sellers?","options":["Personal only — optimize my 572 listings","Beta test with select sellers","Full SaaS product"],"type":"decision","recommendation":"Personal first — prove it on own inventory"},{"id":"listopt-d002","project":"listing-optimizer","question":"Input format — eBay bulk export CSV, manual entry, or both?","options":["eBay bulk export CSV only","Manual entry only","Both"],"type":"decision","recommendation":"eBay bulk export CSV — highest leverage for 572 listings"},{"id":"listopt-p001","project":"listing-optimizer","question":"What are your SKU prefix conventions for physical storage location tracking?","options":["I'll tell you the format in session","No SKU conventions — freestyle","Use eBay's default SKU"],"type":"question"},{"id":"listopt-p002","project":"listing-optimizer","question":"Which categories make up the majority of your 572 listings?","options":["Books + media","Tools + hardware","Electronics + collectibles","Mixed — no dominant category"],"type":"question"},{"id":"listopt-p003","project":"listing-optimizer","question":"Should the optimizer suggest price adjustments based on recent eBay sold data?","options":["Yes — integrate eBay sold API","No — titles only for now"],"type":"question"},{"id":"sent-core-d001","project":"sentinel-core","question":"Primary tech stack for Sentinel shared infrastructure?","options":["Electron (desktop)","Web app (browser-based)","React Native (mobile-first)"],"type":"decision","recommendation":"Electron — required for Bluetooth haptic hardware access"},{"id":"sent-core-d002","project":"sentinel-core","question":"Payment processor for adult content platform?","options":["CCBill","Segpay","Epoch","Crypto only"],"type":"decision","recommendation":"CCBill — industry standard, most performer-familiar"},{"id":"sent-core-d003","project":"sentinel-core","question":"Age verification compliance approach?","options":["AgeID integration","Yoti verification","Credit card verification only","ID.me"],"type":"decision","recommendation":"Yoti — privacy-preserving, no ID stored on your servers"},{"id":"sent-core-d004","project":"sentinel-core","question":"Business entity — do you have an LLC to operate Sentinel under?","options":["Yes — existing LLC","No — need to form one","Sole proprietor for now"],"type":"decision","recommendation":"Form LLC before accepting any payments — non-negotiable"},{"id":"sent-core-p001","project":"sentinel-core","question":"Distribution — web app only, or attempt alternative app stores (APKPure, AltStore, Itch.io)?","options":["Web app only","Alternative app stores too"],"type":"question"},{"id":"sent-core-p002","project":"sentinel-core","question":"Open source the haptic driver layer or keep it proprietary?","options":["Open source the driver layer","Keep fully proprietary","Hybrid — open driver, closed platform"],"type":"question"},{"id":"sent-core-p003","project":"sentinel-core","question":"Beta performer recruitment — cold outreach or use existing network?","options":["Existing network first","Cold outreach","Both simultaneously"],"type":"question"},{"id":"sent-core-p004","project":"sentinel-core","question":"Branding — use Sentinel name for both products or develop separate consumer brand for the viewer app?","options":["Sentinel for both — unified brand","Separate consumer brand for viewer app"],"type":"question"},{"id":"sent-perf-d001","project":"sentinel-performer","question":"OnlyFans automation — browser extension injection, Puppeteer headless, or hybrid?","options":["Browser extension only","Puppeteer headless only","Hybrid — extension for UI, Puppeteer for background"],"type":"decision","recommendation":"Hybrid — reduces ban risk vs pure Puppeteer"},{"id":"sent-perf-d002","project":"sentinel-performer","question":"Personality clone training — fine-tune model, few-shot prompting, or RAG?","options":["Fine-tune per performer","Few-shot prompting with chat history","RAG — retrieve relevant past messages per response"],"type":"decision","recommendation":"RAG — fastest to build, no training cost, updatable in real-time"},{"id":"sent-perf-d003","project":"sentinel-performer","question":"Whale threshold — fixed $100, performer-configurable, or dynamic AI-set?","options":["Fixed $100 threshold","Performer sets their own threshold","Dynamic — AI suggests based on revenue history"],"type":"decision","recommendation":"Performer-configurable with AI-suggested default"},{"id":"sent-perf-p001","project":"sentinel-performer","question":"AI disclosure for GFE clone — built into chat UI or handled via ToS only?","options":["In-UI disclosure — safer legally","ToS only — cleaner UX"],"type":"question"},{"id":"sent-perf-p002","project":"sentinel-performer","question":"Should the performer dashboard be web-based or a desktop app?","options":["Web-based — works anywhere","Desktop app — background processes, local hardware"],"type":"question"},{"id":"sent-perf-p003","project":"sentinel-performer","question":"Voice command wake word for ban action — what phrase feels natural but won't be said accidentally on stream?","options":["Sentinel-Exile","Raptor-Purge","I'll decide this in session"],"type":"question"},{"id":"sent-perf-p004","project":"sentinel-performer","question":"Multistreaming — build own relay server or use Restream/Livepeer API?","options":["Build own relay — full control","Restream/Livepeer API — faster to market"],"type":"question"},{"id":"sent-view-d001","project":"sentinel-viewer","question":"VPN implementation — WireGuard split tunnel, ProtonVPN/Mullvad API, or user brings own VPN?","options":["Build WireGuard split tunnel","Partner with ProtonVPN API","User brings own VPN"],"type":"decision","recommendation":"ProtonVPN API initially — fastest to market, privacy-credible"},{"id":"sent-view-d002","project":"sentinel-viewer","question":"Kink analytics data — local device only or opt-in cloud sync?","options":["Local only — no cloud","Opt-in cloud sync with zero-knowledge encryption","Cloud by default, opt-out available"],"type":"decision","recommendation":"Local only for v1 — consistent with privacy brand promise"},{"id":"sent-view-p001","project":"sentinel-viewer","question":"Should VR conversion be a launch feature or post-launch addition?","options":["Launch feature","Post-launch v2 addition"],"type":"question"},{"id":"sent-view-p002","project":"sentinel-viewer","question":"Raptor device fuzzer beta program — public or invite-only initially?","options":["Public — more device coverage faster","Invite-only — controlled, higher quality feedback"],"type":"question"},{"id":"sent-view-p003","project":"sentinel-viewer","question":"Amazon affiliate sidebar — automatic video object detection or manual category browsing?","options":["Automatic detection — high value, complex","Manual category browsing — simpler"],"type":"question"}];
+
 function loadSaved() {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) answers = JSON.parse(saved);
-  } catch(e) {}
+  try { answers = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) {}
 }
-
 function saveAnswers() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(answers)); } catch(e) {}
 }
 
-function loadQuestions() {
+async function init() {
   loadSaved();
-  questions = QUESTIONS;
-  init();
+  if (EMBEDDED_QUESTIONS) {
+    questions = EMBEDDED_QUESTIONS;
+    render();
+  } else {
+    showError('Questions not embedded. Ask Claude Code to run the embed step.');
+  }
 }
 
-function init() {
-  document.getElementById('loading').style.display = 'none';
-  buildCards();
-  goTo(findFirstUnanswered());
-  updateNav();
+function showError(msg) {
+  document.getElementById('loading-screen').innerHTML = `
+    <div class="ov-title" style="color:var(--red)">LOAD FAILED</div>
+    <div class="ov-sub">${msg}</div>
+    <button class="ov-btn" onclick="location.reload()">↺ RETRY</button>
+  `;
 }
 
-function buildCards() {
-  const area = document.getElementById('card-area');
-  // Remove old cards
-  area.querySelectorAll('.card').forEach(c => c.remove());
+function render() {
+  document.getElementById('loading-screen').classList.remove('show');
+  updateHeader();
+  renderList();
+}
 
-  questions.forEach((q, i) => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.id = 'card_' + i;
+function setFilter(f) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-tab').forEach((t,i) => {
+    t.classList.toggle('active', ['all','decision','proactive','unanswered','answered'][i] === f);
+  });
+  renderList();
+}
 
-    const savedAns = answers[q.id];
-
-    let optionsHTML = '';
-    if (q.options && q.options.length) {
-      optionsHTML = `<div class="options">` +
-        q.options.map(o => `
-          <button class="opt-btn ${savedAns === o ? 'selected' : ''}"
-            onclick="selectOption(${i}, this, '${o.replace(/'/g,"\\'")}')">
-            ${o}
-          </button>`).join('') +
-        `</div>`;
-    }
-
-    card.innerHTML = `
-      ${savedAns ? '<div class="skipped-badge" style="color:var(--green);border-color:rgba(57,255,20,0.4)">✓ ANSWERED</div>' : ''}
-      <div class="card-project">${q.project || 'studio'}</div>
-      <div class="card-question">${q.question}</div>
-      ${q.recommendation ? `<div class="card-rec">💡 ${q.recommendation}</div>` : ''}
-      ${optionsHTML}
-      <div class="custom-wrap">
-        <input class="custom-input" id="custom_${i}" type="text"
-          placeholder="Custom answer..."
-          value="${savedAns && !q.options?.includes(savedAns) ? savedAns : ''}"
-          onkeydown="if(event.key==='Enter'){useCustom(${i})}" />
-        <button class="custom-use" onclick="useCustom(${i})">USE</button>
-      </div>
-    `;
-    area.appendChild(card);
+function getFiltered() {
+  return questions.filter(q => {
+    if (currentFilter === 'all') return true;
+    if (currentFilter === 'answered') return !!answers[q.id];
+    if (currentFilter === 'unanswered') return !answers[q.id];
+    return q.type === currentFilter;
   });
 }
 
-function selectOption(idx, btn, val) {
-  const q = questions[idx];
-  answers[q.id] = val;
-  saveAnswers();
-  // Update button states
-  btn.closest('.options').querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-  // Clear custom input
-  const ci = document.getElementById('custom_' + idx);
-  if (ci) ci.value = '';
-  // Update answered badge
-  updateAnsweredBadge(idx);
-  updateHeader();
-}
+function renderList() {
+  const list = document.getElementById('inbox-list');
+  const filtered = getFiltered();
 
-function useCustom(idx) {
-  const ci = document.getElementById('custom_' + idx);
-  const val = ci ? ci.value.trim() : '';
-  if (!val) return;
-  const q = questions[idx];
-  answers[q.id] = val;
-  saveAnswers();
-  // Deselect preset buttons
-  const card = document.getElementById('card_' + idx);
-  card.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
-  updateAnsweredBadge(idx);
-  updateHeader();
-}
-
-function updateAnsweredBadge(idx) {
-  const card = document.getElementById('card_' + idx);
-  let badge = card.querySelector('.skipped-badge');
-  if (!badge) {
-    badge = document.createElement('div');
-    badge.className = 'skipped-badge';
-    card.insertBefore(badge, card.firstChild);
-  }
-  badge.style.color = 'var(--green)';
-  badge.style.borderColor = 'rgba(57,255,20,0.4)';
-  badge.textContent = '✓ ANSWERED';
-}
-
-function skipQuestion() {
-  skipped.add(current);
-  navigate(1);
-}
-
-function navigate(dir) {
-  const next = current + dir;
-  if (next < 0 || next >= questions.length) {
-    if (dir === 1) showDone();
+  if (!filtered.length) {
+    list.innerHTML = `<div style="text-align:center;color:var(--text-dim);font-size:11px;padding:40px">No items</div>`;
     return;
   }
-  goTo(next);
+
+  // Group by project
+  const byProject = {};
+  filtered.forEach(q => {
+    if (!byProject[q.project]) byProject[q.project] = [];
+    byProject[q.project].push(q);
+  });
+
+  let html = '';
+  Object.entries(byProject).forEach(([proj, items]) => {
+    html += `<div class="section-label">${proj.toUpperCase()}</div>`;
+    items.forEach(q => {
+      const ans = answers[q.id];
+      const isExpanded = expandedId === q.id;
+      const dotClass = ans ? 'dot-answered' : (q.type === 'decision' ? 'dot-decision' : 'dot-proactive');
+      const typeLabel = q.type === 'decision' ? 'DECISION' : 'PROACT';
+      const typeClass = q.type === 'decision' ? 'type-decision' : 'type-proactive';
+
+      let optionsHTML = '';
+      if (q.options && q.options.length) {
+        optionsHTML = `<div class="options">` +
+          q.options.map(o => `
+            <button class="opt-btn ${ans === o ? 'selected' : ''}"
+              onclick="selectOpt('${q.id}','${o.replace(/'/g,"\\'")}',this)">
+              ${o}
+            </button>`).join('') +
+          `</div>`;
+      }
+
+      html += `
+        <div class="inbox-item ${ans ? 'answered' : ''} ${isExpanded ? 'expanded' : ''}" id="item_${q.id}">
+          <div class="item-header" onclick="toggleItem('${q.id}')">
+            <div class="item-dot ${dotClass}"></div>
+            <div class="item-content">
+              <div class="item-question">${q.question}</div>
+              <div class="item-meta">
+                <span class="item-project">${q.project}</span>
+                <span class="item-type ${typeClass}">${typeLabel}</span>
+              </div>
+              ${ans ? `<div class="item-answer-preview">✓ ${ans}</div>` : ''}
+            </div>
+          </div>
+          <div class="item-expand ${isExpanded ? 'open' : ''}" id="expand_${q.id}">
+            ${q.recommendation ? `<div class="item-rec">💡 ${q.recommendation}</div>` : ''}
+            ${optionsHTML}
+            <div class="custom-wrap">
+              <input class="custom-input" id="custom_${q.id}" type="text"
+                placeholder="Custom answer..."
+                value="${ans && !q.options?.includes(ans) ? ans : ''}" />
+              <button class="custom-use" onclick="useCustom('${q.id}')">USE</button>
+            </div>
+          </div>
+        </div>`;
+    });
+  });
+
+  list.innerHTML = html;
 }
 
-function goTo(idx) {
-  document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-  const card = document.getElementById('card_' + idx);
-  if (card) card.classList.add('active');
-  current = idx;
-  updateNav();
-  updateHeader();
-}
-
-function findFirstUnanswered() {
-  for (let i = 0; i < questions.length; i++) {
-    if (!answers[questions[i].id]) return i;
+function toggleItem(id) {
+  expandedId = expandedId === id ? null : id;
+  renderList();
+  if (expandedId) {
+    setTimeout(() => {
+      const el = document.getElementById('item_' + id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   }
-  return 0;
 }
 
-function updateNav() {
-  const prev = document.getElementById('btn-prev');
-  const next = document.getElementById('btn-next');
-  if (prev) prev.classList.toggle('disabled', current === 0);
-  if (next) next.textContent = current === questions.length - 1 ? 'FINISH ▶' : 'NEXT ▶';
+function selectOpt(id, val, btn) {
+  answers[id] = val;
+  saveAnswers();
+  // Update UI without full re-render
+  const item = document.getElementById('item_' + id);
+  if (item) {
+    item.classList.add('answered');
+    item.querySelectorAll('.opt-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    // Update preview
+    let preview = item.querySelector('.item-answer-preview');
+    if (!preview) {
+      preview = document.createElement('div');
+      preview.className = 'item-answer-preview';
+      item.querySelector('.item-meta').after(preview);
+    }
+    preview.textContent = '✓ ' + val;
+  }
+  updateHeader();
+  // Auto-close and move to next unanswered
+  setTimeout(() => {
+    const unanswered = questions.filter(q => !answers[q.id]);
+    if (unanswered.length > 0) {
+      expandedId = unanswered[0].id;
+      renderList();
+      setTimeout(() => {
+        const el = document.getElementById('item_' + unanswered[0].id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    } else {
+      expandedId = null;
+      renderList();
+    }
+  }, 400);
+}
+
+function useCustom(id) {
+  const input = document.getElementById('custom_' + id);
+  const val = input ? input.value.trim() : '';
+  if (!val) return;
+  answers[id] = val;
+  saveAnswers();
+  // Fake button for selectOpt reuse
+  const fakeBtn = { classList: { remove: ()=>{}, add: ()=>{} } };
+  updateHeader();
+  renderList();
 }
 
 function updateHeader() {
-  const answeredCount = Object.keys(answers).length;
-  document.getElementById('header-count').textContent = `${answeredCount}/${questions.length} answered`;
-  document.getElementById('progress-fill').style.width = (questions.length ? (answeredCount / questions.length * 100) : 0) + '%';
+  const total = questions.length;
+  const answered = Object.keys(answers).length;
+  document.getElementById('header-stats').textContent = `${answered}/${total} answered`;
+  document.getElementById('progress-fill').style.width = (total ? answered/total*100 : 0) + '%';
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = answered === 0;
+  btn.textContent = answered > 0
+    ? `⬆ SUBMIT ${answered} ANSWER${answered > 1 ? 'S' : ''} TO STUDIO`
+    : '⬆ SUBMIT ANSWERS TO STUDIO';
 }
 
 function showDone() {
-  const answeredCount = Object.keys(answers).length;
-  document.getElementById('answered-count').textContent = answeredCount;
-  document.getElementById('done-screen').style.display = 'flex';
+  const answered = Object.keys(answers).length;
+  document.getElementById('answered-big').textContent = answered;
+  document.getElementById('done-sub').textContent = `question${answered !== 1 ? 's' : ''} answered this session`;
+  document.getElementById('done-screen').classList.add('show');
 }
 
-function reviewSkipped() {
-  document.getElementById('done-screen').style.display = 'none';
-  // Find first unanswered
-  const idx = findFirstUnanswered();
-  goTo(idx);
+function hideDone() {
+  document.getElementById('done-screen').classList.remove('show');
 }
 
 async function submitAnswers() {
-  document.getElementById('done-screen').style.display = 'none';
-  document.getElementById('submit-screen').style.display = 'flex';
-
-  const payload = {
-    session_id: SESSION_ID,
-    answers: answers,
-    submitted_at: new Date().toISOString(),
-    total_answered: Object.keys(answers).length
-  };
+  document.getElementById('done-screen').classList.remove('show');
+  document.getElementById('submit-screen').classList.add('show');
 
   try {
     const res = await fetch(`${SUPABASE_URL}/rest/v1/mobile_answers`, {
@@ -374,45 +460,34 @@ async function submitAnswers() {
         'Authorization': 'Bearer ' + SUPABASE_KEY,
         'Prefer': 'return=minimal'
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({
+        session_id: SESSION_ID,
+        answers: answers,
+        total_answered: Object.keys(answers).length
+      })
     });
 
-    if (!res.ok) {
-      const err = await res.text();
-      throw new Error(err);
-    }
+    if (!res.ok) throw new Error('HTTP ' + res.status);
 
-    // Clear localStorage on success
     localStorage.removeItem(STORAGE_KEY);
-
-    document.getElementById('submit-spinner').style.display = 'none';
-    document.getElementById('submit-title').textContent = '✓ SUBMITTED';
-    document.getElementById('submit-sub').textContent = `${Object.keys(answers).length} answers sent to studio.\nHit Refresh in studio to apply them.`;
-    document.getElementById('submit-close').style.display = 'block';
+    document.getElementById('sub-spinner').style.display = 'none';
+    document.getElementById('sub-title').textContent = '✓ SUBMITTED';
+    document.getElementById('sub-sub').textContent =
+      `${Object.keys(answers).length} answers sent.\nHit Refresh in studio to apply.`;
+    document.getElementById('sub-close').style.display = 'block';
 
   } catch(e) {
-    document.getElementById('submit-spinner').style.display = 'none';
-    document.getElementById('submit-title').style.color = 'var(--amber)';
-    document.getElementById('submit-title').textContent = 'SUBMIT FAILED';
-    document.getElementById('submit-sub').textContent = e.message + '\n\nAnswers are saved locally — try again.';
-    document.getElementById('submit-close').style.display = 'block';
-    document.getElementById('submit-close').textContent = '↺ TRY AGAIN';
-    document.getElementById('submit-close').onclick = submitAnswers;
+    document.getElementById('sub-spinner').style.display = 'none';
+    document.getElementById('sub-title').style.color = 'var(--amber)';
+    document.getElementById('sub-title').textContent = 'SUBMIT FAILED';
+    document.getElementById('sub-sub').textContent = e.message + '\n\nAnswers saved locally.';
+    document.getElementById('sub-close').style.display = 'block';
+    document.getElementById('sub-close').textContent = '↺ RETRY';
+    document.getElementById('sub-close').onclick = submitAnswers;
   }
 }
 
-// Touch/swipe support
-let touchStartX = 0;
-document.getElementById('card-area').addEventListener('touchstart', e => {
-  touchStartX = e.touches[0].clientX;
-}, { passive: true });
-document.getElementById('card-area').addEventListener('touchend', e => {
-  const diff = touchStartX - e.changedTouches[0].clientX;
-  if (Math.abs(diff) > 60) navigate(diff > 0 ? 1 : -1);
-}, { passive: true });
-
-// Start
-loadQuestions();
+init();
 </script>
 </body>
 </html>
