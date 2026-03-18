@@ -1,0 +1,14 @@
+slashdot.org: 50 snapshots
+kuro5hin.org: 50 snapshots
+plastic.com: 50 snapshots
+heise.de/newsticker: 50 snapshots
+pro-linux.de: 50 snapshots
+2ch.net/tech: 0 snapshots
+Traceback (most recent call last):
+  File "<string>", line 30, in <module>
+    print(f'JOB2 DONE \u2192 cdx-tech-forums.json', flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 10: character maps to <undefined>

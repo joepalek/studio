@@ -161,6 +161,34 @@
 
   .reconciler-panel.has-data { border-color: var(--green-dim); }
 
+  /* AGENT ROSTER */
+  .agent-roster { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 4px; }
+  .agent-card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 3px; padding: 8px 10px; cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .agent-card:hover { border-color: var(--green-dim); }
+  .agent-card.running { border-color: var(--green); animation: pulse-border 1.5s ease-in-out infinite; }
+  .agent-card.error { border-color: var(--red); }
+  .agent-card.idle { border-color: var(--border); }
+  @keyframes pulse-border { 0%,100%{border-color:var(--green-dim)} 50%{border-color:var(--green)} }
+  .agent-name { font-size: 10px; font-weight: 500; color: var(--text); letter-spacing: 1px; margin-bottom: 3px; }
+  .agent-status-row { display: flex; align-items: center; justify-content: space-between; }
+  .agent-status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .dot-idle { background: var(--text-dim); }
+  .dot-running { background: var(--green); box-shadow: 0 0 4px var(--green); }
+  .dot-done { background: var(--blue); }
+  .dot-error { background: var(--red); }
+  .agent-last { font-size: 9px; color: var(--text-dim); }
+  .agent-dispatch {
+    width: 100%; margin-top: 4px; background: none;
+    border: 1px solid var(--green-dim); color: var(--green);
+    font-family: inherit; font-size: 9px; letter-spacing: 1px;
+    padding: 4px; cursor: pointer; border-radius: 2px;
+  }
+  .agent-dispatch:hover { background: rgba(57,255,20,0.08); }
+
   .reconciler-header {
     display: flex;
     align-items: center;
@@ -1111,6 +1139,12 @@
     </div>
   </div>
 
+  <div class="section-label" style="display:flex;align-items:center;justify-content:space-between;">
+    <span>// AGENT ROSTER</span>
+    <span id="agents-running-count" style="font-size:9px;color:var(--text-dim);">IDLE</span>
+  </div>
+  <div class="agent-roster" id="agent-roster"></div>
+
   <div class="section-label">// ACTIVE PROJECTS</div>
   <div class="project-list" id="project-list"></div>
 
@@ -1700,6 +1734,126 @@ function toggleReconcilerBody() {
 // ============================================================
 // PROJECT RENDERING
 // ============================================================
+// AGENT ROSTER DATA
+const AGENTS = [
+  { id: 'sre-scout',       name: 'SRE SCOUT',        file: 'sre-scout.md',         tier: 0, status: 'idle', lastRun: null, description: 'Session health check' },
+  { id: 'janitor',         name: 'JANITOR',           file: 'janitor.md',           tier: 0, status: 'idle', lastRun: null, description: 'Code quality + debt scan' },
+  { id: 'git-scout',       name: 'GIT SCOUT',         file: 'git-scout.md',         tier: 0, status: 'idle', lastRun: null, description: 'Repo health + versions' },
+  { id: 'git-commit',      name: 'GIT COMMIT',        file: 'git-commit-agent.md',  tier: 0, status: 'idle', lastRun: null, description: 'Auto-commit session end' },
+  { id: 'intel-feed',      name: 'INTEL FEED',        file: 'intel-feed.md',        tier: 0, status: 'idle', lastRun: null, description: 'Weekly vuln + deprecation' },
+  { id: 'stress-tester',   name: 'STRESS TESTER',     file: 'stress-tester.md',     tier: 1, status: 'idle', lastRun: null, description: '5-mode adversarial tests' },
+  { id: 'reconciler',      name: 'RECONCILER',        file: null,                   tier: 1, status: 'idle', lastRun: null, description: 'Inbox priority scoring' },
+  { id: 'skill-improver',  name: 'SKILL IMPROVER',    file: 'skill-improver.md',    tier: 1, status: 'idle', lastRun: null, description: 'Karpathy loop self-improve' },
+  { id: 'ai-gateway',      name: 'AI GATEWAY',        file: 'ai-gateway.md',        tier: 0, status: 'idle', lastRun: null, description: 'Route tasks to cheap models' },
+  { id: 'translation',     name: 'TRANSLATION',       file: 'translation-layer.md', tier: 0, status: 'idle', lastRun: null, description: 'Multi-language gateway skill' },
+  { id: 'market-scout',    name: 'MARKET SCOUT',      file: null,                   tier: 1, status: 'idle', lastRun: null, description: 'eBay + job market data' },
+  { id: 'wayback-cdx',     name: 'WAYBACK CDX',       file: null,                   tier: 0, status: 'idle', lastRun: null, description: 'Archive scraper skill' },
+];
+
+const AGENT_STORAGE_KEY = 'studio-agent-roster';
+
+function loadAgentStates() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(AGENT_STORAGE_KEY) || '{}');
+    AGENTS.forEach(a => {
+      if (saved[a.id]) {
+        a.status = saved[a.id].status || 'idle';
+        a.lastRun = saved[a.id].lastRun || null;
+      }
+    });
+  } catch(e) {}
+}
+
+function saveAgentState(agentId, status, lastRun) {
+  try {
+    const saved = JSON.parse(localStorage.getItem(AGENT_STORAGE_KEY) || '{}');
+    saved[agentId] = { status, lastRun };
+    localStorage.setItem(AGENT_STORAGE_KEY, JSON.stringify(saved));
+  } catch(e) {}
+}
+
+function renderAgentRoster() {
+  loadAgentStates();
+  const roster = document.getElementById('agent-roster');
+  if (!roster) return;
+
+  const running = AGENTS.filter(a => a.status === 'running').length;
+  const countEl = document.getElementById('agents-running-count');
+  if (countEl) countEl.textContent = running > 0 ? `${running} RUNNING` : 'ALL IDLE';
+
+  roster.innerHTML = AGENTS.map(a => {
+    const dotClass = { running: 'dot-running', done: 'dot-done', error: 'dot-error', idle: 'dot-idle' }[a.status] || 'dot-idle';
+    const cardClass = a.status === 'running' ? 'running' : a.status === 'error' ? 'error' : 'idle';
+    const lastRunStr = a.lastRun ? a.lastRun.slice(5,16).replace('T',' ') : 'never';
+    const tierLabel = a.tier === 0 ? '⬡ FREE' : '◈ CHEAP';
+    const hasFile = !!a.file;
+
+    return `
+    <div class="agent-card ${cardClass}" id="agent-card-${a.id}" title="${a.description}">
+      <div class="agent-name">${a.name}</div>
+      <div class="agent-status-row">
+        <div class="agent-status-dot ${dotClass}"></div>
+        <span class="agent-last">${lastRunStr}</span>
+        <span style="font-size:8px;color:var(--text-dim)">${tierLabel}</span>
+      </div>
+      ${hasFile ? `<button class="agent-dispatch" onclick="event.stopPropagation();dispatchAgent('${a.id}')">▶ DISPATCH</button>` : `<span style="font-size:9px;color:var(--text-dim);display:block;margin-top:4px;text-align:center;">not built yet</span>`}
+    </div>`;
+  }).join('');
+}
+
+function dispatchAgent(agentId) {
+  const agent = AGENTS.find(a => a.id === agentId);
+  if (!agent || !agent.file) return;
+
+  // Mark as running
+  agent.status = 'running';
+  agent.lastRun = new Date().toISOString();
+  saveAgentState(agentId, 'running', agent.lastRun);
+  renderAgentRoster();
+
+  // Copy command to clipboard
+  const cmd = `Load ${agent.file}. Run now.`;
+  navigator.clipboard.writeText(cmd).then(() => {
+    addLogEntry({ time: new Date().toISOString().slice(0,16).replace('T',' — '), project: '_STUDIO', text: `Dispatched: ${agent.name} — command copied to clipboard` });
+    // Show brief confirm
+    const card = document.getElementById('agent-card-' + agentId);
+    if (card) {
+      const orig = card.querySelector('.agent-dispatch').textContent;
+      card.querySelector('.agent-dispatch').textContent = '✓ COPIED';
+      setTimeout(() => {
+        card.querySelector('.agent-dispatch').textContent = orig;
+        // Auto-mark done after 30s if still running
+        setTimeout(() => {
+          if (agent.status === 'running') {
+            agent.status = 'done';
+            saveAgentState(agentId, 'done', agent.lastRun);
+            renderAgentRoster();
+          }
+        }, 30000);
+      }, 1500);
+    }
+  }).catch(() => {
+    // Fallback — show command in alert
+    alert('Paste in Claude Code:\n\n' + cmd);
+  });
+}
+
+function markAgentDone(agentId) {
+  const agent = AGENTS.find(a => a.id === agentId);
+  if (!agent) return;
+  agent.status = 'done';
+  saveAgentState(agentId, 'done', agent.lastRun);
+  renderAgentRoster();
+}
+
+function markAgentError(agentId) {
+  const agent = AGENTS.find(a => a.id === agentId);
+  if (!agent) return;
+  agent.status = 'error';
+  saveAgentState(agentId, 'error', agent.lastRun);
+  renderAgentRoster();
+}
+
 function renderProjects() {
   const list = document.getElementById('project-list');
   list.innerHTML = PROJECTS.map(p => {
@@ -1821,6 +1975,7 @@ function lockProject(id) {
   if (confirm(`Lock ${p.name} for adversarial testing? No edits will be permitted until unlocked.`)) {
     p.locked = true;
     renderProjects();
+    renderAgentRoster();
     addLogEntry({
       time: new Date().toISOString().slice(0,16).replace('T',' — '),
       project: p.name,
@@ -1836,6 +1991,7 @@ function forceUnlock(id) {
   if (reason) {
     p.locked = false;
     renderProjects();
+    renderAgentRoster();
     addLogEntry({
       time: new Date().toISOString().slice(0,16).replace('T',' — '),
       project: p.name,
@@ -2758,6 +2914,7 @@ function executeAction(action, decision, answer) {
           nextAction: value
         });
         renderProjects();
+    renderAgentRoster();
         addLogEntry({ time: timestamp, project: decision.project,
           text: `✓ State updated: ${field} → ${value}` });
       }
@@ -3780,6 +3937,7 @@ Auto-discovered from Drive. Read state.json for current status before proceeding
     generateAgentStubs();
     populateAddFormProjects();
     renderProjects();
+    renderAgentRoster();
     renderInbox();
 
     setDriveStatus('connected');
@@ -4021,6 +4179,7 @@ async function initStudio() {
   checkDailyStressTrigger();
   populateAddFormProjects();
   renderProjects();
+    renderAgentRoster();
   renderQueue();
   renderInbox();
   initDrive();

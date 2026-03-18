@@ -1,0 +1,443 @@
+[
+  {
+    "site": "slashdot.org",
+    "period": "1999-2005",
+    "snapshot_count": 50,
+    "snapshots": [
+      {
+        "timestamp": "19990125092017",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990125103314",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990208010255",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990208020355",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990209091342",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990210062111",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990423222739",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "19990427145143",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "19991007185528",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "19991013054427",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "19991110223955",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000301205131",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000301231027",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000302041957",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000302210017",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000302211922",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000304002518",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000304032244",
+        "original": "http://slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000304142039",
+        "original": "http://www.slashdot.org:80/"
+      },
+      {
+        "timestamp": "20000304150357",
+        "original": "http://www.slashdot.org:80/"
+      }
+    ]
+  },
+  {
+    "site": "kuro5hin.org",
+    "period": "1999-2008",
+    "snapshot_count": 50,
+    "snapshots": [
+      {
+        "timestamp": "20000302164654",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000408220900",
+        "original": "http://www.kuro5hin.org:80/?"
+      },
+      {
+        "timestamp": "20000510041133",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000510051613",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000511030213",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000519221445",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000611212416",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000612002242",
+        "original": "http://www.kuro5hin.org:80/?"
+      },
+      {
+        "timestamp": "20000620092732",
+        "original": "http://kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000620172720",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000621104728",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000815060954",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20000815220929",
+        "original": "http://kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20001001031538",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20001017192657",
+        "original": "http://kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20001110104600",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20001119171700",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20001205021000",
+        "original": "http://www.kuro5hin.org:80/"
+      },
+      {
+        "timestamp": "20001214094800",
+        "original": "http://www.kuro5hin.org:80/?"
+      },
+      {
+        "timestamp": "20010119180300",
+        "original": "http://www.kuro5hin.org:80/"
+      }
+    ]
+  },
+  {
+    "site": "plastic.com",
+    "period": "2001-2005",
+    "snapshot_count": 50,
+    "snapshots": [
+      {
+        "timestamp": "20010202075600",
+        "original": "http://plastic.com:80/"
+      },
+      {
+        "timestamp": "20010301191805",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010302134307",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010418162247",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010516123232",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010516235056",
+        "original": "http://plastic.com:80/"
+      },
+      {
+        "timestamp": "20010720183024",
+        "original": "http://plastic.com:80/"
+      },
+      {
+        "timestamp": "20010925023825",
+        "original": "http://plastic.com:80/"
+      },
+      {
+        "timestamp": "20010925192617",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010927183717",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010928185533",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010928215923",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010929190628",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20010930192241",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20011001194329",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20011001230405",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20011002195937",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20011002204010",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20011003051945",
+        "original": "http://www.plastic.com:80/"
+      },
+      {
+        "timestamp": "20011003205856",
+        "original": "http://www.plastic.com:80/"
+      }
+    ]
+  },
+  {
+    "site": "heise.de/newsticker",
+    "period": "2000-2006",
+    "snapshot_count": 50,
+    "snapshots": [
+      {
+        "timestamp": "20000424145310",
+        "original": "http://www.heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20001109012700",
+        "original": "http://www.heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20001109014400",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20001109152000",
+        "original": "http://heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20001119075000",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20001213210800",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010124044400",
+        "original": "http://heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010126113300",
+        "original": "http://www.heise.de:80/newsticker/#top"
+      },
+      {
+        "timestamp": "20010308221313",
+        "original": "http://www.heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20010413134356",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010507210847",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010513135654",
+        "original": "http://www.heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20010513135658",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010530073940",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010604044700",
+        "original": "http://www.heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20010604044702",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010627213538",
+        "original": "http://www.heise.de:80/newsticker"
+      },
+      {
+        "timestamp": "20010627213543",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010628144547",
+        "original": "http://www.heise.de:80/newsticker/"
+      },
+      {
+        "timestamp": "20010630005813",
+        "original": "http://www.heise.de:80/newsticker"
+      }
+    ]
+  },
+  {
+    "site": "pro-linux.de",
+    "period": "2000-2008",
+    "snapshot_count": 50,
+    "snapshots": [
+      {
+        "timestamp": "20000119184351",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000302201841",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000303140504",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000304154248",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000305210154",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000510192221",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000520083408",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000606171031",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000616074111",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000816233023",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20000818010451",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001001194038",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001010150545",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001017165827",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001019062700",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001110062600",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001118062500",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001204235400",
+        "original": "http://pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20001207091900",
+        "original": "http://www.pro-linux.de:80/"
+      },
+      {
+        "timestamp": "20010118225800",
+        "original": "http://www.pro-linux.de:80/"
+      }
+    ]
+  },
+  {
+    "site": "2ch.net/tech",
+    "period": "2001-2007",
+    "snapshot_count": 0,
+    "snapshots": []
+  }
+]

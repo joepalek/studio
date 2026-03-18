@@ -1,0 +1,95 @@
+Scanning coasttocoastam.com...
+  Found 200 snapshots
+    Fetched: 20000510
+    Fetched: 20000621
+    Fetched: 20001019
+    Fetched: 20020921
+    Fetched: 20030422
+    Fetched: 20031213
+    Fetched: 20040518
+    Fetched: 20040613
+    Fetched: 20040622
+    Fetched: 20040627
+    Fetched: 20040703
+    Fetched: 20040712
+    Fetched: 20040718
+    Fetched: 20040726
+    Fetched: 20040811
+    Fetched: 20040822
+    Fetched: 20040831
+    Fetched: 20040910
+    Fetched: 20040919
+    Fetched: 20040927
+Scanning www.coasttocoastam.com...
+  Found 200 snapshots
+    Fetched: 20000510
+    Fetched: 20000621
+    Fetched: 20001019
+    Fetched: 20020921
+    Fetched: 20030422
+    Fetched: 20031213
+    Fetched: 20040518
+    Fetched: 20040613
+    Fetched: 20040622
+    Fetched: 20040627
+    Fetched: 20040703
+    Fetched: 20040712
+    Fetched: 20040718
+    Fetched: 20040726
+    Fetched: 20040811
+    Fetched: 20040822
+    Fetched: 20040831
+    Fetched: 20040910
+    Fetched: 20040919
+    Fetched: 20040927
+Scanning artbell.com...
+  Found 200 snapshots
+    Fetched: 19980114
+    Fetched: 19990420
+    Fetched: 19990508
+    Fetched: 20000226
+    Fetched: 20000304
+    Fetched: 20000511
+    Fetched: 20000620
+    Fetched: 20001017
+    Fetched: 20010126
+    Fetched: 20010629
+    Fetched: 20011004
+    Fetched: 20011011
+    Fetched: 20011015
+    Fetched: 20011018
+    Fetched: 20011021
+    Fetched: 20011024
+    Fetched: 20011027
+    Fetched: 20011102
+    Fetched: 20011103
+Scanning www.artbell.com...
+  Found 200 snapshots
+    Fetched: 19980114
+    Fetched: 19990420
+    Fetched: 19990508
+    Fetched: 20000226
+    Fetched: 20000304
+    Fetched: 20000511
+    Fetched: 20000620
+    Fetched: 20001017
+    Fetched: 20010126
+    Fetched: 20010629
+    Fetched: 20011004
+    Fetched: 20011011
+    Fetched: 20011015
+    Fetched: 20011018
+    Fetched: 20011021
+    Fetched: 20011024
+    Fetched: 20011027
+    Fetched: 20011030
+    Fetched: 20011102
+    Fetched: 20011103
+Traceback (most recent call last):
+  File "<string>", line 50, in <module>
+    print(f'JOB1 DONE. {len(results)} pages \u2192 cdx-c2c-results.json', flush=True)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 20: character maps to <undefined>
