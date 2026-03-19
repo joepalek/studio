@@ -1,0 +1,128 @@
+{
+  "decade": "1950s",
+  "slang": [
+    "Cool",
+    "Daddy-o",
+    "Square",
+    "Beatnik",
+    "Cat",
+    "Dig",
+    "Pad",
+    "Groovy",
+    "Flick",
+    "Goofball"
+  ],
+  "concerns": [
+    "The Cold War and its escalation between global superpowers.",
+    "The threat of communism, leading to McCarthyism and the Second Red Scare.",
+    "Post-World War II economic stability and the rebuilding of war-torn nations.",
+    "The looming fear of nuclear warfare and atomic threats.",
+    "Racial segregation and the burgeoning Civil Rights Movement in the United States."
+  ],
+  "aspirations": [
+    "Owning a modern suburban home with a manicured lawn.",
+    "A new car, preferably a large sedan with chrome and tailfins.",
+    "Economic prosperity and a stable job that could support a family.",
+    "Starting a family and raising children during the Baby Boom.",
+    "Acquiring the latest home appliances, like a television set or automatic washing machine."
+  ],
+  "fashion": {
+    "men": "Men often wore conservative suits, complete with hats like fedoras, for daily wear and work. Younger men sometimes adopted more rebellious styles, such as jeans and leather jackets, influenced by rock and roll.",
+    "women": "Women's fashion was dominated by the 'New Look,' featuring cinched waists and full skirts, often worn with gloves and hats. Casual wear included sweaters, capri pants, and pedal pushers, especially for younger women.",
+    "colors": [
+      "Pastel pink",
+      "Turquoise",
+      "Atomic yellow"
+    ]
+  },
+  "food": [
+    "TV Dinners",
+    "Jell-O salads",
+    "Casseroles",
+    "Milkshakes",
+    "Sloppy Joes"
+  ],
+  "entertainment": {
+    "tv": [
+      "I Love Lucy",
+      "Father Knows Best",
+      "The Ed Sullivan Show"
+    ],
+    "music": [
+      "Elvis Presley (Rock and Roll)",
+      "Frank Sinatra (Traditional Pop)",
+      "Doo-wop groups"
+    ],
+    "movies": [
+      "Rebel Without a Cause",
+      "Singin' in the Rain",
+      "Vertigo"
+    ],
+    "games": [
+      "Hula Hoops",
+      "Board games (e.g., Scrabble)"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Television sets",
+      "Automatic washing machines",
+      "Refrigerators with separate freezer compartments"
+    ],
+    "aspirational": [
+      "Dishwashers",
+      "Central air conditioning"
+    ],
+    "work": [
+      "Electric typewriters",
+      "Early mainframe computers"
+    ]
+  },
+  "defining_products": [
+    "Volkswagen Beetle",
+    "Tupperware",
+    "Hula Hoop",
+    "Frigidaire appliances",
+    "Barbie Doll"
+  ],
+  "failed_products": [
+    {
+      "name": "Ford Edsel",
+      "why_failed": "Its design was polarizing (especially the 'horse-collar' grille), it was overpriced, launched during an economic recession, and suffered from quality control issues and poor marketing.",
+      "modern_gap": "No, the market for distinct mid-range family cars is well-served by numerous brands today, and consumer preferences have shifted significantly from the Edsel's concept."
+    },
+    {
+      "name": "Nuclear-Powered Cars (concept)",
+      "why_failed": "While research and prototypes existed, they failed due to immense safety concerns regarding radiation shielding, the prohibitive cost of development and fuel, and overall impracticality for consumer use.",
+      "modern_gap": "No, while electric and alternative fuel vehicles are prevalent, the fundamental safety and logistical issues of personal nuclear propulsion remain too great to ever fill this conceptual gap."
+    }
+  ],
+  "ebay_hot_now": [
+    "Mid-century modern furniture (e.g., Eames, Knoll)",
+    "Vintage Pyrex and Tupperware kitchenware",
+    "Original rock and roll vinyl records and 45s"
+  ],
+  "ebay_sleepers": [
+    "Unused vintage sewing patterns and fabric from the era",
+    "Lesser-known 'B' movie posters and lobby cards",
+    "Early Cold War propaganda ephemera (pamphlets, postcards)"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Cool, daddy-o!",
+      "What's the scoop?",
+      "Can you dig it?"
+    ],
+    "worldview": "Life centers around family, community, and achieving the American Dream of prosperity and stability, often with a wary eye on communism. There's a strong belief in progress and traditional values, but also an emerging sense of youthful rebellion and a desire for individuality.",
+    "speech_patterns": "They often use expressions of casual agreement or enthusiasm, and may speak with a slight Midwestern or generic American accent often heard on period radio and early television.",
+    "taboo_topics": [
+      "Open criticism of the government or challenging social norms (especially regarding race or gender roles)",
+      "Personal struggles with mental health, domestic strife, or alternative sexual orientations"
+    ]
+  },
+  "story_accuracy": [
+    "Characters having overtly modern sensibilities or discussing topics considered taboo at the time, especially concerning sexuality or mental health.",
+    "Depicting widespread color television or highly advanced home electronics that were not common until much later in the decade or subsequent decades.",
+    "Ignoring the pervasive racial segregation and social conformity pressures that defined much of the era, particularly in the US, or portraying society as more integrated than it was."
+  ]
+}

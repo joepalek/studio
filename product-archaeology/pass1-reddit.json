@@ -1,0 +1,4034 @@
+{
+  "generated": "2026-03-19T15:13:35.629210",
+  "total": 212,
+  "findings": [
+    {
+      "product_name": "Where can I find the original Tigers milk bar?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Where can I find the original Tigers milk bar?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/yc34zx/where_can_i_find_the_original_tigers_milk_bar/",
+      "reddit_score": 35,
+      "date_found": "2026-03-19T15:13:01.337389",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Teddy Graham Soft Bakes",
+      "category": "discontinued_product",
+      "original_problem_solved": "They were twinkie-like (but not too sweet) cakes, with vanilla or chocolate filling inside. My mom used to give these to me in high school and I loved them! I wish they\u2019d come back.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Teddy Graham Soft Bakes",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ccteue/teddy_graham_soft_bakes/",
+      "reddit_score": 12,
+      "date_found": "2026-03-19T15:13:01.340307",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Triple steak stack from Taco Bell, further more all the good stuff that comes an",
+      "category": "discontinued_product",
+      "original_problem_solved": "Maybe it was just because I was always super high, but the steak stack was amazing\n\nIt comes and goes I\u2019m sure but damn that shit was fire",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Triple steak stack from Taco Bell, further more all the good",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/t7s3bz/triple_steak_stack_from_taco_bell_further_more/",
+      "reddit_score": 9,
+      "date_found": "2026-03-19T15:13:01.340329",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Buffalo chicken tenders are gone from Culver's.",
+      "category": "discontinued_product",
+      "original_problem_solved": "My disappointment is immeasurable, and my day is ruined. Those babies were my cheat day food. Just the right amount of spice and very filling. Will be missed.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Buffalo chicken tenders are gone from Culver's.",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/t7i6nk/buffalo_chicken_tenders_are_gone_from_culvers/",
+      "reddit_score": 10,
+      "date_found": "2026-03-19T15:13:01.340336",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Tango Cherry (UK)",
+      "category": "discontinued_product",
+      "original_problem_solved": "Disgraceful.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Tango Cherry (UK)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/t7h8ea/tango_cherry_uk/",
+      "reddit_score": 8,
+      "date_found": "2026-03-19T15:13:01.340340",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Genuinely their best snack",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Genuinely their best snack",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1pysy2g/genuinely_their_best_snack/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.340344",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Shockers! And also rothbury farm croutons. Can't find that crunch anywhere else ",
+      "category": "discontinued_product",
+      "original_problem_solved": "Found these at my work a a couple years ago and kept for nostalgia reasons. Sweet tart sours just armt the same man. The ones on the outside were black haha but inside they are still tempting. \ud83d\ude02",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Shockers! And also rothbury farm croutons. Can't find that c",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1lbmypc/shockers_and_also_rothbury_farm_croutons_cant/",
+      "reddit_score": 7,
+      "date_found": "2026-03-19T15:13:01.340359",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Did Degree discontinue their body soaps?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Did Degree discontinue their body soaps?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/168gkbq/did_degree_discontinue_their_body_soaps/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.340363",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Garnier Root Amp replacement needed",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Garnier Root Amp replacement needed",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/10w5tlx/garnier_root_amp_replacement_needed/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.340367",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McPizza",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McPizza",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/vkiu26/mcpizza/",
+      "reddit_score": 7,
+      "date_found": "2026-03-19T15:13:01.340369",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone else remember these? I singlehandedly drank all the Rain at my local groc",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anyone else remember these? I singlehandedly drank all the R",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/tc1b14/anyone_else_remember_these_i_singlehandedly_drank/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.340374",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Crush orange poptarts",
+      "category": "discontinued_product",
+      "original_problem_solved": "They were anything but popular but they were also a divine experience",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Crush orange poptarts",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1pcvd44/crush_orange_poptarts/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.340378",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Comfort Cravers Spidermen, Disney Princess, Toy Story ",
+      "category": "discontinued_product",
+      "original_problem_solved": "Ahead of my time already \nI'm sure in next up to 10 years these will no longer be made\nThey will be discontinued so grab many as you can and keep the packaging or freeze it lol ! \nPut it in a resin! \n2024 item. See y'all in next 10 years",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Comfort Cravers Spidermen, Disney Princess, Toy Story ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1g5lhzd/comfort_cravers_spidermen_disney_princess_toy/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.340385",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This subreddit was made for me",
+      "category": "discontinued_product",
+      "original_problem_solved": "I have such nostalgia for old discontinued foods, here are the ones I crave all the time that nobody else EVER remembers!!!",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "This subreddit was made for me",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/15ik7wb/this_subreddit_was_made_for_me/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.340391",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Lance Star Bites - Discontinued or just elusive?",
+      "category": "discontinued_product",
+      "original_problem_solved": "This was my favorite snack - Lance Star Bites. I haven\u2019t seen them on shelves (at gas stations) in years. They are similar to French Burnt Peanuts, but the coating is more crisp than hard. Are they discontinued or just elusive?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Lance Star Bites - Discontinued or just elusive?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/15d13mx/lance_star_bites_discontinued_or_just_elusive/",
+      "reddit_score": 4,
+      "date_found": "2026-03-19T15:13:01.340400",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Orbitz soda was introduced in 1997 by the Clearly Canadian Beverage Company",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Orbitz soda was introduced in 1997 by the Clearly Canadian B",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/vkhsai/orbitz_soda_was_introduced_in_1997_by_the_clearly/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.340405",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Late 90s or early 2000s GIGANTIC freezies!!??",
+      "category": "discontinued_product",
+      "original_problem_solved": "I remember when I was a kid and went to the corner store I\u2019d see these huge freezies, like massive ones. they were 4\u201d thick. And a foot long. (Vague memory) but for the life of me I can\u2019t seem to find anything about them online, just here to see if anyone else remembers them or was this just all in",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Late 90s or early 2000s GIGANTIC freezies!!??",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1lislth/late_90s_or_early_2000s_gigantic_freezies/",
+      "reddit_score": 4,
+      "date_found": "2026-03-19T15:13:01.340416",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Question",
+      "category": "discontinued_product",
+      "original_problem_solved": "Were Sunchips Chili Lime flavor discontinued? There are no sources confirming any discontinuation but I cannot find them available in any store. Yes, some stores and all delivery services like doordash and uber eats say \"available for shipping\" but 3 days later I get a notice stating  \"your item was",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Question",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k9vcys/question/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.340423",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Heinz Mayonnaise USA - I saw Heinz confirm today on Twitter that they have disco",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Heinz Mayonnaise USA - I saw Heinz confirm today on Twitter ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/ypxgzv/heinz_mayonnaise_usa_i_saw_heinz_confirm_today_on/",
+      "reddit_score": 4,
+      "date_found": "2026-03-19T15:13:01.340432",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Does anyone know if they still make these?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Does anyone know if they still make these?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1q5gs2e/does_anyone_know_if_they_still_make_these/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340435",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anybody remember these two discontinued items from McDonald's?",
+      "category": "discontinued_product",
+      "original_problem_solved": "McDonald's Breaded Pork Sandwich and Morning Mac (2001-2004): Test marketed in Indiana, Kentucky, Minnesota and Wisconsin states, the Breaded Pork Sandwich featured a breaded, fried pork cutlet, topped w/onions, mustard and pickle slices, on a bakery-style seeded roll. The Morning Mac\u00a0(also known as",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anybody remember these two discontinued items from McDonald'",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1onja4a/anybody_remember_these_two_discontinued_items/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340451",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Buitoni Ravioli four cheese Discontinued",
+      "category": "discontinued_product",
+      "original_problem_solved": "So I really loved the refrigerated buitoni ravioli four cheese, the smaller sized ones, and google just said they've been discontinued and I can only find the new ones they have that are the sized of my palm. Does anyone have recommendation for something similar that have smaller sized ones?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Buitoni Ravioli four cheese Discontinued",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1mrczzb/buitoni_ravioli_four_cheese_discontinued/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340458",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Fiesta Premium Salad (2004-2004)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/qt10ublxhi6f1.jpg?width=194&amp;format=pjpg&amp;auto=webp&amp;s=592966d8656e77e7d0710feffa0037984b2cb819\n\nThe early-mid 2000's was a time when\u00a0McDonald's\u00a0tried to join in on\u00a0the taco salad fever with their Fiesta Premium Salad, which was from the same time period (2004) the a",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Fiesta Premium Salad (2004-2004)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1l9p4yi/mcdonalds_fiesta_premium_salad_20042004/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340472",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Grilled Chicken Flatbread (Mid 2002-2002, Late 2002-Early 2003)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/3nmdrffvfx3f1.jpg?width=298&amp;format=pjpg&amp;auto=webp&amp;s=6c87e07e41a03322a1f9579d7f92bb9e70ce343b\n\nMcDonald's launched the grilled chicken flatbread to it's many restaurants in the US and Canada for a brief-term period around mid 2002 and then launched yet again for a",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Grilled Chicken Flatbread (Mid 2002-2002, Late 20",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kz5hwp/mcdonalds_grilled_chicken_flatbread_mid_20022002/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340496",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I found a drink they stopped making years ago!",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "I found a drink they stopped making years ago!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kkdld1/i_found_a_drink_they_stopped_making_years_ago/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340500",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DISCONTINUED - Dunkin' Cold Brew Ground Coffee Packs",
+      "category": "discontinued_product",
+      "original_problem_solved": "recommendations for a cold brew pitcher pack replacement? The Dunkin brand was the best.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DISCONTINUED - Dunkin' Cold Brew Ground Coffee Packs",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1je3m7l/discontinued_dunkin_cold_brew_ground_coffee_packs/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340504",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Avon Anew CLEAN Illuminating Rich Cleansing Foam - Love this stuff, and it wasn'",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Avon Anew CLEAN Illuminating Rich Cleansing Foam - Love this",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1g89c6o/avon_anew_clean_illuminating_rich_cleansing_foam/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340510",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone remember Monster Energy Gum?",
+      "category": "discontinued_product",
+      "original_problem_solved": "I'm trying to make sure I'm not crazy. I distinctly remember a chewing gum that was Monster Energy flavor, like the energy drink, from the mid 2000's. I remember it was in a flat black and green package, like Take 5 gum packaging, with the Monster logo on it. Each piece was wrapped in Monster Green",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anyone remember Monster Energy Gum?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ehh3va/anyone_remember_monster_energy_gum/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340519",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I miss High Noon",
+      "category": "discontinued_product",
+      "original_problem_solved": "I\u2019m not a gamer, but High Noon was the best game ever released for iPhone. I mean the original one, where the characters were like two dimensional cardboard cutouts, and fell down when shot like the targets in an old carnival shooting gallery. I can still remember the suspense waiting for the start",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "I miss High Noon",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/15jwchi/i_miss_high_noon/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340529",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Are we crazy, or was it real?",
+      "category": "discontinued_product",
+      "original_problem_solved": "My brother and I are 90s kids (94 and 96) and we distinctly remember an applesauce in a gogurt type tube in the early 2000s. We always called it Squeezlesauce, but I'm honestly not sure if that's what it was really called. We can't find any evidence that it actually existed. It definitely wasn't tha",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Are we crazy, or was it real?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/vonmki/are_we_crazy_or_was_it_real/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.340536",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Pringles Salt &amp; Pepper",
+      "category": "discontinued_product",
+      "original_problem_solved": "I need these back fr, grieving them",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Pringles Salt &amp; Pepper",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1r93cuu/pringles_salt_pepper/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340540",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm",
+      "category": "discontinued_product",
+      "original_problem_solved": "Has anyone found a lip balm with a similar scent to NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm? I used to loveee this scent",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1r3co28/nivea_pure_natural_chamomile_calendula_lip_balm/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340545",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Sign the petition!!!",
+      "category": "discontinued_product",
+      "original_problem_solved": "BRING BACK PEPPERMINT SKITTLES",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Sign the petition!!!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qzc2x8/sign_the_petition/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340548",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "marketside/tyson chicken biscuit.",
+      "category": "discontinued_product",
+      "original_problem_solved": "Anybody remember this? I cant remember how long the tyson one was avaliable, but the marketside had a short run from like late 2019-2020. (God pandemic ruined everything) Why marketside and tyson? Well it wad because they tasted the same and i couldnt find any difference whatsoever.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "marketside/tyson chicken biscuit.",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qpthca/marketsidetyson_chicken_biscuit/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340555",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "My Fav McDonalds Discontinued/Limited Time Items",
+      "category": "discontinued_product",
+      "original_problem_solved": "I have seen sooo many posts about discontinued McDonalds items and I've never seen anyone mention any of my top 3. Just in case I get hit by a bus or something tomorrow I feel like I need to put this out in the world even if no one ever reads it or has any clue what these items are. They just stuck",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "My Fav McDonalds Discontinued/Limited Time Items",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1p6wkxs/my_fav_mcdonalds_discontinuedlimited_time_items/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340573",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Tic-tac Cinnamon Spice Flavor",
+      "category": "discontinued_product",
+      "original_problem_solved": "need I say more?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Tic-tac Cinnamon Spice Flavor",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1m3fb55/tictac_cinnamon_spice_flavor/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340577",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's McChicken Premiere/Chicken Premiere (2000-2007) A crispy chicken brea",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/7isjxxitnq3f1.png?width=135&amp;format=png&amp;auto=webp&amp;s=361f7b857f047e41fe7d31ba3825527a869a7996",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's McChicken Premiere/Chicken Premiere (2000-2007) A",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kydqq8/mcdonalds_mcchicken_premierechicken_premiere/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340586",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Mighty Kids Meal (2000-2016?Whenever they were actually discontinued ",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/w1tavi17jc2f1.png?width=404&amp;format=png&amp;auto=webp&amp;s=17b0ef2052ec9914e6388e89400de2a467bd96ad\n\nhttps://preview.redd.it/xgkknxbcjc2f1.jpg?width=320&amp;format=pjpg&amp;auto=webp&amp;s=1e7b3bfe9f7e1e7aa16344bd00ea52b6aab679f6\n\nhttps://preview.redd.it/mlujt1lhjc2f1.jpg",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Mighty Kids Meal (2000-2016?Whenever they were ac",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kssonx/mcdonalds_mighty_kids_meal_20002016whenever_they/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340598",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Hershey raspberry chocolate chips",
+      "category": "discontinued_product",
+      "original_problem_solved": "These were so good and worked perfectly with a cake recipe. They also made a mint chip one too. I\u2019ll never forget them.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Hershey raspberry chocolate chips",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k3pw1x/hershey_raspberry_chocolate_chips/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340604",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Doritos Quest Mystery Flavor - 2008",
+      "category": "discontinued_product",
+      "original_problem_solved": "The mystery flavor was Mountain Dew, I remember loving it",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Doritos Quest Mystery Flavor - 2008",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k3fgds/doritos_quest_mystery_flavor_2008/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340608",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Steak ums wraps",
+      "category": "discontinued_product",
+      "original_problem_solved": "I can't find a picture of them anywhere, but they made these steak ums wraps around 20 years ago, I loved getting them as a teen but they discontinued them. I even tried emailing the company years ago asking if they would make them again lol. They just had the steakums steak and this melty cheese sa",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Steak ums wraps",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1jkheps/steak_ums_wraps/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340614",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Does anyone know how much this is worth or where they sold them at its a home au",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Does anyone know how much this is worth or where they sold t",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ikad87/does_anyone_know_how_much_this_is_worth_or_where/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340618",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone remember this lotion? ",
+      "category": "discontinued_product",
+      "original_problem_solved": "Used to get so many compliments with this lotion. Now I buy expensive perfumes and it's just not the same.  Any lotions out there with a similar scent? Rosie, almondy, fresh and clean.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anyone remember this lotion? ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1et4yxx/anyone_remember_this_lotion/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340623",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "RIP",
+      "category": "discontinued_product",
+      "original_problem_solved": "Couple of childhood staples that randomly popped in my head. Do y\u2019all remember these?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "RIP",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/19ew8r6/rip/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340628",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Peeps Easter Rice treats",
+      "category": "discontinued_product",
+      "original_problem_solved": "Okay, I feel absolutely crazy. I cannot find ANYTHING online about these. Does anyone remember those AMAZING rice treats Peep made for Easter back in probably 2012???? They made them in blue, yellow, and pink. They had a chick shape, a bunny shape, and an egg shape and had sprinkles on them. My sibl",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Peeps Easter Rice treats",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/12c7vy9/peeps_easter_rice_treats/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340639",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Gone too soon\u2026",
+      "category": "discontinued_product",
+      "original_problem_solved": "I came to Reddit to find anything about my beloved fragrance\u2026 Victoria Secret Dream Angels Heavenly Enchanted body mist. I have a drop left and I\u2019ve been saving it to prolong owning it as long as I can. \n\nOh! And Clearly Canadian",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Gone too soon\u2026",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/107yntm/gone_too_soon/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.340646",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Hard Metal Mesh Scrubber for Dishes  - where to buy?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Hard Metal Mesh Scrubber for Dishes  - where to buy?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1rtqlqx/hard_metal_mesh_scrubber_for_dishes_where_to_buy/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.340650",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Local store still has plenty",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Local store still has plenty",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1rryhwz/local_store_still_has_plenty/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.340653",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I WANT MY NESQUIK BACK \ud83e\udee1\ud83c\udf6b",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "I WANT MY NESQUIK BACK \ud83e\udee1\ud83c\udf6b",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1rcmhnt/i_want_my_nesquik_back/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341736",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "My hoard, I may these flavors Rest in peace \ud83d\ude14",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "My hoard, I may these flavors Rest in peace \ud83d\ude14",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1r1pc7f/my_hoard_i_may_these_flavors_rest_in_peace/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341749",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Biscoff Ice Cream Bars, discontinued? Supply chain issue?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Biscoff Ice Cream Bars, discontinued? Supply chain issue?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qzyfht/biscoff_ice_cream_bars_discontinued_supply_chain/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341754",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The cucumber is Larry from veggie tales and he is a discontinued item was made i",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The cucumber is Larry from veggie tales and he is a disconti",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qkaa1s/the_cucumber_is_larry_from_veggie_tales_and_he_is/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341759",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Discontinued Frozen Burrito?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Discontinued Frozen Burrito?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qhn3nj/discontinued_frozen_burrito/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341763",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Sign the Petition",
+      "category": "discontinued_product",
+      "original_problem_solved": "Please.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Sign the Petition",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1pv1l30/sign_the_petition/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341767",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Trader Joe's Spicy Black Bean Dip",
+      "category": "discontinued_product",
+      "original_problem_solved": "Hello everyone! I was wondering if anyone happens to have an original jar of Trader Joe's Spicy Black Bean Dip lying around so I may snag a picture of the original ingredient list. It was my absolute favorite thing and they discontinued it. It was promptly replaced by Chipotle Bean Dip, which I don'",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Trader Joe's Spicy Black Bean Dip",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1plws78/trader_joes_spicy_black_bean_dip/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341776",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Bacon &amp; Sausage Bagel (2001-2001) Anyone recall seeing this one?",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/mrp8yqzot26g1.png?width=846&amp;format=png&amp;auto=webp&amp;s=3c468bf61daae268dd1652e278e7762a0bba707b\n\nhttps://preview.redd.it/ik6onk7qt26g1.png?width=2752&amp;format=png&amp;auto=webp&amp;s=6a8e815113abae0bf9a1dba3e4427ce4774de8b1",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Bacon &amp; Sausage Bagel (2001-2001) Anyone reca",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1phtvcf/mcdonalds_bacon_sausage_bagel_20012001_anyone/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341783",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Angry birds fruit gummies",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Angry birds fruit gummies",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ouvuhh/angry_birds_fruit_gummies/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341790",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Krispy Kreme holed cream filled donut...",
+      "category": "discontinued_product",
+      "original_problem_solved": "Discontinued... KK has changed this donut from holed cream filled to just cream filled. I need the hole... i need the cream in every bite.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Krispy Kreme holed cream filled donut...",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1opelpm/krispy_kreme_holed_cream_filled_donut/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.341798",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Gucci by Gucci (brown bottle)",
+      "category": "discontinued_product",
+      "original_problem_solved": "I crave this perfume, was \u2018my scent\u2019 \u2639\ufe0f",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Gucci by Gucci (brown bottle)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ookayu/gucci_by_gucci_brown_bottle/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.342906",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Wendy's Mozzarella Chicken Supreme (1993-2012)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/9j20lfipgkof1.jpg?width=1000&amp;format=pjpg&amp;auto=webp&amp;s=7e11964db30cccbee9f49be323dc44125bacd077",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Wendy's Mozzarella Chicken Supreme (1993-2012)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1nee6ts/wendys_mozzarella_chicken_supreme_19932012/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.342920",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Early 2000s breakfast food (discontinued)",
+      "category": "discontinued_product",
+      "original_problem_solved": "Every year around the same time I start to have a faint memory of a breakfast food I had when I was younger, neither of my parents remember what I\u2019m talking about, but it\u2019s a circular toaster pastry with a strawberry cr\u00e8me like filling, nothing goes on top, it\u2019s not the waffulls from eggo and it\u2019s n",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Early 2000s breakfast food (discontinued)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1n3q4b1/early_2000s_breakfast_food_discontinued/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.342938",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "P3 Protien Pack - Beef Jerky",
+      "category": "discontinued_product",
+      "original_problem_solved": "I swear, there's so little information on these and I've bene dying to know what the hell happened to these and why they were discontinued. I absolutely loved these things and lived off them throughout my junior high years of school, but they seem to have been discontinued. Does anyone know why exac",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "P3 Protien Pack - Beef Jerky",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1mdanex/p3_protien_pack_beef_jerky/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.342949",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "tear jerkers ice cream",
+      "category": "discontinued_product",
+      "original_problem_solved": "Im so sad i just got the biggest craving for the tear jerkers bomb pops from when I was a kid. I go searching, fully prepared to pay for a lot, only to find it\u2019s gone :(",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "tear jerkers ice cream",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1m0j8gr/tear_jerkers_ice_cream/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343007",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DAE from Canada remember when McDonald's Canada sold a vegan burger that had a p",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/qb6t8l25wh7f1.png?width=400&amp;format=png&amp;auto=webp&amp;s=6cff72556f273a3603ad11fd09fef60a26e8d43b\n\nHi!, I'm from the United States but i can't help it but feel like i'm the only one who remembers this. Everyone who lived in Canada during the majority or part of their li",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DAE from Canada remember when McDonald's Canada sold a vegan",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ldoeeb/dae_from_canada_remember_when_mcdonalds_canada/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343067",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This is so wrong... / McDonald's Big Grilled Hot Dog and Tin Roof Waffle Cone Su",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/51g6hkvjh45f1.jpg?width=800&amp;format=pjpg&amp;auto=webp&amp;s=53065d7b41f5af7b2b4fb0fff815c3efceecdff7\n\nhttps://preview.redd.it/is1sbgvjh45f1.jpg?width=800&amp;format=pjpg&amp;auto=webp&amp;s=78fe9658d93ee6d4e363e3f3e2959b84a4c605f5\n\nhttps://preview.redd.it/cikx3hvjh45f1.jp",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "This is so wrong... / McDonald's Big Grilled Hot Dog and Tin",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1l41amn/this_is_so_wrong_mcdonalds_big_grilled_hot_dog/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343085",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Steak &amp; Cheese Sandwich (2001-2001), A lunch/dinner counterpart o",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/4a1wqls2f45f1.jpg?width=375&amp;format=pjpg&amp;auto=webp&amp;s=4280a735fd5e28af385fa31d76a5a1696e5a6c1c\n\nhttps://preview.redd.it/3patw5g1g45f1.png?width=484&amp;format=png&amp;auto=webp&amp;s=23fe7eeaef718102b7521aec0b7530aecea98efe\n\nWatch the commercial here: [https://www.g",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Steak &amp; Cheese Sandwich (2001-2001), A lunch/",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1l413lt/mcdonalds_steak_cheese_sandwich_20012001_a/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343132",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Toasted Deli Sandwiches (2004-2009, Canada only)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/4yptx2t56s0f1.png?width=307&amp;format=png&amp;auto=webp&amp;s=a86c6bf8c9e21acab0e469070ed56abd2e88f589",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Toasted Deli Sandwiches (2004-2009, Canada only)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kmkrer/mcdonalds_toasted_deli_sandwiches_20042009_canada/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343151",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Southern Style Chicken Sandwich and Southern Style Chicken Biscuit (2",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/ijxcslm98d0f1.jpg?width=549&amp;format=pjpg&amp;auto=webp&amp;s=19cb1b9060ffb5cd398972e107d385e75a5f35b8\n\nhttps://preview.redd.it/9w491mm98d0f1.jpg?width=597&amp;format=pjpg&amp;auto=webp&amp;s=a779eac8cf0cb8d0c67f66082e292f997548d817",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Southern Style Chicken Sandwich and Southern Styl",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kkuotj/mcdonalds_southern_style_chicken_sandwich_and/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343163",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Angry Birds Gummies",
+      "category": "discontinued_product",
+      "original_problem_solved": "I remember the first 4 I didn't realize there was so many",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Angry Birds Gummies",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k3fh8g/angry_birds_gummies/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343169",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This was the best soda",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "This was the best soda",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1jjjnbg/this_was_the_best_soda/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343176",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "RIP Crystal Light Pure Energy",
+      "category": "discontinued_product",
+      "original_problem_solved": "Whyyyyy??? \ud83d\ude2d Best energy drink you could get without the aspartame or any of the other chemicals. I would buy it in bulk. This stuff was my \u201ccrack.\u201d",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "RIP Crystal Light Pure Energy",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1je3y24/rip_crystal_light_pure_energy/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343191",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "\"Show Us Your Caffree Smile\" Discontinued 80's Toothpaste",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "\"Show Us Your Caffree Smile\" Discontinued 80's Toothpaste",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1hx5jh8/show_us_your_caffree_smile_discontinued_80s/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343199",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Ariston Washer Dryer Combo. Used it once at an Airbnb, have been searching in va",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Ariston Washer Dryer Combo. Used it once at an Airbnb, have ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1hvb6si/ariston_washer_dryer_combo_used_it_once_at_an/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343212",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Bedgear, Night Ice Air-X Pillow??",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Bedgear, Night Ice Air-X Pillow??",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1hsrkhq/bedgear_night_ice_airx_pillow/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343219",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Perfume dupe hunt",
+      "category": "discontinued_product",
+      "original_problem_solved": "This is a long shot but I have this old primark perfume from 2018 and I wanted to see if anyone recognised it.\n\n I know I can\u2019t repurchase it but if I could find a good dupe I\u2019d be satisfied. Honestly I cannot describe this perfumes notes so all I can offer is the picture \ud83d\ude05",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Perfume dupe hunt",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1gww0sq/perfume_dupe_hunt/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343232",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "What food discontinued first?",
+      "category": "discontinued_product",
+      "original_problem_solved": "Internet won\u2019t help me",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "What food discontinued first?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1526b7k/what_food_discontinued_first/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343241",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Lego LLloyd mech",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Lego LLloyd mech",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/14h8qe1/lego_llloyd_mech/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343248",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Looking up when items were discontinued?",
+      "category": "discontinued_product",
+      "original_problem_solved": "Is there a way to look up \\*when\\* a discontinued item was discontinued?\n\nI am looking up the current prices of used appliances and electronics to know if the prices are good, but a number of them have been discontinued. This tells me they are probably old, but I would love to know how long it has b",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Looking up when items were discontinued?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1468v11/looking_up_when_items_were_discontinued/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343261",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "discontinued airheads mystery sauce packet!!",
+      "category": "discontinued_product",
+      "original_problem_solved": "This had to have been I wanna say 2005-2010 maybe, i remember getting this at my local Walmart one single time and never seeing it again (we grocery shopped at that Walmart so I know we were there atleast once a week) ,it  was like a regular airheads package but this one had some type of sauce packe",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "discontinued airheads mystery sauce packet!!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/zus55u/discontinued_airheads_mystery_sauce_packet/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343293",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Looking to replace this broken table lamp that's been discontinued- help! By Sch",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Looking to replace this broken table lamp that's been discon",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/ulkhfh/looking_to_replace_this_broken_table_lamp_thats/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343301",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Hard Metal Mesh Scrubber for Dishes  - where to buy?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Hard Metal Mesh Scrubber for Dishes  - where to buy?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1rtqlqx/hard_metal_mesh_scrubber_for_dishes_where_to_buy/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343308",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Local store still has plenty",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Local store still has plenty",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1rryhwz/local_store_still_has_plenty/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343312",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I WANT MY NESQUIK BACK \ud83e\udee1\ud83c\udf6b",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "I WANT MY NESQUIK BACK \ud83e\udee1\ud83c\udf6b",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1rcmhnt/i_want_my_nesquik_back/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343319",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Pringles Salt &amp; Pepper",
+      "category": "discontinued_product",
+      "original_problem_solved": "I need these back fr, grieving them",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Pringles Salt &amp; Pepper",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1r93cuu/pringles_salt_pepper/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343325",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm",
+      "category": "discontinued_product",
+      "original_problem_solved": "Has anyone found a lip balm with a similar scent to NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm? I used to loveee this scent",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1r3co28/nivea_pure_natural_chamomile_calendula_lip_balm/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343334",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "My hoard, I may these flavors Rest in peace \ud83d\ude14",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "My hoard, I may these flavors Rest in peace \ud83d\ude14",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1r1pc7f/my_hoard_i_may_these_flavors_rest_in_peace/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343341",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Biscoff Ice Cream Bars, discontinued? Supply chain issue?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Biscoff Ice Cream Bars, discontinued? Supply chain issue?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qzyfht/biscoff_ice_cream_bars_discontinued_supply_chain/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343349",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Sign the petition!!!",
+      "category": "discontinued_product",
+      "original_problem_solved": "BRING BACK PEPPERMINT SKITTLES",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Sign the petition!!!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qzc2x8/sign_the_petition/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343355",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "marketside/tyson chicken biscuit.",
+      "category": "discontinued_product",
+      "original_problem_solved": "Anybody remember this? I cant remember how long the tyson one was avaliable, but the marketside had a short run from like late 2019-2020. (God pandemic ruined everything) Why marketside and tyson? Well it wad because they tasted the same and i couldnt find any difference whatsoever.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "marketside/tyson chicken biscuit.",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qpthca/marketsidetyson_chicken_biscuit/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343367",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The cucumber is Larry from veggie tales and he is a discontinued item was made i",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The cucumber is Larry from veggie tales and he is a disconti",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qkaa1s/the_cucumber_is_larry_from_veggie_tales_and_he_is/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343376",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Discontinued Frozen Burrito?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Discontinued Frozen Burrito?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1qhn3nj/discontinued_frozen_burrito/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343381",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Does anyone know if they still make these?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Does anyone know if they still make these?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1q5gs2e/does_anyone_know_if_they_still_make_these/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343386",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Genuinely their best snack",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Genuinely their best snack",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1pysy2g/genuinely_their_best_snack/",
+      "reddit_score": 7,
+      "date_found": "2026-03-19T15:13:01.343391",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Sign the Petition",
+      "category": "discontinued_product",
+      "original_problem_solved": "Please.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Sign the Petition",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1pv1l30/sign_the_petition/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343397",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Trader Joe's Spicy Black Bean Dip",
+      "category": "discontinued_product",
+      "original_problem_solved": "Hello everyone! I was wondering if anyone happens to have an original jar of Trader Joe's Spicy Black Bean Dip lying around so I may snag a picture of the original ingredient list. It was my absolute favorite thing and they discontinued it. It was promptly replaced by Chipotle Bean Dip, which I don'",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Trader Joe's Spicy Black Bean Dip",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1plws78/trader_joes_spicy_black_bean_dip/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343409",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Bacon &amp; Sausage Bagel (2001-2001) Anyone recall seeing this one?",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/mrp8yqzot26g1.png?width=846&amp;format=png&amp;auto=webp&amp;s=3c468bf61daae268dd1652e278e7762a0bba707b\n\nhttps://preview.redd.it/ik6onk7qt26g1.png?width=2752&amp;format=png&amp;auto=webp&amp;s=6a8e815113abae0bf9a1dba3e4427ce4774de8b1",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Bacon &amp; Sausage Bagel (2001-2001) Anyone reca",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1phtvcf/mcdonalds_bacon_sausage_bagel_20012001_anyone/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343420",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Crush orange poptarts",
+      "category": "discontinued_product",
+      "original_problem_solved": "They were anything but popular but they were also a divine experience",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Crush orange poptarts",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1pcvd44/crush_orange_poptarts/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.343429",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "My Fav McDonalds Discontinued/Limited Time Items",
+      "category": "discontinued_product",
+      "original_problem_solved": "I have seen sooo many posts about discontinued McDonalds items and I've never seen anyone mention any of my top 3. Just in case I get hit by a bus or something tomorrow I feel like I need to put this out in the world even if no one ever reads it or has any clue what these items are. They just stuck",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "My Fav McDonalds Discontinued/Limited Time Items",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1p6wkxs/my_fav_mcdonalds_discontinuedlimited_time_items/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343455",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Angry birds fruit gummies",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Angry birds fruit gummies",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ouvuhh/angry_birds_fruit_gummies/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343462",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Krispy Kreme holed cream filled donut...",
+      "category": "discontinued_product",
+      "original_problem_solved": "Discontinued... KK has changed this donut from holed cream filled to just cream filled. I need the hole... i need the cream in every bite.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Krispy Kreme holed cream filled donut...",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1opelpm/krispy_kreme_holed_cream_filled_donut/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343471",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Gucci by Gucci (brown bottle)",
+      "category": "discontinued_product",
+      "original_problem_solved": "I crave this perfume, was \u2018my scent\u2019 \u2639\ufe0f",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Gucci by Gucci (brown bottle)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ookayu/gucci_by_gucci_brown_bottle/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343496",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anybody remember these two discontinued items from McDonald's?",
+      "category": "discontinued_product",
+      "original_problem_solved": "McDonald's Breaded Pork Sandwich and Morning Mac (2001-2004): Test marketed in Indiana, Kentucky, Minnesota and Wisconsin states, the Breaded Pork Sandwich featured a breaded, fried pork cutlet, topped w/onions, mustard and pickle slices, on a bakery-style seeded roll. The Morning Mac\u00a0(also known as",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anybody remember these two discontinued items from McDonald'",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1onja4a/anybody_remember_these_two_discontinued_items/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343518",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Wendy's Mozzarella Chicken Supreme (1993-2012)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/9j20lfipgkof1.jpg?width=1000&amp;format=pjpg&amp;auto=webp&amp;s=7e11964db30cccbee9f49be323dc44125bacd077",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Wendy's Mozzarella Chicken Supreme (1993-2012)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1nee6ts/wendys_mozzarella_chicken_supreme_19932012/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343524",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Early 2000s breakfast food (discontinued)",
+      "category": "discontinued_product",
+      "original_problem_solved": "Every year around the same time I start to have a faint memory of a breakfast food I had when I was younger, neither of my parents remember what I\u2019m talking about, but it\u2019s a circular toaster pastry with a strawberry cr\u00e8me like filling, nothing goes on top, it\u2019s not the waffulls from eggo and it\u2019s n",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Early 2000s breakfast food (discontinued)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1n3q4b1/early_2000s_breakfast_food_discontinued/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343542",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Buitoni Ravioli four cheese Discontinued",
+      "category": "discontinued_product",
+      "original_problem_solved": "So I really loved the refrigerated buitoni ravioli four cheese, the smaller sized ones, and google just said they've been discontinued and I can only find the new ones they have that are the sized of my palm. Does anyone have recommendation for something similar that have smaller sized ones?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Buitoni Ravioli four cheese Discontinued",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1mrczzb/buitoni_ravioli_four_cheese_discontinued/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343552",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "P3 Protien Pack - Beef Jerky",
+      "category": "discontinued_product",
+      "original_problem_solved": "I swear, there's so little information on these and I've bene dying to know what the hell happened to these and why they were discontinued. I absolutely loved these things and lived off them throughout my junior high years of school, but they seem to have been discontinued. Does anyone know why exac",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "P3 Protien Pack - Beef Jerky",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1mdanex/p3_protien_pack_beef_jerky/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343563",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Tic-tac Cinnamon Spice Flavor",
+      "category": "discontinued_product",
+      "original_problem_solved": "need I say more?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Tic-tac Cinnamon Spice Flavor",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1m3fb55/tictac_cinnamon_spice_flavor/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343571",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "tear jerkers ice cream",
+      "category": "discontinued_product",
+      "original_problem_solved": "Im so sad i just got the biggest craving for the tear jerkers bomb pops from when I was a kid. I go searching, fully prepared to pay for a lot, only to find it\u2019s gone :(",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "tear jerkers ice cream",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1m0j8gr/tear_jerkers_ice_cream/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343583",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Late 90s or early 2000s GIGANTIC freezies!!??",
+      "category": "discontinued_product",
+      "original_problem_solved": "I remember when I was a kid and went to the corner store I\u2019d see these huge freezies, like massive ones. they were 4\u201d thick. And a foot long. (Vague memory) but for the life of me I can\u2019t seem to find anything about them online, just here to see if anyone else remembers them or was this just all in",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Late 90s or early 2000s GIGANTIC freezies!!??",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1lislth/late_90s_or_early_2000s_gigantic_freezies/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343598",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DAE from Canada remember when McDonald's Canada sold a vegan burger that had a p",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/qb6t8l25wh7f1.png?width=400&amp;format=png&amp;auto=webp&amp;s=6cff72556f273a3603ad11fd09fef60a26e8d43b\n\nHi!, I'm from the United States but i can't help it but feel like i'm the only one who remembers this. Everyone who lived in Canada during the majority or part of their li",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DAE from Canada remember when McDonald's Canada sold a vegan",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ldoeeb/dae_from_canada_remember_when_mcdonalds_canada/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343616",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Shockers! And also rothbury farm croutons. Can't find that crunch anywhere else ",
+      "category": "discontinued_product",
+      "original_problem_solved": "Found these at my work a a couple years ago and kept for nostalgia reasons. Sweet tart sours just armt the same man. The ones on the outside were black haha but inside they are still tempting. \ud83d\ude02",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Shockers! And also rothbury farm croutons. Can't find that c",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1lbmypc/shockers_and_also_rothbury_farm_croutons_cant/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.343628",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Fiesta Premium Salad (2004-2004)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/qt10ublxhi6f1.jpg?width=194&amp;format=pjpg&amp;auto=webp&amp;s=592966d8656e77e7d0710feffa0037984b2cb819\n\nThe early-mid 2000's was a time when\u00a0McDonald's\u00a0tried to join in on\u00a0the taco salad fever with their Fiesta Premium Salad, which was from the same time period (2004) the a",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Fiesta Premium Salad (2004-2004)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1l9p4yi/mcdonalds_fiesta_premium_salad_20042004/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343647",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This is so wrong... / McDonald's Big Grilled Hot Dog and Tin Roof Waffle Cone Su",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/51g6hkvjh45f1.jpg?width=800&amp;format=pjpg&amp;auto=webp&amp;s=53065d7b41f5af7b2b4fb0fff815c3efceecdff7\n\nhttps://preview.redd.it/is1sbgvjh45f1.jpg?width=800&amp;format=pjpg&amp;auto=webp&amp;s=78fe9658d93ee6d4e363e3f3e2959b84a4c605f5\n\nhttps://preview.redd.it/cikx3hvjh45f1.jp",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "This is so wrong... / McDonald's Big Grilled Hot Dog and Tin",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1l41amn/this_is_so_wrong_mcdonalds_big_grilled_hot_dog/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343660",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Steak &amp; Cheese Sandwich (2001-2001), A lunch/dinner counterpart o",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/4a1wqls2f45f1.jpg?width=375&amp;format=pjpg&amp;auto=webp&amp;s=4280a735fd5e28af385fa31d76a5a1696e5a6c1c\n\nhttps://preview.redd.it/3patw5g1g45f1.png?width=484&amp;format=png&amp;auto=webp&amp;s=23fe7eeaef718102b7521aec0b7530aecea98efe\n\nWatch the commercial here: [https://www.g",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Steak &amp; Cheese Sandwich (2001-2001), A lunch/",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1l413lt/mcdonalds_steak_cheese_sandwich_20012001_a/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343677",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Grilled Chicken Flatbread (Mid 2002-2002, Late 2002-Early 2003)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/3nmdrffvfx3f1.jpg?width=298&amp;format=pjpg&amp;auto=webp&amp;s=6c87e07e41a03322a1f9579d7f92bb9e70ce343b\n\nMcDonald's launched the grilled chicken flatbread to it's many restaurants in the US and Canada for a brief-term period around mid 2002 and then launched yet again for a",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Grilled Chicken Flatbread (Mid 2002-2002, Late 20",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kz5hwp/mcdonalds_grilled_chicken_flatbread_mid_20022002/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343708",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's McChicken Premiere/Chicken Premiere (2000-2007) A crispy chicken brea",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/7isjxxitnq3f1.png?width=135&amp;format=png&amp;auto=webp&amp;s=361f7b857f047e41fe7d31ba3825527a869a7996",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's McChicken Premiere/Chicken Premiere (2000-2007) A",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kydqq8/mcdonalds_mcchicken_premierechicken_premiere/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343718",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Mighty Kids Meal (2000-2016?Whenever they were actually discontinued ",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/w1tavi17jc2f1.png?width=404&amp;format=png&amp;auto=webp&amp;s=17b0ef2052ec9914e6388e89400de2a467bd96ad\n\nhttps://preview.redd.it/xgkknxbcjc2f1.jpg?width=320&amp;format=pjpg&amp;auto=webp&amp;s=1e7b3bfe9f7e1e7aa16344bd00ea52b6aab679f6\n\nhttps://preview.redd.it/mlujt1lhjc2f1.jpg",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Mighty Kids Meal (2000-2016?Whenever they were ac",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kssonx/mcdonalds_mighty_kids_meal_20002016whenever_they/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343736",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Toasted Deli Sandwiches (2004-2009, Canada only)",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/4yptx2t56s0f1.png?width=307&amp;format=png&amp;auto=webp&amp;s=a86c6bf8c9e21acab0e469070ed56abd2e88f589",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Toasted Deli Sandwiches (2004-2009, Canada only)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kmkrer/mcdonalds_toasted_deli_sandwiches_20042009_canada/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343743",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Southern Style Chicken Sandwich and Southern Style Chicken Biscuit (2",
+      "category": "discontinued_product",
+      "original_problem_solved": "https://preview.redd.it/ijxcslm98d0f1.jpg?width=549&amp;format=pjpg&amp;auto=webp&amp;s=19cb1b9060ffb5cd398972e107d385e75a5f35b8\n\nhttps://preview.redd.it/9w491mm98d0f1.jpg?width=597&amp;format=pjpg&amp;auto=webp&amp;s=a779eac8cf0cb8d0c67f66082e292f997548d817",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McDonald's Southern Style Chicken Sandwich and Southern Styl",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kkuotj/mcdonalds_southern_style_chicken_sandwich_and/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343753",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I found a drink they stopped making years ago!",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "I found a drink they stopped making years ago!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1kkdld1/i_found_a_drink_they_stopped_making_years_ago/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343759",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Question",
+      "category": "discontinued_product",
+      "original_problem_solved": "Were Sunchips Chili Lime flavor discontinued? There are no sources confirming any discontinuation but I cannot find them available in any store. Yes, some stores and all delivery services like doordash and uber eats say \"available for shipping\" but 3 days later I get a notice stating  \"your item was",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Question",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k9vcys/question/",
+      "reddit_score": 4,
+      "date_found": "2026-03-19T15:13:01.343770",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Hershey raspberry chocolate chips",
+      "category": "discontinued_product",
+      "original_problem_solved": "These were so good and worked perfectly with a cake recipe. They also made a mint chip one too. I\u2019ll never forget them.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Hershey raspberry chocolate chips",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k3pw1x/hershey_raspberry_chocolate_chips/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343783",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Doritos Quest Mystery Flavor - 2008",
+      "category": "discontinued_product",
+      "original_problem_solved": "The mystery flavor was Mountain Dew, I remember loving it",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Doritos Quest Mystery Flavor - 2008",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k3fgds/doritos_quest_mystery_flavor_2008/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343790",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Angry Birds Gummies",
+      "category": "discontinued_product",
+      "original_problem_solved": "I remember the first 4 I didn't realize there was so many",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Angry Birds Gummies",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1k3fh8g/angry_birds_gummies/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343797",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Steak ums wraps",
+      "category": "discontinued_product",
+      "original_problem_solved": "I can't find a picture of them anywhere, but they made these steak ums wraps around 20 years ago, I loved getting them as a teen but they discontinued them. I even tried emailing the company years ago asking if they would make them again lol. They just had the steakums steak and this melty cheese sa",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Steak ums wraps",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1jkheps/steak_ums_wraps/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343806",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This was the best soda",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "This was the best soda",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1jjjnbg/this_was_the_best_soda/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343813",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DISCONTINUED - Dunkin' Cold Brew Ground Coffee Packs",
+      "category": "discontinued_product",
+      "original_problem_solved": "recommendations for a cold brew pitcher pack replacement? The Dunkin brand was the best.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DISCONTINUED - Dunkin' Cold Brew Ground Coffee Packs",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1je3m7l/discontinued_dunkin_cold_brew_ground_coffee_packs/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343821",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "RIP Crystal Light Pure Energy",
+      "category": "discontinued_product",
+      "original_problem_solved": "Whyyyyy??? \ud83d\ude2d Best energy drink you could get without the aspartame or any of the other chemicals. I would buy it in bulk. This stuff was my \u201ccrack.\u201d",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "RIP Crystal Light Pure Energy",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1je3y24/rip_crystal_light_pure_energy/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343832",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Does anyone know how much this is worth or where they sold them at its a home au",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Does anyone know how much this is worth or where they sold t",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ikad87/does_anyone_know_how_much_this_is_worth_or_where/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343839",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "\"Show Us Your Caffree Smile\" Discontinued 80's Toothpaste",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "\"Show Us Your Caffree Smile\" Discontinued 80's Toothpaste",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1hx5jh8/show_us_your_caffree_smile_discontinued_80s/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343845",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Ariston Washer Dryer Combo. Used it once at an Airbnb, have been searching in va",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Ariston Washer Dryer Combo. Used it once at an Airbnb, have ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1hvb6si/ariston_washer_dryer_combo_used_it_once_at_an/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343851",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Bedgear, Night Ice Air-X Pillow??",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Bedgear, Night Ice Air-X Pillow??",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1hsrkhq/bedgear_night_ice_airx_pillow/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343857",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Perfume dupe hunt",
+      "category": "discontinued_product",
+      "original_problem_solved": "This is a long shot but I have this old primark perfume from 2018 and I wanted to see if anyone recognised it.\n\n I know I can\u2019t repurchase it but if I could find a good dupe I\u2019d be satisfied. Honestly I cannot describe this perfumes notes so all I can offer is the picture \ud83d\ude05",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Perfume dupe hunt",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1gww0sq/perfume_dupe_hunt/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343870",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Avon Anew CLEAN Illuminating Rich Cleansing Foam - Love this stuff, and it wasn'",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Avon Anew CLEAN Illuminating Rich Cleansing Foam - Love this",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1g89c6o/avon_anew_clean_illuminating_rich_cleansing_foam/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343878",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Comfort Cravers Spidermen, Disney Princess, Toy Story ",
+      "category": "discontinued_product",
+      "original_problem_solved": "Ahead of my time already \nI'm sure in next up to 10 years these will no longer be made\nThey will be discontinued so grab many as you can and keep the packaging or freeze it lol ! \nPut it in a resin! \n2024 item. See y'all in next 10 years",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Comfort Cravers Spidermen, Disney Princess, Toy Story ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1g5lhzd/comfort_cravers_spidermen_disney_princess_toy/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.343886",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone remember this lotion? ",
+      "category": "discontinued_product",
+      "original_problem_solved": "Used to get so many compliments with this lotion. Now I buy expensive perfumes and it's just not the same.  Any lotions out there with a similar scent? Rosie, almondy, fresh and clean.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anyone remember this lotion? ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1et4yxx/anyone_remember_this_lotion/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343893",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone remember Monster Energy Gum?",
+      "category": "discontinued_product",
+      "original_problem_solved": "I'm trying to make sure I'm not crazy. I distinctly remember a chewing gum that was Monster Energy flavor, like the energy drink, from the mid 2000's. I remember it was in a flat black and green package, like Take 5 gum packaging, with the Monster logo on it. Each piece was wrapped in Monster Green",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anyone remember Monster Energy Gum?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ehh3va/anyone_remember_monster_energy_gum/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343914",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Teddy Graham Soft Bakes",
+      "category": "discontinued_product",
+      "original_problem_solved": "They were twinkie-like (but not too sweet) cakes, with vanilla or chocolate filling inside. My mom used to give these to me in high school and I loved them! I wish they\u2019d come back.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Teddy Graham Soft Bakes",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1ccteue/teddy_graham_soft_bakes/",
+      "reddit_score": 13,
+      "date_found": "2026-03-19T15:13:01.343927",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "RIP",
+      "category": "discontinued_product",
+      "original_problem_solved": "Couple of childhood staples that randomly popped in my head. Do y\u2019all remember these?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "RIP",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/19ew8r6/rip/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.343936",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Did Degree discontinue their body soaps?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Did Degree discontinue their body soaps?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/168gkbq/did_degree_discontinue_their_body_soaps/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.343941",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I miss High Noon",
+      "category": "discontinued_product",
+      "original_problem_solved": "I\u2019m not a gamer, but High Noon was the best game ever released for iPhone. I mean the original one, where the characters were like two dimensional cardboard cutouts, and fell down when shot like the targets in an old carnival shooting gallery. I can still remember the suspense waiting for the start",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "I miss High Noon",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/15jwchi/i_miss_high_noon/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.343957",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This subreddit was made for me",
+      "category": "discontinued_product",
+      "original_problem_solved": "I have such nostalgia for old discontinued foods, here are the ones I crave all the time that nobody else EVER remembers!!!",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "This subreddit was made for me",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/15ik7wb/this_subreddit_was_made_for_me/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.343965",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Lance Star Bites - Discontinued or just elusive?",
+      "category": "discontinued_product",
+      "original_problem_solved": "This was my favorite snack - Lance Star Bites. I haven\u2019t seen them on shelves (at gas stations) in years. They are similar to French Burnt Peanuts, but the coating is more crisp than hard. Are they discontinued or just elusive?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Lance Star Bites - Discontinued or just elusive?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/15d13mx/lance_star_bites_discontinued_or_just_elusive/",
+      "reddit_score": 4,
+      "date_found": "2026-03-19T15:13:01.343977",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "What food discontinued first?",
+      "category": "discontinued_product",
+      "original_problem_solved": "Internet won\u2019t help me",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "What food discontinued first?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1526b7k/what_food_discontinued_first/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343984",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Lego LLloyd mech",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Lego LLloyd mech",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/14h8qe1/lego_llloyd_mech/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.343988",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Looking up when items were discontinued?",
+      "category": "discontinued_product",
+      "original_problem_solved": "Is there a way to look up \\*when\\* a discontinued item was discontinued?\n\nI am looking up the current prices of used appliances and electronics to know if the prices are good, but a number of them have been discontinued. This tells me they are probably old, but I would love to know how long it has b",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Looking up when items were discontinued?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/1468v11/looking_up_when_items_were_discontinued/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.344031",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Peeps Easter Rice treats",
+      "category": "discontinued_product",
+      "original_problem_solved": "Okay, I feel absolutely crazy. I cannot find ANYTHING online about these. Does anyone remember those AMAZING rice treats Peep made for Easter back in probably 2012???? They made them in blue, yellow, and pink. They had a chick shape, a bunny shape, and an egg shape and had sprinkles on them. My sibl",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Peeps Easter Rice treats",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/12c7vy9/peeps_easter_rice_treats/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.344062",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Garnier Root Amp replacement needed",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Garnier Root Amp replacement needed",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/10w5tlx/garnier_root_amp_replacement_needed/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.344069",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Gone too soon\u2026",
+      "category": "discontinued_product",
+      "original_problem_solved": "I came to Reddit to find anything about my beloved fragrance\u2026 Victoria Secret Dream Angels Heavenly Enchanted body mist. I have a drop left and I\u2019ve been saving it to prolong owning it as long as I can. \n\nOh! And Clearly Canadian",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Gone too soon\u2026",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/107yntm/gone_too_soon/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:13:01.344082",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "discontinued airheads mystery sauce packet!!",
+      "category": "discontinued_product",
+      "original_problem_solved": "This had to have been I wanna say 2005-2010 maybe, i remember getting this at my local Walmart one single time and never seeing it again (we grocery shopped at that Walmart so I know we were there atleast once a week) ,it  was like a regular airheads package but this one had some type of sauce packe",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "discontinued airheads mystery sauce packet!!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/zus55u/discontinued_airheads_mystery_sauce_packet/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.344105",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Heinz Mayonnaise USA - I saw Heinz confirm today on Twitter that they have disco",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Heinz Mayonnaise USA - I saw Heinz confirm today on Twitter ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/ypxgzv/heinz_mayonnaise_usa_i_saw_heinz_confirm_today_on/",
+      "reddit_score": 4,
+      "date_found": "2026-03-19T15:13:01.344119",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Where can I find the original Tigers milk bar?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Where can I find the original Tigers milk bar?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/yc34zx/where_can_i_find_the_original_tigers_milk_bar/",
+      "reddit_score": 35,
+      "date_found": "2026-03-19T15:13:01.344125",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Are we crazy, or was it real?",
+      "category": "discontinued_product",
+      "original_problem_solved": "My brother and I are 90s kids (94 and 96) and we distinctly remember an applesauce in a gogurt type tube in the early 2000s. We always called it Squeezlesauce, but I'm honestly not sure if that's what it was really called. We can't find any evidence that it actually existed. It definitely wasn't tha",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Are we crazy, or was it real?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/vonmki/are_we_crazy_or_was_it_real/",
+      "reddit_score": 3,
+      "date_found": "2026-03-19T15:13:01.344134",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McPizza",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "McPizza",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/vkiu26/mcpizza/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.344138",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Orbitz soda was introduced in 1997 by the Clearly Canadian Beverage Company",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Orbitz soda was introduced in 1997 by the Clearly Canadian B",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/vkhsai/orbitz_soda_was_introduced_in_1997_by_the_clearly/",
+      "reddit_score": 5,
+      "date_found": "2026-03-19T15:13:01.344143",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Looking to replace this broken table lamp that's been discontinued- help! By Sch",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Looking to replace this broken table lamp that's been discon",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/ulkhfh/looking_to_replace_this_broken_table_lamp_thats/",
+      "reddit_score": 1,
+      "date_found": "2026-03-19T15:13:01.344149",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone else remember these? I singlehandedly drank all the Rain at my local groc",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Anyone else remember these? I singlehandedly drank all the R",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/tc1b14/anyone_else_remember_these_i_singlehandedly_drank/",
+      "reddit_score": 6,
+      "date_found": "2026-03-19T15:13:01.344156",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Triple steak stack from Taco Bell, further more all the good stuff that comes an",
+      "category": "discontinued_product",
+      "original_problem_solved": "Maybe it was just because I was always super high, but the steak stack was amazing\n\nIt comes and goes I\u2019m sure but damn that shit was fire",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Triple steak stack from Taco Bell, further more all the good",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/t7s3bz/triple_steak_stack_from_taco_bell_further_more/",
+      "reddit_score": 9,
+      "date_found": "2026-03-19T15:13:01.344167",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Buffalo chicken tenders are gone from Culver's.",
+      "category": "discontinued_product",
+      "original_problem_solved": "My disappointment is immeasurable, and my day is ruined. Those babies were my cheat day food. Just the right amount of spice and very filling. Will be missed.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Buffalo chicken tenders are gone from Culver's.",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/t7i6nk/buffalo_chicken_tenders_are_gone_from_culvers/",
+      "reddit_score": 9,
+      "date_found": "2026-03-19T15:13:01.344174",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Tango Cherry (UK)",
+      "category": "discontinued_product",
+      "original_problem_solved": "Disgraceful.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Tango Cherry (UK)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_discontinued",
+      "source_url": "https://reddit.com/r/Discontinued/comments/t7h8ea/tango_cherry_uk/",
+      "reddit_score": 9,
+      "date_found": "2026-03-19T15:13:01.344179",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "iPodClassic",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "iPodClassic",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588728",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Dead by Daylight",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Dead by Daylight",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588741",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "A long strange trip...",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "A long strange trip...",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588744",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Red Dead Redemption",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Red Dead Redemption",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588747",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "What is this animal?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "What is this animal?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588749",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "FlatheadDating",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "FlatheadDating",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588752",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Android",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Android",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588754",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "funny",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "funny",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588757",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "/r/Rowing",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "/r/Rowing",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588759",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "The Walking Dead: No Man's Land",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The Walking Dead: No Man's Land",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588762",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "androidapps",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "androidapps",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588765",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "r/DoorDash_Drivers",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "r/DoorDash_Drivers",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588767",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "The Walking Dead: Road to Survival",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The Walking Dead: Road to Survival",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588770",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Legacy iOS Jailbreaking (iPhone, iPad, iPod touch, Apple TV)",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Legacy iOS Jailbreaking (iPhone, iPad, iPod touch, Apple TV)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588775",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "r/TheWalkingDead",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "r/TheWalkingDead",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588778",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "r/windowsphone",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "r/windowsphone",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588780",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "For smash tier lists",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "For smash tier lists",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588782",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "It's still funny, dammit!",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "It's still funny, dammit!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588785",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "The Instacart Shoppers Subreddit",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The Instacart Shoppers Subreddit",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588788",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "DoorDash Community",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DoorDash Community",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588790",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Homebrew development for, and hacking of the Nintendo DS",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Homebrew development for, and hacking of the Nintendo DS",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588793",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Almost a Hero - feedback, news and discussions",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Almost a Hero - feedback, news and discussions",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588797",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "/r/Technology ",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "/r/Technology ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588799",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "DeadAhead",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DeadAhead",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588800",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "the first million words",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "the first million words",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588803",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "iPodClassic",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "iPodClassic",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588805",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Dead by Daylight",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Dead by Daylight",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588808",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "A long strange trip...",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "A long strange trip...",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588810",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Red Dead Redemption",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Red Dead Redemption",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588813",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "What is this animal?",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "What is this animal?",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588815",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "FlatheadDating",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "FlatheadDating",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588817",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Android",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Android",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588819",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "funny",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "funny",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588821",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "/r/Rowing",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "/r/Rowing",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588823",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "The Walking Dead: No Man's Land",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The Walking Dead: No Man's Land",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588826",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "androidapps",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "androidapps",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588828",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "r/DoorDash_Drivers",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "r/DoorDash_Drivers",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588831",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "The Walking Dead: Road to Survival",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The Walking Dead: Road to Survival",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588833",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Legacy iOS Jailbreaking (iPhone, iPad, iPod touch, Apple TV)",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Legacy iOS Jailbreaking (iPhone, iPad, iPod touch, Apple TV)",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588837",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "r/TheWalkingDead",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "r/TheWalkingDead",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588839",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "r/windowsphone",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "r/windowsphone",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588841",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "For smash tier lists",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "For smash tier lists",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588844",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "It's still funny, dammit!",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "It's still funny, dammit!",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588847",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "The Instacart Shoppers Subreddit",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "The Instacart Shoppers Subreddit",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588850",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "DoorDash Community",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DoorDash Community",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588853",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Homebrew development for, and hacking of the Nintendo DS",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Homebrew development for, and hacking of the Nintendo DS",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588855",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "Almost a Hero - feedback, news and discussions",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "Almost a Hero - feedback, news and discussions",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588858",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "/r/Technology ",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "/r/Technology ",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588860",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "DeadAhead",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "DeadAhead",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588862",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "the first million words",
+      "category": "discontinued_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "the first million words",
+      "signal_type": "abandonment",
+      "source": "reddit_r_DeadApps",
+      "source_url": "https://reddit.com",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:13:08.588865",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "DeadApps"
+      ]
+    },
+    {
+      "product_name": "I've played and reviewed 1.000+ horror games, here are some gems you might not h",
+      "category": "discontinued_product",
+      "original_problem_solved": "I've been in love with the genre for all my life and could write 30 pages of philosophical analysis on why it's such a beautiful art form, but I'll spare you the details and get to some interesting points:\n\n1: I'll treat you with respect and assume I don't have to mention Silent Hill, SOMA, Amnesia,",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "spiritual successor",
+      "signal_type": "abandonment",
+      "source": "reddit_r_patientgamers",
+      "source_url": "https://reddit.com/r/patientgamers/comments/scmm2n/ive_played_and_reviewed_1000_horror_games_here/",
+      "reddit_score": 3179,
+      "date_found": "2026-03-19T15:13:25.595493",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "patientgamers"
+      ]
+    },
+    {
+      "product_name": "Wing Commander IV Turns 30... And Still Fascinates Me",
+      "category": "discontinued_product",
+      "original_problem_solved": "Times flies. This was the first game that I was truly hyped to play as a kid. A space epic where you play as Mark Hamill (Luke Skywalker)? Sold!\n\nOn returning to it 30 years later, it certainly scratched the nostalgia itch. But more than that, it's an interesting relic in gaming history.\n\nPeak FMV:",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "ahead of its time",
+      "signal_type": "abandonment",
+      "source": "reddit_r_patientgamers",
+      "source_url": "https://reddit.com/r/patientgamers/comments/1rm4knt/wing_commander_iv_turns_30_and_still_fascinates_me/",
+      "reddit_score": 157,
+      "date_found": "2026-03-19T15:13:25.602193",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "patientgamers"
+      ]
+    }
+  ]
+}

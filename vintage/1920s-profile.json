@@ -1,0 +1,132 @@
+{
+  "decade": "1920s",
+  "slang": [
+    "Bee's Knees",
+    "Cat's Meow",
+    "Giggle Water",
+    "Hotsy-Totsy",
+    "Flapper",
+    "Speakeasy",
+    "Glad Rags",
+    "Hooch",
+    "Bootlegger",
+    "Dapper"
+  ],
+  "concerns": [
+    "Economic instability (post-boom crash)",
+    "Rise of radical political movements (fascism, communism)",
+    "Prohibition and organized crime",
+    "Social change and generational divides",
+    "Post-World War I recovery and geopolitical tensions"
+  ],
+  "aspirations": [
+    "Economic prosperity and wealth",
+    "Owning a radio or automobile",
+    "Social freedom and expression",
+    "Access to modern conveniences (refrigerators, washing machines)",
+    "Enjoying new forms of entertainment like jazz and movies"
+  ],
+  "fashion": {
+    "men": "Men's fashion shifted towards a more relaxed yet dapper look, often featuring three-piece suits with wider lapels, fedoras, and polished shoes. Short, neatly parted hair was common, alongside the occasional appearance of plus fours for leisure.",
+    "women": "Women embraced the 'flapper' style, characterized by dropped waistlines, shorter hemlines (often above the knee), and bobbed or shingled hairstyles. Cloche hats, long necklaces, and beaded dresses were popular, emphasizing a modern, liberated silhouette.",
+    "colors": [
+      "Black",
+      "White",
+      "Gold",
+      "Silver",
+      "Emerald Green"
+    ]
+  },
+  "food": [
+    "Cocktails (often in speakeasies)",
+    "Pineapple upside-down cake",
+    "Gelatin molds (Jell-O)",
+    "Tuna noodle casserole",
+    "Ice cream sundaes"
+  ],
+  "entertainment": {
+    "tv": [],
+    "music": [
+      "Jazz (Louis Armstrong, Duke Ellington)",
+      "Blues",
+      "Charleston dance music"
+    ],
+    "movies": [
+      "The Jazz Singer",
+      "The Gold Rush",
+      "Metropolis"
+    ],
+    "games": [
+      "Board games (e.g., Monopoly's precursor)",
+      "Mahjong"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Radio",
+      "Phonograph",
+      "Refrigerator"
+    ],
+    "aspirational": [
+      "Automobile (Ford Model T/A)",
+      "Telephone"
+    ],
+    "work": [
+      "Typewriter",
+      "Adding machine"
+    ]
+  },
+  "defining_products": [
+    "Radio receivers",
+    "Ford Model A",
+    "Electric refrigerators",
+    "Flapper dresses",
+    "Phonograph records"
+  ],
+  "failed_products": [
+    {
+      "name": "The 'Autodynophone'",
+      "why_failed": "An overly complex and expensive early record player that couldn't compete with simpler, more affordable phonographs for the mass market.",
+      "modern_gap": "No, modern digital music players have made such complex, single-purpose devices obsolete."
+    },
+    {
+      "name": "Early Automatic Dishwashers (e.g., 'Sanitor' brand)",
+      "why_failed": "While invented, early models were often unreliable, inefficient, very expensive, and required significant manual effort, making them unappealing to most households.",
+      "modern_gap": "No, automatic dishwashers are now highly effective, affordable, and common household appliances."
+    }
+  ],
+  "ebay_hot_now": [
+    "Art Deco furniture and decor",
+    "Vintage flapper dresses and accessories",
+    "Prohibition-era collectibles (hip flasks, barware)",
+    "Working antique radios",
+    "Early jazz records (78 rpm)"
+  ],
+  "ebay_sleepers": [
+    "1920s sheet music and songbooks",
+    "Vintage postcards of cityscapes or landmarks",
+    "Everyday kitchenware and glassware from the era",
+    "Lesser-known jazz or blues 78s",
+    "Original advertising ephemera"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "That's the cat's pajamas!",
+      "Are you on the up and up?",
+      "Let's go to a speakeasy for some giggle water."
+    ],
+    "worldview": "They've survived a devastating war and now embrace a new era of prosperity, modern conveniences, and social liberation, often with an optimistic but sometimes naive view of continuous progress. There's a strong desire for fun and breaking from old traditions, especially among the youth.",
+    "speech_patterns": "Speech often combined a degree of formality with vibrant, colorful slang, particularly among younger generations, and a slightly more deliberate cadence than modern speech.",
+    "taboo_topics": [
+      "Open discussions of mental illness or trauma from the war",
+      "Explicit sexual topics in polite company"
+    ]
+  },
+  "story_accuracy": [
+    "Characters using modern slang or idioms not yet invented.",
+    "Depicting widespread public television or air travel for ordinary citizens.",
+    "Over-generalizing the 'flapper' lifestyle to all women, ignoring class and regional differences.",
+    "Ignoring the pervasive impact of Prohibition on daily life and social interactions.",
+    "Underestimating the lingering social conservatism despite the changes."
+  ]
+}

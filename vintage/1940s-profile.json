@@ -1,0 +1,134 @@
+{
+  "decade": "1940s",
+  "slang": [
+    "G.I.",
+    "Swell",
+    "Cat (person)",
+    "Jazz (exaggerate)",
+    "Jitterbug",
+    "Keen",
+    "Take a powder",
+    "Loose lips sink ships",
+    "V-for-Victory",
+    "Roger that"
+  ],
+  "concerns": [
+    "World War II and its immediate aftermath",
+    "Rationing and shortages of essential goods",
+    "Post-war reconstruction and recovery",
+    "The beginning of the Cold War and geopolitical division",
+    "Economic stability and job security"
+  ],
+  "aspirations": [
+    "Lasting peace and security",
+    "Reuniting with loved ones returning from war",
+    "A stable job and a comfortable home",
+    "Access to consumer goods no longer limited by war",
+    "Freedom from global conflict and totalitarian regimes"
+  ],
+  "fashion": {
+    "men": "Utility was paramount, often reflecting military influence with broader shoulders and practical cuts in suits and workwear. Zoot suits, though controversial due to fabric rationing, emerged as a vibrant counter-culture statement for some younger men.",
+    "women": "Strong, tailored silhouettes featuring padded shoulders remained popular, often in practical, modest dresses and suits due to fabric restrictions. 'Victory rolls' and other elaborate updos were fashionable, keeping hair tidy and out of the way.",
+    "colors": [
+      "Olive green",
+      "Navy blue",
+      "Gray",
+      "Brown",
+      "Burgundy"
+    ]
+  },
+  "food": [
+    "Rationed goods (sugar, meat, coffee)",
+    "Produce from Victory Gardens",
+    "Dried eggs",
+    "Meat substitutes (e.g., Spam, beans)",
+    "Powdered milk"
+  ],
+  "entertainment": {
+    "tv": [
+      "Experimental broadcasts",
+      "Local news segments",
+      "Early variety shows (very limited audience)"
+    ],
+    "music": [
+      "Big Band Swing (Glenn Miller, Benny Goodman)",
+      "Crooners (Frank Sinatra, Bing Crosby)",
+      "Patriotic songs"
+    ],
+    "movies": [
+      "Casablanca",
+      "It's a Wonderful Life",
+      "Citizen Kane"
+    ],
+    "games": [
+      "Board games (Monopoly, Checkers)",
+      "Radio dramas and serials"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Radio",
+      "Refrigerator",
+      "Washing machine (early automatic models)"
+    ],
+    "aspirational": [
+      "Television set",
+      "New car (post-war models)",
+      "Modern kitchen appliances"
+    ],
+    "work": [
+      "Typewriter",
+      "Adding machine",
+      "ENIAC (first electronic general-purpose computer)"
+    ]
+  },
+  "defining_products": [
+    "Jeep",
+    "Slinky",
+    "Tupperware (launched late 40s)",
+    "Ballpoint pen",
+    "Spam"
+  ],
+  "failed_products": [
+    {
+      "name": "Tucker Torpedo",
+      "why_failed": "Despite innovative safety features and design, the company faced legal troubles, accusations of fraud, and production challenges, leading to its collapse after only 51 cars were built.",
+      "modern_gap": "No, the automotive industry continues to innovate on safety and design, but the Tucker's forward-thinking approach was ahead of its time."
+    }
+  ],
+  "ebay_hot_now": [
+    "WWII military uniforms and memorabilia",
+    "Vintage advertising posters (wartime or early post-war)",
+    "1940s costume jewelry (Bakelite, sterling silver)",
+    "Big Band era vinyl records (78 RPMs)",
+    "Vintage Bakelite kitchenware"
+  ],
+  "ebay_sleepers": [
+    "Wartime propaganda pamphlets and ephemera",
+    "Regional recipe books with rationing tips",
+    "Utility company or local business advertising (paper goods)",
+    "Everyday household items (e.g., specific brand tin boxes)",
+    "Children's paper toys and games"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Keep your chin up!",
+      "Loose lips sink ships!",
+      "V-for-Victory!",
+      "Can-do spirit!",
+      "Roger that!"
+    ],
+    "worldview": "People experienced immense upheaval and loss, fostering a deep sense of resilience, community, and patriotism. There was a strong belief in collective effort to overcome adversity and rebuild a better future, tempered by the lingering shadows of war.",
+    "speech_patterns": "Speech was generally more formal and less reliant on modern slang, often emphasizing directness and a pragmatic tone, especially concerning duty and civic responsibility.",
+    "taboo_topics": [
+      "Mental health issues (PTSD was not well understood)",
+      "Personal financial struggles (often seen as a private burden)",
+      "Open criticism of government policy during wartime"
+    ]
+  },
+  "story_accuracy": [
+    "Characters using post-war slang or social attitudes that hadn't developed yet",
+    "Anachronistic technology, such as too many private cars during strict wartime rationing",
+    "Oversimplifying the geopolitical complexities leading to the Cold War, or portraying it with modern Cold War tropes"
+  ]
+}

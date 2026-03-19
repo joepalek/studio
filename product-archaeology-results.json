@@ -1,0 +1,5242 @@
+{
+  "count": 419,
+  "results": [
+    {
+      "product_name": "Chromecast",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-08-06",
+      "description": "Chromecast was a line of digital media players that allowed users to play online content on a television.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "VPN by Google One",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-06-20",
+      "description": "VPN by Google One was a virtual private network service that provided users encrypted transit of their data and network activity and allowed them to mask their IP address.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Stories",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-06-26",
+      "description": "YouTube Stories (originally YouTube Reels) allowed creators to post temporary videos that would expire after seven days.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Album Archive",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-07-19",
+      "description": "Google Album Archive was a platform that allowed users to access and manage their archived photos and videos from various Google services, such as Hangouts and Picasa Web Albums.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Domains",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-09-30",
+      "description": "Google Domains was a domain name registrar operated by Google.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Jacquard",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-03-17",
+      "description": "Jacquard was a small tag to make it easier and more intuitive for people to interact with technology in their everyday lives, without having to constantly pull out their devices or touch screens.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Surveys",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-11-01",
+      "description": "Google Surveys was a business product by Google aimed at facilitating customized market research.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Code Competitions",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-02-23",
+      "description": "Google Code Jam, Kick Start, and Hash Code were competitive programming competitions open to programmers around the world.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Stadia",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-01-18",
+      "description": "Google Stadia was a cloud gaming service combining a WiFi gaming controller and allowed users to stream gameplay through web browsers, TV, mobile apps, and Chromecast.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Duo",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-06-01",
+      "description": "Google Duo was a video calling app that allowed people to call someone from their contact list.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Android Auto for phone screens",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-06-21",
+      "description": "Android Auto for phone screens was an app that allowed the screen of the phone to be used as an Android Auto interface while driving, intended for vehicles that did not have a compatible screen built in.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google My Business (app)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-07-31",
+      "description": "Google My Business was an app that allowed businesses to manage their Google Maps Business profiles.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Cameos on Google",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-02-17",
+      "description": "Cameos on Google allowed celebrities and other public figures to record video responses to the most common questions asked about them which would be shown to users in Google Search results.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Go",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-08-09",
+      "description": "YouTube Go was an app aimed at making YouTube easier to access on mobile devices in emerging markets through special features like downloading video on wifi for viewing later.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Contributor",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-04-23",
+      "description": "Google Contributor was a program run by Google that allowed users in the Google Network of content sites to view the websites without any advertisements that are administered, sorted, and maintained by Google.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Maps Coordinate",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-02-21",
+      "description": "Google Maps Coordinate was a service for managing mobile workforces with the help of mobile apps and a web-based dashboard.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Fitbit Coach",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-07-30",
+      "description": "Fitbit Coach (formerly Fitstar) was a video-based bodyweight workout app that used AI to personalize workouts based on user feedback.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Fitstar Yoga",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-07-30",
+      "description": "Fitstar Yoga was a video-based yoga app that created unique yoga sessions based on user preference and skill level.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google OnHub",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-01-11",
+      "description": "Google OnHub was a series of residential wireless routers manufactured by Asus and TP-Link that were powered by Google software, managed by Google apps, and offered enhanced special features like Google Assistant.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Chatbase",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-09-27",
+      "description": "Analytics platform for Google's Dialogflow chatbot & others, started by the Google-funded Area120 incubator then retired and partially merged into Dialogflow itself.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "DropCam",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-04-08",
+      "description": "Dropcam was a line of Wi-Fi video streaming cameras acquired by Google in 2014.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Toolbar",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-12-11",
+      "description": "Google Toolbar was a web browser toolbar that provided a search box in web browsers like Internet Explorer and Firefox.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google My Maps",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-10-15",
+      "description": "My Maps was an Android application that enabled users to create custom maps for personal use or sharing on their mobile device.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Zync Render",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-06-01",
+      "description": "Zync render was a cloud render platform for animation and visual effects.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Commerce Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-07-01",
+      "description": "Google Commerce Search was an enterprise search service that powered online retail stores and e-commerce websites that improved speed and accuracy.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Shopping Mobile App",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-04-09",
+      "description": "The Google Shopping Mobile App, which had absorbed Google Express when it launched, provided a native shopping experience with a personalized homepage for mobile users. It is now retired and the functionality lives on in the Shopping Tab.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Play Movies & TV",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-06-15",
+      "description": "Google Play Movies & TV, originally Google TV, was an app used to view purchased and rented media and was ultimately replaced with YouTube.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Public Alerts",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-04-01",
+      "description": "Google Public Alerts was an online notification service owned by Google.org that sends safety alerts to various countries.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Go Links",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-03-31",
+      "description": "(also known as Google Short Links) was a URL shortening service. It also supported custom domain for customers of Google Workspace (formerly G Suite (formerly Google Apps)).",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Tilt Brush",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-01-26",
+      "description": "Tilt Brush was a room-scale 3D-painting virtual-reality application available from Google, originally developed by Skillman & Hackett.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Android Things",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-01-05",
+      "description": "Android Things was an Android-based embedded operating system (originally named Brillo) aimed to run on Internet of Things (IoT) devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube VR (SteamVR)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-12-10",
+      "description": "YouTube VR allowed you to easily find and watch 360 videos and virtual reality content with SteamVR-compatible headsets.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Measure",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-06-08",
+      "description": "Measure allowed users to take measurements of everyday objects with their device's camera utilizing ARCore technology.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Crisis Map",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-03-31",
+      "description": "Google Crisis Map was a website that allowed to create, publish, and share maps by combining layers from anywhere on the web.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Pigeon Transit",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-06-24",
+      "description": "Pigeon Transit was a transit app that used crowdsourced information about delays, crowded trains, escalator outages, live entertainment, dirty or unsafe conditions.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Enhanced 404 Pages",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-05-13",
+      "description": "Enhanced 404 Pages was a JavaScript library that added suggested URLs and a search box to a website's 404 Not Found page.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Streams",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2010-02-28",
+      "description": "YouTube Streams allowed users to watch a YouTube video together while chatting about the video in real-time.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Password Checkup extension",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-08-31",
+      "description": "Password Checkup provided a warning to users if they were using a username and password combination checked against over 4 billion credentials that Google knew to be unsafe.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Photos Print",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-06-30",
+      "description": "Google Photos Print was a subscription service that automatically selected the best ten photos from the last thirty days which were mailed to user's homes.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Play Music",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-10-22",
+      "description": "Google Play Music was a music and podcast streaming service, and online music locker.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Shoelace",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-05-12",
+      "description": "Shoelace was an app used to find group activities with others who share your interests.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Neighbourly",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-05-12",
+      "description": " Neighbourly was a mobile app designed to help you learn about your neighborhood by asking other residents, and find out about local services and facilities in your area from people who live around you.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Material Theme Editor",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-03-19",
+      "description": "Material Theme Editor was a plugin for Sketch App which allowed you to create a material-based design system for your app.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Station",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-02-17",
+      "description": "Google Station was a service that gave partners an easy set of tools to roll out Wi-Fi hotspots in public places. Google Station provided software and guidance on hardware to turn fiber connections into fast, reliable, and safe Wi-Fi zones.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "One Today",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-02-06",
+      "description": "One Today was an app that allowed users to donate $1 to different organizations and discover how their donation would be used.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "App Maker",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-01-19",
+      "description": "App Maker was a tool that allowed its users to build and deploy custom business apps easily and securely on the web without writing much code.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "SoundStage",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-01-12",
+      "description": "SoundStage was a virtual reality music sandbox built specifically for room-scale VR.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cloud Print",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-12-31",
+      "description": "Google Cloud Print allowed users to 'print from anywhere;' to print from web, desktop, or mobile to any Google Cloud Print-connected printer.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Spotlight Stories",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-03-13",
+      "description": "Google Spotlight Stories was an app and content studio project which created immersive stories for mobile and VR.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Datally",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-10-17",
+      "description": "Datally (formerly Triangle) was a smart app by Google that helped you save, manage, and share your mobile data.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Specialized Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-06-05",
+      "description": "Google Specialized Search allowed users to search across a limited index of the web for specialized topics like Linux, Microsoft, and 'Uncle Sam.'",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Clips",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-10-15",
+      "description": "Google Clips was a miniature clip-on camera that could automatically capture interesting or relevant video clips determined by machine learning algorithms.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Daydream",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-10-15",
+      "description": "Google Daydream was a virtual reality platform and set of hardware devices that worked with certain Android phones.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Bulletin",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-11-22",
+      "description": "Google Bulletin was a hyperlocal news service where users could post news from their neighborhood and allow others in the same areas to hear those stories.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Touring Bird",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-11-17",
+      "description": "Touring Bird was an Area 120 incubator project which helped users compare prices, book tours, tickets, and experiences, and learn about top destinations around the world.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Leanback",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-10-02",
+      "description": "YouTube Leanback was an optimized version of YouTube used for television web browsers and WebView application wrappers.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube for Nintendo 3DS",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-09-03",
+      "description": "YouTube for Nintendo 3DS allowed users to stream YouTube videos on the portable gaming console.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Hire by Google",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-09-01",
+      "description": "Google Hire was an applicant tracking system to help small to medium businesses distribute jobs, identify and attract candidates, build strong relationships with candidates, and efficiently manage the interview process.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Correlate",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-12-15",
+      "description": "Google Correlate was a service that provided users information about how strongly the frequency of multiple search terms correlates with each other over a specified time interval.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Messages",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-09-18",
+      "description": "YouTube Messages was a direct messaging feature that allowed users to share and discuss videos one-on-one and in groups on YouTube.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Follow Your World",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-09-30",
+      "description": "Follow Your World allowed users to register points of interest on Google Maps and receive email updates whenever the imagery was updated.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Blog Compass",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-06-15",
+      "description": "Blog Compass was a blog management tool that integrated with WordPress and Blogger available only in India.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Radio Automation",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-08-05",
+      "description": "Google Radio Automation was a hardware and software service used by radio operators to automate song playing among other radio station functions.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cardboard",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-03-03",
+      "description": "Google Cardboard was a low-cost, virtual reality (VR) platform named after its folded cardboard viewer into which a smartphone was inserted.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Video Editor",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-09-20",
+      "description": "YouTube Video Editor was a web-based tool for editing, merging, and adding special effects to video content.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Revolv",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-05-15",
+      "description": "Revolv was a monitoring and control system that allowed users to control their connected devices from a single hub.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Chromecast Audio",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-01-11",
+      "description": "Chromecast Audio was a device that allowed users to stream audio from any device to any speaker with an audio input.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Allo",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-03-13",
+      "description": "Google Allo was an instant messaging mobile app for Android, iOS, and Web with special features like a virtual assistant and encrypted mode.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "CallJoy",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-07-22",
+      "description": "CallJoy was an Area 120 project that provided phone automation for small-to-medium businesses allowing them to train the bot agent with responses to common customer questions.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Blog Search API",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-12-21",
+      "description": "Google Blog Search API was a way to search blogs utilizing Google.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Real-Time Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-02",
+      "description": "Google Real-Time Search provided live search results from Twitter, Facebook, and news websites.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Inbox by Gmail",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-04-02",
+      "description": "Inbox by Gmail aimed to improve email through several key features.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Sparrow",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-10-05",
+      "description": "Sparrow was an email client for OS X and iOS. Google acquired and then killed it.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Answers",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2006-12-01",
+      "description": "Google Answers was an online knowledge market.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Deskbar",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2006-05-08",
+      "description": "Google Deskbar was a small inset window on the Windows toolbar and allowed users to perform searches without leaving the desktop.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Writely",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2006-10-10",
+      "description": "Writely was a Web-based word processor.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Click-to-Call",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2007-12-01",
+      "description": "Google Click-to-Call allowed a user to speak directly over the phone to businesses found in search results.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Reader",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-07-01",
+      "description": "Google Reader was an RSS/Atom feed aggregator.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Wave",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-04-30",
+      "description": "Google Wave was an online communication and collaborative real-time editor tool.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Notebook",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-11-11",
+      "description": "Google Notebook allowed users to save and organize clips of information while conducting research online.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Web Hosting in Google Drive",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-08-31",
+      "description": "Web hosting in Google Drive allowed users to publish live websites by uploading HTML, CSS, and other files.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Encrypted Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-04-30",
+      "description": "Encrypted Search provided users with anonymous internet searching.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Goggles",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-08-20",
+      "description": "Google Goggles was used for searches based on pictures taken by handheld devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "iGoogle",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-11-01",
+      "description": "iGoogle was a customizable Ajax-based start page or personal web portal.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Spaces",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-02-16",
+      "description": "Google Spaces was an app for group discussions and messaging.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Map Maker",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-03-31",
+      "description": "Google Map Maker was a mapping and map editing service where users were able to draw features directly onto a map.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Trendalyzer",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-09-01",
+      "description": "Trendalyzer was a data trend viewing platform.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Picasa",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-10-09",
+      "description": "Picasa was an image organizer and image viewer for organizing and editing digital photos.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Code",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-01-15",
+      "description": "Google Code was a service that provided revision control, an issue tracker, and a wiki for code documentation.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Swiffy",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-07-01",
+      "description": "Google Swiffy was a web-based tool that converted SWF files to HTML5.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Panoramio",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-11-04",
+      "description": "Panoramio was a geo-location tagging and photo sharing product.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Helpouts",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-04-20",
+      "description": "Google Helpouts was an online collaboration service where users could share their expertise through live video.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Moderator",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-06-30",
+      "description": "Google Moderator was a service that used crowdsourcing to rank user-submitted questions, suggestions, and ideas.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Questions and Answers",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-06-23",
+      "description": "Google Questions and Answers was a free knowledge market that allowed users to collaboratively find answers to their questions.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Orkut",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-09-30",
+      "description": "Orkut was a social network designed to help users meet new and old friends and maintain existing relationships.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Quickoffice",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-06-25",
+      "description": "Quickoffice was a productivity suite for mobile devices which allowed the viewing, creating and editing of documents, presentations and spreadsheets.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Notifier",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-01-31",
+      "description": "Google Notifier alerted users to new emails on their Gmail account.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Meebo",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-07-11",
+      "description": "Meebo was a browser-based instant messaging application which supported multiple IM services.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Chart API",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-12-31",
+      "description": "Google Chart API was an interactive Web service that created graphical charts from user-supplied data.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Mini",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-12-31",
+      "description": "Google Mini was a smaller version of the Google Search Appliance.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Search Appliance",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-12-31",
+      "description": "Google Search Appliance was a rack-mounted device that provided document indexing functionality.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google URL Shortener",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-03-30",
+      "description": "Google URL Shortener, also known as goo.gl, was a URL shortening service.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Buzz",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-12-15",
+      "description": "Google Buzz was a social networking, microblogging and messaging tool that integrated with Gmail.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Desktop",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-01",
+      "description": "Google Desktop allowed local searches of a user's emails, computer files, music, photos, chats and Web pages viewed.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Chrome Apps",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-06-30",
+      "description": "Google Chrome Apps were hosted or packaged web applications that ran on the Google Chrome browser.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Public Service Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2006-09-15",
+      "description": "Google Public Service Search provided governmental, non-profit and academic organizational search results without ads.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Video Marketplace",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2007-08-11",
+      "description": "Google Video Marketplace was a service that included a store where videos could be bought and rented.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Browser Sync",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-06-30",
+      "description": "Google Browser Sync was a Firefox extension that synced information like passwords and browsing history.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Lively",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-12-31",
+      "description": "Google Lively was a web-based virtual environment that provided a new way to access information.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Hello",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-05-15",
+      "description": "Hello was a service by Picasa that let users share pictures \"like you're sitting side-by-side.\"",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "SearchMash",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-11-24",
+      "description": "SearchMash was an experimental, non-branded search engine that Google used to be able to play around with new search technologies, concepts, and interfaces.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Dodgeball",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-02-28",
+      "description": "Dodgeball was a location-based social network where users texted their location to the service, and it notified them of friends and points of interest nearby.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Mashup Editor",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-07-31",
+      "description": "Google Mashup Editor was an online web mashup creation service with publishing, syntax highlighting, and debugging.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Ride Finder",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-10-31",
+      "description": "Google Ride Finder was a service that used GPS data to pinpoint and map the location of taxis, limos, and shuttle vehicles available for hire in 10 U.S. metro areas.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Health",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-01-01",
+      "description": "Google Health was a personal health information centralization service that provided users a merged health record from multiple sources.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Postini",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-08-21",
+      "description": "Postini was an e-mail, Web security, and archiving service that filtered e-mail spam and malware (before it was delivered to a client's mail server), e-mail archiving.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Marratech e-meetings",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2010-02-19",
+      "description": "Marratech was a Swedish company that made software for e-meetings (e.g., web conferencing, videoconferencing).",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google SearchWiki",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2010-03-03",
+      "description": "SearchWiki was a Google Search feature which allowed logged-in users to annotate and re-order search results.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "GOOG-411",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2010-11-12",
+      "description": "GOOG-411 (or Google Voice Local Search) was a telephone service that provided a speech-recognition-based business directory search.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Tour Builder",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-07-15",
+      "description": "Tour Builder allowed users to create and share interactive tours inside Google Earth with photos and videos of locations.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Base",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2010-12-17",
+      "description": "Google Base was a database provided by Google into which any user can add almost any type of content, such as text, images, and structured information.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Labs",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-31",
+      "description": "Google Labs was a technology playground used by Google to demonstrate and test new projects.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google PowerMeter",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-16",
+      "description": "Google PowerMeter was a software project of Google's philanthropic arm that helped consumers track their home electricity usage.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google+",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-04-02",
+      "description": "Google+ was an Internet-based social network.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Schemer",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-02-07",
+      "description": "Google Schemer was a Google service for sharing and discovering things to do.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Latitude",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-08-09",
+      "description": "Google Latitude was a location-aware feature of Google Maps, a successor to an earlier SMS-based service Dodgeball.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Picnik",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-04-13",
+      "description": "Picnik was an online photo editing service that allowed users to edit, style, crop, and resize images.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Showtimes",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-11-01",
+      "description": "Google Showtimes was a standalone movie search result page.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Bump!",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-01-31",
+      "description": "Bump! was an iOS and Android mobile app that enabled smartphone users to transfer contact information, photos, and files between devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Nexus",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-10-04",
+      "description": "Google Nexus was Google's line of flagship Android phones, tablets, and accessories.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Jaiku",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-01-15",
+      "description": "Jaiku was a social networking, micro-blogging and lifestreaming service comparable to Twitter.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Knol",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-05-01",
+      "description": "Knol was a Google project that aimed to include user-written articles on a range of topics.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Play Edition",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-01-18",
+      "description": "Google Play Edition devices were a series of Android smartphones and tablets sold by Google.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Compare",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-03-01",
+      "description": "Google Compare allowed consumers to compare several offers ranging from insurance, mortgage, and credit cards.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Gizmo5",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-04-03",
+      "description": "Gizmo5 was a VOIP communications network and a proprietary freeware soft phone for that network.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Code Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-01-15",
+      "description": "Google Code Search was a free beta product which allowed users to search for open-source code on the Internet.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "SlickLogin",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-02-17",
+      "description": "SlickLogin was an Israeli start-up company which developed sound-based password alternatives, was acquired by Google and hasn't released anything since.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Page Creator",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-08-31",
+      "description": "Google Page Creator was a website creation and hosting service that allowed users to build basic websites with no HTML knowledge.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Project Tango",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-12-15",
+      "description": "Project Tango was an API for augmented reality apps that was killed and replaced by ARCore.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Fabric",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-05-04",
+      "description": "Fabric was a platform that helped mobile teams build better apps, understand their users, and grow their business.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Nexus Q",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-07-01",
+      "description": "Nexus Q was a digital media player that allowed users with Android devices to stream content from supported services to a connected television or speakers via an integrated amplifier.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Catalogs",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-08-04",
+      "description": "Google Catalogs was a shopping application that delivered the virtual catalogs of large retailers to users.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Hotpot",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-04-08",
+      "description": "Google Hotpot was a local recommendation engine that allowed people to rate restaurants, hotels, etc. and share them with friends.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Sidewiki",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-02",
+      "description": "Google Sidewiki was a browser sidebar tool that allowed users to contribute information to any web page.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "AdSense for Feeds",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-12-03",
+      "description": "AdSense for Feeds was an RSS-based service for AdSense that allowed publishers to advertise on their RSS Feeds.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Aardvark",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-02",
+      "description": "Aardvark was a social search service that connected users live with friends or friends-of-friends who were able to answer their questions.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Shared Stuff",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-03-30",
+      "description": "Google Shared Stuff was a web page sharing system that allowed users to bookmark pages and share them.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Zeitgeist",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2007-12-31",
+      "description": "Google Zeitgeist was a weekly, monthly, and yearly snapshot in time of what people were searching for on Google all over the world.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Project Ara",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-09-02",
+      "description": "Project Ara was a modular smartphone project under development by Google.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Talk",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-05-15",
+      "description": "Often remembered as 'Gchat', Google Talk was a messaging service for both text and voice using XMPP.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "BebaPay",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-03-15",
+      "description": "BebaPay was a form of electronic ticketing platform in Nairobi, Kenya that was developed by Google in partnership with Equity Bank.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Fast Flip",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-01",
+      "description": "Google Fast Flip was an online news aggregator, something of a high tech microfiche.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Web Accelerator",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-01-20",
+      "description": "Google Web Accelerator was a client-side software that increased the load speed of web pages.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Reply",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-10-11",
+      "description": "Reply was a mobile app that let users insert Smart Replies (pre-defined replies) into conversations on messaging apps.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Squared",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-05",
+      "description": "Google Squared was an information extraction and relationship extraction product that compiled structured data into a spreadsheet-like format.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Glass Explorer Edition",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-01-15",
+      "description": "Google Glass Explorer Edition was a wearable computer with an optical head-mounted display and camera that allows the wearer to interact with various applications and the Internet via natural language voice commands.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "BufferBox",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-02-21",
+      "description": "BufferBox was a Canadian startup that provided consumers 24/7 convenience of picking up their online purchases.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Grand Central",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-03-11",
+      "description": "Grand Central was a Voice over IP service that was acquired by Google, and turned into Google Voice.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Nexus Player",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-05-24",
+      "description": "Nexus Player was a digital media player that allowed users to play music, watch video originating from Internet services or a local network, and play games.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Listen",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-11-01",
+      "description": "Google Listen was an Android application that let you search, subscribe, download, and stream podcasts and web audio.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Directory",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-20",
+      "description": "Google Directory was an Internet website directory organized into 14 main categories that allowed users to explore the web.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Gears",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-11-22",
+      "description": "Gears (aka Google Gears) was utility software that aimed to create more powerful web apps by adding offline storage and other additional features to web browsers.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Building Maker",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-06-04",
+      "description": "Building Maker enabled users to create 3D models of buildings for Google Earth on the browser.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Dictionary",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-08-05",
+      "description": "Google Dictionary was a standalone online dictionary service.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Friend Connect",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-03-01",
+      "description": "Google Friend Connect was a free social networking site from 2008 to 2012.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Glass OS",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-06-20",
+      "description": "Glass OS (Google XE) was a version of Google's Android operating system designed for Google Glass.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Tez",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-08-28",
+      "description": "Tez was a mobile payments service by Google, targeted at users in India. It was rebranded to Google Pay.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Offers",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-01-01",
+      "description": "Google Offers was a service offering discounts and coupons. Initially, it was a deal of the day website similar to Groupon.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "MyTracks",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-04-30",
+      "description": "MyTracks was a GPS tracking application for Android which allowed users to track their path, speed, distance, and elevation.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Pie",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-02-18",
+      "description": "Pie was a work-centric group chat website and app comparable to Slack.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Portfolios",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-11-15",
+      "description": "Portfolios was a feature available in Google Finance to track personal financial securities.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Site Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-04-01",
+      "description": "Google's Site Search was a service that enabled any website to add a custom search field powered by Google.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Currents",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-11-20",
+      "description": "Google Currents was a social magazine app by Google, which was replaced by Google Play Newsstand.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "BumpTop",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2010-04-30",
+      "description": "BumpTop was a skeuomorphic desktop environment app that simulates the normal behavior and physical properties of a real-world desk and enhances it with automatic tools to organize its contents.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Checkout",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-11-20",
+      "description": "Google Checkout was an online payment processing service that aimed to simplify the process of paying for online purchases.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Pack",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-09-02",
+      "description": "Google Pack was a collection of software tools offered by Google to download in a single archive. It was announced at the 2006 Consumer Electronics Show, on January 6. Google Pack was only available for Windows XP, Windows Vista, and Windows 7.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Timeful",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-12-11",
+      "description": "Timeful was an iOS to-do list and calendar application, developed to reinvent the way that people manage their most precious resource of time.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Rebang",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-31",
+      "description": "Rebang was a Zeitgeist-like service centered on providing service to a Chinese audience. It was incorporated into Google Labs as of late 2010, and later discontinued along with its parent project.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Slide",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-03-06",
+      "description": "Slide was a photo sharing software for social networking services such as MySpace and Facebook. Later Slide began to make applications and became the largest developer of third-party applications for Facebook.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Real Estate On Google Maps",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-02-10",
+      "description": "Real Estate on Google Maps enabled users to find places for sale or rent in an area they were interested in.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Needlebase",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-06-01",
+      "description": "Needlebase was a point-and-click tool for extracting, sorting and visualizing data from across pages around the web.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cloud Connect",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-04-30",
+      "description": "Google Cloud Connect was a free cloud computing plugin for multiple versions of Microsoft Office that automatically stored and synchronized files to Google Docs.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google SMS",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-05-10",
+      "description": "Google SMS let you text questions- including weather, sports scores, word definitions, and more- to 466453 and get an answer back.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google News & Weather",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-10-16",
+      "description": "Google News & Weather was a news aggregator application available on the Android and iOS operating systems.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Script Converter",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-01",
+      "description": "Google Script Converter was an online transliteration tool for transliteration (script conversion) between Hindi, Romanagari, and various other scripts. It's ended because Google shut down Google Labs and all associated projects.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Video",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-08-20",
+      "description": "Google Video was a free video hosting service from Google, similar to YouTube, that allowed video clips to be hosted on Google servers and embedded onto other websites.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "ZygoteBody",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-10-13",
+      "description": "ZygoteBody, formerly Google Body, was a web application by Zygote Media Group that rendered manipulable 3D anatomical models of the human body.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "On2 Flix Cloud",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-08-05",
+      "description": "Flix Cloud was a high-capacity online video encoding service.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Noop Programming Language",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-12-31",
+      "description": "Noop was a project by Google engineers Alex Eagle and Christian Gruber aiming to develop a new programming language that attempted to blend the best features of 'old' and 'new' languages and best practices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Maps Engine",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-02-01",
+      "description": "Google Maps Engine was an online tool for map creation. It enabled you to create layered maps using your data as well as Google Maps data.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Save to Google Chrome Extension",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-08-15",
+      "description": "Save to Google Chrome Extension enabled you to quickly save a page link with image and tags to a Pocket-like app.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Flu Vaccine Finder",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-04-20",
+      "description": "Google Flu Vaccine Finder was a maps mash-up that showed nearby vaccination places across the United States.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google One Pass",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-04-20",
+      "description": "Google One Pass was an online store developed by Google for media publishers looking to sell subscriptions to their content.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Image Swirl",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-20",
+      "description": "Google Image Swirl was an enhancement to the image search tool that came out of Google Labs. It was built on top of image search by grouping images with similar visual and semantic qualities.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Hands Free",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-02-08",
+      "description": "Google Hands Free was a mobile payment system that allowed users to pay their bill using Bluetooth to connect to payment terminals by saying 'I'll pay with Google.'",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Freebase",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-05-02",
+      "description": "Freebase was a large collaborative knowledge base consisting of structured data composed mainly by its community members, developed by Metaweb(acquired by Google).",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Wildfire Interactive",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-03-14",
+      "description": "Wildfire by Google was a social marketing application that enabled businesses to create, optimize and measure their presence on social networks.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Now",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-05-02",
+      "description": "Google Now was a feature of Google Search that offered predictive cards with information and daily updates in Chrome and the Google app for Android and iOS.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Flu Trends",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-08-20",
+      "description": "Google Flu Trends was a service attempting to make accurate predictions about flu activity. ",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Insights for Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-09-27",
+      "description": "Google Insights for Search was a service used to provide data about terms people searched in Google and was merged into Google Trends.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Send to Phone",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2008-08-28",
+      "description": "Google Send to Phone was an add-on to send links and other information from Firefox to their phone by text message.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Urchin",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-03-28",
+      "description": "Urchin was a web statistics analysis program developed by Urchin Software Corporation. It analyzed web server log file content and displayed the traffic information on that website based upon the log data.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Chromebook Pixel",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-03-01",
+      "description": "Chromebook Pixel was a first-of-its-kind laptop built by Google that ran Chrome OS, a Linux kernel-based operating system.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Video Player",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2007-08-17",
+      "description": "The Google Video Player plays back files in Google's own Google Video File (.gvi) media format and supported playlists in 'Google Video Pointer' (.gvp) format.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "qpx-express-API",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-04-10",
+      "description": "A service that Google developed for long-tail travel clients. ITA Software will create a new, easier way for users to find better flight information online, which should encourage more users to make their flight purchases online.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Songza",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-01-31",
+      "description": "Songza was a free music streaming service that would recommend its users' various playlists based on time of day and mood or activity.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Chrome Frame",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-02-01",
+      "description": "Google Chrome Frame was a plugin for Internet Explorer that allowed web pages to be displayed using WebKit and the V8 JavaScript engine.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Apture",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-12-20",
+      "description": "Apture was a service that allowed publishers and bloggers to link and incorporate multimedia into a dynamic layer above their pages.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "fflick",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-01-31",
+      "description": "fflick was a review, information, and news website that used information from aggregated Tweets to rate movies as positive or negative.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google TV",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2014-06-30",
+      "description": "Google TV was a smart TV platform that integrated Android and Chrome to create an interactive television overlay.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Refine",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-10-31",
+      "description": "Google Refine was a standalone desktop application for data cleanup and transformation to other formats.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Fusion Tables",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-12-03",
+      "description": "Google Fusion Tables was a web service for data management that provided a means for visualizing data in different charts, maps, and graphs.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Web APIs",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-12-05",
+      "description": "The Google Web APIs were a free SOAP service for doing Google searches so that developers could use the results in almost any way they wanted.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Sets",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2011-07-01",
+      "description": "Google Sets generates a list of items when users enter a few examples. For example, entering \"Green, Purple, Red\" emits the list \"Green, Purple, Red, Blue, Black, White, Yellow, Orange, Brown\".",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Android @ Home",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-05-22",
+      "description": "Android @ Home allowed a user\u2019s device to discover, connect, and communicate with devices and appliances in the home.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Pixate",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-10-31",
+      "description": "Pixate was a platform for creating sophisticated animations and interactions, and refining your designs through 100% native prototypes for iOS and Android. ",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Earth Browser Plug-in",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-12-12",
+      "description": "Google Earth Browser Plug-in allowed developers to embed Google Earth into web pages and included a JavaScript API for custom 3D drawing and interaction.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Toolbar for Firefox",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-09-01",
+      "description": "Google Toolbar for Firefox",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Notification Widget (Mr. Jingles)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-03-07",
+      "description": "Mr. Jingles (aka Google Notification Widget) displayed alerts and notifications from across multiple Google services.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Video Annotations",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-01-15",
+      "description": "YouTube Video Annotations allowed video creators to add interactive commentary to their videos containing background information, branching (\"choose your own adventure\" style) stories, or links to any YouTube video, channel, or search results page.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Nearby Notifications",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-12-06",
+      "description": "Google Nearby Notifications were a proximity marketing tool using Bluetooth beacons and location-based data to serve content relevant to an Android user's real-world location.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Audio Ads",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2009-02-12",
+      "description": "Google Audio Ads service allowed advertisers to run campaigns on AM/FM radio stations in the US using the AdWords interface.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Word Lens",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-01-14",
+      "description": "Word Lens translated text in real time on images by using the viewfinder of a device's camera without the need of an internet connection; The technology was rolled into Google Translate.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cloud Messaging (GCM)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-05-29",
+      "description": "Google Cloud Messaging (GCM) was a notification service that enabled developers to send messages between servers and client apps running on Android or Chrome.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Realtime API",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-01-15",
+      "description": "Google Realtime API provided ways to synchronize resources between devices. It operated on files stored on Google Drive.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Data Saver Extension for Chrome",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-04-23",
+      "description": "Data Saver was an extension for Chrome that routed web pages through Google servers to compress and reduce the user's bandwidth.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Trader",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-11-11",
+      "description": "Google Trader was a classifieds service run by Google in Ghana, Uganda, Kenya, and Nigeria to help customers trade goods and services online.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Works with Nest API",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-08-31",
+      "description": "Works with Nest was an API that allowed external services to access and control Nest devices. This enabled the devices to be used with third-party home automation platforms and devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Jump",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-06-28",
+      "description": "Google Jump was a cloud-based VR media solution that enabled 3D-360 media production by integrating customized capture solutions with best-in-class automated stitching.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "reCAPTCHA Mailhide",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-03-31",
+      "description": "reCAPTCHA Mailhide allowed users to mask their email address behind a captcha to prevent robots from scraping the email and sending spam.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Gaming",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-05-30",
+      "description": "YouTube Gaming was a video gaming-oriented service and app for videos and live streaming.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Trips",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-08-05",
+      "description": "Google Trips was a mobile app that allowed users to plan for upcoming travel by facilitating flight, hotel, car, and restaurant reservations from user's email alongside summarized info about the user's destination.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Areo",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-06-14",
+      "description": "Areo was a mobile app that allowed users in Bangalore, Mumbai, Delhi, Gurgaon, and Pune to order meals from nearby restaurants or schedule appointments with local service professionals, including electricians, painters, cleaners, plumbers, and more.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Hangouts on Air",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-08-01",
+      "description": "Hangouts on Air allowed users to host a multi-user video call while recording and streaming the call on YouTube.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Translator Toolkit",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-12-04",
+      "description": "Google Translator Toolkit was a web application which allowed translators to edit and manage translations generated by Google Translate.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "G Suite Training",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-09-30",
+      "description": "G Suite Training (previously known as Synergyse) provided interactive and video-based training for 20 Google G Suite products in nine languages through a website and a Chrome extension.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "uWeave",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-04-01",
+      "description": "uWeave (pronounced \u201cmicro weave\u201d) was an implementation of the Weave protocol intended for use on microcontroller-based devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Wallet Card",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-06-30",
+      "description": "Google Wallet Card was a prepaid debit card that let users pay for things in person and online using their Wallet balance at any retailer that accepted MasterCard.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "AngularJS",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-12-31",
+      "description": "AngularJS was a JavaScript open-source front-end web framework based on MVC pattern using a dependency injection technique.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Field Trip",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-12-31",
+      "description": "Field Trip was a mobile app that acted as a virtual tour guide by cross-referencing multiple sources of information to provide users information about points of interest near them.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Focals by North",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-07-31",
+      "description": "Focals were a custom-built smart glasses product with a transparent, holographic display that allowed users to read and respond to text messages, navigate turn-by-turn directions, check the weather, and integrate with third-party services like Uber and Amazon Alexa.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Dragonfly",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-07-05",
+      "description": "Dragonfly was a search engine designed to be compatible with China's state censorship provisions.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Related",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2012-04-20",
+      "description": "Google Related was introduced to be an experimental navigation assistant launched to help people find useful and interesting information while surfing the web.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Fiber TV",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-02-04",
+      "description": "Google Fiber TV was an IPTV service that was bundled with Google Fiber.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Message Center",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-10-01",
+      "description": "Message Center was a web console where Gmail users could view and manage spam email messages.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Play Newsstand",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-05-08",
+      "description": "Google Play Newsstand was a news aggregator and digital newsstand service.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Together",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2016-09-30",
+      "description": "Together was a watch face for Android Wear that let two users link their watches together to share small visual messages.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Punchd",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2013-06-07",
+      "description": "Punchd was a digital loyalty card app and service targeted towards small businesses that originated as a student project at Cal Poly in 2009 and was acquired by Google in 2011.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Androidify",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-02-06",
+      "description": "Androidify allowed users to create a custom Android avatar for themselves and others.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Trusted Contacts",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-12-01",
+      "description": "Trusted Contacts was an app that allowed users to share their location and view the location of specific users.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Gesture Search",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-01-01",
+      "description": "Google Gesture Search allowed users to search contacts, applications, settings, music, and bookmark on their Android device by drawing letters or numbers onto the screen.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Nest Secure",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-10-19",
+      "description": "Nest Secure was a security system with an alarm, keypad, and motion sensor with an embedded microphone.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Expeditions",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-06-30",
+      "description": "Expeditions was a program for providing virtual reality experiences to school classrooms through Google Cardboard viewers, allowing educators to take their students on virtual field trips.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Science Journal",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-12-11",
+      "description": "Science Journal was a mobile app that helped you run science experiments with your smartphone using the device's onboard sensors.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Tour Creator",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-06-30",
+      "description": "Tour Creator allowed users to build immersive, 360\u00b0 guided tours that could be viewed with VR devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Game Builder",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-11-07",
+      "description": "Game Builder was a multiplayer 3D game environment for creating new games without coding experience.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Poly",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-06-30",
+      "description": "Poly was a distribution platform for creators to share 3D objects.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Home Max",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-12-14",
+      "description": "Google Home Max was a large, stereo smart speaker with two tweeters and subwoofers, aux input, and a USB-C input (for wired ethernet) featuring Smart Sound machine learning technology.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Timely",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-05-31",
+      "description": "Timely Alarm Clock was an Android application providing an alarm, stopwatch, and timer functionality with synchronization across devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Loon",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-01-22",
+      "description": "Loon was a service to provide internet access via an array of high-altitude balloons hovering in the Earth's stratosphere",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Swift for TensorFlow",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-02-12",
+      "description": "Swift for TensorFlow (S4TF) was a next-generation platform for machine learning with a focus on differentiable programming.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Bookmarks",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-09-30",
+      "description": "Google Bookmarks was a private web-based bookmarking service not integrated with any other Google services.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Material Gallery",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-12-16",
+      "description": "Material Gallery was a collaboration tool for UI designers, optimized for Google's Material Design, with mobile preview apps and a Sketch plugin.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "G Suite (Legacy Free Edition)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-05-01",
+      "description": "G Suite (Legacy Free Edition) was a free tier offering some of the services included in Google's productivity suite.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Backup and Sync",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-10-01",
+      "description": "Backup and Sync was a desktop software tool for Windows and macOS that allowed users to sync files from Google Drive to their local machine.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Streams",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-12-31",
+      "description": "Streams was a \"clinician support app\" which aimed to improve clinical decision-making and patient safety across hospitals in the United Kingdom.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Originals",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-12-31",
+      "description": "YouTube Originals was a variety of original content including scripted series, educational videos, and music and celebrity programming.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Your News Update",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-11-05",
+      "description": "Your News Update was a service that offered an audio digest of a mix of short news stories chosen at that moment based on a user's interests, location, user history, and preferences, as well as the top news stories out there.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Pinyin IME",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-11-30",
+      "description": "Google Pinyin IME was an input method that allowed users on multiple operating systems to input characters from pinyin, the romanization of Standard Mandarin Chinese.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "VR180 Creator",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-07-31",
+      "description": "VR180 Creator allowed users to edit video taken on 180-degree and 360-degree devices on multiple operating systems.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Sites (Classic)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-11-30",
+      "description": "Google Sites (Classic) allowed users to build and edit websites and wiki portals for private and public use.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Playground AR",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-08-20",
+      "description": "Playground AR (aka AR Stickers) allowed users to place virtual characters and objects in augmented reality via the Camera App on Pixel phones.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Personal Blocklist",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-08-01",
+      "description": "Personal Blocklist was a Chrome Web Extension by Google that allowed users to block certain websites from appearing in Google search results.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "AdSense (mobile app)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2019-12-31",
+      "description": "AdSense (mobile app) allowed users to manage their AdSense accounts in a native app for iOS and Android.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube for PS Vita",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2015-03-20",
+      "description": "YouTube for PlayStation Vita was a native YouTube browsing and viewing application for the PS Vita and PSTV game consoles.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Posts on Google",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-07-31",
+      "description": "Posts on Google allowed notable individuals with knowledge graph panels to author specific content that would appear in Google Search results. ",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "YouTube Community Contributions",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2020-09-28",
+      "description": "YouTube Community Contributions allowed users to contribute translations for video titles or submit descriptions, closed captions or subtitles on YouTube content.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Currents (2019)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-03-31",
+      "description": "Google Currents was a service that provided social media features similar to Google+ for Google Workspace customers.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Assistant Snapshot",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-04-13",
+      "description": "Google Assistant Snapshot was the successor to Google Now that provided predictive cards with information and daily updates in the Google app for Android and iOS.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cloud Prediction API",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2018-04-30",
+      "description": "Google Cloud Prediction API was a PaaS for machine learning (ML) functionality to help developers build ML models to create application features such as recommendation systems, spam detection, and purchase prediction.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Conversational Actions",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-06-13",
+      "description": "Conversational Actions extended the functionality of Google Assistant by allowing 3rd party developers to create custom experiences, or conversations, for users of Google Assistant.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Kormo Jobs",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-06-30",
+      "description": "Kormo Jobs was an app that allowed users in primarily India, Indonesia, and Bangladesh to help them find jobs nearby that match their skills and interests.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Hangouts",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-11-30",
+      "description": "Google Hangouts was a cross-platform instant messaging service.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cloud IoT Core",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-08-16",
+      "description": "Google Cloud IoT Core was a managed service designed to let customers securely connect, manage, and ingest data from globally dispersed devices.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Threadit",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-12-19",
+      "description": "Threadit was a tool for recording and sharing short videos.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Duplex on the Web",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2022-12-01",
+      "description": "Duplex on the Web was a Google Assistant technology that automated tasks on the web on behalf of a user; such as booking movie tickets or making restaurant reservations.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Polymer",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2021-04-20",
+      "description": "Polymer was an open-source JS library for web components",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Build with Chrome",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2017-01-31",
+      "description": "Build with Chrome was a collaboration between Chrome and the LEGO Group that allowed users to build and publish LEGO creations to any digital plot of land in the world through Google Maps.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Street View (standalone app)",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-03-21",
+      "description": "Google Street View app was an Android and iOS app that enabled people to get a 360 degree view of locations around the world.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Optimize",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-09-30",
+      "description": "Google Optimize was a web analytics and testing tool that allowed users to run experiments aimed at increasing visitor conversion rates and overall satisfaction.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Grasshopper",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-06-15",
+      "description": "Grasshopper was a free mobile and web app for aspiring programmers that taught introductory JavaScript and coding fundamentals using fun, bite-sized puzzles.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Pixel Pass",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2023-08-29",
+      "description": "Pixel Pass was a program that allowed users to pay a monthly charge for their Pixel phone and upgrade immediately after two years.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Podcasts",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-04-02",
+      "description": "Google Podcasts was a podcast hosting platform and an Android podcast listening app.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Jamboard",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-09-30",
+      "description": "Jamboard was a digital 4K touchscreen whiteboard device that allowed to collaborate using Google Workspace services.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Jamboard",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-12-31",
+      "description": "Google Jamboard was a web and native whiteboard app that offered a rich collaborative experience.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Google Cache",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-02-01",
+      "description": "Google Cache was a tool to view cached/older versions of a website. It was one of the oldest products.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Keen",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2024-03-24",
+      "description": "Keen was a Pinterest-style platform with ML recommendations.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Tables by A120",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2025-12-16",
+      "description": "Tables was a collaborative database platform and competitor to Airtable, focused on making project tracking more efficient with automation.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Dark Web Reports",
+      "category": "google_killed",
+      "source": "killedbygoogle.com",
+      "killed_date": "2026-01-15",
+      "description": "Dark Web Reports was a dark web scanner that searched for personal info leaks.",
+      "why_failed": "Google acquisition/shutdown",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "tech",
+        "app"
+      ]
+    },
+    {
+      "product_name": "Where can I find the original Tigers milk bar?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 35,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Teddy Graham Soft Bakes",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "They were twinkie-like (but not too sweet) cakes, with vanilla or chocolate filling inside. My mom used to give these to me in high school and I loved them! I wish they\u2019d come back. ",
+      "upvotes": 12,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Triple steak stack from Taco Bell, further more all the good stuff that comes an",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Maybe it was just because I was always super high, but the steak stack was amazing\n\nIt comes and goes I\u2019m sure but damn that shit was fire",
+      "upvotes": 9,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Buffalo chicken tenders are gone from Culver's.",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "My disappointment is immeasurable, and my day is ruined. Those babies were my cheat day food. Just the right amount of spice and very filling. Will be missed.",
+      "upvotes": 9,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Tango Cherry (UK)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Disgraceful.",
+      "upvotes": 8,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Genuinely their best snack",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 7,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Shockers! And also rothbury farm croutons. Can't find that crunch anywhere else ",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Found these at my work a a couple years ago and kept for nostalgia reasons. Sweet tart sours just armt the same man. The ones on the outside were black haha but inside they are still tempting. \ud83d\ude02",
+      "upvotes": 5,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Did Degree discontinue their body soaps?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 7,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Garnier Root Amp replacement needed",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 6,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McPizza",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 5,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone else remember these? I singlehandedly drank all the Rain at my local groc",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 6,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Crush orange poptarts",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "They were anything but popular but they were also a divine experience ",
+      "upvotes": 4,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Comfort Cravers Spidermen, Disney Princess, Toy Story ",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Ahead of my time already \nI'm sure in next up to 10 years these will no longer be made\nThey will be discontinued so grab many as you can and keep the packaging or freeze it lol ! \nPut it in a resin! \n",
+      "upvotes": 5,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This subreddit was made for me",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I have such nostalgia for old discontinued foods, here are the ones I crave all the time that nobody else EVER remembers!!!",
+      "upvotes": 5,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Lance Star Bites - Discontinued or just elusive?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "This was my favorite snack - Lance Star Bites. I haven\u2019t seen them on shelves (at gas stations) in years. They are similar to French Burnt Peanuts, but the coating is more crisp than hard. Are they di",
+      "upvotes": 4,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Orbitz soda was introduced in 1997 by the Clearly Canadian Beverage Company",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 5,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Late 90s or early 2000s GIGANTIC freezies!!??",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I remember when I was a kid and went to the corner store I\u2019d see these huge freezies, like massive ones. they were 4\u201d thick. And a foot long. (Vague memory) but for the life of me I can\u2019t seem to find",
+      "upvotes": 4,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Question",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Were Sunchips Chili Lime flavor discontinued? There are no sources confirming any discontinuation but I cannot find them available in any store. Yes, some stores and all delivery services like doordas",
+      "upvotes": 4,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Heinz Mayonnaise USA - I saw Heinz confirm today on Twitter that they have disco",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 4,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Does anyone know if they still make these?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anybody remember these two discontinued items from McDonald's?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "McDonald's Breaded Pork Sandwich and Morning Mac (2001-2004): Test marketed in Indiana, Kentucky, Minnesota and Wisconsin states, the Breaded Pork Sandwich featured a breaded, fried pork cutlet, toppe",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Buitoni Ravioli four cheese Discontinued",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "So I really loved the refrigerated buitoni ravioli four cheese, the smaller sized ones, and google just said they've been discontinued and I can only find the new ones they have that are the sized of ",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Fiesta Premium Salad (2004-2004)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/qt10ublxhi6f1.jpg?width=194&amp;format=pjpg&amp;auto=webp&amp;s=592966d8656e77e7d0710feffa0037984b2cb819\n\nThe early-mid 2000's was a time when\u00a0McDonald's\u00a0tried to join in on\u00a0th",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Grilled Chicken Flatbread (Mid 2002-2002, Late 2002-Early 2003)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/3nmdrffvfx3f1.jpg?width=298&amp;format=pjpg&amp;auto=webp&amp;s=6c87e07e41a03322a1f9579d7f92bb9e70ce343b\n\nMcDonald's launched the grilled chicken flatbread to it's many restaur",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I found a drink they stopped making years ago!",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DISCONTINUED - Dunkin' Cold Brew Ground Coffee Packs",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "recommendations for a cold brew pitcher pack replacement? The Dunkin brand was the best.",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Avon Anew CLEAN Illuminating Rich Cleansing Foam - Love this stuff, and it wasn'",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone remember Monster Energy Gum?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I'm trying to make sure I'm not crazy. I distinctly remember a chewing gum that was Monster Energy flavor, like the energy drink, from the mid 2000's. I remember it was in a flat black and green packa",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I miss High Noon",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I\u2019m not a gamer, but High Noon was the best game ever released for iPhone. I mean the original one, where the characters were like two dimensional cardboard cutouts, and fell down when shot like the t",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Are we crazy, or was it real?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "My brother and I are 90s kids (94 and 96) and we distinctly remember an applesauce in a gogurt type tube in the early 2000s. We always called it Squeezlesauce, but I'm honestly not sure if that's what",
+      "upvotes": 3,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Pringles Salt &amp; Pepper",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I need these back fr, grieving them ",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Has anyone found a lip balm with a similar scent to NIVEA Pure &amp; Natural Chamomile &amp; Calendula Lip Balm? I used to loveee this scent",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Sign the petition!!!",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "BRING BACK PEPPERMINT SKITTLES",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "marketside/tyson chicken biscuit.",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Anybody remember this? I cant remember how long the tyson one was avaliable, but the marketside had a short run from like late 2019-2020. (God pandemic ruined everything) Why marketside and tyson? Wel",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "My Fav McDonalds Discontinued/Limited Time Items",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I have seen sooo many posts about discontinued McDonalds items and I've never seen anyone mention any of my top 3. Just in case I get hit by a bus or something tomorrow I feel like I need to put this ",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Tic-tac Cinnamon Spice Flavor",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "need I say more?",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's McChicken Premiere/Chicken Premiere (2000-2007) A crispy chicken brea",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/7isjxxitnq3f1.png?width=135&amp;format=png&amp;auto=webp&amp;s=361f7b857f047e41fe7d31ba3825527a869a7996",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Mighty Kids Meal (2000-2016?Whenever they were actually discontinued ",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/w1tavi17jc2f1.png?width=404&amp;format=png&amp;auto=webp&amp;s=17b0ef2052ec9914e6388e89400de2a467bd96ad\n\nhttps://preview.redd.it/xgkknxbcjc2f1.jpg?width=320&amp;format=pjpg&amp",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Hershey raspberry chocolate chips",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "These were so good and worked perfectly with a cake recipe. They also made a mint chip one too. I\u2019ll never forget them. ",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Doritos Quest Mystery Flavor - 2008",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "The mystery flavor was Mountain Dew, I remember loving it",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Steak ums wraps",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I can't find a picture of them anywhere, but they made these steak ums wraps around 20 years ago, I loved getting them as a teen but they discontinued them. I even tried emailing the company years ago",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Does anyone know how much this is worth or where they sold them at its a home au",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Anyone remember this lotion? ",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Used to get so many compliments with this lotion. Now I buy expensive perfumes and it's just not the same.  Any lotions out there with a similar scent? Rosie, almondy, fresh and clean. ",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "RIP",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Couple of childhood staples that randomly popped in my head. Do y\u2019all remember these?",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Peeps Easter Rice treats",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Okay, I feel absolutely crazy. I cannot find ANYTHING online about these. Does anyone remember those AMAZING rice treats Peep made for Easter back in probably 2012???? They made them in blue, yellow, ",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Gone too soon\u2026",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I came to Reddit to find anything about my beloved fragrance\u2026 Victoria Secret Dream Angels Heavenly Enchanted body mist. I have a drop left and I\u2019ve been saving it to prolong owning it as long as I ca",
+      "upvotes": 2,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Hard Metal Mesh Scrubber for Dishes  - where to buy?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Local store still has plenty",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "I WANT MY NESQUIK BACK \ud83e\udee1\ud83c\udf6b",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "My hoard, I may these flavors Rest in peace \ud83d\ude14",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Biscoff Ice Cream Bars, discontinued? Supply chain issue?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The cucumber is Larry from veggie tales and he is a discontinued item was made i",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Discontinued Frozen Burrito?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Sign the Petition",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Please. ",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Trader Joe's Spicy Black Bean Dip",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Hello everyone! I was wondering if anyone happens to have an original jar of Trader Joe's Spicy Black Bean Dip lying around so I may snag a picture of the original ingredient list. It was my absolute ",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Bacon &amp; Sausage Bagel (2001-2001) Anyone recall seeing this one?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/mrp8yqzot26g1.png?width=846&amp;format=png&amp;auto=webp&amp;s=3c468bf61daae268dd1652e278e7762a0bba707b\n\nhttps://preview.redd.it/ik6onk7qt26g1.png?width=2752&amp;format=png&amp",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Angry birds fruit gummies",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Krispy Kreme holed cream filled donut...",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Discontinued... KK has changed this donut from holed cream filled to just cream filled. I need the hole... i need the cream in every bite. ",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Gucci by Gucci (brown bottle)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I crave this perfume, was \u2018my scent\u2019 \u2639\ufe0f",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Wendy's Mozzarella Chicken Supreme (1993-2012)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/9j20lfipgkof1.jpg?width=1000&amp;format=pjpg&amp;auto=webp&amp;s=7e11964db30cccbee9f49be323dc44125bacd077",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Early 2000s breakfast food (discontinued)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Every year around the same time I start to have a faint memory of a breakfast food I had when I was younger, neither of my parents remember what I\u2019m talking about, but it\u2019s a circular toaster pastry w",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "P3 Protien Pack - Beef Jerky",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I swear, there's so little information on these and I've bene dying to know what the hell happened to these and why they were discontinued. I absolutely loved these things and lived off them throughou",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "tear jerkers ice cream",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Im so sad i just got the biggest craving for the tear jerkers bomb pops from when I was a kid. I go searching, fully prepared to pay for a lot, only to find it\u2019s gone :(",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DAE from Canada remember when McDonald's Canada sold a vegan burger that had a p",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/qb6t8l25wh7f1.png?width=400&amp;format=png&amp;auto=webp&amp;s=6cff72556f273a3603ad11fd09fef60a26e8d43b\n\nHi!, I'm from the United States but i can't help it but feel like i'm t",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This is so wrong... / McDonald's Big Grilled Hot Dog and Tin Roof Waffle Cone Su",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/51g6hkvjh45f1.jpg?width=800&amp;format=pjpg&amp;auto=webp&amp;s=53065d7b41f5af7b2b4fb0fff815c3efceecdff7\n\nhttps://preview.redd.it/is1sbgvjh45f1.jpg?width=800&amp;format=pjpg&am",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Steak &amp; Cheese Sandwich (2001-2001), A lunch/dinner counterpart o",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/4a1wqls2f45f1.jpg?width=375&amp;format=pjpg&amp;auto=webp&amp;s=4280a735fd5e28af385fa31d76a5a1696e5a6c1c\n\nhttps://preview.redd.it/3patw5g1g45f1.png?width=484&amp;format=png&amp",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Toasted Deli Sandwiches (2004-2009, Canada only)",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/4yptx2t56s0f1.png?width=307&amp;format=png&amp;auto=webp&amp;s=a86c6bf8c9e21acab0e469070ed56abd2e88f589\n\n",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "McDonald's Southern Style Chicken Sandwich and Southern Style Chicken Biscuit (2",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "https://preview.redd.it/ijxcslm98d0f1.jpg?width=549&amp;format=pjpg&amp;auto=webp&amp;s=19cb1b9060ffb5cd398972e107d385e75a5f35b8\n\nhttps://preview.redd.it/9w491mm98d0f1.jpg?width=597&amp;format=pjpg&am",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Angry Birds Gummies",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "I remember the first 4 I didn't realize there was so many",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "This was the best soda",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "RIP Crystal Light Pure Energy",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Whyyyyy??? \ud83d\ude2d Best energy drink you could get without the aspartame or any of the other chemicals. I would buy it in bulk. This stuff was my \u201ccrack.\u201d",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "\"Show Us Your Caffree Smile\" Discontinued 80's Toothpaste",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Ariston Washer Dryer Combo. Used it once at an Airbnb, have been searching in va",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Bedgear, Night Ice Air-X Pillow??",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Perfume dupe hunt",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "This is a long shot but I have this old primark perfume from 2018 and I wanted to see if anyone recognised it.\n\n I know I can\u2019t repurchase it but if I could find a good dupe I\u2019d be satisfied. Honestly",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "What food discontinued first?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Internet won\u2019t help me",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Lego LLloyd mech",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Looking up when items were discontinued?",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "Is there a way to look up \\*when\\* a discontinued item was discontinued?\n\nI am looking up the current prices of used appliances and electronics to know if the prices are good, but a number of them hav",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "discontinued airheads mystery sauce packet!!",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "This had to have been I wanna say 2005-2010 maybe, i remember getting this at my local Walmart one single time and never seeing it again (we grocery shopped at that Walmart so I know we were there atl",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Looking to replace this broken table lamp that's been discontinued- help! By Sch",
+      "source": "reddit.com/r/discontinued",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 1,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "iPodClassic",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Dead by Daylight",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "A long strange trip...",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Red Dead Redemption",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "What is this animal?",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "FlatheadDating",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Android",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "funny",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "/r/Rowing",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The Walking Dead: No Man's Land",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "androidapps",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "r/DoorDash_Drivers",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The Walking Dead: Road to Survival",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Legacy iOS Jailbreaking (iPhone, iPad, iPod touch, Apple TV)",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "r/TheWalkingDead",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "r/windowsphone",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "For smash tier lists",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "It's still funny, dammit!",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The Instacart Shoppers Subreddit",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DoorDash Community",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Homebrew development for, and hacking of the Nintendo DS",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "Almost a Hero - feedback, news and discussions",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "/r/Technology ",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "DeadAhead",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "the first million words",
+      "source": "reddit.com/r/DeadApps",
+      "category": "discontinued_product",
+      "description": "",
+      "upvotes": 0,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "discontinued"
+      ]
+    },
+    {
+      "product_name": "The Fine Art of Bullshit, Killed by Google",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 283,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Killed by Google",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 119,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Killed by Google",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 105,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Killed by Google",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 102,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Killed by Google",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 59,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Ask HN: What discontinued company/product do you wish was still around?",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 393,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Discontinued Microsoft Products",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 158,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "A list of discontinued Mozilla products and services",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 158,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "Why I turned down $500K and shut down my startup",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 648,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "I turned down $500k, pissed off my investors, and shut down my startup (2016)",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 361,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "A cautionary tale about subscription services and how not to shut down a startup",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 171,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "When to Shut Down a Startup [video]",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 150,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "We shut down our startup",
+      "source": "hackernews",
+      "category": "software",
+      "why_failed": "acquired_killed",
+      "hn_points": 138,
+      "whiteboard_tags": [
+        "product_archaeology",
+        "software",
+        "hn"
+      ]
+    },
+    {
+      "product_name": "I've played and reviewed 1.000+ horror games, here are some gems you might not h",
+      "category": "discontinued_product",
+      "original_problem_solved": "I've been in love with the genre for all my life and could write 30 pages of philosophical analysis on why it's such a beautiful art form, but I'll spare you the details and get to some interesting points:\n\n1: I'll treat you with respect and assume I don't have to mention Silent Hill, SOMA, Amnesia,",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "spiritual successor",
+      "signal_type": "abandonment",
+      "source": "reddit_r_patientgamers",
+      "source_url": "https://reddit.com/r/patientgamers/comments/scmm2n/ive_played_and_reviewed_1000_horror_games_here/",
+      "reddit_score": 3179,
+      "date_found": "2026-03-19T15:13:25.595493",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "patientgamers"
+      ]
+    },
+    {
+      "product_name": "Wing Commander IV Turns 30... And Still Fascinates Me",
+      "category": "discontinued_product",
+      "original_problem_solved": "Times flies. This was the first game that I was truly hyped to play as a kid. A space epic where you play as Mark Hamill (Luke Skywalker)? Sold!\n\nOn returning to it 30 years later, it certainly scratched the nostalgia itch. But more than that, it's an interesting relic in gaming history.\n\nPeak FMV:",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "ahead of its time",
+      "signal_type": "abandonment",
+      "source": "reddit_r_patientgamers",
+      "source_url": "https://reddit.com/r/patientgamers/comments/1rm4knt/wing_commander_iv_turns_30_and_still_fascinates_me/",
+      "reddit_score": 157,
+      "date_found": "2026-03-19T15:13:25.602193",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "reddit",
+        "patientgamers"
+      ]
+    }
+  ],
+  "updated": "2026-03-19T15:13:35.661887"
+}

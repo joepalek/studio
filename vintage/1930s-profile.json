@@ -1,0 +1,133 @@
+{
+  "decade": "1930s",
+  "slang": [
+    "Swell",
+    "Dame",
+    "Giggle water",
+    "Hooch",
+    "All wet",
+    "Baloney",
+    "Bellyacher",
+    "G-man",
+    "On the lam",
+    "Scram"
+  ],
+  "concerns": [
+    "Economic Depression",
+    "Widespread unemployment",
+    "Poverty and scarcity",
+    "The Dust Bowl's impact",
+    "Rising global political instability"
+  ],
+  "aspirations": [
+    "A steady job",
+    "Affordable food and shelter",
+    "Financial stability and security",
+    "Owning a reliable automobile",
+    "A functioning home radio for news and entertainment"
+  ],
+  "fashion": {
+    "men": "Men's fashion maintained a formal look, often featuring wide-shouldered suits, double-breasted jackets, and wide lapels. Fedoras and Panama hats were common accessories, emphasizing a broad, imposing silhouette.",
+    "women": "Women's styles shifted towards longer, leaner silhouettes with softer lines, often utilizing bias-cut fabrics to drape elegantly. Practical daywear included tailored suits and functional dresses, while evening wear showcased understated glamour.",
+    "colors": [
+      "Navy",
+      "Brown",
+      "Muted Pastels"
+    ]
+  },
+  "food": [
+    "Beans and franks",
+    "Macaroni and cheese",
+    "Home-baked bread",
+    "Canned goods",
+    "Coffee"
+  ],
+  "entertainment": {
+    "tv": [
+      "Experimental broadcasts only",
+      "No mainstream programming",
+      "Not widely adopted"
+    ],
+    "music": [
+      "Swing Music",
+      "Big Band Jazz",
+      "Crooners (e.g., Bing Crosby)"
+    ],
+    "movies": [
+      "Gone with the Wind (1939)",
+      "The Wizard of Oz (1939)",
+      "King Kong (1933)"
+    ],
+    "games": [
+      "Monopoly",
+      "Listening to radio dramas"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Radio",
+      "Electric refrigerator",
+      "Electric iron"
+    ],
+    "aspirational": [
+      "An automobile",
+      "Washing machine"
+    ],
+    "work": [
+      "Typewriter",
+      "Adding machine"
+    ]
+  },
+  "defining_products": [
+    "Radio",
+    "Hoover Vacuum Cleaner",
+    "Canned Goods",
+    "Coca-Cola",
+    "Spam"
+  ],
+  "failed_products": [
+    {
+      "name": "Dymaxion Car",
+      "why_failed": "Its radical design, high cost, and association with fatal accidents scared off investors and the public.",
+      "modern_gap": "Yes, there's still a market for highly fuel-efficient, aerodynamic, multi-purpose vehicles, though modern iterations differ greatly."
+    },
+    {
+      "name": "High-end consumer phonographs",
+      "why_failed": "Expensive luxury items were largely inaccessible to the general public struggling with widespread poverty during the Depression.",
+      "modern_gap": "No, modern digital music players and streaming services have filled this gap more effectively and affordably for mass consumption."
+    },
+    {
+      "name": "Automatic dishwashers (early models)",
+      "why_failed": "They were very expensive, unreliable, and often required specialized plumbing, making them impractical for most households.",
+      "modern_gap": "No, modern dishwashers are efficient, affordable, and a common household appliance, completely filling the original need."
+    }
+  ],
+  "ebay_hot_now": [
+    "Art Deco furniture and decor",
+    "Vintage 1930s radios",
+    "Depression-era glass"
+  ],
+  "ebay_sleepers": [
+    "Original 1930s magazines and newspapers",
+    "Vintage advertising ephemera (posters, tins)",
+    "Everyday household items (e.g., bakelite kitchenware, simple toys)"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Don't take any wooden nickels!",
+      "Everything's Jake.",
+      "Put a sock in it!"
+    ],
+    "worldview": "Having lived through the Depression, there's a deep-seated distrust of 'big' institutions and a profound appreciation for hard work and community support. Life is often seen as a struggle, but hope persists through resilience and simple pleasures.",
+    "speech_patterns": "Speech is generally more formal than modern language, but often laced with regionalisms and colorful idioms, delivered with a direct, sometimes stoic, tone.",
+    "taboo_topics": [
+      "Personal financial hardship (often a source of shame)",
+      "Mental illness"
+    ]
+  },
+  "story_accuracy": [
+    "Depicting widespread ownership of modern conveniences like televisions or abundant luxury goods.",
+    "Characters using anachronistic slang or overly casual modern speech patterns.",
+    "Underestimating the omnipresent impact of the Great Depression on daily life and social structures."
+  ]
+}
