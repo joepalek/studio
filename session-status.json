@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19T17:13:18",
+  "last_updated": "2026-03-19T17:14:39",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -15,15 +15,15 @@
     "sysguard project initialized (CONTEXT.md, state.json)",
     "watchdog project initialized (CONTEXT.md, state.json)",
     "ghost-book git repo initialized (8edacdd)",
-    "whiteboard scoring pass confirmed complete -- all 30 items scored"
+    "whiteboard scoring pass confirmed complete -- all 30 items scored",
+    "ghost-book pass2 complete: 161 viable (105 PD), 132 AI author candidates"
   ],
   "pending": [
     "run scheduler register_tasks.py as admin",
     "company registry pass1 overnight run"
   ],
   "blockers": [
-    "scheduler registration needs admin terminal",
-    "ghost-book pass2 unicode fix running"
+    "scheduler registration needs admin terminal"
   ],
-  "next_recommended": "Run company-registry pass1 overnight. Build sysguard pass1_snapshot.py and watchdog pass1_scan_outputs.py next session."
+  "next_recommended": "Run ghost-book pass3 (concatenation opportunities) and pass4 (AI author specs). Run company-registry pass1 overnight."
 }
