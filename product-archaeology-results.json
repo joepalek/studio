@@ -1,5 +1,5 @@
 {
-  "count": 419,
+  "count": 432,
   "results": [
     {
       "product_name": "Chromecast",
@@ -5236,7 +5236,254 @@
         "reddit",
         "patientgamers"
       ]
+    },
+    {
+      "product_name": "Remember when Pizza Hut had a buffet. Good times.",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "remember when",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1lgjctm/remember_when_pizza_hut_had_a_buffet_good_times/",
+      "reddit_score": 54104,
+      "date_found": "2026-03-19T15:19:38.972171",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "90s Green Day was pure chaos and I miss it.",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "i miss",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1qx7agz/90s_green_day_was_pure_chaos_and_i_miss_it/",
+      "reddit_score": 52108,
+      "date_found": "2026-03-19T15:19:38.972216",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Remember when you didn\u2019t have to enter your personal info online to win a soda?",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "remember when",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/d3zgv1/remember_when_you_didnt_have_to_enter_your/",
+      "reddit_score": 45914,
+      "date_found": "2026-03-19T15:19:38.972231",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "I miss when actors looked like everyday people",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "i miss",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1qthpux/i_miss_when_actors_looked_like_everyday_people/",
+      "reddit_score": 45654,
+      "date_found": "2026-03-19T15:19:38.972234",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Remember when yellow milk jugs were used to protect the milk from light?",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "remember when",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1ry5aqw/remember_when_yellow_milk_jugs_were_used_to/",
+      "reddit_score": 644,
+      "date_found": "2026-03-19T15:19:42.411486",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Bring back the original SoBe Elixir drink line nationwide",
+      "category": "nostalgia_product",
+      "original_problem_solved": "Remember SoBe Elixirs? That tangy, refreshing drink that just hit different? Thousands of people online are united in wanting it back, and I started a petition asking PepsiCo to bring back the original line nationwide.\n\nThe current SoBe Water just doesn't compare. The original Elixirs were unique\u2014th",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "bring back",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rxrcq0/bring_back_the_original_sobe_elixir_drink_line/",
+      "reddit_score": 213,
+      "date_found": "2026-03-19T15:19:42.411541",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Omg I loved these growing up! Zip it monster cases!!",
+      "category": "nostalgia_product",
+      "original_problem_solved": "Does anyone remember these bad boys?? I used to have like 5 and have a fav one that looked like the green one, it was my fav for years, so many memories! Anyone else loved these as a kid? Hell even as a teen?",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "used to have",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rxx3t3/omg_i_loved_these_growing_up_zip_it_monster_cases/",
+      "reddit_score": 19,
+      "date_found": "2026-03-19T15:19:42.411573",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "I miss you, BlackBerry \u2014 from Curve to KeyOne",
+      "category": "nostalgia_product",
+      "original_problem_solved": "The lineup:\n\n\t\u2022\tBlackBerry 7290 (2004)\n\n\t\u2022\tBlackBerry Curve 8300 (2007)\n\n\t\u2022\tBlackBerry Pearl 8100 (2006)\n\n\t\u2022\tBlackBerry Torch 9800 (2010)\n\n\t\u2022\tBlackBerry PlayBook (2011)\n\n\t\u2022\tBlackBerry Z30 (2013)\n\n\t\u2022\tBlackBerry Passport (2014)\n\n\t\u2022\tBlackBerry Classic (2014)\n\n\t\u2022\tBlackBerry Priv (2015)\n\n\t\u2022\tBlackBerry KE",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "i miss",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1ryawp6/i_miss_you_blackberry_from_curve_to_keyone/",
+      "reddit_score": 2,
+      "date_found": "2026-03-19T15:19:42.411596",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Yellow Clasp Envelopes we used to have all the time at school",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "used to have",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rxflor/yellow_clasp_envelopes_we_used_to_have_all_the/",
+      "reddit_score": 26,
+      "date_found": "2026-03-19T15:19:42.411643",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "I miss having that previous channel button on remotes",
+      "category": "nostalgia_product",
+      "original_problem_solved": "Bonus points for being able to successfully bounce between 3 shows while making sure your 2 favorite shows stayed on that button.",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "i miss",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rwvjis/i_miss_having_that_previous_channel_button_on/",
+      "reddit_score": 328,
+      "date_found": "2026-03-19T15:19:42.411650",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Pick three. Bring back your childhood",
+      "category": "nostalgia_product",
+      "original_problem_solved": "",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "bring back",
+      "signal_type": "nostalgia",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rxlr7i/pick_three_bring_back_your_childhood/",
+      "reddit_score": 0,
+      "date_found": "2026-03-19T15:19:46.915977",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ]
+    },
+    {
+      "product_name": "Summer Sleepovers at the friends house who had a trampoline",
+      "category": "nostalgia_comment",
+      "original_problem_solved": "In the early 80s, 82-84, i was ages 5-7, i used to sleep outside on a lounge/lawn chair, alone. I woke up one morning with a stray cat snuggled up with me. I wasnt allowed to keep it, and that made me sad. So i spent the entire summer outside so the cat could sleep with me. I miss those days",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "i miss",
+      "signal_type": "nostalgia_comment",
+      "source": "reddit_r_nostalgia_comments",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rgz8d7/summer_sleepovers_at_the_friends_house_who_had_a/",
+      "reddit_score": 607,
+      "date_found": "2026-03-19T15:20:08.651008",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "comment_signal"
+      ]
+    },
+    {
+      "product_name": "2003 Walmart holiday gift guide",
+      "category": "nostalgia_comment",
+      "original_problem_solved": "I miss magazines. Having it physically in your hand was different than a screen. \n\nAlso, Eastbay was the shit",
+      "why_it_failed": "discontinued",
+      "is_problem_still_unsolved": true,
+      "2026_viability": "MEDIUM",
+      "review_signal": "i miss",
+      "signal_type": "nostalgia_comment",
+      "source": "reddit_r_nostalgia_comments",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rp8tgf/2003_walmart_holiday_gift_guide/",
+      "reddit_score": 94,
+      "date_found": "2026-03-19T15:20:20.683721",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "nostalgia",
+        "comment_signal"
+      ]
     }
   ],
-  "updated": "2026-03-19T15:13:35.661887"
+  "updated": "2026-03-19T15:20:25.752014"
 }

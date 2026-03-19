@@ -1,0 +1,477 @@
+{
+  "updated": "2026-03-19T15:13:35.683593",
+  "items": [
+    {
+      "id": "arch-reddit-0001",
+      "type": "product_archaeology",
+      "title": "I've played and reviewed 1.000+ horror games, here are some gems you might not h",
+      "description": "I've been in love with the genre for all my life and could write 30 pages of philosophical analysis on why it's such a beautiful art form, but I'll spare you the details and get to some interesting po",
+      "viability": "2026_viability",
+      "signal": "spiritual successor",
+      "source": "reddit_r_patientgamers",
+      "source_url": "https://reddit.com/r/patientgamers/comments/scmm2n/ive_played_and_reviewed_1000_horror_games_here/",
+      "reddit_score": 3179,
+      "tags": [
+        "product_archaeology",
+        "reddit",
+        "patientgamers"
+      ],
+      "added": "2026-03-19T15:13:35.684353",
+      "status": "new"
+    },
+    {
+      "id": "arch-reddit-0002",
+      "type": "product_archaeology",
+      "title": "Wing Commander IV Turns 30... And Still Fascinates Me",
+      "description": "Times flies. This was the first game that I was truly hyped to play as a kid. A space epic where you play as Mark Hamill (Luke Skywalker)? Sold!\n\nOn returning to it 30 years later, it certainly scratc",
+      "viability": "2026_viability",
+      "signal": "ahead of its time",
+      "source": "reddit_r_patientgamers",
+      "source_url": "https://reddit.com/r/patientgamers/comments/1rm4knt/wing_commander_iv_turns_30_and_still_fascinates_me/",
+      "reddit_score": 157,
+      "tags": [
+        "product_archaeology",
+        "reddit",
+        "patientgamers"
+      ],
+      "added": "2026-03-19T15:13:35.684362",
+      "status": "new"
+    },
+    {
+      "id": "vint-0003",
+      "type": "product_gap",
+      "title": "The 'Autodynophone'",
+      "description": "No, modern digital music players have made such complex, single-purpose devices obsolete.",
+      "decade_origin": "1920s",
+      "why_failed": "An overly complex and expensive early record player that couldn't compete with simpler, more affordable phonographs for the mass market.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1920s"
+      ],
+      "added": "2026-03-19T15:16:03.025747",
+      "status": "new"
+    },
+    {
+      "id": "vint-0004",
+      "type": "product_gap",
+      "title": "Early Automatic Dishwashers (e.g., 'Sanitor' brand)",
+      "description": "No, automatic dishwashers are now highly effective, affordable, and common household appliances.",
+      "decade_origin": "1920s",
+      "why_failed": "While invented, early models were often unreliable, inefficient, very expensive, and required significant manual effort, making them unappealing to most households.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1920s"
+      ],
+      "added": "2026-03-19T15:16:03.025756",
+      "status": "new"
+    },
+    {
+      "id": "vint-0005",
+      "type": "product_gap",
+      "title": "Dymaxion Car",
+      "description": "Yes, there's still a market for highly fuel-efficient, aerodynamic, multi-purpose vehicles, though modern iterations differ greatly.",
+      "decade_origin": "1930s",
+      "why_failed": "Its radical design, high cost, and association with fatal accidents scared off investors and the public.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1930s"
+      ],
+      "added": "2026-03-19T15:16:03.025760",
+      "status": "new"
+    },
+    {
+      "id": "vint-0006",
+      "type": "product_gap",
+      "title": "High-end consumer phonographs",
+      "description": "No, modern digital music players and streaming services have filled this gap more effectively and affordably for mass consumption.",
+      "decade_origin": "1930s",
+      "why_failed": "Expensive luxury items were largely inaccessible to the general public struggling with widespread poverty during the Depression.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1930s"
+      ],
+      "added": "2026-03-19T15:16:03.025762",
+      "status": "new"
+    },
+    {
+      "id": "vint-0007",
+      "type": "product_gap",
+      "title": "Automatic dishwashers (early models)",
+      "description": "No, modern dishwashers are efficient, affordable, and a common household appliance, completely filling the original need.",
+      "decade_origin": "1930s",
+      "why_failed": "They were very expensive, unreliable, and often required specialized plumbing, making them impractical for most households.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1930s"
+      ],
+      "added": "2026-03-19T15:16:03.025765",
+      "status": "new"
+    },
+    {
+      "id": "vint-0008",
+      "type": "product_gap",
+      "title": "Tucker Torpedo",
+      "description": "No, the automotive industry continues to innovate on safety and design, but the Tucker's forward-thinking approach was ahead of its time.",
+      "decade_origin": "1940s",
+      "why_failed": "Despite innovative safety features and design, the company faced legal troubles, accusations of fraud, and production challenges, leading to its collapse after only 51 cars were built.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1940s"
+      ],
+      "added": "2026-03-19T15:16:03.025767",
+      "status": "new"
+    },
+    {
+      "id": "vint-0009",
+      "type": "product_gap",
+      "title": "Ford Edsel",
+      "description": "No, the market for distinct mid-range family cars is well-served by numerous brands today, and consumer preferences have shifted significantly from the Edsel's concept.",
+      "decade_origin": "1950s",
+      "why_failed": "Its design was polarizing (especially the 'horse-collar' grille), it was overpriced, launched during an economic recession, and suffered from quality control issues and poor marketing.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1950s"
+      ],
+      "added": "2026-03-19T15:16:03.025769",
+      "status": "new"
+    },
+    {
+      "id": "vint-0010",
+      "type": "product_gap",
+      "title": "Nuclear-Powered Cars (concept)",
+      "description": "No, while electric and alternative fuel vehicles are prevalent, the fundamental safety and logistical issues of personal nuclear propulsion remain too great to ever fill this conceptual gap.",
+      "decade_origin": "1950s",
+      "why_failed": "While research and prototypes existed, they failed due to immense safety concerns regarding radiation shielding, the prohibitive cost of development and fuel, and overall impracticality for consumer use.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1950s"
+      ],
+      "added": "2026-03-19T15:16:03.025771",
+      "status": "new"
+    },
+    {
+      "id": "vint-0011",
+      "type": "product_gap",
+      "title": "DuPont Corfam",
+      "description": "Yes, the search for a perfect synthetic leather that perfectly mimics natural properties and sustainability is still ongoing, though modern vegan leathers are significantly better.",
+      "decade_origin": "1960s",
+      "why_failed": "Marketed as a superior synthetic leather, it failed to gain widespread acceptance in footwear due to its poor breathability and comfort compared to natural leather.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1960s"
+      ],
+      "added": "2026-03-19T15:16:03.025773",
+      "status": "new"
+    },
+    {
+      "id": "vint-0012",
+      "type": "product_gap",
+      "title": "Quadraphonic Sound",
+      "description": "No, the desire for immersive audio is now filled by surround sound and object-based audio technologies like Dolby Atmos.",
+      "decade_origin": "1970s",
+      "why_failed": "Expensive, complex setup, lack of standardized formats, and limited content hindered widespread adoption by consumers.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1970s"
+      ],
+      "added": "2026-03-19T15:16:03.025775",
+      "status": "new"
+    },
+    {
+      "id": "vint-0013",
+      "type": "product_gap",
+      "title": "8-Track Tapes",
+      "description": "No, convenient and portable music consumption is now filled by digital streaming services and improved physical formats.",
+      "decade_origin": "1970s",
+      "why_failed": "Prone to jamming, inferior sound quality compared to cassettes and vinyl, and the inability to easily skip tracks led to their decline.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1970s"
+      ],
+      "added": "2026-03-19T15:16:03.025777",
+      "status": "new"
+    },
+    {
+      "id": "vint-0014",
+      "type": "product_gap",
+      "title": "New Coke",
+      "description": "No, the market for various cola formulations and brands is well-covered.",
+      "decade_origin": "1980s",
+      "why_failed": "Public backlash and strong preference for the original formula led to its quick withdrawal shortly after launch.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1980s"
+      ],
+      "added": "2026-03-19T15:16:03.025779",
+      "status": "new"
+    },
+    {
+      "id": "vint-0015",
+      "type": "product_gap",
+      "title": "DeLorean DMC-12",
+      "description": "No, niche luxury and unique car markets continue to thrive with various high-performance and design-focused vehicles.",
+      "decade_origin": "1980s",
+      "why_failed": "Plagued by financial difficulties, quality control issues, and limited market appeal beyond its futuristic design and 'Back to the Future' fame.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1980s"
+      ],
+      "added": "2026-03-19T15:16:03.025780",
+      "status": "new"
+    },
+    {
+      "id": "vint-0016",
+      "type": "product_gap",
+      "title": "Betamax VCR",
+      "description": "No, physical media formats have largely been superseded by digital streaming and downloads.",
+      "decade_origin": "1980s",
+      "why_failed": "Lost the video format war to VHS due to restrictive licensing, shorter recording times, and higher cost, despite arguably superior technical quality.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1980s"
+      ],
+      "added": "2026-03-19T15:16:03.025782",
+      "status": "new"
+    },
+    {
+      "id": "vint-0017",
+      "type": "product_gap",
+      "title": "Apple Newton",
+      "description": "No, the concept of a personal digital assistant was vastly improved and superseded by smartphones.",
+      "decade_origin": "1990s",
+      "why_failed": "It was ahead of its time, expensive, and suffered from clunky handwriting recognition and limited battery life.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1990s"
+      ],
+      "added": "2026-03-19T15:16:03.025784",
+      "status": "new"
+    },
+    {
+      "id": "vint-0018",
+      "type": "product_gap",
+      "title": "Virtual Boy",
+      "description": "No, modern VR headsets offer full color and far superior immersion, rendering the Virtual Boy's niche obsolete.",
+      "decade_origin": "1990s",
+      "why_failed": "Suffered from monochromatic red display, caused eye strain, lacked immersive games, and was marketed poorly.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1990s"
+      ],
+      "added": "2026-03-19T15:16:03.025786",
+      "status": "new"
+    },
+    {
+      "id": "vint-0019",
+      "type": "product_gap",
+      "title": "Microsoft Zune",
+      "description": "No, the market for dedicated portable music players has largely been superseded by smartphones and streaming services.",
+      "decade_origin": "2000s",
+      "why_failed": "Attempted to compete with the dominant iPod but lacked a compelling ecosystem and late market entry, failing to capture significant market share.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2000s"
+      ],
+      "added": "2026-03-19T15:16:03.025787",
+      "status": "new"
+    },
+    {
+      "id": "vint-0020",
+      "type": "product_gap",
+      "title": "Google Glass",
+      "description": "No, while AR glasses are still being developed, mainstream adoption for general consumers remains elusive without solving the core issues.",
+      "decade_origin": "2010s",
+      "why_failed": "High price, privacy concerns, and limited practical use case for the average consumer made them socially awkward and commercially unviable.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2010s"
+      ],
+      "added": "2026-03-19T15:16:03.025790",
+      "status": "new"
+    },
+    {
+      "id": "vint-0021",
+      "type": "product_gap",
+      "title": "HTC First (Facebook Phone)",
+      "description": "No, integrated social media operating systems or dedicated social phones did not become a trend and are not a modern gap.",
+      "decade_origin": "2010s",
+      "why_failed": "Over-reliance on Facebook integration, mediocre hardware, and users preferring the Facebook app on their existing devices led to poor sales.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2010s"
+      ],
+      "added": "2026-03-19T15:16:03.025792",
+      "status": "new"
+    },
+    {
+      "id": "vint-0022",
+      "type": "product_gap",
+      "title": "Juicero",
+      "description": "No, while convenience in health food is desired, this specific, overpriced, non-functional solution is not a modern gap.",
+      "decade_origin": "2010s",
+      "why_failed": "Extremely high price point for a device that simply squeezed pre-packaged juice bags that could be hand-squeezed, exposing its lack of innovation and value.",
+      "tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2010s"
+      ],
+      "added": "2026-03-19T15:16:03.025794",
+      "status": "new"
+    },
+    {
+      "id": "nost-0023",
+      "type": "product_archaeology",
+      "title": "Remember when Pizza Hut had a buffet. Good times.",
+      "description": "",
+      "signal": "remember when",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1lgjctm/remember_when_pizza_hut_had_a_buffet_good_times/",
+      "reddit_score": 54104,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783546",
+      "status": "new"
+    },
+    {
+      "id": "nost-0024",
+      "type": "product_archaeology",
+      "title": "90s Green Day was pure chaos and I miss it.",
+      "description": "",
+      "signal": "i miss",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1qx7agz/90s_green_day_was_pure_chaos_and_i_miss_it/",
+      "reddit_score": 52108,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783558",
+      "status": "new"
+    },
+    {
+      "id": "nost-0025",
+      "type": "product_archaeology",
+      "title": "Remember when you didn\u2019t have to enter your personal info online to win a soda?",
+      "description": "",
+      "signal": "remember when",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/d3zgv1/remember_when_you_didnt_have_to_enter_your/",
+      "reddit_score": 45914,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783563",
+      "status": "new"
+    },
+    {
+      "id": "nost-0026",
+      "type": "product_archaeology",
+      "title": "I miss when actors looked like everyday people",
+      "description": "",
+      "signal": "i miss",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1qthpux/i_miss_when_actors_looked_like_everyday_people/",
+      "reddit_score": 45654,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783566",
+      "status": "new"
+    },
+    {
+      "id": "nost-0027",
+      "type": "product_archaeology",
+      "title": "Remember when yellow milk jugs were used to protect the milk from light?",
+      "description": "",
+      "signal": "remember when",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1ry5aqw/remember_when_yellow_milk_jugs_were_used_to/",
+      "reddit_score": 644,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783569",
+      "status": "new"
+    },
+    {
+      "id": "nost-0028",
+      "type": "product_archaeology",
+      "title": "Bring back the original SoBe Elixir drink line nationwide",
+      "description": "Remember SoBe Elixirs? That tangy, refreshing drink that just hit different? Thousands of people online are united in wanting it back, and I started a petition asking PepsiCo to bring back the origina",
+      "signal": "bring back",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rxrcq0/bring_back_the_original_sobe_elixir_drink_line/",
+      "reddit_score": 213,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783572",
+      "status": "new"
+    },
+    {
+      "id": "nost-0029",
+      "type": "product_archaeology",
+      "title": "I miss having that previous channel button on remotes",
+      "description": "Bonus points for being able to successfully bounce between 3 shows while making sure your 2 favorite shows stayed on that button.",
+      "signal": "i miss",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rwvjis/i_miss_having_that_previous_channel_button_on/",
+      "reddit_score": 328,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "reddit"
+      ],
+      "added": "2026-03-19T15:20:25.783575",
+      "status": "new"
+    },
+    {
+      "id": "nost-0030",
+      "type": "product_archaeology",
+      "title": "Summer Sleepovers at the friends house who had a trampoline",
+      "description": "In the early 80s, 82-84, i was ages 5-7, i used to sleep outside on a lounge/lawn chair, alone. I woke up one morning with a stray cat snuggled up with me. I wasnt allowed to keep it, and that made me",
+      "signal": "i miss",
+      "source": "reddit_r_nostalgia",
+      "source_url": "https://reddit.com/r/nostalgia/comments/1rgz8d7/summer_sleepovers_at_the_friends_house_who_had_a/",
+      "reddit_score": 607,
+      "tags": [
+        "product_archaeology",
+        "nostalgia",
+        "comment_signal"
+      ],
+      "added": "2026-03-19T15:20:25.783578",
+      "status": "new"
+    }
+  ]
+}
