@@ -1,0 +1,28 @@
+{
+  "created": "2026-03-19T15:26:17.685879",
+  "tasks": [
+    {
+      "task": "Studio\\DailyBriefing",
+      "status": "FAIL",
+      "schedule": "Daily 08:00"
+    },
+    {
+      "task": "Studio\\SupervisorCheck",
+      "status": "FAIL",
+      "schedule": "Every 30min"
+    },
+    {
+      "task": "Studio\\NightlyCommit",
+      "status": "FAIL",
+      "schedule": "Daily 23:00"
+    },
+    {
+      "task": "Studio\\GhostBookRescan",
+      "status": "FAIL",
+      "schedule": "Weekly SUN 02:00"
+    }
+  ],
+  "scheduler_folder": "Studio\\",
+  "launcher_dir": "G:\\My Drive\\Projects\\_studio\\scheduler",
+  "log_dir": "G:\\My Drive\\Projects\\_studio\\scheduler\\logs"
+}
