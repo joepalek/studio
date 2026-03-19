@@ -1,29 +1,28 @@
 {
-  "last_updated": "2026-03-19T17:24:00",
-  "current_task": "Ghost Book Pass 2 running (task bbkbkk5b3) — validating 200 candidates via Gemini",
+  "last_updated": "2026-03-19T17:45:00",
+  "current_task": "idle",
   "completed_today": [
-    "SRE health check — DEGRADED resolved (tasks relaunched)",
-    "Whiteboard scoring complete — 30/30 items scored, top 10 pushed to mobile-inbox",
-    "CDX job discovery — 161 URLs found (cc-discovered-raw.json)",
-    "Company registry crawler built — 4 scripts + tiered configs (703 Tier 1 targets)",
-    "Utilities layer built — scraper_utils.py + unicode_safe.py + README in _studio/utilities/",
-    "supervisor.md — utilities registry check + failure triage protocol added",
-    "whiteboard-agent.md — utility candidate detection pass added",
-    "Committed: _studio e0e2456, job-match 7cec89a"
+    "workflow-intelligence.md built",
+    "standing-rules.json created with 10 rules",
+    "utilities/workflow_hook.py created",
+    "utilities/session_logger.py needed",
+    "sysguard + watchdog projects pending",
+    "ghost-book pass2 still running"
   ],
   "pending": [
-    "Ghost Book Pass 2 — validate 200 candidates (running: bbkbkk5b3, ~13 min runtime)",
-    "Ghost Book Pass 3 — find concatenation opportunities",
-    "Ghost Book Pass 4 — AI Author specs for top candidates",
-    "Company registry Pass 1 — EDGAR + OpenCorporates + IRS + SBIR (run overnight)",
-    "Company registry Pass 2 — validate career pages (run after Pass 1)",
-    "scheduler register_tasks.py — needs /rl HIGHEST removed OR run as admin",
-    "Commit ghost-book validated.json when Pass 2 completes"
+    "create utilities/session_logger.py",
+    "create utilities/ollama_utils.py",
+    "create utilities/gemini_utils.py",
+    "sysguard project init",
+    "watchdog project init",
+    "ghost-book git init",
+    "run scheduler register_tasks.py as admin",
+    "company registry pass1 overnight run",
+    "whiteboard scoring pass on 30+ items"
   ],
   "blockers": [
-    "Ghost Book Pass 2 unicode fix applied (3rd attempt) — monitoring",
-    "ghost-book/ has no git repo — validated.json can only be committed from _studio parent or needs repo init",
-    "scheduler register_tasks.py requires admin for /rl HIGHEST — patch pending user approval"
+    "scheduler registration needs admin terminal",
+    "ghost-book pass2 unicode fix running"
   ],
-  "next_recommended": "When Pass 2 completes: review validated.json top picks, run Pass 3 (concatenation), then kick off company-registry Pass 1 as overnight batch"
+  "next_recommended": "Build session_logger.py utility then create sysguard and watchdog projects"
 }
