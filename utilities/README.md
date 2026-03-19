@@ -85,6 +85,62 @@ complete_task(
 
 ---
 
+### `workflow_hook.py`
+Post-task efficiency checker. Call at the end of any agent script to auto-detect
+friction and push findings to `whiteboard.json` with `type: workflow`.
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `check_efficiency(agent_name, steps_taken, manual_interventions, time_seconds, errors_hit)` | Detect friction, cross-check standing rules, push workflow proposals to whiteboard |
+
+**Checks performed:**
+- Manual interventions ≥ 2 → standing rule candidate
+- Known error patterns (UnicodeError, 403, 429) without existing utility → build utility proposal
+- Runtime > 10 min with 3+ sequential fetch steps → parallelization proposal
+- Errors matching a standing rule → verify rule is being applied
+
+**Used by:** All agent scripts — add to footer of every major script.
+
+---
+
+### `session_logger.py`
+Append to `session-log.md` and update `session-status.json` after every major action.
+Handles log rotation at 50kb (renames to `session-log-archive-[date].md`).
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `log_action(action, result, next_step)` | Append one timestamped entry to session-log.md |
+| `update_status(current_task, add_completed, add_pending, ...)` | Update any fields in session-status.json |
+| `complete_task(task_name, result_summary, add_pending, ...)` | Combined: log + mark complete + update pending in one call |
+
+**Used by:** All agents — call `complete_task()` at end of every major script.
+
+**Example:**
+```python
+import sys
+sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from session_logger import complete_task
+from workflow_hook import check_efficiency
+
+complete_task(
+    task_name='Ghost Book Pass 2',
+    result_summary='142 viable candidates, 89 public domain -> validated.json',
+    add_pending=['Ghost Book Pass 3 — concatenation opportunities'],
+    next_recommended='Review top picks, run Pass 3',
+)
+check_efficiency(
+    agent_name='ghost-book-pass2',
+    steps_taken=['load candidates', 'gemini validate 200', 'save validated.json'],
+    manual_interventions=3,  # unicode fix + 2 relaunches
+    time_seconds=840,
+    errors_hit=['UnicodeEncodeError', 'AttributeError list has no attribute'],
+)
+```
+
+---
+
 ## Adding a New Utility
 
 1. Create `utilities/your_utility.py` with a module docstring explaining the problem it solves

@@ -19,6 +19,8 @@ Every idea gets evaluated, tagged, scored, and stored.
 - Manual entries (Joe's ideas from chat sessions)
 - News scrapers (trend signals)
 - Social scrapers (Reddit, HN, Twitter wants)
+- **Workflow Intelligence** (friction points, automation opportunities, routing inefficiencies)
+- **workflow_hook.py** (auto-pushed after every agent task completion)
 
 ## Idea Schema
 
@@ -50,6 +52,7 @@ Every idea gets evaluated, tagged, scored, and stored.
 ```
 
 ## Idea Types (filterable)
+- `workflow` — process improvement, automation opportunity, routing fix
 - `agent` — improve an existing agent
 - `product` — new product to build
 - `data` — new data to gather

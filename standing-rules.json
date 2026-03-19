@@ -1,0 +1,103 @@
+{
+  "rules": [
+    {
+      "id": "rule-001",
+      "trigger": "scraper returns 403 three consecutive times on same URL",
+      "action": "mark source as Tier 3, add to supervisor-inbox.json for fix, skip and continue",
+      "applies_to": ["all scraper agents", "company-registry-crawler", "job-source-discovery"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-002",
+      "trigger": "scraper returns 429 (rate limit)",
+      "action": "exponential backoff: wait 10s, 20s, 40s then mark Tier 3 if still failing",
+      "applies_to": ["all scraper agents"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-003",
+      "trigger": "scoring task under 500 tokens",
+      "action": "always route to Gemini Flash (Tier 0), never use Claude quota",
+      "applies_to": ["whiteboard-agent", "ghost-book-validator", "product-archaeology"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-004",
+      "trigger": "session ends (user types /exit or says done for today)",
+      "action": "commit all dirty projects, update changelogs, update session-status.json",
+      "applies_to": ["claude-code-session"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-005",
+      "trigger": "same error pattern appears in 2+ agent scripts",
+      "action": "build shared utility in _studio/utilities/, update README, migrate all affected scripts",
+      "applies_to": ["all agents"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 1,
+      "last_applied": "2026-03-19",
+      "example": "UnicodeEncodeError on Windows cp1252 -> unicode_safe.py"
+    },
+    {
+      "id": "rule-006",
+      "trigger": "overnight batch task",
+      "action": "always route to Ollama exclusively, never Gemini or Claude during overnight runs",
+      "applies_to": ["all batch agents", "ghost-book", "product-archaeology"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-007",
+      "trigger": "career page returns JS-rendered shell (body < 2000 chars or react-root detected)",
+      "action": "classify as Tier 2 (Playwright), add to scraper-config-tier2.json, do not mark as failed",
+      "applies_to": ["company-registry-crawler"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-008",
+      "trigger": "CDX query returns 0 results for ATS domain (lever, greenhouse, ashby)",
+      "action": "skip CDX for that domain, rely on direct HTTP scrape in daily-scraper-config.json instead",
+      "applies_to": ["job-source-discovery", "update_scraper_config"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 1,
+      "last_applied": "2026-03-19",
+      "example": "Lever/Greenhouse are JS-rendered, rarely appear in CDX indexes"
+    },
+    {
+      "id": "rule-009",
+      "trigger": "mobile inbox has more than 10 pending items",
+      "action": "auto-expire items pending >7 days by setting status to expired, notify once in session-log",
+      "applies_to": ["supervisor", "workflow-intelligence"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 0
+    },
+    {
+      "id": "rule-010",
+      "trigger": "agent script prints user-sourced text (titles, names, web content)",
+      "action": "always wrap in safe_str() from utilities/unicode_safe.py before printing",
+      "applies_to": ["all agents"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 1,
+      "last_applied": "2026-03-19",
+      "example": "Ghost Book Pass 2 crashed 3x on Unicode book titles before utility was built"
+    }
+  ],
+  "last_updated": "2026-03-19",
+  "total_rules": 10,
+  "schema_version": "1.0"
+}
