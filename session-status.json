@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19T17:45:00",
+  "last_updated": "2026-03-19T17:12:28",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -7,22 +7,23 @@
     "utilities/workflow_hook.py created",
     "utilities/session_logger.py needed",
     "sysguard + watchdog projects pending",
-    "ghost-book pass2 still running"
+    "ghost-book pass2 still running",
+    "utilities/ollama_utils.py created",
+    "utilities/gemini_utils.py created",
+    "utilities/ollama_utils.py created (batch, JSON, Gemini fallback)",
+    "utilities/gemini_utils.py created (batch, JSON, rate-limit safe)",
+    "sysguard project initialized (CONTEXT.md, state.json)",
+    "watchdog project initialized (CONTEXT.md, state.json)",
+    "ghost-book git repo initialized (8edacdd)",
+    "whiteboard scoring pass confirmed complete -- all 30 items scored"
   ],
   "pending": [
-    "create utilities/session_logger.py",
-    "create utilities/ollama_utils.py",
-    "create utilities/gemini_utils.py",
-    "sysguard project init",
-    "watchdog project init",
-    "ghost-book git init",
     "run scheduler register_tasks.py as admin",
-    "company registry pass1 overnight run",
-    "whiteboard scoring pass on 30+ items"
+    "company registry pass1 overnight run"
   ],
   "blockers": [
     "scheduler registration needs admin terminal",
     "ghost-book pass2 unicode fix running"
   ],
-  "next_recommended": "Build session_logger.py utility then create sysguard and watchdog projects"
+  "next_recommended": "Run company-registry pass1 overnight. Build sysguard pass1_snapshot.py and watchdog pass1_scan_outputs.py."
 }

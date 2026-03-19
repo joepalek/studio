@@ -121,6 +121,42 @@ check_efficiency(
 
 ---
 
+### `ollama_utils.py`
+Ollama local LLM client with connection check, JSON mode, batch processing, and automatic Gemini Flash fallback when Ollama is down.
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `is_up(timeout)` | Returns True if Ollama is reachable |
+| `list_models()` | Returns available model names |
+| `ask(prompt, model, system)` | Single prompt, returns string or None |
+| `ask_json(prompt, schema, retries)` | Returns parsed dict or None |
+| `batch_ask(prompts, delay)` | Sequential batch with progress logging |
+| `with_gemini_fallback(prompt)` | Tries Ollama first, falls back to Gemini |
+
+**Used by:** Overnight batch agents. Always check `is_up()` before calling.
+
+---
+
+### `gemini_utils.py`
+Gemini Flash API client with rate-limit-safe delays, JSON parsing, and batch support. Centralizes all Gemini boilerplate.
+
+**Rate limits:** 15 req/min, 1500 req/day (free tier). Default delay: 4.1s between calls.
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `load_key()` | Load API key from studio-config.json |
+| `ask(prompt, api_key, model)` | Single prompt, returns string or None |
+| `ask_json(prompt, schema, retries)` | Returns parsed dict or None |
+| `batch_ask(prompts, delay)` | Rate-limit-safe batch, auto-pauses on 429 |
+| `batch_ask_json(prompts, schema)` | Batch JSON variant |
+| `is_available()` | Quick key+endpoint check |
+
+**Used by:** All scoring agents (whiteboard, ghost-book, product-archaeology).
+
+---
+
 ## Standard Footer Pattern
 
 Add to the end of every agent script:
