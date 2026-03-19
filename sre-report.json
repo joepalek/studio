@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-19T01:18:03.941604",
+  "generated": "2026-03-19T09:43:52.483926",
   "verdict": "DEGRADED",
   "issue_count": 4,
   "passes": {
@@ -16,14 +16,14 @@
       "anthropic": "SET",
       "gemini": "UP",
       "openrouter": "UP",
-      "ollama": "UP \u2014 gemma3:4b"
+      "ollama": "UP - gemma3:4b"
     },
     "projects": {
       "issues": [
         "NO STATE.JSON: sentinel-core",
         "NO STATE.JSON: sentinel-performer",
         "NO STATE.JSON: sentinel-viewer",
-        "UNCOMMITTED (1 file): _studio \u2014 job-source-crawler.md"
+        "UNCOMMITTED (5 files): _studio"
       ],
       "clean": 12
     },
