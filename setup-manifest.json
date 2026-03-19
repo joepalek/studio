@@ -1,0 +1,65 @@
+{
+  "captured": "2026-03-18T20:21:54.232109",
+  "machine": "BDCL991",
+  "tools": {
+    "git": "git version 2.53.0.windows.2",
+    "node": "v24.14.0",
+    "npm": "11.9.0",
+    "python": "Python 3.13.7",
+    "claude_code": "2.1.79 (Claude Code)",
+    "repomix": "1.12.0",
+    "gh": ""
+  },
+  "npm_globals": [
+    {
+      "name": "@anthropic-ai/claude-code",
+      "version": "2.1.79"
+    },
+    {
+      "name": "@playwright/mcp",
+      "version": "0.0.68"
+    },
+    {
+      "name": "ebay-mcp",
+      "version": "1.8.3"
+    },
+    {
+      "name": "repomix",
+      "version": "1.12.0"
+    }
+  ],
+  "python_packages": [],
+  "mcp_servers": {
+    "pencil": {
+      "command": "C:\\Program Files\\Pencil\\resources\\app.asar.unpacked\\out\\mcp-server-windows-x64.exe",
+      "args": [
+        "--app",
+        "desktop"
+      ],
+      "env": {},
+      "type": "stdio"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp"
+      ],
+      "env": {}
+    },
+    "ebay-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "ebay-mcp"
+      ],
+      "env": {}
+    }
+  },
+  "vscode_extensions": [],
+  "claude_plugins": [],
+  "notes": [
+    "ebay-mcp .env present \u2014 copy manually to new machine"
+  ],
+  "ebay_mcp_env_path": "C:\\Users\\jpalek\\AppData\\Roaming\\npm\\node_modules\\ebay-mcp\\.env"
+}
