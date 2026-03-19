@@ -1,0 +1,78 @@
+{
+  "acuscan-ar": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 1,
+    "lastUpdated": "unknown"
+  },
+  "arbitrage-pulse": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 2,
+    "lastUpdated": "unknown"
+  },
+  "CTW": {
+    "status": "active",
+    "progress": 40,
+    "nextAction": "Generate portrait images for all 4 characters using Perchance with provided prompts, add paths to character JSONs, then begin Phase 3 day structure build",
+    "blockers": [
+      "Real portrait images not yet generated \u00e2\u20ac\u201d using SVG placeholders",
+      "Trait activation detector needs calibration against more test runs",
+      "comfort bar still overcorrects downward under pressure"
+    ],
+    "decisions": 0,
+    "lastUpdated": "2026-03-15"
+  },
+  "hibid-analyzer": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 1,
+    "lastUpdated": "unknown"
+  },
+  "job-match": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 5,
+    "lastUpdated": "unknown"
+  },
+  "listing-optimizer": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 2,
+    "lastUpdated": "unknown"
+  },
+  "nutrimind": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 1,
+    "lastUpdated": "unknown"
+  },
+  "squeeze-empire": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 1,
+    "lastUpdated": "unknown"
+  },
+  "whatnot-apps": {
+    "status": "unknown",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 1,
+    "lastUpdated": "unknown"
+  }
+}

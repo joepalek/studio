@@ -1,0 +1,56 @@
+{
+  "agent_runnable": [],
+  "human_required": [
+    {
+      "project": "acuscan-ar",
+      "reason": "1 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "arbitrage-pulse",
+      "reason": "2 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "hibid-analyzer",
+      "reason": "1 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "job-match",
+      "reason": "5 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "listing-optimizer",
+      "reason": "2 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "nutrimind",
+      "reason": "1 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "squeeze-empire",
+      "reason": "1 pending decisions",
+      "next": ""
+    },
+    {
+      "project": "whatnot-apps",
+      "reason": "1 pending decisions",
+      "next": ""
+    }
+  ],
+  "blocked": [
+    {
+      "project": "CTW",
+      "blockers": [
+        "Real portrait images not yet generated \u00e2\u20ac\u201d using SVG placeholders",
+        "Trait activation detector needs calibration against more test runs",
+        "comfort bar still overcorrects downward under pressure"
+      ]
+    }
+  ],
+  "ready_to_build": []
+}

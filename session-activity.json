@@ -1,6 +1,6 @@
 {
-  "updated": "2026-03-18T13:37:04.605437",
-  "entry_count": 41,
+  "updated": "2026-03-18T15:07:58.827039",
+  "entry_count": 48,
   "entries": [
     {
       "type": "agent",
@@ -287,6 +287,55 @@
       "text": "Analysis is running \u2014 13/79 done, processing `coasttocoastam.com` pages from 2003-2005. Picking up G",
       "icon": "\u25cf",
       "time": "13:37:04",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "Done. Playwright MCP is now registered at **user scope** (`~/.claude.json`) \u2014 it'll be available acr",
+      "icon": "\u25cf",
+      "time": "14:11:32",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "Agent loaded. Running the eBay API test:",
+      "icon": "\u25cf",
+      "time": "14:13:43",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "Rate limit on `findCompletedItems` \u2014 this endpoint requires special entitlement on new developer acc",
+      "icon": "\u25cf",
+      "time": "14:15:38",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "Ollama analysis complete. Here's the summary:",
+      "icon": "\u25cf",
+      "time": "14:25:49",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "Running cleanly \u2014 5 entries in, already pulling real show content instead of server metadata. PID 15",
+      "icon": "\u25cf",
+      "time": "14:36:40",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "Done. Full status:",
+      "icon": "\u25cf",
+      "time": "14:47:41",
+      "project": "_studio"
+    },
+    {
+      "type": "agent",
+      "text": "400 on token exchange \u2014 need to see the error body:",
+      "icon": "\u25cf",
+      "time": "15:07:58",
       "project": "_studio"
     }
   ]

@@ -1,0 +1,1688 @@
+{
+  "acuscan-ar": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "acuscan-ar",
+      "_folder": "acuscan-ar",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-12",
+      "project": {
+        "name": "AcuScan AR",
+        "description": "Web-based AR wellness guide that overlays acupressure point markers on a live hand/wrist camera feed.",
+        "status": "active",
+        "complexity_budget": "low",
+        "progress_pct": 20,
+        "persona": "Someone with wrist or hand pain looking for quick relief at their desk. Not technical. Has 2 minutes. Using a phone they're already holding. Wants to feel helped, not confused. Will not read instructions.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "acuscan-ar.html",
+        "draft": "acuscan-ar.draft.html",
+        "cache": "acuscan-ar.cache.html",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "Stack decision confirmed: web-based. TF.js MediaPipe hands. Next is scaffolding hand tracking with camera input."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "Use WebXR or Canvas overlay for AR rendering?",
+          "options": [
+            "WebXR",
+            "Canvas overlay on video element"
+          ],
+          "recommendation": "Canvas overlay \u00e2\u20ac\u201d broader mobile browser support, simpler implementation for MVP",
+          "confidence": "85%",
+          "confidence_reason": "WebXR has spotty iOS support. Canvas overlay works everywhere.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "If hand tracking lags on older phones \u00e2\u20ac\u201d prioritize speed or visual accuracy?",
+          "context": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Performance optimization decisions during build"
+        },
+        {
+          "id": "proactive_002",
+          "question": "Should point descriptions be text overlaid on screen or a separate info panel below the camera?",
+          "context": "Affects UI layout significantly. Text on camera = cleaner but harder to read. Panel below = easier to read but splits attention.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "UI layout decisions"
+        },
+        {
+          "id": "proactive_003",
+          "question": "Eventually monetize this or keep it free/personal?",
+          "context": "Affects whether we add any tracking, accounts, or premium features later.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Architecture decisions around accounts and data"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Research TF.js MediaPipe Hands browser compatibility \u00e2\u20ac\u201d document which mobile browsers work",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Define acupoints data model \u00e2\u20ac\u201d LI4, PC6, HT7, TW4, LU9 with landmark indices and descriptions",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_003",
+          "task": "Scaffold single HTML file with camera access and TF.js MediaPipe import",
+          "size": "medium",
+          "size_estimate": "45min",
+          "depends_on": "decision_001",
+          "status": "blocked",
+          "completed_date": null
+        },
+        {
+          "id": "auto_004",
+          "task": "Build overlay canvas that draws a dot on one hardcoded landmark point to verify tracking works",
+          "size": "small",
+          "size_estimate": "30min",
+          "depends_on": "auto_003",
+          "status": "blocked",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [],
+      "assumption_log": [
+        {
+          "assumption": "Users have a modern smartphone with front-facing camera",
+          "confirmed": false,
+          "confirmed_date": null
+        },
+        {
+          "assumption": "App is personal use, not clinical \u00e2\u20ac\u201d no medical disclaimers needed beyond basic note",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        },
+        {
+          "assumption": "No login or account required for MVP",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [],
+      "minimum_viable_tests": [
+        {
+          "feature": "Hand tracking",
+          "done_means": [
+            "Camera opens on mobile Chrome without install",
+            "Hand detected within 2 seconds of appearing in frame",
+            "All 5 acupoints show as colored dots on correct landmark positions",
+            "Overlay stays locked to hand during slow movement"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-11",
+          "mode": "setup",
+          "completed": [
+            "Project initialized",
+            "CONTEXT.md created",
+            "Stack confirmed: web-based TF.js"
+          ],
+          "blockers": [],
+          "next_action": "Resolve WebXR vs Canvas decision then scaffold hand tracking"
+        }
+      ],
+      "strategy_notes": []
+    }
+  },
+  "arbitrage-pulse": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "arbitrage-pulse",
+      "_folder": "arbitrage-pulse",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-12",
+      "project": {
+        "name": "FB/eBay Arbitrage Pulse",
+        "description": "Automated monitor that scrapes Facebook Marketplace for mispriced items, cross-references eBay sold listings for margin analysis, and delivers a daily digest of top flip opportunities.",
+        "status": "new",
+        "complexity_budget": "medium",
+        "progress_pct": 0,
+        "persona": "Active reseller (Joe) who knows what sells but doesn't have time to scroll Marketplace manually for hours. Wants a 30-second morning decision: which 5 items are worth pursuing today.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "arbitrage-pulse.js",
+        "draft": "arbitrage-pulse.draft.js",
+        "cache": "arbitrage-pulse.cache.js",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "New project. No code yet. First session: define geographic target, keyword list, and scraping approach before writing anything."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
+          "options": [
+            "Tennessee (Atwood/McKenzie area)",
+            "Illinois (Woodstock area)",
+            "Both \u00e2\u20ac\u201d separate digests"
+          ],
+          "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
+          "confidence": "70%",
+          "confidence_reason": "Depends on where you actually source inventory. User knows best.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        },
+        {
+          "id": "decision_002",
+          "question": "Scraping approach \u00e2\u20ac\u201d Apify Actor or direct browser automation via Chrome extension?",
+          "options": [
+            "Apify (paid, reliable, maintained)",
+            "Chrome extension automation (free, may break with FB updates)"
+          ],
+          "recommendation": "Start with Chrome extension automation \u00e2\u20ac\u201d free, and we already have it set up",
+          "confidence": "65%",
+          "confidence_reason": "Facebook actively fights scrapers. Apify is more reliable long-term but costs money. Prove concept free first.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "What categories do you want to monitor? (e.g. tools, electronics, collectibles, furniture, vintage)",
+          "context": "Keyword list drives everything. More specific = less noise = better digest.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Keyword filter design"
+        },
+        {
+          "id": "proactive_002",
+          "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
+          "context": "Sets the filter threshold for the margin analysis step.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Margin filter logic"
+        },
+        {
+          "id": "proactive_003",
+          "question": "Digest delivery format \u00e2\u20ac\u201d Markdown file in Drive, email, or dashboard card?",
+          "context": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Output delivery architecture"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Research eBay Sold Listings API \u00e2\u20ac\u201d document how to query sold prices for a given item keyword",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Design margin calculation formula \u00e2\u20ac\u201d (eBay avg sold - FB asking price) / FB asking price",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_003",
+          "task": "Draft initial keyword list based on Joe's known resale categories",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": "proactive_001",
+          "status": "blocked",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [],
+      "assumption_log": [
+        {
+          "assumption": "Facebook Marketplace is primary source \u00e2\u20ac\u201d not OfferUp, Craigslist, etc.",
+          "confirmed": false,
+          "confirmed_date": null
+        },
+        {
+          "assumption": "eBay sold listings are the price reference benchmark",
+          "confirmed": false,
+          "confirmed_date": null
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [],
+      "minimum_viable_tests": [
+        {
+          "feature": "Daily digest",
+          "done_means": [
+            "At least one geographic area monitored",
+            "At least 3 keyword categories active",
+            "Margin calculated correctly against eBay sold data",
+            "Digest file generated with top 5 results",
+            "Results are real listings not test data"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-12",
+          "mode": "setup",
+          "completed": [
+            "state.json initialized",
+            "Project added to studio"
+          ],
+          "blockers": [],
+          "next_action": "Answer geographic and category decisions, then design scraping approach"
+        }
+      ],
+      "strategy_notes": []
+    }
+  },
+  "CTW": {
+    "type": "new",
+    "current": {
+      "name": "CTW",
+      "status": "active",
+      "progress": 40,
+      "handoff": "Phase 2 complete. Stress test runner working. C\u00c3\u00a9leste validated at deployment quality. Next: Phase 3 day structure and time engine, plus real character portrait images to replace SVG placeholders.",
+      "lastUpdated": "2026-03-15",
+      "blockers": [
+        "Real portrait images not yet generated \u00e2\u20ac\u201d using SVG placeholders",
+        "Trait activation detector needs calibration against more test runs",
+        "comfort bar still overcorrects downward under pressure"
+      ],
+      "nextAction": "Generate portrait images for all 4 characters using Perchance with provided prompts, add paths to character JSONs, then begin Phase 3 day structure build",
+      "sessionSummary": "Full Phase 2 built including story loader, provider dropdown, stress test battery, and character library. C\u00c3\u00a9leste test run validated core architecture \u00e2\u20ac\u201d appeasement resistance held through pressure phase. Three scoring bugs fixed."
+    }
+  },
+  "hibid-analyzer": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "hibid-analyzer",
+      "_folder": "hibid-analyzer",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-12",
+      "project": {
+        "name": "HiBid Analyzer",
+        "description": "Browser tool that analyzes auction lot images via Gemini API, estimates resale value, and saves notes to HiBid watchlist.",
+        "status": "paused",
+        "complexity_budget": "medium",
+        "progress_pct": 60,
+        "persona": "Active auction bidder (Joe) sitting at a computer during a live HiBid auction. Needs value estimates fast. No time to research manually. Wants notes saved automatically so he can bid with confidence.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "hibid-analyzer.js",
+        "draft": "hibid-analyzer.draft.js",
+        "cache": "hibid-analyzer.cache.js",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "Gemini API image analysis works. Blocked on HiBid textarea DOM automation. Chrome extension is now available \u00e2\u20ac\u201d this changes the approach entirely. First session should attempt textarea interaction via extension before any other approach."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "Now that Chrome extension is available \u00e2\u20ac\u201d attempt textarea via extension first or continue investigating DOM approach?",
+          "options": [
+            "Extension first \u00e2\u20ac\u201d highest probability of success",
+            "DOM investigation \u00e2\u20ac\u201d understand root cause first",
+            "Both in parallel"
+          ],
+          "recommendation": "Extension first \u00e2\u20ac\u201d Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
+          "confidence": "85%",
+          "confidence_reason": "Extension confirmed working on first try per user. Direct browser access eliminates the automation layer that was blocking.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 1,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "Should analysis run on all lots automatically or only when you click a button on a specific lot?",
+          "context": "Auto-run = more convenient but costs more API calls. Manual trigger = you control what gets analyzed.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Trigger mechanism architecture"
+        },
+        {
+          "id": "proactive_002",
+          "question": "What format do you want the watchlist notes in? (e.g. 'Est: $45-65 | Condition: Good | Items: ceramic vase')",
+          "context": "Note format determines what Gemini is asked to return. Standardized format makes notes scannable during live bidding.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Gemini prompt design and note writing logic"
+        },
+        {
+          "id": "proactive_003",
+          "question": "Should this work on mobile Chrome or desktop only?",
+          "context": "Mobile adds complexity but useful if bidding from phone at estate sales.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Mobile compatibility decisions"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Document current Gemini API integration \u00e2\u20ac\u201d what prompt is used, what format is returned, what works",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Research HiBid watchlist page structure \u00e2\u20ac\u201d document what the notes field looks like in the DOM",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_003",
+          "task": "Design standardized note format for watchlist entries based on proactive_002 answer",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": "proactive_002",
+          "status": "blocked",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [
+        {
+          "id": "decided_001",
+          "decision": "Use Gemini API for image analysis",
+          "reason": "Already integrated and working. No reason to switch.",
+          "date": "2026-03-12",
+          "resolved_by": "existing_build"
+        }
+      ],
+      "assumption_log": [
+        {
+          "assumption": "Chrome (not Opera) will be used for HiBid sessions",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        },
+        {
+          "assumption": "No backend needed \u00e2\u20ac\u201d runs locally in browser",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [
+        {
+          "finding": "Gemini API base64 inline image analysis pattern \u00e2\u20ac\u201d works reliably for lot image processing",
+          "applicable_to": [
+            "acuscan-ar",
+            "listing-optimizer"
+          ],
+          "date": "2026-03-12"
+        }
+      ],
+      "minimum_viable_tests": [
+        {
+          "feature": "Full watchlist save flow",
+          "done_means": [
+            "Open HiBid auction lot in Chrome",
+            "Analysis runs on lot image",
+            "Value estimate appears in correct format",
+            "Note is saved to HiBid watchlist without manual copy/paste",
+            "Note persists after page refresh"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-12",
+          "mode": "setup",
+          "completed": [
+            "state.json initialized",
+            "Chrome extension confirmed working on first try"
+          ],
+          "blockers": [
+            "Textarea DOM automation unresolved \u00e2\u20ac\u201d extension approach now primary"
+          ],
+          "next_action": "Attempt textarea write via Chrome extension on live HiBid page"
+        }
+      ],
+      "strategy_notes": []
+    }
+  },
+  "job-match": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "job-match",
+      "_folder": "job-match",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-13",
+      "project": {
+        "name": "Talent Insight Engine (Job Match Platform)",
+        "description": "AI-powered job matching platform. Two sides: (1) Job Seeker \u00e2\u20ac\u201d narrative interview generates behavioral profile, matched against live job pool. (2) Employer \u00e2\u20ac\u201d browse candidate profiles with AI alignment scoring. Scraping engine runs two-tier crawl: monthly broad discovery + daily targeted delta fetch with JIT dead-link validation.",
+        "status": "active",
+        "complexity_budget": "medium",
+        "progress_pct": 55,
+        "persona": "Job seeker tired of irrelevant results, scam listings, and dead links. Wants a ranked list of real, attainable opportunities matched to their actual behavioral profile \u00e2\u20ac\u201d not just keywords. Also: employer who wants behavioral fit data, not just credentials.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "Talent-Insight-Engine/server/routes.ts",
+        "draft": "Talent-Insight-Engine/server/routes.draft.ts",
+        "cache": "Talent-Insight-Engine/server/routes.cache.ts",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "tech_stack": {
+        "frontend": "React 18 + TypeScript + Vite + Tailwind + shadcn/ui",
+        "backend": "Node.js + Express + TypeScript",
+        "database": "PostgreSQL + Drizzle ORM",
+        "ai": "OpenAI GPT-4o via Replit proxy \u00e2\u20ac\u201d NEEDS MIGRATION to Anthropic API",
+        "auth": "Replit Auth (OpenID Connect) \u00e2\u20ac\u201d NEEDS MIGRATION to standard auth",
+        "scraping": "NOT YET BUILT \u00e2\u20ac\u201d architecture designed, ready to implement"
+      },
+      "what_is_built": {
+        "working": [
+          "Resume upload and parsing (PDF + DOCX)",
+          "Narrative interview \u00e2\u20ac\u201d story-based questions for job seekers",
+          "GPT-4o generates: aiSummary, employerSummary, workingTendencies, internalTraits",
+          "Eligibility evaluation (degree, experience, location)",
+          "Effort reduction flags (spam detection, input quality)",
+          "Employer portal \u00e2\u20ac\u201d browse candidate profiles",
+          "AI alignment scoring \u00e2\u20ac\u201d fitBand + signals between candidate and employer intent",
+          "PostgreSQL schema \u00e2\u20ac\u201d users, sessions, profiles, conversations, messages",
+          "Full shadcn/ui component library",
+          "Landing page, seeker flow, employer flow"
+        ],
+        "not_built": [
+          "Job scraping engine (monthly + daily crawl)",
+          "Job listing display",
+          "Deduplication/clustering of job listings",
+          "Scam/funnel detection and flagging",
+          "JIT dead-link checker",
+          "Match ranking between seeker profile and job pool",
+          "Stale listing feedback loop",
+          "Application answer auto-generation"
+        ],
+        "needs_migration": [
+          "Replit Auth \u00e2\u2020\u2019 standard auth (Passport.js + JWT or similar)",
+          "OpenAI via Replit proxy \u00e2\u2020\u2019 Anthropic Claude API",
+          "PostgreSQL connection \u00e2\u20ac\u201d needs new DATABASE_URL outside Replit"
+        ]
+      },
+      "scraping_architecture": {
+        "tier_1_monthly_broad_crawl": {
+          "purpose": "Discover all job boards, career pages, niche listings \u00e2\u20ac\u201d build the address book",
+          "sources": [
+            "Common Crawl data",
+            "headless browser cluster",
+            "company 'Work with Us' footers",
+            "niche job boards",
+            "government job portals"
+          ],
+          "output": "master_sources.json \u00e2\u20ac\u201d prioritized URL/API endpoint list fed to daily scraper",
+          "frequency": "monthly",
+          "agent": "monthly_discovery_agent"
+        },
+        "tier_2_daily_delta_fetch": {
+          "purpose": "High-frequency extraction from known sources \u00e2\u20ac\u201d new and updated listings only",
+          "sources": "URLs from master_sources.json",
+          "method": "Check new/updated headers only \u00e2\u20ac\u201d save bandwidth",
+          "output": "daily_jobs_raw.json",
+          "frequency": "daily",
+          "agent": "daily_scrape_agent"
+        },
+        "deduplication_pipeline": {
+          "stage_1": "Normalize \u00e2\u20ac\u201d standardize titles, salaries, locations",
+          "stage_2": "Cluster \u00e2\u20ac\u201d MinHash or similar to group near-duplicate descriptions across boards",
+          "stage_3": "Head record \u00e2\u20ac\u201d select most reputable source (direct company site preferred) as primary",
+          "stage_4": "Collapse duplicates under head record with + expand UI"
+        },
+        "jit_dead_link_checker": {
+          "trigger": "Every time results are returned to user",
+          "method": "Async HEAD requests via httpx/aiohttp \u00e2\u20ac\u201d ping all URLs simultaneously",
+          "logic": {
+            "200": "Deliver to user",
+            "404_410": "Silently flag as Stale in DB, remove from current view",
+            "301_302": "Follow redirect, update Head URL in DB",
+            "403_429": "Flag as Throttled \u00e2\u20ac\u201d scraper may be blocked"
+          }
+        },
+        "scam_and_funnel_detection": {
+          "heuristics": [
+            "Multiple listings from different recruiters for same role with different pay = lead-gen funnel",
+            "Same job reposted every 3 days for 6+ months = ghost listing or scam",
+            "Domain reputation cross-reference against scam database",
+            "URL redirect chain > 3 hops = data funnel",
+            "Third-party aggregator vs direct company site \u00e2\u20ac\u201d weight direct higher"
+          ],
+          "action": "Do NOT delete. Push to bottom tier, apply Suspect Listing flag",
+          "database_fields": {
+            "original_source": "Where first found in monthly crawl",
+            "redirect_chain": "Every URL hop to application",
+            "submission_type": "direct vs aggregator",
+            "repost_count": "How many times seen",
+            "first_seen": "Date first discovered",
+            "last_verified": "Last successful HEAD request"
+          }
+        },
+        "stale_listing_feedback": {
+          "dead_link": "Auto-flag if HEAD returns 404",
+          "applicant_sentiment": "If 10+ users referred and none report response \u00e2\u20ac\u201d flag as Stale/Unresponsive",
+          "age_threshold": "Flag listings > 30 days old with no update"
+        }
+      },
+      "matching_engine": {
+        "tier_1_high_match": "Direct correlation between seeker internalTraits and job requirements",
+        "tier_2_limit_pushers": {
+          "rule": "If YearsExperience >= JobRequirement + 2 \u00e2\u2020\u2019 flag as Equivalent Match",
+          "display": "Show to user with disclaimer: 'Matches structural requirements; specific credential may require upskilling'",
+          "flag": "not_true_match \u00e2\u20ac\u201d helps users explore stretch opportunities"
+        },
+        "geospatial_filter": {
+          "local": "Commute distance based on zip code \u00e2\u20ac\u201d not just city name",
+          "remote": "Verified Remote-First tag \u00e2\u20ac\u201d separate bucket from local results"
+        },
+        "knowledge_match": {
+          "example": "User has 'programming logic background' + job requires 'Python' \u00e2\u2020\u2019 flag as Knowledge Match",
+          "display": "Matches structural logic requirements; specific syntax may require upskilling"
+        }
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "Replit migration complete. Code is in Talent-Insight-Engine subfolder. Current Claude Code session is inventorying codebase. Migration priorities: (1) swap Replit Auth, (2) swap OpenAI proxy to Anthropic, (3) get DB running locally. Then build scraping engine starting with daily delta fetch."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "Replit migration \u00e2\u20ac\u201d confirmed complete?",
+          "options": [
+            "Yes \u00e2\u20ac\u201d Talent-Insight-Engine folder is in job-match folder",
+            "No \u00e2\u20ac\u201d still pending"
+          ],
+          "recommendation": "Confirmed complete based on current Claude Code session finding the files",
+          "confidence": "95%",
+          "confidence_reason": "Claude Code session found Talent-Insight-Engine subdirectory present",
+          "depends_on": null,
+          "status": "answered",
+          "answer": "Yes \u00e2\u20ac\u201d migration complete",
+          "resolved_by": "user_confirmation",
+          "resolved_date": "2026-03-13",
+          "created": "2026-03-12",
+          "expires_after_sessions": 1,
+          "sessions_pending": 0
+        },
+        {
+          "id": "decision_002",
+          "question": "Auth migration \u00e2\u20ac\u201d replace Replit Auth with what?",
+          "options": [
+            "Passport.js + JWT (self-managed)",
+            "Clerk (hosted auth, fast setup)",
+            "Auth0 (enterprise-grade)",
+            "Simple session-based with bcrypt (no third party)"
+          ],
+          "recommendation": "Clerk \u00e2\u20ac\u201d fastest to swap in, handles sessions/JWT/OAuth, generous free tier, minimal code change",
+          "confidence": "75%",
+          "confidence_reason": "Clerk is the fastest Replit Auth replacement with least code rewrite. Auth0 is more powerful but overkill for current stage.",
+          "depends_on": null,
+          "status": "answered",
+          "answer": "Clerk",
+          "resolved_by": "user_confirmation",
+          "resolved_date": "2026-03-13",
+          "created": "2026-03-13",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        },
+        {
+          "id": "decision_003",
+          "question": "AI migration \u00e2\u20ac\u201d keep GPT-4o or switch to Claude (Anthropic API)?",
+          "options": [
+            "Keep GPT-4o (swap API key only)",
+            "Switch to Claude Sonnet (Anthropic API)",
+            "Run both \u00e2\u20ac\u201d A/B test quality"
+          ],
+          "recommendation": "Switch to Claude Sonnet \u00e2\u20ac\u201d you already have Anthropic API access via Claude Pro, no new account needed, narrative/behavioral analysis is a Claude strength",
+          "confidence": "80%",
+          "confidence_reason": "Anthropic API already in your stack. Claude is strong at narrative interpretation which is core to this app.",
+          "depends_on": null,
+          "status": "answered",
+          "answer": "Claude Sonnet (Anthropic API)",
+          "resolved_by": "user_confirmation",
+          "resolved_date": "2026-03-13",
+          "created": "2026-03-13",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        },
+        {
+          "id": "decision_004",
+          "question": "Database \u00e2\u20ac\u201d where does PostgreSQL run after leaving Replit?",
+          "options": [
+            "Supabase (hosted Postgres, free tier)",
+            "Railway (hosted, simple)",
+            "Local PostgreSQL on your machine",
+            "Neon (serverless Postgres)"
+          ],
+          "recommendation": "Supabase \u00e2\u20ac\u201d free tier is generous, has good dashboard UI, and pairs well with your existing stack",
+          "confidence": "80%",
+          "confidence_reason": "Free tier covers development and early production. Easy migration path from Replit's Postgres.",
+          "depends_on": null,
+          "status": "answered",
+          "answer": "Supabase",
+          "resolved_by": "user_confirmation",
+          "resolved_date": "2026-03-13",
+          "created": "2026-03-13",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        },
+        {
+          "id": "decision_005",
+          "question": "Scraping engine \u00e2\u20ac\u201d start with monthly broad crawl or daily delta fetch first?",
+          "options": [
+            "Monthly broad crawl first \u00e2\u20ac\u201d build the address book",
+            "Daily delta fetch first \u00e2\u20ac\u201d prove the pipeline works on known sources",
+            "Both simultaneously"
+          ],
+          "recommendation": "Daily delta fetch first \u00e2\u20ac\u201d use known free sources (RemoteOK, We Work Remotely, Adzuna) to prove pipeline works before investing in broad crawl infrastructure",
+          "confidence": "85%",
+          "confidence_reason": "Broad crawl is expensive and complex. Proving the pipeline on known sources de-risks the architecture before scaling up.",
+          "depends_on": null,
+          "status": "answered",
+          "answer": "Daily delta fetch first",
+          "resolved_by": "user_confirmation",
+          "resolved_date": "2026-03-13",
+          "created": "2026-03-13",
+          "expires_after_sessions": 3,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "Should the platform be offered as SaaS to other job seekers or stay personal/portfolio use?",
+          "context": "Determines whether to add billing, multi-user accounts, and marketing infrastructure. Significant scope difference.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Architecture decisions around multi-tenancy and billing"
+        },
+        {
+          "id": "proactive_002",
+          "question": "Should employer portal be prioritized before or after scraping engine?",
+          "context": "Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both are needed for a complete product.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Build sequence for next 5 sessions"
+        },
+        {
+          "id": "proactive_003",
+          "question": "For the scam database \u00e2\u20ac\u201d should it be private to your platform or eventually shared/open source?",
+          "context": "Shared scam database becomes a community moat. Private keeps it proprietary. Open source builds trust and contributions.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Scam database architecture and data sharing strategy"
+        },
+        {
+          "id": "proactive_004",
+          "question": "Should job ratings be shown to users in v1 or held back until v2?",
+          "context": "Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 cleaner but reduces user confidence in results.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Rating display UI and calibration decisions"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Complete codebase inventory \u00e2\u20ac\u201d document all existing files, what each does, what works vs incomplete",
+          "size": "medium",
+          "size_estimate": "30min",
+          "depends_on": null,
+          "status": "in_progress",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Document Replit Auth dependency \u00e2\u20ac\u201d identify every file that imports or uses replitAuth, map migration scope",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": "auto_001",
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_003",
+          "task": "Document OpenAI dependency \u00e2\u20ac\u201d identify every API call, map to equivalent Anthropic Claude API calls",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": "auto_001",
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_004",
+          "task": "Research RemoteOK and We Work Remotely API/RSS endpoints \u00e2\u20ac\u201d document structure, rate limits, fields returned",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_005",
+          "task": "Research Adzuna API \u00e2\u20ac\u201d free tier limits, endpoint structure, job field mapping",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_006",
+          "task": "Design scam detection heuristic ruleset \u00e2\u20ac\u201d document all criteria, scoring weights, action thresholds",
+          "size": "medium",
+          "size_estimate": "45min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_007",
+          "task": "Design deduplication pipeline \u00e2\u20ac\u201d MinHash implementation spec, normalization rules, head record selection criteria",
+          "size": "medium",
+          "size_estimate": "45min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_008",
+          "task": "Design JIT dead-link checker \u00e2\u20ac\u201d async HEAD request implementation, status code handling, DB update logic",
+          "size": "small",
+          "size_estimate": "30min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_009",
+          "task": "Research Supabase free tier \u00e2\u20ac\u201d setup requirements, Postgres migration from Replit, connection string format",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": "decision_004",
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_010",
+          "task": "Map matching engine logic \u00e2\u20ac\u201d how internalTraits from narrative interview connect to job requirement fields",
+          "size": "medium",
+          "size_estimate": "45min",
+          "depends_on": "auto_001",
+          "status": "ready",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [
+        {
+          "id": "decided_001",
+          "decision": "Do not scrape Indeed or LinkedIn",
+          "reason": "Both actively block scrapers. Risk of IP bans outweighs any data benefit.",
+          "date": "2026-03-12",
+          "resolved_by": "existing_constraint"
+        },
+        {
+          "id": "decided_002",
+          "decision": "Scam/low-quality listings are NOT deleted \u00e2\u20ac\u201d pushed to bottom tier and flagged",
+          "reason": "Valid jobs can get caught in scam-adjacent patterns. Flagging preserves data integrity while protecting user experience.",
+          "date": "2026-03-13",
+          "resolved_by": "architecture_decision"
+        },
+        {
+          "id": "decided_003",
+          "decision": "Replit export migration is complete",
+          "reason": "Claude Code session confirmed Talent-Insight-Engine subdirectory present in job-match folder",
+          "date": "2026-03-13",
+          "resolved_by": "user_confirmation"
+        }
+      ],
+      "assumption_log": [
+        {
+          "assumption": "Narrative/behavioral matching is more valuable differentiator than keyword matching",
+          "confirmed": true,
+          "confirmed_date": "2026-03-13"
+        },
+        {
+          "assumption": "Daily delta fetch proves pipeline before investing in monthly broad crawl",
+          "confirmed": false,
+          "confirmed_date": null
+        },
+        {
+          "assumption": "Supabase or similar hosted Postgres replaces Replit database cleanly",
+          "confirmed": false,
+          "confirmed_date": null
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [
+        {
+          "finding": "Narrative interview + behavioral trait extraction pattern \u00e2\u20ac\u201d applicable to Sentinel Performer personality clone intake",
+          "applicable_to": [
+            "sentinel-performer"
+          ],
+          "date": "2026-03-13"
+        }
+      ],
+      "minimum_viable_tests": [
+        {
+          "feature": "Migration complete",
+          "done_means": [
+            "App runs locally without Replit environment",
+            "Auth works without Replit Auth",
+            "AI calls work via Anthropic API",
+            "Database connects via Supabase or equivalent"
+          ],
+          "verified": false,
+          "verified_date": null
+        },
+        {
+          "feature": "Scraping pipeline v1",
+          "done_means": [
+            "At least one source (RemoteOK or Adzuna) returns live job listings",
+            "Duplicate listings are collapsed under head record",
+            "JIT dead-link check runs before results displayed",
+            "Scam/suspect listings pushed to bottom with flag",
+            "Results display in existing frontend"
+          ],
+          "verified": false,
+          "verified_date": null
+        },
+        {
+          "feature": "Full seeker flow",
+          "done_means": [
+            "Seeker completes narrative interview",
+            "AI generates profile with internalTraits",
+            "Profile matched against live job pool",
+            "Ranked results show with match tier labels",
+            "Dead links removed before display"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-13",
+          "mode": "inventory",
+          "completed": [
+            "Replit migration confirmed complete",
+            "Codebase analyzed \u00e2\u20ac\u201d 55% complete, not 35%",
+            "Scraping architecture fully designed from recovered conversation",
+            "state.json updated with full architecture"
+          ],
+          "blockers": [
+            "Replit Auth must be replaced before app runs outside Replit",
+            "OpenAI proxy must be replaced with Anthropic API",
+            "PostgreSQL needs new host"
+          ],
+          "next_action": "Begin migration: (1) set up Supabase project + paste DATABASE_URL, (2) swap OpenAI calls to Anthropic Claude Sonnet, (3) install Clerk + replace Replit Auth. Then build daily delta scraper (RemoteOK, Adzuna)."
+        }
+      ],
+      "strategy_notes": [
+        "Narrative interview differentiator is genuinely unique \u00e2\u20ac\u201d preserve and emphasize it",
+        "Migration unblocks everything \u00e2\u20ac\u201d prioritize auth + database + AI swap before any new features",
+        "Scraping engine is the missing half \u00e2\u20ac\u201d daily delta fetch first, monthly broad crawl second",
+        "Reusable finding: narrative intake pattern applies to Sentinel Performer personality clone"
+      ]
+    }
+  },
+  "listing-optimizer": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "listing-optimizer",
+      "_folder": "listing-optimizer",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-12",
+      "project": {
+        "name": "eBay Listing Optimizer",
+        "description": "Bulk listing optimization engine that ingests raw inventory data, generates keyword-dense ATS-optimized titles, populates missing fields (condition, UPC/ISBN, category), and outputs eBay File Exchange ready CSV.",
+        "status": "new",
+        "complexity_budget": "medium",
+        "progress_pct": 0,
+        "persona": "eBay reseller (Joe, 572 active listings) who knows his inventory but doesn't have time to manually optimize every title and fill missing fields. Wants to drop a CSV in and get a better CSV out.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "listing-optimizer.html",
+        "draft": "listing-optimizer.draft.html",
+        "cache": "listing-optimizer.cache.html",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "New project. No code yet. Joe has 572 active listings and deep title-writing expertise. First session: define input format, output format, and which optimizations to run."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "Personal tool only or productize for other sellers?",
+          "options": [
+            "Personal only \u00e2\u20ac\u201d optimize Joe's 572 listings",
+            "Beta test with select sellers",
+            "Full SaaS product"
+          ],
+          "recommendation": "Personal first \u00e2\u20ac\u201d prove it works on your own inventory, then decide",
+          "confidence": "90%",
+          "confidence_reason": "Building for yourself first is faster and gives you real feedback before committing to multi-user architecture.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        },
+        {
+          "id": "decision_002",
+          "question": "Input format \u00e2\u20ac\u201d eBay bulk export CSV or manual entry or both?",
+          "options": [
+            "eBay bulk export CSV only",
+            "Manual entry only",
+            "Both"
+          ],
+          "recommendation": "eBay bulk export CSV \u00e2\u20ac\u201d you already have 572 listings to process",
+          "confidence": "95%",
+          "confidence_reason": "CSV batch processing is the highest leverage use case given existing inventory size.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "What are your SKU prefix conventions for physical storage location tracking?",
+          "context": "Optimizer needs to preserve or understand existing SKU format to not break your storage system.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "SKU handling logic"
+        },
+        {
+          "id": "proactive_002",
+          "question": "Which categories make up the majority of your 572 listings?",
+          "context": "Category-specific title rules \u00e2\u20ac\u201d e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Category-specific optimization rules"
+        },
+        {
+          "id": "proactive_003",
+          "question": "Should the optimizer suggest a price adjustment based on recent eBay sold data?",
+          "context": "Adds significant value but requires eBay API access. Could share that infrastructure with Arbitrage Pulse.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Pricing feature scope and eBay API integration"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Research eBay File Exchange CSV format \u00e2\u20ac\u201d document all required and optional fields",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Design title optimization rules \u00e2\u20ac\u201d keyword density, character limit, banned words, category-specific patterns",
+          "size": "small",
+          "size_estimate": "25min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_003",
+          "task": "Design missing field detection logic \u00e2\u20ac\u201d which fields are commonly empty and how to auto-populate",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [],
+      "assumption_log": [
+        {
+          "assumption": "eBay File Exchange format is the output target",
+          "confirmed": false,
+          "confirmed_date": null
+        },
+        {
+          "assumption": "AI-generated titles should preserve Joe's existing title style and conventions",
+          "confirmed": false,
+          "confirmed_date": null
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [
+        {
+          "finding": "eBay API for sold listings pricing \u00e2\u20ac\u201d being researched for Arbitrage Pulse, share the integration",
+          "applicable_to": [
+            "arbitrage-pulse"
+          ],
+          "date": "2026-03-12"
+        }
+      ],
+      "minimum_viable_tests": [
+        {
+          "feature": "Bulk listing optimization",
+          "done_means": [
+            "Accepts eBay export CSV as input",
+            "Generates optimized title for each listing",
+            "Flags missing condition, UPC/ISBN fields",
+            "Outputs valid eBay File Exchange CSV",
+            "Processes 50 listings without errors",
+            "Output titles are noticeably better than input titles"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-12",
+          "mode": "setup",
+          "completed": [
+            "state.json initialized",
+            "Project added to studio"
+          ],
+          "blockers": [],
+          "next_action": "Answer input/output format decisions, get SKU convention info, then design optimization rules"
+        }
+      ],
+      "strategy_notes": []
+    }
+  },
+  "nutrimind": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "nutrimind",
+      "_folder": "nutrimind",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-12",
+      "project": {
+        "name": "NutriMind",
+        "description": "React-based AI meal planning app with multi-week planning, budget tiers, meal approval workflows, and ingredient overlap detection.",
+        "status": "paused",
+        "complexity_budget": "medium",
+        "progress_pct": 75,
+        "persona": "Person trying to eat better without spending too much time or money. Wants a plan handed to them. Will swap meals they don't like but won't build a plan from scratch. Cooking skill: basic.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "src/App.jsx",
+        "draft": "src/App.draft.jsx",
+        "cache": "src/App.cache.jsx",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "Three iterations complete. Iteration 3 is current. Meal approval, budget tiers, multi-week planning all implemented. Identify remaining gaps before adding anything new."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
+          "options": [
+            "All planned features working",
+            "Personal use ready",
+            "Productize for other users"
+          ],
+          "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
+          "confidence": "75%",
+          "confidence_reason": "Productizing adds significant scope. Better to finish core first.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 3,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "Should shopping list generation be part of the MVP or post-launch?",
+          "context": "Natural extension of meal planning. Medium complexity add.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Feature roadmap after core completion"
+        },
+        {
+          "id": "proactive_002",
+          "question": "Should the app remember your meal history to avoid repeating recent meals?",
+          "context": "Requires localStorage or backend. Adds significant value but adds complexity.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Data persistence architecture"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Read iteration 3 code \u00e2\u20ac\u201d document all features, what works, what's incomplete or broken",
+          "size": "small",
+          "size_estimate": "25min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Identify any known token truncation or useEffect issues from previous sessions",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": "auto_001",
+          "status": "blocked",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [],
+      "assumption_log": [
+        {
+          "assumption": "React functional components and hooks only \u00e2\u20ac\u201d no class components",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        },
+        {
+          "assumption": "Anthropic API for meal generation",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [],
+      "minimum_viable_tests": [
+        {
+          "feature": "Full meal planning flow",
+          "done_means": [
+            "User selects budget tier and goals",
+            "Weekly plan generates without API errors",
+            "Individual meals can be swapped",
+            "Multi-week view works without state corruption",
+            "No useEffect infinite loops"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-12",
+          "mode": "setup",
+          "completed": [
+            "state.json initialized"
+          ],
+          "blockers": [],
+          "next_action": "Read iteration 3 code, document current state, identify completion gaps"
+        }
+      ],
+      "strategy_notes": []
+    }
+  },
+  "squeeze-empire": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "squeeze-empire",
+      "_folder": "squeeze-empire",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-16",
+      "project": {
+        "name": "Squeeze Empire",
+        "status": "active",
+        "complexity_budget": "low",
+        "progress_pct": 85,
+        "description": "Single-file browser-based lemonade stand business simulation with multi-system economics, mini-games, and seasonal progression.",
+        "persona": "Casual gamer who wants a satisfying idle/incremental game. Plays in short sessions. Expects things to make sense without reading instructions. Wants to feel like their decisions matter.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "squeeze-empire.html",
+        "draft": "squeeze-empire.draft.html",
+        "cache": "squeeze-empire.cache.html",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "File recovered \u00e2\u20ac\u201d resume late-game progression implementation."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "What defines late-game completion \u00e2\u20ac\u201d what is the win condition or final milestone?",
+          "options": [
+            "Reach a revenue target",
+            "Unlock all upgrades",
+            "No win condition \u00e2\u20ac\u201d infinite idle",
+            "Story ending"
+          ],
+          "recommendation": "Reach a revenue target + unlock all upgrades \u00e2\u20ac\u201d gives clear progression and satisfying endpoint",
+          "confidence": "70%",
+          "confidence_reason": "Depends on original design intent. User knows best.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 2,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "Should the game save state between sessions or reset each time?",
+          "context": "localStorage save would make it a true idle game. No save = arcade style. Significant architecture difference.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Save system implementation"
+        },
+        {
+          "id": "proactive_002",
+          "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
+          "context": "Affects whether we add analytics, sharing features, or mobile optimization pass.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Post-completion feature decisions"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Read squeeze-empire.html and document all current game systems \u00e2\u20ac\u201d what exists and what state each is in",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Identify all TODO comments or placeholder sections in the current file",
+          "size": "small",
+          "size_estimate": "10min",
+          "depends_on": "auto_001",
+          "status": "blocked",
+          "completed_date": null
+        },
+        {
+          "id": "auto_003",
+          "task": "Run PERSONA adversarial test \u00e2\u20ac\u201d play as confused first-time user for 20 sessions, log all friction points",
+          "size": "medium",
+          "size_estimate": "60min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [],
+      "assumption_log": [
+        {
+          "assumption": "Single HTML file constraint is non-negotiable",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        },
+        {
+          "assumption": "Vanilla JS only, no frameworks",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [],
+      "minimum_viable_tests": [
+        {
+          "feature": "Late-game completion",
+          "done_means": [
+            "Player can reach the defined win condition through normal play",
+            "No economy exploits that skip progression",
+            "All mini-games functional at late-game state",
+            "No console errors during 10 minute play session"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-12",
+          "mode": "setup",
+          "completed": [
+            "state.json initialized"
+          ],
+          "blockers": [],
+          "next_action": "Read current file state, identify late-game gaps, confirm win condition"
+        },
+        {
+          "date": "2026-03-16",
+          "mode": "janitor",
+          "completed": [
+            "Production file squeeze-empire.html located and moved to project folder",
+            "state.json updated: status active, handoff updated"
+          ],
+          "blockers": [],
+          "next_action": "Resume late-game progression implementation"
+        }
+      ],
+      "strategy_notes": []
+    }
+  },
+  "whatnot-apps": {
+    "type": "new",
+    "current": {
+      "_schema_version": "1.0",
+      "_project": "whatnot-apps",
+      "_folder": "whatnot-apps",
+      "_created": "2026-03-12",
+      "_last_updated": "2026-03-12",
+      "project": {
+        "name": "Whatnot Applications",
+        "description": "Job application materials for Whatnot remote roles: Fraud Agent, Trust & Safety Agent, CX Agent Overnight.",
+        "status": "active",
+        "complexity_budget": "low",
+        "progress_pct": 50,
+        "persona": "Whatnot hiring manager reviewing 50+ applications. Skims in 30 seconds. Looking for: platform knowledge, trust/safety instincts, resale market credibility, async communication ability.",
+        "promotion_pending": false
+      },
+      "files": {
+        "production": "resume-fraud-agent.docx",
+        "draft": "resume-fraud-agent.draft.docx",
+        "cache": "resume-fraud-agent.cache.docx",
+        "last_cache_snapshot": null,
+        "cache_reason": null
+      },
+      "session": {
+        "mode": null,
+        "active": false,
+        "started": null,
+        "handoff_note": "Three resumes and cover letter drafted. Key differentiator: resale market network + eBay operation + Commonwealth Picker moderation. Review and refine before submitting."
+      },
+      "test_lock": {
+        "locked": false,
+        "lock_reason": null,
+        "lock_started": null,
+        "locked_by": null,
+        "unlock_condition": null,
+        "findings_count": 0
+      },
+      "decisions": [
+        {
+          "id": "decision_001",
+          "question": "Which Whatnot role to prioritize for application submission first?",
+          "options": [
+            "Fraud Agent",
+            "Trust & Safety Agent",
+            "CX Agent Overnight"
+          ],
+          "recommendation": "Trust & Safety Agent \u00e2\u20ac\u201d best alignment with moderation background and written communication preference",
+          "confidence": "75%",
+          "confidence_reason": "Commonwealth Picker moderation experience is a direct differentiator for T&S. Fraud Agent is close second.",
+          "depends_on": null,
+          "status": "pending",
+          "answer": null,
+          "resolved_by": null,
+          "resolved_date": null,
+          "created": "2026-03-12",
+          "expires_after_sessions": 1,
+          "sessions_pending": 0
+        }
+      ],
+      "proactive_questions": [
+        {
+          "id": "proactive_001",
+          "question": "Do you have the actual current Whatnot job posting URLs to tailor against?",
+          "context": "Resumes tailored to exact posting language score significantly higher on ATS systems.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Final resume tailoring pass"
+        },
+        {
+          "id": "proactive_002",
+          "question": "Should we build a general Whatnot cover letter or three separate role-specific ones?",
+          "context": "Separate letters are stronger but more work. General letter with swap sections is faster.",
+          "answer": null,
+          "answered_date": null,
+          "unlocks": "Cover letter strategy"
+        }
+      ],
+      "autonomous_backlog": [
+        {
+          "id": "auto_001",
+          "task": "Review all three existing resume files \u00e2\u20ac\u201d identify gaps, inconsistencies, weak sections",
+          "size": "small",
+          "size_estimate": "20min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        },
+        {
+          "id": "auto_002",
+          "task": "Research current Whatnot job postings \u00e2\u20ac\u201d pull exact language and requirements",
+          "size": "small",
+          "size_estimate": "15min",
+          "depends_on": null,
+          "status": "ready",
+          "completed_date": null
+        }
+      ],
+      "decision_log": [],
+      "assumption_log": [
+        {
+          "assumption": "Blackdot Group role ending May 2026 \u00e2\u20ac\u201d available for remote start",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        },
+        {
+          "assumption": "Strong preference for written/async communication \u00e2\u20ac\u201d feature not liability for T&S",
+          "confirmed": true,
+          "confirmed_date": "2026-03-12"
+        }
+      ],
+      "scope_flags": [],
+      "reusable_findings": [],
+      "minimum_viable_tests": [
+        {
+          "feature": "Application ready",
+          "done_means": [
+            "Resume tailored to specific posting language",
+            "All dates and titles accurate",
+            "Differentiators (resale network, moderation) prominent in first third",
+            "Cover letter under 300 words",
+            "ATS-friendly formatting \u00e2\u20ac\u201d no tables, no headers that confuse parsers"
+          ],
+          "verified": false,
+          "verified_date": null
+        }
+      ],
+      "adversarial_log": [],
+      "backups": [],
+      "session_log": [
+        {
+          "date": "2026-03-12",
+          "mode": "setup",
+          "completed": [
+            "state.json initialized"
+          ],
+          "blockers": [],
+          "next_action": "Review existing materials, pull current job postings, prioritize role"
+        }
+      ],
+      "strategy_notes": []
+    }
+  }
+}
