@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19T17:32:17.619981",
+  "last_updated": "2026-03-19T17:39:52",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -23,7 +23,8 @@
     "session_logger.py complete",
     "workflow-intelligence.md complete",
     "standing-rules.json 10 rules loaded",
-    "inbox-manager.md built"
+    "inbox-manager.md built",
+    "inbox-manager.md built and first sync run"
   ],
   "pending": [
     "run scheduler register_tasks.py as admin",
@@ -32,11 +33,10 @@
     "watchdog project init",
     "ghost-book git init",
     "whiteboard scoring pass on 30+ items",
-    "inbox-manager daily sync first run",
     "wire complete_task() into all agent scripts"
   ],
   "blockers": [
     "scheduler registration needs admin terminal"
   ],
-  "next_recommended": "Init sysguard and watchdog projects, then run inbox-manager first sync"
+  "next_recommended": "Run company-registry pass1 overnight. Build sysguard and watchdog pass1 scripts."
 }
