@@ -3623,27 +3623,40 @@ function handleDriveAuth() {
     return;
   }
   setDriveStatus('connecting');
+  const redirectUri = window.location.href.split('?')[0].split('#')[0];
   const authUrl = `https://accounts.google.com/o/oauth2/v2/auth` +
     `?client_id=${encodeURIComponent(DRIVE_CLIENT_ID)}` +
-    `&redirect_uri=${encodeURIComponent(window.location.href.split('?')[0])}` +
+    `&redirect_uri=${encodeURIComponent(redirectUri)}` +
     `&response_type=token` +
     `&scope=${encodeURIComponent(DRIVE_SCOPE)}` +
     `&prompt=consent`;
-  window.location.href = authUrl;
+  const popup = window.open(authUrl, 'driveAuth', 'width=500,height=600,left=200,top=100');
+  if (!popup) {
+    setDriveStatus('disconnected');
+    alert('Popup blocked. Please allow popups for this page and try again.');
+    return;
+  }
+  // Poll for popup close or token delivery via postMessage
+  const pollTimer = setInterval(() => {
+    if (popup.closed) {
+      clearInterval(pollTimer);
+      if (!driveToken) setDriveStatus('disconnected');
+    }
+  }, 500);
 }
 
 function checkOAuthCallback() {
+  // When the popup lands back on this page as the redirect URI,
+  // parse the token from the hash and send it to the opener, then close.
+  if (!window.opener) return false;
   const hash = window.location.hash;
   if (!hash.includes('access_token')) return false;
-  const params = new URLSearchParams(hash.replace('#','?'));
+  const params = new URLSearchParams(hash.replace('#', '?'));
   const token = params.get('access_token');
   const expiresIn = parseInt(params.get('expires_in') || '3600');
   if (token) {
-    driveToken = token;
-    localStorage.setItem(DRIVE_TOKEN_KEY, token);
-    localStorage.setItem(DRIVE_TOKEN_EXPIRY_KEY, Date.now() + expiresIn * 1000);
-    // Clean URL
-    history.replaceState(null, '', window.location.pathname);
+    window.opener.postMessage({ type: 'drive-oauth-token', token, expiresIn }, '*');
+    window.close();
     return true;
   }
   return false;
@@ -4101,19 +4114,27 @@ Auto-discovered from Drive. Read state.json for current status before proceeding
 }
 
 function initDrive() {
-  // Check if returning from OAuth redirect
-  const justAuthed = checkOAuthCallback();
-  if (justAuthed) {
+  // Handle popup OAuth token delivery
+  checkOAuthCallback();
+
+  // Listen for token postMessage from OAuth popup
+  window.addEventListener('message', (event) => {
+    if (!event.data || event.data.type !== 'drive-oauth-token') return;
+    const { token, expiresIn } = event.data;
+    if (!token) return;
+    driveToken = token;
+    localStorage.setItem(DRIVE_TOKEN_KEY, token);
+    localStorage.setItem(DRIVE_TOKEN_EXPIRY_KEY, Date.now() + expiresIn * 1000);
     setDriveStatus('connected');
     document.getElementById('drive-btn').style.display = 'none';
     document.getElementById('refresh-btn').style.display = 'block';
     addLogEntry({
       time: new Date().toISOString().slice(0,16).replace('T',' — '),
       project: '_DRIVE',
-      text: 'Google Drive connected. Click REFRESH to sync projects.'
+      text: 'Google Drive connected via popup. Click REFRESH to sync projects.'
     });
-    return;
-  }
+  });
+
   // Check for saved token
   if (loadSavedToken()) {
     setDriveStatus('connected');
