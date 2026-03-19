@@ -1,44 +1,42 @@
 {
-  "generated": "2026-03-18",
-  "verdict": "GREEN",
-  "issue_count": 0,
+  "generated": "2026-03-19T01:18:03.941604",
+  "verdict": "DEGRADED",
+  "issue_count": 4,
   "passes": {
     "tools": {
-      "status": "GREEN",
-      "results": {
-        "git": "2.53.0 OK",
-        "node": "v24.14.0 OK",
-        "npm": "11.9.0 OK",
-        "python": "3.13.7 OK",
-        "claude_code": "2.1.78 OK",
-        "repomix": "1.12.0 OK",
-        "gh": "2.88.1 OK",
-        "ollama": "UP via API — gemma3:4b loaded"
-      }
+      "git": "2.53.0 OK",
+      "node": "v24.14.0 OK",
+      "npm": "11.9.0 OK",
+      "python": "3.13.7 OK",
+      "claude_code": "2.1.79 OK (above expected 2.1.78)",
+      "repomix": "1.12.0 OK",
+      "ollama": "0.12.10 UP"
     },
-    "apis": {
-      "status": "GREEN",
-      "results": {
-        "anthropic": "SET",
-        "gemini": "UP",
-        "openrouter": "UP",
-        "ollama": "UP — gemma3:4b",
-        "supabase": "UP — key valid, table reachable"
-      }
+    "endpoints": {
+      "anthropic": "SET",
+      "gemini": "UP",
+      "openrouter": "UP",
+      "ollama": "UP \u2014 gemma3:4b"
     },
     "projects": {
-      "status": "GREEN",
-      "checked": 13,
-      "issues": []
+      "issues": [
+        "NO STATE.JSON: sentinel-core",
+        "NO STATE.JSON: sentinel-performer",
+        "NO STATE.JSON: sentinel-viewer",
+        "UNCOMMITTED (1 file): _studio \u2014 job-source-crawler.md"
+      ],
+      "clean": 12
     },
     "studio_files": {
-      "status": "GREEN",
-      "results": "All critical files present"
+      "critical": "all present",
+      "optional_missing": [
+        "gateway-log.txt"
+      ]
     },
     "mobile_answers": {
-      "status": "GREEN",
-      "results": "No pending mobile answers"
+      "pending_sessions": 1,
+      "pending_answers": 2,
+      "action": "run importMobileAnswers in studio"
     }
-  },
-  "action_items": []
+  }
 }
