@@ -213,6 +213,84 @@ print('By type:', dict(types))
 "
 ```
 
+## Utility Candidate Detection
+
+When the same error pattern appears in 2+ agent logs or agent scripts,
+flag it as a `tool` type whiteboard entry.
+
+### Detection Pass (runs during Pass 1 ingest)
+
+```python
+import json, os, re, glob
+from datetime import datetime
+
+UTILITIES_DIR = 'G:/My Drive/Projects/_studio/utilities'
+WHITEBOARD    = 'G:/My Drive/Projects/_studio/whiteboard.json'
+
+# Error patterns that signal a missing shared utility
+UTILITY_SIGNALS = [
+    ('UnicodeEncodeError',          'unicode_safe.py',  'Windows terminal encoding crashes'),
+    ('list.*has no attribute',      'unicode_safe.py',  'API returns list where string expected'),
+    ('HTTP Error 40[39]',           'scraper_utils.py', 'HTTP blocking / rate limiting'),
+    ('JSONDecodeError',             'unicode_safe.py',  'JSON file encoding mismatch'),
+    ('Max retries exceeded',        'scraper_utils.py', 'Missing retry/backoff logic'),
+    ('ConnectionRefusedError.*11434', 'ollama_utils.py','Ollama connection handling'),
+    ('quota.*exceeded|429.*gemini', 'gemini_utils.py',  'Gemini rate limit handling'),
+]
+
+# Scan agent log files for error signals
+log_files = glob.glob('G:/My Drive/Projects/_studio/scheduler/logs/*.log') + \
+            glob.glob('C:/Users/*/AppData/Local/Temp/*.log')
+
+error_counts = {}  # pattern -> list of files that hit it
+for log_path in log_files:
+    try:
+        content = open(log_path, errors='replace').read()
+        for pattern, utility, description in UTILITY_SIGNALS:
+            if re.search(pattern, content, re.IGNORECASE):
+                error_counts.setdefault(pattern, []).append(log_path)
+    except Exception:
+        pass
+
+# If same error in 2+ agents -> whiteboard tool candidate
+wb = json.load(open(WHITEBOARD)) if os.path.exists(WHITEBOARD) else {'items': []}
+items = wb.get('items', wb.get('ideas', []))
+existing_ids = {i.get('id') for i in items}
+
+for pattern, utility, description in UTILITY_SIGNALS:
+    files = error_counts.get(pattern, [])
+    if len(files) >= 2:
+        utility_exists = os.path.exists(os.path.join(UTILITIES_DIR, utility))
+        idea_id = f'wb-tool-{utility.replace(".py","")}'
+        if idea_id not in existing_ids and not utility_exists:
+            items.append({
+                'id': idea_id,
+                'title': f'Build shared utility: {utility}',
+                'type': 'tool',
+                'source_agent': 'whiteboard-agent',
+                'description': (f'{description}. Error pattern "{pattern}" '
+                                f'found in {len(files)} agent logs. '
+                                f'Build once in utilities/, import everywhere.'),
+                'tags': ['tool', 'utilities', 'agent-infra', 'dx'],
+                'status': 'pending_review',
+                'created': datetime.now().isoformat()[:10],
+                'affected_agents': files[:5],
+            })
+            print(f'  [TOOL CANDIDATE] {utility}: seen in {len(files)} agents')
+
+wb['items'] = items
+wb['last_updated'] = datetime.now().isoformat()
+json.dump(wb, open(WHITEBOARD, 'w'), indent=2)
+```
+
+### Rules
+- Only flag as a tool candidate if the **same error** hits **2+ different agents**
+- Check `utilities/README.md` first — don't re-flag already-built utilities
+- A new utility gets added to: `utilities/`, `utilities/README.md`, `supervisor.md` registry
+- Utility entries in whiteboard use `type: tool` and tag `agent-infra`
+
+---
+
 ## Filter Commands
 
 When loading whiteboard ask for filtered views:

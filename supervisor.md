@@ -242,6 +242,44 @@ print('Efficiency ledger updated')
 "
 ```
 
+## Utilities Registry Check
+
+When any agent reports a failure via `supervisor-inbox.json`, Supervisor
+runs this check **before** requesting a new build from Claude:
+
+```python
+UTILITIES_REGISTRY = {
+    'UnicodeEncodeError':     ('unicode_safe.py', 'safe_print / safe_str'),
+    'charmap codec':          ('unicode_safe.py', 'safe_print / safe_str'),
+    "list.*has no attribute": ('unicode_safe.py', 'to_str'),
+    'HTTP Error 403':         ('scraper_utils.py', 'fetch with retry'),
+    'HTTP Error 429':         ('scraper_utils.py', 'fetch with exponential backoff'),
+    'JSONDecodeError':        ('unicode_safe.py', 'safe_json_load'),
+    'ConnectionRefused.*11434': (None, 'ollama_utils.py — NOT YET BUILT'),
+    'Gemini.*quota':          (None, 'gemini_utils.py — NOT YET BUILT'),
+}
+# Canonical utility location: G:/My Drive/Projects/_studio/utilities/
+# README: G:/My Drive/Projects/_studio/utilities/README.md
+```
+
+### Failure Triage Protocol
+
+```
+1. Read supervisor-inbox.json for new scraper_failure / agent_error entries
+2. Extract error type from 'issue' field
+3. Check UTILITIES_REGISTRY for a matching utility
+4. IF utility exists:
+     → Tell agent: "Import {utility} from utilities/ and use {function}"
+     → Mark inbox item: status='resolved', resolution='use_existing_utility'
+5. IF utility does NOT exist:
+     → Check if same error appears in 2+ agents (utility candidate)
+     → IF yes: create new utility in utilities/, update README, add to whiteboard
+     → IF no: escalate to INBOX for human decision
+6. Log resolution in efficiency-ledger.json
+```
+
+---
+
 ## Running Supervisor
 ```
 Load supervisor.md. Run supervisor cycle now.
