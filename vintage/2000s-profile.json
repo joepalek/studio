@@ -1,0 +1,123 @@
+{
+  "decade": "2000s",
+  "slang": [
+    "bling-bling",
+    "pwned",
+    "crunk",
+    "my bad",
+    "wazzup",
+    "bootylicious",
+    "fo shizzle",
+    "chick flick",
+    "bromance",
+    "word up"
+  ],
+  "concerns": [
+    "Global terrorism (post 9/11)",
+    "Economic recession and financial stability",
+    "Rising energy prices",
+    "Increasing food prices",
+    "Protectionist tensions due to emerging economies"
+  ],
+  "aspirations": [
+    "Owning a flat-screen television",
+    "Getting a powerful home computer for internet and media",
+    "Having a popular online presence on platforms like MySpace",
+    "Achieving financial stability and homeownership",
+    "Owning a portable MP3 player like an iPod"
+  ],
+  "fashion": {
+    "men": "Men's fashion saw a transition from baggy clothes to more fitted styles, often incorporating graphic tees, cargo shorts, and athletic wear. Layered looks and casual streetwear were popular, along with a resurgence of retro influences.",
+    "women": "Women embraced low-rise jeans, Juicy Couture tracksuits, Ugg boots, and bohemian-inspired tops. Tube tops, cropped jackets, and Von Dutch hats were also prominent, with a mix of casual comfort and bold, often sparkly, accessories.",
+    "colors": [
+      "Pink",
+      "Baby Blue",
+      "Olive Green"
+    ]
+  },
+  "food": [
+    "Gourmet cupcakes",
+    "Energy drinks (e.g., Red Bull)",
+    "Panini sandwiches",
+    "Sushi (increasingly mainstream)",
+    "Atkins diet foods"
+  ],
+  "entertainment": {
+    "tv": [
+      "Friends",
+      "American Idol",
+      "Lost"
+    ],
+    "music": [
+      "Pop Punk (e.g., Green Day)",
+      "Hip Hop (e.g., Eminem, Jay-Z)",
+      "Pop Divas (e.g., Britney Spears, Beyonc\u00e9)"
+    ],
+    "movies": [
+      "The Lord of the Rings Trilogy",
+      "Harry Potter film series",
+      "Avatar"
+    ],
+    "games": [
+      "Grand Theft Auto series",
+      "World of Warcraft"
+    ]
+  },
+  "technology": {
+    "home": [
+      "DVD Player",
+      "Flat-screen LCD/Plasma TV",
+      "Desktop computer with CRT or early LCD monitor"
+    ],
+    "aspirational": [
+      "iPod",
+      "Early smartphones (e.g., BlackBerry)"
+    ],
+    "work": [
+      "Desktop PCs with LCD monitors",
+      "BlackBerry devices for email and communication"
+    ]
+  },
+  "defining_products": [
+    "Apple iPod",
+    "PlayStation 2",
+    "BlackBerry",
+    "DVD Player",
+    "MySpace"
+  ],
+  "failed_products": [
+    {
+      "name": "Microsoft Zune",
+      "why_failed": "Attempted to compete with the dominant iPod but lacked a compelling ecosystem and late market entry, failing to capture significant market share.",
+      "modern_gap": "No, the market for dedicated portable music players has largely been superseded by smartphones and streaming services."
+    }
+  ],
+  "ebay_hot_now": [
+    "Y2K fashion pieces (e.g., low-rise jeans, tracksuits)",
+    "Original Apple iPods (especially early models)",
+    "PlayStation 2 consoles and popular game titles"
+  ],
+  "ebay_sleepers": [
+    "Early 2000s digital cameras (e.g., Nikon Coolpix, Canon PowerShot)",
+    "Specific retro flip phones (e.g., Motorola RAZR)",
+    "Original DVD box sets of popular TV series"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "That's hot.",
+      "My bad.",
+      "Word."
+    ],
+    "worldview": "There was an initial optimism for a new millennium, tempered by a growing awareness of global threats like terrorism and significant economic instability by the decade's end. People were navigating the early stages of a digitally interconnected world, often with a sense of wonder and occasional skepticism.",
+    "speech_patterns": "Characterized by the increasing use of abbreviated text-speak in casual conversation and a relaxed, often ironic tone, sometimes with a Valley Girl-esque inflection.",
+    "taboo_topics": [
+      "Mental health issues",
+      "Personal financial struggles (pre-2008 crash)"
+    ]
+  },
+  "story_accuracy": [
+    "Ubiquitous smartphones with constant high-speed internet access",
+    "Widespread use of modern social media platforms (e.g., Instagram, TikTok)",
+    "Everyone owning a large flat-screen high-definition television from the early part of the decade"
+  ]
+}

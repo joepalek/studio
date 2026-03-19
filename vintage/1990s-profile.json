@@ -1,0 +1,130 @@
+{
+  "decade": "1990s",
+  "slang": [
+    "As If!",
+    "Talk to the hand",
+    "Duh",
+    "Whatever",
+    "Word up",
+    "Boo-yah",
+    "All that and a bag of chips",
+    "Psych!",
+    "Not!",
+    "Da bomb"
+  ],
+  "concerns": [
+    "Post-Cold War geopolitical shifts and anti-Western sentiment",
+    "Economic recovery and stability in emerging markets like China",
+    "The ongoing HIV/AIDS epidemic, despite public education efforts",
+    "Increasing concerns over school violence and social alienation",
+    "The early stages of the 'digital divide' regarding internet access"
+  ],
+  "aspirations": [
+    "Gaining internet access for personal use at home",
+    "Owning a compact, 'cool' mobile phone",
+    "Achieving career success in a seemingly stable global economy",
+    "Expressing individuality through alternative music and fashion",
+    "Experiencing a sense of global community and multicultural understanding"
+  ],
+  "fashion": {
+    "men": "Men's fashion often featured baggy jeans, flannel shirts, and oversized t-shirts, heavily influenced by grunge and hip-hop culture. Sportswear, including tracksuits and branded athletic gear, also became a prominent casual staple for everyday wear.",
+    "women": "Women's fashion ranged from minimalist slip dresses and crop tops to grunge-inspired ripped jeans and oversized sweaters. Platform shoes, chokers, and cargo pants were also popular trends, alongside preppy styles like plaid skirts.",
+    "colors": [
+      "Denim Blue",
+      "Olive Green",
+      "Burgundy",
+      "Black",
+      "Neon Green"
+    ]
+  },
+  "food": [
+    "Lunchables",
+    "Dunkaroos",
+    "Surge soda",
+    "Gushers",
+    "Bagel Bites"
+  ],
+  "entertainment": {
+    "tv": [
+      "Friends",
+      "Seinfeld",
+      "The X-Files"
+    ],
+    "music": [
+      "Grunge (Nirvana)",
+      "Hip-hop (Tupac/Notorious B.I.G.)",
+      "Pop (Spice Girls/Britney Spears)"
+    ],
+    "movies": [
+      "Pulp Fiction",
+      "Titanic",
+      "Jurassic Park"
+    ],
+    "games": [
+      "Nintendo 64 / PlayStation",
+      "Rollerblading"
+    ]
+  },
+  "technology": {
+    "home": [
+      "VCR/VHS player",
+      "Dial-up modem",
+      "CD player"
+    ],
+    "aspirational": [
+      "Compact mobile phone",
+      "Desktop PC with internet access"
+    ],
+    "work": [
+      "Fax machine",
+      "Desktop computer with Windows 95"
+    ]
+  },
+  "defining_products": [
+    "Tamagotchi",
+    "Nintendo 64",
+    "Sony Walkman (CD player)",
+    "Beanie Babies",
+    "Blockbuster Video Membership Card"
+  ],
+  "failed_products": [
+    {
+      "name": "Apple Newton",
+      "why_failed": "It was ahead of its time, expensive, and suffered from clunky handwriting recognition and limited battery life.",
+      "modern_gap": "No, the concept of a personal digital assistant was vastly improved and superseded by smartphones."
+    },
+    {
+      "name": "Virtual Boy",
+      "why_failed": "Suffered from monochromatic red display, caused eye strain, lacked immersive games, and was marketed poorly.",
+      "modern_gap": "No, modern VR headsets offer full color and far superior immersion, rendering the Virtual Boy's niche obsolete."
+    }
+  ],
+  "ebay_hot_now": [
+    "Vintage band t-shirts (e.g., Nirvana, Pearl Jam)",
+    "Original Pok\u00e9mon trading card sets (Base Set, Jungle, Fossil)",
+    "First-generation Tamagotchi virtual pets"
+  ],
+  "ebay_sleepers": [
+    "Rare VHS tapes (limited editions, cult classics)",
+    "Early CD boomboxes and portable CD players (for retro aesthetic)",
+    "Pogs (less common complete sets or slammer collections)"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Booyah!",
+      "You go, girl!",
+      "Whatever!"
+    ],
+    "worldview": "People from the 90s generally viewed the world with a sense of cautious optimism, shaped by the end of the Cold War and the perceived rise of global peace and prosperity for many Western countries. There was a growing awareness of diverse cultures and a burgeoning belief in individual expression through new media.",
+    "speech_patterns": "Their speech often incorporated irony, popular culture references, and a laid-back, sometimes sarcastic tone, frequently using new slang.",
+    "taboo_topics": [
+      "Discussing personal finances or salary openly",
+      "Mental health struggles or therapy"
+    ]
+  },
+  "story_accuracy": [
+    "Ubiquitous and fast internet access or reliance on smartphones (dial-up was common, cell phones were basic and expensive).",
+    "People casually discussing very personal topics like mental health or sexuality as openly as in modern times.",
+    "Modern social media platforms like Instagram or TikTok being used for communication or influence."
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "hot_items": [
+    {
+      "decade": "1920s",
+      "item": "Art Deco furniture and decor"
+    },
+    {
+      "decade": "1920s",
+      "item": "Vintage flapper dresses and accessories"
+    },
+    {
+      "decade": "1920s",
+      "item": "Prohibition-era collectibles (hip flasks, barware)"
+    },
+    {
+      "decade": "1920s",
+      "item": "Working antique radios"
+    },
+    {
+      "decade": "1920s",
+      "item": "Early jazz records (78 rpm)"
+    },
+    {
+      "decade": "1930s",
+      "item": "Art Deco furniture and decor"
+    },
+    {
+      "decade": "1930s",
+      "item": "Vintage 1930s radios"
+    },
+    {
+      "decade": "1930s",
+      "item": "Depression-era glass"
+    },
+    {
+      "decade": "1940s",
+      "item": "WWII military uniforms and memorabilia"
+    },
+    {
+      "decade": "1940s",
+      "item": "Vintage advertising posters (wartime or early post-war)"
+    },
+    {
+      "decade": "1940s",
+      "item": "1940s costume jewelry (Bakelite, sterling silver)"
+    },
+    {
+      "decade": "1940s",
+      "item": "Big Band era vinyl records (78 RPMs)"
+    },
+    {
+      "decade": "1940s",
+      "item": "Vintage Bakelite kitchenware"
+    },
+    {
+      "decade": "1950s",
+      "item": "Mid-century modern furniture (e.g., Eames, Knoll)"
+    },
+    {
+      "decade": "1950s",
+      "item": "Vintage Pyrex and Tupperware kitchenware"
+    },
+    {
+      "decade": "1950s",
+      "item": "Original rock and roll vinyl records and 45s"
+    },
+    {
+      "decade": "1960s",
+      "item": "Vintage Mod clothing (original pieces)"
+    },
+    {
+      "decade": "1960s",
+      "item": "Original vinyl records (especially British Invasion/Folk)"
+    },
+    {
+      "decade": "1960s",
+      "item": "Mid-century modern furniture"
+    },
+    {
+      "decade": "1970s",
+      "item": "Vintage Concert T-shirts (Rock/Disco)"
+    },
+    {
+      "decade": "1970s",
+      "item": "Atari 2600 consoles and games"
+    },
+    {
+      "decade": "1970s",
+      "item": "Mid-Century Modern Furniture (especially those with 70s aesthetics)"
+    },
+    {
+      "decade": "1980s",
+      "item": "Vintage band t-shirts"
+    },
+    {
+      "decade": "1980s",
+      "item": "Atari game consoles and cartridges"
+    },
+    {
+      "decade": "1980s",
+      "item": "Retro sneakers (e.g., original Air Jordans)"
+    },
+    {
+      "decade": "1990s",
+      "item": "Vintage band t-shirts (e.g., Nirvana, Pearl Jam)"
+    },
+    {
+      "decade": "1990s",
+      "item": "Original Pok\u00e9mon trading card sets (Base Set, Jungle, Fossil)"
+    },
+    {
+      "decade": "1990s",
+      "item": "First-generation Tamagotchi virtual pets"
+    },
+    {
+      "decade": "2000s",
+      "item": "Y2K fashion pieces (e.g., low-rise jeans, tracksuits)"
+    },
+    {
+      "decade": "2000s",
+      "item": "Original Apple iPods (especially early models)"
+    },
+    {
+      "decade": "2000s",
+      "item": "PlayStation 2 consoles and popular game titles"
+    },
+    {
+      "decade": "2010s",
+      "item": "First-generation iPhone/iPad models"
+    },
+    {
+      "decade": "2010s",
+      "item": "Limited edition streetwear (e.g., early Supreme collaborations)"
+    },
+    {
+      "decade": "2010s",
+      "item": "Rare Pop! Vinyl figures from early releases"
+    }
+  ],
+  "sleepers": [
+    {
+      "decade": "1920s",
+      "item": "1920s sheet music and songbooks"
+    },
+    {
+      "decade": "1920s",
+      "item": "Vintage postcards of cityscapes or landmarks"
+    },
+    {
+      "decade": "1920s",
+      "item": "Everyday kitchenware and glassware from the era"
+    },
+    {
+      "decade": "1920s",
+      "item": "Lesser-known jazz or blues 78s"
+    },
+    {
+      "decade": "1920s",
+      "item": "Original advertising ephemera"
+    },
+    {
+      "decade": "1930s",
+      "item": "Original 1930s magazines and newspapers"
+    },
+    {
+      "decade": "1930s",
+      "item": "Vintage advertising ephemera (posters, tins)"
+    },
+    {
+      "decade": "1930s",
+      "item": "Everyday household items (e.g., bakelite kitchenware, simple toys)"
+    },
+    {
+      "decade": "1940s",
+      "item": "Wartime propaganda pamphlets and ephemera"
+    },
+    {
+      "decade": "1940s",
+      "item": "Regional recipe books with rationing tips"
+    },
+    {
+      "decade": "1940s",
+      "item": "Utility company or local business advertising (paper goods)"
+    },
+    {
+      "decade": "1940s",
+      "item": "Everyday household items (e.g., specific brand tin boxes)"
+    },
+    {
+      "decade": "1940s",
+      "item": "Children's paper toys and games"
+    },
+    {
+      "decade": "1950s",
+      "item": "Unused vintage sewing patterns and fabric from the era"
+    },
+    {
+      "decade": "1950s",
+      "item": "Lesser-known 'B' movie posters and lobby cards"
+    },
+    {
+      "decade": "1950s",
+      "item": "Early Cold War propaganda ephemera (pamphlets, postcards)"
+    },
+    {
+      "decade": "1960s",
+      "item": "Original 60s magazines (e.g., Life, Look)"
+    },
+    {
+      "decade": "1960s",
+      "item": "Unopened vintage board games"
+    },
+    {
+      "decade": "1960s",
+      "item": "Early folk music albums by obscure artists"
+    },
+    {
+      "decade": "1970s",
+      "item": "Vintage Movie Posters (less iconic films)"
+    },
+    {
+      "decade": "1970s",
+      "item": "Collectible Board Games (non-mass market titles)"
+    },
+    {
+      "decade": "1970s",
+      "item": "Forgotten Vinyl Albums (obscure genres or artists before widespread reissues)"
+    },
+    {
+      "decade": "1980s",
+      "item": "Original VHS tapes (sealed or rare editions)"
+    },
+    {
+      "decade": "1980s",
+      "item": "80s movie posters and lobby cards"
+    },
+    {
+      "decade": "1980s",
+      "item": "Vintage cassette players and boomboxes"
+    },
+    {
+      "decade": "1990s",
+      "item": "Rare VHS tapes (limited editions, cult classics)"
+    },
+    {
+      "decade": "1990s",
+      "item": "Early CD boomboxes and portable CD players (for retro aesthetic)"
+    },
+    {
+      "decade": "1990s",
+      "item": "Pogs (less common complete sets or slammer collections)"
+    },
+    {
+      "decade": "2000s",
+      "item": "Early 2000s digital cameras (e.g., Nikon Coolpix, Canon PowerShot)"
+    },
+    {
+      "decade": "2000s",
+      "item": "Specific retro flip phones (e.g., Motorola RAZR)"
+    },
+    {
+      "decade": "2000s",
+      "item": "Original DVD box sets of popular TV series"
+    },
+    {
+      "decade": "2010s",
+      "item": "Nintendo 3DS special editions"
+    },
+    {
+      "decade": "2010s",
+      "item": "First-generation Apple Watch models"
+    },
+    {
+      "decade": "2010s",
+      "item": "Pebble smartwatches (for collectors of tech history)"
+    }
+  ],
+  "product_gaps": [
+    {
+      "decade": "1920s",
+      "product": "The 'Autodynophone'",
+      "why_failed": "An overly complex and expensive early record player that couldn't compete with simpler, more affordable phonographs for the mass market.",
+      "modern_gap": "No, modern digital music players have made such complex, single-purpose devices obsolete.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1920s"
+      ]
+    },
+    {
+      "decade": "1920s",
+      "product": "Early Automatic Dishwashers (e.g., 'Sanitor' brand)",
+      "why_failed": "While invented, early models were often unreliable, inefficient, very expensive, and required significant manual effort, making them unappealing to most households.",
+      "modern_gap": "No, automatic dishwashers are now highly effective, affordable, and common household appliances.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1920s"
+      ]
+    },
+    {
+      "decade": "1930s",
+      "product": "Dymaxion Car",
+      "why_failed": "Its radical design, high cost, and association with fatal accidents scared off investors and the public.",
+      "modern_gap": "Yes, there's still a market for highly fuel-efficient, aerodynamic, multi-purpose vehicles, though modern iterations differ greatly.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1930s"
+      ]
+    },
+    {
+      "decade": "1930s",
+      "product": "High-end consumer phonographs",
+      "why_failed": "Expensive luxury items were largely inaccessible to the general public struggling with widespread poverty during the Depression.",
+      "modern_gap": "No, modern digital music players and streaming services have filled this gap more effectively and affordably for mass consumption.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1930s"
+      ]
+    },
+    {
+      "decade": "1930s",
+      "product": "Automatic dishwashers (early models)",
+      "why_failed": "They were very expensive, unreliable, and often required specialized plumbing, making them impractical for most households.",
+      "modern_gap": "No, modern dishwashers are efficient, affordable, and a common household appliance, completely filling the original need.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1930s"
+      ]
+    },
+    {
+      "decade": "1940s",
+      "product": "Tucker Torpedo",
+      "why_failed": "Despite innovative safety features and design, the company faced legal troubles, accusations of fraud, and production challenges, leading to its collapse after only 51 cars were built.",
+      "modern_gap": "No, the automotive industry continues to innovate on safety and design, but the Tucker's forward-thinking approach was ahead of its time.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1940s"
+      ]
+    },
+    {
+      "decade": "1950s",
+      "product": "Ford Edsel",
+      "why_failed": "Its design was polarizing (especially the 'horse-collar' grille), it was overpriced, launched during an economic recession, and suffered from quality control issues and poor marketing.",
+      "modern_gap": "No, the market for distinct mid-range family cars is well-served by numerous brands today, and consumer preferences have shifted significantly from the Edsel's concept.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1950s"
+      ]
+    },
+    {
+      "decade": "1950s",
+      "product": "Nuclear-Powered Cars (concept)",
+      "why_failed": "While research and prototypes existed, they failed due to immense safety concerns regarding radiation shielding, the prohibitive cost of development and fuel, and overall impracticality for consumer use.",
+      "modern_gap": "No, while electric and alternative fuel vehicles are prevalent, the fundamental safety and logistical issues of personal nuclear propulsion remain too great to ever fill this conceptual gap.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1950s"
+      ]
+    },
+    {
+      "decade": "1960s",
+      "product": "DuPont Corfam",
+      "why_failed": "Marketed as a superior synthetic leather, it failed to gain widespread acceptance in footwear due to its poor breathability and comfort compared to natural leather.",
+      "modern_gap": "Yes, the search for a perfect synthetic leather that perfectly mimics natural properties and sustainability is still ongoing, though modern vegan leathers are significantly better.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1960s"
+      ]
+    },
+    {
+      "decade": "1970s",
+      "product": "Quadraphonic Sound",
+      "why_failed": "Expensive, complex setup, lack of standardized formats, and limited content hindered widespread adoption by consumers.",
+      "modern_gap": "No, the desire for immersive audio is now filled by surround sound and object-based audio technologies like Dolby Atmos.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1970s"
+      ]
+    },
+    {
+      "decade": "1970s",
+      "product": "8-Track Tapes",
+      "why_failed": "Prone to jamming, inferior sound quality compared to cassettes and vinyl, and the inability to easily skip tracks led to their decline.",
+      "modern_gap": "No, convenient and portable music consumption is now filled by digital streaming services and improved physical formats.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1970s"
+      ]
+    },
+    {
+      "decade": "1980s",
+      "product": "New Coke",
+      "why_failed": "Public backlash and strong preference for the original formula led to its quick withdrawal shortly after launch.",
+      "modern_gap": "No, the market for various cola formulations and brands is well-covered.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1980s"
+      ]
+    },
+    {
+      "decade": "1980s",
+      "product": "DeLorean DMC-12",
+      "why_failed": "Plagued by financial difficulties, quality control issues, and limited market appeal beyond its futuristic design and 'Back to the Future' fame.",
+      "modern_gap": "No, niche luxury and unique car markets continue to thrive with various high-performance and design-focused vehicles.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1980s"
+      ]
+    },
+    {
+      "decade": "1980s",
+      "product": "Betamax VCR",
+      "why_failed": "Lost the video format war to VHS due to restrictive licensing, shorter recording times, and higher cost, despite arguably superior technical quality.",
+      "modern_gap": "No, physical media formats have largely been superseded by digital streaming and downloads.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1980s"
+      ]
+    },
+    {
+      "decade": "1990s",
+      "product": "Apple Newton",
+      "why_failed": "It was ahead of its time, expensive, and suffered from clunky handwriting recognition and limited battery life.",
+      "modern_gap": "No, the concept of a personal digital assistant was vastly improved and superseded by smartphones.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1990s"
+      ]
+    },
+    {
+      "decade": "1990s",
+      "product": "Virtual Boy",
+      "why_failed": "Suffered from monochromatic red display, caused eye strain, lacked immersive games, and was marketed poorly.",
+      "modern_gap": "No, modern VR headsets offer full color and far superior immersion, rendering the Virtual Boy's niche obsolete.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-1990s"
+      ]
+    },
+    {
+      "decade": "2000s",
+      "product": "Microsoft Zune",
+      "why_failed": "Attempted to compete with the dominant iPod but lacked a compelling ecosystem and late market entry, failing to capture significant market share.",
+      "modern_gap": "No, the market for dedicated portable music players has largely been superseded by smartphones and streaming services.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2000s"
+      ]
+    },
+    {
+      "decade": "2010s",
+      "product": "Google Glass",
+      "why_failed": "High price, privacy concerns, and limited practical use case for the average consumer made them socially awkward and commercially unviable.",
+      "modern_gap": "No, while AR glasses are still being developed, mainstream adoption for general consumers remains elusive without solving the core issues.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2010s"
+      ]
+    },
+    {
+      "decade": "2010s",
+      "product": "HTC First (Facebook Phone)",
+      "why_failed": "Over-reliance on Facebook integration, mediocre hardware, and users preferring the Facebook app on their existing devices led to poor sales.",
+      "modern_gap": "No, integrated social media operating systems or dedicated social phones did not become a trend and are not a modern gap.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2010s"
+      ]
+    },
+    {
+      "decade": "2010s",
+      "product": "Juicero",
+      "why_failed": "Extremely high price point for a device that simply squeezed pre-packaged juice bags that could be hand-squeezed, exposing its lack of innovation and value.",
+      "modern_gap": "No, while convenience in health food is desired, this specific, overpriced, non-functional solution is not a modern gap.",
+      "type": "product_gap",
+      "whiteboard_tags": [
+        "product_archaeology",
+        "vintage",
+        "vintage-2010s"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "1920s": {
+    "catchphrases": [
+      "That's the cat's pajamas!",
+      "Are you on the up and up?",
+      "Let's go to a speakeasy for some giggle water."
+    ],
+    "worldview": "They've survived a devastating war and now embrace a new era of prosperity, modern conveniences, and social liberation, often with an optimistic but sometimes naive view of continuous progress. There's a strong desire for fun and breaking from old traditions, especially among the youth.",
+    "speech_patterns": "Speech often combined a degree of formality with vibrant, colorful slang, particularly among younger generations, and a slightly more deliberate cadence than modern speech.",
+    "taboo_topics": [
+      "Open discussions of mental illness or trauma from the war",
+      "Explicit sexual topics in polite company"
+    ],
+    "slang": [
+      "Bee's Knees",
+      "Cat's Meow",
+      "Giggle Water",
+      "Hotsy-Totsy",
+      "Flapper",
+      "Speakeasy",
+      "Glad Rags",
+      "Hooch",
+      "Bootlegger",
+      "Dapper"
+    ],
+    "story_accuracy": [
+      "Characters using modern slang or idioms not yet invented.",
+      "Depicting widespread public television or air travel for ordinary citizens.",
+      "Over-generalizing the 'flapper' lifestyle to all women, ignoring class and regional differences.",
+      "Ignoring the pervasive impact of Prohibition on daily life and social interactions.",
+      "Underestimating the lingering social conservatism despite the changes."
+    ]
+  },
+  "1930s": {
+    "catchphrases": [
+      "Don't take any wooden nickels!",
+      "Everything's Jake.",
+      "Put a sock in it!"
+    ],
+    "worldview": "Having lived through the Depression, there's a deep-seated distrust of 'big' institutions and a profound appreciation for hard work and community support. Life is often seen as a struggle, but hope persists through resilience and simple pleasures.",
+    "speech_patterns": "Speech is generally more formal than modern language, but often laced with regionalisms and colorful idioms, delivered with a direct, sometimes stoic, tone.",
+    "taboo_topics": [
+      "Personal financial hardship (often a source of shame)",
+      "Mental illness"
+    ],
+    "slang": [
+      "Swell",
+      "Dame",
+      "Giggle water",
+      "Hooch",
+      "All wet",
+      "Baloney",
+      "Bellyacher",
+      "G-man",
+      "On the lam",
+      "Scram"
+    ],
+    "story_accuracy": [
+      "Depicting widespread ownership of modern conveniences like televisions or abundant luxury goods.",
+      "Characters using anachronistic slang or overly casual modern speech patterns.",
+      "Underestimating the omnipresent impact of the Great Depression on daily life and social structures."
+    ]
+  },
+  "1940s": {
+    "catchphrases": [
+      "Keep your chin up!",
+      "Loose lips sink ships!",
+      "V-for-Victory!",
+      "Can-do spirit!",
+      "Roger that!"
+    ],
+    "worldview": "People experienced immense upheaval and loss, fostering a deep sense of resilience, community, and patriotism. There was a strong belief in collective effort to overcome adversity and rebuild a better future, tempered by the lingering shadows of war.",
+    "speech_patterns": "Speech was generally more formal and less reliant on modern slang, often emphasizing directness and a pragmatic tone, especially concerning duty and civic responsibility.",
+    "taboo_topics": [
+      "Mental health issues (PTSD was not well understood)",
+      "Personal financial struggles (often seen as a private burden)",
+      "Open criticism of government policy during wartime"
+    ],
+    "slang": [
+      "G.I.",
+      "Swell",
+      "Cat (person)",
+      "Jazz (exaggerate)",
+      "Jitterbug",
+      "Keen",
+      "Take a powder",
+      "Loose lips sink ships",
+      "V-for-Victory",
+      "Roger that"
+    ],
+    "story_accuracy": [
+      "Characters using post-war slang or social attitudes that hadn't developed yet",
+      "Anachronistic technology, such as too many private cars during strict wartime rationing",
+      "Oversimplifying the geopolitical complexities leading to the Cold War, or portraying it with modern Cold War tropes"
+    ]
+  },
+  "1950s": {
+    "catchphrases": [
+      "Cool, daddy-o!",
+      "What's the scoop?",
+      "Can you dig it?"
+    ],
+    "worldview": "Life centers around family, community, and achieving the American Dream of prosperity and stability, often with a wary eye on communism. There's a strong belief in progress and traditional values, but also an emerging sense of youthful rebellion and a desire for individuality.",
+    "speech_patterns": "They often use expressions of casual agreement or enthusiasm, and may speak with a slight Midwestern or generic American accent often heard on period radio and early television.",
+    "taboo_topics": [
+      "Open criticism of the government or challenging social norms (especially regarding race or gender roles)",
+      "Personal struggles with mental health, domestic strife, or alternative sexual orientations"
+    ],
+    "slang": [
+      "Cool",
+      "Daddy-o",
+      "Square",
+      "Beatnik",
+      "Cat",
+      "Dig",
+      "Pad",
+      "Groovy",
+      "Flick",
+      "Goofball"
+    ],
+    "story_accuracy": [
+      "Characters having overtly modern sensibilities or discussing topics considered taboo at the time, especially concerning sexuality or mental health.",
+      "Depicting widespread color television or highly advanced home electronics that were not common until much later in the decade or subsequent decades.",
+      "Ignoring the pervasive racial segregation and social conformity pressures that defined much of the era, particularly in the US, or portraying society as more integrated than it was."
+    ]
+  },
+  "1960s": {
+    "catchphrases": [
+      "Groovy, man.",
+      "Can you dig it?",
+      "Peace and love."
+    ],
+    "worldview": "People from this era often questioned authority and traditional norms, seeking greater personal freedom and social justice amidst global tensions. They believed in the power of collective action to change society, striving for peace and an open-minded future, yet still grappled with deeply ingrained societal expectations.",
+    "speech_patterns": "Their speech often incorporated casual slang and expressions of optimism or discontent, sometimes with a laid-back, almost poetic cadence, particularly within countercultural circles.",
+    "taboo_topics": [
+      "Open discussions about sexuality (outside of counterculture circles)",
+      "Mental health issues and therapy"
+    ],
+    "slang": [
+      "Groovy",
+      "Far out",
+      "Cool",
+      "Bummer",
+      "Dig it",
+      "Bread",
+      "The Man",
+      "Flower power",
+      "Hang loose",
+      "Right on"
+    ],
+    "story_accuracy": [
+      "Characters casually discussing modern internet concepts or slang ('OMG', 'literally' in a modern sense).",
+      "A general lack of visible racial segregation or gender-based expectations that were still prevalent.",
+      "Widespread personal ownership of advanced electronics like VCRs, personal computers, or digital cameras (which were not common or invented yet)."
+    ]
+  },
+  "1970s": {
+    "catchphrases": [
+      "Heavy, man",
+      "Groovy",
+      "Can you dig it?"
+    ],
+    "worldview": "They view the world with a mix of post-counterculture idealism and a growing cynicism about institutions, valuing authenticity and questioning authority amidst economic shifts. They likely prioritize personal experience and community over traditional structures.",
+    "speech_patterns": "Uses contemporary slang freely, often with a relaxed and informal tone, sometimes employing rhetorical questions to engage the listener.",
+    "taboo_topics": [
+      "Openly discussing personal financial hardship",
+      "Questioning traditional gender roles in very conservative settings"
+    ],
+    "slang": [
+      "Groovy",
+      "Far out",
+      "Boogie",
+      "Bummer",
+      "Can you dig it?",
+      "Right on!",
+      "Heavy",
+      "Outta sight",
+      "Jive turkey",
+      "Solid"
+    ],
+    "story_accuracy": [
+      "Characters using cell phones or widespread internet (neither existed or were accessible)",
+      "Portraying disco as the sole or dominant music genre for all social groups throughout the entire decade",
+      "Everyone owning a VCR or home computer early in the decade; these were rare and expensive until the very late 70s"
+    ]
+  },
+  "1980s": {
+    "catchphrases": [
+      "Like, totally!",
+      "Gag me with a spoon!",
+      "Rad!"
+    ],
+    "worldview": "Someone from the 1980s would likely see the world through a lens of growing consumerism and technological advancement, believing in individualism and the pursuit of material success. They might also be keenly aware of the Cold War's tensions and the emerging challenges of social issues like AIDS and environmental concerns.",
+    "speech_patterns": "They often used 'like' as a verbal tic, incorporated trendy slang liberally, and spoke with an energetic, sometimes exaggerated inflection.",
+    "taboo_topics": [
+      "Discussing AIDS openly (especially early in the decade)",
+      "Criticizing American economic growth too harshly"
+    ],
+    "slang": [
+      "Totally tubular",
+      "Gag me with a spoon",
+      "Rad",
+      "Awesome",
+      "Like, whatever",
+      "Word up",
+      "Fresh",
+      "Gnarly",
+      "Bad (meaning good)",
+      "Psyche!"
+    ],
+    "story_accuracy": [
+      "Characters having pervasive internet access or modern smartphones",
+      "Fashion that is too 'grunge' or 90s-specific, rather than bold and colorful",
+      "Assuming widespread awareness or acceptance of certain social issues from early in the decade"
+    ]
+  },
+  "1990s": {
+    "catchphrases": [
+      "Booyah!",
+      "You go, girl!",
+      "Whatever!"
+    ],
+    "worldview": "People from the 90s generally viewed the world with a sense of cautious optimism, shaped by the end of the Cold War and the perceived rise of global peace and prosperity for many Western countries. There was a growing awareness of diverse cultures and a burgeoning belief in individual expression through new media.",
+    "speech_patterns": "Their speech often incorporated irony, popular culture references, and a laid-back, sometimes sarcastic tone, frequently using new slang.",
+    "taboo_topics": [
+      "Discussing personal finances or salary openly",
+      "Mental health struggles or therapy"
+    ],
+    "slang": [
+      "As If!",
+      "Talk to the hand",
+      "Duh",
+      "Whatever",
+      "Word up",
+      "Boo-yah",
+      "All that and a bag of chips",
+      "Psych!",
+      "Not!",
+      "Da bomb"
+    ],
+    "story_accuracy": [
+      "Ubiquitous and fast internet access or reliance on smartphones (dial-up was common, cell phones were basic and expensive).",
+      "People casually discussing very personal topics like mental health or sexuality as openly as in modern times.",
+      "Modern social media platforms like Instagram or TikTok being used for communication or influence."
+    ]
+  },
+  "2000s": {
+    "catchphrases": [
+      "That's hot.",
+      "My bad.",
+      "Word."
+    ],
+    "worldview": "There was an initial optimism for a new millennium, tempered by a growing awareness of global threats like terrorism and significant economic instability by the decade's end. People were navigating the early stages of a digitally interconnected world, often with a sense of wonder and occasional skepticism.",
+    "speech_patterns": "Characterized by the increasing use of abbreviated text-speak in casual conversation and a relaxed, often ironic tone, sometimes with a Valley Girl-esque inflection.",
+    "taboo_topics": [
+      "Mental health issues",
+      "Personal financial struggles (pre-2008 crash)"
+    ],
+    "slang": [
+      "bling-bling",
+      "pwned",
+      "crunk",
+      "my bad",
+      "wazzup",
+      "bootylicious",
+      "fo shizzle",
+      "chick flick",
+      "bromance",
+      "word up"
+    ],
+    "story_accuracy": [
+      "Ubiquitous smartphones with constant high-speed internet access",
+      "Widespread use of modern social media platforms (e.g., Instagram, TikTok)",
+      "Everyone owning a large flat-screen high-definition television from the early part of the decade"
+    ]
+  },
+  "2010s": {
+    "catchphrases": [
+      "YOLO",
+      "FOMO",
+      "I can't even"
+    ],
+    "worldview": "People from this era often held a mix of optimism for technological progress and growing anxieties about social inequality, climate change, and political polarization. They were increasingly connected globally but also navigating the complexities of online identity and digital-first living.",
+    "speech_patterns": "Speech often incorporated internet slang and meme references, with a casual and often ironic tone, using vocal fry and upspeak among younger demographics.",
+    "taboo_topics": [
+      "Disclosing mental health struggles too openly (early in the decade)",
+      "Explicit details of personal finances or debt"
+    ],
+    "slang": [
+      "YOLO",
+      "FOMO",
+      "Selfie",
+      "Swag",
+      "Basic",
+      "Slay",
+      "Ghosting",
+      "On fleek",
+      "Bae",
+      "Totes"
+    ],
+    "story_accuracy": [
+      "Characters not using smartphones or social media as a primary form of communication.",
+      "Lack of ubiquitous streaming services for entertainment (e.g., everyone still renting DVDs).",
+      "Underestimating the impact of online culture, memes, and internet slang on everyday conversation."
+    ]
+  }
+}

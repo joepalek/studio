@@ -1,0 +1,135 @@
+{
+  "decade": "2010s",
+  "slang": [
+    "YOLO",
+    "FOMO",
+    "Selfie",
+    "Swag",
+    "Basic",
+    "Slay",
+    "Ghosting",
+    "On fleek",
+    "Bae",
+    "Totes"
+  ],
+  "concerns": [
+    "Economic recovery and stability post-Great Recession",
+    "Political instability and civil unrest (e.g., Arab Spring)",
+    "European sovereign debt crisis",
+    "Social inequality and wealth disparity",
+    "Impact of rapidly advancing technology on privacy and society"
+  ],
+  "aspirations": [
+    "Owning the latest smartphone or tablet",
+    "Achieving social media popularity or influence",
+    "Experiencing global travel and documenting it online",
+    "Securing stable employment with good benefits",
+    "Pursuing higher education for career advancement"
+  ],
+  "fashion": {
+    "men": "Men's fashion embraced a mix of casual streetwear and more tailored, yet relaxed, looks, with skinny jeans and graphic tees being staples. Athleisure gained significant traction, blurring lines between gym wear and everyday attire.",
+    "women": "Women's fashion was characterized by the dominance of skinny jeans, leggings, and versatile athleisure wear, alongside high-waisted denim and crop tops. Fast fashion cycles meant trends shifted rapidly, often influenced by social media and celebrity culture.",
+    "colors": [
+      "Grey",
+      "Black",
+      "White",
+      "Millennial Pink",
+      "Navy"
+    ]
+  },
+  "food": [
+    "Avocado toast",
+    "Craft beer and artisan cocktails",
+    "Food trucks and street food culture",
+    "Quinoa and kale (as superfoods)",
+    "Sriracha (as a ubiquitous condiment)"
+  ],
+  "entertainment": {
+    "tv": [
+      "Game of Thrones",
+      "Breaking Bad",
+      "The Walking Dead"
+    ],
+    "music": [
+      "Pop (Adele, Taylor Swift)",
+      "EDM (Avicii, David Guetta)",
+      "Hip-Hop (Drake, Kendrick Lamar)"
+    ],
+    "movies": [
+      "Marvel Cinematic Universe films",
+      "The Hunger Games series",
+      "Frozen"
+    ],
+    "games": [
+      "Minecraft",
+      "Fortnite Battle Royale"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Smart speakers (e.g., Amazon Echo)",
+      "Streaming devices (e.g., Chromecast)",
+      "Smart thermostats"
+    ],
+    "aspirational": [
+      "Virtual Reality headsets",
+      "Early electric/autonomous vehicles"
+    ],
+    "work": [
+      "Cloud computing services",
+      "Collaborative online platforms (e.g., Slack)"
+    ]
+  },
+  "defining_products": [
+    "iPhone (various models)",
+    "iPad",
+    "Netflix subscription",
+    "Uber/Lyft apps",
+    "Amazon Echo (smart speaker)"
+  ],
+  "failed_products": [
+    {
+      "name": "Google Glass",
+      "why_failed": "High price, privacy concerns, and limited practical use case for the average consumer made them socially awkward and commercially unviable.",
+      "modern_gap": "No, while AR glasses are still being developed, mainstream adoption for general consumers remains elusive without solving the core issues."
+    },
+    {
+      "name": "HTC First (Facebook Phone)",
+      "why_failed": "Over-reliance on Facebook integration, mediocre hardware, and users preferring the Facebook app on their existing devices led to poor sales.",
+      "modern_gap": "No, integrated social media operating systems or dedicated social phones did not become a trend and are not a modern gap."
+    },
+    {
+      "name": "Juicero",
+      "why_failed": "Extremely high price point for a device that simply squeezed pre-packaged juice bags that could be hand-squeezed, exposing its lack of innovation and value.",
+      "modern_gap": "No, while convenience in health food is desired, this specific, overpriced, non-functional solution is not a modern gap."
+    }
+  ],
+  "ebay_hot_now": [
+    "First-generation iPhone/iPad models",
+    "Limited edition streetwear (e.g., early Supreme collaborations)",
+    "Rare Pop! Vinyl figures from early releases"
+  ],
+  "ebay_sleepers": [
+    "Nintendo 3DS special editions",
+    "First-generation Apple Watch models",
+    "Pebble smartwatches (for collectors of tech history)"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "YOLO",
+      "FOMO",
+      "I can't even"
+    ],
+    "worldview": "People from this era often held a mix of optimism for technological progress and growing anxieties about social inequality, climate change, and political polarization. They were increasingly connected globally but also navigating the complexities of online identity and digital-first living.",
+    "speech_patterns": "Speech often incorporated internet slang and meme references, with a casual and often ironic tone, using vocal fry and upspeak among younger demographics.",
+    "taboo_topics": [
+      "Disclosing mental health struggles too openly (early in the decade)",
+      "Explicit details of personal finances or debt"
+    ]
+  },
+  "story_accuracy": [
+    "Characters not using smartphones or social media as a primary form of communication.",
+    "Lack of ubiquitous streaming services for entertainment (e.g., everyone still renting DVDs).",
+    "Underestimating the impact of online culture, memes, and internet slang on everyday conversation."
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "decade": "1980s",
+  "slang": [
+    "Totally tubular",
+    "Gag me with a spoon",
+    "Rad",
+    "Awesome",
+    "Like, whatever",
+    "Word up",
+    "Fresh",
+    "Gnarly",
+    "Bad (meaning good)",
+    "Psyche!"
+  ],
+  "concerns": [
+    "Rise of conservatism and free-market economics",
+    "The emerging AIDS epidemic",
+    "Growing awareness of global warming theory",
+    "Economic deconstruction and job relocation to developing nations",
+    "Global instability of international trade"
+  ],
+  "aspirations": [
+    "Home ownership and financial stability",
+    "Owning the latest technology (VCR, Walkman)",
+    "Wearing designer clothing and brands",
+    "Achieving career success in a booming economy",
+    "Experiencing global travel and cultural exposure"
+  ],
+  "fashion": {
+    "men": "Men's fashion ranged from preppy styles with polo shirts and sweaters to more edgy looks with acid-wash denim and leather jackets, often paired with sneakers. Mullets were a prominent hairstyle, and tracksuits became popular for casual wear.",
+    "women": "Women embraced bold statements with big, teased hair, prominent shoulder pads, and vibrant neon colors in activewear and everyday outfits. Aerobics fashion like leg warmers and leotards were common, alongside power suits for professional women.",
+    "colors": [
+      "Neon pink",
+      "Electric blue",
+      "Lime green"
+    ]
+  },
+  "food": [
+    "Lean Cuisine microwave meals",
+    "Jell-O molds",
+    "Tab soda",
+    "Frozen yogurt",
+    "Pasta salads"
+  ],
+  "entertainment": {
+    "tv": [
+      "The Cosby Show",
+      "Miami Vice",
+      "Cheers"
+    ],
+    "music": [
+      "Pop (Michael Jackson, Madonna)",
+      "Hair Metal (Bon Jovi, M\u00f6tley Cr\u00fce)",
+      "New Wave (Duran Duran, The Police)"
+    ],
+    "movies": [
+      "E.T. the Extra-Terrestrial",
+      "Back to the Future",
+      "Ghostbusters"
+    ],
+    "games": [
+      "Pac-Man",
+      "Super Mario Bros."
+    ]
+  },
+  "technology": {
+    "home": [
+      "VCR",
+      "Sony Walkman",
+      "Home computer (e.g., Commodore 64)"
+    ],
+    "aspirational": [
+      "Car phone",
+      "Camcorder"
+    ],
+    "work": [
+      "IBM PC",
+      "Fax machine"
+    ]
+  },
+  "defining_products": [
+    "Sony Walkman",
+    "VCR",
+    "Rubik's Cube",
+    "Cabbage Patch Kids",
+    "Apple Macintosh"
+  ],
+  "failed_products": [
+    {
+      "name": "New Coke",
+      "why_failed": "Public backlash and strong preference for the original formula led to its quick withdrawal shortly after launch.",
+      "modern_gap": "No, the market for various cola formulations and brands is well-covered."
+    },
+    {
+      "name": "DeLorean DMC-12",
+      "why_failed": "Plagued by financial difficulties, quality control issues, and limited market appeal beyond its futuristic design and 'Back to the Future' fame.",
+      "modern_gap": "No, niche luxury and unique car markets continue to thrive with various high-performance and design-focused vehicles."
+    },
+    {
+      "name": "Betamax VCR",
+      "why_failed": "Lost the video format war to VHS due to restrictive licensing, shorter recording times, and higher cost, despite arguably superior technical quality.",
+      "modern_gap": "No, physical media formats have largely been superseded by digital streaming and downloads."
+    }
+  ],
+  "ebay_hot_now": [
+    "Vintage band t-shirts",
+    "Atari game consoles and cartridges",
+    "Retro sneakers (e.g., original Air Jordans)"
+  ],
+  "ebay_sleepers": [
+    "Original VHS tapes (sealed or rare editions)",
+    "80s movie posters and lobby cards",
+    "Vintage cassette players and boomboxes"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Like, totally!",
+      "Gag me with a spoon!",
+      "Rad!"
+    ],
+    "worldview": "Someone from the 1980s would likely see the world through a lens of growing consumerism and technological advancement, believing in individualism and the pursuit of material success. They might also be keenly aware of the Cold War's tensions and the emerging challenges of social issues like AIDS and environmental concerns.",
+    "speech_patterns": "They often used 'like' as a verbal tic, incorporated trendy slang liberally, and spoke with an energetic, sometimes exaggerated inflection.",
+    "taboo_topics": [
+      "Discussing AIDS openly (especially early in the decade)",
+      "Criticizing American economic growth too harshly"
+    ]
+  },
+  "story_accuracy": [
+    "Characters having pervasive internet access or modern smartphones",
+    "Fashion that is too 'grunge' or 90s-specific, rather than bold and colorful",
+    "Assuming widespread awareness or acceptance of certain social issues from early in the decade"
+  ]
+}

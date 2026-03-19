@@ -1,0 +1,123 @@
+{
+  "decade": "1960s",
+  "slang": [
+    "Groovy",
+    "Far out",
+    "Cool",
+    "Bummer",
+    "Dig it",
+    "Bread",
+    "The Man",
+    "Flower power",
+    "Hang loose",
+    "Right on"
+  ],
+  "concerns": [
+    "The Vietnam War and military conscription",
+    "Racial inequality and civil rights",
+    "The Cold War and nuclear threat",
+    "Social and moral decay (from a conservative viewpoint)",
+    "Poverty and economic disparity"
+  ],
+  "aspirations": [
+    "Achieving racial equality and social justice",
+    "Promoting world peace and ending war",
+    "Exploring space and scientific advancement",
+    "Greater personal freedom and self-expression",
+    "Economic prosperity and a comfortable suburban lifestyle"
+  ],
+  "fashion": {
+    "men": "Men's fashion saw a shift from conservative suits to more colorful and experimental styles. Casual wear included slim-cut trousers, mod suits, and later, the more relaxed, patterned shirts and longer hair associated with the counterculture movement.",
+    "women": "Women's fashion underwent a radical transformation, moving from more conservative early-decade styles to the iconic mini-skirt and go-go boots of Mod fashion. Later, the hippie movement popularized flowing, natural fabrics, tie-dye, and peasant blouses.",
+    "colors": [
+      "Psychedelic orange",
+      "Mod white",
+      "Earthy brown"
+    ]
+  },
+  "food": [
+    "Fondue",
+    "TV dinners",
+    "Tang powdered drink",
+    "Jell-O molds",
+    "Hamburger Helper"
+  ],
+  "entertainment": {
+    "tv": [
+      "The Andy Griffith Show",
+      "Bonanza",
+      "Star Trek"
+    ],
+    "music": [
+      "The Beatles / British Invasion",
+      "Bob Dylan / Folk music revival",
+      "Motown / Soul music"
+    ],
+    "movies": [
+      "Psycho",
+      "The Sound of Music",
+      "Easy Rider"
+    ],
+    "games": [
+      "Twister",
+      "Board games (e.g., Mouse Trap)"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Color television",
+      "Dishwasher",
+      "Push-button telephone"
+    ],
+    "aspirational": [
+      "Space travel (e.g., Moon landing)",
+      "Advanced audio stereo systems"
+    ],
+    "work": [
+      "Mainframe computers",
+      "Electric typewriters"
+    ]
+  },
+  "defining_products": [
+    "Mini-skirt",
+    "VW Beetle",
+    "Barbie doll",
+    "Kodak Instamatic Camera",
+    "Cassette tape player"
+  ],
+  "failed_products": [
+    {
+      "name": "DuPont Corfam",
+      "why_failed": "Marketed as a superior synthetic leather, it failed to gain widespread acceptance in footwear due to its poor breathability and comfort compared to natural leather.",
+      "modern_gap": "Yes, the search for a perfect synthetic leather that perfectly mimics natural properties and sustainability is still ongoing, though modern vegan leathers are significantly better."
+    }
+  ],
+  "ebay_hot_now": [
+    "Vintage Mod clothing (original pieces)",
+    "Original vinyl records (especially British Invasion/Folk)",
+    "Mid-century modern furniture"
+  ],
+  "ebay_sleepers": [
+    "Original 60s magazines (e.g., Life, Look)",
+    "Unopened vintage board games",
+    "Early folk music albums by obscure artists"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Groovy, man.",
+      "Can you dig it?",
+      "Peace and love."
+    ],
+    "worldview": "People from this era often questioned authority and traditional norms, seeking greater personal freedom and social justice amidst global tensions. They believed in the power of collective action to change society, striving for peace and an open-minded future, yet still grappled with deeply ingrained societal expectations.",
+    "speech_patterns": "Their speech often incorporated casual slang and expressions of optimism or discontent, sometimes with a laid-back, almost poetic cadence, particularly within countercultural circles.",
+    "taboo_topics": [
+      "Open discussions about sexuality (outside of counterculture circles)",
+      "Mental health issues and therapy"
+    ]
+  },
+  "story_accuracy": [
+    "Characters casually discussing modern internet concepts or slang ('OMG', 'literally' in a modern sense).",
+    "A general lack of visible racial segregation or gender-based expectations that were still prevalent.",
+    "Widespread personal ownership of advanced electronics like VCRs, personal computers, or digital cameras (which were not common or invented yet)."
+  ]
+}

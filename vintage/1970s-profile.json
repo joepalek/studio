@@ -1,0 +1,130 @@
+{
+  "decade": "1970s",
+  "slang": [
+    "Groovy",
+    "Far out",
+    "Boogie",
+    "Bummer",
+    "Can you dig it?",
+    "Right on!",
+    "Heavy",
+    "Outta sight",
+    "Jive turkey",
+    "Solid"
+  ],
+  "concerns": [
+    "Economic recession and stagflation",
+    "Oil crisis and energy shortages",
+    "Political corruption (e.g., Watergate)",
+    "Global conflicts and decolonization struggles",
+    "Cold War tensions between superpowers"
+  ],
+  "aspirations": [
+    "Economic stability and job security",
+    "Personal freedom and self-expression",
+    "Owning a modern home with new appliances",
+    "Greater equality and social justice for women and minorities",
+    "Enjoyment of leisure and emerging entertainment technologies"
+  ],
+  "fashion": {
+    "men": "Men embraced a more relaxed style with wide-collared shirts, leisure suits made of polyester, and bell-bottom trousers. Platform shoes and longer hairstyles were also common, often accompanied by mustaches or sideburns.",
+    "women": "Women's fashion saw a diverse range from flowing maxi dresses and bohemian looks to hot pants and form-fitting disco attire. Bell-bottoms, platform shoes, and synthetic fabrics were popular, reflecting a blend of casual comfort and glamorous trends.",
+    "colors": [
+      "Avocado Green",
+      "Burnt Orange",
+      "Sky Blue"
+    ]
+  },
+  "food": [
+    "Fondue",
+    "Quiche Lorraine",
+    "Hamburger Helper",
+    "TV Dinners",
+    "Carrot Cake"
+  ],
+  "entertainment": {
+    "tv": [
+      "M*A*S*H",
+      "All in the Family",
+      "Happy Days"
+    ],
+    "music": [
+      "Disco",
+      "Funk",
+      "Soft Rock"
+    ],
+    "movies": [
+      "Star Wars",
+      "The Godfather",
+      "Jaws"
+    ],
+    "games": [
+      "Pong",
+      "Dungeons & Dragons"
+    ]
+  },
+  "technology": {
+    "home": [
+      "Color Television",
+      "Microwave Oven",
+      "CB Radio"
+    ],
+    "aspirational": [
+      "VCR (Video Cassette Recorder)",
+      "Home Computer",
+      "Digital Watch"
+    ],
+    "work": [
+      "IBM Selectric Typewriter",
+      "Photocopier",
+      "Mainframe Computer Terminals"
+    ]
+  },
+  "defining_products": [
+    "CB Radio",
+    "Lava Lamp",
+    "Mood Ring",
+    "Atari 2600",
+    "Pet Rock"
+  ],
+  "failed_products": [
+    {
+      "name": "Quadraphonic Sound",
+      "why_failed": "Expensive, complex setup, lack of standardized formats, and limited content hindered widespread adoption by consumers.",
+      "modern_gap": "No, the desire for immersive audio is now filled by surround sound and object-based audio technologies like Dolby Atmos."
+    },
+    {
+      "name": "8-Track Tapes",
+      "why_failed": "Prone to jamming, inferior sound quality compared to cassettes and vinyl, and the inability to easily skip tracks led to their decline.",
+      "modern_gap": "No, convenient and portable music consumption is now filled by digital streaming services and improved physical formats."
+    }
+  ],
+  "ebay_hot_now": [
+    "Vintage Concert T-shirts (Rock/Disco)",
+    "Atari 2600 consoles and games",
+    "Mid-Century Modern Furniture (especially those with 70s aesthetics)"
+  ],
+  "ebay_sleepers": [
+    "Vintage Movie Posters (less iconic films)",
+    "Collectible Board Games (non-mass market titles)",
+    "Forgotten Vinyl Albums (obscure genres or artists before widespread reissues)"
+  ],
+  "character_voice": {
+    "catchphrases": [
+      "Heavy, man",
+      "Groovy",
+      "Can you dig it?"
+    ],
+    "worldview": "They view the world with a mix of post-counterculture idealism and a growing cynicism about institutions, valuing authenticity and questioning authority amidst economic shifts. They likely prioritize personal experience and community over traditional structures.",
+    "speech_patterns": "Uses contemporary slang freely, often with a relaxed and informal tone, sometimes employing rhetorical questions to engage the listener.",
+    "taboo_topics": [
+      "Openly discussing personal financial hardship",
+      "Questioning traditional gender roles in very conservative settings"
+    ]
+  },
+  "story_accuracy": [
+    "Characters using cell phones or widespread internet (neither existed or were accessible)",
+    "Portraying disco as the sole or dominant music genre for all social groups throughout the entire decade",
+    "Everyone owning a VCR or home computer early in the decade; these were rare and expensive until the very late 70s"
+  ]
+}
