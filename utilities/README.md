@@ -55,6 +55,36 @@ when printing titles, names, or web content from external APIs.
 
 ---
 
+### `session_logger.py`
+Append to `session-log.md` and update `session-status.json` after every major action.
+Handles log rotation at 50kb (renames to `session-log-archive-[date].md`).
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `log_action(action, result, next_step)` | Append one timestamped entry to session-log.md |
+| `update_status(current_task, add_completed, add_pending, ...)` | Update any fields in session-status.json |
+| `complete_task(task_name, result_summary, add_pending, ...)` | Combined: log + mark complete + update pending in one call |
+
+**Used by:** All agents — call `complete_task()` at end of every major script.
+
+**Example:**
+```python
+import sys
+sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from session_logger import complete_task
+
+complete_task(
+    task_name='Ghost Book Pass 2',
+    result_summary='142 viable candidates, 89 public domain -> validated.json',
+    add_pending=['Ghost Book Pass 3 — concatenation opportunities'],
+    remove_pending_terms=['Pass 2'],
+    next_recommended='Review top picks, run Pass 3',
+)
+```
+
+---
+
 ## Adding a New Utility
 
 1. Create `utilities/your_utility.py` with a module docstring explaining the problem it solves
