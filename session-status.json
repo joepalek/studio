@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19T17:14:39",
+  "last_updated": "2026-03-19T17:20:05",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -16,14 +16,26 @@
     "watchdog project initialized (CONTEXT.md, state.json)",
     "ghost-book git repo initialized (8edacdd)",
     "whiteboard scoring pass confirmed complete -- all 30 items scored",
-    "ghost-book pass2 complete: 161 viable (105 PD), 132 AI author candidates"
+    "ghost-book pass2 complete: 161 viable (105 PD), 132 AI author candidates",
+    "inbox-manager.md built",
+    "utilities/ollama_utils.py built",
+    "utilities/gemini_utils.py built",
+    "session_logger.py complete",
+    "workflow-intelligence.md complete",
+    "standing-rules.json 10 rules loaded"
   ],
   "pending": [
     "run scheduler register_tasks.py as admin",
-    "company registry pass1 overnight run"
+    "company registry pass1 overnight run",
+    "sysguard project init",
+    "watchdog project init",
+    "ghost-book git init",
+    "whiteboard scoring pass on 30+ items",
+    "inbox-manager daily sync first run",
+    "wire complete_task() into all agent scripts"
   ],
   "blockers": [
     "scheduler registration needs admin terminal"
   ],
-  "next_recommended": "Run ghost-book pass3 (concatenation opportunities) and pass4 (AI author specs). Run company-registry pass1 overnight."
+  "next_recommended": "Init sysguard and watchdog projects, then run inbox-manager first sync"
 }
