@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19T17:12:28",
+  "last_updated": "2026-03-19T17:13:18",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -25,5 +25,5 @@
     "scheduler registration needs admin terminal",
     "ghost-book pass2 unicode fix running"
   ],
-  "next_recommended": "Run company-registry pass1 overnight. Build sysguard pass1_snapshot.py and watchdog pass1_scan_outputs.py."
+  "next_recommended": "Run company-registry pass1 overnight. Build sysguard pass1_snapshot.py and watchdog pass1_scan_outputs.py next session."
 }
