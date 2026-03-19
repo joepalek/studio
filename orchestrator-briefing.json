@@ -1,5 +1,60 @@
 {
-  "generated": "2026-03-18T20:05:31.741659",
-  "model": "gemini-2.5-flash",
-  "briefing": "Daily Briefing:\n\n**Joe Focus:**\n1.  Prioritize the 5 Job-match decisions (Blackdot ends May 2026).\n2.  Review the 2 Listing-optimizer decisions for 565 eBay listings.\n3.  Address and strategize a solution for the CTW portrait blocker.\n\n**Agent Tasks:**\n1.  Continue CTW activations, aiming to increase beyond 40% active once unblocked.\n2.  Action new Job-match and Listing-optimizer decisions promptly.\n3.  Prepare information/options to help Joe resolve the CTW portrait blocker.\n\n**Blockers:**\nCTW progress is currently blocked due to portraits.\n\n**Defer Sentence:**\nFocus on swiftly clearing outstanding decisions and resolving the CTW blocker to maintain critical project momentum."
+  "generated": "2026-03-18T20:16:59.181097",
+  "briefing": "**Daily Briefing: 2026-03-18**\n\n1.  **TOP 3 Joe personal tasks:**\n    1.  Address 5 pending Job Match decisions to secure income by May 2026.\n    2.  Resolve Sentinel's LLC dependency to unblock the project.\n    3.  Review 2 pending decisions for eBay/Listing Optimizer to sustain daily revenue.\n\n2.  **TOP 3 autonomous agent tasks:**\n    1.  CTW: Generate character portraits via Perchance.\n    2.  eBay/Listing Optimizer: Maintain 565 active listings for daily revenue generation.\n    3.  Arbitrage-Pulse: Continue monitoring and identifying opportunities.\n\n3.  **Critical blockers:**\n    *   Sentinel is blocked due to missing `state.json` and LLC dependency.\n\n4.  **Defer today:**\n    *   Defer the single pending decisions for acuscan-ar, arbitrage-pulse, hibid-analyzer, nutrimind, squeeze-empire, and whatnot-apps.",
+  "plan": {
+    "agent_runnable": [],
+    "human_required": [
+      {
+        "project": "acuscan-ar",
+        "reason": "1 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "arbitrage-pulse",
+        "reason": "2 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "hibid-analyzer",
+        "reason": "1 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "job-match",
+        "reason": "5 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "listing-optimizer",
+        "reason": "2 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "nutrimind",
+        "reason": "1 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "squeeze-empire",
+        "reason": "1 pending decisions",
+        "next": ""
+      },
+      {
+        "project": "whatnot-apps",
+        "reason": "1 pending decisions",
+        "next": ""
+      }
+    ],
+    "blocked": [
+      {
+        "project": "CTW",
+        "blockers": [
+          "Real portrait images not yet generated \u00e2\u20ac\u201d using SVG placeholders",
+          "Trait activation detector needs calibration against more test runs",
+          "comfort bar still overcorrects downward under pressure"
+        ]
+      }
+    ],
+    "ready_to_build": []
+  }
 }
