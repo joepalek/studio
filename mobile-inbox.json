@@ -259,5 +259,198 @@
     "question": "Should we build a general Whatnot cover letter or three separate role-specific ones?",
     "options": [],
     "type": "question"
+  },
+  {
+    "id": "jan-job-match-1",
+    "project": "job-match",
+    "question": "Job Match state file is named state.json.json (double extension) -- Drive refresh cannot find it. Rename to state.json?",
+    "options": [
+      "Rename it now",
+      "I'll rename manually",
+      "Leave it -- will fix later"
+    ],
+    "type": "janitor",
+    "severity": "HIGH",
+    "context": "File state.json.json exists in job-match folder. No standard state.json alongside it. Double extension caused by a save error. Drive refresh looks for state.json exactly.",
+    "recommendation": "Rename G:/My Drive/Projects/job-match\\state.json.json to state.json"
+  },
+  {
+    "id": "jan-nutrimind-1",
+    "project": "nutrimind",
+    "question": "NutriMind shows 75% progress but src/App.jsx does not exist in the project folder. Code was never migrated here.",
+    "options": [
+      "It's in Replit -- exporting now",
+      "Found it elsewhere -- moving it",
+      "File is lost -- resuming from scratch",
+      "Defer -- not priority right now"
+    ],
+    "type": "janitor",
+    "severity": "HIGH",
+    "context": "state.json references src/App.jsx as production file. No src/ folder exists in G:/My Drive/Projects/nutrimind\\. Likely built in Replit or a prior Claude Code session that was never exported.",
+    "recommendation": "Export NutriMind from Replit or locate in old session and copy src/ folder to G:/My Drive/Projects/nutrimind\\"
+  },
+  {
+    "id": "jan-whatnot-1",
+    "project": "whatnot-apps",
+    "question": "Whatnot Apps state.json says resumes are drafted but no .docx or .pdf files exist in the project folder. Where are the actual resume files?",
+    "options": [
+      "They're in Google Docs",
+      "They're in Downloads/Desktop -- moving them",
+      "They were in an old chat -- need to rebuild",
+      "Defer -- not applying right now"
+    ],
+    "type": "janitor",
+    "severity": "HIGH",
+    "context": "Handoff note: 'Three resumes and cover letter drafted.' Zero document files found in G:/My Drive/Projects/whatnot-apps\\. Files may be in Google Docs, Downloads, or Desktop.",
+    "recommendation": "Locate resume files and move to G:/My Drive/Projects/whatnot-apps\\ OR document where they live in CONTEXT.md"
+  },
+  {
+    "id": "jan-ctw-1",
+    "project": "ctw",
+    "question": "CTW character images have a naming bug -- 5 of 6 Mara portrait files are named 'maria' instead of 'mara'. Rename to fix?",
+    "options": [
+      "Renaming now",
+      "Will rename manually",
+      "Defer -- images not wired up yet"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "G:/My Drive/Projects/CTW\\images\\ contains mara#1.png then maria#2.png through maria#6.png. Character name is Mara. The workbench references image_portfolio paths -- wrong names will break display.",
+    "recommendation": "Rename maria#2.png through maria#6.png to mara#2.png through mara#6.png. Also update char_001_mara.json image_portfolio paths if they reference the wrong names."
+  },
+  {
+    "id": "jan-ctw-2",
+    "project": "ctw",
+    "question": "CTW has char_004_celeste_1.json but expected char_004_celeste.json -- is the _1 suffix intentional or a typo?",
+    "options": [
+      "Rename to char_004_celeste.json",
+      "The _1 is intentional -- leaving it",
+      "Investigate first"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "All other character files follow char_00N_name.json format. char_004_celeste_1.json has an extra _1. The workbench loads characters by filename -- a mismatch will cause load errors.",
+    "recommendation": "Rename to char_004_celeste.json if the _1 is unintentional. If it's a versioned draft, confirm and document."
+  },
+  {
+    "id": "jan-sentinel-1",
+    "project": "sentinel-core",
+    "question": "Sentinel state files use non-standard naming (SENT-CORE-state-v1.json) instead of state.json -- Drive refresh cannot read them. Standardize?",
+    "options": [
+      "Renaming all three now",
+      "Will rename manually",
+      "Leave versioned naming -- I'll update studio instead"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "sentinel-core, sentinel-performer, and sentinel-viewer all use SENT-*-state-v1.json naming. Studio Drive refresh looks for state.json. These projects will never sync until renamed.",
+    "recommendation": "Rename SENT-CORE-state-v1.json to state.json in each Sentinel folder. Back up originals first."
+  },
+  {
+    "id": "jan-missing-ctx-1",
+    "project": "acuscan-ar",
+    "question": "AcuScan AR is missing CONTEXT.md -- cold-start sessions will lack project context. Generate one from state.json?",
+    "options": [
+      "Generate CONTEXT.md now",
+      "I'll write it manually",
+      "Defer -- not priority"
+    ],
+    "type": "janitor",
+    "severity": "HIGH",
+    "context": "G:/My Drive/Projects/acuscan-ar\\ has CLAUDE.md and state.json but no CONTEXT.md. Active project at 20%. Without CONTEXT.md Claude Code cold starts have no architecture or decision context.",
+    "recommendation": "Generate CONTEXT.md from state.json content. Janitor can produce a starter template on request."
+  },
+  {
+    "id": "jan-missing-ctx-2",
+    "project": "arbitrage-pulse",
+    "question": "Arbitrage Pulse is missing CONTEXT.md. Generate starter template?",
+    "options": [
+      "Generate CONTEXT.md now",
+      "Defer -- new project, not started yet"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "G:/My Drive/Projects/arbitrage-pulse\\ has state.json and claude.md but no CONTEXT.md.",
+    "recommendation": "Generate CONTEXT.md from state.json content."
+  },
+  {
+    "id": "jan-missing-ctx-3",
+    "project": "listing-optimizer",
+    "question": "Listing Optimizer is missing CONTEXT.md. Generate starter template?",
+    "options": [
+      "Generate CONTEXT.md now",
+      "Defer -- new project, not started yet"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "G:/My Drive/Projects/listing-optimizer\\ has state.json and claude.md but no CONTEXT.md.",
+    "recommendation": "Generate CONTEXT.md from state.json content."
+  },
+  {
+    "id": "jan-missing-ctx-4",
+    "project": "sentinel-performer",
+    "question": "Sentinel Performer is missing CONTEXT.md. Generate starter template?",
+    "options": [
+      "Generate CONTEXT.md now",
+      "Defer -- blocked on LLC anyway"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "G:/My Drive/Projects/sentinel-performer\\ has SENT-PERF-state-v1.json, claude.md, and SENT-claude-rules-v1.md but no CONTEXT.md.",
+    "recommendation": "Generate CONTEXT.md from state.json content."
+  },
+  {
+    "id": "jan-missing-ctx-5",
+    "project": "sentinel-viewer",
+    "question": "Sentinel Viewer is missing CONTEXT.md. Generate starter template?",
+    "options": [
+      "Generate CONTEXT.md now",
+      "Defer -- blocked on LLC anyway"
+    ],
+    "type": "janitor",
+    "severity": "MED",
+    "context": "G:/My Drive/Projects/sentinel-viewer\\ has SENT-VIEW-state-v1.json, claude.md, and SENT-claude-rules-v1.md but no CONTEXT.md.",
+    "recommendation": "Generate CONTEXT.md from state.json content."
+  },
+  {
+    "id": "jan-ctw-3",
+    "project": "ctw",
+    "question": "CTW/exports/ is an empty folder with no files. Delete it or leave it for the planned export feature?",
+    "options": [
+      "Leave it -- export feature is coming",
+      "Delete it -- code will recreate when needed"
+    ],
+    "type": "janitor",
+    "severity": "LOW",
+    "context": "G:/My Drive/Projects/CTW\\exports\\ exists but contains nothing. Likely created in anticipation of session export functionality not yet built (Phase 5 per CONTEXT.md).",
+    "recommendation": "Leave it -- the export feature is on the roadmap. Or delete and let the code recreate it when needed."
+  },
+  {
+    "id": "jan-ctw-4",
+    "project": "ctw",
+    "question": "CTW/images/ has an unidentified file with a social media CDN filename. Keep or remove?",
+    "options": [
+      "It's a portrait -- I'll rename it",
+      "It's a stray download -- delete it",
+      "Investigate first"
+    ],
+    "type": "janitor",
+    "severity": "LOW",
+    "context": "G:/My Drive/Projects/CTW\\images\\ contains '651962811_18575173024020138_6228603144443895742_n.jpg' -- a filename pattern from Instagram/Facebook CDN. Not referenced in CONTEXT.md or any character JSON.",
+    "recommendation": "Review the image -- if it's a portrait to use, rename it. If it's a stray download, delete it."
+  },
+  {
+    "id": "jan-ctw-5",
+    "project": "ctw",
+    "question": "CTW state.json uses a flat non-standard schema. Migrate to _schema_version 1.0 or keep as-is?",
+    "options": [
+      "Migrate to _schema_version 1.0 format",
+      "Studio reads flat schema fine -- document as intentional",
+      "Investigate studio.html parser first"
+    ],
+    "type": "janitor",
+    "severity": "LOW",
+    "context": "CTW/state.json uses {name, status, progress, handoff, lastUpdated} flat format. All other projects use _schema_version 1.0 with nested project{}, session{}, test_lock{} blocks. Studio Drive refresh may parse CTW differently.",
+    "recommendation": "Confirm which format studio.html reads for Drive refresh before migrating. If studio reads flat schema fine, document it as intentional."
   }
 ]
