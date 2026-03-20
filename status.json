@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-20T01:55:03",
-  "current_task": "overnight batch running: company-registry pass1, C2C Ollama analysis, ghost-book pass3 concat",
+  "last_updated": "2026-03-20T02:04:32",
+  "current_task": "overnight batch relaunched: registry pass1 (IRS fixed), ghost-book pass3 (gemini-lite), C2C ollama analysis",
   "completed_today": [
     "workflow-intelligence.md built",
     "standing-rules.json created with 10 rules",
@@ -47,8 +47,10 @@
     "review ghost-book concat-opportunities.json"
   ],
   "blockers": [
-    "scheduler registration needs admin terminal"
+    "scheduler registration needs admin terminal",
+    "OpenCorporates needs free API key — sign up at opencorporates.com/api_accounts/new",
+    "SBIR api.sbir.gov DNS failure — may need VPN or endpoint update"
   ],
-  "next_recommended": "Morning: check pass1-log.txt, cdx-c2c-analysis.json, concat-opportunities.json for results",
-  "v": 5
+  "next_recommended": "Morning: check pass3-log.txt for concat opportunities, cdx-c2c-analysis.json, pass1-log.txt for IRS results",
+  "v": 6
 }
