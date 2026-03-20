@@ -1,24 +1,34 @@
 {
-  "generated": "2026-03-20T01:31:03.799393",
-  "verdict": "DEGRADED",
+  "generated": "2026-03-20",
+  "verdict": "CRITICAL",
+  "issue_count": 5,
+  "action": "Commit job-match + _studio, create sentinel state stubs, import mobile answers",
   "tools": {
-    "git": "2.53.0 OK",
-    "node": "v24.14.0 OK",
-    "npm": "11.9.0 OK",
-    "python": "3.13.7 OK"
+    "git": "2.53.0 (OK)",
+    "node": "v24.14.0 (OK)",
+    "npm": "11.9.0 (OK)",
+    "python": "3.13.7 (OK)",
+    "repomix": "1.12.0 (OK)",
+    "ollama": "0.12.10 (OK)"
   },
-  "gateway": {
+  "endpoints": {
     "anthropic": "SET",
-    "gemini": "SET",
-    "openrouter": "SET",
-    "ollama": "UP - 1 model (gemma3:4b)"
+    "gemini": "UP",
+    "openrouter": "UP",
+    "ollama": "UP — 1 model (gemma3:4b)",
+    "ollama_model": "gemma3:4b"
   },
-  "issues": [
-    "NO STATE.JSON: sentinel-core",
-    "NO STATE.JSON: sentinel-performer",
-    "NO STATE.JSON: sentinel-viewer",
-    "UNCOMMITTED (5 files): _studio",
-    "MOBILE ANSWERS PENDING: 1 session, 2 answers",
-    "OPTIONAL MISSING: gateway-log.txt"
-  ]
+  "projects": {
+    "issues": [
+      "UNCOMMITTED (2 files): job-match",
+      "UNCOMMITTED (10 files): _studio",
+      "NO STATE.JSON: sentinel-core",
+      "NO STATE.JSON: sentinel-performer",
+      "NO STATE.JSON: sentinel-viewer"
+    ],
+    "clean": 8,
+    "issue_count": 5
+  },
+  "studio_files": "All critical present. gateway-log.txt: optional, missing.",
+  "mobile_answers": "1 session, 2 answers pending — import via studio Refresh"
 }
