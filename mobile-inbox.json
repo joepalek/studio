@@ -374,5 +374,381 @@
     "options": [],
     "recommendation": "",
     "context": "Separate letters are stronger but more work. General letter with swap sections is faster."
+  },
+  {
+    "id": "state-acuscan-ar-1059",
+    "project": "acuscan-ar",
+    "question": "Use WebXR or Canvas overlay for AR rendering?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "WebXR",
+      "Canvas overlay on video element"
+    ],
+    "recommendation": "Canvas overlay — broader mobile browser support, simpler implementation for MVP",
+    "context": ""
+  },
+  {
+    "id": "state-acuscan-ar-55806",
+    "project": "acuscan-ar",
+    "question": "If hand tracking lags on older phones — prioritize speed or visual accuracy?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate."
+  },
+  {
+    "id": "state-acuscan-ar-47216",
+    "project": "acuscan-ar",
+    "question": "Should point descriptions be text overlaid on screen or a separate info panel below the camera?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Affects UI layout significantly. Text on camera = cleaner but harder to read. Panel below = easier to read but splits attention."
+  },
+  {
+    "id": "state-acuscan-ar-8977",
+    "project": "acuscan-ar",
+    "question": "Eventually monetize this or keep it free/personal?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Affects whether we add any tracking, accounts, or premium features later."
+  },
+  {
+    "id": "state-arbitrage-pulse-47569",
+    "project": "arbitrage-pulse",
+    "question": "What geographic area to monitor — Tennessee local, Illinois local, or both?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "Tennessee (Atwood/McKenzie area)",
+      "Illinois (Woodstock area)",
+      "Both — separate digests"
+    ],
+    "recommendation": "Both with separate digests — you travel between both regularly",
+    "context": ""
+  },
+  {
+    "id": "state-arbitrage-pulse-90512",
+    "project": "arbitrage-pulse",
+    "question": "Scraping approach — Apify Actor or direct browser automation via Chrome extension?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "Apify (paid, reliable, maintained)",
+      "Chrome extension automation (free, may break with FB updates)"
+    ],
+    "recommendation": "Start with Chrome extension automation — free, and we already have it set up",
+    "context": ""
+  },
+  {
+    "id": "state-arbitrage-pulse-67374",
+    "project": "arbitrage-pulse",
+    "question": "What categories do you want to monitor? (e.g. tools, electronics, collectibles, furniture, vintage)",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Keyword list drives everything. More specific = less noise = better digest."
+  },
+  {
+    "id": "state-arbitrage-pulse-38804",
+    "project": "arbitrage-pulse",
+    "question": "Minimum profit margin to include in digest — e.g. only show items with 40%+ margin?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Sets the filter threshold for the margin analysis step."
+  },
+  {
+    "id": "state-arbitrage-pulse-83981",
+    "project": "arbitrage-pulse",
+    "question": "Digest delivery format — Markdown file in Drive, email, or dashboard card?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio."
+  },
+  {
+    "id": "state-hibid-analyzer-91339",
+    "project": "hibid-analyzer",
+    "question": "Now that Chrome extension is available — attempt textarea via extension first or continue investigating DOM approach?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "Extension first — highest probability of success",
+      "DOM investigation — understand root cause first",
+      "Both in parallel"
+    ],
+    "recommendation": "Extension first — Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
+    "context": ""
+  },
+  {
+    "id": "state-hibid-analyzer-14647",
+    "project": "hibid-analyzer",
+    "question": "Should analysis run on all lots automatically or only when you click a button on a specific lot?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Auto-run = more convenient but costs more API calls. Manual trigger = you control what gets analyzed."
+  },
+  {
+    "id": "state-hibid-analyzer-53854",
+    "project": "hibid-analyzer",
+    "question": "What format do you want the watchlist notes in? (e.g. 'Est: $45-65 | Condition: Good | Items: ceramic vase')",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Note format determines what Gemini is asked to return. Standardized format makes notes scannable during live bidding."
+  },
+  {
+    "id": "state-hibid-analyzer-4415",
+    "project": "hibid-analyzer",
+    "question": "Should this work on mobile Chrome or desktop only?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Mobile adds complexity but useful if bidding from phone at estate sales."
+  },
+  {
+    "id": "state-job-match-34202",
+    "project": "job-match",
+    "question": "Should the platform be offered as SaaS to other job seekers or stay personal/portfolio use?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Determines whether to add billing, multi-user accounts, and marketing infrastructure. Significant scope difference."
+  },
+  {
+    "id": "state-job-match-96491",
+    "project": "job-match",
+    "question": "Should employer portal be prioritized before or after scraping engine?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both are needed for a complete product."
+  },
+  {
+    "id": "state-job-match-70809",
+    "project": "job-match",
+    "question": "For the scam database — should it be private to your platform or eventually shared/open source?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Shared scam database becomes a community moat. Private keeps it proprietary. Open source builds trust and contributions."
+  },
+  {
+    "id": "state-job-match-19967",
+    "project": "job-match",
+    "question": "Should job ratings be shown to users in v1 or held back until v2?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 cleaner but reduces user confidence in results."
+  },
+  {
+    "id": "state-listing-optimizer-66038",
+    "project": "listing-optimizer",
+    "question": "Personal tool only or productize for other sellers?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "Personal only — optimize Joe's 572 listings",
+      "Beta test with select sellers",
+      "Full SaaS product"
+    ],
+    "recommendation": "Personal first — prove it works on your own inventory, then decide",
+    "context": ""
+  },
+  {
+    "id": "state-listing-optimizer-3258",
+    "project": "listing-optimizer",
+    "question": "Input format — eBay bulk export CSV or manual entry or both?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "eBay bulk export CSV only",
+      "Manual entry only",
+      "Both"
+    ],
+    "recommendation": "eBay bulk export CSV — you already have 572 listings to process",
+    "context": ""
+  },
+  {
+    "id": "state-listing-optimizer-10533",
+    "project": "listing-optimizer",
+    "question": "What are your SKU prefix conventions for physical storage location tracking?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Optimizer needs to preserve or understand existing SKU format to not break your storage system."
+  },
+  {
+    "id": "state-listing-optimizer-55060",
+    "project": "listing-optimizer",
+    "question": "Which categories make up the majority of your 572 listings?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Category-specific title rules — e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first."
+  },
+  {
+    "id": "state-listing-optimizer-83993",
+    "project": "listing-optimizer",
+    "question": "Should the optimizer suggest a price adjustment based on recent eBay sold data?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Adds significant value but requires eBay API access. Could share that infrastructure with Arbitrage Pulse."
+  },
+  {
+    "id": "state-nutrimind-56986",
+    "project": "nutrimind",
+    "question": "What defines NutriMind as complete — what is the finish line?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "All planned features working",
+      "Personal use ready",
+      "Productize for other users"
+    ],
+    "recommendation": "Define personal use ready first — then decide if productizing is worth the extra work",
+    "context": ""
+  },
+  {
+    "id": "state-nutrimind-32573",
+    "project": "nutrimind",
+    "question": "Should shopping list generation be part of the MVP or post-launch?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Natural extension of meal planning. Medium complexity add."
+  },
+  {
+    "id": "state-nutrimind-83615",
+    "project": "nutrimind",
+    "question": "Should the app remember your meal history to avoid repeating recent meals?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Requires localStorage or backend. Adds significant value but adds complexity."
+  },
+  {
+    "id": "state-squeeze-empire-99000",
+    "project": "squeeze-empire",
+    "question": "What defines late-game completion — what is the win condition or final milestone?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "Reach a revenue target",
+      "Unlock all upgrades",
+      "No win condition — infinite idle",
+      "Story ending"
+    ],
+    "recommendation": "Reach a revenue target + unlock all upgrades — gives clear progression and satisfying endpoint",
+    "context": ""
+  },
+  {
+    "id": "state-squeeze-empire-43721",
+    "project": "squeeze-empire",
+    "question": "Should the game save state between sessions or reset each time?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "localStorage save would make it a true idle game. No save = arcade style. Significant architecture difference."
+  },
+  {
+    "id": "state-squeeze-empire-80738",
+    "project": "squeeze-empire",
+    "question": "After late-game is done — release publicly, keep personal, or productize?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Affects whether we add analytics, sharing features, or mobile optimization pass."
+  },
+  {
+    "id": "state-whatnot-apps-89588",
+    "project": "whatnot-apps",
+    "question": "Which Whatnot role to prioritize for application submission first?",
+    "type": "required",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [
+      "Fraud Agent",
+      "Trust & Safety Agent",
+      "CX Agent Overnight"
+    ],
+    "recommendation": "Trust & Safety Agent — best alignment with moderation background and written communication preference",
+    "context": ""
+  },
+  {
+    "id": "state-whatnot-apps-17616",
+    "project": "whatnot-apps",
+    "question": "Do you have the actual current Whatnot job posting URLs to tailor against?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Resumes tailored to exact posting language score significantly higher on ATS systems."
+  },
+  {
+    "id": "state-whatnot-apps-31568",
+    "project": "whatnot-apps",
+    "question": "Should we build a general Whatnot cover letter or three separate role-specific ones?",
+    "type": "proactive",
+    "status": "pending",
+    "created": "2026-03-19",
+    "options": [],
+    "recommendation": "",
+    "context": "Separate letters are stronger but more work. General letter with swap sections is faster."
   }
 ]
