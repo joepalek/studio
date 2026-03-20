@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-20T17:27:38",
-  "current_task": "building quota-aware supervisor",
+  "last_updated": "2026-03-20T17:29:01",
+  "current_task": "idle",
   "completed_today": [
     "SRE health check run: CRITICAL resolved → all issues fixed",
     "job-match committed (pass1 log + raw-companies.json)",
@@ -17,7 +17,8 @@
     "company registry pass1 blocked - 4 sources failed",
     "Drive status file created + session_logger wired",
     "auto-answer.md created — inbox triage engine with 4 passes + answers-memory schema",
-    "sidebar-agent.html created — Opera sidebar with Gemini chat, status panel, task queue via Supabase"
+    "sidebar-agent.html created — Opera sidebar with Gemini chat, status panel, task queue via Supabase",
+    "supervisor.md updated — quota-aware mode, task-queue.json, sidebar-log.txt, daily summary protocol"
   ],
   "pending": [
     "run company registry pass1 again to test fixed sources",
@@ -47,5 +48,5 @@
     "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 13
+  "v": 14
 }

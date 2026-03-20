@@ -280,6 +280,156 @@ UTILITIES_REGISTRY = {
 
 ---
 
+## Quota-Aware Mode
+
+When Claude.ai quota is low or exhausted, Supervisor enters **Free-Tier-Only mode**.
+All analysis continues — nothing stops — only the routing changes.
+
+### Detecting Low Quota
+Quota state is written to `studio-config.json` by the session end protocol:
+```json
+{ "claude_quota_state": "low" }   // values: ok | low | exhausted
+```
+Or Supervisor infers it if Claude hasn't committed in >8 hours during active hours.
+
+### Free-Tier-Only Mode — What Keeps Running
+
+| Task | Route | Why |
+|---|---|---|
+| SRE health checks | Ollama | Pure bash, no LLM |
+| Overnight scrapers | Ollama | Batch protocol — Ollama only |
+| Whiteboard scoring | Gemini Flash | Free, handles scoring prompts |
+| Ghost-book validation | Gemini Flash | Long context, free tier |
+| Product archaeology | Gemini Flash | Data analysis |
+| Book review mining | Gemini Flash | Free, adequate quality |
+| Company registry crawl | Ollama | No LLM needed |
+| Inbox auto-answer | Gemini Flash | Rule-matching, low complexity |
+| Status updates | session_logger | Pure Python, no LLM |
+| Drive status writes | session_logger | Pure Python, no LLM |
+
+### What Gets Queued (Needs Claude Code)
+
+Tasks that require Claude quota go to `task-queue.json` + Supabase:
+```python
+REQUIRES_CLAUDE = [
+    'architecture decisions',
+    'new agent builds',
+    'multi-file refactors',
+    'quality review of Tier 0/1 outputs',
+    'cross-project strategy',
+    'CLAUDE greenlight tier approvals',
+]
+```
+
+Queue format (written to both files):
+```bash
+python -c "
+import json, os
+from datetime import datetime
+
+STUDIO = 'G:/My Drive/Projects/_studio'
+QUEUE_PATH = STUDIO + '/task-queue.json'
+
+def queue_task(project, task, priority='medium', reason=''):
+    q = []
+    if os.path.exists(QUEUE_PATH):
+        try: q = json.load(open(QUEUE_PATH, encoding='utf-8'))
+        except: q = []
+    q.append({
+        'id': f'q-{int(datetime.now().timestamp())}',
+        'project': project,
+        'task': task,
+        'priority': priority,
+        'reason': reason,
+        'queued_at': datetime.now().isoformat(),
+        'status': 'queued',
+        'source': 'supervisor-quota-mode',
+    })
+    # Sort: high first
+    order = {'high': 0, 'medium': 1, 'low': 2}
+    q.sort(key=lambda x: order.get(x.get('priority','medium'), 1))
+    json.dump(q, open(QUEUE_PATH, 'w', encoding='utf-8'), indent=2)
+    print(f'  Queued [{priority}]: {project} — {task[:60]}')
+"
+```
+
+### Quota Reset Protocol
+
+When Claude Code session starts, read the queue:
+```bash
+python -c "
+import json, os
+QUEUE_PATH = 'G:/My Drive/Projects/_studio/task-queue.json'
+if not os.path.exists(QUEUE_PATH): print('No queued tasks.'); exit()
+q = json.load(open(QUEUE_PATH, encoding='utf-8'))
+pending = [t for t in q if t.get('status') == 'queued']
+print(f'TASK QUEUE: {len(pending)} tasks waiting')
+for t in pending[:5]:
+    print(f'  [{t[\"priority\"]}] {t[\"project\"]}: {t[\"task\"][:70]}')
+"
+```
+Then:
+1. Execute highest priority tasks first
+2. After completing each: update its status to `done` in task-queue.json
+3. Clear all `done` tasks older than 7 days
+
+### Daily Summary to sidebar-log.txt
+
+At end of each Supervisor cycle, write a summary to Supabase sidebar-log:
+```python
+import json, urllib.request
+from datetime import datetime
+
+def push_daily_summary(report):
+    c = json.load(open('G:/My Drive/Projects/_studio/studio-config.json'))
+    url = c.get('supabase_url', '')
+    key = c.get('supabase_anon_key', '')
+    if not url or not key:
+        return
+
+    summary_text = (
+        f'Supervisor cycle {report[\"time\"][:16]} | '
+        f'ollama={report.get(\"ollama_up\")} | '
+        f'dispatched={len(report.get(\"dispatched\",[]))} tasks | '
+        f'queue={report.get(\"work_queue_depth\",0)} pending'
+    )
+
+    payload = json.dumps([{
+        'session_id': f'sidebar-log-{int(datetime.now().timestamp())}',
+        'answers': json.dumps({
+            'type': 'sidebar_log',
+            'agent': 'supervisor',
+            'message': summary_text,
+            'ts': datetime.now().isoformat(),
+        }),
+        'total_answered': 1
+    }]).encode()
+
+    req = urllib.request.Request(
+        url + '/rest/v1/mobile_answers',
+        data=payload,
+        headers={
+            'Content-Type': 'application/json',
+            'apikey': key,
+            'Authorization': 'Bearer ' + key,
+            'Prefer': 'return=minimal',
+        },
+        method='POST',
+    )
+    try:
+        urllib.request.urlopen(req, timeout=8)
+    except Exception as e:
+        print(f'[supervisor] sidebar log push failed: {e}')
+```
+
+Also append to `G:/My Drive/Projects/_studio/sidebar-log.txt` for offline reads:
+```python
+with open('G:/My Drive/Projects/_studio/sidebar-log.txt', 'a', encoding='utf-8') as f:
+    f.write(f'[{datetime.now().strftime("%Y-%m-%d %H:%M")}] {summary_text}\n')
+```
+
+---
+
 ## Running Supervisor
 ```
 Load supervisor.md. Run supervisor cycle now.
@@ -287,6 +437,6 @@ Load supervisor.md. Run supervisor cycle now.
 
 ## Add to Task Scheduler
 ```
-claude --dangerously-skip-permissions -p "Load supervisor.md. Run supervisor cycle now." 
+claude --dangerously-skip-permissions -p "Load supervisor.md. Run supervisor cycle now."
 ```
 Schedule: every 30 minutes via Windows Task Scheduler
