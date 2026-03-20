@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head><title>Studio Status</title></head>
+<body>
+<a href="status.json">status.json</a>
+<script>
+fetch('status.json').then(r=>r.json()).then(d=>document.write('<pre>'+JSON.stringify(d,null,2)+'</pre>'))
+</script>
+</body>
+</html>
