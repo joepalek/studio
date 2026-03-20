@@ -1,39 +1,24 @@
 {
-  "generated": "2026-03-19T23:01:19.332778",
+  "generated": "2026-03-20T01:31:03.799393",
+  "verdict": "DEGRADED",
   "tools": {
     "git": "2.53.0 OK",
     "node": "v24.14.0 OK",
     "npm": "11.9.0 OK",
-    "python": "3.13.7 OK",
-    "repomix": "1.12.0 OK",
-    "ollama": "0.12.10 OK"
+    "python": "3.13.7 OK"
   },
-  "endpoints": {
+  "gateway": {
     "anthropic": "SET",
-    "gemini": "UP",
-    "openrouter": "UP",
-    "ollama": "UP \u2014 1 model (gemma3:4b)"
+    "gemini": "SET",
+    "openrouter": "SET",
+    "ollama": "UP - 1 model (gemma3:4b)"
   },
-  "projects": {
-    "issues": [
-      "NO STATE.JSON: sentinel-core",
-      "NO STATE.JSON: sentinel-performer",
-      "NO STATE.JSON: sentinel-viewer",
-      "UNCOMMITTED (4 files): _studio"
-    ],
-    "clean": 9
-  },
-  "studio_files": {
-    "critical": "ALL PRESENT",
-    "optional_missing": [
-      "gateway-log.txt"
-    ]
-  },
-  "mobile_answers": {
-    "pending_sessions": 1,
-    "pending_answers": 2
-  },
-  "verdict": "DEGRADED",
-  "issue_count": 4,
-  "action": "Commit _studio dirty files; create state.json for sentinel projects; import 2 mobile answers"
+  "issues": [
+    "NO STATE.JSON: sentinel-core",
+    "NO STATE.JSON: sentinel-performer",
+    "NO STATE.JSON: sentinel-viewer",
+    "UNCOMMITTED (5 files): _studio",
+    "MOBILE ANSWERS PENDING: 1 session, 2 answers",
+    "OPTIONAL MISSING: gateway-log.txt"
+  ]
 }

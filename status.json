@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-20T01:35:03",
+  "last_updated": "2026-03-20T01:40:01",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -36,15 +36,16 @@
   "pending": [
     "run scheduler register_tasks.py as admin",
     "company registry pass1 overnight run",
-    "sysguard project init",
-    "watchdog project init",
-    "ghost-book git init",
-    "whiteboard scoring pass on 30+ items",
-    "wire complete_task() into all agent scripts"
+    "wire complete_task() into all agent scripts",
+    "run /rc at session start going forward (enable auto remote-control)",
+    "review ghost-book 161 viable candidates",
+    "review whiteboard 30 scored items",
+    "daily job scraper build (after reviewing job source registry)",
+    "review overnight company registry results tomorrow"
   ],
   "blockers": [
     "scheduler registration needs admin terminal"
   ],
   "next_recommended": "Fix VS Code studio Drive refresh then init sysguard and watchdog",
-  "v": 2
+  "v": 3
 }
