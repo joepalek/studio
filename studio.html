@@ -3898,6 +3898,12 @@ async function refreshFromDrive() {
   refreshBtn.disabled = true;
   setDriveStatus('syncing');
 
+  // ── REPLACE not APPEND: clear all Drive-sourced items before rebuild ──────
+  // Keeps manually injected items (no _fromJanitorReport / _tier2Change flag).
+  // Prevents ghost accumulation across refreshes and page loads.
+  AGENT_QUESTIONS = AGENT_QUESTIONS.filter(q => !q._fromJanitorReport && !q._tier2Change);
+  saveDecisionsToStorage(); // persist cleared state so localStorage stays in sync
+
   try {
     const projectsFolderId = await findProjectsFolder();
     const subfolders = await listProjectSubfolders(projectsFolderId);

@@ -18,7 +18,9 @@ You run on Python only — zero LLM needed. Cost: $0.00.
 
 ### Pass 1 — Count pending items from all state.json files
 ```python
-import json, os, hashlib
+import os, hashlib, sys
+sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from unicode_safe import safe_json_load  # ALWAYS use — never plain open() on Windows
 
 PROJECTS_ROOT = 'G:/My Drive/Projects'
 PROJECTS = [
@@ -34,7 +36,7 @@ for p in PROJECTS:
         path = os.path.join(PROJECTS_ROOT, p, fname)
         if os.path.exists(path):
             try:
-                d = json.load(open(path, encoding='utf-8', errors='replace'))
+                d = safe_json_load(path)  # utf-8 with latin-1 fallback — safe on Windows
 
                 # Schema A: rich state (decisions + proactive_questions)
                 for item in d.get('decisions', []):

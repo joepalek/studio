@@ -96,8 +96,19 @@
       "last_applied": "2026-03-19",
       "example": "Ghost Book Pass 2 crashed 3x on Unicode book titles before utility was built"
     }
+    {
+      "id": "rule-011",
+      "trigger": "any script opens a JSON file on Windows",
+      "action": "always use safe_json_load() from unicode_safe.py, or open(f, encoding='utf-8', errors='replace') — never plain open(f)",
+      "applies_to": ["all agents", "inbox-manager", "audit scripts", "diagnostic one-liners"],
+      "created": "2026-03-19",
+      "approved_by": "joe",
+      "times_applied": 1,
+      "last_applied": "2026-03-19",
+      "example": "plain open() on job-match/state.json caused 'found 0 items' — em-dash in answer field (U+2014) fails cp1252 decode silently"
+    }
   ],
   "last_updated": "2026-03-19",
-  "total_rules": 10,
+  "total_rules": 11,
   "schema_version": "1.0"
 }

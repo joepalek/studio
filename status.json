@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-19T21:01:23",
+  "last_updated": "2026-03-19T21:14:36",
   "current_task": "idle",
   "completed_today": [
     "workflow-intelligence.md built",
@@ -26,7 +26,12 @@
     "inbox-manager.md built",
     "inbox-manager.md built and first sync run",
     "inbox-manager daily sync: 31 active, 0 answers applied",
-    "inbox-manager daily sync: 62 active, 0 answers applied"
+    "inbox-manager daily sync: 62 active, 0 answers applied",
+    "inbox ground truth confirmed at 31 items — matched exactly",
+    "unicode encoding fix: safe_json_load() now used in inbox-manager Pass 1",
+    "studio.html Drive Refresh: replace-not-append (ghost items fixed)",
+    "standing-rules: rule-011 added (never plain open() on Windows)",
+    "utilities/README.md: cp1252 warning added"
   ],
   "pending": [
     "run scheduler register_tasks.py as admin",

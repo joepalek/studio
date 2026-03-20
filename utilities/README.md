@@ -2,6 +2,14 @@
 
 Shared utilities for all studio agents. **Import from here — never copy.**
 
+> **WARNING — #1 source of silent bugs on Windows:**
+> ALWAYS use `safe_json_load()` or `open(f, encoding='utf-8', errors='replace')`.
+> NEVER use plain `open(f)` — it defaults to cp1252 on Windows.
+> UTF-8 characters (em-dashes, arrows, accented letters) in JSON values silently raise
+> `UnicodeDecodeError`, caught by bare `except: pass`, resulting in "found 0 items" bugs.
+> Example: a single `answer: "Yes — migration complete"` caused an entire project scan
+> to return 0 results because the em-dash (U+2014) is not valid cp1252.
+
 ```python
 import sys
 sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
