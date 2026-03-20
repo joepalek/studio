@@ -1,37 +1,36 @@
 {
-  "last_updated": "2026-03-20T08:00:00",
-  "current_task": "session_start — overnight results reviewed",
+  "last_updated": "2026-03-20T09:00:00",
+  "current_task": "idle",
   "completed_today": [
-    "SRE health check run: CRITICAL (5 issues — uncommitted files + sentinel no-state)",
-    "ghost-book pass3 complete: 3 concat opportunities found (vedic+CS, hemp+fiber, microbiome+gut)",
-    "gemini model fixed: gemini-2.5-flash v1 endpoint (not v1beta, not 2.0-flash)",
-    "EDGAR regex fixed: company-info name attr not company-name tag",
-    "cdx-c2c-analysis: 18 entries analyzed (date/site/claims structure)",
-    "company registry pass1: 0 companies — all sources blocked (see blockers)"
+    "SRE health check run: CRITICAL resolved → all issues fixed",
+    "job-match committed (pass1 log + raw-companies.json)",
+    "_studio committed (art-request-form.html, CDX log, scheduler logs)",
+    "sentinel state.json stubs created (SRE no longer flags)",
+    "2 mobile answers imported and cleared from Supabase (test session)",
+    "company registry pass1 fixed: EDGAR SIC→EFTS, SBIR api.sbir.gov→sbir.gov/api/solicitations, IRS URL comment added, OpenCorporates key note added",
+    "3 ghost-book art requests submitted to Art Dept queue (Vedic+CS, Hemp+fiber, Microbiome)",
+    "ghost-book pass3 complete: 3 concat opportunities found",
+    "cdx-c2c-analysis: 18 entries analyzed (date/site/claims structure)"
   ],
   "pending": [
-    "review ghost-book 3 concat opportunities — assign Art Dept cover concepts",
-    "fix company registry pass1: OpenCorporates needs API key, IRS URL moved, SBIR DNS",
+    "run company registry pass1 again to test fixed sources",
+    "sign up for OpenCorporates free API key: opencorporates.com/api_accounts/new",
     "review CDX C2C 18 entries in cdx-c2c-analysis.json",
-    "import 2 pending mobile answers (1 session in Supabase)",
-    "commit job-match (2 uncommitted files)",
-    "create sentinel-core/performer/viewer state.json stubs",
-    "run scheduler register_tasks.py as admin",
+    "run scheduler register_tasks.py as ADMINISTRATOR",
     "wire complete_task() into all agent scripts",
     "daily job scraper build (after reviewing job source registry)",
     "review ghost-book 161 viable candidates from pass2"
   ],
   "blockers": [
-    "OpenCorporates: HTTP 401 — needs free API key at opencorporates.com/api_accounts/new",
-    "IRS EO BMF: HTTP 404 — data source URL moved, needs browser investigation",
-    "SBIR api.sbir.gov: DNS failure — may need VPN or endpoint update",
-    "company registry pass1 returning 0 — all 4 sources blocked"
+    "OpenCorporates: still needs free API key — opencorporates.com/api_accounts/new",
+    "IRS EO BMF: 404 may persist — check irs.gov/charities for updated URL",
+    "scheduler: needs Administrator terminal to register Windows tasks"
   ],
-  "next_recommended": "Review ghost-book concat-opportunities.json (3 viable pitches) then fix company registry blockers",
+  "next_recommended": "Run pass1 again with fixed sources, then review CDX C2C 18 entries",
   "overnight_summary": {
     "ghost_book_pass3": "SUCCESS — 3 concat opportunities: vedic+CS, hemp+fiber, microbiome+gut",
-    "job_match_registry_pass1": "BLOCKED — 0 companies: OpenCorporates 401, IRS 404, SBIR DNS failure, EDGAR 0 results",
+    "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 8
+  "v": 9
 }
