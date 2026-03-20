@@ -2494,3 +2494,217 @@ From the last orchestrator briefing (generated 08:02 this morning):
 2. eBay listing review for price/keyword adjustments
 3. CTW character portrait generation
 [Fri 03/20/2026 12:00:01.73] Supervisor check starting 
+[Fri 03/20/2026 12:30:01.70] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-20
+
+```
+=== SRE SCOUT REPORT — 2026-03-20 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.12.10
+  ✓ gh 2.88.1
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: SET
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP — 1 model (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (4 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical studio files present
+  - gateway-log.txt: optional, missing (no gateway tasks logged yet)
+
+MOBILE ANSWERS
+  ! 4 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files; import mobile answers in studio
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Ollama:** UP (gemma3:4b)
+- **Gemini:** Available
+- **Work queue:** 0 agent-runnable tasks (orchestrator-plan.json has no queued items)
+- **Tasks dispatched:** 0 (daytime — no overnight dispatch needed)
+- **Supervisor inbox:** Clear
+- **Improvement proposals:** None pending
+
+---
+
+## BACKGROUND TASKS SUMMARY (from scheduler log)
+
+The Task Scheduler has been running every 30 min. Last entry: **12:30 PM today**.
+
+From the 8:02 AM orchestrator briefing captured in the log:
+
+**Completed since last session:**
+- Orchestrator daily briefing generated (Gemini Flash)
+- SRE check ran at 11:01 AM
+
+**Still pending (human decisions required):**
+1. **job-match** — 5 pending decisions (top priority, income replacement by May)
+2. **CTW** — portrait images not generated, comfort bar overcorrects
+3. 6 other projects with 1-2 decisions each
+
+**Blocked:**
+- All 3 Sentinel projects — LLC filing deadlocked on $300 Tennessee fee
+
+**Top 3 from briefing:**
+1. Commit job-match pending files
+2. eBay listing review (price/keyword)
+3. CTW character portrait generation
+
+---
+
+What would you like to work on?
+[Fri 03/20/2026 13:00:01.87] Supervisor check starting 
+Here is the full report:
+
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-20 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.12.10 (UP — gemma3:4b)
+  ✓ gh 2.88.1
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP — 1 model
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (5 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, missing
+
+MOBILE ANSWERS
+  ! 4 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio (5 files), import 5 mobile answers
+```
+
+---
+
+```
+=== SUPERVISOR CYCLE — 2026-03-20 13:00 ===
+
+Ollama: UP (gemma3:4b)
+Gemini: Available
+Work queue: 0 tasks
+Tasks dispatched: 0 (daytime, no queue)
+Proposals: None pending
+```
+
+---
+
+**Completed background tasks (scheduler ran every 30 min since last session):**
+
+- Orchestrator daily briefing generated this morning (Gemini Flash)
+- SRE checks confirmed running through 12:30 PM today — system healthy throughout
+- No automated work dispatched (empty queue, daytime window)
+
+**Still pending (require human decisions):**
+1. **job-match** — 5 decisions pending (income replacement by May — top priority)
+2. **CTW** — portrait images ungenerated, comfort bar overcorrects
+3. All 3 Sentinel projects — blocked on $300 Tennessee LLC fee
+
+**Two actions to clear before working:**
+1. Commit `_studio` (5 dirty files)
+2. Import 5 mobile answers in studio
+
+What would you like to work on?
+[Fri 03/20/2026 13:30:01.85] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-20
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.12.10
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: SET
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP — 1 model (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (5 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, MISSING
+
+MOBILE ANSWERS
+  ! 4 sessions pending — 5 answers waiting (run importMobileAnswers)
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files, import mobile answers
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+**Dispatcher:** 0 tasks dispatched — work queue empty, no agent-runnable tasks pending.
+
+**Background tasks completed since last session (from scheduler log):**
+- Orchestrator daily briefing generated (Gemini Flash)
+- SRE checks confirmed healthy through 12:30 PM today
+- No automated dispatches (daytime window, empty queue)
+
+**Still pending (human decisions required):**
+- `job-match` — 5 decisions pending (income replacement priority)
+- `CTW` — portrait images ungenerated, comfort bar overcorrects
+- All 3 Sentinel projects — blocked on $300 TN LLC fee
+
+**Two quick clears before working:**
+1. Commit `_studio` (5 dirty files)
+2. Import 5 mobile answers in studio.html
+
+What are we working on today?
+[Fri 03/20/2026 14:00:01.80] Supervisor check starting 
+[Fri 03/20/2026 14:30:01.86] Supervisor check starting 
+You're out of extra usage · resets Mar 24, 5pm (America/Chicago)
+[Fri 03/20/2026 15:00:01.82] Supervisor check starting 
+You're out of extra usage · resets Mar 24, 5pm (America/Chicago)
+[Fri 03/20/2026 15:30:01.84] Supervisor check starting 
+You're out of extra usage · resets Mar 24, 5pm (America/Chicago)
+[Fri 03/20/2026 16:00:01.84] Supervisor check starting 
+You're out of extra usage · resets Mar 24, 5pm (America/Chicago)
+[Fri 03/20/2026 16:30:01.94] Supervisor check starting 
+You're out of extra usage · resets Mar 24, 5pm (America/Chicago)
+[Fri 03/20/2026 17:00:01.98] Supervisor check starting 
+[Fri 03/20/2026 17:30:01.84] Supervisor check starting 
