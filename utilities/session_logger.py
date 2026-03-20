@@ -23,6 +23,8 @@ Usage:
 """
 import os
 import sys
+import json
+import urllib.request
 from datetime import datetime
 
 # Ensure utilities/ is on path for unicode_safe import
@@ -35,7 +37,55 @@ from unicode_safe import safe_json_load, safe_json_dump, safe_str
 STUDIO       = 'G:/My Drive/Projects/_studio'
 LOG_PATH     = STUDIO + '/session-log.md'
 STATUS_PATH  = STUDIO + '/status.json'
+CONFIG_PATH  = STUDIO + '/studio-config.json'
 ROTATE_BYTES = 50 * 1024  # 50kb
+
+
+# ─── Supabase helpers ─────────────────────────────────────────────────────────
+
+def _load_supabase_config():
+    try:
+        with open(CONFIG_PATH, encoding='utf-8') as f:
+            c = json.load(f)
+        url = c.get('supabase_url', '').rstrip('/')
+        key = c.get('supabase_anon_key', '')
+        return url, key
+    except Exception:
+        return '', ''
+
+
+def _push_to_supabase(status: dict):
+    """Push flattened status to Supabase session_status table (upsert on id=1)."""
+    url, key = _load_supabase_config()
+    if not url or not key:
+        return
+
+    row = {
+        'id': 1,
+        'last_updated':    status.get('last_updated', ''),
+        'current_task':    status.get('current_task', ''),
+        'completed_today': ', '.join(status.get('completed_today', [])),
+        'pending':         ', '.join(status.get('pending', [])),
+        'blockers':        ', '.join(status.get('blockers', [])),
+        'next_recommended': status.get('next_recommended', ''),
+    }
+
+    try:
+        payload = json.dumps([row]).encode('utf-8')
+        req = urllib.request.Request(
+            url + '/rest/v1/session_status',
+            data=payload,
+            headers={
+                'Content-Type':  'application/json',
+                'apikey':        key,
+                'Authorization': 'Bearer ' + key,
+                'Prefer':        'resolution=merge-duplicates',
+            },
+            method='POST',
+        )
+        urllib.request.urlopen(req, timeout=8)
+    except Exception as e:
+        print(f'[session_logger] Supabase write failed (non-fatal): {e}')
 
 
 # ─── Internal helpers ─────────────────────────────────────────────────────────
@@ -135,6 +185,7 @@ def update_status(
         next_recommended: Overwrite the next_recommended field
     """
     default = {
+        'v':               0,
         'last_updated':    '',
         'current_task':    '',
         'completed_today': [],
@@ -148,6 +199,7 @@ def update_status(
     except Exception:
         status = default
 
+    status['v']            = int(status.get('v', 0)) + 1
     status['last_updated'] = _iso()
 
     if current_task is not None:
@@ -186,6 +238,7 @@ def update_status(
         status['next_recommended'] = next_recommended
 
     safe_json_dump(status, STATUS_PATH)
+    _push_to_supabase(status)
 
 
 def complete_task(
