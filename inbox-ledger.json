@@ -1,10 +1,10 @@
 {
   "archived": [],
   "stats": {
-    "last_sync": "2026-03-19T21:00:38.397700",
+    "last_sync": "2026-03-19T21:01:20.531621",
     "total_archived": 0,
-    "active_count": 0,
-    "pending_count": 0,
+    "active_count": 31,
+    "pending_count": 31,
     "answered_count": 0
   }
 }
