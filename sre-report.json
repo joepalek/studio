@@ -1,42 +1,46 @@
 {
-  "generated": "2026-03-19T09:43:52.483926",
+  "generated": "2026-03-19T20:31:00",
   "verdict": "DEGRADED",
-  "issue_count": 4,
-  "passes": {
-    "tools": {
-      "git": "2.53.0 OK",
-      "node": "v24.14.0 OK",
-      "npm": "11.9.0 OK",
-      "python": "3.13.7 OK",
-      "claude_code": "2.1.79 OK (above expected 2.1.78)",
-      "repomix": "1.12.0 OK",
-      "ollama": "0.12.10 UP"
-    },
-    "endpoints": {
-      "anthropic": "SET",
-      "gemini": "UP",
-      "openrouter": "UP",
-      "ollama": "UP - gemma3:4b"
-    },
-    "projects": {
-      "issues": [
-        "NO STATE.JSON: sentinel-core",
-        "NO STATE.JSON: sentinel-performer",
-        "NO STATE.JSON: sentinel-viewer",
-        "UNCOMMITTED (5 files): _studio"
-      ],
-      "clean": 12
-    },
-    "studio_files": {
-      "critical": "all present",
-      "optional_missing": [
-        "gateway-log.txt"
-      ]
-    },
-    "mobile_answers": {
-      "pending_sessions": 1,
-      "pending_answers": 2,
-      "action": "run importMobileAnswers in studio"
-    }
+  "issues_count": 5,
+  "pass1_tools": {
+    "git": "2.53.0 OK",
+    "node": "v24.14.0 OK",
+    "npm": "11.9.0 OK",
+    "python": "3.13.7 OK",
+    "repomix": "1.12.0 OK",
+    "ollama": "0.12.10 OK"
+  },
+  "pass2_endpoints": {
+    "anthropic": "SET",
+    "gemini": "SET",
+    "openrouter": "SET",
+    "ollama": "UP \u2014 1 model (gemma3:4b)",
+    "ollama_model": "gemma3:4b"
+  },
+  "pass3_projects": {
+    "issues": [
+      "NO STATE.JSON: sentinel-core",
+      "NO STATE.JSON: sentinel-performer",
+      "NO STATE.JSON: sentinel-viewer",
+      "UNCOMMITTED (7 files): _studio"
+    ]
+  },
+  "pass4_files": {
+    "critical": "All present",
+    "optional_missing": [
+      "gateway-log.txt"
+    ]
+  },
+  "pass5_mobile": {
+    "status": "PENDING",
+    "sessions": 1,
+    "answers": 2
+  },
+  "supervisor": {
+    "ollama_up": true,
+    "gemini_available": true,
+    "agents_active": 0,
+    "work_queue": 0,
+    "dispatched": 0
   }
 }

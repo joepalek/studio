@@ -1,24 +1,6 @@
-# INBOX MANAGER — DAILY SYNC AGENT
-
-## Role
-You are the Inbox Manager. You maintain the single source of truth for all
-pending decisions, questions, and actions across every studio project.
-You pull from Supabase (mobile answers), state.json files (project questions),
-and agent outputs (whiteboard top picks, supervisor proposals).
-
-You run on Python only — zero LLM needed. Cost: $0.00.
-
-## Files
-- `mobile-inbox.json` — list of items shown on mobile UI (truth source for display)
-- `inbox-ledger.json` — full history: all items ever added, answered, resolved
-- `supervisor-inbox.json` — scraper failures and agent errors needing fix
-- Supabase `mobile_answers` table — answers submitted from phone
-
-## Daily Sync — 7 Passes
-
-### Pass 1 — Count pending items from all state.json files
-```python
-import json, os
+"""Inbox Manager Daily Sync — runs all 7 passes."""
+import json, os, subprocess, sys
+from datetime import datetime, timedelta
 
 PROJECTS_ROOT = 'G:/My Drive/Projects'
 PROJECTS = [
@@ -28,6 +10,7 @@ PROJECTS = [
     'ghost-book', 'sysguard', 'watchdog',
 ]
 
+# ── Pass 1 ── Count pending items from all state.json files ──────────────────
 all_pending = []
 for p in PROJECTS:
     for fname in [f'{p}-state.json', 'state.json']:
@@ -61,7 +44,7 @@ for p in PROJECTS:
                             'decision_type': 'proactive',
                         })
 
-                # Schema B: simple list fields
+                # Schema B: simple list fields (legacy fallback)
                 for q in d.get('questions', d.get('pending_questions', [])):
                     text = q if isinstance(q, str) else q.get('question', str(q))
                     all_pending.append({
@@ -72,8 +55,8 @@ for p in PROJECTS:
                         'decision_type': 'proactive',
                     })
 
-            except Exception:
-                pass
+            except Exception as e:
+                print(f'  WARN: could not read {path}: {e}')
             break
 
 # Deduplicate by (project, question text)
@@ -92,40 +75,48 @@ for item in all_pending:
 print(f'Pass 1: {len(all_pending)} unanswered items across {len(by_project)} projects')
 for proj, items in sorted(by_project.items()):
     print(f'  {proj}: {len(items)} ({", ".join(set(i["type"] for i in items))})')
-```
 
-### Pass 2 — Fetch and apply Supabase answers
-```python
-import json, urllib.request
-from datetime import datetime
+# ── Pass 2 ── Fetch Supabase answers ────────────────────────────────────────
+import urllib.request
+rows = []
+try:
+    c = json.load(open('G:/My Drive/Projects/_studio/studio-config.json'))
+    key = c.get('supabase_anon_key', '')
+    url = c.get('supabase_url', '')
+    if not key or not url:
+        print('Pass 2: Supabase not configured - skip')
+    else:
+        req = urllib.request.Request(
+            url + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=50',
+            headers={'apikey': key, 'Authorization': 'Bearer ' + key}
+        )
+        r = urllib.request.urlopen(req, timeout=8)
+        rows = json.loads(r.read())
+        print(f'Pass 2: {len(rows)} answer sessions in Supabase')
+        for row in rows:
+            answers = row.get('answers', {})
+            submitted = row.get('submitted_at', '')[:19]
+            session = row.get('session_id', '')
+            print(f'  session={session} answers={len(answers)} submitted={submitted}')
+            for q_id, answer in answers.items():
+                print(f'    {q_id}: {str(answer)[:60]}')
+except Exception as e:
+    print(f'Pass 2: error - {e}')
 
-c = json.load(open('G:/My Drive/Projects/_studio/studio-config.json'))
-key = c.get('supabase_anon_key', '')
-url = c.get('supabase_url', '')
-if not key or not url:
-    print('Pass 2: Supabase not configured — skip')
-else:
-    req = urllib.request.Request(
-        url + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=50',
-        headers={'apikey': key, 'Authorization': 'Bearer ' + key}
-    )
-    r = urllib.request.urlopen(req, timeout=8)
-    rows = json.loads(r.read())
-    print(f'Pass 2: {len(rows)} answer sessions in Supabase')
-    for row in rows:
-        answers = row.get('answers', {})
-        submitted = row.get('submitted_at', '')[:19]
-        session = row.get('session_id', '')
-        print(f'  session={session} answers={len(answers)} submitted={submitted}')
-        for q_id, answer in answers.items():
-            print(f'    {q_id}: {str(answer)[:60]}')
-```
-
-### Pass 3 — Apply answers to mobile-inbox.json
-```python
-# Match answer keys to inbox item IDs, mark as answered
+# ── Pass 3 ── Apply answers to mobile-inbox.json ────────────────────────────
 INBOX_PATH = 'G:/My Drive/Projects/_studio/mobile-inbox.json'
-inbox = json.load(open(INBOX_PATH, encoding='utf-8'))
+inbox = []
+if os.path.exists(INBOX_PATH):
+    for enc in ('utf-8', 'utf-8-sig', 'latin-1'):
+        try:
+            raw = open(INBOX_PATH, encoding=enc).read()
+            parsed = json.loads(raw)
+            inbox = parsed if isinstance(parsed, list) else []
+            break
+        except Exception:
+            continue
+    # inbox stays [] if all encodings fail (corrupt file — rebuild from state files)
+
 applied = 0
 for row in rows:
     for q_id, answer in row.get('answers', {}).items():
@@ -136,14 +127,9 @@ for row in rows:
                 item['answered_at'] = row.get('submitted_at', '')[:19]
                 applied += 1
 print(f'Pass 3: {applied} answers applied to inbox items')
-json.dump(inbox, open(INBOX_PATH, 'w'), indent=2, ensure_ascii=False)
-```
+json.dump(inbox, open(INBOX_PATH, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 
-### Pass 4 — Clean resolved questions (archive non-pending)
-```python
-# Items answered >7 days ago: move to inbox-ledger, remove from active inbox
-from datetime import datetime, timedelta
-
+# ── Pass 4 ── Archive answered items >7 days old ────────────────────────────
 LEDGER_PATH = 'G:/My Drive/Projects/_studio/inbox-ledger.json'
 ledger = json.load(open(LEDGER_PATH)) if os.path.exists(LEDGER_PATH) else {'archived': [], 'stats': {}}
 
@@ -160,10 +146,8 @@ for item in inbox:
 
 ledger['archived'].extend(to_archive)
 print(f'Pass 4: {len(to_archive)} items archived to ledger, {len(to_keep)} remain active')
-```
 
-### Pass 5 — Update inbox-ledger.json
-```python
+# ── Pass 5 ── Update inbox-ledger.json ──────────────────────────────────────
 ledger['stats'] = {
     'last_sync': datetime.now().isoformat(),
     'total_archived': len(ledger['archived']),
@@ -172,16 +156,12 @@ ledger['stats'] = {
     'answered_count': sum(1 for i in to_keep if i.get('status') == 'answered'),
 }
 json.dump(ledger, open(LEDGER_PATH, 'w'), indent=2, ensure_ascii=False)
-print(f'Pass 5: inbox-ledger.json updated — {len(ledger["archived"])} archived total')
-```
+print(f'Pass 5: inbox-ledger.json updated - {len(ledger["archived"])} archived total')
 
-### Pass 6 — Regenerate mobile-inbox.json from ground truth
-```python
-# Rebuild active inbox: keep pending + recently answered (last 7 days) + add new from state files
+# ── Pass 6 ── Regenerate mobile-inbox.json from ground truth ────────────────
 new_items = []
 existing_ids = {i['id'] for i in to_keep}
 
-# Add questions from state.json files not already in inbox
 for pq in all_pending:
     q_id = f'state-{pq["project"]}-{hash(pq["question"]) % 99999}'
     if q_id not in existing_ids:
@@ -189,20 +169,20 @@ for pq in all_pending:
             'id': q_id,
             'project': pq['project'],
             'question': pq['question'],
-            'type': 'project_question',
+            'type': pq.get('decision_type', 'proactive'),
             'status': 'pending',
             'created': datetime.now().isoformat()[:10],
+            'options': pq.get('options', []),
+            'recommendation': pq.get('recommendation', ''),
+            'context': pq.get('context', ''),
         })
         existing_ids.add(q_id)
 
 final_inbox = to_keep + new_items
-json.dump(final_inbox, open(INBOX_PATH, 'w'), indent=2, ensure_ascii=False)
-print(f'Pass 6: mobile-inbox.json regenerated — {len(final_inbox)} items ({len(new_items)} new)')
-```
+json.dump(final_inbox, open(INBOX_PATH, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+print(f'Pass 6: mobile-inbox.json regenerated - {len(final_inbox)} items ({len(new_items)} new)')
 
-### Pass 7 — Push to GitHub + update session-status.json
-```python
-import subprocess, sys
+# ── Pass 7 ── Push to GitHub + update session-status.json ───────────────────
 sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
 from session_logger import update_status
 
@@ -223,17 +203,6 @@ else:
 
 update_status(
     add_completed=[f'inbox-manager daily sync: {len(final_inbox)} active, {applied} answers applied'],
-    next_recommended='Check mobile-inbox for pending whiteboard decisions',
+    next_recommended='Check mobile-inbox for pending decisions',
 )
-```
-
-## Running Inbox Manager
-```
-Load inbox-manager.md. Run daily sync now.
-```
-
-## Schedule
-Add to Windows Task Scheduler: daily at 08:00 alongside orchestrator-briefing.bat
-```
-python "G:/My Drive/Projects/_studio/inbox_manager_sync.py"
-```
+print('Done.')

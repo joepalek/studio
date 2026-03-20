@@ -1,0 +1,11 @@
+{
+  "time": "2026-03-19T20:31:00.436090",
+  "ollama_up": true,
+  "gemini_available": true,
+  "agents_recently_active": 0,
+  "agents_seen": [],
+  "work_queue_depth": 0,
+  "pending_proposals": 0,
+  "inbox_items": 0,
+  "dispatched": []
+}
