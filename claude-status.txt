@@ -1,0 +1,7 @@
+# claude-status.txt — Studio Drive Status Log
+# Format: [TIMESTAMP] [AGENT] ACTION: result | next: recommendation
+# Updated by session_logger.py after every agent action.
+#
+[2026-03-20 17:22:10] [INIT] Drive status file created | next: all agents will append here
+[2026-03-20 17:22:46] [CLAUDE] Drive status file wired: claude-status.txt now receives all log_action + update_status calls | next: proceed with auto-answer agent
+[2026-03-20 17:22:48] [STATUS] update v11: task=building auto-answer agent | pending=13 items | next: Fix company registry sources then build daily job scraper

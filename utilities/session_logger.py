@@ -34,11 +34,12 @@ if _UTIL_DIR not in sys.path:
 
 from unicode_safe import safe_json_load, safe_json_dump, safe_str
 
-STUDIO       = 'G:/My Drive/Projects/_studio'
-LOG_PATH     = STUDIO + '/session-log.md'
-STATUS_PATH  = STUDIO + '/status.json'
-CONFIG_PATH  = STUDIO + '/studio-config.json'
-ROTATE_BYTES = 50 * 1024  # 50kb
+STUDIO           = 'G:/My Drive/Projects/_studio'
+LOG_PATH         = STUDIO + '/session-log.md'
+STATUS_PATH      = STUDIO + '/status.json'
+CONFIG_PATH      = STUDIO + '/studio-config.json'
+DRIVE_STATUS_PATH = STUDIO + '/claude-status.txt'
+ROTATE_BYTES     = 50 * 1024  # 50kb
 
 
 # ─── Supabase helpers ─────────────────────────────────────────────────────────
@@ -86,6 +87,27 @@ def _push_to_supabase(status: dict):
         urllib.request.urlopen(req, timeout=8)
     except Exception as e:
         print(f'[session_logger] Supabase write failed (non-fatal): {e}')
+
+
+# ─── Drive status file helpers ────────────────────────────────────────────────
+
+def _write_drive_status(agent: str, action: str, result: str, next_rec: str = ''):
+    """
+    Append one line to claude-status.txt in Drive.
+    Format: [TIMESTAMP] [AGENT] ACTION: result | next: recommendation
+    Replaces GitHub Pages as the primary human-readable status feed.
+    Non-fatal — Drive write failure never breaks the caller.
+    """
+    try:
+        ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        result_clean  = result.replace('\n', ' ').strip()
+        action_clean  = action.replace('\n', ' ').strip()
+        next_part     = f' | next: {next_rec.strip()}' if next_rec.strip() else ''
+        line = f'[{ts}] [{agent.upper()}] {action_clean}: {result_clean}{next_part}\n'
+        with open(DRIVE_STATUS_PATH, 'a', encoding='utf-8') as f:
+            f.write(line)
+    except Exception as e:
+        pass  # Never crash the caller over a log write
 
 
 # ─── Internal helpers ─────────────────────────────────────────────────────────
@@ -162,6 +184,8 @@ def log_action(action: str, result: str, next_step: str = ''):
             f.write(f'- **Next:** {next_step}\n')
         f.write('\n')
 
+    _write_drive_status('CLAUDE', action, result, next_step)
+
 
 def update_status(
     current_task: str = None,
@@ -169,6 +193,7 @@ def update_status(
     add_pending: list = None,
     remove_pending: list = None,
     add_blockers: list = None,
+    blockers: list = None,          # alias for add_blockers
     remove_blockers: list = None,
     next_recommended: str = None,
 ):
@@ -222,6 +247,9 @@ def update_status(
                 if term.lower() not in p.lower()
             ]
 
+    if blockers and not add_blockers:
+        add_blockers = blockers
+
     if add_blockers:
         for item in add_blockers:
             if item not in status.setdefault('blockers', []):
@@ -239,6 +267,14 @@ def update_status(
 
     safe_json_dump(status, STATUS_PATH)
     _push_to_supabase(status)
+
+    # Mirror key fields to Drive status txt for sidebar + offline reads
+    _write_drive_status(
+        agent='STATUS',
+        action=f'update v{status["v"]}',
+        result=f'task={status.get("current_task","idle")} | pending={len(status.get("pending",[]))} items',
+        next_rec=status.get('next_recommended', ''),
+    )
 
 
 def complete_task(
