@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-20T17:22:46",
-  "current_task": "building auto-answer agent",
+  "last_updated": "2026-03-20T17:25:14",
+  "current_task": "building sidebar agent",
   "completed_today": [
     "SRE health check run: CRITICAL resolved → all issues fixed",
     "job-match committed (pass1 log + raw-companies.json)",
@@ -15,7 +15,8 @@
     "Ghost book pass3 complete - 3 concat opportunities",
     "C2C analysis 18 entries ready",
     "company registry pass1 blocked - 4 sources failed",
-    "Drive status file created + session_logger wired"
+    "Drive status file created + session_logger wired",
+    "auto-answer.md created — inbox triage engine with 4 passes + answers-memory schema"
   ],
   "pending": [
     "run company registry pass1 again to test fixed sources",
@@ -45,5 +46,5 @@
     "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 11
+  "v": 12
 }
