@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art Department Request</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0a0a0a; color: #e0e0e0; font-family: 'Courier New', monospace; padding: 20px; max-width: 700px; margin: 0 auto; }
+h1 { color: #ff6b35; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 4px; }
+.subtitle { color: #555; font-size: 10px; letter-spacing: 2px; margin-bottom: 24px; }
+.field { margin-bottom: 16px; }
+label { display: block; font-size: 10px; letter-spacing: 2px; color: #888; margin-bottom: 6px; text-transform: uppercase; }
+input, select, textarea { width: 100%; background: #111; border: 1px solid #333; color: #e0e0e0; font-family: 'Courier New', monospace; font-size: 12px; padding: 10px; border-radius: 3px; outline: none; }
+input:focus, select:focus, textarea:focus { border-color: #ff6b35; }
+select option { background: #111; }
+textarea { min-height: 80px; resize: vertical; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.btn { background: #ff6b35; color: #000; border: none; padding: 12px 24px; font-family: 'Courier New', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; border-radius: 3px; width: 100%; margin-top: 8px; font-weight: bold; }
+.btn:hover { background: #ff8c5a; }
+.btn-secondary { background: #222; color: #888; border: 1px solid #333; }
+.btn-secondary:hover { background: #2a2a2a; color: #aaa; }
+.status { margin-top: 16px; padding: 10px; border-radius: 3px; font-size: 11px; display: none; }
+.status.success { background: #0a2a0a; border: 1px solid #1a5a1a; color: #4caf50; }
+.status.error { background: #2a0a0a; border: 1px solid #5a1a1a; color: #f44336; }
+.queue { margin-top: 24px; }
+.queue-title { font-size: 10px; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid #222; padding-bottom: 8px; }
+.queue-item { background: #111; border: 1px solid #222; border-radius: 3px; padding: 10px 12px; margin-bottom: 8px; font-size: 11px; }
+.qi-header { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.qi-type { color: #ff6b35; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
+.qi-project { color: #888; font-size: 9px; }
+.qi-subject { color: #ddd; }
+.qi-status { display: inline-block; font-size: 8px; padding: 2px 6px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; }
+.pending { background: rgba(255,107,53,0.15); color: #ff6b35; border: 1px solid rgba(255,107,53,0.3); }
+.divider { border: none; border-top: 1px solid #1a1a1a; margin: 20px 0; }
+</style>
+</head>
+<body>
+<h1>// Art Department</h1>
+<div class="subtitle">Request Queue — Studio Asset System</div>
+
+<div class="field">
+  <label>Project</label>
+  <select id="project">
+    <option value="">— select project —</option>
+    <option value="squeeze-empire">Squeeze Empire</option>
+    <option value="CTW">CTW</option>
+    <option value="game-archaeology">Game Archaeology</option>
+    <option value="ghost-book">Ghost Book</option>
+    <option value="synthetic-talent-agency">Synthetic Talent Agency</option>
+    <option value="acuscan-ar">AcuScan AR</option>
+    <option value="personal">Personal Request</option>
+    <option value="other">Other</option>
+  </select>
+</div>
+
+<div class="row">
+  <div class="field">
+    <label>Asset Type</label>
+    <select id="type">
+      <option value="">— type —</option>
+      <option value="sprite">Sprite / Game Asset</option>
+      <option value="portrait">Character Portrait</option>
+      <option value="background">Background / Scene</option>
+      <option value="icon">Icon / UI Element</option>
+      <option value="logo">Logo / Brand</option>
+      <option value="illustration">Illustration</option>
+      <option value="3d_model">3D Model</option>
+      <option value="cover">Book / Album Cover</option>
+      <option value="character_sheet">Character Sheet</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>Priority</label>
+    <select id="priority">
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+      <option value="low">Low</option>
+      <option value="urgent">Urgent</option>
+    </select>
+  </div>
+</div>
+
+<div class="field">
+  <label>Subject / Description</label>
+  <textarea id="subject" placeholder="Describe what you need. Style, mood, colors, what its used for..."></textarea>
+</div>
+
+<div class="row">
+  <div class="field">
+    <label>Size / Dimensions</label>
+    <input type="text" id="size" placeholder="e.g. 64x64, 512x512, A4">
+  </div>
+  <div class="field">
+    <label>Format</label>
+    <select id="format">
+      <option value="PNG">PNG (transparent)</option>
+      <option value="JPG">JPG</option>
+      <option value="SVG">SVG</option>
+      <option value="GLB">GLB (3D)</option>
+      <option value="any">Any</option>
+    </select>
+  </div>
+</div>
+
+<div class="field">
+  <label>Use / Context</label>
+  <input type="text" id="use" placeholder="e.g. game sprite player clicks, book cover, character intro scene">
+</div>
+
+<div class="field">
+  <label>Style Notes (optional)</label>
+  <input type="text" id="style" placeholder="e.g. 1930s Art Deco, pixel art NES palette, photorealistic">
+</div>
+
+<div class="field">
+  <label>Reference / Inspiration (optional)</label>
+  <input type="text" id="reference" placeholder="e.g. similar to X, mood of Y, avoid Z">
+</div>
+
+<button class="btn" onclick="submitRequest()">SUBMIT TO ART DEPARTMENT</button>
+<button class="btn btn-secondary" onclick="loadQueue()">REFRESH QUEUE</button>
+
+<div class="status" id="status"></div>
+<hr class="divider">
+
+<div class="queue">
+  <div class="queue-title">// Current Request Queue</div>
+  <div id="queue-list"><div style="color:#444;font-size:11px">Loading...</div></div>
+</div>
+
+<script>
+const SUPABASE_URL = 'https://nepnytazalthnjqpyzcx.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5lcG55dGF6YWx0aG5qcXB5emN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3OTU4MDIsImV4cCI6MjA4OTM3MTgwMn0.ojPrZ51Jei32zdL2ORJ4SOVlopfv-9mZDj-U5sDz7rw';
+
+async function submitRequest() {
+  const project = document.getElementById('project').value;
+  const type = document.getElementById('type').value;
+  const subject = document.getElementById('subject').value.trim();
+  if (!project || !type || !subject) { showStatus('Project, type, and subject required.', 'error'); return; }
+
+  const req = {
+    session_id: 'art-' + Date.now(),
+    answers: JSON.stringify({
+      type: 'art_request', project, asset_type: type, subject,
+      size: document.getElementById('size').value,
+      format: document.getElementById('format').value,
+      use_context: document.getElementById('use').value,
+      style_notes: document.getElementById('style').value,
+      reference: document.getElementById('reference').value,
+      priority: document.getElementById('priority').value,
+      status: 'pending', submitted: new Date().toISOString()
+    }),
+    total_answered: 1
+  };
+
+  try {
+    const r = await fetch(SUPABASE_URL + '/rest/v1/mobile_answers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY, 'Prefer': 'return=minimal' },
+      body: JSON.stringify(req)
+    });
+    if (r.ok) { showStatus('Request submitted to Art Department.', 'success'); clearForm(); setTimeout(loadQueue, 1000); }
+    else showStatus('Failed: ' + r.status, 'error');
+  } catch(e) { showStatus('Error: ' + e.message, 'error'); }
+}
+
+async function loadQueue() {
+  try {
+    const r = await fetch(SUPABASE_URL + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=20', {
+      headers: { 'apikey': SUPABASE_KEY, 'Authorization': 'Bearer ' + SUPABASE_KEY }
+    });
+    const rows = await r.json();
+    const art = rows.filter(row => { try { const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers; return a && a.type === 'art_request'; } catch { return false; } });
+    const list = document.getElementById('queue-list');
+    if (!art.length) { list.innerHTML = '<div style="color:#444;font-size:11px">No requests yet.</div>'; return; }
+    list.innerHTML = art.map(row => {
+      const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
+      return `<div class="queue-item"><div class="qi-header"><span class="qi-type">${a.asset_type||'unknown'}</span><span class="qi-project">${a.project||''}</span></div><div class="qi-subject">${a.subject||''}</div><div style="margin-top:6px;font-size:10px;color:#555">${a.size?a.size+' · ':''}${a.format||''} · ${a.use_context||''}</div><span class="qi-status pending">${a.status||'pending'}</span></div>`;
+    }).join('');
+  } catch(e) { document.getElementById('queue-list').innerHTML = '<div style="color:#f44;font-size:11px">Failed to load.</div>'; }
+}
+
+function clearForm() {
+  ['subject','size','use','style','reference'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('project').value = '';
+  document.getElementById('type').value = '';
+}
+
+function showStatus(msg, type) {
+  const s = document.getElementById('status');
+  s.textContent = msg; s.className = 'status ' + type; s.style.display = 'block';
+  setTimeout(() => s.style.display = 'none', 4000);
+}
+
+loadQueue();
+</script>
+</body>
+</html>

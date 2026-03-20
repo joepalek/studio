@@ -1,0 +1,62 @@
+[Fri 03/20/2026  8:00:01.99] Daily briefing starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-20 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.12.10 (UP — gemma3:4b loaded)
+  ✓ gh 2.88.1
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP (model: gemini-flash-latest)
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (2 files): job-match
+  ! UNCOMMITTED (9 files): _studio
+  ! NO STATE.JSON: sentinel-core, sentinel-performer, sentinel-viewer
+  ✓ 8 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, missing
+
+MOBILE ANSWERS
+  ! 1 session pending — 2 answers waiting
+
+VERDICT: DEGRADED (5 issues)
+ACTION: Commit job-match + _studio, import 2 mobile answers
+```
+
+---
+
+```
+=== ORCHESTRATOR DAILY BRIEFING — 2026-03-20 ===
+
+TOP 3 — Joe Personal Focus
+1. [job-match] Audit & commit 2 pending files — #1 priority, Blackdot ends May
+2. [eBay] Review 565 listings for price/keyword adjustments to boost daily revenue
+3. [CTW] Approve character portraits once generated → moves to revenue phase
+
+AGENT QUEUE (autonomous)
+1. [CTW] Automate Perchance portrait generation for 4 characters
+2. [job-match] Autonomous scrape for new postings matching criteria
+3. [listing-optimizer] Gap analysis on lowest-performing eBay listings
+
+CRITICAL
+- $300 Tennessee LLC filing: Sentinel deadlocked until paid (highest long-term upside)
+- Commit 9 _studio + 2 job-match files — prevent session drift
+
+DEFER TODAY
+Ignore Sentinel, NutriMind, and Arbitrage-Pulse until LLC is active and job-match is stable.
+```
+
+Saved to `orchestrator-briefing.json`. Gemini model fixed to `gemini-flash-latest` (models/gemini-1.5-flash and gemini-2.0-flash are returning 404 in your account — flash-latest resolves correctly).
