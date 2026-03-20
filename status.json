@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-20T09:00:00",
+  "last_updated": "2026-03-20T14:00:49",
   "current_task": "idle",
   "completed_today": [
     "SRE health check run: CRITICAL resolved → all issues fixed",
@@ -10,7 +10,11 @@
     "company registry pass1 fixed: EDGAR SIC→EFTS, SBIR api.sbir.gov→sbir.gov/api/solicitations, IRS URL comment added, OpenCorporates key note added",
     "3 ghost-book art requests submitted to Art Dept queue (Vedic+CS, Hemp+fiber, Microbiome)",
     "ghost-book pass3 complete: 3 concat opportunities found",
-    "cdx-c2c-analysis: 18 entries analyzed (date/site/claims structure)"
+    "cdx-c2c-analysis: 18 entries analyzed (date/site/claims structure)",
+    "SRE run complete - CRITICAL 5 issues",
+    "Ghost book pass3 complete - 3 concat opportunities",
+    "C2C analysis 18 entries ready",
+    "company registry pass1 blocked - 4 sources failed"
   ],
   "pending": [
     "run company registry pass1 again to test fixed sources",
@@ -19,18 +23,26 @@
     "run scheduler register_tasks.py as ADMINISTRATOR",
     "wire complete_task() into all agent scripts",
     "daily job scraper build (after reviewing job source registry)",
-    "review ghost-book 161 viable candidates from pass2"
+    "review ghost-book 161 viable candidates from pass2",
+    "review ghost book 3 concat opportunities",
+    "fix company registry sources - EDGAR, IRS, SBIR",
+    "get OpenCorporates free API key",
+    "build daily job scraper",
+    "answer 5 job-match decisions",
+    "run scheduler as admin"
   ],
   "blockers": [
     "OpenCorporates: still needs free API key — opencorporates.com/api_accounts/new",
     "IRS EO BMF: 404 may persist — check irs.gov/charities for updated URL",
-    "scheduler: needs Administrator terminal to register Windows tasks"
+    "scheduler: needs Administrator terminal to register Windows tasks",
+    "scheduler needs admin terminal",
+    "OpenCorporates needs free API key"
   ],
-  "next_recommended": "Run pass1 again with fixed sources, then review CDX C2C 18 entries",
+  "next_recommended": "Fix company registry sources then build daily job scraper",
   "overnight_summary": {
     "ghost_book_pass3": "SUCCESS — 3 concat opportunities: vedic+CS, hemp+fiber, microbiome+gut",
     "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 9
+  "v": 10
 }
