@@ -59,7 +59,7 @@ when printing titles, names, or web content from external APIs.
 ---
 
 ### `session_logger.py`
-Append to `session-log.md` and update `session-status.json` after every major action.
+Append to `session-log.md` and update `status.json` after every major action.
 Handles log rotation at 50kb (renames to `session-log-archive-[date].md`).
 Uses `unicode_safe` for all file I/O.
 
@@ -67,7 +67,7 @@ Uses `unicode_safe` for all file I/O.
 | Function | Description |
 |---|---|
 | `log_action(action, result, next_step)` | Append one timestamped entry to session-log.md |
-| `update_status(current_task, add_completed, add_pending, remove_pending, add_blockers, remove_blockers, next_recommended)` | Update any fields in session-status.json |
+| `update_status(current_task, add_completed, add_pending, remove_pending, add_blockers, remove_blockers, next_recommended)` | Update any fields in status.json |
 | `complete_task(task_name, result_summary, add_pending, remove_pending_terms, next_recommended, log_next_step)` | Combined: log + mark complete + remove from pending in one call |
 
 **Used by:** All agents. Call `complete_task()` at end of every major script.

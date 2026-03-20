@@ -1,5 +1,5 @@
 """
-session_logger.py -- Append to session-log.md and update session-status.json.
+session_logger.py -- Append to session-log.md and update status.json.
 
 All file I/O uses unicode_safe helpers to avoid cp1252 encoding crashes on Windows.
 
@@ -34,7 +34,7 @@ from unicode_safe import safe_json_load, safe_json_dump, safe_str
 
 STUDIO       = 'G:/My Drive/Projects/_studio'
 LOG_PATH     = STUDIO + '/session-log.md'
-STATUS_PATH  = STUDIO + '/session-status.json'
+STATUS_PATH  = STUDIO + '/status.json'
 ROTATE_BYTES = 50 * 1024  # 50kb
 
 
@@ -123,7 +123,7 @@ def update_status(
     next_recommended: str = None,
 ):
     """
-    Update fields in session-status.json. All parameters are optional.
+    Update fields in status.json. All parameters are optional.
 
     Args:
         current_task:     What is running right now ('' to clear)

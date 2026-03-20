@@ -26,7 +26,7 @@ from datetime import datetime
 
 STUDIO   = 'G:/My Drive/Projects/_studio'
 LOG      = STUDIO + '/session-log.md'
-STATUS   = STUDIO + '/session-status.json'
+STATUS   = STUDIO + '/status.json'
 INBOX    = STUDIO + '/mobile-inbox.json'
 RULES    = STUDIO + '/standing-rules.json'
 REPORT   = STUDIO + '/workflow-report.json'
@@ -94,7 +94,7 @@ if os.path.exists(INBOX):
             })
 
 # 5. Copy-paste between systems
-# Proxy signal: session-status.json not updated = Claude.ai chat has to be manually briefed
+# Proxy signal: status.json not updated = Claude.ai chat has to be manually briefed
 status_age = None
 if os.path.exists(STATUS):
     mtime = os.path.getmtime(STATUS)
@@ -103,7 +103,7 @@ if os.path.exists(STATUS):
         friction_signals.append({
             'type': 'stale_handoff',
             'hours_stale': round(status_age, 1),
-            'description': f'session-status.json is {round(status_age,1)}h old — Claude.ai context will be stale',
+            'description': f'status.json is {round(status_age,1)}h old — Claude.ai context will be stale',
             'fix': 'All agent scripts must call complete_task() from session_logger.py at end of run',
             'effort': 'low',
         })
@@ -308,7 +308,7 @@ from datetime import datetime
 
 STUDIO  = 'G:/My Drive/Projects/_studio'
 GW_LOG  = STUDIO + '/gateway-log.txt'
-STATUS  = STUDIO + '/session-status.json'
+STATUS  = STUDIO + '/status.json'
 CONFIG  = STUDIO + '/studio-config.json'
 
 print('Resource Awareness Check:')
@@ -358,14 +358,14 @@ print('    - Overnight batch: Ollama exclusively (Tier 0, free)')
 
 ## Pass 6 — Session Handoff Check
 
-Verify session-status.json is current and session-log.md is rotating correctly.
+Verify status.json is current and session-log.md is rotating correctly.
 
 ```python
 import json, os
 from datetime import datetime
 
 STUDIO = 'G:/My Drive/Projects/_studio'
-STATUS = STUDIO + '/session-status.json'
+STATUS = STUDIO + '/status.json'
 LOG    = STUDIO + '/session-log.md'
 
 print('Session Handoff Check:')
@@ -374,14 +374,14 @@ print('Session Handoff Check:')
 if os.path.exists(STATUS):
     status = json.load(open(STATUS, encoding='utf-8'))
     last = status.get('last_updated', 'never')
-    print(f'  session-status.json last updated: {last}')
+    print(f'  status.json last updated: {last}')
     pending_count = len(status.get('pending', []))
     blocker_count = len(status.get('blockers', []))
     print(f'  Pending: {pending_count} | Blockers: {blocker_count}')
     if not status.get('next_recommended'):
         print('  WARNING: next_recommended is empty — Claude.ai will have no starting point')
 else:
-    print('  ERROR: session-status.json missing')
+    print('  ERROR: status.json missing')
 
 # Log size
 if os.path.exists(LOG):

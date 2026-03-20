@@ -30,7 +30,7 @@
     {
       "id": "rule-004",
       "trigger": "session ends (user types /exit or says done for today)",
-      "action": "commit all dirty projects, update changelogs, update session-status.json",
+      "action": "commit all dirty projects, update changelogs, update status.json",
       "applies_to": ["claude-code-session"],
       "created": "2026-03-19",
       "approved_by": "joe",

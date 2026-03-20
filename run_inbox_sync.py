@@ -1,5 +1,5 @@
 """Inbox Manager Daily Sync — runs all 7 passes."""
-import json, os, subprocess, sys
+import json, os, subprocess, sys, hashlib
 from datetime import datetime, timedelta
 
 PROJECTS_ROOT = 'G:/My Drive/Projects'
@@ -163,7 +163,7 @@ new_items = []
 existing_ids = {i['id'] for i in to_keep}
 
 for pq in all_pending:
-    q_id = f'state-{pq["project"]}-{hash(pq["question"]) % 99999}'
+    q_id = f'state-{pq["project"]}-{hashlib.md5(pq["question"].encode()).hexdigest()[:8]}'
     if q_id not in existing_ids:
         new_items.append({
             'id': q_id,
@@ -182,7 +182,7 @@ final_inbox = to_keep + new_items
 json.dump(final_inbox, open(INBOX_PATH, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
 print(f'Pass 6: mobile-inbox.json regenerated - {len(final_inbox)} items ({len(new_items)} new)')
 
-# ── Pass 7 ── Push to GitHub + update session-status.json ───────────────────
+# ── Pass 7 ── Push to GitHub + update status.json ───────────────────
 sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
 from session_logger import update_status
 

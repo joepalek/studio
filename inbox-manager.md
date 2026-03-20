@@ -18,7 +18,7 @@ You run on Python only — zero LLM needed. Cost: $0.00.
 
 ### Pass 1 — Count pending items from all state.json files
 ```python
-import json, os
+import json, os, hashlib
 
 PROJECTS_ROOT = 'G:/My Drive/Projects'
 PROJECTS = [
@@ -183,7 +183,7 @@ existing_ids = {i['id'] for i in to_keep}
 
 # Add questions from state.json files not already in inbox
 for pq in all_pending:
-    q_id = f'state-{pq["project"]}-{hash(pq["question"]) % 99999}'
+    q_id = f'state-{pq["project"]}-{hashlib.md5(pq["question"].encode()).hexdigest()[:8]}'
     if q_id not in existing_ids:
         new_items.append({
             'id': q_id,
@@ -200,7 +200,7 @@ json.dump(final_inbox, open(INBOX_PATH, 'w'), indent=2, ensure_ascii=False)
 print(f'Pass 6: mobile-inbox.json regenerated — {len(final_inbox)} items ({len(new_items)} new)')
 ```
 
-### Pass 7 — Push to GitHub + update session-status.json
+### Pass 7 — Push to GitHub + update status.json
 ```python
 import subprocess, sys
 sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
