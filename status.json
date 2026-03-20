@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-20T01:44:53",
-  "current_task": "session_ended",
+  "last_updated": "2026-03-20T01:55:03",
+  "current_task": "overnight batch running: company-registry pass1, C2C Ollama analysis, ghost-book pass3 concat",
   "completed_today": [
     "workflow-intelligence.md built",
     "standing-rules.json created with 10 rules",
@@ -41,11 +41,14 @@
     "review ghost-book 161 viable candidates",
     "review whiteboard 30 scored items",
     "daily job scraper build (after reviewing job source registry)",
-    "review overnight company registry results tomorrow"
+    "review overnight company registry results tomorrow",
+    "review company registry pass1 results",
+    "review C2C cdx-c2c-analysis.json",
+    "review ghost-book concat-opportunities.json"
   ],
   "blockers": [
     "scheduler registration needs admin terminal"
   ],
-  "next_recommended": "Fix VS Code studio Drive refresh then init sysguard and watchdog",
-  "v": 4
+  "next_recommended": "Morning: check pass1-log.txt, cdx-c2c-analysis.json, concat-opportunities.json for results",
+  "v": 5
 }
