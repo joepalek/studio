@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-20T17:25:14",
-  "current_task": "building sidebar agent",
+  "last_updated": "2026-03-20T17:27:38",
+  "current_task": "building quota-aware supervisor",
   "completed_today": [
     "SRE health check run: CRITICAL resolved → all issues fixed",
     "job-match committed (pass1 log + raw-companies.json)",
@@ -16,7 +16,8 @@
     "C2C analysis 18 entries ready",
     "company registry pass1 blocked - 4 sources failed",
     "Drive status file created + session_logger wired",
-    "auto-answer.md created — inbox triage engine with 4 passes + answers-memory schema"
+    "auto-answer.md created — inbox triage engine with 4 passes + answers-memory schema",
+    "sidebar-agent.html created — Opera sidebar with Gemini chat, status panel, task queue via Supabase"
   ],
   "pending": [
     "run company registry pass1 again to test fixed sources",
@@ -46,5 +47,5 @@
     "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 12
+  "v": 13
 }

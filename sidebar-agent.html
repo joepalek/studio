@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Sidebar</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #0a0a0a; --bg2: #111; --bg3: #1a1a1a;
+  --border: #222; --accent: #ff6b35; --accent2: #ffa040;
+  --text: #e0e0e0; --muted: #666; --green: #4caf50; --red: #f44336; --blue: #42a5f5;
+  --font: 'Courier New', monospace;
+}
+body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 11px; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+/* ── Header ── */
+#header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 10px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+#header h1 { color: var(--accent); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; }
+#status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); margin-left: 6px; display: inline-block; }
+#status-dot.green { background: var(--green); box-shadow: 0 0 5px var(--green); }
+#status-dot.red   { background: var(--red); }
+#header-right { display: flex; align-items: center; gap: 8px; }
+.icon-btn { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 13px; padding: 2px 4px; }
+.icon-btn:hover { color: var(--text); }
+
+/* ── Tabs ── */
+#tabs { display: flex; border-bottom: 1px solid var(--border); flex-shrink: 0; background: var(--bg2); }
+.tab { flex: 1; padding: 7px 4px; text-align: center; font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab:hover { color: var(--text); }
+
+/* ── Panels ── */
+#panels { flex: 1; overflow: hidden; position: relative; }
+.panel { display: none; height: 100%; flex-direction: column; overflow: hidden; }
+.panel.active { display: flex; }
+
+/* ── Status panel ── */
+#status-panel { padding: 10px; gap: 8px; overflow-y: auto; }
+.status-section { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 8px 10px; }
+.status-label { font-size: 9px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+.status-value { color: var(--text); line-height: 1.5; }
+.status-value.task { color: var(--accent2); }
+.badge { display: inline-block; font-size: 8px; padding: 2px 5px; border-radius: 2px; letter-spacing: 1px; text-transform: uppercase; margin: 1px; }
+.badge.pending  { background: rgba(255,107,53,.15); color: var(--accent); border: 1px solid rgba(255,107,53,.3); }
+.badge.blocker  { background: rgba(244,67,54,.15);  color: var(--red);    border: 1px solid rgba(244,67,54,.3); }
+.badge.done     { background: rgba(76,175,80,.15);  color: var(--green);  border: 1px solid rgba(76,175,80,.3); }
+.timestamp { color: var(--muted); font-size: 9px; }
+#drive-log { max-height: 160px; overflow-y: auto; font-size: 10px; line-height: 1.6; }
+.log-line { border-bottom: 1px solid var(--border); padding: 2px 0; }
+.log-line:last-child { border-bottom: none; }
+.log-agent { color: var(--accent); }
+.log-ts { color: var(--muted); }
+
+/* ── Chat panel ── */
+#chat-panel { display: flex; flex-direction: column; }
+#chat-messages { flex: 1; overflow-y: auto; padding: 10px; gap: 8px; display: flex; flex-direction: column; }
+.msg { padding: 7px 9px; border-radius: 3px; max-width: 90%; line-height: 1.5; font-size: 11px; }
+.msg.user { background: rgba(255,107,53,.15); border: 1px solid rgba(255,107,53,.25); align-self: flex-end; color: var(--text); }
+.msg.ai   { background: var(--bg2); border: 1px solid var(--border); align-self: flex-start; color: var(--text); }
+.msg.system { background: rgba(66,165,245,.1); border: 1px solid rgba(66,165,245,.2); align-self: center; color: var(--blue); font-size: 10px; text-align: center; }
+#chat-input-row { border-top: 1px solid var(--border); padding: 8px; display: flex; gap: 6px; background: var(--bg2); flex-shrink: 0; }
+#chat-input { flex: 1; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--font); font-size: 11px; padding: 7px 9px; border-radius: 3px; outline: none; resize: none; height: 36px; }
+#chat-input:focus { border-color: var(--accent); }
+#send-btn { background: var(--accent); color: #000; border: none; padding: 7px 12px; font-family: var(--font); font-size: 10px; letter-spacing: 1px; border-radius: 3px; cursor: pointer; font-weight: bold; }
+#send-btn:hover { background: var(--accent2); }
+#send-btn:disabled { background: var(--muted); cursor: not-allowed; }
+
+/* ── Queue panel ── */
+#queue-panel { overflow-y: auto; padding: 10px; gap: 8px; display: flex; flex-direction: column; }
+#queue-form { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 10px; }
+.field { margin-bottom: 10px; }
+label { display: block; font-size: 9px; letter-spacing: 2px; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; }
+input, select, textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--font); font-size: 11px; padding: 7px 9px; border-radius: 3px; outline: none; }
+input:focus, select:focus, textarea:focus { border-color: var(--accent); }
+select option { background: var(--bg); }
+textarea { min-height: 60px; resize: vertical; }
+.queue-submit { background: var(--accent); color: #000; border: none; width: 100%; padding: 9px; font-family: var(--font); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; border-radius: 3px; font-weight: bold; }
+.queue-submit:hover { background: var(--accent2); }
+#queued-tasks { display: flex; flex-direction: column; gap: 6px; }
+.q-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 8px 10px; }
+.q-item-header { display: flex; justify-content: space-between; margin-bottom: 3px; }
+.q-proj  { color: var(--accent); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
+.q-prio  { font-size: 8px; padding: 1px 5px; border-radius: 2px; }
+.q-prio.high   { background: rgba(244,67,54,.2);  color: var(--red); }
+.q-prio.medium { background: rgba(255,107,53,.2); color: var(--accent); }
+.q-prio.low    { background: rgba(102,102,102,.2); color: var(--muted); }
+.q-task  { color: var(--text); font-size: 11px; }
+.q-ts    { color: var(--muted); font-size: 9px; margin-top: 3px; }
+
+/* ── Config panel ── */
+#config-panel { overflow-y: auto; padding: 10px; gap: 8px; display: flex; flex-direction: column; }
+.config-section { background: var(--bg2); border: 1px solid var(--border); border-radius: 3px; padding: 10px; }
+.config-title { font-size: 9px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
+.save-btn { background: var(--bg3); color: var(--text); border: 1px solid var(--border); width: 100%; padding: 8px; font-family: var(--font); font-size: 10px; letter-spacing: 1px; cursor: pointer; border-radius: 3px; margin-top: 6px; }
+.save-btn:hover { border-color: var(--accent); color: var(--accent); }
+.save-btn.primary { background: var(--accent); color: #000; border-color: var(--accent); font-weight: bold; }
+.save-btn.primary:hover { background: var(--accent2); }
+.hint { color: var(--muted); font-size: 9px; margin-top: 3px; line-height: 1.4; }
+#save-status { font-size: 10px; text-align: center; padding: 5px; }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <span><h1 style="display:inline">// Studio</h1><span id="status-dot"></span></span>
+  <div id="header-right">
+    <span id="header-ts" class="timestamp">--:--</span>
+    <button class="icon-btn" onclick="refreshStatus()" title="Refresh">↻</button>
+  </div>
+</div>
+
+<div id="tabs">
+  <div class="tab active" onclick="showTab('status')">Status</div>
+  <div class="tab" onclick="showTab('chat')">Chat</div>
+  <div class="tab" onclick="showTab('queue')">Queue</div>
+  <div class="tab" onclick="showTab('config')">Config</div>
+</div>
+
+<div id="panels">
+
+  <!-- STATUS -->
+  <div class="panel active" id="status-panel">
+    <div class="status-section">
+      <div class="status-label">Current Task</div>
+      <div class="status-value task" id="s-task">Loading...</div>
+      <div class="timestamp" id="s-updated"></div>
+    </div>
+    <div class="status-section">
+      <div class="status-label">Next Recommended</div>
+      <div class="status-value" id="s-next">—</div>
+    </div>
+    <div class="status-section">
+      <div class="status-label">Pending <span id="s-pending-count"></span></div>
+      <div id="s-pending"></div>
+    </div>
+    <div class="status-section">
+      <div class="status-label">Blockers</div>
+      <div id="s-blockers"></div>
+    </div>
+    <div class="status-section">
+      <div class="status-label">Drive Log (latest)</div>
+      <div id="drive-log"><span style="color:var(--muted)">Loading...</span></div>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="panel" id="chat-panel">
+    <div id="chat-messages">
+      <div class="msg system">Gemini Studio Assistant — ask about any project</div>
+    </div>
+    <div id="chat-input-row">
+      <textarea id="chat-input" placeholder="Ask about the studio system..." onkeydown="handleKey(event)"></textarea>
+      <button id="send-btn" onclick="sendChat()">Send</button>
+    </div>
+  </div>
+
+  <!-- QUEUE -->
+  <div class="panel" id="queue-panel">
+    <div id="queue-form">
+      <div class="config-title">Queue Task for Claude Code</div>
+      <div class="field">
+        <label>Project</label>
+        <select id="q-project">
+          <option value="">— select —</option>
+          <option value="job-match">job-match</option>
+          <option value="ghost-book">ghost-book</option>
+          <option value="CTW">CTW</option>
+          <option value="squeeze-empire">squeeze-empire</option>
+          <option value="sentinel-core">sentinel-core</option>
+          <option value="_studio">_studio (system)</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Task Description</label>
+        <textarea id="q-task" placeholder="Describe what Claude Code should do..."></textarea>
+      </div>
+      <div class="field">
+        <label>Priority</label>
+        <select id="q-priority">
+          <option value="medium">Medium</option>
+          <option value="high">High — do first</option>
+          <option value="low">Low — do when free</option>
+        </select>
+      </div>
+      <button class="queue-submit" onclick="queueTask()">Queue for Claude Code</button>
+    </div>
+    <div style="font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;padding:8px 2px 4px">Waiting for quota reset</div>
+    <div id="queued-tasks"><div style="color:var(--muted)">Loading queue...</div></div>
+  </div>
+
+  <!-- CONFIG -->
+  <div class="panel" id="config-panel">
+    <div class="config-section">
+      <div class="config-title">Gemini API</div>
+      <div class="field">
+        <label>Gemini API Key</label>
+        <input type="password" id="cfg-gemini" placeholder="AIza...">
+        <div class="hint">From Google AI Studio (free tier). Used for chat only.</div>
+      </div>
+    </div>
+    <div class="config-section">
+      <div class="config-title">Supabase (status + queue)</div>
+      <div class="field">
+        <label>Supabase URL</label>
+        <input type="text" id="cfg-sb-url" placeholder="https://xxx.supabase.co">
+      </div>
+      <div class="field">
+        <label>Supabase Anon Key</label>
+        <input type="password" id="cfg-sb-key" placeholder="eyJ...">
+        <div class="hint">Same key used by studio.html and art-request-form.html.</div>
+      </div>
+    </div>
+    <div class="config-section">
+      <div class="config-title">Context (injected into Gemini)</div>
+      <div class="field">
+        <label>System Context</label>
+        <textarea id="cfg-context" style="min-height:80px" placeholder="Brief description of studio system for Gemini context...">You are a studio assistant for an indie creator's project management system called Studio. Projects include: job-match (job scraper + company registry), ghost-book (AI-assisted book publishing), CTW, squeeze-empire, sentinel-core/performer/viewer. The system runs Claude Code sessions, Gemini Flash, and local Ollama. Respond concisely in the context of these projects.</textarea>
+      </div>
+    </div>
+    <button class="save-btn primary" onclick="saveConfig()">Save Config</button>
+    <div id="save-status"></div>
+  </div>
+
+</div>
+
+<script>
+// ── Config ────────────────────────────────────────────────────────────────────
+const CFG_KEY = 'studio_sidebar_cfg';
+
+function loadConfig() {
+  try { return JSON.parse(localStorage.getItem(CFG_KEY) || '{}'); } catch { return {}; }
+}
+function saveConfig() {
+  const cfg = {
+    gemini: document.getElementById('cfg-gemini').value.trim(),
+    sb_url: document.getElementById('cfg-sb-url').value.trim(),
+    sb_key: document.getElementById('cfg-sb-key').value.trim(),
+    context: document.getElementById('cfg-context').value.trim(),
+  };
+  localStorage.setItem(CFG_KEY, JSON.stringify(cfg));
+  document.getElementById('save-status').textContent = 'Saved.';
+  document.getElementById('save-status').style.color = '#4caf50';
+  setTimeout(() => document.getElementById('save-status').textContent = '', 2000);
+  initFromConfig();
+}
+
+function initFromConfig() {
+  const cfg = loadConfig();
+  if (cfg.gemini) document.getElementById('cfg-gemini').value = cfg.gemini;
+  if (cfg.sb_url) document.getElementById('cfg-sb-url').value = cfg.sb_url;
+  if (cfg.sb_key) document.getElementById('cfg-sb-key').value = cfg.sb_key;
+  if (cfg.context) document.getElementById('cfg-context').value = cfg.context;
+}
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function showTab(name) {
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    const names = ['status','chat','queue','config'];
+    t.classList.toggle('active', names[i] === name);
+  });
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(name + '-panel');
+  if (el) el.classList.add('active');
+  if (name === 'queue') loadQueue();
+}
+
+// ── Status ────────────────────────────────────────────────────────────────────
+async function refreshStatus() {
+  const cfg = loadConfig();
+  const dot = document.getElementById('status-dot');
+
+  if (!cfg.sb_url || !cfg.sb_key) {
+    document.getElementById('s-task').textContent = 'Configure Supabase in Config tab';
+    dot.className = 'red';
+    return;
+  }
+
+  try {
+    const r = await fetch(cfg.sb_url + '/rest/v1/session_status?id=eq.1', {
+      headers: { apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key }
+    });
+    const rows = await r.json();
+    if (!rows.length) { document.getElementById('s-task').textContent = 'No status data yet'; return; }
+    const s = rows[0];
+
+    document.getElementById('s-task').textContent = s.current_task || 'idle';
+    document.getElementById('s-updated').textContent = s.last_updated ? 'Updated: ' + s.last_updated.replace('T',' ').slice(0,16) : '';
+    document.getElementById('s-next').textContent = s.next_recommended || '—';
+
+    const pending = (s.pending || '').split(',').map(x=>x.trim()).filter(Boolean);
+    document.getElementById('s-pending-count').textContent = `(${pending.length})`;
+    document.getElementById('s-pending').innerHTML = pending.slice(0,8).map(p=>`<span class="badge pending">${p.slice(0,50)}</span>`).join('') || '<span style="color:var(--muted)">none</span>';
+
+    const blockers = (s.blockers || '').split(',').map(x=>x.trim()).filter(Boolean);
+    document.getElementById('s-blockers').innerHTML = blockers.map(b=>`<span class="badge blocker">${b.slice(0,60)}</span>`).join('') || '<span style="color:var(--muted)">none</span>';
+
+    dot.className = 'green';
+    document.getElementById('header-ts').textContent = new Date().toTimeString().slice(0,5);
+
+    // Load drive log from Supabase (recent mobile_answers with type=status_log, or fallback)
+    loadDriveLog(cfg);
+
+  } catch(e) {
+    dot.className = 'red';
+    document.getElementById('s-task').textContent = 'Error: ' + e.message.slice(0,40);
+  }
+}
+
+async function loadDriveLog(cfg) {
+  // Read last 8 lines of sidebar-log entries from Supabase
+  try {
+    const r = await fetch(cfg.sb_url + '/rest/v1/mobile_answers?session_id=like.sidebar-log*&order=submitted_at.desc&limit=8', {
+      headers: { apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key }
+    });
+    const rows = await r.json();
+    const el = document.getElementById('drive-log');
+    if (!rows.length) { el.innerHTML = '<span style="color:var(--muted)">No log entries yet</span>'; return; }
+    el.innerHTML = rows.map(row => {
+      const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
+      const ts = (row.submitted_at || '').slice(0,16).replace('T',' ');
+      return `<div class="log-line"><span class="log-ts">${ts}</span> <span class="log-agent">[${(a.agent||'?').toUpperCase()}]</span> ${(a.message||'').slice(0,80)}</div>`;
+    }).join('');
+  } catch(e) {
+    document.getElementById('drive-log').innerHTML = '<span style="color:var(--muted)">Log unavailable</span>';
+  }
+}
+
+// ── Chat ──────────────────────────────────────────────────────────────────────
+const chatHistory = [];
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+}
+
+async function sendChat() {
+  const cfg = loadConfig();
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  if (!cfg.gemini) { appendMsg('Configure Gemini API key in Config tab.', 'system'); return; }
+
+  input.value = '';
+  appendMsg(text, 'user');
+  chatHistory.push({ role: 'user', parts: [{ text }] });
+
+  const btn = document.getElementById('send-btn');
+  btn.disabled = true;
+  btn.textContent = '...';
+
+  try {
+    const systemCtx = cfg.context || '';
+    const contents = systemCtx
+      ? [{ role: 'user', parts: [{ text: systemCtx }] }, { role: 'model', parts: [{ text: 'Understood. Ready to assist.' }] }, ...chatHistory]
+      : [...chatHistory];
+
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${cfg.gemini}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ contents })
+    });
+    const d = await r.json();
+    const reply = d?.candidates?.[0]?.content?.parts?.[0]?.text || 'No response.';
+    chatHistory.push({ role: 'model', parts: [{ text: reply }] });
+    appendMsg(reply, 'ai');
+
+    // Log to sidebar-log in Supabase
+    if (cfg.sb_url && cfg.sb_key) {
+      logToSidebar(cfg, { agent: 'gemini', message: `Q: ${text.slice(0,60)} → ${reply.slice(0,60)}` });
+    }
+  } catch(e) {
+    appendMsg('Error: ' + e.message, 'system');
+  }
+  btn.disabled = false;
+  btn.textContent = 'Send';
+}
+
+function appendMsg(text, role) {
+  const el = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg ' + role;
+  div.textContent = text;
+  el.appendChild(div);
+  el.scrollTop = el.scrollHeight;
+}
+
+// ── Queue ─────────────────────────────────────────────────────────────────────
+async function queueTask() {
+  const cfg = loadConfig();
+  const project  = document.getElementById('q-project').value;
+  const taskText = document.getElementById('q-task').value.trim();
+  const priority = document.getElementById('q-priority').value;
+
+  if (!project || !taskText) { alert('Project and task required.'); return; }
+  if (!cfg.sb_url || !cfg.sb_key) { alert('Configure Supabase in Config tab first.'); return; }
+
+  const payload = {
+    session_id: 'task-queue-' + Date.now(),
+    answers: JSON.stringify({
+      type: 'task_queue',
+      project,
+      task: taskText,
+      priority,
+      status: 'queued',
+      queued_at: new Date().toISOString(),
+      source: 'sidebar'
+    }),
+    total_answered: 1
+  };
+
+  try {
+    const r = await fetch(cfg.sb_url + '/rest/v1/mobile_answers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key, Prefer: 'return=minimal' },
+      body: JSON.stringify(payload)
+    });
+    if (r.ok) {
+      document.getElementById('q-task').value = '';
+      document.getElementById('q-project').value = '';
+      await loadQueue();
+      logToSidebar(cfg, { agent: 'queue', message: `Task queued [${priority}]: ${project} — ${taskText.slice(0,60)}` });
+    } else {
+      alert('Failed to queue task: ' + r.status);
+    }
+  } catch(e) {
+    alert('Error: ' + e.message);
+  }
+}
+
+async function loadQueue() {
+  const cfg = loadConfig();
+  const el = document.getElementById('queued-tasks');
+  if (!cfg.sb_url || !cfg.sb_key) { el.innerHTML = '<div style="color:var(--muted)">Configure Supabase first</div>'; return; }
+
+  try {
+    const r = await fetch(cfg.sb_url + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=30', {
+      headers: { apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key }
+    });
+    const rows = await r.json();
+    const tasks = rows.filter(row => {
+      try {
+        const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
+        return a && a.type === 'task_queue' && a.status === 'queued';
+      } catch { return false; }
+    });
+
+    if (!tasks.length) { el.innerHTML = '<div style="color:var(--muted);font-size:10px">No tasks queued.</div>'; return; }
+
+    const prios = { high: 0, medium: 1, low: 2 };
+    tasks.sort((a, b) => {
+      const pa = JSON.parse(typeof a.answers === 'string' ? a.answers : JSON.stringify(a.answers));
+      const pb = JSON.parse(typeof b.answers === 'string' ? b.answers : JSON.stringify(b.answers));
+      return (prios[pa.priority] ?? 1) - (prios[pb.priority] ?? 1);
+    });
+
+    el.innerHTML = tasks.map(row => {
+      const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
+      const ts = (row.submitted_at || '').slice(0,16).replace('T',' ');
+      return `<div class="q-item">
+        <div class="q-item-header"><span class="q-proj">${a.project||'?'}</span><span class="q-prio ${a.priority||'medium'}">${a.priority||'medium'}</span></div>
+        <div class="q-task">${a.task||''}</div>
+        <div class="q-ts">${ts} · from sidebar</div>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    el.innerHTML = `<div style="color:var(--red)">Error: ${e.message}</div>`;
+  }
+}
+
+// ── Sidebar log writer ────────────────────────────────────────────────────────
+async function logToSidebar(cfg, entry) {
+  if (!cfg.sb_url || !cfg.sb_key) return;
+  try {
+    await fetch(cfg.sb_url + '/rest/v1/mobile_answers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key, Prefer: 'return=minimal' },
+      body: JSON.stringify({
+        session_id: 'sidebar-log-' + Date.now(),
+        answers: JSON.stringify({ type: 'sidebar_log', ...entry, ts: new Date().toISOString() }),
+        total_answered: 1
+      })
+    });
+  } catch { /* non-fatal */ }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+initFromConfig();
+refreshStatus();
+setInterval(refreshStatus, 60000); // auto-refresh every 60s
+</script>
+</body>
+</html>
