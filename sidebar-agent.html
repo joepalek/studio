@@ -229,8 +229,15 @@ textarea { min-height: 60px; resize: vertical; }
 // ── Config ────────────────────────────────────────────────────────────────────
 const CFG_KEY = 'studio_sidebar_cfg';
 
+// Defaults baked in — Supabase anon key is already public in the repo
+const DEFAULTS = {
+  sb_url: 'https://nepnytazalthnjqpyzcx.supabase.co',
+  sb_key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5lcG55dGF6YWx0aG5qcXB5emN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3OTU4MDIsImV4cCI6MjA4OTM3MTgwMn0.ojPrZ51Jei32zdL2ORJ4SOVlopfv-9mZDj-U5sDz7rw',
+  context: 'You are a studio assistant for an indie creator\'s project management system called Studio. Projects include: job-match (job scraper + company registry), ghost-book (AI-assisted book publishing), CTW, squeeze-empire, sentinel-core/performer/viewer. The system runs Claude Code sessions, Gemini Flash, and local Ollama. Respond concisely.',
+};
+
 function loadConfig() {
-  try { return JSON.parse(localStorage.getItem(CFG_KEY) || '{}'); } catch { return {}; }
+  try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(CFG_KEY) || '{}') }; } catch { return { ...DEFAULTS }; }
 }
 function saveConfig() {
   const cfg = {
@@ -247,10 +254,21 @@ function saveConfig() {
 }
 
 function initFromConfig() {
+  // Check URL param ?g=GEMINI_KEY — saves to localStorage on first load
+  const params = new URLSearchParams(window.location.search);
+  const gParam = params.get('g');
+  if (gParam) {
+    const existing = JSON.parse(localStorage.getItem(CFG_KEY) || '{}');
+    existing.gemini = gParam;
+    localStorage.setItem(CFG_KEY, JSON.stringify(existing));
+    // Clean URL without reloading
+    history.replaceState({}, '', window.location.pathname);
+  }
+
   const cfg = loadConfig();
   if (cfg.gemini) document.getElementById('cfg-gemini').value = cfg.gemini;
-  if (cfg.sb_url) document.getElementById('cfg-sb-url').value = cfg.sb_url;
-  if (cfg.sb_key) document.getElementById('cfg-sb-key').value = cfg.sb_key;
+  document.getElementById('cfg-sb-url').value = cfg.sb_url || DEFAULTS.sb_url;
+  document.getElementById('cfg-sb-key').value = cfg.sb_key || DEFAULTS.sb_key;
   if (cfg.context) document.getElementById('cfg-context').value = cfg.context;
 }
 
