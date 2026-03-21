@@ -349,6 +349,23 @@ async function loadDriveLog(cfg) {
 
 // ── Chat ──────────────────────────────────────────────────────────────────────
 const chatHistory = [];
+let studioContext = '';  // loaded from studio-context.md on GitHub Pages
+
+async function loadStudioContext() {
+  try {
+    // Fetch from same origin (GitHub Pages) — cache-busted every 5 min
+    const ts = Math.floor(Date.now() / 300000);
+    const r = await fetch(`studio-context.md?v=${ts}`);
+    if (r.ok) {
+      studioContext = await r.text();
+      appendMsg(`Context loaded (${Math.round(studioContext.length / 1000)}k chars) — Gemini knows the full studio setup.`, 'system');
+    } else {
+      appendMsg('studio-context.md not found on GitHub Pages — using config context only.', 'system');
+    }
+  } catch(e) {
+    appendMsg('Could not load studio-context.md — using config context only.', 'system');
+  }
+}
 
 function handleKey(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
@@ -370,9 +387,11 @@ async function sendChat() {
   btn.textContent = '...';
 
   try {
-    const systemCtx = cfg.context || '';
+    // Build system context: studio-context.md (full brain dump) takes priority,
+    // fallback to the short context string from Config tab
+    const systemCtx = studioContext || cfg.context || '';
     const contents = systemCtx
-      ? [{ role: 'user', parts: [{ text: systemCtx }] }, { role: 'model', parts: [{ text: 'Understood. Ready to assist.' }] }, ...chatHistory]
+      ? [{ role: 'user', parts: [{ text: systemCtx }] }, { role: 'model', parts: [{ text: 'Understood. I have the full studio context. Ready to assist.' }] }, ...chatHistory]
       : [...chatHistory];
 
     const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${cfg.gemini}`, {
@@ -507,6 +526,7 @@ async function logToSidebar(cfg, entry) {
 // ── Init ──────────────────────────────────────────────────────────────────────
 initFromConfig();
 refreshStatus();
+loadStudioContext();  // pre-fetch context so first chat message is already loaded
 setInterval(refreshStatus, 60000); // auto-refresh every 60s
 </script>
 </body>
