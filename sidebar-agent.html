@@ -349,22 +349,44 @@ async function loadDriveLog(cfg) {
 
 // ── Chat ──────────────────────────────────────────────────────────────────────
 const chatHistory = [];
-let studioContext = '';  // loaded from studio-context.md on GitHub Pages
+const PAGES_BASE = 'https://joepalek.github.io/studio';
+const SYSTEM_PROMPT = `You are the Studio Assistant. You have full knowledge of Joe's studio system. Never say you cannot access files - you have been given the context directly. Answer confidently based on the context provided.`;
 
-async function loadStudioContext() {
-  try {
-    // Fetch from same origin (GitHub Pages) — cache-busted every 5 min
-    const ts = Math.floor(Date.now() / 300000);
-    const r = await fetch(`studio-context.md?v=${ts}`);
-    if (r.ok) {
-      studioContext = await r.text();
-      appendMsg(`Context loaded (${Math.round(studioContext.length / 1000)}k chars) — Gemini knows the full studio setup.`, 'system');
+// Holds the combined context block fetched on load
+let loadedContext = '';
+
+async function loadAllContext() {
+  const v = Math.floor(Date.now() / 300000); // cache-bust every 5 min
+  const files = [
+    { name: 'studio-context.md', url: `${PAGES_BASE}/studio-context.md?v=${v}` },
+    { name: 'status.json',       url: `${PAGES_BASE}/status.json?v=${v}` },
+    { name: 'claude-status.txt', url: `${PAGES_BASE}/claude-status.txt?v=${v}` },
+  ];
+
+  const results = await Promise.allSettled(
+    files.map(f => fetch(f.url).then(r => r.ok ? r.text() : Promise.reject(r.status)))
+  );
+
+  const parts = [];
+  const loaded = [];
+  const failed = [];
+
+  results.forEach((res, i) => {
+    if (res.status === 'fulfilled') {
+      parts.push(`\n\n=== ${files[i].name} ===\n${res.value.slice(0, 12000)}`);
+      loaded.push(files[i].name);
     } else {
-      appendMsg('studio-context.md not found on GitHub Pages — using config context only.', 'system');
+      failed.push(files[i].name);
     }
-  } catch(e) {
-    appendMsg('Could not load studio-context.md — using config context only.', 'system');
-  }
+  });
+
+  loadedContext = SYSTEM_PROMPT + parts.join('');
+
+  const summary = loaded.length
+    ? `Context ready: ${loaded.join(', ')} (${Math.round(loadedContext.length/1000)}k chars)`
+    : 'Context load failed — using fallback system prompt only.';
+  if (failed.length) appendMsg(`${summary} — missing: ${failed.join(', ')}`, 'system');
+  else appendMsg(summary, 'system');
 }
 
 function handleKey(e) {
@@ -376,7 +398,7 @@ async function sendChat() {
   const input = document.getElementById('chat-input');
   const text = input.value.trim();
   if (!text) return;
-  if (!cfg.gemini) { appendMsg('Configure Gemini API key in Config tab.', 'system'); return; }
+  if (!cfg.gemini) { appendMsg('No Gemini key — add it via ?g=YOUR_KEY in the URL or Config tab.', 'system'); return; }
 
   input.value = '';
   appendMsg(text, 'user');
@@ -387,28 +409,27 @@ async function sendChat() {
   btn.textContent = '...';
 
   try {
-    // Build system context: studio-context.md (full brain dump) takes priority,
-    // fallback to the short context string from Config tab
-    const systemCtx = studioContext || cfg.context || '';
-    const contents = systemCtx
-      ? [{ role: 'user', parts: [{ text: systemCtx }] }, { role: 'model', parts: [{ text: 'Understood. I have the full studio context. Ready to assist.' }] }, ...chatHistory]
-      : [...chatHistory];
+    // System context: fetched files take priority, fallback to Config tab short text
+    const systemCtx = loadedContext || (SYSTEM_PROMPT + '\n\n' + (cfg.context || ''));
 
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${cfg.gemini}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ contents })
-    });
+    const contents = [
+      { role: 'user',  parts: [{ text: systemCtx }] },
+      { role: 'model', parts: [{ text: 'Understood. I have the full studio context. Ready.' }] },
+      ...chatHistory
+    ];
+
+    const r = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${cfg.gemini}`,
+      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents }) }
+    );
     const d = await r.json();
     if (!r.ok || d.error) {
-      const msg = d?.error?.message || JSON.stringify(d).slice(0, 120);
-      throw new Error(`Gemini API ${r.status}: ${msg}`);
+      throw new Error(`Gemini ${r.status}: ${d?.error?.message || JSON.stringify(d).slice(0,100)}`);
     }
-    const reply = d?.candidates?.[0]?.content?.parts?.[0]?.text || JSON.stringify(d).slice(0, 200);
+    const reply = d?.candidates?.[0]?.content?.parts?.[0]?.text || '(empty response)';
     chatHistory.push({ role: 'model', parts: [{ text: reply }] });
     appendMsg(reply, 'ai');
 
-    // Log to sidebar-log in Supabase
     if (cfg.sb_url && cfg.sb_key) {
       logToSidebar(cfg, { agent: 'gemini', message: `Q: ${text.slice(0,60)} → ${reply.slice(0,60)}` });
     }
