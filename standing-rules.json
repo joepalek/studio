@@ -4,7 +4,11 @@
       "id": "rule-001",
       "trigger": "scraper returns 403 three consecutive times on same URL",
       "action": "mark source as Tier 3, add to supervisor-inbox.json for fix, skip and continue",
-      "applies_to": ["all scraper agents", "company-registry-crawler", "job-source-discovery"],
+      "applies_to": [
+        "all scraper agents",
+        "company-registry-crawler",
+        "job-source-discovery"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -13,7 +17,9 @@
       "id": "rule-002",
       "trigger": "scraper returns 429 (rate limit)",
       "action": "exponential backoff: wait 10s, 20s, 40s then mark Tier 3 if still failing",
-      "applies_to": ["all scraper agents"],
+      "applies_to": [
+        "all scraper agents"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -22,7 +28,11 @@
       "id": "rule-003",
       "trigger": "scoring task under 500 tokens",
       "action": "always route to Gemini Flash (Tier 0), never use Claude quota",
-      "applies_to": ["whiteboard-agent", "ghost-book-validator", "product-archaeology"],
+      "applies_to": [
+        "whiteboard-agent",
+        "ghost-book-validator",
+        "product-archaeology"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -31,7 +41,9 @@
       "id": "rule-004",
       "trigger": "session ends (user types /exit or says done for today)",
       "action": "commit all dirty projects, update changelogs, update status.json",
-      "applies_to": ["claude-code-session"],
+      "applies_to": [
+        "claude-code-session"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -40,7 +52,9 @@
       "id": "rule-005",
       "trigger": "same error pattern appears in 2+ agent scripts",
       "action": "build shared utility in _studio/utilities/, update README, migrate all affected scripts",
-      "applies_to": ["all agents"],
+      "applies_to": [
+        "all agents"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 1,
@@ -51,7 +65,11 @@
       "id": "rule-006",
       "trigger": "overnight batch task",
       "action": "always route to Ollama exclusively, never Gemini or Claude during overnight runs",
-      "applies_to": ["all batch agents", "ghost-book", "product-archaeology"],
+      "applies_to": [
+        "all batch agents",
+        "ghost-book",
+        "product-archaeology"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -60,7 +78,9 @@
       "id": "rule-007",
       "trigger": "career page returns JS-rendered shell (body < 2000 chars or react-root detected)",
       "action": "classify as Tier 2 (Playwright), add to scraper-config-tier2.json, do not mark as failed",
-      "applies_to": ["company-registry-crawler"],
+      "applies_to": [
+        "company-registry-crawler"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -69,7 +89,10 @@
       "id": "rule-008",
       "trigger": "CDX query returns 0 results for ATS domain (lever, greenhouse, ashby)",
       "action": "skip CDX for that domain, rely on direct HTTP scrape in daily-scraper-config.json instead",
-      "applies_to": ["job-source-discovery", "update_scraper_config"],
+      "applies_to": [
+        "job-source-discovery",
+        "update_scraper_config"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 1,
@@ -80,7 +103,10 @@
       "id": "rule-009",
       "trigger": "mobile inbox has more than 10 pending items",
       "action": "auto-expire items pending >7 days by setting status to expired, notify once in session-log",
-      "applies_to": ["supervisor", "workflow-intelligence"],
+      "applies_to": [
+        "supervisor",
+        "workflow-intelligence"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 0
@@ -89,26 +115,49 @@
       "id": "rule-010",
       "trigger": "agent script prints user-sourced text (titles, names, web content)",
       "action": "always wrap in safe_str() from utilities/unicode_safe.py before printing",
-      "applies_to": ["all agents"],
+      "applies_to": [
+        "all agents"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 1,
       "last_applied": "2026-03-19",
       "example": "Ghost Book Pass 2 crashed 3x on Unicode book titles before utility was built"
-    }
+    },
     {
       "id": "rule-011",
       "trigger": "any script opens a JSON file on Windows",
       "action": "always use safe_json_load() from unicode_safe.py, or open(f, encoding='utf-8', errors='replace') — never plain open(f)",
-      "applies_to": ["all agents", "inbox-manager", "audit scripts", "diagnostic one-liners"],
+      "applies_to": [
+        "all agents",
+        "inbox-manager",
+        "audit scripts",
+        "diagnostic one-liners"
+      ],
       "created": "2026-03-19",
       "approved_by": "joe",
       "times_applied": 1,
       "last_applied": "2026-03-19",
       "example": "plain open() on job-match/state.json caused 'found 0 items' — em-dash in answer field (U+2014) fails cp1252 decode silently"
+    },
+    {
+      "id": "rule-012",
+      "trigger": "any session involves project prioritization or build order decisions",
+      "action": "client-services-website is OVERRIDE PRIORITY — this project directly funds Joe's income. Always rank above other whiteboard items regardless of score. Build before any other new project is started.",
+      "applies_to": [
+        "whiteboard-agent",
+        "supervisor",
+        "auto-answer",
+        "all planning sessions"
+      ],
+      "created": "2026-03-25",
+      "approved_by": "joe",
+      "times_applied": 0,
+      "project_id": "client-services-website",
+      "reason": "Primary near-term revenue vehicle. Funds Joe as employee and system wishlist."
     }
   ],
-  "last_updated": "2026-03-19",
-  "total_rules": 11,
+  "last_updated": "2026-03-25",
+  "total_rules": 12,
   "schema_version": "1.0"
 }
