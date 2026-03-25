@@ -60,3 +60,11 @@ Ignore Sentinel, NutriMind, and Arbitrage-Pulse until LLC is active and job-matc
 ```
 
 Saved to `orchestrator-briefing.json`. Gemini model fixed to `gemini-flash-latest` (models/gemini-1.5-flash and gemini-2.0-flash are returning 404 in your account — flash-latest resolves correctly).
+[Sat 03/21/2026  8:00:01.97] Daily briefing starting 
+You've hit your limit · resets Mar 24, 5pm (America/Chicago)
+[Sun 03/22/2026  8:00:02.46] Daily briefing starting 
+You've hit your limit · resets Mar 24, 5pm (America/Chicago)
+[Mon 03/23/2026  8:00:01.93] Daily briefing starting 
+You've hit your limit · resets Mar 24, 5pm (America/Chicago)
+[Tue 03/24/2026  8:00:01.81] Daily briefing starting 
+You've hit your limit · resets 5pm (America/Chicago)

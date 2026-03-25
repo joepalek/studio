@@ -505,7 +505,7 @@
 
 <div id="tab-bar">
   <div class="tab active" onclick="switchTab('status')">STATUS</div>
-  <div class="tab" onclick="switchTab('chat')">CHAT <span id="chat-backend" style="font-size:9px;opacity:0.7;"></span></div>
+  <div class="tab" onclick="switchTab('chat')">CHAT</div>
   <div class="tab" onclick="switchTab('queue')">QUEUE</div>
   <div class="tab" onclick="switchTab('files')">FILES</div>
   <div class="tab" onclick="switchTab('config')">CONFIG</div>
@@ -636,15 +636,6 @@
     </div>
 
     <div class="config-section">
-      <div class="config-title">OpenRouter</div>
-      <div class="config-row">
-        <label>OpenRouter Key</label>
-        <input type="password" id="cfg-openrouter-key" placeholder="sk-or-...">
-        <button class="config-save" onclick="saveCfg('openrouter-key')">Save</button>
-      </div>
-    </div>
-
-    <div class="config-section">
       <div class="config-title">Drive Paths</div>
       <div class="config-row">
         <label>Status File</label>
@@ -694,7 +685,6 @@ const CFG_KEY = 'sidebar_cfg';
 let cfg = {
   ollamaUrl: 'http://localhost:11434',
   ollamaModel: 'llama3.2',
-  openrouterKey: '',
   driveToken: '',
   statusFile: 'claude-status.txt',
   contextFile: 'studio-context.md',
@@ -723,9 +713,7 @@ function loadConfig() {
 
   document.getElementById('cfg-ollama-url').value = cfg.ollamaUrl || 'http://localhost:11434';
   document.getElementById('cfg-ollama-model').value = cfg.ollamaModel || 'llama3.2';
-  document.getElementById('cfg-openrouter-key').value = '';
   document.getElementById('cfg-status-file').value = cfg.statusFile;
-  updateBackendIndicator();
   document.getElementById('cfg-context-file').value = cfg.contextFile;
   document.getElementById('cfg-queue-file').value = cfg.queueFile;
   document.getElementById('cfg-context-text').value = cfg.context;
@@ -741,7 +729,6 @@ function saveCfg(field) {
   const map = {
     'ollama-url': ['cfg-ollama-url', 'ollamaUrl'],
     'ollama-model': ['cfg-ollama-model', 'ollamaModel'],
-    'openrouter-key': ['cfg-openrouter-key', 'openrouterKey'],
     'status-file': ['cfg-status-file', 'statusFile'],
     'context-file': ['cfg-context-file', 'contextFile'],
     'queue-file': ['cfg-queue-file', 'queueFile']
@@ -749,10 +736,10 @@ function saveCfg(field) {
 
   const [elId, cfgProp] = map[field];
   const val = document.getElementById(elId).value;
-  if (field !== 'openrouter-key' && val === '••••••••') return;
+  if (val === '••••••••' && field !== 'openrouter-key') return;
+  if (!val) return;
   cfg[cfgProp] = val;
   persistConfig();
-  updateBackendIndicator();
   toast('Saved');
 }
 
@@ -860,18 +847,6 @@ function handleChatKey(e) {
   }
 }
 
-function updateBackendIndicator() {
-  const el = document.getElementById('chat-backend');
-  if (!el) return;
-  if (cfg.openrouterKey) {
-    el.textContent = '· deepseek';
-    el.style.color = 'var(--amber)';
-  } else {
-    el.textContent = '· ollama';
-    el.style.color = 'var(--text-dim)';
-  }
-}
-
 async function sendChat() {
   const input = document.getElementById('chat-input');
   const msg = input.value.trim();
@@ -885,71 +860,47 @@ async function sendChat() {
   sendBtn.disabled = true;
   const typingId = appendTyping();
 
-  const systemPrompt = cfg.context
-    ? `You are a studio assistant for Joe Palek's AI development studio. Be concise and direct.\n\nContext:\n${cfg.context}`
-    : 'You are a studio assistant helping manage an AI development studio with agents, eBay listing operations, and multiple software projects. Be concise and direct.';
-
-  const messages = [
-    { role: 'system', content: systemPrompt },
-    ...chatHistory,
-    { role: 'user', content: msg }
-  ];
-
   try {
-    let reply;
+    const systemPrompt = cfg.context
+      ? `You are a studio assistant for Joe Palek's AI development studio. Be concise and direct.\n\nContext:\n${cfg.context}`
+      : 'You are a studio assistant helping manage an AI development studio with agents, eBay listing operations, and multiple software projects. Be concise and direct.';
 
-    if (cfg.openrouterKey) {
-      // ── OpenRouter (deepseek-r1:free) ──────────────────────────────────
-      const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${cfg.openrouterKey}`
-        },
-        body: JSON.stringify({
-          model: 'meta-llama/llama-3.1-8b-instruct:free',
-          messages: messages
-        })
-      });
+    // Build message history for Ollama
+    const messages = [
+      { role: 'system', content: systemPrompt },
+      ...chatHistory,
+      { role: 'user', content: msg }
+    ];
 
-      removeTyping(typingId);
+    const ollamaUrl = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
+    const model = cfg.ollamaModel || 'llama3.2';
 
-      if (!resp.ok) {
-        const txt = await resp.text();
-        appendMsg('system', `⚠ OpenRouter error ${resp.status}: ${txt.substring(0, 200)}`);
-        sendBtn.disabled = false;
-        return;
-      }
+    const resp = await fetch(`${ollamaUrl}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: model,
+        messages: messages,
+        stream: false
+      })
+    });
 
-      const data = await resp.json();
-      reply = data.choices?.[0]?.message?.content || 'No response';
+    removeTyping(typingId);
 
-    } else {
-      // ── Ollama fallback ────────────────────────────────────────────────
-      const ollamaUrl = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
-      const model = cfg.ollamaModel || 'llama3.2';
-
-      const resp = await fetch(`${ollamaUrl}/api/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model, messages, stream: false })
-      });
-
-      removeTyping(typingId);
-
-      if (!resp.ok) {
-        const txt = await resp.text();
-        appendMsg('system', `⚠ Ollama error ${resp.status}: ${txt.substring(0, 120)}`);
-        sendBtn.disabled = false;
-        return;
-      }
-
-      const data = await resp.json();
-      reply = data.message?.content || data.response || 'No response';
+    if (!resp.ok) {
+      const txt = await resp.text();
+      appendMsg('system', `⚠ Ollama error ${resp.status}: ${txt.substring(0, 120)}`);
+      sendBtn.disabled = false;
+      return;
     }
+
+    const data = await resp.json();
+    const reply = data.message?.content || data.response || 'No response';
 
     chatHistory.push({ role: 'user', content: msg });
     chatHistory.push({ role: 'assistant', content: reply });
+
+    // Keep last 20 turns
     if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
 
     appendMsg('ai', reply);
@@ -957,8 +908,7 @@ async function sendChat() {
   } catch(e) {
     removeTyping(typingId);
     if (e.message.includes('fetch') || e.message.includes('Failed')) {
-      const backend = cfg.openrouterKey ? 'OpenRouter' : 'Ollama';
-      appendMsg('system', `⚠ Cannot reach ${backend}. Check CONFIG.`);
+      appendMsg('system', '⚠ Cannot reach Ollama. Is the Ollama app running? Check CONFIG for correct URL.');
     } else {
       appendMsg('system', '⚠ ' + e.message);
     }
