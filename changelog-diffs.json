@@ -1380,6 +1380,33 @@
       "strategy_notes": []
     }
   },
+  "sentinel-core": {
+    "type": "new",
+    "current": {
+      "_note": "SRE stub \u00e2\u20ac\u201d active state in SENT-CORE-state-v1.json",
+      "_project": "sentinel-core",
+      "status": "active",
+      "last_updated": "2026-03-20"
+    }
+  },
+  "sentinel-performer": {
+    "type": "new",
+    "current": {
+      "_note": "SRE stub \u00e2\u20ac\u201d active state in SENT-PERF-state-v1.json",
+      "_project": "sentinel-performer",
+      "status": "active",
+      "last_updated": "2026-03-20"
+    }
+  },
+  "sentinel-viewer": {
+    "type": "new",
+    "current": {
+      "_note": "SRE stub \u00e2\u20ac\u201d active state in SENT-VIEW-state-v1.json",
+      "_project": "sentinel-viewer",
+      "status": "active",
+      "last_updated": "2026-03-20"
+    }
+  },
   "squeeze-empire": {
     "type": "new",
     "current": {
