@@ -1,6 +1,6 @@
 {
-  "time": "2026-03-25T02:01:06.475690",
-  "ollama_up": false,
+  "time": "2026-03-25T04:00:59.060937",
+  "ollama_up": true,
   "gemini_available": true,
   "agents_recently_active": 0,
   "work_queue_depth": 0,

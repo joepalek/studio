@@ -1,1 +1,94 @@
-vr_behavior_engine_agent.py --- import datetime from typing import Dict, Any, List, Literal, Optional # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import VRCharacter, VRWorldAsset, VRInteractionEvent, BehaviorTree # Placeholder data models # from ghost_book_author_agent import GhostBookAuthorAgent # For character backstory/life-path # from vr_memory_weigher_agent import VRMemoryWeigherAgent # For memory access/consistency class VRBehaviorEngineAgent: def __init__(self, agent_id: str = "VR_Behavior_001"): self.agent_id = agent_id self.active_vr_characters: Dict[str, VRCharacter] = {} self.active_vr_worlds: Dict[str, VRWorldAsset] = {} self.behavior_trees: Dict[str, BehaviorTree] = {} # Stores complex behavior definitions self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent # self.ghost_book_author_agent = GhostBookAuthorAgent() # For creating character backstories # self.vr_memory_weigher_agent = VRMemoryWeigherAgent() # For consistent memory recall def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a critical VR character/behavior item to the supervisor via the agent inbox.""" self._log(f"VR Behavior Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def register_vr_character(self, character: VRCharacter, world_id: str): """Registers a VR character and assigns it to a specific world.""" if world_id not in self.active_vr_worlds: self._log(f"Error: World {world_id} not registered for character {character.id}.", level="ERROR") # In a real system, would register the world first or prompt for it self.active_vr_worlds[world_id] = VRWorldAsset(id=world_id, name="Temp World", description="", path="", status="ACTIVE", artist_info={"name":"N/A","link":None}) # Mock for testing self.active_vr_characters[character.id] = character self.active_vr_characters[character.id].current_world_id = world_id self._log(f"VR Character '{character.name}' (ID: {character.id}) registered and assigned to world '{world_id}'.") # Ensure character has a defined life-path/backstory if not character.backstory: self._log(f"Character {character.id} has no backstory. Initiating Ghost Book Author Agent to generate one.", level="WARNING") # self.ghost_book_author_agent.generate_life_path(character.id, character.age, character.birth_date, character.persona_traits) def define_behavior_tree(self, tree_id: str, definition: Dict[str, Any]) -> BehaviorTree: """ Defines or updates a complex behavior tree for AI characters. Uses ClaudeCodeSession for generating intricate behavior logic. """ self._log(f"Defining behavior tree '{tree_id}'...", level="INFO") new_tree = BehaviorTree(id=tree_id, definition=definition, status="ACTIVE") self.behavior_trees[tree_id] = new_tree self._log(f"Behavior tree '{tree_id}' defined and activated.") return new_tree def update_character_state(self, character_id: str, new_state: Dict[str, Any]): """Updates a VR character's internal state (emotions, goals, current action).""" character = self.active_vr_characters.get(character_id) if not character: self._log(f"Error: Character {character_id} not found for state update.", level="ERROR") return character.current_state.update(new_state) self._log(f"Character {character_id} state updated: {new_state}", level="DEBUG") def simulate_character_action(self, character_id: str, current_environment_context: Dict[str, Any]) -> str: """ Simulates a VR character's next action based on its behavior tree, state, and environment. Ensures deterministic autonomy and temporal logic. """ character = self.active_vr_characters.get(character_id) if not character: self._log(f"Error: Character {character_id} not found for action simulation.", level="ERROR") return "NO_ACTION" self._log(f"Simulating action for character {character_id} in world {character.current_world_id}...", level="DEBUG") # 1. Retrieve Character's Memory (via VR Memory Weigher Agent) # relevant_memories = self.vr_memory_weigher_agent.get_contextual_memories(character.id, current_environment_context) # For blueprint, simulate. relevant_memories = [{"event": "saw player at market", "timestamp": datetime.datetime.now() - datetime.timedelta(hours=2)}] # 2. Process Behavior Tree / Decision Logic (via Claude Code or Ollama for simpler behaviors) # This is where the BehaviorTree (if complex) or a simpler LLM decision would happen # action = ClaudeCodeSession.start(f"Decide action for {character.name} based on state {character.current_state}, memories {relevant_memories}, context {current_environment_context}") # For blueprint, simulate a temporal action if character.birth_date.year < 1950 and "VR_ITEM_MODERN_PHONE" in current_environment_context.get("items_present", []): action = f"Character {character.name} (from {character.birth_date.year}) stares curiously at the modern phone." elif "player_nearby" in current_environment_context: action = f"Character {character.name} greets player based on past memory of interaction." else: action = f"Character {character.name} proceeds with routine patrol of the area." # 3. Update Character State (e.g., now performing the action) self.update_character_state(character_id, {"last_action": action, "timestamp": datetime.datetime.now()}) # 4. Generate Interaction Event (for logging, and for VR Memory Weigher to record) interaction_event = VRInteractionEvent( id=f"INTERACT_{character_id}_{datetime.datetime.now().strftime('%H%M%S')}", character_id=character_id, world_id=character.current_world_id, event_type="ACTION", details={"action": action}, timestamp=datetime.datetime.now() ) # VRMemoryWeigherAgent.record_interaction_event(interaction_event) return action def deploy_clue_givers_npcs(self, world_id: str, geocaching_logic_config: Dict[str, Any]): """ Deploys specific NPC characters as clue-givers for geocaching activities in a world. """ self._log(f"Deploying clue-giver NPCs for geocaching in world {world_id}...", level="INFO") # In a real system, this would: # 1. Generate/select specific VRCharacter instances for NPCs # 2. Define their behavior trees to give clues based on geocaching_logic_config # 3. Assign them to the world npc_count = geocaching_logic_config.get("clue_giver_npcs", 3) self._log(f"{npc_count} clue-giver NPCs deployed to world {world_id}.") # Send confirmation to VR Scene Generator Agent # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class VRCharacter: def __init__(self, id, name, birth_date, persona_traits, backstory=None, current_world_id=None, current_state=None): self.id = id self.name = name self.birth_date = birth_date self.persona_traits = persona_traits self.backstory = backstory self.current_world_id = current_world_id self.current_state = current_state if current_state else {} class VRWorldAsset: # Mock, more detailed version in VRSceneGeneratorAgent def __init__(self, id, name, description, path, status, artist_info): self.id = id self.name = name self.description = description self.path = path self.status = status self.artist_info = artist_info class VRInteractionEvent: def __init__(self, id, character_id, world_id, event_type, details, timestamp): self.id = id self.character_id = character_id self.world_id = world_id self.event_type = event_type self.details = details self.timestamp = timestamp class BehaviorTree: def __init__(self, id, definition, status): self.id = id self.definition = definition self.status = status # Mock GhostBookAuthorAgent and VRMemoryWeigherAgent for local testing class MockGhostBookAuthorAgent: def generate_life_path(self, char_id, age, birth_date, traits): print(f"MOCK GHOST BOOK: Generating life path for {char_id}") # Returns a string or structured data return f"Generated backstory for {char_id} based on {birth_date.year} traits." class MockVRMemoryWeigherAgent: def get_contextual_memories(self, char_id, context): print(f"MOCK VR MEMORY: Retrieving memories for {char_id}") return [{"memory": "Old World event", "relevance": 0.8}] def record_interaction_event(self, event): print(f"MOCK VR MEMORY: Recording event {event.id}") # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['VRCharacter'] = VRCharacter globals()['VRWorldAsset'] = VRWorldAsset globals()['VRInteractionEvent'] = VRInteractionEvent globals()['BehaviorTree'] = BehaviorTree globals()['GhostBookAuthorAgent'] = MockGhostBookAuthorAgent globals()['VRMemoryWeigherAgent'] = MockVRMemoryWeigherAgent vr_behavior_agent = VRBehaviorEngineAgent() # Inject mocks vr_behavior_agent.ghost_book_author_agent = MockGhostBookAuthorAgent() vr_behavior_agent.vr_memory_weigher_agent = MockVRMemoryWeigherAgent() # 1. Register a character without a backstory (will trigger generation) char1 = VRCharacter(id="NPC_001", name="Old Man Jenkins", birth_date=datetime.date(1940, 5, 10), persona_traits={"wisdom": 0.9, "curiosity": 0.6}) vr_behavior_agent.register_vr_character(char1, "VRW_ARTIST_001") # 2. Register a character with a backstory char2 = VRCharacter(id="NPC_002", name="Young Adventurer", birth_date=datetime.date(2000, 1, 1), persona_traits={"bravery": 0.8}, backstory="Grew up in a digital city.", current_world_id="VRW_ARTIST_001") vr_behavior_agent.register_vr_character(char2, "VRW_ARTIST_001") # 3. Define a simple behavior tree (e.g., for a guard patrol) patrol_tree = vr_behavior_agent.define_behavior_tree("Guard_Patrol_Tree", {"sequence": [{"action": "patrol_route_A"}, {"action": "check_status_of_players"}]}) print(f"\nDefined Behavior Tree: {patrol_tree.id}") # 4. Simulate a character action (Old Man Jenkins) action1 = vr_behavior_agent.simulate_character_action( "NPC_001", {"player_nearby": True, "items_present": ["VR_ITEM_BENCH"]} ) print(f"\nCharacter NPC_001 performs: {action1}") # 5. Simulate another character action (Young Adventurer, with a modern item in environment) action2 = vr_behavior_agent.simulate_character_action( "NPC_002", {"player_nearby": False, "items_present": ["VR_ITEM_MODERN_PHONE", "VR_ITEM_ANCIENT_RUIN"]} ) print(f"Character NPC_002 performs: {action2}") # 6. Deploy clue-giver NPCs (as called from VR Scene Generator Agent) vr_behavior_agent.deploy_clue_givers_npcs("VRW_ARTIST_002", {"clue_giver_npcs": 2}) ---
+import datetime
+from typing import Dict, Any, List, Literal, Optional
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import VRCharacter, VRWorldAsset, VRInteractionEvent, BehaviorTree
+
+
+class VRBehaviorEngineAgent:
+    """VR character registration, behavior tree management, and action simulation."""
+
+    def __init__(self, agent_id: str = "VR_Behavior_001"):
+        self.agent_id = agent_id
+        self.active_vr_characters: Dict[str, VRCharacter] = {}
+        self.active_vr_worlds: Dict[str, VRWorldAsset] = {}
+        self.behavior_trees: Dict[str, BehaviorTree] = {}
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"VR Behavior Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def register_vr_character(self, character: VRCharacter, world_id: str):
+        if world_id not in self.active_vr_worlds:
+            self._log(f"World {world_id} not registered. Auto-creating placeholder.", level="WARNING")
+            self.active_vr_worlds[world_id] = VRWorldAsset(
+                id=world_id, name="Temp World", description="", path="",
+                status="ACTIVE", artist_info={"name": "N/A", "link": None},
+            )
+        self.active_vr_characters[character.id] = character
+        self.active_vr_characters[character.id].current_world_id = world_id
+        self._log(f"VR Character '{character.name}' registered in world '{world_id}'.")
+        if not character.backstory:
+            self._log(f"Character {character.id} has no backstory. Manual creation required.", level="WARNING")
+
+    def define_behavior_tree(self, tree_id: str, definition: Dict[str, Any]) -> BehaviorTree:
+        self._log(f"Defining behavior tree '{tree_id}'...")
+        new_tree = BehaviorTree(id=tree_id, definition=definition, status="ACTIVE")
+        self.behavior_trees[tree_id] = new_tree
+        self._log(f"Behavior tree '{tree_id}' defined.")
+        return new_tree
+
+    def update_character_state(self, character_id: str, new_state: Dict[str, Any]):
+        character = self.active_vr_characters.get(character_id)
+        if not character:
+            self._log(f"Error: Character {character_id} not found.", level="ERROR")
+            return
+        character.current_state.update(new_state)
+        self._log(f"Character {character_id} state updated.", level="DEBUG")
+
+    def simulate_character_action(self, character_id: str, current_environment_context: Dict[str, Any]) -> str:
+        character = self.active_vr_characters.get(character_id)
+        if not character:
+            self._log(f"Error: Character {character_id} not found.", level="ERROR")
+            return "NO_ACTION"
+        self._log(f"Simulating action for character {character_id}...", level="DEBUG")
+        relevant_memories = [{"event": "saw player at market",
+                               "timestamp": datetime.datetime.now() - datetime.timedelta(hours=2)}]
+
+        if character.birth_date.year < 1950 and "VR_ITEM_MODERN_PHONE" in current_environment_context.get("items_present", []):
+            action = f"Character {character.name} (from {character.birth_date.year}) stares curiously at the modern phone."
+        elif "player_nearby" in current_environment_context:
+            action = f"Character {character.name} greets player based on past interaction."
+        else:
+            action = f"Character {character.name} proceeds with routine patrol."
+
+        self.update_character_state(character_id, {"last_action": action, "timestamp": datetime.datetime.now()})
+        interaction_event = VRInteractionEvent(
+            id=f"INTERACT_{character_id}_{datetime.datetime.now().strftime('%H%M%S')}",
+            character_id=character_id,
+            world_id=character.current_world_id,
+            event_type="ACTION",
+            details={"action": action},
+            timestamp=datetime.datetime.now(),
+        )
+        return action
+
+    def deploy_clue_givers_npcs(self, world_id: str, geocaching_logic_config: Dict[str, Any]):
+        self._log(f"Deploying clue-giver NPCs for geocaching in world {world_id}...")
+        npc_count = geocaching_logic_config.get("clue_giver_npcs", 3)
+        self._log(f"{npc_count} clue-giver NPCs deployed to world {world_id}.")

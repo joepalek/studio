@@ -1,5 +1,5 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-25 02:32 | Auto-built by generate-context.py
+Generated: 2026-03-25 04:00 | Auto-built by generate-context.py
 
 ## WHO IS JOE
 
@@ -1700,8 +1700,8 @@ If it does:
 
 ## WHITEBOARD
 
-Last updated: 2026-03-19T15:49:57.500743
-Total items: 30
+Last updated: 2026-03-25T03:55:34.601157
+Total items: 32
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
     id:      arch-reddit-0001
@@ -2310,10 +2310,26 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, vintage, vintage-2010s
     added:   2026-03-19T15:16:03.025794
 
+  [0/10] eBay Item Identifier — Consensus Engine
+    id:      ebay-identifier-app
+    type:    product
+    status:  WHITEBOARD
+    source:  Gemini sidebar + Joe
+    description: Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.
+    added:   2026-03-25
+
+  [0/10] AI Services Client Website
+    id:      client-services-website
+    type:    product
+    status:  WHITEBOARD
+    source:  Sidebar sessions
+    description: Lead generation website for AI project services. Intake triggers Client Solutions Agent pipeline. High upfront / low monthly quoting model. Funds Joe as employee and system wishlist. Full agent backend already blueprinted in Synthetic Talent Agency files.
+    added:   2026-03-25
+
 
 ## STUDIO CURRENT STATE
 
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-25 02:32
+End of context. Generated: 2026-03-25 04:00

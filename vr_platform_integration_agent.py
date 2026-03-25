@@ -1,1 +1,119 @@
-vr_platform_integration_agent.py --- import datetime from typing import Dict, Any, List, Literal, Optional # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import VRWorldAsset, VRCharacter, VRDeploymentPackage, PlatformIntegrationConfig # Placeholder data models # from vr_scene_generator_agent import VRSceneGeneratorAgent # For getting world assets # from vr_behavior_engine_agent import VRBehaviorEngineAgent # For getting character assets class VRPlatformIntegrationAgent: def __init__(self, agent_id: str = "VR_Platform_001"): self.agent_id = agent_id self.platform_integrations: Dict[str, PlatformIntegrationConfig] = self._load_platform_configs() self.deployment_queue: List[VRDeploymentPackage] = [] self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent # self.vr_scene_generator_agent = VRSceneGeneratorAgent() # To access world assets # self.vr_behavior_engine_agent = VRBehaviorEngineAgent() # To access character assets def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a critical VR deployment or integration item to the supervisor via the agent inbox.""" self._log(f"VR Platform Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def _load_platform_configs(self) -> Dict[str, PlatformIntegrationConfig]: """Loads configurations for various VR platforms.""" # This would include API keys, SDK paths, specific deployment requirements return { "MetaHorizon": PlatformIntegrationConfig(id="MH_001", platform="Meta Horizon Store", status="ACTIVE", deployment_type="APP_PACKAGE", requirements={"SDK_Version": "v60", "build_format": "APK"}), "SteamVR": PlatformIntegrationConfig(id="SV_001", platform="SteamVR", status="ACTIVE", deployment_type="EXECUTABLE", requirements={"SDK_Version": "Steamworks_v153", "build_format": "EXE"}), "WebXR": PlatformIntegrationConfig(id="WEBXR_001", platform="WebXR", status="ACTIVE", deployment_type="WEB_HOSTED", requirements={"browser_support": ["Chrome", "Firefox"]}), "UnrealEngine": PlatformIntegrationConfig(id="UE_001", platform="Unreal Engine", status="ACTIVE", deployment_type="DEVELOPMENT_KIT", requirements={"SDK_Version": "UE5.3", "plugin_support": True}) } def prepare_deployment_package(self, project_id: str, world_assets: List[VRWorldAsset], character_assets: List[VRCharacter], target_platforms: List[str]) -> VRDeploymentPackage: """ Gathers and packages all necessary VR world and character assets for deployment. """ self._log(f"Preparing deployment package for project {project_id} targeting: {', '.join(target_platforms)}", level="INFO") # 1. Gather all assets all_asset_paths = [wa.path for wa in world_assets] + [ca.model_path for ca in character_assets] # 2. Convert/Optimize for target platforms (e.g., glTF, FBX, USD for assets, NotchLC for visuals) # This would involve coordinating with VR Scene Generator Agent for world optimization # and VR Behavior Engine Agent for character model optimization. # For blueprint, simulate success. optimized_assets_path = f"prepared_deployments/{project_id}_optimized_assets/" # 3. Generate platform-specific deployment manifests/builds deployment_manifests = {} for platform_name in target_platforms: config = self.platform_integrations.get(platform_name) if config: # In a real system, this triggers ClaudeCodeSession to generate platform-specific build scripts # For blueprint, simulate. deployment_manifests[platform_name] = {"build_script": f"build_{platform_name}.sh", "config_file": f"{platform_name}_config.json"} else: self._log(f"Warning: Configuration for platform '{platform_name}' not found.", level="WARNING") deployment_package = VRDeploymentPackage( id=f"DEPLOY_{project_id}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}", project_id=project_id, world_assets=[a.id for a in world_assets], character_assets=[c.id for c in character_assets], target_platforms=target_platforms, package_path=optimized_assets_path, deployment_manifests=deployment_manifests, status="READY_FOR_APPROVAL" ) self.deployment_queue.append(deployment_package) self._log(f"Deployment package {deployment_package.id} prepared. Status: {deployment_package.status}") self._send_to_inbox( deployment_package.id, f"Deployment package for '{project_id}' ready for target platforms: {', '.join(target_platforms)}. Requires final approval.", "APPROVE_VR_DEPLOYMENT" ) return deployment_package def deploy_vr_package(self, package_id: str): """ Executes the deployment of an approved VR package to target platforms. """ package = next((p for p in self.deployment_queue if p.id == package_id), None) if not package or package.status != "APPROVED": self._log(f"Error: Deployment package {package_id} not found or not approved for deployment.", level="ERROR") return self._log(f"Initiating deployment for package {package_id} to platforms: {', '.join(package.target_platforms)}", level="INFO") package.status = "DEPLOYING" successful_deployments = [] for platform_name in package.target_platforms: config = self.platform_integrations.get(platform_name) if config and platform_name in package.deployment_manifests: # In a real system, this would execute platform-specific APIs/SDKs self._log(f"Deploying to {platform_name}...", level="INFO") # Simulate success successful_deployments.append(platform_name) else: self._log(f"Deployment to {platform_name} failed or config missing.", level="ERROR") package.status = "DEPLOYED" if len(successful_deployments) == len(package.target_platforms) else "PARTIALLY_DEPLOYED" self._log(f"Deployment package {package_id} finished. Status: {package.status}. Successful platforms: {', '.join(successful_deployments)}", level="INFO") self._send_to_inbox( package_id, f"Deployment for '{package.project_id}' to {', '.join(successful_deployments)} completed. Status: {package.status}.", "REVIEW_DEPLOYMENT_STATUS" ) # Register deployed assets with Internal Asset & Idea Flow Agent for monetization tracking def manage_mixed_reality_geocaching(self, world_id: str, poi_data: List[Dict[str, Any]], deployment_region: str): """ Manages the deployment of Mixed Reality (MR) geocaches, leveraging scraped POI data. """ self._log(f"Managing MR geocaching deployment in {deployment_region} for world {world_id}...", level="INFO") # 1. Scrape local POI data (from Sentinel Core) # 2. Convert POI data to "Digital Caches" (via ClaudeCodeSession for spatial reasoning) # 3. Use Cloud Anchors SDKs (via VR Memory Weigher Agent) to lock caches to real-world coordinates. # 4. Integrate with VR Platform Integration Agent for MR-capable platforms (Meta Quest, Apple Vision Pro). self._log(f"{len(poi_data)} POIs converted to digital caches for MR in {deployment_region}.", level="INFO") # In a real system, this would orchestrate VR Memory Weigher for anchors # This would lead to a deployment package for MR-specific platforms self._send_to_inbox( world_id, f"MR Geocaching deployment in {deployment_region} for world {world_id} initiated. Requires approval for activation.", "APPROVE_MR_GEOCACHING_ACTIVATION" ) # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class VRWorldAsset: def __init__(self, id, name, description, path, status, artist_info): self.id = id self.name = name self.description = description self.path = path self.status = status self.artist_info = artist_info class VRCharacter: def __init__(self, id, name, model_path): self.id = id self.name = name self.model_path = model_path class VRDeploymentPackage: def __init__(self, id, project_id, world_assets, character_assets, target_platforms, package_path, deployment_manifests, status): self.id = id self.project_id = project_id self.world_assets = world_assets self.character_assets = character_assets self.target_platforms = target_platforms self.package_path = package_path self.deployment_manifests = deployment_manifests self.status = status class PlatformIntegrationConfig: def __init__(self, id, platform, status, deployment_type, requirements): self.id = id self.platform = platform self.status = status self.deployment_type = deployment_type self.requirements = requirements # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['VRWorldAsset'] = VRWorldAsset globals()['VRCharacter'] = VRCharacter globals()['VRDeploymentPackage'] = VRDeploymentPackage globals()['PlatformIntegrationConfig'] = PlatformIntegrationConfig vr_platform_agent = VRPlatformIntegrationAgent() # Mock assets world1 = VRWorldAsset(id="WORLD_001", name="Forest World", description="", path="/worlds/forest.gltf", status="APPROVED", artist_info={"name":"N/A","link":None}) char1 = VRCharacter(id="CHAR_001", name="Explorer", model_path="/characters/explorer.gltf") # 1. Prepare a deployment package deployment_package = vr_platform_agent.prepare_deployment_package( project_id="VR_GEOCACHING_PROJ", world_assets=[world1], character_assets=[char1], target_platforms=["MetaHorizon", "SteamVR"] ) print(f"\nPrepared Deployment Package: {deployment_package.id}, Status: {deployment_package.status}") # 2. Simulate approval and deploy the package if deployment_package.id in [p.id for p in vr_platform_agent.deployment_queue]: # Find the package in the queue and update its status for p in vr_platform_agent.deployment_queue: if p.id == deployment_package.id: p.status = "APPROVED" break print(f"\nSimulating approval for package {deployment_package.id}...") vr_platform_agent.deploy_vr_package(deployment_package.id) print(f"Final deployment status: {deployment_package.status}") # 3. Manage Mixed Reality Geocaching poi_data = [ {"name": "Local Cafe", "coords": (34.0, -118.0)}, {"name": "Public Park", "coords": (34.1, -118.1)} ] vr_platform_agent.manage_mixed_reality_geocaching( world_id="VR_CITY_MR_001", poi_data=poi_data, deployment_region="Los Angeles" ) ---
+import datetime
+from typing import Dict, Any, List, Literal, Optional
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import VRWorldAsset, VRCharacter, VRDeploymentPackage, PlatformIntegrationConfig
+
+
+class VRPlatformIntegrationAgent:
+    """VR deployment package preparation, platform deployment, and MR geocaching management."""
+
+    def __init__(self, agent_id: str = "VR_Platform_001"):
+        self.agent_id = agent_id
+        self.platform_integrations: Dict[str, PlatformIntegrationConfig] = self._load_platform_configs()
+        self.deployment_queue: List[VRDeploymentPackage] = []
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"VR Platform Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def _load_platform_configs(self) -> Dict[str, PlatformIntegrationConfig]:
+        return {
+            "MetaHorizon": PlatformIntegrationConfig(
+                id="MH_001", platform="Meta Horizon Store", status="ACTIVE",
+                deployment_type="APP_PACKAGE", requirements={"SDK_Version": "v60", "build_format": "APK"},
+            ),
+            "SteamVR": PlatformIntegrationConfig(
+                id="SV_001", platform="SteamVR", status="ACTIVE",
+                deployment_type="EXECUTABLE", requirements={"SDK_Version": "Steamworks_v153", "build_format": "EXE"},
+            ),
+            "WebXR": PlatformIntegrationConfig(
+                id="WEBXR_001", platform="WebXR", status="ACTIVE",
+                deployment_type="WEB_HOSTED", requirements={"browser_support": ["Chrome", "Firefox"]},
+            ),
+            "UnrealEngine": PlatformIntegrationConfig(
+                id="UE_001", platform="Unreal Engine", status="ACTIVE",
+                deployment_type="DEVELOPMENT_KIT", requirements={"SDK_Version": "UE5.3", "plugin_support": True},
+            ),
+        }
+
+    def prepare_deployment_package(self, project_id: str, world_assets: List[VRWorldAsset],
+                                    character_assets: List[VRCharacter],
+                                    target_platforms: List[str]) -> VRDeploymentPackage:
+        self._log(f"Preparing deployment package for {project_id} targeting: {', '.join(target_platforms)}")
+        optimized_assets_path = f"prepared_deployments/{project_id}_optimized_assets/"
+        deployment_manifests = {}
+        for platform_name in target_platforms:
+            config = self.platform_integrations.get(platform_name)
+            if config:
+                deployment_manifests[platform_name] = {
+                    "build_script": f"build_{platform_name}.sh",
+                    "config_file": f"{platform_name}_config.json",
+                }
+            else:
+                self._log(f"Config for platform '{platform_name}' not found.", level="WARNING")
+        deployment_package = VRDeploymentPackage(
+            id=f"DEPLOY_{project_id}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}",
+            project_id=project_id,
+            world_assets=[a.id for a in world_assets],
+            character_assets=[c.id for c in character_assets],
+            target_platforms=target_platforms,
+            package_path=optimized_assets_path,
+            deployment_manifests=deployment_manifests,
+            status="READY_FOR_APPROVAL",
+        )
+        self.deployment_queue.append(deployment_package)
+        self._send_to_inbox(
+            deployment_package.id,
+            f"Deployment package for '{project_id}' ready for: {', '.join(target_platforms)}. Requires approval.",
+            "APPROVE_VR_DEPLOYMENT",
+        )
+        return deployment_package
+
+    def deploy_vr_package(self, package_id: str):
+        package = next((p for p in self.deployment_queue if p.id == package_id), None)
+        if not package or package.status != "APPROVED":
+            self._log(f"Package {package_id} not found or not approved.", level="ERROR")
+            return
+        self._log(f"Deploying package {package_id} to: {', '.join(package.target_platforms)}")
+        package.status = "DEPLOYING"
+        successful_deployments = []
+        for platform_name in package.target_platforms:
+            config = self.platform_integrations.get(platform_name)
+            if config and platform_name in package.deployment_manifests:
+                self._log(f"Deploying to {platform_name}...", level="INFO")
+                successful_deployments.append(platform_name)
+            else:
+                self._log(f"Deployment to {platform_name} failed.", level="ERROR")
+        package.status = ("DEPLOYED" if len(successful_deployments) == len(package.target_platforms)
+                          else "PARTIALLY_DEPLOYED")
+        self._send_to_inbox(
+            package_id,
+            f"Deployment for '{package.project_id}' to {', '.join(successful_deployments)} complete. Status: {package.status}.",
+            "REVIEW_DEPLOYMENT_STATUS",
+        )
+
+    def manage_mixed_reality_geocaching(self, world_id: str, poi_data: List[Dict[str, Any]],
+                                         deployment_region: str):
+        self._log(f"Managing MR geocaching in {deployment_region} for world {world_id}...")
+        self._log(f"{len(poi_data)} POIs converted to digital caches for MR in {deployment_region}.")
+        self._send_to_inbox(
+            world_id,
+            f"MR Geocaching in {deployment_region} for world {world_id} initiated. Requires activation approval.",
+            "APPROVE_MR_GEOCACHING_ACTIVATION",
+        )

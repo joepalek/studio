@@ -1,1 +1,119 @@
-```python import datetime from typing import Dict, Any, List, Literal # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import ClientLead, ProjectProposal, QuoteEstimate # Placeholder data models # from financial_billing_agent import FinancialBillingAgent # To interact with this agent class CTWClientManagerAgent: def __init__(self, agent_id: str = "CTW_Client_Manager_001"): self.agent_id = agent_id self.active_projects: Dict[str, Any] = {} # Stores active CTW projects with their state self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, project_id: str, question: str, required_action: str): """Sends a critical decision point to the supervisor via the agent inbox.""" self._log(f"Project {project_id}: Pushing to inbox - {question}") self.inbox.add_item( agent_id=self.agent_id, project_id=project_id, question=question, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW" ) # Pause project execution until inbox item is resolved self.active_projects[project_id]['status'] = "PAUSED_FOR_REVIEW" def _check_inbox_for_resolution(self, project_id: str) -> Dict[str, Any] | None: """Checks if an inbox item for this project has been resolved.""" # For blueprint, temporarily use globals()['AgentInbox'] for mock resolution check # In actual implementation, self.inbox is the real AgentInbox resolved_item = globals()['AgentInbox']().get_resolved_item(agent_id=self.agent_id, project_id=project_id) if resolved_item: self._log(f"Project {project_id}: Inbox item resolved. Action: {resolved_item['resolution_data']}") return resolved_item return None def onboard_new_client_project(self, client_data: Dict[str, Any], project_brief: Dict[str, Any]) -> str: """ Handles the onboarding of a new CTW client project. Generates a unique project ID and initializes its state. """ project_id = f"CTW_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}_{len(self.active_projects) + 1}" self.active_projects[project_id] = { "client_data": client_data, "brief": project_brief, "status": "CLIENT_ONBOARDED", "current_stage": "INITIATION", "history": [{"timestamp": datetime.datetime.now(), "event": "Project Initiated"}], "last_inbox_item": None # Track last inbox item for resumption } self._log(f"New CTW project '{project_id}' onboarded for client: {client_data.get('name', 'N/A')}") self._send_to_inbox( project_id, f"New client project '{project_id}' brief requires initial supervisor review.", "APPROVE_BRIEF_AND_START_PROJECT" ) return project_id def drive_project_forward(self, project_id: str): """ Main logic to drive a CTW project through its workflow, pausing for supervisor input via the agent inbox. """ if project_id not in self.active_projects: self._log(f"Error: Project {project_id} not found.", level="ERROR") return project = self.active_projects[project_id] self._log(f"Driving project {project_id}. Current status: {project['status']}, stage: {project['current_stage']}") # Check if project was paused and an inbox item has been resolved if project['status'] == "PAUSED_FOR_REVIEW": resolved_item = self._check_inbox_for_resolution(project_id) if resolved_item: project['status'] = "RESUMING_AUTOMATION" project['history'].append({"timestamp": datetime.datetime.now(), "event": f"Resumed: {resolved_item['question']}"}) self.process_inbox_resolution(project_id, resolved_item) else: self._log(f"Project {project_id} still PAUSED_FOR_REVIEW, awaiting supervisor input.", level="DEBUG") return # Do nothing until resolved # Project is actively running or just resumed, continue its stage if project['status'] in ["CLIENT_ONBOARDED", "RESUMING_AUTOMATION", "IN_PROGRESS"]: # --- Project Workflow Stages --- if project['current_stage'] == "INITIATION": self._log(f"Project {project_id}: Moving to content generation.") project['current_stage'] = "CONTENT_GENERATION" # Example: Orchestrate Ghost Book Author Agent # ClaudeCodeSession.start(f"Generate content for {project_id} based on brief: {project['brief']}") # This would need a way to track the sub-agent's completion self.active_projects[project_id]['status'] = "IN_PROGRESS" self._send_to_inbox(project_id, f"Content generation for '{project_id}' is complete. Needs supervisor review.", "REVIEW_CONTENT_AND_APPROVE") elif project['current_stage'] == "CONTENT_GENERATION": # This stage would ideally wait for a signal from the Ghost Book Author Agent # For now, simulate completion and move to next step self._log(f"Project {project_id}: Content generated. Moving to QA.") project['current_stage'] = "QA_REVIEW" # Example: Orchestrate Content Quality Assurance Agent # ContentQAAgent.start(f"Review content for {project_id}") self.active_projects[project_id]['status'] = "IN_PROGRESS" self._send_to_inbox(project_id, f"QA for content of '{project_id}' is complete. Needs supervisor approval.", "APPROVE_QA_AND_PREPARE_DELIVERY") elif project['current_stage'] == "QA_REVIEW": self._log(f"Project {project_id}: QA complete. Preparing for delivery.") project['current_stage'] = "DELIVERY_PREPARATION" # Final formatting, packaging etc. self.active_projects[project_id]['status'] = "IN_PROGRESS" self._send_to_inbox(project_id, f"Project '{project_id}' is ready for final delivery. Confirm destination and client notification.", "CONFIRM_DELIVERY_AND_FINALZE") elif project['current_stage'] == "DELIVERY_PREPARATION": self._log(f"Project {project_id}: Final delivery confirmed. Project complete.") project['current_stage'] = "COMPLETED" project['status'] = "COMPLETED" project['history'].append({"timestamp": datetime.datetime.now(), "event": "Project Completed"}) # Notify client (automated email) self._log(f"CTW Project {project_id} successfully completed and delivered.") else: self._log(f"Project {project_id}: Unknown or unhandled stage '{project['current_stage']}'. Pausing for supervisor.", level="WARNING") self._send_to_inbox(project_id, f"Project '{project_id}' is in an unhandled stage '{project['current_stage']}'. Manual intervention required.", "DEFINE_NEXT_STAGE_OR_TROUBLESHOOT") def process_inbox_resolution(self, project_id: str, resolved_item: Dict[str, Any]): """Processes the supervisor's resolution from the agent inbox.""" resolution = resolved_item['resolution_data'] question_key = resolved_item['question'] # More robust parsing needed in full system self._log(f"Project {project_id}: Processing resolution for '{question_key}': {resolution}") if "initial supervisor review" in question_key and resolution == "APPROVE_BRIEF_AND_START_PROJECT": self.active_projects[project_id]['status'] = "IN_PROGRESS" self.active_projects[project_id]['current_stage'] = "INITIATION" self.drive_project_forward(project_id) # Immediately attempt to drive it elif "Content generation" in question_key and resolution == "REVIEW_CONTENT_AND_APPROVE": # Here, we'd trigger the next stage assuming content is approved self.active_projects[project_id]['status'] = "IN_PROGRESS" self.active_projects[project_id]['current_stage'] = "CONTENT_GENERATION" # This would actually be 'post-content-generation' or similar self.drive_project_forward(project_id) elif "QA for content" in question_key and resolution == "APPROVE_QA_AND_PREPARE_DELIVERY": # Content is QA approved self.active_projects[project_id]['status'] = "IN_PROGRESS" self.active_projects[project_id]['current_stage'] = "QA_REVIEW" # This would be 'post-QA-review' self.drive_project_forward(project_id) elif "ready for final delivery" in question_key and resolution == "CONFIRM_DELIVERY_AND_FINALZE": self.active_projects[project_id]['status'] = "IN_PROGRESS" self.active_projects[project_id]['current_stage'] = "DELIVERY_PREPARATION" # This would be 'post-delivery-prep' self.drive_project_forward(project_id) # Add more specific handling for other resolutions/questions as needed else: self._log(f"Project {project_id}: Unhandled resolution '{resolution}' for question '{question_key}'.", level="WARNING") self._send_to_inbox(project_id, f"Resolution for '{question_key}' was '{resolution}' but agent needs clarification on next steps.", "PROVIDE_CLEARER_INSTRUCTION") # --- DRAFT SIMULATION --- if __name__ == "__main__": # Placeholder for AgentInbox and Logger for local testing class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM", resolution_data=None): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": resolution_data} self.items.append(item) print(f"\nMOCK INBOX: New item added: {item['question']}") def get_resolved_item(self, agent_id, project_id): for item in self.items: if item['agent_id'] == agent_id and item['project_id'] == project_id and item['status'] == "RESOLVED": resolved = item.copy() self.items.remove(item) # Remove once 'resolved' to simulate processing return resolved return None def resolve_item(self, project_id, resolution_data): for item in self.items: if item['project_id'] == project_id and item['status'] == "PENDING_SUPERVISOR_REVIEW": item['status'] = "RESOLVED" item['resolution_data'] = resolution_data print(f"\nMOCK INBOX: Item for {project_id} resolved with: {resolution_data}") return True return False class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") # Temporarily override for local testing to use mock classes globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger ctw_agent = CTWClientManagerAgent() # 1. Onboard a new project client_info = {"name": "Acme Corp", "contact": "client@acmecorp.com"} project_brief = {"title": "Website Copy for New Product Launch", "scope": "5 pages of marketing copy", "deadline": "2022-07-30"} new_project_id = ctw_agent.onboard_new_client_project(client_info, project_brief) # Simulate waiting for supervisor input print("\n--- Supervisor needs to check inbox ---") ctw_agent.drive_project_forward(new_project_id) # Will pause # Supervisor resolves the first inbox item globals()['AgentInbox']().resolve_item(new_project_id, "APPROVE_BRIEF_AND_START_PROJECT") # Agent detects resolution and drives forward ctw_agent.drive_project_forward(new_project_id) # Moves to CONTENT_GENERATION # Simulate another pause print("\n--- Supervisor needs to check inbox for content approval ---") ctw_agent.drive_project_forward(new_project_id) # Will pause # Supervisor resolves content review globals()['AgentInbox']().resolve_item(new_project_id, "REVIEW_CONTENT_AND_APPROVE") ctw_agent.drive_project_forward(new_project_id) # Moves to QA_REVIEW # Simulate another pause print("\n--- Supervisor needs to check inbox for QA approval ---") ctw_agent.drive_project_forward(new_project_id) # Will pause # Supervisor resolves QA review globals()['AgentInbox']().resolve_item(new_project_id, "APPROVE_QA_AND_PREPARE_DELIVERY") ctw_agent.drive_project_forward(new_project_id) # Moves to DELIVERY_PREPARATION # Simulate another pause print("\n--- Supervisor needs to check inbox for final delivery confirmation ---") ctw_agent.drive_project_forward(new_project_id) # Will pause # Supervisor confirms delivery globals()['AgentInbox']().resolve_item(new_project_id, "CONFIRM_DELIVERY_AND_FINALZE") ctw_agent.drive_project_forward(new_project_id) # Moves to COMPLETED print(f"\nFinal project status for {new_project_id}: {ctw_agent.active_projects[new_project_id]['status']}") ```
+import datetime
+from typing import Dict, Any, List, Literal, Optional
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import ClientLead, ProjectProposal, QuoteEstimate
+from financial_billing_agent import FinancialBillingAgent
+
+
+class CTWClientManagerAgent:
+    """CTW project lifecycle manager with inbox-driven supervisor approval gates."""
+
+    def __init__(self, agent_id: str = "CTW_Client_Manager_001"):
+        self.agent_id = agent_id
+        self.active_projects: Dict[str, Any] = {}
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, project_id: str, question: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"CTW Alert for {project_id}: {question}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=project_id,
+            question=question,
+            required_action=required_action,
+            urgency=urgency,
+        )
+        self.active_projects[project_id]["status"] = "PAUSED_FOR_REVIEW"
+
+    def _check_inbox_for_resolution(self, project_id: str) -> Optional[Dict[str, Any]]:
+        resolved_item = self.inbox.get_resolved_item(agent_id=self.agent_id, project_id=project_id)
+        if resolved_item:
+            self._log(f"Project {project_id}: Inbox item resolved.")
+            return resolved_item
+        return None
+
+    def onboard_new_client_project(self, client_data: Dict[str, Any], project_brief: Dict[str, Any]) -> str:
+        project_id = f"CTW_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}_{len(self.active_projects) + 1}"
+        self.active_projects[project_id] = {
+            "client_data": client_data,
+            "brief": project_brief,
+            "status": "CLIENT_ONBOARDED",
+            "current_stage": "INITIATION",
+            "history": [{"timestamp": datetime.datetime.now(), "event": "Project Initiated"}],
+        }
+        self._log(f"New CTW project '{project_id}' onboarded for client: {client_data.get('name', 'N/A')}")
+        self._send_to_inbox(
+            project_id,
+            f"New client project '{project_id}' brief requires initial supervisor review.",
+            "APPROVE_BRIEF_AND_START_PROJECT",
+        )
+        return project_id
+
+    def drive_project_forward(self, project_id: str):
+        if project_id not in self.active_projects:
+            self._log(f"Error: Project {project_id} not found.", level="ERROR")
+            return
+        project = self.active_projects[project_id]
+        self._log(f"Driving project {project_id}. Status: {project['status']}, Stage: {project['current_stage']}")
+
+        if project["status"] == "PAUSED_FOR_REVIEW":
+            resolved_item = self._check_inbox_for_resolution(project_id)
+            if resolved_item:
+                project["status"] = "RESUMING_AUTOMATION"
+                project["history"].append({"timestamp": datetime.datetime.now(),
+                                           "event": f"Resumed: {resolved_item['question']}"})
+                self.process_inbox_resolution(project_id, resolved_item)
+            else:
+                self._log(f"Project {project_id} still PAUSED_FOR_REVIEW.", level="DEBUG")
+            return
+
+        if project["status"] in ["CLIENT_ONBOARDED", "RESUMING_AUTOMATION", "IN_PROGRESS"]:
+            if project["current_stage"] == "INITIATION":
+                project["current_stage"] = "CONTENT_GENERATION"
+                project["status"] = "IN_PROGRESS"
+                self._send_to_inbox(project_id,
+                                    f"Content generation for '{project_id}' complete. Needs review.",
+                                    "REVIEW_CONTENT_AND_APPROVE")
+            elif project["current_stage"] == "CONTENT_GENERATION":
+                project["current_stage"] = "QA_REVIEW"
+                project["status"] = "IN_PROGRESS"
+                self._send_to_inbox(project_id,
+                                    f"QA for '{project_id}' complete. Needs supervisor approval.",
+                                    "APPROVE_QA_AND_PREPARE_DELIVERY")
+            elif project["current_stage"] == "QA_REVIEW":
+                project["current_stage"] = "DELIVERY_PREPARATION"
+                project["status"] = "IN_PROGRESS"
+                self._send_to_inbox(project_id,
+                                    f"Project '{project_id}' ready for final delivery.",
+                                    "CONFIRM_DELIVERY_AND_FINALIZE")
+            elif project["current_stage"] == "DELIVERY_PREPARATION":
+                project["current_stage"] = "COMPLETED"
+                project["status"] = "COMPLETED"
+                project["history"].append({"timestamp": datetime.datetime.now(), "event": "Project Completed"})
+                self._log(f"CTW Project {project_id} successfully completed.", level="INFO")
+
+    def process_inbox_resolution(self, project_id: str, resolved_item: Dict[str, Any]):
+        resolution = resolved_item.get("resolution_data")
+        question = resolved_item.get("question", "")
+        self._log(f"Project {project_id}: Processing resolution for '{question}': {resolution}")
+        if "initial supervisor review" in question:
+            self.active_projects[project_id]["status"] = "IN_PROGRESS"
+            self.active_projects[project_id]["current_stage"] = "INITIATION"
+        elif "Content generation" in question:
+            self.active_projects[project_id]["status"] = "IN_PROGRESS"
+            self.active_projects[project_id]["current_stage"] = "CONTENT_GENERATION"
+        elif "QA for" in question:
+            self.active_projects[project_id]["status"] = "IN_PROGRESS"
+            self.active_projects[project_id]["current_stage"] = "QA_REVIEW"
+        elif "ready for final delivery" in question:
+            self.active_projects[project_id]["status"] = "IN_PROGRESS"
+            self.active_projects[project_id]["current_stage"] = "DELIVERY_PREPARATION"
+        self.drive_project_forward(project_id)

@@ -1,1 +1,117 @@
-vr_memory_weigher_agent.py --- import datetime from typing import Dict, Any, List, Literal, Optional # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import VRCharacter, VRWorldAsset, VRInteractionEvent, SpatialAnchor, MemoryWeighting # Placeholder data models # from ghost_book_author_agent import GhostBookAuthorAgent # For character life-path data # from sentinel_core.orchestrator import SentinelCoreOrchestrator # For sourcing historical/contextual data class VRMemoryWeigherAgent: def __init__(self, agent_id: str = "VR_Memory_001"): self.agent_id = agent_id self.character_memories: Dict[str, List[Dict[str, Any]]] = {} # Stores all memories per character self.spatial_anchors: Dict[str, SpatialAnchor] = {} # Manages fixed points in VR worlds self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent # self.ghost_book_author_agent = GhostBookAuthorAgent() # To access life-path data for temporal context # self.sentinel_core = SentinelCoreOrchestrator() # For temporal vault data def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a critical VR memory or spatial persistence item to the supervisor via the agent inbox.""" self._log(f"VR Memory Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def register_vr_character(self, character: VRCharacter): """Registers a VR character and initializes its memory bank.""" if character.id not in self.character_memories: self.character_memories[character.id] = [] self._log(f"Memory bank initialized for VR Character '{character.name}' (ID: {character.id}).") # Load initial memories from Ghost Book Author Agent (life-path) # initial_memories = self.ghost_book_author_agent.get_character_life_path_memories(character.id) # self.character_memories[character.id].extend(initial_memories) def record_interaction_event(self, event: VRInteractionEvent): """Records an interaction event into a character's memory, applying temporal and emotional weighting.""" if event.character_id not in self.character_memories: self.register_vr_character(VRCharacter(id=event.character_id, name=f"Unknown_Char_{event.character_id}", birth_date=datetime.date(1900,1,1), persona_traits={})) # Auto-register mock memory_entry = { "event_id": event.id, "world_id": event.world_id, "timestamp": event.timestamp, "details": event.details, "weight": self._calculate_memory_weight(event) # Apply temporal, emotional, type weighting } self.character_memories[event.character_id].append(memory_entry) self._log(f"Recorded memory for {event.character_id}: '{event.details.get('action', event.event_type)}' with weight {memory_entry['weight']:.2f}") def _calculate_memory_weight(self, event: VRInteractionEvent) -> float: """ Calculates memory weight based on recency, emotional impact (simulated), and event type. """ recency_factor = max(0.1, 1.0 - (datetime.datetime.now() - event.timestamp).total_seconds() / (30 * 24 * 3600)) # Fades over 30 days emotional_factor = event.details.get("emotional_impact", 0.5) # Simulated from 0-1 type_factor = 1.0 if event.event_type == "CRITICAL_EVENT" else 0.8 if event.event_type == "ACTION" else 0.3 return recency_factor * emotional_factor * type_factor def get_contextual_memories(self, character_id: str, current_context: Dict[str, Any], limit: int = 5) -> List[Dict[str, Any]]: """ Retrieves relevant memories for a character based on current context, applying temporal filtering. """ character = self.active_vr_characters.get(character_id) # Need full character object to get birth_date, age if not character: # Fallback for mock testing where character might not be registered explicitly character = VRCharacter(id=character_id, name=f"Unknown_Char_{character_id}", birth_date=datetime.date(1900,1,1), persona_traits={}) self._log(f"Retrieving contextual memories for {character_id}...", level="DEBUG") relevant_memories = [] for mem in self.character_memories.get(character_id, []): # Temporal filtering: Ensure memory is relevant to character's 'lived' era # (Requires character's age/birth_date and current VR 'year' context) memory_year = mem["timestamp"].year # Example: if character from 1950, don't show memories from 2000 if character.birth_date.year < memory_year < datetime.datetime.now().year + 50: # Simplified range # Contextual matching (e.g., if memory details match current context keywords) if any(keyword in str(mem["details"]) for keyword in current_context.get("keywords", [])): relevant_memories.append(mem) elif current_context.get("world_id") == mem.get("world_id"): relevant_memories.append(mem) # Sort by weight and return top N relevant_memories.sort(key=lambda m: m["weight"], reverse=True) self._log(f"Retrieved {len(relevant_memories[:limit])} memories for {character_id}.") return relevant_memories[:limit] def set_spatial_anchor(self, world_id: str, anchor_id: str, coordinates: Dict[str, float], associated_asset_id: Optional[str] = None): """ Manages the persistence of virtual objects or geocaches in VR worlds. Researches 2026 SDKs for "Cloud Anchors." """ self._log(f"Setting spatial anchor '{anchor_id}' in world '{world_id}' at {coordinates}...", level="INFO") # In a real system, this would: # 1. Integrate with VR Platform Integration Agent to use Cloud Anchors SDKs. # 2. Store the anchor ID, coordinates, and associated asset. new_anchor = SpatialAnchor( id=anchor_id, world_id=world_id, coordinates=coordinates, associated_asset_id=associated_asset_id, status="ACTIVE" ) self.spatial_anchors[anchor_id] = new_anchor self._log(f"Spatial anchor {anchor_id} set in {world_id}.") def generate_digital_trace_or_ghost(self, deceased_character_id: str, world_id: str) -> Dict[str, Any]: """ Generates a "digital trace" or "ghost" of a deceased VR character in a world. Leverages character's final memories and persona. """ self._log(f"Generating digital trace/ghost for deceased character {deceased_character_id} in world {world_id}...", level="INFO") # 1. Retrieve final memories/persona (from character_memories and Ghost Book Author Agent) final_memories = self.character_memories.get(deceased_character_id, []) # deceased_persona = self.ghost_book_author_agent.get_character_final_persona(deceased_character_id) # 2. Generate "Echo" behavior and appearance (via ClaudeCodeSession) # For blueprint, simulate. ghost_appearance_details = { "appearance_modifier": "translucent_flickering", "sound_effect": "faint_whisper_or_old_radio_static", "behavior_script": "path_patrol_near_significant_memory_location", "interaction_logic": "responds_with_faded_memories_only" } self._log(f"Digital trace generated for {deceased_character_id}. Details: {ghost_appearance_details}", level="INFO") self._send_to_inbox( deceased_character_id, f"Digital trace/ghost generated for deceased character {deceased_character_id} in world {world_id}. Review appearance and behavior.", "APPROVE_GHOST_DEPLOYMENT_OR_REVISE" ) return {"character_id": deceased_character_id, "world_id": world_id, "details": ghost_appearance_details} # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class VRCharacter: def __init__(self, id, name, birth_date, persona_traits, backstory=None, current_world_id=None, current_state=None): self.id = id self.name = name self.birth_date = birth_date self.persona_traits = persona_traits self.backstory = backstory self.current_world_id = current_world_id self.current_state = current_state if current_state else {} class VRWorldAsset: # Mock for simplicity, more detailed in VRSceneGeneratorAgent def __init__(self, id, name, description, path, status, artist_info): self.id = id self.name = name self.description = description self.path = path self.status = status self.artist_info = artist_info class VRInteractionEvent: def __init__(self, id, character_id, world_id, event_type, details, timestamp, emotional_impact=0.5): self.id = id self.character_id = character_id self.world_id = world_id self.event_type = event_type self.details = details self.timestamp = timestamp self.details["emotional_impact"] = emotional_impact # Inject for _calculate_memory_weight class SpatialAnchor: def __init__(self, id, world_id, coordinates, associated_asset_id, status): self.id = id self.world_id = world_id self.coordinates = coordinates self.associated_asset_id = associated_asset_id self.status = status class MemoryWeighting: # Not directly used in blueprint but good to have def __init__(self, type, decay_rate, emotional_boost): self.type = type self.decay_rate = decay_rate self.emotional_boost = emotional_boost # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['VRCharacter'] = VRCharacter globals()['VRWorldAsset'] = VRWorldAsset globals()['VRInteractionEvent'] = VRInteractionEvent globals()['SpatialAnchor'] = SpatialAnchor globals()['MemoryWeighting'] = MemoryWeighting vr_memory_agent = VRMemoryWeigherAgent() # 1. Register a VR character char_a = VRCharacter(id="VR_CHAR_001", name="Alice", birth_date=datetime.date(1985, 3, 15), persona_traits={"curious": 0.8}) vr_memory_agent.register_vr_character(char_a) char_b = VRCharacter(id="VR_CHAR_002", name="Bob", birth_date=datetime.date(1950, 10, 20), persona_traits={"stoic": 0.7}) vr_memory_agent.register_vr_character(char_b) # 2. Record some interaction events for Alice event1 = VRInteractionEvent(id="EVT_001", character_id="VR_CHAR_001", world_id="Forest_World", event_type="ACTION", details={"action": "explored ancient ruin"}, timestamp=datetime.datetime.now() - datetime.timedelta(hours=5), emotional_impact=0.7) vr_memory_agent.record_interaction_event(event1) event2 = VRInteractionEvent(id="EVT_002", character_id="VR_CHAR_001", world_id="Marketplace", event_type="OBSERVATION", details={"observation": "saw player trying to trade a rare item"}, timestamp=datetime.datetime.now() - datetime.timedelta(days=1), emotional_impact=0.3) vr_memory_agent.record_interaction_event(event2) event3 = VRInteractionEvent(id="EVT_003", character_id="VR_CHAR_001", world_id="Forest_World", event_type="CRITICAL_EVENT", details={"event": "witnessed a rare phenomenon"}, timestamp=datetime.datetime.now() - datetime.timedelta(days=20), emotional_impact=0.9) vr_memory_agent.record_interaction_event(event3) # 3. Retrieve contextual memories for Alice print("\n--- Retrieving memories for Alice in Forest_World with keyword 'ruin' ---") alice_memories = vr_memory_agent.get_contextual_memories( "VR_CHAR_001", {"world_id": "Forest_World", "keywords": ["ruin"]} ) for mem in alice_memories: print(f" - Memory: {mem['details'].get('action', mem['details'].get('observation', ''))} (Weight: {mem['weight']:.2f})") # 4. Set a spatial anchor vr_memory_agent.set_spatial_anchor("Forest_World", "TREASURE_CHEST_001", {"x": 10.5, "y": 20.0, "z": -5.2}, "GEOCACHE_ASSET_001") # 5. Generate a digital trace/ghost for a deceased character (simulated) print("\n--- Generating ghost for Bob (simulated deceased) ---") bob_ghost_details = vr_memory_agent.generate_digital_trace_or_ghost("VR_CHAR_002", "Old_Town_Square") ---
+import datetime
+from typing import Dict, Any, List, Literal, Optional
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import VRCharacter, VRWorldAsset, VRInteractionEvent, SpatialAnchor, MemoryWeighting
+
+
+class VRMemoryWeigherAgent:
+    """VR character memory recording, contextual retrieval, and spatial anchor management."""
+
+    def __init__(self, agent_id: str = "VR_Memory_001"):
+        self.agent_id = agent_id
+        self.character_memories: Dict[str, List[Dict[str, Any]]] = {}
+        self.active_vr_characters: Dict[str, VRCharacter] = {}
+        self.spatial_anchors: Dict[str, SpatialAnchor] = {}
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"VR Memory Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def register_vr_character(self, character: VRCharacter):
+        if character.id not in self.character_memories:
+            self.character_memories[character.id] = []
+        self.active_vr_characters[character.id] = character
+        self._log(f"Memory bank initialized for VR Character '{character.name}'.")
+
+    def record_interaction_event(self, event: VRInteractionEvent):
+        if event.character_id not in self.character_memories:
+            placeholder = VRCharacter(
+                id=event.character_id,
+                name=f"Unknown_Char_{event.character_id}",
+                birth_date=datetime.date(1900, 1, 1),
+                persona_traits={},
+            )
+            self.register_vr_character(placeholder)
+        memory_entry = {
+            "event_id": event.id,
+            "world_id": event.world_id,
+            "timestamp": event.timestamp,
+            "details": event.details,
+            "weight": self._calculate_memory_weight(event),
+        }
+        self.character_memories[event.character_id].append(memory_entry)
+        self._log(f"Recorded memory for {event.character_id} with weight {memory_entry['weight']:.2f}")
+
+    def _calculate_memory_weight(self, event: VRInteractionEvent) -> float:
+        recency_factor = max(0.1, 1.0 - (datetime.datetime.now() - event.timestamp).total_seconds() / (30 * 24 * 3600))
+        emotional_factor = event.details.get("emotional_impact", 0.5)
+        type_factor = (1.0 if event.event_type == "CRITICAL_EVENT"
+                       else 0.8 if event.event_type == "ACTION" else 0.3)
+        return recency_factor * emotional_factor * type_factor
+
+    def get_contextual_memories(self, character_id: str, current_context: Dict[str, Any],
+                                 limit: int = 5) -> List[Dict[str, Any]]:
+        character = self.active_vr_characters.get(character_id)
+        if not character:
+            character = VRCharacter(
+                id=character_id,
+                name=f"Unknown_Char_{character_id}",
+                birth_date=datetime.date(1900, 1, 1),
+                persona_traits={},
+            )
+        self._log(f"Retrieving contextual memories for {character_id}...", level="DEBUG")
+        relevant_memories = []
+        for mem in self.character_memories.get(character_id, []):
+            memory_year = mem["timestamp"].year
+            if character.birth_date.year < memory_year < datetime.datetime.now().year + 50:
+                if any(keyword in str(mem["details"]) for keyword in current_context.get("keywords", [])):
+                    relevant_memories.append(mem)
+                elif current_context.get("world_id") == mem.get("world_id"):
+                    relevant_memories.append(mem)
+        relevant_memories.sort(key=lambda m: m["weight"], reverse=True)
+        self._log(f"Retrieved {len(relevant_memories[:limit])} memories for {character_id}.")
+        return relevant_memories[:limit]
+
+    def set_spatial_anchor(self, world_id: str, anchor_id: str, coordinates: Dict[str, float],
+                            associated_asset_id: Optional[str] = None):
+        self._log(f"Setting spatial anchor '{anchor_id}' in world '{world_id}'...")
+        new_anchor = SpatialAnchor(
+            id=anchor_id,
+            world_id=world_id,
+            coordinates=coordinates,
+            associated_asset_id=associated_asset_id,
+            status="ACTIVE",
+        )
+        self.spatial_anchors[anchor_id] = new_anchor
+        self._log(f"Spatial anchor {anchor_id} set in {world_id}.")
+
+    def generate_digital_trace_or_ghost(self, deceased_character_id: str, world_id: str) -> Dict[str, Any]:
+        self._log(f"Generating digital trace for {deceased_character_id} in {world_id}...")
+        ghost_appearance_details = {
+            "appearance_modifier": "translucent_flickering",
+            "sound_effect": "faint_whisper_or_old_radio_static",
+            "behavior_script": "path_patrol_near_significant_memory_location",
+            "interaction_logic": "responds_with_faded_memories_only",
+        }
+        self._send_to_inbox(
+            deceased_character_id,
+            f"Digital trace generated for {deceased_character_id} in world {world_id}. Review and approve.",
+            "APPROVE_GHOST_DEPLOYMENT_OR_REVISE",
+        )
+        return {"character_id": deceased_character_id, "world_id": world_id, "details": ghost_appearance_details}

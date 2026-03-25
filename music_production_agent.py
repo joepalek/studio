@@ -1,1 +1,114 @@
-music_production_agent.py --- import datetime from typing import Dict, Any, List, Literal, Optional, Tuple # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import AudioAsset, BandStyleCard, TrackGenerationRequest, VoiceModel # Placeholder data models # from creative_assets_agent import CreativeAssetsAgent # For voice acting, album art needs # from internal_asset_flow_agent import InternalAssetIdeaFlowAgent # For registering new tracks class MusicProductionAgent: def __init__(self, agent_id: str = "Music_Prod_001"): self.agent_id = agent_id self.band_style_cards: Dict[str, BandStyleCard] = {} # Stores definitions of bands/artists self.voice_models: Dict[str, VoiceModel] = {} # Stores trained voice models self.audio_processing_queue: List[Dict[str, Any]] = [] self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent # self.creative_assets_agent = CreativeAssetsAgent() # For visual assets, voice acting coordination # self.asset_flow_agent = InternalAssetIdeaFlowAgent() # To register produced assets def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a critical music production item to the supervisor via the agent inbox.""" self._log(f"Music Prod Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def register_band_style_card(self, band_id: str, style_card: BandStyleCard): """Registers or updates a band's 'Band Bible' (style definition).""" self.band_style_cards[band_id] = style_card self._log(f"Band Style Card for '{band_id}' registered/updated.") # If new, trigger voice model training if source audio is available if style_card.vocal_dna_source_audio_path: self._log(f"Initiating voice model training for {band_id}.", level="INFO") self.train_voice_model(band_id, style_card.vocal_dna_source_audio_path) def add_audio_for_processing(self, audio_asset: AudioAsset): """Adds raw or muddy audio for cleaning, stem separation, and analysis.""" self._log(f"Adding audio asset {audio_asset.id} for processing: {audio_asset.path}") self.audio_processing_queue.append({"asset": audio_asset, "status": "QUEUED"}) self._process_next_audio_in_queue() def _process_next_audio_in_queue(self): """Internal method to process the next item in the audio processing queue.""" if not self.audio_processing_queue: self._log("Audio processing queue is empty.", level="DEBUG") return current_item = self.audio_processing_queue[0] # Take first item asset = current_item["asset"] if current_item["status"] == "QUEUED": self._log(f"Starting Sonic Archeology for {asset.id}...", level="INFO") current_item["status"] = "PROCESSING" # --- Sonic Archeology Phase --- # Simulate stem separation (UVR5, Moises, Spleeter/Demucs) self._log(f"Separating stems for {asset.id}...", level="DEBUG") isolated_stems = {"vocals": f"{asset.path}_vocals.wav", "drums": f"{asset.path}_drums.wav", "bass": f"{asset.path}_bass.wav", "other": f"{asset.path}_other.wav"} # Simulate AI EQ / De-mudding (Gullfoss, Adobe Podcast Enhance Speech) self._log(f"Cleaning and de-mudding stems for {asset.id}...", level="DEBUG") cleaned_stems = {k: v.replace(".wav", "_cleaned.wav") for k, v in isolated_stems.items()} asset.metadata["cleaned_stems"] = cleaned_stems asset.status = "CLEANED_AND_STEMMED" current_item["status"] = "COMPLETED" self._log(f"Sonic Archeology for {asset.id} completed. Stems cleaned.", level="INFO") # Remove from queue and process next self.audio_processing_queue.pop(0) self._process_next_audio_in_queue() # In a real system, this would be asynchronous and triggered by completion def train_voice_model(self, band_id: str, source_audio_path: str): """ Trains a voice model for a specific character/band using cleaned vocal stems. Uses ElevenLabs/Kits.ai or local RVC. """ self._log(f"Training voice model for {band_id} from {source_audio_path}...", level="INFO") # In a real system, this would upload audio to ElevenLabs/Kits.ai API # or run local RVC script (requires GPU hardware managed by Resource Mgmt Agent). voice_model_id = f"VM_{band_id}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}" new_voice_model = VoiceModel( id=voice_model_id, band_id=band_id, source_audio_path=source_audio_path, status="TRAINED", model_path=f"models/{voice_model_id}.pth" # Example for local RVC ) self.voice_models[band_id] = new_voice_model # Store latest model per band self._log(f"Voice model {voice_model_id} trained for {band_id}.") # Update band style card with new voice model if band_id in self.band_style_cards: self.band_style_cards[band_id].vocal_dna_model_id = voice_model_id def generate_music_track(self, request: TrackGenerationRequest) -> AudioAsset: """ Generates a new music track (instrumental or full song) based on a band's style. Uses AudioCraft, Stable Audio, Suno/Udio, and trained voice models. """ self._log(f"Generating music track for '{request.band_id}' - '{request.title}'...", level="INFO") band_style = self.band_style_cards.get(request.band_id) voice_model = self.voice_models.get(request.band_id) if not band_style or not voice_model: self._log(f"Error: Band style card or voice model not found for {request.band_id}.", level="ERROR") raise ValueError("Missing band style or voice model.") # --- Instrumental Generation (AudioCraft, Stable Audio, Suno/Udio) --- instrumental_prompt = f"{band_style.musical_signature}, {request.genre}, {request.mood}" if request.melody_reference_path: instrumental_prompt += f", melody_ref:{request.melody_reference_path}" # Orchestrate local Ollama (AudioCraft/Stable Audio) or cloud (Suno/Udio) # generated_instrumental_path = ClaudeCodeSession.start(f"Generate instrumental for: {instrumental_prompt}") generated_instrumental_path = f"generated/instrumental_{request.id}.wav" self._log(f"Instrumental generated: {generated_instrumental_path}") # --- Vocal Generation & Integration --- generated_vocals_path = None if request.lyrics and voice_model.status == "TRAINED": self._log(f"Generating vocals using voice model {voice_model.id} for {request.band_id}...", level="INFO") # Orchestrate ElevenLabs/Kits.ai (paid tier) or local RVC # generated_vocals_path = ClaudeCodeSession.start(f"Generate vocals for lyrics: '{request.lyrics}' using voice model {voice_model.model_path}") generated_vocals_path = f"generated/vocals_{request.id}.wav" # --- Adjustments (Growl, Heaviness) --- if request.adjustments: self._log(f"Applying vocal adjustments: {request.adjustments}", level="INFO") # This would involve further processing on the generated vocals, potentially # using a separate audio processing AI or prompt weighting in RVC. generated_vocals_path = generated_vocals_path.replace(".wav", "_adjusted.wav") # Mix vocals with instrumental # final_mix_path = ClaudeCodeSession.start(f"Mix {generated_vocals_path} with {generated_instrumental_path}") final_mix_path = f"generated/{request.id}_final.wav" self._log(f"Vocals mixed into final track: {final_mix_path}") else: final_mix_path = generated_instrumental_path self._log("No lyrics or voice model not ready, producing instrumental only.", level="WARNING") # --- Humanize Quantization --- # final_mix_path_humanized = ClaudeCodeSession.start(f"Apply humanize quantization to {final_mix_path}") final_mix_path_humanized = final_mix_path.replace(".wav", "_humanized.wav") self._log(f"Applied humanize quantization to {final_mix_path_humanized}") new_track_asset = AudioAsset( id=request.id, title=request.title, path=final_mix_path_humanized, type="AI_GENERATED_TRACK", status="MASTERED_FOR_TESTING", band_id=request.band_id, metadata={"genre": request.genre, "mood": request.mood, "lyrics_present": bool(request.lyrics)} ) # Register with Internal Asset & Idea Flow Agent # self.asset_flow_agent.register_asset(new_track_asset) self._log(f"New track '{new_track_asset.title}' for {request.band_id} generated and registered.", level="INFO") return new_track_asset # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class AudioAsset: def __init__(self, id, title, path, type, status, band_id=None, metadata=None): self.id = id self.title = title self.path = path self.type = type self.status = status self.band_id = band_id self.metadata = metadata if metadata else {} class BandStyleCard: def __init__(self, id, name, aesthetic, vocal_dna_source_audio_path=None, vocal_dna_model_id=None, musical_signature=None, behavioral_marker=None): self.id = id self.name = name self.aesthetic = aesthetic self.vocal_dna_source_audio_path = vocal_dna_source_audio_path self.vocal_dna_model_id = vocal_dna_model_id self.musical_signature = musical_signature self.behavioral_marker = behavioral_marker class VoiceModel: def __init__(self, id, band_id, source_audio_path, status, model_path): self.id = id self.band_id = band_id self.source_audio_path = source_audio_path self.status = status self.model_path = model_path class TrackGenerationRequest: def __init__(self, id, band_id, title, genre, mood, lyrics=None, melody_reference_path=None, adjustments=None): self.id = id self.band_id = band_id self.title = title self.genre = genre self.mood = mood self.lyrics = lyrics self.melody_reference_path = melody_reference_path self.adjustments = adjustments # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['AudioAsset'] = AudioAsset globals()['BandStyleCard'] = BandStyleCard globals()['VoiceModel'] = VoiceModel globals()['TrackGenerationRequest'] = TrackGenerationRequest music_agent = MusicProductionAgent() # 1. Register a band style card my_band_style = BandStyleCard( id="MYBAND_001", name="My Old Band", aesthetic="1990s Rust Belt Grunge", vocal_dna_source_audio_path="/data/myband/raw_vocals/best_mix_vocals.wav", musical_signature="Heavy mid-range grit, melodic fills", behavioral_marker="Subtle head-nod on 2 and 4" ) music_agent.register_band_style_card("MYBAND_001", my_band_style) # 2. Add raw audio for processing (simulated) muddy_live_track = AudioAsset(id="LIVE_001", title="Muddy Live Song 1", path="/data/myband/live_videos/song1_audio_rip.wav", type="RAW_LIVE_AUDIO", status="RAW") music_agent.add_audio_for_processing(muddy_live_track) # 3. Generate a new song new_song_request = TrackGenerationRequest( id="NEW_SONG_001", band_id="MYBAND_001", title="Forgotten Rust", genre="Grunge", mood="Angsty", lyrics="This is a new song about forgotten days...", adjustments={"guitar": "heavier", "vocals": "growlier"} ) generated_track = music_agent.generate_music_track(new_song_request) print(f"\nGenerated Track: {generated_track.title}, Status: {generated_track.status}, Path: {generated_track.path}") ---
+import datetime
+from typing import Dict, Any, List, Literal, Optional
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import AudioAsset, BandStyleCard, TrackGenerationRequest, VoiceModel
+from internal_asset_flow_agent import InternalAssetIdeaFlowAgent
+
+
+class MusicProductionAgent:
+    """AI music production: sonic archeology, voice model training, track generation."""
+
+    def __init__(self, agent_id: str = "Music_Prod_001"):
+        self.agent_id = agent_id
+        self.band_style_cards: Dict[str, BandStyleCard] = {}
+        self.voice_models: Dict[str, VoiceModel] = {}
+        self.audio_processing_queue: List[Dict[str, Any]] = []
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"Music Prod Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def register_band_style_card(self, band_id: str, style_card: BandStyleCard):
+        self.band_style_cards[band_id] = style_card
+        self._log(f"Band Style Card for '{band_id}' registered.")
+        if style_card.vocal_dna_source_audio_path:
+            self.train_voice_model(band_id, style_card.vocal_dna_source_audio_path)
+
+    def add_audio_for_processing(self, audio_asset: AudioAsset):
+        self._log(f"Adding audio asset {audio_asset.id} for processing.")
+        self.audio_processing_queue.append({"asset": audio_asset, "status": "QUEUED"})
+        self._process_next_audio_in_queue()
+
+    def _process_next_audio_in_queue(self):
+        if not self.audio_processing_queue:
+            return
+        current_item = self.audio_processing_queue[0]
+        asset = current_item["asset"]
+        if current_item["status"] == "QUEUED":
+            current_item["status"] = "PROCESSING"
+            self._log(f"Starting Sonic Archeology for {asset.id}...", level="DEBUG")
+            isolated_stems = {
+                "vocals": f"{asset.path}_vocals.wav",
+                "drums": f"{asset.path}_drums.wav",
+                "bass": f"{asset.path}_bass.wav",
+                "other": f"{asset.path}_other.wav",
+            }
+            cleaned_stems = {k: v.replace(".wav", "_cleaned.wav") for k, v in isolated_stems.items()}
+            asset.metadata["cleaned_stems"] = cleaned_stems
+            asset.status = "CLEANED_AND_STEMMED"
+            current_item["status"] = "COMPLETED"
+            self._log(f"Sonic Archeology for {asset.id} completed.")
+            self.audio_processing_queue.pop(0)
+            self._process_next_audio_in_queue()
+
+    def train_voice_model(self, band_id: str, source_audio_path: str):
+        self._log(f"Training voice model for {band_id}...", level="INFO")
+        voice_model_id = f"VM_{band_id}_{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}"
+        new_voice_model = VoiceModel(
+            id=voice_model_id,
+            band_id=band_id,
+            source_audio_path=source_audio_path,
+            status="TRAINED",
+            model_path=f"models/{voice_model_id}.pth",
+        )
+        self.voice_models[band_id] = new_voice_model
+        self._log(f"Voice model {voice_model_id} trained for {band_id}.")
+        if band_id in self.band_style_cards:
+            self.band_style_cards[band_id].vocal_dna_model_id = voice_model_id
+
+    def generate_music_track(self, request: TrackGenerationRequest) -> AudioAsset:
+        self._log(f"Generating track '{request.title}' for '{request.band_id}'...")
+        band_style = self.band_style_cards.get(request.band_id)
+        voice_model = self.voice_models.get(request.band_id)
+        if not band_style or not voice_model:
+            self._log(f"Error: Missing band style or voice model for {request.band_id}.", level="ERROR")
+            raise ValueError("Missing band style or voice model.")
+
+        generated_instrumental_path = f"generated/instrumental_{request.id}.wav"
+        final_mix_path = generated_instrumental_path
+
+        if request.lyrics and voice_model.status == "TRAINED":
+            generated_vocals_path = f"generated/vocals_{request.id}.wav"
+            if request.adjustments:
+                generated_vocals_path = generated_vocals_path.replace(".wav", "_adjusted.wav")
+            final_mix_path = f"generated/{request.id}_final.wav"
+            self._log(f"Vocals mixed into: {final_mix_path}")
+
+        final_mix_path_humanized = final_mix_path.replace(".wav", "_humanized.wav")
+        new_track_asset = AudioAsset(
+            id=request.id,
+            title=request.title,
+            path=final_mix_path_humanized,
+            type="AI_GENERATED_TRACK",
+            status="MASTERED_FOR_TESTING",
+            band_id=request.band_id,
+            metadata={"genre": request.genre, "mood": request.mood, "lyrics_present": bool(request.lyrics)},
+        )
+        self._log(f"Track '{new_track_asset.title}' generated for {request.band_id}.", level="INFO")
+        return new_track_asset

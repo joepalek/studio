@@ -1,1 +1,114 @@
-legal_advisory_agent.py --- import datetime from typing import Dict, Any, List # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import LegalQuery, LegalReport, ComplianceRuling # Placeholder data models class LegalComplianceAdvisoryAgent: def __init__(self, agent_id: str = "Legal_Advisory_001"): self.agent_id = agent_id self.current_laws: Dict[str, Any] = self._load_current_legal_landscape() self.platform_policies: Dict[str, Any] = self._load_platform_policies() self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _load_current_legal_landscape(self) -> Dict[str, Any]: """Loads or scrapes current laws, regulations, and legal precedents.""" # In a real system, this would involve Sentinel Core scraping legal databases, # and ClaudeCodeSession for summarizing complex legal texts. self._log("Loading current legal landscape...", level="DEBUG") return { "synthetic_media_disclosure_laws": {"US_CA_SB11": {"active": True, "details": "Requires disclosure for synthetic political/explicit media."}}, "data_privacy_laws": {"GDPR": {"active": True, "details": "EU data privacy."}, "CCPA": {"active": True, "details": "California data privacy."}}, "copyright_fair_use_guidelines": {"US_Fair_Use": {"active": True, "details": "Educational, parody, criticism."}}, "ai_generated_content_ownership": {"status": "UNCLEAR", "details": "Evolving legal landscape on AI authorship."} } def _load_platform_policies(self) -> Dict[str, Any]: """Loads and monitors platform terms of service.""" # In a real system, this would involve Sentinel Core scraping platform TOS self._log("Loading platform policies...", level="DEBUG") return { "Meta": {"adult_content": "PROHIBITED", "synthetic_media_disclosure": "REQUIRED"}, "TikTok": {"adult_content": "PROHIBITED", "synthetic_media_disclosure": "REQUIRED_FOR_REALISTIC_AI"}, "Fanvue": {"adult_content": "PERMITTED_WITH_AGE_GATING", "synthetic_media_disclosure": "REQUIRED"} } def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str): """Sends a critical legal or compliance issue to the supervisor via the agent inbox.""" self._log(f"Entity {entity_id}: Pushing legal issue to inbox - {issue_summary}", level="CRITICAL") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id as project_id question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW" ) def research_law_or_policy(self, query: LegalQuery) -> LegalReport: """ Researches specific laws, regulations, or platform policies based on a query. Uses ClaudeCodeSession for deep legal text analysis. """ self._log(f"Researching legal query: {query.topic} for {query.context}") # In reality, this would initiate a ClaudeCodeSession for legal LLM analysis # For blueprint, we simulate lookup if query.topic == "synthetic_media_disclosure" and query.context == "California": return LegalReport( query_id=query.id, summary="California SB 11 requires clear disclosure for synthetic media in specific contexts (political, explicit).", risks=["Failure to disclose can lead to fines or platform bans."], recommendations=["Ensure all AI-generated content falls within disclosure guidelines."] ) elif query.topic == "copyright" and "old band music" in query.context: return LegalReport( query_id=query.id, summary="Remastering old band music requires acquiring master and publishing rights. Digital replicas of voices may require separate Right of Publicity agreements.", risks=["Infringement lawsuits if rights not properly secured.", "Lower royalty tiers for AI-remastered music."], recommendations=["Work with Legal Compliance & Advisory Agent to verify all contracts before acquisition.", "Consult specialized IP lawyer for clarity on digital replica rights."] ) else: return LegalReport( query_id=query.id, summary=f"No specific immediate legal match for '{query.topic}' in '{query.context}'. Further deep dive needed via ClaudeCodeSession.", risks=[], recommendations=[] ) def assess_project_risk(self, project_name: str, project_scope: Dict[str, Any]) -> LegalReport: """ Proactively assesses legal and compliance risks for a given project scope. """ self._log(f"Assessing legal risk for project: {project_name}") risks = [] recommendations = [] if "AI-Generated 3D Explicit Content" in project_name: risks.append("High platform restriction and legal scrutiny.") risks.append("Evolving synthetic media and deepfake laws.") risks.append("Reputational risks for Studio.") recommendations.append("Strict disclosure protocol via Content QA Agent.") recommendations.append("Dedicated legal retainer funding.") recommendations.append("Utilize specialized adult content platforms/payment processors.") self._send_to_inbox( project_name, f"High-risk project '{project_name}' requires careful legal strategy and funding.", "APPROVE_LEGAL_STRATEGY_AND_FUND_RETAINER" ) if "data_acquisition" in project_scope.get("activities", []): risks.append("GDPR/CCPA compliance for user data.") recommendations.append("Implement robust data anonymization and consent mechanisms.") if "public_persona" in project_scope.get("assets", []): if project_scope.get("toggle_real_persona", False): risks.append("Platform bans if 'real persona' not properly disclosed or if hate speech is present.") recommendations.append("Content QA Agent to strictly enforce 'Outbound Guardrail Agent' rules.") if not risks: risks.append("No immediate high-level legal risks detected.") recommendations.append("Continue monitoring with Content QA Agent.") return LegalReport( query_id=f"risk_assessment_{project_name}", summary=f"Legal Risk Assessment for {project_name}", risks=risks, recommendations=recommendations ) def track_legal_retainer_fund(self, fund_status: Dict[str, Any]): """Monitors and reports on the legal retainer fund status.""" self._log(f"Tracking legal retainer fund. Current status: {fund_status.get('current_balance', 0)}") if fund_status.get("current_balance", 0) < fund_status.get("target_minimum", 0): self._send_to_inbox( "LegalRetainer", f"Legal retainer fund is below target minimum: {fund_status.get('current_balance', 0)} / {fund_status.get('target_minimum', 0)}", "REVIEW_RETAINER_FUNDING_STRATEGY" ) # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class LegalQuery: def __init__(self, id, topic, context): self.id = id self.topic = topic self.context = context class LegalReport: def __init__(self, query_id, summary, risks, recommendations): self.query_id = query_id self.summary = summary self.risks = risks self.recommendations = recommendations def __str__(self): return f"Legal Report {self.query_id}:\nSummary: {self.summary}\nRisks: {self.risks}\nRecommendations: {self.recommendations}" class ComplianceRuling: # Not directly used in blueprint but good to have def __init__(self, passed, details): self.passed = passed self.details = details # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['LegalQuery'] = LegalQuery globals()['LegalReport'] = LegalReport globals()['ComplianceRuling'] = ComplianceRuling legal_agent = LegalComplianceAdvisoryAgent() # --- Test Case 1: Researching Synthetic Media Laws --- query1 = LegalQuery(id="L_001", topic="synthetic_media_disclosure", context="California") report1 = legal_agent.research_law_or_policy(query1) print(report1) # --- Test Case 2: Assessing High-Risk Project --- project_scope_explicit = { "activities": ["content_generation", "data_acquisition"], "assets": ["AI-Generated 3D Explicit Content"], "toggle_real_persona": True } report2 = legal_agent.assess_project_risk("High_Risk_Explicit_Project", project_scope_explicit) print(report2) # --- Test Case 3: Tracking Legal Retainer --- legal_agent.track_legal_retainer_fund({"current_balance": 5000, "target_minimum": 10000}) # --- Test Case 4: Researching Copyright for Old Band Music --- query2 = LegalQuery(id="L_002", topic="copyright", context="old band music resurrection") report3 = legal_agent.research_law_or_policy(query2) print(report3) 
+import datetime
+from typing import Dict, Any, List
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import LegalQuery, LegalReport, ComplianceCheckResult
+
+
+class LegalComplianceAdvisoryAgent:
+    """Legal research, compliance risk assessment, and retainer fund tracking."""
+
+    def __init__(self, agent_id: str = "Legal_Advisory_001"):
+        self.agent_id = agent_id
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.current_laws: Dict[str, Any] = self._load_current_legal_landscape()
+        self.platform_policies: Dict[str, Any] = self._load_platform_policies()
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _load_current_legal_landscape(self) -> Dict[str, Any]:
+        self._log("Loading current legal landscape...", level="DEBUG")
+        return {
+            "synthetic_media_disclosure_laws": {
+                "US_CA_SB11": {"active": True, "details": "Requires disclosure for synthetic political/explicit media."}
+            },
+            "data_privacy_laws": {
+                "GDPR": {"active": True, "details": "EU data privacy."},
+                "CCPA": {"active": True, "details": "California data privacy."},
+            },
+            "copyright_fair_use_guidelines": {
+                "US_Fair_Use": {"active": True, "details": "Educational, parody, criticism."}
+            },
+            "ai_generated_content_ownership": {"status": "UNCLEAR", "details": "Evolving legal landscape."},
+        }
+
+    def _load_platform_policies(self) -> Dict[str, Any]:
+        self._log("Loading platform policies...", level="DEBUG")
+        return {
+            "Meta": {"adult_content": "PROHIBITED", "synthetic_media_disclosure": "REQUIRED"},
+            "TikTok": {"adult_content": "PROHIBITED", "synthetic_media_disclosure": "REQUIRED_FOR_REALISTIC_AI"},
+            "Fanvue": {"adult_content": "PERMITTED_WITH_AGE_GATING", "synthetic_media_disclosure": "REQUIRED"},
+        }
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"Legal Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def research_law_or_policy(self, query: LegalQuery) -> LegalReport:
+        self._log(f"Researching legal query: {query.topic} for {query.context}")
+        if query.topic == "synthetic_media_disclosure" and query.context == "California":
+            return LegalReport(
+                query_id=query.id,
+                summary="California SB 11 requires disclosure for synthetic media in political/explicit contexts.",
+                risks=["Failure to disclose can lead to fines or platform bans."],
+                recommendations=["Ensure all AI-generated content meets disclosure guidelines."],
+            )
+        elif query.topic == "copyright" and "old band music" in query.context:
+            return LegalReport(
+                query_id=query.id,
+                summary="Remastering old band music requires acquiring master and publishing rights.",
+                risks=["Infringement lawsuits if rights not properly secured."],
+                recommendations=["Verify all contracts. Consult specialized IP lawyer for digital replica rights."],
+            )
+        return LegalReport(
+            query_id=query.id,
+            summary=f"No specific match for '{query.topic}' in '{query.context}'. Further analysis needed.",
+            risks=[],
+            recommendations=[],
+        )
+
+    def assess_project_risk(self, project_name: str, project_scope: Dict[str, Any]) -> LegalReport:
+        self._log(f"Assessing legal risk for project: {project_name}")
+        risks = []
+        recommendations = []
+        if "AI-Generated 3D Explicit Content" in project_name:
+            risks += ["High platform restriction and legal scrutiny.", "Evolving synthetic media laws."]
+            recommendations += ["Strict disclosure protocol via Content QA Agent.", "Dedicated legal retainer funding."]
+            self._send_to_inbox(
+                project_name,
+                f"High-risk project '{project_name}' requires careful legal strategy.",
+                "APPROVE_LEGAL_STRATEGY_AND_FUND_RETAINER",
+            )
+        if "data_acquisition" in project_scope.get("activities", []):
+            risks.append("GDPR/CCPA compliance for user data.")
+            recommendations.append("Implement robust data anonymization and consent mechanisms.")
+        if not risks:
+            risks.append("No immediate high-level legal risks detected.")
+            recommendations.append("Continue monitoring with Content QA Agent.")
+        return LegalReport(
+            query_id=f"risk_assessment_{project_name}",
+            summary=f"Legal Risk Assessment for {project_name}",
+            risks=risks,
+            recommendations=recommendations,
+        )
+
+    def track_legal_retainer_fund(self, fund_status: Dict[str, Any]):
+        self._log(f"Tracking legal retainer fund. Balance: {fund_status.get('current_balance', 0)}")
+        if fund_status.get("current_balance", 0) < fund_status.get("target_minimum", 0):
+            self._send_to_inbox(
+                "LegalRetainer",
+                f"Legal retainer fund below target: {fund_status.get('current_balance', 0)} / {fund_status.get('target_minimum', 0)}",
+                "REVIEW_RETAINER_FUNDING_STRATEGY",
+            )

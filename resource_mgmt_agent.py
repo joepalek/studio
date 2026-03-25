@@ -1,1 +1,137 @@
-resource_mgmt_agent.py --- import datetime from typing import Dict, Any, List, Literal, Tuple # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import Subscription, HardwareAsset, ResourceUsageReport, FundingAlert # Placeholder data models # from financial_billing_agent import FinancialBillingAgent # To interact with this agent class ResourceSubscriptionManagementAgent: def __init__(self, agent_id: str = "Resource_Mgmt_001"): self.agent_id = agent_id self.subscriptions: Dict[str, Subscription] = self._load_initial_subscriptions() self.hardware_assets: Dict[str, HardwareAsset] = self._load_initial_hardware() self.paid_tier_wishlist: List[Dict[str, Any]] = self._load_initial_wishlist() self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent self.financial_agent = FinancialBillingAgent() # For funding updates def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a critical resource/subscription alert to the supervisor via the agent inbox.""" self._log(f"Resource Mgmt Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def _load_initial_subscriptions(self) -> Dict[str, Subscription]: """Loads initial subscription data.""" return { "ClaudeCode": Subscription(id="CLAUDE_001", service="ClaudeCode", tier="FREE", status="ACTIVE", cost_monthly=0.0, usage_limit="CAPPED"), "GeminiFlash": Subscription(id="GFL_001", service="GeminiFlash", tier="FREE", status="ACTIVE", cost_monthly=0.0, usage_limit="CAPPED"), "ElevenLabs": Subscription(id="EL_001", service="ElevenLabs", tier="FREE_TRIAL", status="ACTIVE", cost_monthly=0.0, usage_limit="LIMITED"), "GoogleDrive": Subscription(id="GD_001", service="GoogleDrive", tier="FREE", status="ACTIVE", cost_monthly=0.0, usage_limit="15GB"), } def _load_initial_hardware(self) -> Dict[str, HardwareAsset]: """Loads initial hardware asset data.""" return { "External_PC_GPU": HardwareAsset(id="GPU_EX001", name="External AI System GPU", type="GPU", status="EXISTING", capacity="Low-End", availability="LOCAL_EXTERNAL", allocated_tasks=[]) } def _load_initial_wishlist(self) -> List[Dict[str, Any]]: """Loads the initial prioritized paid tier wishlist.""" return [ {"id": "WL_001", "name": "Enhanced Claude Code Subscription", "category": "AI_SERVICE", "cost_estimate": 500.0, "priority": 1, "status": "PENDING_FUNDING", "impact": "Resolves primary bottleneck, unlocks all projects."}, {"id": "WL_002", "name": "Dedicated GPU Hardware (External Computer Upgrade)", "category": "HARDWARE", "cost_estimate": 2500.0, "priority": 2, "status": "PENDING_FUNDING", "impact": "Massive offload, new local AI capabilities, long-term cost savings."}, {"id": "WL_003", "name": "ElevenLabs / Kits.ai Paid Tiers", "category": "AI_SERVICE", "cost_estimate": 50.0, "priority": 3, "status": "PENDING_FUNDING", "impact": "Professional vocal consistency for AI Music Label."}, {"id": "WL_004", "name": "Google Drive Storage Upgrade", "category": "CLOUD_STORAGE", "cost_estimate": 10.0, "priority": 4, "status": "PENDING_FUNDING", "impact": "Accommodates large data sets (videos, 3D assets)."}, # ... other items would be added here ] def monitor_all_resources(self): """ Monitors usage, status, and costs of all subscriptions and hardware assets. Utilizes Studio Assistant for real-time monitoring data. """ self._log("Monitoring all resources and subscriptions...", level="DEBUG") # Simulate fetching real-time usage (normally from Studio Assistant's monitoring) current_usage = { "ClaudeCode": {"usage": "HIGH", "cost": 0.0}, # Capped, so cost is 0 "GeminiFlash": {"usage": "HIGH", "cost": 0.0}, # Capped, so cost is 0 "ElevenLabs": {"usage": "LOW", "cost": 0.0}, "GoogleDrive": {"usage": "10GB", "cost": 0.0} } for sub_id, sub in self.subscriptions.items(): # Check for cap/limit reached (e.g., if Claude were uncapped and hit a limit) if sub.status == "ACTIVE" and sub.usage_limit == "CAPPED" and current_usage.get(sub.service, {}).get("usage") == "HIGH": self._send_to_inbox( sub_id, f"{sub.service} usage is capped. Upgrade to '{sub.service}_PRO' tier recommended for uninterrupted operation.", "APPROVE_SUBSCRIPTION_UPGRADE", urgency="HIGH" ) # Check for impending expiration (simple date check) if sub.status == "ACTIVE" and sub.id == "TEMP_TRIAL" and (sub.end_date - datetime.date.today()).days < 7: self._send_to_inbox( sub_id, f"Subscription '{sub.service}' (ID: {sub_id}) expires in { (sub.end_date - datetime.date.today()).days} days.", "REVIEW_SUBSCRIPTION_RENEWAL_OR_CANCELLATION", urgency="MEDIUM" ) # Placeholder for cost analysis, especially for paid tiers # Monitor local hardware (GPU) usage gpu_asset = self.hardware_assets.get("External_PC_GPU") if gpu_asset and gpu_asset.status == "OVERLOADED": self._send_to_inbox( gpu_asset.id, f"External AI System GPU is overloaded. Consider upgrading or optimizing task allocation.", "REVIEW_GPU_USAGE_AND_OPTIMIZE", urgency="MEDIUM" ) def allocate_hardware_task(self, hardware_id: str, task_id: str, agent_requesting: str) -> bool: """ Allocates a task to a specific piece of hardware (e.g., GPU). Manages shared access. """ hardware = self.hardware_assets.get(hardware_id) if not hardware: self._log(f"Hardware {hardware_id} not found for task allocation.", level="ERROR") return False # Simple allocation logic: assume if it's not 'OVERLOADED', it's available if hardware.status == "OVERLOADED": self._log(f"Hardware {hardware_id} is currently overloaded. Cannot allocate {task_id}.", level="WARNING") return False hardware.allocated_tasks.append({"task_id": task_id, "agent": agent_requesting, "timestamp": datetime.datetime.now()}) self._log(f"Task {task_id} allocated to {hardware_id} by {agent_requesting}.") return True def update_wishlist_status(self, wishlist_id: str, new_status: Literal["PENDING_FUNDING", "FUNDED", "ACQUIRED", "DECLINED"]): """Updates the status of an item on the paid tier wishlist.""" for item in self.paid_tier_wishlist: if item["id"] == wishlist_id: old_status = item["status"] item["status"] = new_status self._log(f"Wishlist item '{item['name']}' status updated from {old_status} to {new_status}.") # If funded, trigger procurement process if new_status == "FUNDED": self._send_to_inbox( wishlist_id, f"Wishlist item '{item['name']}' has been funded! Initiate procurement process.", "APPROVE_PROCUREMENT_OR_ALLOCATE_FUNDS", urgency="HIGH" ) return self._log(f"Wishlist item {wishlist_id} not found.", level="ERROR") def review_funding_for_wishlist(self, available_funds: float): """ Reviews available funds and recommends acquisition of wishlist items. Collaborates with FinancialBillingAgent and Studio Assistant (for cost-benefit). """ self._log(f"Reviewing wishlist with available funds: {available_funds}") self.paid_tier_wishlist.sort(key=lambda x: x["priority"]) # Ensure sorted by priority for item in self.paid_tier_wishlist: if item["status"] == "PENDING_FUNDING" and available_funds >= item["cost_estimate"]: # Here, a ClaudeCodeSession could do a deeper cost-benefit analysis self._log(f"Recommend funding wishlist item: '{item['name']}' (Cost: {item['cost_estimate']})", level="INFO") self._send_to_inbox( item["id"], f"Recommend funding wishlist item: '{item['name']}' (Est. Cost: {item['cost_estimate']}). Available funds: {available_funds}", "APPROVE_WISHlist_ITEM_FUNDING", urgency="HIGH" ) return # Recommend one item at a time for supervisor review # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class Subscription: def __init__(self, id, service, tier, status, cost_monthly, usage_limit, end_date=None): self.id = id self.service = service self.tier = tier self.status = status self.cost_monthly = cost_monthly self.usage_limit = usage_limit self.end_date = end_date if end_date else datetime.date.today() + datetime.timedelta(days=365) class HardwareAsset: def __init__(self, id, name, type, status, capacity, availability, allocated_tasks=None): self.id = id self.name = name self.type = type self.status = status self.capacity = capacity self.availability = availability self.allocated_tasks = allocated_tasks if allocated_tasks else [] class ResourceUsageReport: # Not directly used in blueprint but good to have def __init__(self, resource_id, usage_data, cost_data): self.resource_id = resource_id self.usage_data = usage_data self.cost_data = cost_data class FundingAlert: # Not directly used in blueprint but good to have def __init__(self, message, amount): self.message = message self.amount = amount # Mock FinancialBillingAgent for local testing class MockFinancialBillingAgent: def __init__(self): self.current_cash_flow = 0.0 # Not used by ResourceMgmtAgent here def get_financial_summary(self): class MockSummary: current_cash_flow = 10000.0 return MockSummary() # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['Subscription'] = Subscription globals()['HardwareAsset'] = HardwareAsset globals()['FinancialBillingAgent'] = MockFinancialBillingAgent resource_agent = ResourceSubscriptionManagementAgent() # 1. Monitor resources (will trigger inbox item for capped Claude/Gemini) resource_agent.monitor_all_resources() # 2. Simulate an overloaded GPU (requires updating mock hardware status) resource_agent.hardware_assets["External_PC_GPU"].status = "OVERLOADED" resource_agent.monitor_all_resources() # 3. Attempt to allocate a task to an overloaded GPU if not resource_agent.allocate_hardware_task("External_PC_GPU", "MUSIC_GEN_TASK_01", "MusicProductionAgent"): print("\nFailed to allocate task due to overload, as expected.") # 4. Review funding for wishlist (assume we have 3000 available) print("\n--- Reviewing funding for wishlist ---") resource_agent.review_funding_for_wishlist(3000.0) # Should recommend Claude upgrade # 5. Update wishlist item status (simulate supervisor approval and funding) resource_agent.update_wishlist_status("WL_001", "FUNDED") # Claude Upgrade resource_agent.update_wishlist_status("WL_001", "ACQUIRED") # Claude Upgrade acquired # 6. Review funding again (should now recommend GPU upgrade) print("\n--- Reviewing funding for wishlist again ---") resource_agent.review_funding_for_wishlist(2500.0) # Assume more funds came in. --- 
+import datetime
+from typing import Dict, Any, List, Literal
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import Subscription, HardwareAsset, ResourceUsageReport, FundingAlert
+from financial_billing_agent import FinancialBillingAgent
+
+
+class ResourceSubscriptionManagementAgent:
+    """Resource and subscription monitoring, hardware allocation, and wishlist funding."""
+
+    def __init__(self, agent_id: str = "Resource_Mgmt_001"):
+        self.agent_id = agent_id
+        self.subscriptions: Dict[str, Subscription] = self._load_initial_subscriptions()
+        self.hardware_assets: Dict[str, HardwareAsset] = self._load_initial_hardware()
+        self.paid_tier_wishlist: List[Dict[str, Any]] = self._load_initial_wishlist()
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.financial_agent = FinancialBillingAgent()
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"Resource Mgmt Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def _load_initial_subscriptions(self) -> Dict[str, Subscription]:
+        return {
+            "ClaudeCode": Subscription(id="CLAUDE_001", service="ClaudeCode", tier="FREE",
+                                       status="ACTIVE", cost_monthly=0.0, usage_limit="CAPPED"),
+            "GeminiFlash": Subscription(id="GFL_001", service="GeminiFlash", tier="FREE",
+                                        status="ACTIVE", cost_monthly=0.0, usage_limit="CAPPED"),
+            "ElevenLabs": Subscription(id="EL_001", service="ElevenLabs", tier="FREE_TRIAL",
+                                       status="ACTIVE", cost_monthly=0.0, usage_limit="LIMITED"),
+            "GoogleDrive": Subscription(id="GD_001", service="GoogleDrive", tier="FREE",
+                                        status="ACTIVE", cost_monthly=0.0, usage_limit="15GB"),
+        }
+
+    def _load_initial_hardware(self) -> Dict[str, HardwareAsset]:
+        return {
+            "External_PC_GPU": HardwareAsset(
+                id="GPU_EX001", name="External AI System GPU", type="GPU",
+                status="EXISTING", capacity="Low-End", availability="LOCAL_EXTERNAL", allocated_tasks=[],
+            )
+        }
+
+    def _load_initial_wishlist(self) -> List[Dict[str, Any]]:
+        return [
+            {"id": "WL_001", "name": "Enhanced Claude Code Subscription", "category": "AI_SERVICE",
+             "cost_estimate": 500.0, "priority": 1, "status": "PENDING_FUNDING",
+             "impact": "Resolves primary bottleneck, unlocks all projects."},
+            {"id": "WL_002", "name": "Dedicated GPU Hardware", "category": "HARDWARE",
+             "cost_estimate": 2500.0, "priority": 2, "status": "PENDING_FUNDING",
+             "impact": "Massive offload, new local AI capabilities."},
+            {"id": "WL_003", "name": "ElevenLabs Paid Tier", "category": "AI_SERVICE",
+             "cost_estimate": 50.0, "priority": 3, "status": "PENDING_FUNDING",
+             "impact": "Professional vocal consistency for AI Music Label."},
+            {"id": "WL_004", "name": "Google Drive Storage Upgrade", "category": "CLOUD_STORAGE",
+             "cost_estimate": 10.0, "priority": 4, "status": "PENDING_FUNDING",
+             "impact": "Accommodates large data sets."},
+        ]
+
+    def monitor_all_resources(self):
+        self._log("Monitoring all resources and subscriptions...", level="DEBUG")
+        current_usage = {
+            "ClaudeCode": {"usage": "HIGH"}, "GeminiFlash": {"usage": "HIGH"},
+            "ElevenLabs": {"usage": "LOW"}, "GoogleDrive": {"usage": "10GB"},
+        }
+        for sub_id, sub in self.subscriptions.items():
+            if sub.status == "ACTIVE" and sub.usage_limit == "CAPPED" and \
+                    current_usage.get(sub.service, {}).get("usage") == "HIGH":
+                self._send_to_inbox(
+                    sub_id,
+                    f"{sub.service} usage is capped. Upgrade recommended.",
+                    "APPROVE_SUBSCRIPTION_UPGRADE",
+                    urgency="HIGH",
+                )
+        gpu_asset = self.hardware_assets.get("External_PC_GPU")
+        if gpu_asset and gpu_asset.status == "OVERLOADED":
+            self._send_to_inbox(
+                gpu_asset.id,
+                "External AI System GPU is overloaded.",
+                "REVIEW_GPU_USAGE_AND_OPTIMIZE",
+            )
+
+    def allocate_hardware_task(self, hardware_id: str, task_id: str, agent_requesting: str) -> bool:
+        hardware = self.hardware_assets.get(hardware_id)
+        if not hardware:
+            self._log(f"Hardware {hardware_id} not found.", level="ERROR")
+            return False
+        if hardware.status == "OVERLOADED":
+            self._log(f"Hardware {hardware_id} overloaded. Cannot allocate {task_id}.", level="WARNING")
+            return False
+        hardware.allocated_tasks.append({"task_id": task_id, "agent": agent_requesting,
+                                          "timestamp": datetime.datetime.now()})
+        self._log(f"Task {task_id} allocated to {hardware_id}.")
+        return True
+
+    def update_wishlist_status(self, wishlist_id: str,
+                                new_status: Literal["PENDING_FUNDING", "FUNDED", "ACQUIRED", "DECLINED"]):
+        for item in self.paid_tier_wishlist:
+            if item["id"] == wishlist_id:
+                item["status"] = new_status
+                self._log(f"Wishlist item '{item['name']}' updated to {new_status}.")
+                if new_status == "FUNDED":
+                    self._send_to_inbox(
+                        wishlist_id,
+                        f"Wishlist item '{item['name']}' funded! Initiate procurement.",
+                        "APPROVE_PROCUREMENT_OR_ALLOCATE_FUNDS",
+                        urgency="HIGH",
+                    )
+                return
+        self._log(f"Wishlist item {wishlist_id} not found.", level="ERROR")
+
+    def review_funding_for_wishlist(self, available_funds: float):
+        self._log(f"Reviewing wishlist with available funds: {available_funds}")
+        self.paid_tier_wishlist.sort(key=lambda x: x["priority"])
+        for item in self.paid_tier_wishlist:
+            if item["status"] == "PENDING_FUNDING" and available_funds >= item["cost_estimate"]:
+                self._send_to_inbox(
+                    item["id"],
+                    f"Recommend funding '{item['name']}' (Est. Cost: {item['cost_estimate']}). Available: {available_funds}",
+                    "APPROVE_WISHLIST_ITEM_FUNDING",
+                    urgency="HIGH",
+                )
+                return

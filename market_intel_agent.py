@@ -1,1 +1,99 @@
-market_intel_agent.py --- import datetime from typing import Dict, Any, List, Literal, Optional # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import MarketReport, ProductIdea, WhiteboardEntry # Placeholder data models # from sentinel_core.orchestrator import SentinelCoreOrchestrator # For raw data acquisition # from internal_asset_flow_agent import InternalAssetIdeaFlowAgent # To add ideas to whiteboard class MarketIntelligenceOpportunityAgent: def __init__(self, agent_id: str = "Market_Intel_001"): self.agent_id = agent_id self.market_trends: Dict[str, Any] = {} # Stores analyzed market trends self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent # self.sentinel_core = SentinelCoreOrchestrator() # For raw data acquisition # self.asset_flow_agent = InternalAssetIdeaFlowAgent() # To manage whiteboard def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a high-potential idea or market alert to the supervisor via the agent inbox.""" self._log(f"Market Intel Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def _load_market_trend_filters(self) -> Dict[str, Any]: """Loads configuration for what market trends to look for.""" return { "keywords": ["AI content", "VR experiences", "virtual influencers", "AI music", "synthetic media", "e-commerce automation", "niche communities"], "sentiment_threshold": 0.6, # Positive sentiment for emerging trends "growth_rate_min": 0.15 # Minimum 15% observed growth } def conduct_market_scan(self, raw_data: str): """ Continuously scrapes and analyzes market data for opportunities. Raw data typically comes from Sentinel Core Orchestrator. """ self._log("Conducting market scan and analysis...", level="INFO") filters = self._load_market_trend_filters() # In a real system, this would involve ClaudeCodeSession for deep NLP # and GeminiFlash for rapid sentiment/trend extraction from raw_data. # For blueprint, simulate detection of new trends/gaps. # Simulate identifying an underserved niche if "AI-driven niche community platform" in raw_data and "lack of quality options" in raw_data: idea = ProductIdea( id="IDEA_NICHE_COMMUNITY_001", title="AI-Driven Niche Community Platform", description="Platform for highly specific communities with AI moderators and content generation.", source=self.agent_id, rating=8, status="NEW", feasibility_score=0.75 ) self.add_idea_to_whiteboard(idea) self._log(f"Identified new niche opportunity: {idea.title}", level="INFO") # Simulate identifying a product gap if "AI-generated personalized travel itineraries" in raw_data and "high demand low satisfaction" in raw_data: idea = ProductIdea( id="IDEA_TRAVEL_AI_002", title="Personalized AI Travel Itinerary Generator", description="AI service that creates custom travel plans based on user preferences and real-time data.", source=self.agent_id, rating=9, status="NEW", feasibility_score=0.8 ) self.add_idea_to_whiteboard(idea) self._log(f"Identified product gap: {idea.title}", level="INFO") # Update existing trends or add new ones to self.market_trends self.market_trends["AI_Niche_Community"] = {"status": "EMERGING", "growth_rate": 0.20} self.market_trends["Personalized_Travel_AI"] = {"status": "HIGH_DEMAND", "growth_rate": 0.25} def add_idea_to_whiteboard(self, idea: ProductIdea): """Adds a new idea to the Studio's internal whiteboard (via Internal Asset & Idea Flow Agent).""" # In a real system, this would call InternalAssetIdeaFlowAgent.add_idea_to_whiteboard(idea) # For blueprint, simulate adding and assessing. self._log(f"Idea '{idea.title}' added to whiteboard (simulated). Rating: {idea.rating}") if idea.rating >= 8 and idea.status == "NEW": # High potential, new idea self._send_to_inbox( idea.id, f"High-potential idea '{idea.title}' (Rating: {idea.rating}) identified by Market Intelligence Agent. Review for feasibility study.", "REVIEW_IDEA_AND_APPROVE_FEASIBILITY_STUDY", urgency="HIGH" ) idea.status = "PENDING_FEASIBILITY_REVIEW" # Update local status # In real system, this idea would be passed to InternalAssetIdeaFlowAgent def manage_whiteboard_ideas(self, internal_whiteboard_data: Dict[str, ProductIdea]): """ Manages the lifecycle of ideas on the whiteboard (rating, archiving, re-scanning). Interacts with InternalAssetIdeaFlowAgent. """ self._log("Managing whiteboard ideas...", level="INFO") now = datetime.datetime.now() for idea_id, idea in internal_whiteboard_data.items(): # This data would be pulled from InternalAssetIdeaFlowAgent # Re-rate based on latest market data (simulated) if idea.title == "AI Prison League Merch" and self.market_trends.get("AI_Niche_Community", {}).get("growth_rate", 0) > 0.15: idea.rating = 9 # Increase rating due to market alignment if idea.status == "ARCHIVED": idea.status = "RE_EVALUATED_ACTIVE" self._log(f"Archived idea '{idea.title}' re-activated due to market trend.", level="INFO") self._send_to_inbox( idea_id, f"Archived idea '{idea.title}' re-activated due to favorable market trends. Re-review for project initiation.", "REVIEW_REACTIVATED_IDEA_AND_APPROVE" ) # Archive old/low-rated ideas if idea.rating < 5 and (now - idea.last_re_evaluated_date).days > 60 and idea.status not in ["ARCHIVED", "PENDING_FEASIBILITY_REVIEW"]: idea.status = "ARCHIVED" idea.last_re_evaluated_date = now self._log(f"Idea '{idea.title}' (ID: {idea_id}) archived due to low rating/age.", level="INFO") # Periodically re-scan archived ideas (triggering InternalAssetIdeaFlowAgent's re_scan_archived_items) # This agent would feed updated market data to InternalAssetIdeaFlowAgent # Push updated ideas back to InternalAssetIdeaFlowAgent for official whiteboard management # self.asset_flow_agent.update_whiteboard_ideas(internal_whiteboard_data) # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class MarketReport: # Not directly used in blueprint but good to have def __init__(self, id, trends, opportunities): self.id = id self.trends = trends self.opportunities = opportunities class ProductIdea: def __init__(self, id, title, description, source, rating, status="NEW", feasibility_score=0.0, last_re_evaluated_date=None): self.id = id self.title = title self.description = description self.source = source self.rating = rating self.status = status self.feasibility_score = feasibility_score self.last_re_evaluated_date = last_re_evaluated_date if last_re_evaluated_date else datetime.datetime.now() class WhiteboardEntry: # Not directly used in blueprint but good to have def __init__(self, id, type, content_id): self.id = id self.type = type self.content_id = content_id # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['MarketReport'] = MarketReport globals()['ProductIdea'] = ProductIdea globals()['WhiteboardEntry'] = WhiteboardEntry market_intel_agent = MarketIntelligenceOpportunityAgent() # 1. Conduct a market scan (simulating raw data input) print("--- Conducting initial market scan ---") market_intel_agent.conduct_market_scan( "AI-driven niche community platform is an emerging trend with a lack of quality options. " "Also, high demand low satisfaction for AI-generated personalized travel itineraries." ) # 2. Simulate internal whiteboard data (from Internal Asset & Idea Flow Agent) mock_whiteboard_data = { "IDEA_NICHE_COMMUNITY_001": ProductIdea( id="IDEA_NICHE_COMMUNITY_001", title="AI-Driven Niche Community Platform", description="Platform for highly specific communities.", source="Market Intel Agent", rating=8, status="PENDING_FEASIBILITY_REVIEW" # Assumes it's been moved from NEW by its own add_idea call ), "IDEA_TRAVEL_AI_002": ProductIdea( id="IDEA_TRAVEL_AI_002", title="Personalized AI Travel Itinerary Generator", description="AI service for custom travel plans.", source="Market Intel Agent", rating=9, status="PENDING_FEASIBILITY_REVIEW" ), "IDEA_ARCHIVED_LOW_RATED": ProductIdea( id="IDEA_ARCHIVED_LOW_RATED", title="Basic Toaster AI", description="AI for smart toasters.", source="Old Idea", rating=4, status="NEW", # Simulating it hasn't been archived yet last_re_evaluated_date=datetime.datetime.now() - datetime.timedelta(days=70) ), "AI_PRISON_LEAGUE_MERCH": ProductIdea( id="AI_PRISON_LEAGUE_MERCH", title="AI Prison League Merch", description="Merch for the Gridiron Gauntlet teams.", source="Internal Brainstorm", rating=7, # Simulate initial rating status="ACTIVE_PROJECT_SUPPORT", last_re_evaluated_date=datetime.datetime.now() ) } # 3. Manage whiteboard ideas (will re-rate AI Prison League Merch, archive Toaster AI) print("\n--- Managing whiteboard ideas ---") market_intel_agent.manage_whiteboard_ideas(mock_whiteboard_data) print("\n--- Current Mock Whiteboard Data Status (after management) ---") for id, idea in mock_whiteboard_data.items(): print(f"ID: {id}, Title: {idea.title}, Rating: {idea.rating}, Status: {idea.status}") ---
+import datetime
+from typing import Dict, Any, List, Literal, Optional
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import MarketReport, ProductIdea, WhiteboardEntry
+from internal_asset_flow_agent import InternalAssetIdeaFlowAgent
+
+
+class MarketIntelligenceOpportunityAgent:
+    """Market scanning, idea generation, and whiteboard lifecycle management."""
+
+    def __init__(self, agent_id: str = "Market_Intel_001"):
+        self.agent_id = agent_id
+        self.market_trends: Dict[str, Any] = {}
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"Market Intel Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def _load_market_trend_filters(self) -> Dict[str, Any]:
+        return {
+            "keywords": ["AI content", "VR experiences", "virtual influencers", "AI music", "synthetic media"],
+            "sentiment_threshold": 0.6,
+            "growth_rate_min": 0.15,
+        }
+
+    def conduct_market_scan(self, raw_data: str):
+        self._log("Conducting market scan and analysis...")
+        if "AI-driven niche community platform" in raw_data and "lack of quality options" in raw_data:
+            idea = ProductIdea(
+                id="IDEA_NICHE_COMMUNITY_001",
+                title="AI-Driven Niche Community Platform",
+                description="Platform for highly specific communities with AI moderators.",
+                source=self.agent_id,
+                rating=8,
+                status="NEW",
+                feasibility_score=0.75,
+            )
+            self.add_idea_to_whiteboard(idea)
+        if "AI-generated personalized travel itineraries" in raw_data and "high demand low satisfaction" in raw_data:
+            idea = ProductIdea(
+                id="IDEA_TRAVEL_AI_002",
+                title="Personalized AI Travel Itinerary Generator",
+                description="AI service that creates custom travel plans based on user preferences.",
+                source=self.agent_id,
+                rating=9,
+                status="NEW",
+                feasibility_score=0.8,
+            )
+            self.add_idea_to_whiteboard(idea)
+        self.market_trends["AI_Niche_Community"] = {"status": "EMERGING", "growth_rate": 0.20}
+        self.market_trends["Personalized_Travel_AI"] = {"status": "HIGH_DEMAND", "growth_rate": 0.25}
+
+    def add_idea_to_whiteboard(self, idea: ProductIdea):
+        self._log(f"Idea '{idea.title}' added to whiteboard. Rating: {idea.rating}")
+        if idea.rating >= 8 and idea.status == "NEW":
+            self._send_to_inbox(
+                idea.id,
+                f"High-potential idea '{idea.title}' (Rating: {idea.rating}) identified. Review for feasibility study.",
+                "REVIEW_IDEA_AND_APPROVE_FEASIBILITY_STUDY",
+                urgency="HIGH",
+            )
+            idea.status = "PENDING_FEASIBILITY_REVIEW"
+
+    def manage_whiteboard_ideas(self, internal_whiteboard_data: Dict[str, ProductIdea]):
+        self._log("Managing whiteboard ideas...")
+        now = datetime.datetime.now()
+        for idea_id, idea in internal_whiteboard_data.items():
+            if idea.title == "AI Prison League Merch" and \
+                    self.market_trends.get("AI_Niche_Community", {}).get("growth_rate", 0) > 0.15:
+                idea.rating = 9
+                if idea.status == "ARCHIVED":
+                    idea.status = "RE_EVALUATED_ACTIVE"
+                    self._send_to_inbox(
+                        idea_id,
+                        f"Archived idea '{idea.title}' re-activated due to favorable market trends.",
+                        "REVIEW_REACTIVATED_IDEA_AND_APPROVE",
+                    )
+            if (idea.rating < 5 and
+                    (now - idea.last_re_evaluated_date).days > 60 and
+                    idea.status not in ["ARCHIVED", "PENDING_FEASIBILITY_REVIEW"]):
+                idea.status = "ARCHIVED"
+                idea.last_re_evaluated_date = now
+                self._log(f"Idea '{idea.title}' archived due to low rating/age.")

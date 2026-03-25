@@ -1,1 +1,77 @@
-internal_asset_flow_agent.py --- import datetime from typing import Dict, Any, List, Literal # Assume these are available globally or imported from a shared utility module # from studio_core.ai_orchestrator import ClaudeCodeSession, GeminiFlash, OllamaLocal # from studio_core.agent_inbox import AgentInbox # from studio_core.logging import Logger # from studio_core.data_models import StudioAsset, Idea, WhiteboardEntry # Placeholder data models class InternalAssetIdeaFlowAgent: def __init__(self, agent_id: str = "Internal_Asset_Flow_001"): self.agent_id = agent_id self.asset_library: Dict[str, StudioAsset] = {} # Simulates a database of all internal assets self.whiteboard_ideas: Dict[str, Idea] = {} # Simulates our internal whiteboard self.inbox = AgentInbox() # Interface to the global agent inbox self.logger = Logger(agent_id) # Dedicated logger for this agent def _log(self, message: str, level: str = "INFO"): """Internal logging utility.""" self.logger.log(message, level) def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"): """Sends a critical asset/idea-related item to the supervisor via the agent inbox.""" self._log(f"Asset Flow Alert for {entity_id}: Pushing to inbox - {issue_summary}", level="CRITICAL" if urgency == "HIGH" else "WARNING") self.inbox.add_item( agent_id=self.agent_id, project_id=entity_id, # Using entity_id for context question=issue_summary, required_action=required_action, status="PENDING_SUPERVISOR_REVIEW", urgency=urgency ) def register_asset(self, asset: StudioAsset): """Adds a newly created or acquired asset to the internal asset library.""" if asset.id in self.asset_library: self._log(f"Asset {asset.id} already registered. Updating metadata.", level="INFO") self.asset_library[asset.id] = asset self._log(f"Asset {asset.id} (Type: {asset.type}) registered. Status: {asset.status}") self._assess_asset_for_flow(asset.id) # Immediately assess for next steps def add_idea_to_whiteboard(self, idea: Idea): """Adds a new idea (from Market Intelligence, Sentinel Core, etc.) to the whiteboard.""" if idea.id in self.whiteboard_ideas: self._log(f"Idea {idea.id} already on whiteboard. Updating details.", level="INFO") self.whiteboard_ideas[idea.id] = idea self._log(f"Idea {idea.id} (Source: {idea.source}) added to whiteboard. Initial Rating: {idea.rating}") self._assess_idea_for_progression(idea.id) # Immediately assess for progression def _assess_asset_for_flow(self, asset_id: str): """ Internal method to assess a registered asset for its next step in the pipeline. This includes checking for dormancy, re-evaluation with new tools, etc. """ asset = self.asset_library.get(asset_id) if not asset: self._log(f"Asset {asset_id} not found for assessment.", level="ERROR") return self._log(f"Assessing asset {asset_id} (Status: {asset.status}) for next steps.") # Explicit Audit & Re-evaluation (your requested duty) if asset.status == "DORMANT" or not asset.last_re_evaluated_with_new_tech: self._log(f"Asset {asset.id} is dormant or not recently re-evaluated. Initiating re-analysis.", level="INFO") # In a real system, this would trigger specific agents for re-analysis: # - Sentinel Core for new data extraction # - Content QA Agent for re-evaluation with latest models # - Experimentation & Testing Agent for simulation with Mirofish asset.last_re_evaluated_with_new_tech = datetime.datetime.now() asset.status = "UNDER_RE_EVALUATION" self._send_to_inbox( asset.id, f"Dormant asset {asset.id} is being re-evaluated with new tech. Review progress or provide specific directives.", "MONITOR_RE_EVALUATION_OR_DIRECT_FURTHER_ACTION" ) return # Basic progression logic (e.g., if content, push to QA) if asset.type == "GENERATED_CONTENT" and asset.status == "READY_FOR_QA": self._log(f"Asset {asset.id} is ready for QA. Pushing to Content QA Agent.", level="INFO") asset.status = "IN_QA" # ContentQAAgent.review_content_asset(asset) # Orchestrate QA Agent elif asset.type == "AI_BAND_TRACK" and asset.status == "MASTERED_FOR_TESTING": self._log(f"AI Band Track {asset.id} ready for testing. Pushing to A&R & Marketing Agent.", level="INFO") asset.status = "IN_A&R_TESTING" # ARMarketingAgent.submit_track_for_mirofish_sim(asset) # Orchestrate A&R Agent def _assess_idea_for_progression(self, idea_id: str): """ Internal method to assess an idea from the whiteboard for its next step. """ idea = self.whiteboard_ideas.get(idea_id) if not idea: self._log(f"Idea {idea_id} not found for assessment.", level="ERROR") return self._log(f"Assessing idea {idea_id} (Rating: {idea.rating}) for progression.") if idea.status == "NEW" and idea.rating >= 8: # High-potential idea self._log(f"High-potential idea {idea.id}. Initiating feasibility study.", level="INFO") idea.status = "FEASIBILITY_STUDY" # In a real system, this might trigger ClaudeCodeSession for deep dive # or ClientSolutionsAgent for initial market validation if client-facing. self._send_to_inbox( idea.id, f"High-potential idea '{idea.title}' (Rating: {idea.rating}) initiated for feasibility study. Review for potential project kick-off.", "REVIEW_FEASIBILITY_AND_APPROVE_PROJECT" ) elif idea.status == "ARCHIVED" and (datetime.datetime.now() - idea.last_re_evaluated_date).days > 30: self._log(f"Archived idea {idea.id} due for re-evaluation.", level="INFO") # Re-evaluate with Market Intelligence & Opportunity Agent # MarketIntelligenceOpportunityAgent.re_evaluate_archived_idea(idea) idea.last_re_evaluated_date = datetime.datetime.now() idea.status = "UNDER_RE_EVALUATION_ARCHIVE" def re_scan_archived_items(self): """Periodically re-scans archived ideas and assets for renewed viability.""" self._log("Initiating re-scan of archived ideas and dormant assets.", level="INFO") for idea_id, idea in list(self.whiteboard_ideas.items()): # Iterate on copy if idea.status == "ARCHIVED": self._assess_idea_for_progression(idea_id) # Check if it's due for re-evaluation for asset_id, asset in list(self.asset_library.items()): if asset.status == "DORMANT": self._assess_asset_for_flow(asset_id) # --- MOCK CLASSES FOR LOCAL TESTING --- if __name__ == "__main__": class MockAgentInbox: def __init__(self): self.items = [] def add_item(self, agent_id, project_id, question, required_action, status, urgency="MEDIUM"): item = {"agent_id": agent_id, "project_id": project_id, "question": question, "required_action": required_action, "status": status, "urgency": urgency, "resolution_data": None} self.items.append(item) print(f"\nMOCK INBOX: [{urgency}] New item added for {agent_id}: {item['question']}") def get_resolved_item(self, agent_id, project_id): return None class MockLogger: def __init__(self, agent_id): self.agent_id = agent_id def log(self, message, level="INFO"): print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [{self.agent_id}] [{level}] {message}") class StudioAsset: def __init__(self, id, type, status, last_re_evaluated_with_new_tech=None, metadata=None): self.id = id self.type = type self.status = status self.last_re_evaluated_with_new_tech = last_re_evaluated_with_new_tech if last_re_evaluated_with_new_tech else datetime.datetime.now() self.metadata = metadata if metadata else {} class Idea: def __init__(self, id, title, description, source, rating, status="NEW", last_re_evaluated_date=None): self.id = id self.title = title self.description = description self.source = source self.rating = rating self.status = status self.last_re_evaluated_date = last_re_evaluated_date if last_re_evaluated_date else datetime.datetime.now() # Temporarily override for local testing globals()['AgentInbox'] = MockAgentInbox globals()['Logger'] = MockLogger globals()['StudioAsset'] = StudioAsset globals()['Idea'] = Idea asset_flow_agent = InternalAssetIdeaFlowAgent() # 1. Register a new asset (e.g., content ready for QA) new_content_asset = StudioAsset(id="CTW-CONTENT-001", type="GENERATED_CONTENT", status="READY_FOR_QA") asset_flow_agent.register_asset(new_content_asset) # 2. Register a dormant asset (needs re-evaluation) dormant_vr_asset = StudioAsset(id="VR-WORLD-005", type="VR_ENVIRONMENT", status="DORMANT", last_re_evaluated_with_new_tech=datetime.datetime(2023, 1, 1)) asset_flow_agent.register_asset(dormant_vr_asset) # 3. Add a high-potential idea to whiteboard high_potential_idea = Idea( id="IDEA-001", title="AI Prison League Merch", description="Develop AI-generated merch for the Gridiron Gauntlet teams.", source="Market Intelligence Agent", rating=9 ) asset_flow_agent.add_idea_to_whiteboard(high_potential_idea) # 4. Add an archived idea (due for re-scan) archived_idea = Idea( id="IDEA-002", title="Robot Chef App", description="An AI chef that generates recipes.", source="Old Brainstorm", rating=3, status="ARCHIVED", last_re_evaluated_date=datetime.datetime.now() - datetime.timedelta(days=45) # 45 days old ) asset_flow_agent.add_idea_to_whiteboard(archived_idea) # 5. Manually trigger a re-scan of archived items print("\n--- Initiating manual re-scan of archived items ---") asset_flow_agent.re_scan_archived_items() ---
+import datetime
+from typing import Dict, Any, List, Literal
+
+from studio_core.ai_orchestrator import AIOrchestrator, MockClaudeCodeSession, MockGeminiFlash, MockOllamaLocal
+from studio_core.agent_inbox import AgentInbox
+from studio_core.logger import Logger
+from studio_core.data_models import StudioAsset, Idea, WhiteboardEntry
+
+
+class InternalAssetIdeaFlowAgent:
+    """Asset library and whiteboard idea management with dormancy re-evaluation."""
+
+    def __init__(self, agent_id: str = "Internal_Asset_Flow_001"):
+        self.agent_id = agent_id
+        self.asset_library: Dict[str, StudioAsset] = {}
+        self.whiteboard_ideas: Dict[str, Idea] = {}
+        self.inbox = AgentInbox()
+        self.logger = Logger(agent_id)
+        self.orchestrator = AIOrchestrator(self.logger)
+        self.logger.log(f"{self.agent_id} initialized.", level="INFO")
+
+    def _log(self, message: str, level: str = "INFO"):
+        self.logger.log(message, level)
+
+    def _send_to_inbox(self, entity_id: str, issue_summary: str, required_action: str, urgency: str = "MEDIUM"):
+        self._log(f"Asset Flow Alert for {entity_id}: {issue_summary}", level="WARNING")
+        self.inbox.add_item(
+            agent_id=self.agent_id,
+            project_id=entity_id,
+            question=issue_summary,
+            required_action=required_action,
+            urgency=urgency,
+        )
+
+    def register_asset(self, asset: StudioAsset):
+        self.asset_library[asset.id] = asset
+        self._log(f"Asset {asset.id} (Type: {asset.type}) registered. Status: {asset.status}")
+        self._assess_asset_for_flow(asset.id)
+
+    def add_idea_to_whiteboard(self, idea: Idea):
+        self.whiteboard_ideas[idea.id] = idea
+        self._log(f"Idea {idea.id} (Source: {idea.source}) added. Rating: {idea.rating}")
+        self._assess_idea_for_progression(idea.id)
+
+    def _assess_asset_for_flow(self, asset_id: str):
+        asset = self.asset_library.get(asset_id)
+        if not asset:
+            return
+        if asset.status == "DORMANT":
+            asset.status = "UNDER_RE_EVALUATION"
+            self._send_to_inbox(asset.id, f"Dormant asset {asset.id} being re-evaluated.", "MONITOR_RE_EVALUATION")
+            return
+        if asset.type == "GENERATED_CONTENT" and asset.status == "READY_FOR_QA":
+            asset.status = "IN_QA"
+        elif asset.type == "AI_BAND_TRACK" and asset.status == "MASTERED_FOR_TESTING":
+            asset.status = "IN_A&R_TESTING"
+
+    def _assess_idea_for_progression(self, idea_id: str):
+        idea = self.whiteboard_ideas.get(idea_id)
+        if not idea:
+            return
+        if idea.status == "NEW" and idea.rating >= 8:
+            idea.status = "FEASIBILITY_STUDY"
+            self._send_to_inbox(idea.id, f"High-potential idea '{idea.title}' (Rating: {idea.rating}) for feasibility study.",
+                                "REVIEW_FEASIBILITY_AND_APPROVE_PROJECT")
+        elif idea.status == "ARCHIVED" and (datetime.datetime.now() - idea.last_re_evaluated_date).days > 30:
+            idea.last_re_evaluated_date = datetime.datetime.now()
+            idea.status = "UNDER_RE_EVALUATION_ARCHIVE"
+
+    def re_scan_archived_items(self):
+        self._log("Re-scanning archived ideas and dormant assets.")
+        for idea_id in list(self.whiteboard_ideas):
+            if self.whiteboard_ideas[idea_id].status == "ARCHIVED":
+                self._assess_idea_for_progression(idea_id)
+        for asset_id in list(self.asset_library):
+            if self.asset_library[asset_id].status == "DORMANT":
+                self._assess_asset_for_flow(asset_id)

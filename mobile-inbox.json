@@ -10,13 +10,13 @@
       "WebXR",
       "Canvas overlay on video element"
     ],
-    "recommendation": "Canvas overlay — broader mobile browser support, simpler implementation for MVP",
+    "recommendation": "Canvas overlay \u00e2\u20ac\u201d broader mobile browser support, simpler implementation for MVP",
     "context": ""
   },
   {
     "id": "state-acuscan-ar-2533adce",
     "project": "acuscan-ar",
-    "question": "If hand tracking lags on older phones — prioritize speed or visual accuracy?",
+    "question": "If hand tracking lags on older phones \u00e2\u20ac\u201d prioritize speed or visual accuracy?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -49,22 +49,22 @@
   {
     "id": "state-arbitrage-pulse-efb8d39d",
     "project": "arbitrage-pulse",
-    "question": "What geographic area to monitor — Tennessee local, Illinois local, or both?",
+    "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
     "options": [
       "Tennessee (Atwood/McKenzie area)",
       "Illinois (Woodstock area)",
-      "Both — separate digests"
+      "Both \u00e2\u20ac\u201d separate digests"
     ],
-    "recommendation": "Both with separate digests — you travel between both regularly",
+    "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
     "context": ""
   },
   {
     "id": "state-arbitrage-pulse-ec3e8edf",
     "project": "arbitrage-pulse",
-    "question": "Scraping approach — Apify Actor or direct browser automation via Chrome extension?",
+    "question": "Scraping approach \u00e2\u20ac\u201d Apify Actor or direct browser automation via Chrome extension?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
@@ -72,7 +72,7 @@
       "Apify (paid, reliable, maintained)",
       "Chrome extension automation (free, may break with FB updates)"
     ],
-    "recommendation": "Start with Chrome extension automation — free, and we already have it set up",
+    "recommendation": "Start with Chrome extension automation \u00e2\u20ac\u201d free, and we already have it set up",
     "context": ""
   },
   {
@@ -89,7 +89,7 @@
   {
     "id": "state-arbitrage-pulse-16662fe7",
     "project": "arbitrage-pulse",
-    "question": "Minimum profit margin to include in digest — e.g. only show items with 40%+ margin?",
+    "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -100,7 +100,7 @@
   {
     "id": "state-arbitrage-pulse-91bf5e20",
     "project": "arbitrage-pulse",
-    "question": "Digest delivery format — Markdown file in Drive, email, or dashboard card?",
+    "question": "Digest delivery format \u00e2\u20ac\u201d Markdown file in Drive, email, or dashboard card?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -111,16 +111,16 @@
   {
     "id": "state-hibid-analyzer-58575f97",
     "project": "hibid-analyzer",
-    "question": "Now that Chrome extension is available — attempt textarea via extension first or continue investigating DOM approach?",
+    "question": "Now that Chrome extension is available \u00e2\u20ac\u201d attempt textarea via extension first or continue investigating DOM approach?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
     "options": [
-      "Extension first — highest probability of success",
-      "DOM investigation — understand root cause first",
+      "Extension first \u00e2\u20ac\u201d highest probability of success",
+      "DOM investigation \u00e2\u20ac\u201d understand root cause first",
       "Both in parallel"
     ],
-    "recommendation": "Extension first — Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
+    "recommendation": "Extension first \u00e2\u20ac\u201d Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
     "context": ""
   },
   {
@@ -181,7 +181,7 @@
   {
     "id": "state-job-match-379b1402",
     "project": "job-match",
-    "question": "For the scam database — should it be private to your platform or eventually shared/open source?",
+    "question": "For the scam database \u00e2\u20ac\u201d should it be private to your platform or eventually shared/open source?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -208,17 +208,17 @@
     "status": "pending",
     "created": "2026-03-19",
     "options": [
-      "Personal only — optimize Joe's 572 listings",
+      "Personal only \u00e2\u20ac\u201d optimize Joe's 572 listings",
       "Beta test with select sellers",
       "Full SaaS product"
     ],
-    "recommendation": "Personal first — prove it works on your own inventory, then decide",
+    "recommendation": "Personal first \u00e2\u20ac\u201d prove it works on your own inventory, then decide",
     "context": ""
   },
   {
     "id": "state-listing-optimizer-0b8aae0b",
     "project": "listing-optimizer",
-    "question": "Input format — eBay bulk export CSV or manual entry or both?",
+    "question": "Input format \u00e2\u20ac\u201d eBay bulk export CSV or manual entry or both?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
@@ -227,7 +227,7 @@
       "Manual entry only",
       "Both"
     ],
-    "recommendation": "eBay bulk export CSV — you already have 572 listings to process",
+    "recommendation": "eBay bulk export CSV \u00e2\u20ac\u201d you already have 572 listings to process",
     "context": ""
   },
   {
@@ -250,7 +250,7 @@
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Category-specific title rules — e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first."
+    "context": "Category-specific title rules \u00e2\u20ac\u201d e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first."
   },
   {
     "id": "state-listing-optimizer-2c74ef17",
@@ -266,7 +266,7 @@
   {
     "id": "state-nutrimind-86664a3a",
     "project": "nutrimind",
-    "question": "What defines NutriMind as complete — what is the finish line?",
+    "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
@@ -275,7 +275,7 @@
       "Personal use ready",
       "Productize for other users"
     ],
-    "recommendation": "Define personal use ready first — then decide if productizing is worth the extra work",
+    "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
     "context": ""
   },
   {
@@ -303,17 +303,17 @@
   {
     "id": "state-squeeze-empire-0ab2f8fb",
     "project": "squeeze-empire",
-    "question": "What defines late-game completion — what is the win condition or final milestone?",
+    "question": "What defines late-game completion \u00e2\u20ac\u201d what is the win condition or final milestone?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
     "options": [
       "Reach a revenue target",
       "Unlock all upgrades",
-      "No win condition — infinite idle",
+      "No win condition \u00e2\u20ac\u201d infinite idle",
       "Story ending"
     ],
-    "recommendation": "Reach a revenue target + unlock all upgrades — gives clear progression and satisfying endpoint",
+    "recommendation": "Reach a revenue target + unlock all upgrades \u00e2\u20ac\u201d gives clear progression and satisfying endpoint",
     "context": ""
   },
   {
@@ -330,7 +330,7 @@
   {
     "id": "state-squeeze-empire-f54344c9",
     "project": "squeeze-empire",
-    "question": "After late-game is done — release publicly, keep personal, or productize?",
+    "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -350,7 +350,7 @@
       "Trust & Safety Agent",
       "CX Agent Overnight"
     ],
-    "recommendation": "Trust & Safety Agent — best alignment with moderation background and written communication preference",
+    "recommendation": "Trust & Safety Agent \u00e2\u20ac\u201d best alignment with moderation background and written communication preference",
     "context": ""
   },
   {
@@ -374,5 +374,115 @@
     "options": [],
     "recommendation": "",
     "context": "Separate letters are stronger but more work. General letter with swap sections is faster."
+  },
+  {
+    "id": "wb-top-arch-reddit-0001",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#1 WHITEBOARD] I've played and reviewed 1.000+ horror games, here are some gems you might not h",
+    "context": "PUBLISH | Score: 8/10 | The continuous growth of the horror game genre makes a comprehensive, curated historical and philosophical analysis of its roots and overlooked gems increasingly valuable for both new and veteran players. | Est: months | Revenue: NICHE | Risk: Creator burnout or inability to distill unique, engaging insights from such a vast number of games without it becoming superficial.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-25T04:00:41.303716",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-vint-0011",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#2 WHITEBOARD] DuPont Corfam",
+    "context": "RESEARCH | Score: 8/10 | Modern material science and a booming demand for sustainable, high-performance vegan alternatives create a ripe environment to re-address Corfam's original ambition with better technology. | Est: months | Revenue: LARGE | Risk: Developing a new material that genuinely surpasses existing vegan leathers in breathability, comfort, durability, and cost-effectiveness while achieving industrial scale production.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-25T04:00:41.303731",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-nost-0028",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#3 WHITEBOARD] Bring back the original SoBe Elixir drink line nationwide",
+    "context": "BUILD | Score: 8/10 | The strong wave of 90s and early 2000s nostalgia, amplified by dedicated online communities, presents a timely opportunity for PepsiCo to reintroduce a distinct and beloved brand. | Est: months | Revenue: SMALL | Risk: Nostalgia appeal might not translate into sufficient widespread, repeat purchases to justify nationwide production and distribution costs.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-25T04:00:41.303737",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-ebay-identifier-app",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#4 WHITEBOARD] eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
+    "context": "BUILD | Score: 8/10 | Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generation (RAG) make this complex multi-modal identification feasible, while the reseller market remains eager for AI-driven efficiency. | Est: months | Revenue: MEDIUM | Risk: The sheer complexity and data acquisition challenge for comprehensive 'archive RAG' and fine-tuned VLM attribute extraction could make it prohibitively expensive or technically unachievable to a high standard.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-25T04:00:41.303741",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-client-services-website",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#5 WHITEBOARD] AI Services Client Website",
+    "context": "BUILD | Score: 8/10 | 2026 is an optimal time as businesses increasingly adopt AI but require structured, reliable service providers to implement complex solutions and manage projects. | Est: months | Revenue: LARGE | Risk: Client acquisition and standing out in a highly competitive AI services market.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-25T04:00:41.303744",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-arch-reddit-0002",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#6 WHITEBOARD] Wing Commander IV Turns 30... And Still Fascinates Me",
+    "context": "BUILD | Score: 7/10 | 2026 marks the 30th anniversary of Wing Commander IV, providing a strong, timely hook for retrospective content and appealing to its enduring fanbase. | Est: weeks | Revenue: NICHE | Risk: Limited appeal beyond the dedicated Wing Commander fanbase, making broad reach and significant engagement challenging.",
+    "decision_type": "proactive",
+    "priority": "medium",
+    "created": "2026-03-25T04:00:41.303747",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-vint-0005",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#7 WHITEBOARD] Dymaxion Car",
+    "context": "RESEARCH | Score: 7/10 | The ongoing global shift towards electric vehicles and sustainable transportation makes highly efficient, aerodynamic, and flexible vehicle designs critically relevant for range optimization and utilitarian appeal. | Est: months | Revenue: MEDIUM | Risk: Overcoming the inherent engineering challenges and historical safety stigma of the Dymaxion's radical design to produce a safe, stable, and affordable modern vehicle.",
+    "decision_type": "proactive",
+    "priority": "medium",
+    "created": "2026-03-25T04:00:41.303750",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-vint-0015",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#8 WHITEBOARD] DeLorean DMC-12",
+    "context": "PITCH | Score: 7/10 | 2026 is timely due to the mature state of EV platforms, the thriving market for unique luxury vehicles, and persistent cultural nostalgia for iconic 80s designs. | Est: months | Revenue: NICHE | Risk: Securing significant capital investment and navigating complex automotive manufacturing regulations for low-volume production.",
+    "decision_type": "proactive",
+    "priority": "medium",
+    "created": "2026-03-25T04:00:41.303753",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-nost-0024",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#9 WHITEBOARD] 90s Green Day was pure chaos and I miss it.",
+    "context": "BUILD | Score: 7/10 | 2026 aligns with the peak of 90s nostalgia and Green Day's continued relevance, tapping into a strong 'missing it' sentiment from an engaged fanbase. | Est: months | Revenue: NICHE | Risk: Failing to uncover truly new insights or perspectives beyond existing Green Day retrospectives.",
+    "decision_type": "proactive",
+    "priority": "medium",
+    "created": "2026-03-25T04:00:41.303755",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-nost-0025",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#10 WHITEBOARD] Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
+    "context": "PUBLISH | Score: 7/10 | In 2026, increasing AI data demands and persistent privacy concerns will amplify the nostalgia for low-stakes, data-free interactions, making this topic highly resonant. | Est: months | Revenue: NICHE | Risk: Failing to move beyond anecdotal nostalgia to provide deeper insights or a compelling narrative about the societal shift.",
+    "decision_type": "proactive",
+    "priority": "medium",
+    "created": "2026-03-25T04:00:41.303757",
+    "status": "pending"
   }
 ]

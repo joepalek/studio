@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-19T15:49:57.500743",
+  "updated": "2026-03-25T04:00:41.270323",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -686,7 +686,7 @@
     {
       "id": "nost-0025",
       "type": "product_archaeology",
-      "title": "Remember when you didn\u2019t have to enter your personal info online to win a soda?",
+      "title": "Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
       "description": "",
       "signal": "remember when",
       "source": "reddit_r_nostalgia",
@@ -862,6 +862,56 @@
         "top_risk": "The specific nature of the memory might make it too niche for broad appeal, and its standalone monetization potential is low."
       },
       "scored_at": "2026-03-19T15:40:06.782249"
+    },
+    {
+      "id": "ebay-identifier-app",
+      "title": "eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
+      "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.",
+      "status": "WHITEBOARD",
+      "priority": "HIGH",
+      "source": "Gemini sidebar + Joe",
+      "type": "product",
+      "revenue_potential": "immediate personal use (572 listing backlog) + reseller SaaS",
+      "spec_file": "_studio/ebay-identifier-spec.md",
+      "added": "2026-03-25",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 5,
+        "revenue_potential": 8,
+        "urgency": 7,
+        "why_now": "Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generation (RAG) make this complex multi-modal identification feasible, while the reseller market remains eager for AI-driven efficiency.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "The sheer complexity and data acquisition challenge for comprehensive 'archive RAG' and fine-tuned VLM attribute extraction could make it prohibitively expensive or technically unachievable to a high standard."
+      },
+      "scored_at": "2026-03-25T04:00:25.997364"
+    },
+    {
+      "id": "client-services-website",
+      "title": "AI Services Client Website",
+      "description": "Lead generation website for AI project services. Intake triggers Client Solutions Agent pipeline. High upfront / low monthly quoting model. Funds Joe as employee and system wishlist. Full agent backend already blueprinted in Synthetic Talent Agency files.",
+      "status": "WHITEBOARD",
+      "priority": "CRITICAL",
+      "source": "Sidebar sessions",
+      "type": "product",
+      "revenue_potential": "primary near-term revenue vehicle",
+      "spec_file": "_studio/studio-full-inventory.md",
+      "added": "2026-03-25",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 7,
+        "build_feasibility": 9,
+        "revenue_potential": 8,
+        "urgency": 7,
+        "why_now": "2026 is an optimal time as businesses increasingly adopt AI but require structured, reliable service providers to implement complex solutions and manage projects.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Client acquisition and standing out in a highly competitive AI services market."
+      },
+      "scored_at": "2026-03-25T04:00:37.270038"
     }
   ]
 }
