@@ -1,5 +1,5 @@
 {
-  "created": "2026-03-19T15:26:17.685879",
+  "created": "2026-03-25T04:19:16.661772",
   "tasks": [
     {
       "task": "Studio\\DailyBriefing",
@@ -20,6 +20,36 @@
       "task": "Studio\\GhostBookRescan",
       "status": "FAIL",
       "schedule": "Weekly SUN 02:00"
+    },
+    {
+      "task": "Studio\\OvernightVintageAgent",
+      "status": "FAIL",
+      "schedule": "Weekly MON 01:00"
+    },
+    {
+      "task": "Studio\\OvernightGhostBookPass3",
+      "status": "FAIL",
+      "schedule": "Weekly WED 01:30"
+    },
+    {
+      "task": "Studio\\OvernightProductArchaeology",
+      "status": "FAIL",
+      "schedule": "Daily 02:00"
+    },
+    {
+      "task": "Studio\\OvernightJobDelta",
+      "status": "FAIL",
+      "schedule": "Daily 03:00"
+    },
+    {
+      "task": "Studio\\OvernightAutoAnswer",
+      "status": "FAIL",
+      "schedule": "Daily 03:30"
+    },
+    {
+      "task": "Studio\\OvernightWhiteboardScore",
+      "status": "FAIL",
+      "schedule": "Daily 04:00"
     }
   ],
   "scheduler_folder": "Studio\\",

@@ -36,6 +36,55 @@ tasks = [
         'days':    'SUN',
         'mo':      None,
     },
+    # --- Overnight batch tasks ---
+    {
+        'name':    r'Studio\OvernightVintageAgent',
+        'bat':     'overnight-vintage-agent.bat',
+        'trigger': 'WEEKLY',
+        'time':    '01:00',
+        'days':    'MON',
+        'mo':      None,
+    },
+    {
+        'name':    r'Studio\OvernightGhostBookPass3',
+        'bat':     'overnight-ghost-book-pass3.bat',
+        'trigger': 'WEEKLY',
+        'time':    '01:30',
+        'days':    'WED',
+        'mo':      None,
+    },
+    {
+        'name':    r'Studio\OvernightProductArchaeology',
+        'bat':     'overnight-product-archaeology.bat',
+        'trigger': 'DAILY',
+        'time':    '02:00',
+        'days':    None,
+        'mo':      None,
+    },
+    {
+        'name':    r'Studio\OvernightJobDelta',
+        'bat':     'overnight-job-delta.bat',
+        'trigger': 'DAILY',
+        'time':    '03:00',
+        'days':    None,
+        'mo':      None,
+    },
+    {
+        'name':    r'Studio\OvernightAutoAnswer',
+        'bat':     'overnight-auto-answer.bat',
+        'trigger': 'DAILY',
+        'time':    '03:30',
+        'days':    None,
+        'mo':      None,
+    },
+    {
+        'name':    r'Studio\OvernightWhiteboardScore',
+        'bat':     'overnight-whiteboard-score.bat',
+        'trigger': 'DAILY',
+        'time':    '04:00',
+        'days':    None,
+        'mo':      None,
+    },
 ]
 
 def delete_task(name):
