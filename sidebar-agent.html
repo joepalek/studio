@@ -723,7 +723,7 @@ function loadConfig() {
 
   document.getElementById('cfg-ollama-url').value = cfg.ollamaUrl || 'http://localhost:11434';
   document.getElementById('cfg-ollama-model').value = cfg.ollamaModel || 'llama3.2';
-  document.getElementById('cfg-openrouter-key').value = cfg.openrouterKey ? '••••••••' : '';
+  document.getElementById('cfg-openrouter-key').value = '';
   document.getElementById('cfg-status-file').value = cfg.statusFile;
   updateBackendIndicator();
   document.getElementById('cfg-context-file').value = cfg.contextFile;
@@ -749,7 +749,7 @@ function saveCfg(field) {
 
   const [elId, cfgProp] = map[field];
   const val = document.getElementById(elId).value;
-  if (val === '••••••••') return;
+  if (field !== 'openrouter-key' && val === '••••••••') return;
   cfg[cfgProp] = val;
   persistConfig();
   updateBackendIndicator();
