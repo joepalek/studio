@@ -1,5 +1,5 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-25 02:30 | Auto-built by generate-context.py
+Generated: 2026-03-25 02:32 | Auto-built by generate-context.py
 
 ## WHO IS JOE
 
@@ -277,7 +277,7 @@ If it does:
   _project: acuscan-ar
   _folder: acuscan-ar
   _created: 2026-03-12
-  _last_updated: 2026-03-12
+  _last_updated: 2026-03-25
   project: 
     name: AcuScan AR
     description: Web-based AR wellness guide that overlays acupressure point markers on a live hand/wrist camera feed.
@@ -422,7 +422,7 @@ If it does:
   _project: arbitrage-pulse
   _folder: arbitrage-pulse
   _created: 2026-03-12
-  _last_updated: 2026-03-12
+  _last_updated: 2026-03-25
   project: 
     name: FB/eBay Arbitrage Pulse
     description: Automated monitor that scrapes Facebook Marketplace for mispriced items, cross-references eBay sold listings for margin analysis, and delivers a daily digest of top flip opportunities.
@@ -573,7 +573,7 @@ If it does:
   status: active
   progress: 40
   handoff: Phase 2 complete. Stress test runner working. Céleste validated at deployment quality. Next: Phase 3 day structure and time engine, plus real character portrait images to replace SVG placeholders.
-  lastUpdated: 2026-03-15
+  lastUpdated: 2026-03-25
   blockers: 
     - Real portrait images not yet generated — using SVG placeholders
     - Trait activation detector needs calibration against more test runs
@@ -586,7 +586,7 @@ If it does:
   _project: hibid-analyzer
   _folder: hibid-analyzer
   _created: 2026-03-12
-  _last_updated: 2026-03-12
+  _last_updated: 2026-03-25
   project: 
     name: HiBid Analyzer
     description: Browser tool that analyzes auction lot images via Gemini API, estimates resale value, and saves notes to HiBid watchlist.
@@ -733,7 +733,7 @@ If it does:
   _project: job-match
   _folder: job-match
   _created: 2026-03-12
-  _last_updated: 2026-03-13
+  _last_updated: 2026-03-25
   project: 
     name: Talent Insight Engine (Job Match Platform)
     description: AI-powered job matching platform. Two sides: (1) Job Seeker — narrative interview generates behavioral profile, matched against live job pool. (2) Employer — browse candidate profiles with AI alignment scoring. Scraping engine runs two-tier crawl: monthly broad discovery + daily targeted delta fetch with JIT dead-link validation.
@@ -1153,7 +1153,7 @@ If it does:
   _project: listing-optimizer
   _folder: listing-optimizer
   _created: 2026-03-12
-  _last_updated: 2026-03-12
+  _last_updated: 2026-03-25
   project: 
     name: eBay Listing Optimizer
     description: Bulk listing optimization engine that ingests raw inventory data, generates keyword-dense ATS-optimized titles, populates missing fields (condition, UPC/ISBN, category), and outputs eBay File Exchange ready CSV.
@@ -1311,7 +1311,7 @@ If it does:
   _project: nutrimind
   _folder: nutrimind
   _created: 2026-03-12
-  _last_updated: 2026-03-12
+  _last_updated: 2026-03-25
   project: 
     name: NutriMind
     description: React-based AI meal planning app with multi-week planning, budget tiers, meal approval workflows, and ingredient overlap detection.
@@ -1447,7 +1447,7 @@ If it does:
   _project: squeeze-empire
   _folder: squeeze-empire
   _created: 2026-03-12
-  _last_updated: 2026-03-16
+  _last_updated: 2026-03-25
   project: 
     name: Squeeze Empire
     status: active
@@ -1581,7 +1581,7 @@ If it does:
   _project: whatnot-apps
   _folder: whatnot-apps
   _created: 2026-03-12
-  _last_updated: 2026-03-12
+  _last_updated: 2026-03-25
   project: 
     name: Whatnot Applications
     description: Job application materials for Whatnot remote roles: Fraud Agent, Trust & Safety Agent, CX Agent Overnight.
@@ -2316,4 +2316,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-25 02:30
+End of context. Generated: 2026-03-25 02:32
