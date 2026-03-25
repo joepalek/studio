@@ -907,7 +907,7 @@ async function sendChat() {
           'Authorization': `Bearer ${cfg.openrouterKey}`
         },
         body: JSON.stringify({
-          model: 'deepseek/deepseek-r1:free',
+          model: 'meta-llama/llama-3.1-8b-instruct:free',
           messages: messages
         })
       });
