@@ -505,7 +505,7 @@
 
 <div id="tab-bar">
   <div class="tab active" onclick="switchTab('status')">STATUS</div>
-  <div class="tab" onclick="switchTab('chat')">CHAT</div>
+  <div class="tab" onclick="switchTab('chat')">CHAT <span id="chat-backend" style="font-size:9px;opacity:0.7;"></span></div>
   <div class="tab" onclick="switchTab('queue')">QUEUE</div>
   <div class="tab" onclick="switchTab('files')">FILES</div>
   <div class="tab" onclick="switchTab('config')">CONFIG</div>
@@ -622,16 +622,25 @@
 <div id="panel-config" class="panel">
   <div class="panel-scroll">
     <div class="config-section">
-      <div class="config-title">API Keys</div>
+      <div class="config-title">Ollama Settings</div>
       <div class="config-row">
-        <label>Gemini Key</label>
-        <input type="password" id="cfg-gemini" placeholder="AIza...">
-        <button class="config-save" onclick="saveCfg('gemini')">Save</button>
+        <label>Ollama URL</label>
+        <input type="text" id="cfg-ollama-url" placeholder="http://localhost:11434">
+        <button class="config-save" onclick="saveCfg('ollama-url')">Save</button>
       </div>
       <div class="config-row">
-        <label>Drive Token</label>
-        <input type="password" id="cfg-drive" placeholder="Google OAuth token">
-        <button class="config-save" onclick="saveCfg('drive')">Save</button>
+        <label>Model</label>
+        <input type="text" id="cfg-ollama-model" placeholder="llama3.2">
+        <button class="config-save" onclick="saveCfg('ollama-model')">Save</button>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <div class="config-title">OpenRouter</div>
+      <div class="config-row">
+        <label>OpenRouter Key</label>
+        <input type="password" id="cfg-openrouter-key" placeholder="sk-or-...">
+        <button class="config-save" onclick="saveCfg('openrouter-key')">Save</button>
       </div>
     </div>
 
@@ -655,16 +664,9 @@
     </div>
 
     <div class="config-section">
-      <div class="config-title">Gemini Model</div>
-      <div class="config-row">
-        <label>Model</label>
-        <select class="form-select" id="cfg-model" style="flex:1;margin-bottom:0;">
-          <option value="gemini-2.0-flash">gemini-2.0-flash (recommended)</option>
-          <option value="gemini-1.5-flash">gemini-1.5-flash</option>
-          <option value="gemini-1.5-pro">gemini-1.5-pro</option>
-        </select>
-        <button class="config-save" onclick="saveCfg('model')">Save</button>
-      </div>
+      <div class="config-title">Ollama Status</div>
+      <button class="btn-primary" onclick="testOllama()" style="margin-bottom:8px;">Test Connection</button>
+      <div id="ollama-status" class="config-status">Not tested</div>
     </div>
 
     <div class="config-section">
@@ -676,7 +678,7 @@
     <div class="config-section">
       <div class="config-title">Context (System Prompt)</div>
       <textarea class="form-textarea" id="cfg-context-text" style="min-height:100px;"
-        placeholder="Paste studio-context.md content here to give Gemini studio awareness..."></textarea>
+        placeholder="Paste studio-context.md content here so Ollama knows your studio setup..."></textarea>
       <button class="btn-primary" onclick="saveContext()">Save Context</button>
     </div>
 
@@ -690,9 +692,10 @@
 // ─── STATE ─────────────────────────────────────────────────────────────────
 const CFG_KEY = 'sidebar_cfg';
 let cfg = {
-  geminiKey: '',
+  ollamaUrl: 'http://localhost:11434',
+  ollamaModel: 'llama3.2',
+  openrouterKey: '',
   driveToken: '',
-  model: 'gemini-2.0-flash',
   statusFile: 'claude-status.txt',
   contextFile: 'studio-context.md',
   queueFile: 'task-queue.json',
@@ -718,18 +721,14 @@ function loadConfig() {
     }
   } catch(e) {}
 
-  document.getElementById('cfg-gemini').value = cfg.geminiKey ? '••••••••' : '';
-  document.getElementById('cfg-drive').value = cfg.driveToken ? '••••••••' : '';
-  document.getElementById('cfg-model').value = cfg.model;
+  document.getElementById('cfg-ollama-url').value = cfg.ollamaUrl || 'http://localhost:11434';
+  document.getElementById('cfg-ollama-model').value = cfg.ollamaModel || 'llama3.2';
+  document.getElementById('cfg-openrouter-key').value = cfg.openrouterKey ? '••••••••' : '';
   document.getElementById('cfg-status-file').value = cfg.statusFile;
+  updateBackendIndicator();
   document.getElementById('cfg-context-file').value = cfg.contextFile;
   document.getElementById('cfg-queue-file').value = cfg.queueFile;
   document.getElementById('cfg-context-text').value = cfg.context;
-
-  if (cfg.driveToken) {
-    document.getElementById('drive-status').textContent = '✓ Drive token saved';
-    document.getElementById('drive-status').style.color = 'var(--green)';
-  }
 
   // Load saved tasks
   try {
@@ -740,9 +739,9 @@ function loadConfig() {
 
 function saveCfg(field) {
   const map = {
-    'gemini': ['cfg-gemini', 'geminiKey'],
-    'drive': ['cfg-drive', 'driveToken'],
-    'model': ['cfg-model', 'model'],
+    'ollama-url': ['cfg-ollama-url', 'ollamaUrl'],
+    'ollama-model': ['cfg-ollama-model', 'ollamaModel'],
+    'openrouter-key': ['cfg-openrouter-key', 'openrouterKey'],
     'status-file': ['cfg-status-file', 'statusFile'],
     'context-file': ['cfg-context-file', 'contextFile'],
     'queue-file': ['cfg-queue-file', 'queueFile']
@@ -753,6 +752,7 @@ function saveCfg(field) {
   if (val === '••••••••') return;
   cfg[cfgProp] = val;
   persistConfig();
+  updateBackendIndicator();
   toast('Saved');
 }
 
@@ -860,71 +860,108 @@ function handleChatKey(e) {
   }
 }
 
+function updateBackendIndicator() {
+  const el = document.getElementById('chat-backend');
+  if (!el) return;
+  if (cfg.openrouterKey) {
+    el.textContent = '· deepseek';
+    el.style.color = 'var(--amber)';
+  } else {
+    el.textContent = '· ollama';
+    el.style.color = 'var(--text-dim)';
+  }
+}
+
 async function sendChat() {
   const input = document.getElementById('chat-input');
   const msg = input.value.trim();
   if (!msg) return;
-  if (!cfg.geminiKey) {
-    appendMsg('system', '⚠ Add Gemini API key in CONFIG tab');
-    return;
-  }
 
   appendMsg('user', msg);
   input.value = '';
   input.style.height = 'auto';
 
-  chatHistory.push({ role: 'user', parts: [{ text: msg }] });
-
   const sendBtn = document.getElementById('send-btn');
   sendBtn.disabled = true;
-
   const typingId = appendTyping();
 
+  const systemPrompt = cfg.context
+    ? `You are a studio assistant for Joe Palek's AI development studio. Be concise and direct.\n\nContext:\n${cfg.context}`
+    : 'You are a studio assistant helping manage an AI development studio with agents, eBay listing operations, and multiple software projects. Be concise and direct.';
+
+  const messages = [
+    { role: 'system', content: systemPrompt },
+    ...chatHistory,
+    { role: 'user', content: msg }
+  ];
+
   try {
-    const systemPrompt = cfg.context
-      ? `You are a studio assistant for Joe Palek's AI development studio. Context:\n\n${cfg.context}\n\n`
-      : 'You are a studio assistant helping manage an AI development studio with agents, eBay listing operations, and multiple software projects. Be concise and direct.';
+    let reply;
 
-    // Build contents with optional system instruction
-    const payload = {
-      contents: chatHistory,
-      systemInstruction: { parts: [{ text: systemPrompt }] },
-      generationConfig: {
-        temperature: 0.7,
-        maxOutputTokens: 1500
+    if (cfg.openrouterKey) {
+      // ── OpenRouter (deepseek-r1:free) ──────────────────────────────────
+      const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${cfg.openrouterKey}`
+        },
+        body: JSON.stringify({
+          model: 'deepseek/deepseek-r1:free',
+          messages: messages
+        })
+      });
+
+      removeTyping(typingId);
+
+      if (!resp.ok) {
+        const txt = await resp.text();
+        appendMsg('system', `⚠ OpenRouter error ${resp.status}: ${txt.substring(0, 200)}`);
+        sendBtn.disabled = false;
+        return;
       }
-    };
 
-    const resp = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${cfg.model}:generateContent?key=${cfg.geminiKey}`,
-      {
+      const data = await resp.json();
+      reply = data.choices?.[0]?.message?.content || 'No response';
+
+    } else {
+      // ── Ollama fallback ────────────────────────────────────────────────
+      const ollamaUrl = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
+      const model = cfg.ollamaModel || 'llama3.2';
+
+      const resp = await fetch(`${ollamaUrl}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify({ model, messages, stream: false })
+      });
+
+      removeTyping(typingId);
+
+      if (!resp.ok) {
+        const txt = await resp.text();
+        appendMsg('system', `⚠ Ollama error ${resp.status}: ${txt.substring(0, 120)}`);
+        sendBtn.disabled = false;
+        return;
       }
-    );
 
-    removeTyping(typingId);
-
-    if (!resp.ok) {
-      const err = await resp.json();
-      appendMsg('system', '⚠ API error: ' + (err.error?.message || resp.status));
-      sendBtn.disabled = false;
-      return;
+      const data = await resp.json();
+      reply = data.message?.content || data.response || 'No response';
     }
 
-    const data = await resp.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
-
-    chatHistory.push({ role: 'model', parts: [{ text: reply }] });
-    appendMsg('ai', reply);
-
-    // Trim history to last 20 turns to avoid token bloat
+    chatHistory.push({ role: 'user', content: msg });
+    chatHistory.push({ role: 'assistant', content: reply });
     if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
+
+    appendMsg('ai', reply);
 
   } catch(e) {
     removeTyping(typingId);
-    appendMsg('system', '⚠ ' + e.message);
+    if (e.message.includes('fetch') || e.message.includes('Failed')) {
+      const backend = cfg.openrouterKey ? 'OpenRouter' : 'Ollama';
+      appendMsg('system', `⚠ Cannot reach ${backend}. Check CONFIG.`);
+    } else {
+      appendMsg('system', '⚠ ' + e.message);
+    }
   }
 
   sendBtn.disabled = false;
@@ -1244,6 +1281,30 @@ async function driveWriteTaskQueue() {
     }
   } catch(e) {
     console.warn('Drive write failed:', e);
+  }
+}
+
+
+// ─── OLLAMA TEST ────────────────────────────────────────────────────────────
+async function testOllama() {
+  const el = document.getElementById('ollama-status');
+  el.textContent = 'Testing...';
+  el.style.color = 'var(--text-dim)';
+  const url = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
+  try {
+    const resp = await fetch(url + '/api/tags');
+    if (resp.ok) {
+      const data = await resp.json();
+      const models = (data.models || []).map(m => m.name).join(', ') || 'no models found';
+      el.textContent = '✓ Connected — models: ' + models;
+      el.style.color = 'var(--green)';
+    } else {
+      el.textContent = '⚠ Ollama responded but with error: ' + resp.status;
+      el.style.color = 'var(--amber)';
+    }
+  } catch(e) {
+    el.textContent = '✗ Cannot reach Ollama. Make sure the app is open.';
+    el.style.color = 'var(--red)';
   }
 }
 
