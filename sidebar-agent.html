@@ -505,7 +505,7 @@
 
 <div id="tab-bar">
   <div class="tab active" onclick="switchTab('status')">STATUS</div>
-  <div class="tab" onclick="switchTab('chat')">CHAT</div>
+  <div class="tab" onclick="switchTab('chat')">CHAT <span id="chat-backend" style="font-size:9px;opacity:0.7;"></span></div>
   <div class="tab" onclick="switchTab('queue')">QUEUE</div>
   <div class="tab" onclick="switchTab('files')">FILES</div>
   <div class="tab" onclick="switchTab('config')">CONFIG</div>
@@ -636,6 +636,16 @@
     </div>
 
     <div class="config-section">
+      <div class="config-title">OpenRouter (Primary AI)</div>
+      <div class="config-row">
+        <label>API Key</label>
+        <input type="text" id="cfg-openrouter-key" placeholder="sk-or-...">
+        <button class="config-save" onclick="saveCfg('openrouter-key')">Save</button>
+      </div>
+      <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Free — uses best available free model automatically. Ollama is fallback if no key set.</div>
+    </div>
+
+    <div class="config-section">
       <div class="config-title">Drive Paths</div>
       <div class="config-row">
         <label>Status File</label>
@@ -683,6 +693,7 @@
 // ─── STATE ─────────────────────────────────────────────────────────────────
 const CFG_KEY = 'sidebar_cfg';
 let cfg = {
+  openrouterKey: '',
   ollamaUrl: 'http://localhost:11434',
   ollamaModel: 'llama3.2',
   driveToken: '',
@@ -713,6 +724,8 @@ function loadConfig() {
 
   document.getElementById('cfg-ollama-url').value = cfg.ollamaUrl || 'http://localhost:11434';
   document.getElementById('cfg-ollama-model').value = cfg.ollamaModel || 'llama3.2';
+  document.getElementById('cfg-openrouter-key').value = '';
+  updateBackendIndicator();
   document.getElementById('cfg-status-file').value = cfg.statusFile;
   document.getElementById('cfg-context-file').value = cfg.contextFile;
   document.getElementById('cfg-queue-file').value = cfg.queueFile;
@@ -727,6 +740,7 @@ function loadConfig() {
 
 function saveCfg(field) {
   const map = {
+    'openrouter-key': ['cfg-openrouter-key', 'openrouterKey'],
     'ollama-url': ['cfg-ollama-url', 'ollamaUrl'],
     'ollama-model': ['cfg-ollama-model', 'ollamaModel'],
     'status-file': ['cfg-status-file', 'statusFile'],
@@ -740,6 +754,7 @@ function saveCfg(field) {
   if (!val) return;
   cfg[cfgProp] = val;
   persistConfig();
+  updateBackendIndicator();
   toast('Saved');
 }
 
@@ -861,21 +876,42 @@ async function sendChat() {
   const typingId = appendTyping();
 
   try {
-    const systemPrompt = cfg.context
-      ? `You are a studio assistant for Joe Palek's AI development studio. Be concise and direct.\n\nContext:\n${cfg.context}`
-      : 'You are a studio assistant helping manage an AI development studio with agents, eBay listing operations, and multiple software projects. Be concise and direct.';
+    // Inject context into user message for model compatibility
+    const contextPrefix = cfg.context
+      ? '[STUDIO CONTEXT]\n' + cfg.context + '\n[END CONTEXT]\n\nWith the above context in mind, answer this: '
+      : '';
 
-    // Build message history for Ollama
     const messages = [
-      { role: 'system', content: systemPrompt },
       ...chatHistory,
-      { role: 'user', content: msg }
+      { role: 'user', content: contextPrefix + msg }
     ];
 
-    const ollamaUrl = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
-    const model = cfg.ollamaModel || 'llama3.2';
+    let reply;
 
-    const resp = await fetch(`${ollamaUrl}/api/chat`, {
+    if (cfg.openrouterKey) {
+      // OpenRouter free
+      const orResp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + cfg.openrouterKey
+        },
+        body: JSON.stringify({ model: 'openrouter/free', messages: messages })
+      });
+      removeTyping(typingId);
+      if (!orResp.ok) {
+        const txt = await orResp.text();
+        appendMsg('system', '⚠ OpenRouter error ' + orResp.status + ': ' + txt.substring(0, 200));
+        sendBtn.disabled = false;
+        return;
+      }
+      const orData = await orResp.json();
+      reply = orData.choices?.[0]?.message?.content || 'No response';
+    } else {
+      // Ollama fallback
+      const ollamaUrl = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
+      const model = cfg.ollamaModel || 'llama3.2';
+      const resp = await fetch(`${ollamaUrl}/api/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -885,17 +921,16 @@ async function sendChat() {
       })
     });
 
-    removeTyping(typingId);
-
-    if (!resp.ok) {
-      const txt = await resp.text();
-      appendMsg('system', `⚠ Ollama error ${resp.status}: ${txt.substring(0, 120)}`);
-      sendBtn.disabled = false;
-      return;
+      removeTyping(typingId);
+      if (!resp.ok) {
+        const txt = await resp.text();
+        appendMsg('system', '⚠ Ollama error ' + resp.status + ': ' + txt.substring(0, 120));
+        sendBtn.disabled = false;
+        return;
+      }
+      const data = await resp.json();
+      reply = data.message?.content || data.response || 'No response';
     }
-
-    const data = await resp.json();
-    const reply = data.message?.content || data.response || 'No response';
 
     chatHistory.push({ role: 'user', content: msg });
     chatHistory.push({ role: 'assistant', content: reply });
@@ -1255,6 +1290,20 @@ async function testOllama() {
   } catch(e) {
     el.textContent = '✗ Cannot reach Ollama. Make sure the app is open.';
     el.style.color = 'var(--red)';
+  }
+}
+
+
+// ─── BACKEND INDICATOR ─────────────────────────────────────────────────────
+function updateBackendIndicator() {
+  const el = document.getElementById('chat-backend');
+  if (!el) return;
+  if (cfg.openrouterKey) {
+    el.textContent = '· openrouter';
+    el.style.color = 'var(--amber)';
+  } else {
+    el.textContent = '· ollama';
+    el.style.color = 'var(--text-dim)';
   }
 }
 

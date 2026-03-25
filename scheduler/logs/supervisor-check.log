@@ -3962,3 +3962,472 @@ All scheduled jobs **failed Mar 22–23** due to Claude quota exhaustion. Logs s
 The 32 uncommitted files in `_studio` are the new agent suite (`ar_marketing_agent.py`, `client_solutions_agent.py`, `content_qa_agent.py`, etc.) — added since the last successful nightly commit. Want me to commit those now?
 [Tue 03/24/2026 22:30:01.72] Supervisor check starting 
 [Tue 03/24/2026 23:00:01.68] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-24 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ! Ollama: client v0.12.10 present but SERVER IS DOWN
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ! Ollama: DOWN — start Ollama app
+
+PROJECTS (13 checked)
+  ! STALE STATE (11d): acuscan-ar
+  ! STALE STATE (11d): arbitrage-pulse
+  ! STALE STATE (9d): CTW
+  ! STALE STATE (11d): hibid-analyzer
+  ! STALE STATE (11d): job-match
+  ! STALE STATE (11d): listing-optimizer
+  ! STALE STATE (11d): nutrimind
+  ! STALE STATE (8d): squeeze-empire
+  ! STALE STATE (11d): whatnot-apps
+  ! UNCOMMITTED (32 files): _studio
+  ✓ sentinel-core, sentinel-performer, sentinel-viewer clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: OPTIONAL MISSING
+  - mobile-inbox.html/json: present
+  - janitor-report.json: present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting — hit Refresh in studio
+
+VERDICT: CRITICAL (13 issues)
+ACTION: Start Ollama, commit _studio (32 files), import mobile answers
+```
+
+---
+
+**SUPERVISOR REPORT**
+
+- Dispatched: 0 tasks (Ollama down, work queue empty, no gateway-log)
+- Gemini: available for free-tier dispatch
+- Improvement proposals: none pending
+
+---
+
+**BACKGROUND TASKS — COMPLETED / FAILED SUMMARY**
+
+| Task | Result |
+|------|--------|
+| Nightly commit Mar 20 | Ran — MASTER-CHANGELOG updated, 9 projects logged |
+| Nightly commit Mar 21–24 | FAILED — quota exhausted |
+| Orchestrator briefing Mar 21 | Ran — briefing saved |
+| Orchestrator briefing Mar 22–24 AM | FAILED — quota exhausted |
+| Ghost book rescan Mar 22 2am | INTERRUPTED — quota hit mid-run |
+| Supervisor check Mar 24 22:30–23:00 | Ran (logged by prior session) |
+
+**Quota reset:** Today at 5pm CT — you're on fresh quota now.
+
+**Top actions:**
+1. Commit `_studio` — 32 new agent files (the full agent suite) sitting uncommitted since last successful nightly
+2. Import 5 pending mobile answers in studio
+3. Start Ollama app to restore free-tier dispatch capacity
+[Tue 03/24/2026 23:30:01.78] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-24
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.81 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ gh 2.88.1
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: SET
+  ✓ OpenRouter: SET
+  ! Ollama: DOWN — start Ollama app
+  ✓ Supabase: SET
+
+PROJECTS (13 checked) — 22 issues
+  ! STALE STATE (8-11d): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+                          job-match, listing-optimizer, nutrimind,
+                          squeeze-empire, whatnot-apps (9 projects)
+  ! UNCOMMITTED (1 file each): all 12 non-_studio projects
+  ! UNCOMMITTED (8 files): _studio
+
+STUDIO FILES
+  ✓ All 10 critical files present
+  - gateway-log.txt: MISSING (optional)
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+TASK QUEUE
+  ✓ 0 tasks queued
+
+SUPERVISOR CYCLE
+  Ollama: DOWN — no tasks dispatched
+  Agents active: 0 | Queue depth: 0
+```
+
+---
+
+**VERDICT: CRITICAL (22 project issues)**
+
+**ACTION ITEMS:**
+1. **Start Ollama** — free-tier batch capacity offline
+2. **Commit all 12 projects** — each has exactly 1 uncommitted file (likely state.json from nightly scheduler)
+3. **Refresh state.json** on 9 stale projects (8-11 days old)
+4. **Import mobile answers** — hit Refresh in studio (5 sessions waiting)
+5. `gateway-log.txt` missing — will be created on first gateway task
+
+The 22 issues are dominated by the nightly scheduler writing `state.json` updates without committing them. A single commit sweep would clear ~18 of them. Want me to do that now?
+[Wed 03/25/2026  0:00:01.77] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-25
+
+### TOOLS
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+```
+
+### GATEWAY ENDPOINTS
+```
+✓ Anthropic key: SET
+✓ Gemini key: SET
+✓ OpenRouter key: SET
+! Ollama: DOWN — start Ollama app (model configured: gemma3:4b)
+```
+
+### PROJECTS (13 checked)
+```
+! STALE STATE (8-11d): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+                        job-match, listing-optimizer, nutrimind,
+                        squeeze-empire, whatnot-apps (9 projects)
+! UNCOMMITTED (1 file each): all 12 non-studio projects + _studio (8 files)
+! CLEAN: 0 projects
+```
+
+### STUDIO FILES
+```
+✓ All 10 critical files present
+- gateway-log.txt: OPTIONAL MISSING (no Gateway tasks logged yet)
+```
+
+### MOBILE ANSWERS
+```
+! 5 sessions pending — 5 answers waiting — hit Refresh in studio
+```
+
+### SUPERVISOR STATUS
+```
+Last cycle: 2026-03-24T23:30
+Olama was down, 0 tasks dispatched
+Task queue: 0 items pending
+```
+
+---
+
+**VERDICT: DEGRADED (22 issues)**
+**ACTION:** Start Ollama app · commit all dirty projects · import mobile answers
+
+### Completed Background Tasks
+None — last supervisor cycle (2026-03-24 23:30) dispatched 0 tasks (Ollama was down, no overnight work ran). Task queue is empty.
+
+---
+
+**Top priorities this session:**
+1. Start Ollama so free-tier batch work can resume
+2. The 13 uncommitted projects all have 1 dirty file each — likely nightly log updates (safe to bulk-commit)
+3. Import 5 pending mobile answers from Supabase
+[Wed 03/25/2026  0:30:01.77] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-25
+
+**TOOLS**
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Repomix 1.12.0
+! Ollama client 0.12.10 — service is DOWN (not running)
+```
+
+**GATEWAY ENDPOINTS**
+```
+✓ Anthropic key: SET
+✓ Gemini key: SET
+✓ OpenRouter key: SET
+! Ollama: DOWN — start Ollama app
+✓ Supabase: SET
+✓ Claude quota state: ok
+```
+
+**PROJECTS (13 checked)**
+```
+! STALE STATE (11d): acuscan-ar, arbitrage-pulse, hibid-analyzer,
+                     job-match, listing-optimizer, nutrimind, whatnot-apps
+! STALE STATE (9d): CTW
+! STALE STATE (8d): squeeze-empire
+! UNCOMMITTED (1 file each): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+                              job-match, listing-optimizer, nutrimind,
+                              sentinel-core, sentinel-performer, sentinel-viewer,
+                              squeeze-empire, whatnot-apps
+! UNCOMMITTED (8 files): _studio
+  Total: 22 issues across 13 projects
+```
+
+**STUDIO FILES**
+```
+✓ All critical files present
+! gateway-log.txt: MISSING (optional but expected)
+```
+
+**MOBILE ANSWERS**
+```
+! 5 sessions pending — 5 answers waiting — run importMobileAnswers in studio
+```
+
+**SUPERVISOR CYCLE**
+```
+Last run: 2026-03-24T23:30:56
+Agents recently active: 0 (no gateway-log entries)
+Work queue: empty
+Dispatched this cycle: 0 tasks (Ollama DOWN, no overnight batch running)
+Background tasks completed: none since last session
+```
+
+---
+
+**VERDICT: CRITICAL (22 issues)**
+
+**Priority actions:**
+1. **Start Ollama app** — service not running, batch capability offline
+2. **Commit 12 dirty projects** — all have 1-file uncommitted changes (likely scheduler/state updates)
+3. **Import mobile answers** — 5 sessions waiting in Supabase
+4. **gateway-log.txt** — create this file so Supervisor can track agent activity
+
+The uncommitted files across projects are likely nightly scheduler log updates — want me to commit them all now?
+[Wed 03/25/2026  1:00:01.78] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-25 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude quota: ok
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: SET (key present)
+  ✓ OpenRouter: SET
+  ! Ollama: DOWN — start Ollama app (model: gemma3:4b)
+
+PROJECTS (13 checked)
+  ! STALE STATE (8-11d): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+    job-match, listing-optimizer, nutrimind, squeeze-empire, whatnot-apps (9 projects)
+  ! UNCOMMITTED (1 file each): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+    job-match, listing-optimizer, nutrimind, sentinel-core, sentinel-performer,
+    sentinel-viewer, squeeze-empire, whatnot-apps, _studio (13 projects)
+
+STUDIO FILES
+  ✓ All critical files present
+  ! gateway-log.txt: missing (optional)
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting (hit Refresh in studio)
+
+TASK QUEUE
+  ✓ 0 tasks queued
+
+SUPERVISOR CYCLE
+  ✓ Report written to supervisor-report.json
+  ✗ No tasks dispatched (Ollama down, no orchestrator queue)
+
+BACKGROUND TASKS COMPLETED
+  - No background tasks were running or completed.
+
+VERDICT: CRITICAL (22 project issues)
+ACTION:
+  1. Start Ollama app (gemma3:4b model configured)
+  2. Run /commit to clear the 13 projects with uncommitted changes
+  3. Update stale state.json in 9 projects (9-11 days stale)
+  4. Import 5 pending mobile answers in studio (hit Refresh)
+```
+
+The mass of uncommitted changes (1 file each across all 12 sub-projects + _studio) is the nightly-commit scheduler touching state files — likely the `nightly-commit.log` pattern. All critical studio files are intact, quota is OK, and task queue is empty. The main action items are Ollama and the stale commit cleanup.
+[Wed 03/25/2026  1:30:01.78] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-25
+
+**TOOLS**
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Repomix 1.12.0
+! Ollama: DOWN (version 0.12.10 found but no running instance)
+```
+
+**GATEWAY ENDPOINTS**
+```
+✓ Anthropic key: SET
+✓ Gemini: SET
+✓ OpenRouter: SET
+! Ollama: DOWN — start Ollama app
+✓ Supabase: SET
+```
+
+**PROJECTS (13 checked)**
+```
+! STALE STATE (8-11d): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+                        job-match, listing-optimizer, nutrimind,
+                        squeeze-empire, whatnot-apps (9 projects)
+! UNCOMMITTED (1 file ea): acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer,
+                             job-match, listing-optimizer, nutrimind,
+                             sentinel-core, sentinel-performer, sentinel-viewer,
+                             squeeze-empire, whatnot-apps (12 projects)
+! UNCOMMITTED (8 files): _studio
+  Total issues: 22
+```
+
+**STUDIO FILES**
+```
+✓ All 10 critical files present
+! gateway-log.txt: MISSING (optional but expected)
+```
+
+**MOBILE ANSWERS**
+```
+! 5 sessions pending — 5 answers waiting — hit Refresh in studio
+```
+
+**VERDICT: CRITICAL (22 issues)**
+**ACTIONS:** Start Ollama app · Mass-commit all 12 dirty projects · Import 5 mobile answer sessions
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Ollama:** DOWN — no free-tier dispatch possible
+- **Agents recently active:** 0 (no gateway-log entries)
+- **Task queue:** 0 pending
+- **Improvement proposals:** 0 pending
+- **Dispatched:** 0 tasks this cycle
+
+---
+
+## BACKGROUND TASKS (Scheduler Logs)
+
+**Last nightly-commit.log** (2026-03-19 23:00):
+- 2 commits made to `_studio`, pushed to GitHub
+- 9 projects had state.json changelog updates: acuscan-ar, arbitrage-pulse, CTW, hibid-analyzer, job-match, listing-optimizer, nutrimind, squeeze-empire, whatnot-apps
+
+**Last supervisor-check.log** (2026-03-19 16:00):
+- Final scheduled run was 6 days ago
+- Scheduler has not run since — all stale states are from that gap
+
+**Key observation:** The scheduler hasn't run since 2026-03-19. The 9 projects showing stale state + uncommitted changes are all carrying the same 1-file diff (likely their `state.json`). The 8-file `_studio` diff includes `sre-report.json`, `supervisor-report.json`, `studio-context.md`, and other status files.
+
+**Recommended actions:**
+1. Start the Ollama app
+2. Run a mass commit across all dirty projects (or `/commit` to handle `_studio`)
+3. Import mobile answers from studio sidebar
+[Wed 03/25/2026  2:00:01.85] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-25
+
+### TOOLS
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Claude Code 2.1.83  (above expected 2.1.78)
+✓ Repomix 1.12.0
+! Ollama: client 0.12.10 present — app NOT running
+```
+
+### GATEWAY ENDPOINTS
+```
+✓ Anthropic key: SET
+✓ Gemini: UP
+✓ OpenRouter: UP
+! Ollama: DOWN — start Ollama app
+  Model configured: gemma3:4b
+```
+
+### PROJECTS (13 checked) — 22 issues
+```
+! STALE STATE (11d): acuscan-ar, arbitrage-pulse, hibid-analyzer,
+                     job-match, listing-optimizer, nutrimind, whatnot-apps
+! STALE STATE (9d):  CTW
+! STALE STATE (8d):  squeeze-empire
+! UNCOMMITTED (1 file each): acuscan-ar, arbitrage-pulse, CTW,
+  hibid-analyzer, job-match, listing-optimizer, nutrimind,
+  sentinel-core, sentinel-performer, sentinel-viewer,
+  squeeze-empire, whatnot-apps
+! UNCOMMITTED (9 files): _studio
+  (sre-report.json, supervisor-report.json, studio-context.md,
+   sidebar-agent.html, ollama-serve.log, and others)
+```
+Root cause: Scheduler last ran **2026-03-19** — 6-day gap. The 1-file diffs are likely `state.json` in each project.
+
+### STUDIO FILES
+```
+✓ All 10 critical files present
+- gateway-log.txt: optional, missing
+```
+
+### MOBILE ANSWERS
+```
+! 5 sessions pending — 5 answers waiting — hit Refresh in studio
+```
+
+### SUPERVISOR CYCLE
+```
+Agents recently active: none
+Work queue depth: 0
+Improvement proposals: 0
+Tasks dispatched: 0 (Ollama down, no queue items)
+```
+
+### BACKGROUND TASKS COMPLETED
+```
+✓ nightly-commit (2026-03-24): 1 project committed, 12 clean
+✓ changelog-agent: MASTER-CHANGELOG.md updated + pushed to GitHub
+✓ changelogs written for all 12 projects
+- supervisor-check (last full run: 2026-03-19): 6-day gap
+```
+
+---
+
+**VERDICT: CRITICAL** (22 issues)
+
+**Priority actions:**
+1. **Start Ollama app** — gateway is routing blind without it
+2. **Mass commit** — 12 projects have 1 uncommitted file each (likely `state.json`); `_studio` has 9
+3. **Import mobile answers** — 5 sessions pending in studio sidebar
+4. **Check scheduler** — hasn't run since 2026-03-19; stale states cascade from this
+[Wed 03/25/2026  2:30:01.76] Supervisor check starting 

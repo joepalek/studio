@@ -1,2 +1,15 @@
 # Studio Sidebar Log
 [2026-03-20 17:28] [INIT] sidebar-log.txt created
+
+[2026-03-24 23:33] [IMPORT] Bulk import: 224 sidebar log entries (2026-03-21 05:12 to 2026-03-24 23:33)
+[IMPORT] Last 10 entries sample:
+  [2026-03-24 22:34] [gemini] Q: should we add time/date to the studio head for you to refer  → Thank you for opening the file. You've hit on a very c
+  [2026-03-24 22:38] [gemini] Q: it just shows a line of code again:  ctw_client_manager_agen → My deepest apologies. I understand now. It seems my in
+  [2026-03-24 22:42] [gemini] Q: now this is what loads up as code:ctw_client_manager_agent.p → My apologies yet again. It appears my previous attempt
+  [2026-03-24 22:46] [gemini] Q: import datetime from typing import Dict, Any, List # Assume  → My apologies, this is a very persistent and critical i
+  [2026-03-24 23:14] [gemini] Q: Hmmm maybe we need to update this sidebar, cause the formatt → You are absolutely right. My apologies. If the formatt
+  [2026-03-24 23:20] [gemini] Q: the whole single line is all green, I don't see run script,  → My sincerest apologies. My heart sinks to hear that, a
+  [2026-03-24 23:26] [gemini] Q: I see red and purple then green text now, i see it in the di → Excellent! **Red, purple, and green text is exactly wh
+  [2026-03-24 23:29] [gemini] Q: claude --resume 499d5f47-e6b4-4039-8d89-ee934e0acf71 PS G:\M → My apologies! You are encountering a very common issue
+  [2026-03-24 23:30] [gemini] Q: PS G:\My Drive\Projects\_studio> ```bash python ctw_client_m → My sincerest apologies. I am so sorry. It seems I am s
+  [2026-03-24 23:33] [gemini] Q: PS G:\My Drive\Projects\_studio> python ctw_client_manager_a → My deepest apologies again. This is incredibly frustra

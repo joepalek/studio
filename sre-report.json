@@ -1,34 +1,67 @@
 {
-  "generated": "2026-03-20",
+  "date": "2026-03-25",
+  "time": "2026-03-25T02:01:28.406056",
   "verdict": "CRITICAL",
-  "issue_count": 5,
-  "action": "Commit job-match + _studio, create sentinel state stubs, import mobile answers",
   "tools": {
-    "git": "2.53.0 (OK)",
-    "node": "v24.14.0 (OK)",
-    "npm": "11.9.0 (OK)",
-    "python": "3.13.7 (OK)",
-    "repomix": "1.12.0 (OK)",
-    "ollama": "0.12.10 (OK)"
+    "git": "2.53.0 OK",
+    "node": "v24.14.0 OK",
+    "npm": "11.9.0 OK",
+    "python": "3.13.7 OK",
+    "claude_code": "2.1.83 OK (above expected 2.1.78)",
+    "repomix": "1.12.0 OK",
+    "ollama": "client 0.12.10 \u2014 app not running"
   },
   "endpoints": {
     "anthropic": "SET",
     "gemini": "UP",
     "openrouter": "UP",
-    "ollama": "UP — 1 model (gemma3:4b)",
+    "ollama": "DOWN \u2014 app not running",
     "ollama_model": "gemma3:4b"
   },
   "projects": {
-    "issues": [
-      "UNCOMMITTED (2 files): job-match",
-      "UNCOMMITTED (10 files): _studio",
-      "NO STATE.JSON: sentinel-core",
-      "NO STATE.JSON: sentinel-performer",
-      "NO STATE.JSON: sentinel-viewer"
+    "issues": 22,
+    "stale_state": [
+      "acuscan-ar(11d)",
+      "arbitrage-pulse(11d)",
+      "CTW(9d)",
+      "hibid-analyzer(11d)",
+      "job-match(11d)",
+      "listing-optimizer(11d)",
+      "nutrimind(11d)",
+      "squeeze-empire(8d)",
+      "whatnot-apps(11d)"
     ],
-    "clean": 8,
-    "issue_count": 5
+    "uncommitted": [
+      "acuscan-ar",
+      "arbitrage-pulse",
+      "CTW",
+      "hibid-analyzer",
+      "job-match",
+      "listing-optimizer",
+      "nutrimind",
+      "sentinel-core",
+      "sentinel-performer",
+      "sentinel-viewer",
+      "squeeze-empire",
+      "whatnot-apps",
+      "_studio(9 files)"
+    ]
   },
-  "studio_files": "All critical present. gateway-log.txt: optional, missing.",
-  "mobile_answers": "1 session, 2 answers pending — import via studio Refresh"
+  "studio_files": {
+    "critical": "ALL PRESENT",
+    "optional_missing": [
+      "gateway-log.txt"
+    ]
+  },
+  "mobile_answers": "5 sessions, 5 answers pending",
+  "supervisor": {
+    "tasks_dispatched": 0,
+    "work_queue_depth": 0,
+    "agents_active": "none",
+    "ollama_up": false
+  },
+  "background_tasks": {
+    "nightly_commit": "Last run: 2026-03-24 \u2014 1 committed, 12 clean, changelogs updated, pushed to GitHub",
+    "scheduler_gap": "Scheduler last ran 2026-03-19 \u2014 6-day gap explains all stale states"
+  }
 }
