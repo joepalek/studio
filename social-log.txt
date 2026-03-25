@@ -1,0 +1,6 @@
+# Social Media Agent — Interaction Log
+# Format: [YYYY-MM-DD HH:MM] [PLATFORM] [ACTION] @handle / Message / Response
+# Created: 2026-03-25
+# Agent: social-media-agent.md
+# ─────────────────────────────────────────────────────────────────────────────
+

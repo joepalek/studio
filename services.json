@@ -1,0 +1,73 @@
+{
+  "last_updated": "2026-03-25",
+  "contact_url": "https://joepalek.github.io/jlp-studio-website/contact.html",
+  "site_url": "https://joepalek.github.io/jlp-studio-website/",
+  "services": [
+    {
+      "id": "ebay-automation",
+      "name": "eBay & Reseller Automation",
+      "slug": "ebay",
+      "description": "Automated listing creation from photo batches, AI-generated titles and descriptions, pricing comp engine from sold listings, inventory tracking with restock alerts, multi-platform support (eBay, Whatnot, HiBid), estate sale batch processing.",
+      "use_cases": ["eBay seller", "reseller", "estate sales", "antique dealer", "collectibles", "flea market", "thrift store"],
+      "starting_price": 800,
+      "price_range": "$800–$3,500",
+      "typical_timeline": "1–3 weeks",
+      "page_url": "https://joepalek.github.io/jlp-studio-website/services.html#ebay"
+    },
+    {
+      "id": "workflow",
+      "name": "Workflow Analysis & Automation",
+      "slug": "workflow",
+      "description": "Map your actual operation (not the idealized version), find where time and money leak out, identify 3–5 automatable repeating processes, build only the fixes with a clear ROI, integrate between existing tools.",
+      "use_cases": ["slow processes", "manual tasks", "operations", "efficiency", "redundancy", "bottleneck", "time waste"],
+      "starting_price": 600,
+      "price_range": "$600–$4,000",
+      "typical_timeline": "1–4 weeks",
+      "page_url": "https://joepalek.github.io/jlp-studio-website/services.html#workflow"
+    },
+    {
+      "id": "content-pipelines",
+      "name": "AI Content & Data Pipelines",
+      "slug": "content",
+      "description": "Bulk product description generation, competitor research, data extraction from PDFs/web/documents, market intelligence feeds, overnight batch processing with morning reports, structured data output.",
+      "use_cases": ["product descriptions", "bulk content", "data extraction", "research", "market intelligence", "competitor analysis", "SEO content"],
+      "starting_price": 1200,
+      "price_range": "$1,200–$5,000",
+      "typical_timeline": "2–4 weeks",
+      "page_url": "https://joepalek.github.io/jlp-studio-website/services.html#content"
+    },
+    {
+      "id": "custom-tools",
+      "name": "Custom Tools & Web Apps",
+      "slug": "tools",
+      "description": "Internal business tools (dashboards, trackers, calculators), customer-facing web apps, AI-powered lookup and identification tools, mobile-friendly, source code delivered with no lock-in.",
+      "use_cases": ["dashboard", "web app", "tool", "calculator", "lookup", "internal software", "no subscription", "custom software"],
+      "starting_price": 1500,
+      "price_range": "$1,500–$8,000",
+      "typical_timeline": "2–5 weeks",
+      "page_url": "https://joepalek.github.io/jlp-studio-website/services.html#tools"
+    },
+    {
+      "id": "agent-systems",
+      "name": "Agent System Development",
+      "slug": "agents",
+      "description": "Multi-agent AI systems that coordinate multiple models to handle complex multi-step tasks automatically. Runs overnight, reports by morning. Includes error handling, logging, alerting, and documentation.",
+      "use_cases": ["automation", "AI agents", "overnight processing", "complex tasks", "multi-step", "research automation", "scheduling"],
+      "starting_price": 2500,
+      "price_range": "$2,500–$12,000",
+      "typical_timeline": "4–8 weeks",
+      "page_url": "https://joepalek.github.io/jlp-studio-website/services.html#agents"
+    },
+    {
+      "id": "roi-modeling",
+      "name": "Cost Analysis & ROI Modeling",
+      "slug": "roi",
+      "description": "Current process time/cost baseline, automation potential scoring, build cost vs ongoing savings model, payback period calculation, written recommendation (build / don't build / alternative), tool and vendor comparison.",
+      "use_cases": ["is it worth it", "cost analysis", "ROI", "should I build", "budget", "feasibility", "analysis only"],
+      "starting_price": 400,
+      "price_range": "$400 flat",
+      "typical_timeline": "3–5 business days",
+      "page_url": "https://joepalek.github.io/jlp-studio-website/services.html#roi"
+    }
+  ]
+}

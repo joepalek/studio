@@ -1,51 +1,23 @@
 {
   "date": "2026-03-25",
-  "time": "2026-03-25T02:01:28.406056",
-  "verdict": "CRITICAL",
   "tools": {
-    "git": "2.53.0 OK",
-    "node": "v24.14.0 OK",
-    "npm": "11.9.0 OK",
-    "python": "3.13.7 OK",
-    "claude_code": "2.1.83 OK (above expected 2.1.78)",
-    "repomix": "1.12.0 OK",
-    "ollama": "client 0.12.10 \u2014 app not running"
+    "git": "2.53.0 - OK",
+    "node": "v24.14.0 - OK",
+    "npm": "11.9.0 - OK",
+    "python": "3.13.7 - OK",
+    "ollama": "0.18.2 - OK"
   },
-  "endpoints": {
+  "gateway": {
     "anthropic": "SET",
-    "gemini": "UP",
-    "openrouter": "UP",
-    "ollama": "DOWN \u2014 app not running",
-    "ollama_model": "gemma3:4b"
+    "gemini": "SET",
+    "openrouter": "SET",
+    "ollama": "UP - 2 models (gemma3:4b)"
   },
   "projects": {
-    "issues": 22,
-    "stale_state": [
-      "acuscan-ar(11d)",
-      "arbitrage-pulse(11d)",
-      "CTW(9d)",
-      "hibid-analyzer(11d)",
-      "job-match(11d)",
-      "listing-optimizer(11d)",
-      "nutrimind(11d)",
-      "squeeze-empire(8d)",
-      "whatnot-apps(11d)"
+    "issues": [
+      "UNCOMMITTED (2 files): _studio"
     ],
-    "uncommitted": [
-      "acuscan-ar",
-      "arbitrage-pulse",
-      "CTW",
-      "hibid-analyzer",
-      "job-match",
-      "listing-optimizer",
-      "nutrimind",
-      "sentinel-core",
-      "sentinel-performer",
-      "sentinel-viewer",
-      "squeeze-empire",
-      "whatnot-apps",
-      "_studio(9 files)"
-    ]
+    "clean": 12
   },
   "studio_files": {
     "critical": "ALL PRESENT",
@@ -54,14 +26,7 @@
     ]
   },
   "mobile_answers": "5 sessions, 5 answers pending",
-  "supervisor": {
-    "tasks_dispatched": 0,
-    "work_queue_depth": 0,
-    "agents_active": "none",
-    "ollama_up": false
-  },
-  "background_tasks": {
-    "nightly_commit": "Last run: 2026-03-24 \u2014 1 committed, 12 clean, changelogs updated, pushed to GitHub",
-    "scheduler_gap": "Scheduler last ran 2026-03-19 \u2014 6-day gap explains all stale states"
-  }
+  "verdict": "DEGRADED",
+  "verdict_reason": "2 issues: uncommitted _studio files, gateway-log.txt missing, 5 mobile answers pending",
+  "action": "Commit _studio, create gateway-log.txt, import mobile answers"
 }
