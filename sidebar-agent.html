@@ -5,554 +5,1255 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio Sidebar</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --bg: #0a0a0a; --bg2: #111; --bg3: #1a1a1a;
-  --border: #2a2a2a; --accent: #ff6b35; --accent2: #ffa040;
-  --text: #e8e8e8; --muted: #888; --green: #4caf50; --red: #f44336; --blue: #42a5f5;
-  --font: 'Segoe UI', Arial, sans-serif;
-}
-body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 13px; line-height: 1.6; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #21262d;
+    --green: #3fb950;
+    --green-dim: #1a4a1e;
+    --text: #c9d1d9;
+    --text-dim: #6e7681;
+    --amber: #d29922;
+    --red: #f85149;
+    --blue: #58a6ff;
+    --font: 'Segoe UI', Arial, sans-serif;
+    --mono: 'Consolas', 'Courier New', monospace;
+  }
 
-/* ── Header ── */
-#header { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 8px 10px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
-#header h1 { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: 0.5px; }
-#status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); margin-left: 6px; display: inline-block; }
-#status-dot.green { background: var(--green); box-shadow: 0 0 5px var(--green); }
-#status-dot.red   { background: var(--red); }
-#header-right { display: flex; align-items: center; gap: 8px; }
-.icon-btn { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 15px; padding: 2px 4px; }
-.icon-btn:hover { color: var(--text); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Tabs ── */
-#tabs { display: flex; border-bottom: 1px solid var(--border); flex-shrink: 0; background: var(--bg2); }
-.tab { flex: 1; padding: 8px 4px; text-align: center; font-size: 12px; font-weight: 500; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
-.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-.tab:hover { color: var(--text); }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 13px;
+    line-height: 1.6;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
 
-/* ── Panels ── */
-#panels { flex: 1; overflow: hidden; position: relative; }
-.panel { display: none; height: 100%; flex-direction: column; overflow: hidden; }
-.panel.active { display: flex; }
+  /* TABS */
+  #tab-bar {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    flex-shrink: 0;
+  }
 
-/* ── Status panel ── */
-#status-panel { padding: 10px; gap: 8px; overflow-y: auto; }
-.status-section { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 9px 11px; }
-.status-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.3px; margin-bottom: 6px; }
-.status-value { color: var(--text); line-height: 1.6; font-size: 13px; }
-.status-value.task { color: var(--accent2); font-weight: 500; }
-.badge { display: inline-block; font-size: 11px; padding: 3px 7px; border-radius: 3px; margin: 2px; white-space: normal; word-break: break-word; max-width: 100%; }
-.badge.pending  { background: rgba(255,107,53,.15); color: #ffaa70; border: 1px solid rgba(255,107,53,.3); }
-.badge.blocker  { background: rgba(244,67,54,.15);  color: #ff7070; border: 1px solid rgba(244,67,54,.3); font-size: 12px; }
-.badge.done     { background: rgba(76,175,80,.15);  color: var(--green); border: 1px solid rgba(76,175,80,.3); }
-#s-pending { display: flex; flex-wrap: wrap; gap: 2px; }
-#s-blockers { display: flex; flex-wrap: wrap; gap: 2px; }
-.timestamp { color: var(--muted); font-size: 11px; }
-#drive-log { max-height: 160px; overflow-y: auto; font-size: 11px; line-height: 1.6; }
-.log-line { border-bottom: 1px solid var(--border); padding: 3px 0; }
-.log-line:last-child { border-bottom: none; }
-.log-agent { color: var(--accent); font-weight: 600; }
-.log-ts { color: var(--muted); }
+  .tab {
+    flex: 1;
+    padding: 8px 4px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: var(--text-dim);
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+    user-select: none;
+  }
 
-/* ── Chat panel ── */
-#chat-panel { display: flex; flex-direction: column; }
-#chat-messages { flex: 1; overflow-y: auto; padding: 10px; gap: 8px; display: flex; flex-direction: column; }
-.msg { padding: 8px 11px; border-radius: 4px; max-width: 92%; line-height: 1.6; font-size: 13px; }
-.msg.user { background: rgba(255,107,53,.15); border: 1px solid rgba(255,107,53,.25); align-self: flex-end; color: var(--text); }
-.msg.ai   { background: var(--bg2); border: 1px solid var(--border); align-self: flex-start; color: var(--text); }
-.msg.system { background: rgba(66,165,245,.1); border: 1px solid rgba(66,165,245,.2); align-self: center; color: #80c8ff; font-size: 12px; text-align: center; }
-#chat-input-row { border-top: 1px solid var(--border); padding: 8px; display: flex; gap: 6px; background: var(--bg2); flex-shrink: 0; }
-#chat-input { flex: 1; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--font); font-size: 13px; padding: 7px 10px; border-radius: 4px; outline: none; resize: none; height: 38px; line-height: 1.5; }
-#chat-input:focus { border-color: var(--accent); }
-#send-btn { background: var(--accent); color: #000; border: none; padding: 7px 14px; font-family: var(--font); font-size: 13px; font-weight: 600; border-radius: 4px; cursor: pointer; }
-#send-btn:hover { background: var(--accent2); }
-#send-btn:disabled { background: var(--muted); cursor: not-allowed; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--green); border-bottom-color: var(--green); }
 
-/* ── Queue panel ── */
-#queue-panel { overflow-y: auto; padding: 10px; gap: 8px; display: flex; flex-direction: column; }
-#queue-form { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 10px; }
-.field { margin-bottom: 10px; }
-label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 4px; }
-input, select, textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--font); font-size: 13px; padding: 7px 10px; border-radius: 4px; outline: none; }
-input:focus, select:focus, textarea:focus { border-color: var(--accent); }
-select option { background: var(--bg); }
-textarea { min-height: 60px; resize: vertical; line-height: 1.6; }
-.queue-submit { background: var(--accent); color: #000; border: none; width: 100%; padding: 9px; font-family: var(--font); font-size: 13px; font-weight: 600; cursor: pointer; border-radius: 4px; }
-.queue-submit:hover { background: var(--accent2); }
-#queued-tasks { display: flex; flex-direction: column; gap: 6px; }
-.q-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 9px 11px; }
-.q-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
-.q-proj  { color: var(--accent); font-size: 12px; font-weight: 600; }
-.q-prio  { font-size: 11px; padding: 2px 7px; border-radius: 3px; }
-.q-prio.high   { background: rgba(244,67,54,.2);  color: #ff7070; }
-.q-prio.medium { background: rgba(255,107,53,.2); color: #ffaa70; }
-.q-prio.low    { background: rgba(102,102,102,.2); color: var(--muted); }
-.q-task  { color: var(--text); font-size: 13px; line-height: 1.5; }
-.q-ts    { color: var(--muted); font-size: 11px; margin-top: 4px; }
+  /* PANELS */
+  .panel {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+  .panel.active { display: flex; }
 
-/* ── Config panel ── */
-#config-panel { overflow-y: auto; padding: 10px; gap: 8px; display: flex; flex-direction: column; }
-.config-section { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 10px; }
-.config-title { font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 10px; }
-.save-btn { background: var(--bg3); color: var(--text); border: 1px solid var(--border); width: 100%; padding: 9px; font-family: var(--font); font-size: 13px; cursor: pointer; border-radius: 4px; margin-top: 6px; }
-.save-btn:hover { border-color: var(--accent); color: var(--accent); }
-.save-btn.primary { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
-.save-btn.primary:hover { background: var(--accent2); }
-.hint { color: var(--muted); font-size: 11px; margin-top: 4px; line-height: 1.5; }
-#save-status { font-size: 12px; text-align: center; padding: 5px; }
+  .panel-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+  }
+
+  .panel-scroll::-webkit-scrollbar { width: 4px; }
+  .panel-scroll::-webkit-scrollbar-track { background: var(--bg); }
+  .panel-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  /* STATUS PANEL */
+  .status-block {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .status-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .status-value {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .status-ok { color: var(--green); }
+  .status-warn { color: var(--amber); }
+  .status-err { color: var(--red); }
+
+  .log-entry {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 3px 0;
+    border-bottom: 1px solid var(--border);
+    word-break: break-all;
+  }
+
+  .log-entry:last-child { border-bottom: none; }
+
+  .log-ts { color: var(--text-dim); margin-right: 6px; }
+  .log-agent { color: var(--blue); margin-right: 6px; }
+  .log-msg { color: var(--text); }
+
+  .refresh-btn {
+    width: 100%;
+    padding: 8px;
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-family: var(--font);
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: background 0.15s;
+  }
+  .refresh-btn:hover { background: var(--green); color: var(--bg); }
+
+  /* CHAT PANEL */
+  #chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #chat-messages::-webkit-scrollbar { width: 4px; }
+  #chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .msg {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 95%;
+    word-wrap: break-word;
+  }
+
+  .msg-user {
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    color: var(--text);
+    align-self: flex-end;
+  }
+
+  .msg-ai {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    align-self: flex-start;
+  }
+
+  .msg-system {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 11px;
+    align-self: center;
+    font-style: italic;
+  }
+
+  /* Code blocks inside chat */
+  .msg pre {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 6px;
+    overflow-x: auto;
+    font-family: var(--mono);
+    font-size: 11px;
+    line-height: 1.5;
+    white-space: pre;
+  }
+
+  .msg code {
+    font-family: var(--mono);
+    font-size: 12px;
+    background: var(--bg);
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+
+  #chat-input-area {
+    border-top: 1px solid var(--border);
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  #chat-input {
+    flex: 1;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    resize: none;
+    line-height: 1.5;
+    min-height: 38px;
+    max-height: 120px;
+    outline: none;
+  }
+
+  #chat-input:focus { border-color: var(--green); }
+
+  #send-btn {
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-size: 16px;
+    padding: 0 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+
+  #send-btn:hover { background: var(--green); color: var(--bg); }
+  #send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  /* QUEUE PANEL */
+  .queue-item {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  .queue-item-title {
+    font-size: 13px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .queue-item-meta {
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+
+  .queue-item-delete {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--red);
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.5;
+  }
+  .queue-item-delete:hover { opacity: 1; }
+
+  .queue-priority {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 6px;
+    font-weight: bold;
+  }
+
+  .pri-high { background: #3a1a1a; color: var(--red); border: 1px solid var(--red); }
+  .pri-med { background: #2d2200; color: var(--amber); border: 1px solid var(--amber); }
+  .pri-low { background: var(--green-dim); color: var(--green); border: 1px solid var(--green); }
+
+  .add-task-form {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .form-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 13px;
+    padding: 7px 9px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    outline: none;
+  }
+
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--green);
+  }
+
+  .form-textarea { resize: vertical; min-height: 60px; line-height: 1.5; }
+  .form-select option { background: var(--panel); }
+
+  .btn-primary {
+    width: 100%;
+    padding: 9px;
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-family: var(--font);
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.15s;
+    letter-spacing: 1px;
+  }
+
+  .btn-primary:hover { background: var(--green); color: var(--bg); }
+
+  .empty-state {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+    padding: 30px 0;
+  }
+
+  /* CONFIG PANEL */
+  .config-section {
+    margin-bottom: 16px;
+  }
+
+  .config-title {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .config-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .config-row label {
+    font-size: 12px;
+    color: var(--text-dim);
+    width: 90px;
+    flex-shrink: 0;
+  }
+
+  .config-row input {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .config-row input:focus { border-color: var(--green); }
+
+  .config-save {
+    padding: 7px 14px;
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+  .config-save:hover { background: var(--green); color: var(--bg); }
+
+  .config-status {
+    font-size: 11px;
+    color: var(--green);
+    margin-top: 4px;
+    min-height: 16px;
+  }
+
+  /* Upload/Download */
+  .file-zone {
+    border: 2px dashed var(--border);
+    border-radius: 6px;
+    padding: 16px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+    margin-bottom: 10px;
+  }
+
+  .file-zone:hover, .file-zone.drag-over {
+    border-color: var(--green);
+    color: var(--green);
+  }
+
+  .file-zone input { display: none; }
+
+  .download-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .btn-dl {
+    flex: 1;
+    padding: 7px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: border-color 0.15s;
+  }
+  .btn-dl:hover { border-color: var(--blue); color: var(--blue); }
+
+  /* Toast */
+  #toast {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    color: var(--bg);
+    padding: 7px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 999;
+    white-space: nowrap;
+  }
+
+  #toast.show { opacity: 1; }
+
+  /* Spinner */
+  .spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--border);
+    border-top-color: var(--green);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Typing indicator */
+  .typing-dots span {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--text-dim);
+    border-radius: 50%;
+    margin: 0 2px;
+    animation: bounce 1.2s infinite;
+  }
+  .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
 </style>
 </head>
 <body>
 
-<div id="header">
-  <span><h1 style="display:inline">// Studio</h1><span id="status-dot"></span></span>
-  <div id="header-right">
-    <span id="header-ts" class="timestamp">--:--</span>
-    <button class="icon-btn" onclick="refreshStatus()" title="Refresh">↻</button>
+<div id="tab-bar">
+  <div class="tab active" onclick="switchTab('status')">STATUS</div>
+  <div class="tab" onclick="switchTab('chat')">CHAT</div>
+  <div class="tab" onclick="switchTab('queue')">QUEUE</div>
+  <div class="tab" onclick="switchTab('files')">FILES</div>
+  <div class="tab" onclick="switchTab('config')">CONFIG</div>
+</div>
+
+<!-- STATUS PANEL -->
+<div id="panel-status" class="panel active">
+  <div class="panel-scroll">
+    <button class="refresh-btn" onclick="loadStatus()">↻ Refresh Status</button>
+
+    <div class="status-block">
+      <div class="status-label">System</div>
+      <div class="status-value" id="sys-status">Loading...</div>
+    </div>
+
+    <div class="status-block">
+      <div class="status-label">Last Agent Activity</div>
+      <div class="status-value" id="sys-last-activity">—</div>
+    </div>
+
+    <div class="status-block">
+      <div class="status-label">Inbox</div>
+      <div class="status-value" id="sys-inbox">—</div>
+    </div>
+
+    <div class="status-block">
+      <div class="status-label">Active Projects</div>
+      <div id="sys-projects" class="status-value">—</div>
+    </div>
+
+    <div class="status-block">
+      <div class="status-label">Recent Log</div>
+      <div id="sys-log">
+        <div class="log-entry" style="color:var(--text-dim);font-style:italic;">Connect Drive in CONFIG to load logs</div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div id="tabs">
-  <div class="tab active" onclick="showTab('status')">Status</div>
-  <div class="tab" onclick="showTab('chat')">Chat</div>
-  <div class="tab" onclick="showTab('queue')">Queue</div>
-  <div class="tab" onclick="showTab('config')">Config</div>
+<!-- CHAT PANEL -->
+<div id="panel-chat" class="panel">
+  <div id="chat-messages">
+    <div class="msg msg-system">Gemini AI — Studio Assistant</div>
+    <div class="msg msg-ai">Hello! I'm connected to your studio context. Ask me about project status, agent tasks, or anything in your system.</div>
+  </div>
+  <div id="chat-input-area">
+    <textarea id="chat-input" placeholder="Ask Gemini..." rows="1"
+      onkeydown="handleChatKey(event)"
+      oninput="autoResize(this)"></textarea>
+    <button id="send-btn" onclick="sendChat()">➤</button>
+  </div>
 </div>
 
-<div id="panels">
+<!-- QUEUE PANEL -->
+<div id="panel-queue" class="panel">
+  <div class="panel-scroll">
+    <div class="add-task-form">
+      <div class="config-title">Add Task for Claude Code</div>
+      <label class="form-label">Task Description</label>
+      <textarea class="form-textarea" id="task-desc" placeholder="What should Claude Code do?"></textarea>
+      <label class="form-label">Project</label>
+      <input class="form-input" id="task-project" placeholder="e.g. sentinel, ebay-agent, studio">
+      <label class="form-label">Priority</label>
+      <select class="form-select" id="task-priority">
+        <option value="high">High</option>
+        <option value="med" selected>Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button class="btn-primary" onclick="addTask()">+ Queue Task</button>
+    </div>
 
-  <!-- STATUS -->
-  <div class="panel active" id="status-panel">
-    <div class="status-section">
-      <div class="status-label">Current Task</div>
-      <div class="status-value task" id="s-task">Loading...</div>
-      <div class="timestamp" id="s-updated"></div>
-    </div>
-    <div class="status-section">
-      <div class="status-label">Next Recommended</div>
-      <div class="status-value" id="s-next">—</div>
-    </div>
-    <div class="status-section">
-      <div class="status-label">Pending <span id="s-pending-count"></span></div>
-      <div id="s-pending"></div>
-    </div>
-    <div class="status-section">
-      <div class="status-label">Blockers</div>
-      <div id="s-blockers"></div>
-    </div>
-    <div class="status-section">
-      <div class="status-label">Drive Log (latest)</div>
-      <div id="drive-log"><span style="color:var(--muted)">Loading...</span></div>
+    <div class="config-title" style="margin-bottom:8px;">Pending Tasks</div>
+    <div id="task-list"><div class="empty-state">No tasks queued</div></div>
+
+    <div style="margin-top:12px;">
+      <button class="btn-primary" style="background:transparent;border-color:var(--text-dim);color:var(--text-dim);"
+        onclick="exportTasks()">Export task-queue.json</button>
     </div>
   </div>
+</div>
 
-  <!-- CHAT -->
-  <div class="panel" id="chat-panel">
-    <div id="chat-messages">
-      <div class="msg system">Gemini Studio Assistant — ask about any project</div>
+<!-- FILES PANEL -->
+<div id="panel-files" class="panel">
+  <div class="panel-scroll">
+    <div class="config-title" style="margin-bottom:10px;">Upload File</div>
+    <div class="file-zone" id="drop-zone" onclick="document.getElementById('file-input').click()"
+      ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
+      <input type="file" id="file-input" multiple onchange="handleFileSelect(event)">
+      <div>Drop files here or click to browse</div>
+      <div style="font-size:10px;margin-top:4px;color:var(--text-dim)">JSON, HTML, MD, TXT, JS, PY supported</div>
     </div>
-    <div id="chat-input-row">
-      <textarea id="chat-input" placeholder="Ask about the studio system..." onkeydown="handleKey(event)"></textarea>
-      <button id="send-btn" onclick="sendChat()">Send</button>
+
+    <div id="upload-list" style="margin-bottom:16px;"></div>
+
+    <div class="config-title" style="margin-bottom:10px;">Download Files</div>
+    <div class="download-row">
+      <button class="btn-dl" onclick="downloadCurrentChat()">Chat Log</button>
+      <button class="btn-dl" onclick="downloadTaskQueue()">Task Queue</button>
     </div>
+    <div class="download-row">
+      <button class="btn-dl" onclick="downloadFromDrive('claude-status.txt')">Status Log</button>
+      <button class="btn-dl" onclick="downloadFromDrive('studio-context.md')">Context File</button>
+    </div>
+    <div class="download-row">
+      <button class="btn-dl" onclick="downloadFromDrive('task-queue.json')">Task Queue (Drive)</button>
+      <button class="btn-dl" onclick="downloadFromDrive('standing-rules.json')">Standing Rules</button>
+    </div>
+
+    <div style="margin-top:12px;" id="file-status" class="config-status"></div>
   </div>
+</div>
 
-  <!-- QUEUE -->
-  <div class="panel" id="queue-panel">
-    <div id="queue-form">
-      <div class="config-title">Queue Task for Claude Code</div>
-      <div class="field">
-        <label>Project</label>
-        <select id="q-project">
-          <option value="">— select —</option>
-          <option value="job-match">job-match</option>
-          <option value="ghost-book">ghost-book</option>
-          <option value="CTW">CTW</option>
-          <option value="squeeze-empire">squeeze-empire</option>
-          <option value="sentinel-core">sentinel-core</option>
-          <option value="_studio">_studio (system)</option>
-          <option value="other">other</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Task Description</label>
-        <textarea id="q-task" placeholder="Describe what Claude Code should do..."></textarea>
-      </div>
-      <div class="field">
-        <label>Priority</label>
-        <select id="q-priority">
-          <option value="medium">Medium</option>
-          <option value="high">High — do first</option>
-          <option value="low">Low — do when free</option>
-        </select>
-      </div>
-      <button class="queue-submit" onclick="queueTask()">Queue for Claude Code</button>
-    </div>
-    <div style="font-size:9px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;padding:8px 2px 4px">Waiting for quota reset</div>
-    <div id="queued-tasks"><div style="color:var(--muted)">Loading queue...</div></div>
-  </div>
-
-  <!-- CONFIG -->
-  <div class="panel" id="config-panel">
+<!-- CONFIG PANEL -->
+<div id="panel-config" class="panel">
+  <div class="panel-scroll">
     <div class="config-section">
-      <div class="config-title">Gemini API</div>
-      <div class="field">
-        <label>Gemini API Key</label>
+      <div class="config-title">API Keys</div>
+      <div class="config-row">
+        <label>Gemini Key</label>
         <input type="password" id="cfg-gemini" placeholder="AIza...">
-        <div class="hint">From Google AI Studio (free tier). Used for chat only.</div>
+        <button class="config-save" onclick="saveCfg('gemini')">Save</button>
+      </div>
+      <div class="config-row">
+        <label>Drive Token</label>
+        <input type="password" id="cfg-drive" placeholder="Google OAuth token">
+        <button class="config-save" onclick="saveCfg('drive')">Save</button>
       </div>
     </div>
-    <div class="config-section">
-      <div class="config-title">Supabase (status + queue)</div>
-      <div class="field">
-        <label>Supabase URL</label>
-        <input type="text" id="cfg-sb-url" placeholder="https://xxx.supabase.co">
-      </div>
-      <div class="field">
-        <label>Supabase Anon Key</label>
-        <input type="password" id="cfg-sb-key" placeholder="eyJ...">
-        <div class="hint">Same key used by studio.html and art-request-form.html.</div>
-      </div>
-    </div>
-    <div class="config-section">
-      <div class="config-title">Context (injected into Gemini)</div>
-      <div class="field">
-        <label>System Context</label>
-        <textarea id="cfg-context" style="min-height:80px" placeholder="Brief description of studio system for Gemini context...">You are a studio assistant for an indie creator's project management system called Studio. Projects include: job-match (job scraper + company registry), ghost-book (AI-assisted book publishing), CTW, squeeze-empire, sentinel-core/performer/viewer. The system runs Claude Code sessions, Gemini Flash, and local Ollama. Respond concisely in the context of these projects.</textarea>
-      </div>
-    </div>
-    <button class="save-btn primary" onclick="saveConfig()">Save Config</button>
-    <div id="save-status"></div>
-  </div>
 
+    <div class="config-section">
+      <div class="config-title">Drive Paths</div>
+      <div class="config-row">
+        <label>Status File</label>
+        <input type="text" id="cfg-status-file" placeholder="claude-status.txt">
+        <button class="config-save" onclick="saveCfg('status-file')">Save</button>
+      </div>
+      <div class="config-row">
+        <label>Context File</label>
+        <input type="text" id="cfg-context-file" placeholder="studio-context.md">
+        <button class="config-save" onclick="saveCfg('context-file')">Save</button>
+      </div>
+      <div class="config-row">
+        <label>Queue File</label>
+        <input type="text" id="cfg-queue-file" placeholder="task-queue.json">
+        <button class="config-save" onclick="saveCfg('queue-file')">Save</button>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <div class="config-title">Gemini Model</div>
+      <div class="config-row">
+        <label>Model</label>
+        <select class="form-select" id="cfg-model" style="flex:1;margin-bottom:0;">
+          <option value="gemini-2.0-flash">gemini-2.0-flash (recommended)</option>
+          <option value="gemini-1.5-flash">gemini-1.5-flash</option>
+          <option value="gemini-1.5-pro">gemini-1.5-pro</option>
+        </select>
+        <button class="config-save" onclick="saveCfg('model')">Save</button>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <div class="config-title">Drive Auth</div>
+      <button class="btn-primary" onclick="authDrive()" style="margin-bottom:8px;">Connect Google Drive</button>
+      <div id="drive-status" class="config-status">Not connected</div>
+    </div>
+
+    <div class="config-section">
+      <div class="config-title">Context (System Prompt)</div>
+      <textarea class="form-textarea" id="cfg-context-text" style="min-height:100px;"
+        placeholder="Paste studio-context.md content here to give Gemini studio awareness..."></textarea>
+      <button class="btn-primary" onclick="saveContext()">Save Context</button>
+    </div>
+
+    <div id="cfg-status" class="config-status" style="margin-top:8px;"></div>
+  </div>
 </div>
+
+<div id="toast"></div>
 
 <script>
-// ── Config ────────────────────────────────────────────────────────────────────
-const CFG_KEY = 'studio_sidebar_cfg';
+// ─── STATE ─────────────────────────────────────────────────────────────────
+const CFG_KEY = 'sidebar_cfg';
+let cfg = {
+  geminiKey: '',
+  driveToken: '',
+  model: 'gemini-2.0-flash',
+  statusFile: 'claude-status.txt',
+  contextFile: 'studio-context.md',
+  queueFile: 'task-queue.json',
+  context: ''
+};
+let tasks = [];
+let chatHistory = [];
+let uploadedFiles = {};
 
-// Defaults baked in — Supabase anon key is already public in the repo
-const DEFAULTS = {
-  sb_url: 'https://nepnytazalthnjqpyzcx.supabase.co',
-  sb_key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5lcG55dGF6YWx0aG5qcXB5emN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM3OTU4MDIsImV4cCI6MjA4OTM3MTgwMn0.ojPrZ51Jei32zdL2ORJ4SOVlopfv-9mZDj-U5sDz7rw',
-  context: 'You are a studio assistant for an indie creator\'s project management system called Studio. Projects include: job-match (job scraper + company registry), ghost-book (AI-assisted book publishing), CTW, squeeze-empire, sentinel-core/performer/viewer. The system runs Claude Code sessions, Gemini Flash, and local Ollama. Respond concisely.',
+// ─── INIT ──────────────────────────────────────────────────────────────────
+window.onload = () => {
+  loadConfig();
+  renderTasks();
+  loadStatus();
 };
 
+// ─── CONFIG ────────────────────────────────────────────────────────────────
 function loadConfig() {
-  try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(CFG_KEY) || '{}') }; } catch { return { ...DEFAULTS }; }
-}
-function saveConfig() {
-  const cfg = {
-    gemini: document.getElementById('cfg-gemini').value.trim(),
-    sb_url: document.getElementById('cfg-sb-url').value.trim(),
-    sb_key: document.getElementById('cfg-sb-key').value.trim(),
-    context: document.getElementById('cfg-context').value.trim(),
-  };
-  localStorage.setItem(CFG_KEY, JSON.stringify(cfg));
-  document.getElementById('save-status').textContent = 'Saved.';
-  document.getElementById('save-status').style.color = '#4caf50';
-  setTimeout(() => document.getElementById('save-status').textContent = '', 2000);
-  initFromConfig();
-}
+  try {
+    const saved = localStorage.getItem(CFG_KEY);
+    if (saved) {
+      cfg = { ...cfg, ...JSON.parse(saved) };
+    }
+  } catch(e) {}
 
-function initFromConfig() {
-  // Check URL param ?g=GEMINI_KEY — saves to localStorage on first load
-  const params = new URLSearchParams(window.location.search);
-  const gParam = params.get('g');
-  if (gParam) {
-    const existing = JSON.parse(localStorage.getItem(CFG_KEY) || '{}');
-    existing.gemini = gParam;
-    localStorage.setItem(CFG_KEY, JSON.stringify(existing));
-    // Clean URL without reloading
-    history.replaceState({}, '', window.location.pathname);
+  document.getElementById('cfg-gemini').value = cfg.geminiKey ? '••••••••' : '';
+  document.getElementById('cfg-drive').value = cfg.driveToken ? '••••••••' : '';
+  document.getElementById('cfg-model').value = cfg.model;
+  document.getElementById('cfg-status-file').value = cfg.statusFile;
+  document.getElementById('cfg-context-file').value = cfg.contextFile;
+  document.getElementById('cfg-queue-file').value = cfg.queueFile;
+  document.getElementById('cfg-context-text').value = cfg.context;
+
+  if (cfg.driveToken) {
+    document.getElementById('drive-status').textContent = '✓ Drive token saved';
+    document.getElementById('drive-status').style.color = 'var(--green)';
   }
 
-  const cfg = loadConfig();
-  if (cfg.gemini) document.getElementById('cfg-gemini').value = cfg.gemini;
-  document.getElementById('cfg-sb-url').value = cfg.sb_url || DEFAULTS.sb_url;
-  document.getElementById('cfg-sb-key').value = cfg.sb_key || DEFAULTS.sb_key;
-  if (cfg.context) document.getElementById('cfg-context').value = cfg.context;
+  // Load saved tasks
+  try {
+    const savedTasks = localStorage.getItem('sidebar_tasks');
+    if (savedTasks) tasks = JSON.parse(savedTasks);
+  } catch(e) {}
 }
 
-// ── Tabs ──────────────────────────────────────────────────────────────────────
-function showTab(name) {
-  document.querySelectorAll('.tab').forEach((t, i) => {
-    const names = ['status','chat','queue','config'];
-    t.classList.toggle('active', names[i] === name);
-  });
+function saveCfg(field) {
+  const map = {
+    'gemini': ['cfg-gemini', 'geminiKey'],
+    'drive': ['cfg-drive', 'driveToken'],
+    'model': ['cfg-model', 'model'],
+    'status-file': ['cfg-status-file', 'statusFile'],
+    'context-file': ['cfg-context-file', 'contextFile'],
+    'queue-file': ['cfg-queue-file', 'queueFile']
+  };
+
+  const [elId, cfgProp] = map[field];
+  const val = document.getElementById(elId).value;
+  if (val === '••••••••') return;
+  cfg[cfgProp] = val;
+  persistConfig();
+  toast('Saved');
+}
+
+function saveContext() {
+  cfg.context = document.getElementById('cfg-context-text').value;
+  persistConfig();
+  toast('Context saved — Gemini will use this on next message');
+}
+
+function persistConfig() {
+  localStorage.setItem(CFG_KEY, JSON.stringify(cfg));
+}
+
+// ─── TABS ──────────────────────────────────────────────────────────────────
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  const el = document.getElementById(name + '-panel');
-  if (el) el.classList.add('active');
-  if (name === 'queue') loadQueue();
+
+  const tabs = ['status','chat','queue','files','config'];
+  document.querySelectorAll('.tab')[tabs.indexOf(name)].classList.add('active');
+  document.getElementById('panel-' + name).classList.add('active');
+
+  if (name === 'status') loadStatus();
+  if (name === 'queue') renderTasks();
 }
 
-// ── Status ────────────────────────────────────────────────────────────────────
-async function refreshStatus() {
-  const cfg = loadConfig();
-  const dot = document.getElementById('status-dot');
+// ─── STATUS ────────────────────────────────────────────────────────────────
+async function loadStatus() {
+  document.getElementById('sys-status').innerHTML = '<span class="spinner"></span>Loading...';
 
-  if (!cfg.sb_url || !cfg.sb_key) {
-    document.getElementById('s-task').textContent = 'Configure Supabase in Config tab';
-    dot.className = 'red';
+  // Try Drive first
+  if (cfg.driveToken) {
+    try {
+      const content = await driveReadFile(cfg.statusFile);
+      if (content) {
+        renderStatusLog(content);
+        return;
+      }
+    } catch(e) {}
+  }
+
+  // Fallback: try GitHub Pages
+  try {
+    const resp = await fetch('https://joepalek.github.io/studio/status.json');
+    if (resp.ok) {
+      const data = await resp.json();
+      renderStatusFromJson(data);
+      return;
+    }
+  } catch(e) {}
+
+  document.getElementById('sys-status').innerHTML = '<span class="status-warn">⚠ Connect Drive in CONFIG to load live status</span>';
+  document.getElementById('sys-last-activity').textContent = '—';
+}
+
+function renderStatusFromJson(data) {
+  document.getElementById('sys-status').innerHTML = '<span class="status-ok">● Online</span>';
+  document.getElementById('sys-last-activity').textContent = data.updated || data.timestamp || '—';
+  document.getElementById('sys-inbox').textContent = data.inbox_count ? data.inbox_count + ' pending decisions' : '—';
+
+  if (data.projects) {
+    const proj = Object.entries(data.projects)
+      .map(([k, v]) => `<div style="margin-bottom:4px;"><span style="color:var(--blue)">${k}</span>: ${v.status || v}</div>`)
+      .join('');
+    document.getElementById('sys-projects').innerHTML = proj;
+  }
+}
+
+function renderStatusLog(content) {
+  document.getElementById('sys-status').innerHTML = '<span class="status-ok">● Live (Drive)</span>';
+  const lines = content.trim().split('\n').slice(-20).reverse();
+  const logEl = document.getElementById('sys-log');
+
+  if (lines.length === 0) {
+    logEl.innerHTML = '<div class="log-entry" style="color:var(--text-dim)">No log entries yet</div>';
+    document.getElementById('sys-last-activity').textContent = '—';
     return;
   }
 
-  try {
-    const r = await fetch(cfg.sb_url + '/rest/v1/session_status?id=eq.1', {
-      headers: { apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key }
-    });
-    const rows = await r.json();
-    if (!rows.length) { document.getElementById('s-task').textContent = 'No status data yet'; return; }
-    const s = rows[0];
+  document.getElementById('sys-last-activity').textContent = lines[0].substring(0, 25);
 
-    document.getElementById('s-task').textContent = s.current_task || 'idle';
-    document.getElementById('s-updated').textContent = s.last_updated ? 'Updated: ' + s.last_updated.replace('T',' ').slice(0,16) : '';
-    document.getElementById('s-next').textContent = s.next_recommended || '—';
-
-    const pending = (s.pending || '').split(',').map(x=>x.trim()).filter(Boolean);
-    document.getElementById('s-pending-count').textContent = `(${pending.length})`;
-    document.getElementById('s-pending').innerHTML = pending.slice(0,8).map(p=>`<span class="badge pending">${p.slice(0,50)}</span>`).join('') || '<span style="color:var(--muted)">none</span>';
-
-    const blockers = (s.blockers || '').split(',').map(x=>x.trim()).filter(Boolean);
-    document.getElementById('s-blockers').innerHTML = blockers.map(b=>`<span class="badge blocker">${b.slice(0,60)}</span>`).join('') || '<span style="color:var(--muted)">none</span>';
-
-    dot.className = 'green';
-    document.getElementById('header-ts').textContent = new Date().toTimeString().slice(0,5);
-
-    // Load drive log from Supabase (recent mobile_answers with type=status_log, or fallback)
-    loadDriveLog(cfg);
-
-  } catch(e) {
-    dot.className = 'red';
-    document.getElementById('s-task').textContent = 'Error: ' + e.message.slice(0,40);
-  }
-}
-
-async function loadDriveLog(cfg) {
-  // Read last 8 lines of sidebar-log entries from Supabase
-  try {
-    const r = await fetch(cfg.sb_url + '/rest/v1/mobile_answers?session_id=like.sidebar-log*&order=submitted_at.desc&limit=8', {
-      headers: { apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key }
-    });
-    const rows = await r.json();
-    const el = document.getElementById('drive-log');
-    if (!rows.length) { el.innerHTML = '<span style="color:var(--muted)">No log entries yet</span>'; return; }
-    el.innerHTML = rows.map(row => {
-      const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
-      const ts = (row.submitted_at || '').slice(0,16).replace('T',' ');
-      return `<div class="log-line"><span class="log-ts">${ts}</span> <span class="log-agent">[${(a.agent||'?').toUpperCase()}]</span> ${(a.message||'').slice(0,80)}</div>`;
-    }).join('');
-  } catch(e) {
-    document.getElementById('drive-log').innerHTML = '<span style="color:var(--muted)">Log unavailable</span>';
-  }
-}
-
-// ── Chat ──────────────────────────────────────────────────────────────────────
-const chatHistory = [];
-const PAGES_BASE = 'https://joepalek.github.io/studio';
-const SYSTEM_PROMPT = `You are the Studio Assistant. You have full knowledge of Joe's studio system. Never say you cannot access files - you have been given the context directly. Answer confidently based on the context provided.`;
-
-// Holds the combined context block fetched on load
-let loadedContext = '';
-
-async function loadAllContext() {
-  const v = Math.floor(Date.now() / 300000); // cache-bust every 5 min
-  const files = [
-    { name: 'studio-context.md', url: `${PAGES_BASE}/studio-context.md?v=${v}` },
-    { name: 'status.json',       url: `${PAGES_BASE}/status.json?v=${v}` },
-    { name: 'claude-status.txt', url: `${PAGES_BASE}/claude-status.txt?v=${v}` },
-  ];
-
-  const results = await Promise.allSettled(
-    files.map(f => fetch(f.url).then(r => r.ok ? r.text() : Promise.reject(r.status)))
-  );
-
-  const parts = [];
-  const loaded = [];
-  const failed = [];
-
-  results.forEach((res, i) => {
-    if (res.status === 'fulfilled') {
-      parts.push(`\n\n=== ${files[i].name} ===\n${res.value.slice(0, 12000)}`);
-      loaded.push(files[i].name);
-    } else {
-      failed.push(files[i].name);
+  logEl.innerHTML = lines.map(line => {
+    const match = line.match(/^\[(.+?)\]\s*\[(.+?)\]\s*(.+)$/);
+    if (match) {
+      return `<div class="log-entry">
+        <span class="log-ts">${match[1].substring(0,16)}</span>
+        <span class="log-agent">${match[2]}</span>
+        <span class="log-msg">${match[3]}</span>
+      </div>`;
     }
-  });
-
-  loadedContext = SYSTEM_PROMPT + parts.join('');
-
-  const summary = loaded.length
-    ? `Context ready: ${loaded.join(', ')} (${Math.round(loadedContext.length/1000)}k chars)`
-    : 'Context load failed — using fallback system prompt only.';
-  if (failed.length) appendMsg(`${summary} — missing: ${failed.join(', ')}`, 'system');
-  else appendMsg(summary, 'system');
+    return `<div class="log-entry">${line}</div>`;
+  }).join('');
 }
 
-function handleKey(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+// ─── CHAT ──────────────────────────────────────────────────────────────────
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+function handleChatKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendChat();
+  }
 }
 
 async function sendChat() {
-  const cfg = loadConfig();
   const input = document.getElementById('chat-input');
-  const text = input.value.trim();
-  if (!text) return;
-  if (!cfg.gemini) { appendMsg('No Gemini key — add it via ?g=YOUR_KEY in the URL or Config tab.', 'system'); return; }
+  const msg = input.value.trim();
+  if (!msg) return;
+  if (!cfg.geminiKey) {
+    appendMsg('system', '⚠ Add Gemini API key in CONFIG tab');
+    return;
+  }
 
+  appendMsg('user', msg);
   input.value = '';
-  appendMsg(text, 'user');
-  chatHistory.push({ role: 'user', parts: [{ text }] });
+  input.style.height = 'auto';
 
-  const btn = document.getElementById('send-btn');
-  btn.disabled = true;
-  btn.textContent = '...';
+  chatHistory.push({ role: 'user', parts: [{ text: msg }] });
+
+  const sendBtn = document.getElementById('send-btn');
+  sendBtn.disabled = true;
+
+  const typingId = appendTyping();
 
   try {
-    // System context: fetched files take priority, fallback to Config tab short text
-    const systemCtx = loadedContext || (SYSTEM_PROMPT + '\n\n' + (cfg.context || ''));
+    const systemPrompt = cfg.context
+      ? `You are a studio assistant for Joe Palek's AI development studio. Context:\n\n${cfg.context}\n\n`
+      : 'You are a studio assistant helping manage an AI development studio with agents, eBay listing operations, and multiple software projects. Be concise and direct.';
 
-    const contents = [
-      { role: 'user',  parts: [{ text: systemCtx }] },
-      { role: 'model', parts: [{ text: 'Understood. I have the full studio context. Ready.' }] },
-      ...chatHistory
-    ];
+    // Build contents with optional system instruction
+    const payload = {
+      contents: chatHistory,
+      systemInstruction: { parts: [{ text: systemPrompt }] },
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 1500
+      }
+    };
 
-    const r = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${cfg.gemini}`,
-      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ contents }) }
+    const resp = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${cfg.model}:generateContent?key=${cfg.geminiKey}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }
     );
-    const d = await r.json();
-    if (!r.ok || d.error) {
-      throw new Error(`Gemini ${r.status}: ${d?.error?.message || JSON.stringify(d).slice(0,100)}`);
+
+    removeTyping(typingId);
+
+    if (!resp.ok) {
+      const err = await resp.json();
+      appendMsg('system', '⚠ API error: ' + (err.error?.message || resp.status));
+      sendBtn.disabled = false;
+      return;
     }
-    const reply = d?.candidates?.[0]?.content?.parts?.[0]?.text || '(empty response)';
+
+    const data = await resp.json();
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
+
     chatHistory.push({ role: 'model', parts: [{ text: reply }] });
-    appendMsg(reply, 'ai');
+    appendMsg('ai', reply);
 
-    if (cfg.sb_url && cfg.sb_key) {
-      logToSidebar(cfg, { agent: 'gemini', message: `Q: ${text.slice(0,60)} → ${reply.slice(0,60)}` });
-    }
+    // Trim history to last 20 turns to avoid token bloat
+    if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
+
   } catch(e) {
-    appendMsg('Error: ' + e.message, 'system');
+    removeTyping(typingId);
+    appendMsg('system', '⚠ ' + e.message);
   }
-  btn.disabled = false;
-  btn.textContent = 'Send';
+
+  sendBtn.disabled = false;
 }
 
-function appendMsg(text, role) {
-  const el = document.getElementById('chat-messages');
-  const div = document.createElement('div');
-  div.className = 'msg ' + role;
-  div.textContent = text;
-  el.appendChild(div);
-  el.scrollTop = el.scrollHeight;
+function appendMsg(type, text) {
+  const el = document.createElement('div');
+  el.className = `msg msg-${type}`;
+  el.innerHTML = formatMsg(text);
+  document.getElementById('chat-messages').appendChild(el);
+  el.scrollIntoView({ behavior: 'smooth' });
+  return el.id = 'msg-' + Date.now();
 }
 
-// ── Queue ─────────────────────────────────────────────────────────────────────
-async function queueTask() {
-  const cfg = loadConfig();
-  const project  = document.getElementById('q-project').value;
-  const taskText = document.getElementById('q-task').value.trim();
-  const priority = document.getElementById('q-priority').value;
+function formatMsg(text) {
+  // Render code blocks
+  text = text.replace(/```(\w*)\n?([\s\S]*?)```/g, (_, lang, code) => {
+    return `<pre><code>${escHtml(code.trim())}</code></pre>`;
+  });
+  // Inline code
+  text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // Bold
+  text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Line breaks
+  text = text.replace(/\n/g, '<br>');
+  return text;
+}
 
-  if (!project || !taskText) { alert('Project and task required.'); return; }
-  if (!cfg.sb_url || !cfg.sb_key) { alert('Configure Supabase in Config tab first.'); return; }
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
 
-  const payload = {
-    session_id: 'task-queue-' + Date.now(),
-    answers: JSON.stringify({
-      type: 'task_queue',
-      project,
-      task: taskText,
-      priority,
-      status: 'queued',
-      queued_at: new Date().toISOString(),
-      source: 'sidebar'
-    }),
-    total_answered: 1
+function appendTyping() {
+  const el = document.createElement('div');
+  el.className = 'msg msg-ai typing-dots';
+  el.innerHTML = '<span></span><span></span><span></span>';
+  const id = 'typing-' + Date.now();
+  el.id = id;
+  document.getElementById('chat-messages').appendChild(el);
+  el.scrollIntoView({ behavior: 'smooth' });
+  return id;
+}
+
+function removeTyping(id) {
+  const el = document.getElementById(id);
+  if (el) el.remove();
+}
+
+// ─── QUEUE ─────────────────────────────────────────────────────────────────
+function addTask() {
+  const desc = document.getElementById('task-desc').value.trim();
+  const project = document.getElementById('task-project').value.trim();
+  const priority = document.getElementById('task-priority').value;
+
+  if (!desc) { toast('Enter a task description'); return; }
+
+  const task = {
+    id: Date.now(),
+    description: desc,
+    project: project || 'general',
+    priority,
+    queued_at: new Date().toISOString(),
+    status: 'pending'
   };
 
+  tasks.unshift(task);
+  localStorage.setItem('sidebar_tasks', JSON.stringify(tasks));
+  renderTasks();
+
+  document.getElementById('task-desc').value = '';
+  document.getElementById('task-project').value = '';
+  toast('Task queued');
+
+  // Auto-write to Drive if connected
+  if (cfg.driveToken) driveWriteTaskQueue();
+}
+
+function deleteTask(id) {
+  tasks = tasks.filter(t => t.id !== id);
+  localStorage.setItem('sidebar_tasks', JSON.stringify(tasks));
+  renderTasks();
+  if (cfg.driveToken) driveWriteTaskQueue();
+}
+
+function renderTasks() {
+  const el = document.getElementById('task-list');
+  if (!tasks.length) {
+    el.innerHTML = '<div class="empty-state">No tasks queued</div>';
+    return;
+  }
+
+  const priClass = { high: 'pri-high', med: 'pri-med', low: 'pri-low' };
+
+  el.innerHTML = tasks.map(t => `
+    <div class="queue-item">
+      <button class="queue-item-delete" onclick="deleteTask(${t.id})">✕</button>
+      <div class="queue-item-title">${escHtml(t.description)}</div>
+      <div class="queue-item-meta">
+        <span class="queue-priority ${priClass[t.priority]}">${t.priority.toUpperCase()}</span>
+        <span style="color:var(--blue)">${escHtml(t.project)}</span>
+        · ${new Date(t.queued_at).toLocaleString()}
+      </div>
+    </div>
+  `).join('');
+}
+
+function exportTasks() {
+  const json = JSON.stringify(tasks, null, 2);
+  downloadText('task-queue.json', json, 'application/json');
+  toast('task-queue.json downloaded');
+}
+
+// ─── FILES ─────────────────────────────────────────────────────────────────
+function dragOver(e) {
+  e.preventDefault();
+  document.getElementById('drop-zone').classList.add('drag-over');
+}
+
+function dragLeave(e) {
+  document.getElementById('drop-zone').classList.remove('drag-over');
+}
+
+function dropFile(e) {
+  e.preventDefault();
+  document.getElementById('drop-zone').classList.remove('drag-over');
+  const files = e.dataTransfer.files;
+  processFiles(files);
+}
+
+function handleFileSelect(e) {
+  processFiles(e.target.files);
+}
+
+function processFiles(files) {
+  const ul = document.getElementById('upload-list');
+  Array.from(files).forEach(file => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      uploadedFiles[file.name] = e.target.result;
+      renderUploadList();
+      // Feed JSON files into context automatically
+      if (file.name.endsWith('.json') || file.name.endsWith('.md') || file.name.endsWith('.txt')) {
+        appendFileToContext(file.name, e.target.result);
+      }
+    };
+    reader.readAsText(file);
+  });
+}
+
+function renderUploadList() {
+  const ul = document.getElementById('upload-list');
+  const names = Object.keys(uploadedFiles);
+  if (!names.length) { ul.innerHTML = ''; return; }
+  ul.innerHTML = names.map(n => `
+    <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);">
+      <span style="flex:1;font-size:12px;color:var(--text)">${n}</span>
+      <button onclick="downloadUploadedFile('${n}')" style="font-size:11px;background:none;border:1px solid var(--border);color:var(--text-dim);padding:2px 8px;border-radius:3px;cursor:pointer;">↓</button>
+      <button onclick="removeUploadedFile('${n}')" style="font-size:11px;background:none;border:none;color:var(--red);cursor:pointer;">✕</button>
+    </div>
+  `).join('');
+}
+
+function appendFileToContext(name, content) {
+  const snippet = content.length > 2000 ? content.substring(0, 2000) + '\n...[truncated]' : content;
+  const addendum = `\n\n--- Uploaded: ${name} ---\n${snippet}`;
+  document.getElementById('cfg-context-text').value += addendum;
+  cfg.context = document.getElementById('cfg-context-text').value;
+  persistConfig();
+  toast(name + ' added to context');
+}
+
+function removeUploadedFile(name) {
+  delete uploadedFiles[name];
+  renderUploadList();
+}
+
+function downloadUploadedFile(name) {
+  downloadText(name, uploadedFiles[name]);
+}
+
+function downloadCurrentChat() {
+  const lines = chatHistory.map(m =>
+    `[${m.role.toUpperCase()}]\n${m.parts[0].text}\n`
+  ).join('\n---\n\n');
+  downloadText('sidebar-chat-' + Date.now() + '.txt', lines || 'No chat history');
+  toast('Chat log downloaded');
+}
+
+function downloadTaskQueue() {
+  exportTasks();
+}
+
+async function downloadFromDrive(filename) {
+  if (!cfg.driveToken) {
+    document.getElementById('file-status').textContent = '⚠ Connect Drive in CONFIG first';
+    return;
+  }
   try {
-    const r = await fetch(cfg.sb_url + '/rest/v1/mobile_answers', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key, Prefer: 'return=minimal' },
-      body: JSON.stringify(payload)
-    });
-    if (r.ok) {
-      document.getElementById('q-task').value = '';
-      document.getElementById('q-project').value = '';
-      await loadQueue();
-      logToSidebar(cfg, { agent: 'queue', message: `Task queued [${priority}]: ${project} — ${taskText.slice(0,60)}` });
+    const content = await driveReadFile(filename);
+    if (content) {
+      downloadText(filename, content);
+      toast(filename + ' downloaded');
     } else {
-      alert('Failed to queue task: ' + r.status);
+      document.getElementById('file-status').textContent = '⚠ File not found on Drive: ' + filename;
     }
   } catch(e) {
-    alert('Error: ' + e.message);
+    document.getElementById('file-status').textContent = '⚠ ' + e.message;
   }
 }
 
-async function loadQueue() {
-  const cfg = loadConfig();
-  const el = document.getElementById('queued-tasks');
-  if (!cfg.sb_url || !cfg.sb_key) { el.innerHTML = '<div style="color:var(--muted)">Configure Supabase first</div>'; return; }
+function downloadText(filename, text, type = 'text/plain') {
+  const blob = new Blob([text], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
+// ─── GOOGLE DRIVE ──────────────────────────────────────────────────────────
+const DRIVE_CLIENT_ID = ''; // Set your OAuth client ID here if using popup auth
+const STUDIO_FOLDER = '_studio';
+
+function authDrive() {
+  // If using manual token (paste into config)
+  const token = cfg.driveToken;
+  if (token && token !== '••••••••') {
+    document.getElementById('drive-status').textContent = '✓ Using saved token';
+    document.getElementById('drive-status').style.color = 'var(--green)';
+    return;
+  }
+
+  // Popup OAuth flow
+  if (!DRIVE_CLIENT_ID) {
+    document.getElementById('drive-status').textContent = 'Paste your Drive OAuth token in CONFIG above, or set DRIVE_CLIENT_ID in the file';
+    document.getElementById('drive-status').style.color = 'var(--amber)';
+    return;
+  }
+
+  const params = new URLSearchParams({
+    client_id: DRIVE_CLIENT_ID,
+    redirect_uri: window.location.origin + window.location.pathname,
+    response_type: 'token',
+    scope: 'https://www.googleapis.com/auth/drive'
+  });
+
+  const popup = window.open('https://accounts.google.com/o/oauth2/auth?' + params, 'auth', 'width=500,height=600');
+
+  const check = setInterval(() => {
+    try {
+      if (popup.location.hash) {
+        const hash = new URLSearchParams(popup.location.hash.substring(1));
+        const token = hash.get('access_token');
+        if (token) {
+          cfg.driveToken = token;
+          persistConfig();
+          document.getElementById('drive-status').textContent = '✓ Connected';
+          document.getElementById('drive-status').style.color = 'var(--green)';
+          document.getElementById('cfg-drive').value = '••••••••';
+          popup.close();
+          clearInterval(check);
+          loadStatus();
+          toast('Drive connected!');
+        }
+      }
+    } catch(e) {}
+  }, 500);
+}
+
+async function driveReadFile(filename) {
+  // Search for file
+  const search = await fetch(
+    `https://www.googleapis.com/drive/v3/files?q=name='${filename}'&spaces=drive&fields=files(id,name)`,
+    { headers: { Authorization: 'Bearer ' + cfg.driveToken } }
+  );
+  if (!search.ok) throw new Error('Drive search failed: ' + search.status);
+  const searchData = await search.json();
+  if (!searchData.files || !searchData.files.length) return null;
+
+  const fileId = searchData.files[0].id;
+  const content = await fetch(
+    `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
+    { headers: { Authorization: 'Bearer ' + cfg.driveToken } }
+  );
+  if (!content.ok) throw new Error('Drive read failed: ' + content.status);
+  return await content.text();
+}
+
+async function driveWriteTaskQueue() {
   try {
-    const r = await fetch(cfg.sb_url + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=30', {
-      headers: { apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key }
-    });
-    const rows = await r.json();
-    const tasks = rows.filter(row => {
-      try {
-        const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
-        return a && a.type === 'task_queue' && a.status === 'queued';
-      } catch { return false; }
-    });
+    const json = JSON.stringify(tasks, null, 2);
+    // Search for existing file
+    const search = await fetch(
+      `https://www.googleapis.com/drive/v3/files?q=name='${cfg.queueFile}'&spaces=drive&fields=files(id)`,
+      { headers: { Authorization: 'Bearer ' + cfg.driveToken } }
+    );
+    const searchData = await search.json();
 
-    if (!tasks.length) { el.innerHTML = '<div style="color:var(--muted);font-size:10px">No tasks queued.</div>'; return; }
+    const blob = new Blob([json], { type: 'application/json' });
+    const formData = new FormData();
+    formData.append('metadata', new Blob([JSON.stringify({ name: cfg.queueFile })], { type: 'application/json' }));
+    formData.append('file', blob);
 
-    const prios = { high: 0, medium: 1, low: 2 };
-    tasks.sort((a, b) => {
-      const pa = JSON.parse(typeof a.answers === 'string' ? a.answers : JSON.stringify(a.answers));
-      const pb = JSON.parse(typeof b.answers === 'string' ? b.answers : JSON.stringify(b.answers));
-      return (prios[pa.priority] ?? 1) - (prios[pb.priority] ?? 1);
-    });
-
-    el.innerHTML = tasks.map(row => {
-      const a = typeof row.answers === 'string' ? JSON.parse(row.answers) : row.answers;
-      const ts = (row.submitted_at || '').slice(0,16).replace('T',' ');
-      return `<div class="q-item">
-        <div class="q-item-header"><span class="q-proj">${a.project||'?'}</span><span class="q-prio ${a.priority||'medium'}">${a.priority||'medium'}</span></div>
-        <div class="q-task">${a.task||''}</div>
-        <div class="q-ts">${ts} · from sidebar</div>
-      </div>`;
-    }).join('');
+    if (searchData.files && searchData.files.length) {
+      // Update existing
+      await fetch(
+        `https://www.googleapis.com/upload/drive/v3/files/${searchData.files[0].id}?uploadType=multipart`,
+        { method: 'PATCH', headers: { Authorization: 'Bearer ' + cfg.driveToken }, body: formData }
+      );
+    } else {
+      // Create new
+      await fetch(
+        'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart',
+        { method: 'POST', headers: { Authorization: 'Bearer ' + cfg.driveToken }, body: formData }
+      );
+    }
   } catch(e) {
-    el.innerHTML = `<div style="color:var(--red)">Error: ${e.message}</div>`;
+    console.warn('Drive write failed:', e);
   }
 }
 
-// ── Sidebar log writer ────────────────────────────────────────────────────────
-async function logToSidebar(cfg, entry) {
-  if (!cfg.sb_url || !cfg.sb_key) return;
-  try {
-    await fetch(cfg.sb_url + '/rest/v1/mobile_answers', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', apikey: cfg.sb_key, Authorization: 'Bearer ' + cfg.sb_key, Prefer: 'return=minimal' },
-      body: JSON.stringify({
-        session_id: 'sidebar-log-' + Date.now(),
-        answers: JSON.stringify({ type: 'sidebar_log', ...entry, ts: new Date().toISOString() }),
-        total_answered: 1
-      })
-    });
-  } catch { /* non-fatal */ }
+// ─── TOAST ─────────────────────────────────────────────────────────────────
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2200);
 }
-
-// ── Init ──────────────────────────────────────────────────────────────────────
-initFromConfig();
-refreshStatus();
-loadStudioContext();  // pre-fetch context so first chat message is already loaded
-setInterval(refreshStatus, 60000); // auto-refresh every 60s
 </script>
 </body>
 </html>
