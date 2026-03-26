@@ -1,0 +1,132 @@
+{
+  "_schema": "1.0",
+  "_generated": "2026-03-26",
+  "_source_spec": "sidebar-v2-spec.md",
+  "_source_impl": "sidebar-agent.html",
+  "gaps": [
+    {
+      "id": "G01",
+      "tab": "STATUS",
+      "item": "Time/date display in Central Time with time-of-day greeting",
+      "spec_section": "STATUS § 1",
+      "status": "MISSING"
+    },
+    {
+      "id": "G02",
+      "tab": "STATUS",
+      "item": "Central Time timestamps on all log entries and chat messages",
+      "spec_section": "STATUS § 1",
+      "status": "MISSING"
+    },
+    {
+      "id": "G03",
+      "tab": "STATUS",
+      "item": "Project launch buttons sourced from state.json deliverable_url / launch_path fields",
+      "spec_section": "STATUS § 2",
+      "status": "MISSING"
+    },
+    {
+      "id": "G04",
+      "tab": "STATUS",
+      "item": "deliverable_url and launch_path fields missing from state.json schema",
+      "spec_section": "STATUS § 2",
+      "status": "MISSING — prerequisite for G03"
+    },
+    {
+      "id": "G05",
+      "tab": "STATUS",
+      "item": "Agent/task run buttons with dynamic lookup: reads run-agent.py AGENT_MAP + scheduler/*.bat, shows unregistered agents as 'Add to sidebar'",
+      "spec_section": "STATUS § 3",
+      "status": "MISSING"
+    },
+    {
+      "id": "G06",
+      "tab": "STATUS",
+      "item": "Resource/Asset Tracking Panel reading asset-log.json (SET/MISSING + GREEN/YELLOW/RED status per API/tool, 30-day rolling window)",
+      "spec_section": "STATUS § 4",
+      "status": "MISSING — asset-log.json also does not exist"
+    },
+    {
+      "id": "G07",
+      "tab": "STATUS",
+      "item": "Project Completion Tracker: all projects with % progress from state.json, sorted by most recently active",
+      "spec_section": "STATUS § 5",
+      "status": "MISSING"
+    },
+    {
+      "id": "G08",
+      "tab": "CHAT",
+      "item": "Deliverable Tray: downloadable files/code blocks surfaced above input without hunting through history",
+      "spec_section": "CHAT § 2",
+      "status": "MISSING"
+    },
+    {
+      "id": "G09",
+      "tab": "CHAT",
+      "item": "Expanded attach: images sent as base64 to vision models with thumbnail preview; video/audio sends filename + metadata as context",
+      "spec_section": "CHAT § 3",
+      "status": "PARTIAL — file upload exists in FILES tab but no inline chat attach, no vision/base64, no video/audio metadata"
+    },
+    {
+      "id": "G10",
+      "tab": "QUEUE",
+      "item": "Remove task creation form entirely — still present",
+      "spec_section": "QUEUE redesign",
+      "status": "NOT DONE"
+    },
+    {
+      "id": "G11",
+      "tab": "QUEUE",
+      "item": "Section 1: Pending Build Items read from supervisor-inbox.json + state.json decision queues (read-only table, auto-refresh)",
+      "spec_section": "QUEUE § 1",
+      "status": "MISSING"
+    },
+    {
+      "id": "G12",
+      "tab": "QUEUE",
+      "item": "Section 2: Whiteboard panel read from whiteboard.json, sorted by score, read-only, auto-refresh",
+      "spec_section": "QUEUE § 2",
+      "status": "MISSING"
+    },
+    {
+      "id": "G13",
+      "tab": "QUEUE",
+      "item": "Queue input reduced to single-line 'Add task for Claude Code' only — current is full multi-field form",
+      "spec_section": "QUEUE § bottom",
+      "status": "NOT DONE"
+    },
+    {
+      "id": "G14",
+      "tab": "CONFIG",
+      "item": "Remove direct key input — spec says sidebar must NOT store keys; read status (SET/MISSING) from studio-config.json instead",
+      "spec_section": "CONFIG redesign § API Key Management",
+      "status": "NOT DONE — OpenRouter key is still pasted directly into sidebar"
+    },
+    {
+      "id": "G15",
+      "tab": "CONFIG",
+      "item": "Smart Model Router: display and edit routing rules from model-router.json (to be created)",
+      "spec_section": "CONFIG § Smart Model Router",
+      "status": "MISSING — model-router.json also does not exist"
+    },
+    {
+      "id": "G16",
+      "tab": "AGENT INBOX",
+      "item": "Entire AGENT INBOX tab missing — unified view of all *-inbox.json files with card UI, Mark Resolved / Escalate / Snooze actions, and unresolved count badge on tab",
+      "spec_section": "AGENT INBOX tab",
+      "status": "MISSING — tab does not exist"
+    }
+  ],
+  "spec_confirmed_done": [
+    "CHAT § 1 — Formatting",
+    "FILES tab — already built, keep as-is",
+    "CHAT context/Mirofish — test harness already running overnight separately"
+  ],
+  "tabs_in_sidebar_not_in_spec": [
+    "DATA EXPLORER — not mentioned in spec, currently implemented",
+    "ASSETS (file/image viewer) — spec repurposes 'asset tracking' as API resource panel under STATUS, not a separate tab",
+    "CHARS — not mentioned in spec, currently implemented"
+  ],
+  "gap_count": 16,
+  "priority_order": ["G16", "G10", "G11", "G12", "G13", "G01", "G02", "G05", "G06", "G07", "G03", "G04", "G08", "G09", "G14", "G15"]
+}
