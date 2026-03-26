@@ -2,5 +2,16 @@
   "_schema": "1.0",
   "_description": "Weekly cross-agent review findings",
   "_rotation": "See agent-rotation-schedule.json for pair assignments",
-  "entries": []
+  "entries": [
+    {
+      "week": "NIT-TEST",
+      "reviewer": "nit-test",
+      "reviewed": "nit-target",
+      "findings": [
+        "[NIT] synthetic finding"
+      ],
+      "whiteboard_items": [],
+      "date": "2026-03-25T23:07:55.773193"
+    }
+  ]
 }

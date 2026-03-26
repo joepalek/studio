@@ -1,6 +1,29 @@
 {
   "_schema": "1.0",
-  "_description": "Studio master audit log — append only",
+  "_description": "Studio master audit log \u2014 append only",
   "_note": "Never overwrite. Entries are permanent record.",
-  "entries": []
+  "entries": [
+    {
+      "id": "ACT-20260325-2307-nittest-000",
+      "timestamp": "2026-03-25T23:07:13.163557",
+      "agent": "nit-test",
+      "action_type": "nit-test",
+      "target": "master-audit.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "[NIT] audit logger wire test",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260325-2308-nittest-001",
+      "timestamp": "2026-03-25T23:08:31.352278",
+      "agent": "nit-test",
+      "action_type": "rollup",
+      "target": "nit-results.json",
+      "result": "pass",
+      "findings_count": 2,
+      "notes": "[NIT] Fire drill complete: 8/10 PASS. PARTIAL verdict. 2 broken paths.",
+      "session_id": ""
+    }
+  ]
 }

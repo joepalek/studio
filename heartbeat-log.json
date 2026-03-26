@@ -1,20 +1,30 @@
-[
-  {
-    "_schema": "1.0",
-    "_description": "Daily agent checkin log",
-    "entries": [
-      {
-        "date": "2026-03-25 23:00",
-        "agent": "nit-test",
-        "status": "clean",
-        "notes": "[NIT] fire drill heartbeat"
-      }
-    ]
-  },
-  {
-    "date": "2026-03-25",
-    "agent": "git-commit-agent + changelog-agent",
-    "status": "clean",
-    "notes": "Committed _studio (10 files), updated CHANGELOG.md for 12 projects, pushed to GitHub"
-  }
-]
+{
+  "_schema": "1.0",
+  "_description": "Daily agent checkin log",
+  "entries": [
+    {
+      "date": "2026-03-25 23:00",
+      "agent": "nit-test",
+      "status": "clean",
+      "notes": "[NIT] fire drill heartbeat"
+    },
+    {
+      "date": "2026-03-25",
+      "agent": "git-commit-agent + changelog-agent",
+      "status": "clean",
+      "notes": "Committed _studio (10 files), updated CHANGELOG.md for 12 projects, pushed to GitHub"
+    },
+    {
+      "date": "2026-03-25 23:06",
+      "agent": "supervisor",
+      "status": "flagged",
+      "notes": "FAIL in 0s \u2014 claude CLI not found. Install with: npm install -g @anthropic-ai/claude-code then run: claude auth login"
+    },
+    {
+      "date": "2026-03-25 23:08",
+      "agent": "nit-test",
+      "status": "clean",
+      "notes": "[8/10 PASS \u2014 PARTIAL] T05 inbox panel, T06 claude CLI path"
+    }
+  ]
+}

@@ -25,6 +25,26 @@
         "Studio/PeerReview @ Sunday 3:00am",
         "Studio/CommonCrawlTrigger @ monthly 5th 6:00am"
       ]
+    },
+    {
+      "id": "nit-briefing-20260325230110",
+      "source": "nit-test",
+      "type": "system",
+      "urgency": "INFO",
+      "title": "[NIT] Fire drill \u2014 synthetic briefing",
+      "finding": "NIT fire drill test. Ignore. Auto-dismiss.",
+      "status": "PENDING",
+      "date": "2026-03-25T23:01:10.621322"
+    },
+    {
+      "id": "nit-summary-20260325",
+      "source": "nit-test",
+      "type": "system",
+      "urgency": "INFO",
+      "title": "NIT Fire Drill Complete \u2014 PARTIAL (8/10 PASS)",
+      "finding": "T01-T04,T07-T10 PASS. T05 PARTIAL (studio.html inbox panel not built, Step 8 HELD). T06 PARTIAL (scheduler fires, run-agent.py executes, claude CLI not found at system PATH \u2014 graceful fail works). heartbeat-log.json format repaired (was corrupt list). Network verdict: PARTIAL.",
+      "status": "PENDING",
+      "date": "2026-03-25T23:08:31.298624"
     }
   ]
 }

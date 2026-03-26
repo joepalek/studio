@@ -1,0 +1,6 @@
+{
+  "_schema": "1.0",
+  "_description": "Daily studio health digest — append only",
+  "_note": "One entry per day. Written by nightly-rollup agent at 1:00am.",
+  "digests": []
+}

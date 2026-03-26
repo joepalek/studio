@@ -49,6 +49,7 @@ AGENT_MAP = {
     "company-registry":       "company-registry-crawler.md",
     "market-scout":           "market-scout.md",
     "social-media-agent":     "social-media-agent.md",
+    "nightly-rollup":         "nightly-rollup.md",
 }
 
 # ── Heartbeat helpers ───────────────────────────────────────────────────────
