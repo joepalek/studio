@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-03-26T03:01:42.455875",
+  "verdict": "WARNING",
+  "critical": [],
+  "warning": [
+    "UNCOMMITTED (1 files): job-match",
+    "UNCOMMITTED (18 files): _studio",
+    "MOBILE ANSWERS PENDING: 5 sessions"
+  ],
+  "watch": [],
+  "action_required": "Commit dirty repos; import 5 pending mobile answers in studio"
+}
