@@ -1,5 +1,15 @@
 {
   "_schema": "1.0",
-  "_description": "Stress tester run log — every pre-write and post-write gate",
-  "runs": []
+  "_description": "Stress tester run log \u2014 every pre-write and post-write gate",
+  "runs": [
+    {
+      "timestamp": "2026-03-25T23:00:48.757790",
+      "gate": "pre-write",
+      "file": "nit-sandbox/nit-synthetic-payload.md",
+      "findings_count": 0,
+      "categories": [],
+      "result": "pass",
+      "action_taken": "[NIT] fire drill test"
+    }
+  ]
 }

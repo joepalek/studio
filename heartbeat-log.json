@@ -1,5 +1,12 @@
 {
   "_schema": "1.0",
   "_description": "Daily agent checkin log",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-03-25 23:00",
+      "agent": "nit-test",
+      "status": "clean",
+      "notes": "[NIT] fire drill heartbeat"
+    }
+  ]
 }

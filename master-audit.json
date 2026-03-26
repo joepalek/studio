@@ -1,0 +1,6 @@
+{
+  "_schema": "1.0",
+  "_description": "Studio master audit log — append only",
+  "_note": "Never overwrite. Entries are permanent record.",
+  "entries": []
+}

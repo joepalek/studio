@@ -1,5 +1,15 @@
 {
   "_schema": "1.0",
-  "_description": "Cross-agent tasty data signals — route to whiteboard only",
-  "flags": []
+  "_description": "Cross-agent tasty data signals \u2014 route to whiteboard only",
+  "flags": [
+    {
+      "date": "2026-03-25 23:00",
+      "from_agent": "nit-test",
+      "data_description": "[NIT] test signal \u2014 synthetic payload, ignore",
+      "current_use": "none",
+      "suggested_use": "none",
+      "value": "medium",
+      "status": "pending"
+    }
+  ]
 }

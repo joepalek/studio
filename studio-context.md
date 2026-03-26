@@ -1,5 +1,5 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-25 04:00 | Auto-built by generate-context.py
+Generated: 2026-03-25 23:00 | Auto-built by generate-context.py
 
 ## WHO IS JOE
 
@@ -1696,11 +1696,108 @@ If it does:
 
 ## STANDING RULES
 
-  ERROR: Expecting ',' delimiter: line 99 column 5 (char 3885)
+Total: 12 rules
+
+  rule-001
+    trigger:     scraper returns 403 three consecutive times on same URL
+    action:      mark source as Tier 3, add to supervisor-inbox.json for fix, skip and continue
+    applies_to:  all scraper agents, company-registry-crawler, job-source-discovery
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-002
+    trigger:     scraper returns 429 (rate limit)
+    action:      exponential backoff: wait 10s, 20s, 40s then mark Tier 3 if still failing
+    applies_to:  all scraper agents
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-003
+    trigger:     scoring task under 500 tokens
+    action:      always route to Gemini Flash (Tier 0), never use Claude quota
+    applies_to:  whiteboard-agent, ghost-book-validator, product-archaeology
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-004
+    trigger:     session ends (user types /exit or says done for today)
+    action:      commit all dirty projects, update changelogs, update status.json
+    applies_to:  claude-code-session
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-005
+    trigger:     same error pattern appears in 2+ agent scripts
+    action:      build shared utility in _studio/utilities/, update README, migrate all affected scripts
+    applies_to:  all agents
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 1
+
+  rule-006
+    trigger:     overnight batch task
+    action:      always route to Ollama exclusively, never Gemini or Claude during overnight runs
+    applies_to:  all batch agents, ghost-book, product-archaeology
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-007
+    trigger:     career page returns JS-rendered shell (body < 2000 chars or react-root detected)
+    action:      classify as Tier 2 (Playwright), add to scraper-config-tier2.json, do not mark as failed
+    applies_to:  company-registry-crawler
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-008
+    trigger:     CDX query returns 0 results for ATS domain (lever, greenhouse, ashby)
+    action:      skip CDX for that domain, rely on direct HTTP scrape in daily-scraper-config.json instead
+    applies_to:  job-source-discovery, update_scraper_config
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 1
+
+  rule-009
+    trigger:     mobile inbox has more than 10 pending items
+    action:      auto-expire items pending >7 days by setting status to expired, notify once in session-log
+    applies_to:  supervisor, workflow-intelligence
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 0
+
+  rule-010
+    trigger:     agent script prints user-sourced text (titles, names, web content)
+    action:      always wrap in safe_str() from utilities/unicode_safe.py before printing
+    applies_to:  all agents
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 1
+
+  rule-011
+    trigger:     any script opens a JSON file on Windows
+    action:      always use safe_json_load() from unicode_safe.py, or open(f, encoding='utf-8', errors='replace') — never plain open(f)
+    applies_to:  all agents, inbox-manager, audit scripts, diagnostic one-liners
+    created:     2026-03-19
+    approved_by: joe
+    times_applied: 1
+
+  rule-012
+    trigger:     any session involves project prioritization or build order decisions
+    action:      client-services-website is OVERRIDE PRIORITY — this project directly funds Joe's income. Always rank above other whiteboard items regardless of score. Build before any other new project is started.
+    applies_to:  whiteboard-agent, supervisor, auto-answer, all planning sessions
+    created:     2026-03-25
+    approved_by: joe
+    times_applied: 0
+
 
 ## WHITEBOARD
 
-Last updated: 2026-03-25T03:55:34.601157
+Last updated: 2026-03-25T04:00:41.270323
 Total items: 32
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
@@ -1764,6 +1861,44 @@ Total items: 32
     tags:    product_archaeology, nostalgia, reddit
     added:   2026-03-19T15:20:25.783572
     url:     https://reddit.com/r/nostalgia/comments/1rxrcq0/bring_back_the_original_sobe_elixir_drink_line/
+
+  [8/10] eBay Item Identifier â€” Consensus Engine
+    id:      ebay-identifier-app
+    type:    product
+    status:  WHITEBOARD
+    source:  Gemini sidebar + Joe
+    description: Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.
+    score_breakdown:
+      total_score: 8
+      market_gap_score: 9
+      build_feasibility: 5
+      revenue_potential: 8
+      urgency: 7
+      why_now: Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generation (RAG) make this complex multi-modal identification feasible, while the reseller market remains eager for AI-driven efficiency.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: MEDIUM
+      top_risk: The sheer complexity and data acquisition challenge for comprehensive 'archive RAG' and fine-tuned VLM attribute extraction could make it prohibitively expensive or technically unachievable to a high standard.
+    added:   2026-03-25
+
+  [8/10] AI Services Client Website
+    id:      client-services-website
+    type:    product
+    status:  WHITEBOARD
+    source:  Sidebar sessions
+    description: Lead generation website for AI project services. Intake triggers Client Solutions Agent pipeline. High upfront / low monthly quoting model. Funds Joe as employee and system wishlist. Full agent backend already blueprinted in Synthetic Talent Agency files.
+    score_breakdown:
+      total_score: 8
+      market_gap_score: 7
+      build_feasibility: 9
+      revenue_potential: 8
+      urgency: 7
+      why_now: 2026 is an optimal time as businesses increasingly adopt AI but require structured, reliable service providers to implement complex solutions and manage projects.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: Client acquisition and standing out in a highly competitive AI services market.
+    added:   2026-03-25
 
   [7/10] Wing Commander IV Turns 30... And Still Fascinates Me
     id:      arch-reddit-0002
@@ -1848,7 +1983,7 @@ On returning to it 30 years later, it certainly scratc
     added:   2026-03-19T15:20:25.783558
     url:     https://reddit.com/r/nostalgia/comments/1qx7agz/90s_green_day_was_pure_chaos_and_i_miss_it/
 
-  [7/10] Remember when you didn’t have to enter your personal info online to win a soda?
+  [7/10] Remember when you didnâ€™t have to enter your personal info online to win a soda?
     id:      nost-0025
     type:    product_archaeology
     status:  new
@@ -2310,26 +2445,10 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, vintage, vintage-2010s
     added:   2026-03-19T15:16:03.025794
 
-  [0/10] eBay Item Identifier — Consensus Engine
-    id:      ebay-identifier-app
-    type:    product
-    status:  WHITEBOARD
-    source:  Gemini sidebar + Joe
-    description: Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.
-    added:   2026-03-25
-
-  [0/10] AI Services Client Website
-    id:      client-services-website
-    type:    product
-    status:  WHITEBOARD
-    source:  Sidebar sessions
-    description: Lead generation website for AI project services. Intake triggers Client Solutions Agent pipeline. High upfront / low monthly quoting model. Funds Joe as employee and system wishlist. Full agent backend already blueprinted in Synthetic Talent Agency files.
-    added:   2026-03-25
-
 
 ## STUDIO CURRENT STATE
 
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-25 04:00
+End of context. Generated: 2026-03-25 23:00
