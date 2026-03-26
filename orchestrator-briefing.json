@@ -1,33 +1,7 @@
 {
-  "generated": "2026-03-20T08:02:48.596836",
-  "date": "2026-03-20",
-  "model_used": "gemini-flash-latest",
-  "sre": {
-    "verdict": "DEGRADED",
-    "issues": [
-      "UNCOMMITTED (2 files): job-match",
-      "UNCOMMITTED (9 files): _studio",
-      "NO STATE.JSON: sentinel-core, sentinel-performer, sentinel-viewer"
-    ],
-    "tools": {
-      "git": "2.53.0 (OK)",
-      "node": "v24.14.0 (OK)",
-      "npm": "11.9.0 (OK)",
-      "python": "3.13.7 (OK)",
-      "repomix": "1.12.0 (OK)",
-      "ollama": "0.12.10 (OK)",
-      "gh": "2.88.1 (OK)"
-    },
-    "endpoints": {
-      "anthropic": "SET",
-      "gemini": "UP",
-      "openrouter": "UP",
-      "ollama": "UP (1 model: gemma3:4b)"
-    },
-    "studio_files": "All critical files present (gateway-log.txt optional, missing)",
-    "mobile_answers": "1 session, 2 answers pending"
-  },
-  "briefing": "**DAILY BRIEFING: 2026-03-20**\n\n**TOP 3 \u2014 Joe Personal Focus**\n1. **Job Match Stabilization**: Audit and commit the 2 pending files. This is the #1 priority to replace income by May.\n2. **eBay Conversion**: Review current 565 listings for price/keyword adjustments to boost daily revenue.\n3. **CTW Character Finalization**: Approve character portraits once generated to move the project toward its near-term revenue phase.\n\n**AGENT QUEUE**\n1. **CTW Image Gen**: Automate Perchance requests to generate portraits for the 4 target characters.\n2. **Market Scanning**: Run autonomous scraping for new job postings matching the Job-Match criteria.\n3. **Listing Analysis**: Perform a gap analysis on the lowest-performing eBay listings compared to competitors.\n\n**CRITICAL**\n*   **$300 LLC Filing**: Sentinel (highest upside) remains deadlocked until Tennessee filing fee is paid.\n*   **State Sync**: Commit 9 `_studio` files and 2 `job-match` files to prevent session drift and data loss.\n\n**DEFER**\nIgnore Sentinel, Nutrimind, and Arbitrage-Pulse development entirely until the LLC is active and Job-Match is stable.",
+  "generated": "2026-03-26T08:02:09.196367",
+  "briefing": "## DAILY BRIEFING\n\n**1. TOP 3 things Joe should personally work on today:**\n*   **Job-match:** Address 5 pending decisions to secure direct income replacement (Priority 1).\n*   **Listing-optimizer:** Address 2 pending decisions to maintain daily eBay revenue (Priority 2).\n*   **CTW:** Generate real portrait images for characters and address trait detector calibration/comfort bar issues to unblock development (Priority 4).\n\n**2. TOP 3 tasks agents can run autonomously right now:**\n*   There are no autonomous agent tasks runnable at this time.\n\n**3. Critical blockers that need immediate attention:**\n*   **Sentinel Core/Performer/Viewer (P3):** Blocked on LLC formation, preventing initiation of the highest long-term revenue projects.\n\n**4. What to defer today:**\n*   Defer all other projects with pending decisions (acuscan-ar, arbitrage-pulse, hibid-analyzer, nutrimind, squeeze-empire, whatnot-apps) to focus on the highest revenue impact work.",
+  "model": "gemini-2.5-flash",
   "plan": {
     "agent_runnable": [],
     "human_required": [
@@ -82,9 +56,22 @@
         ]
       }
     ],
-    "ready_to_build": []
+    "ready_to_build": [
+      {
+        "project": "sentinel-core",
+        "next": ""
+      },
+      {
+        "project": "sentinel-performer",
+        "next": ""
+      },
+      {
+        "project": "sentinel-viewer",
+        "next": ""
+      }
+    ]
   },
-  "states_snapshot": {
+  "states": {
     "acuscan-ar": {
       "status": "unknown",
       "progress": 0,
@@ -111,7 +98,7 @@
         "comfort bar still overcorrects downward under pressure"
       ],
       "decisions": 0,
-      "lastUpdated": "2026-03-15"
+      "lastUpdated": "2026-03-25"
     },
     "hibid-analyzer": {
       "status": "unknown",
@@ -143,6 +130,30 @@
       "nextAction": "",
       "blockers": [],
       "decisions": 1,
+      "lastUpdated": "unknown"
+    },
+    "sentinel-core": {
+      "status": "active",
+      "progress": 0,
+      "nextAction": "",
+      "blockers": [],
+      "decisions": 0,
+      "lastUpdated": "unknown"
+    },
+    "sentinel-performer": {
+      "status": "active",
+      "progress": 0,
+      "nextAction": "",
+      "blockers": [],
+      "decisions": 0,
+      "lastUpdated": "unknown"
+    },
+    "sentinel-viewer": {
+      "status": "active",
+      "progress": 0,
+      "nextAction": "",
+      "blockers": [],
+      "decisions": 0,
       "lastUpdated": "unknown"
     },
     "squeeze-empire": {

@@ -1,25 +1,21 @@
 {
-  "timestamp": "2026-03-26T03:01:42.469140",
+  "timestamp": "2026-03-26T11:24:36.373341",
   "verdict": "DEGRADED",
-  "issues": 3,
   "tools": {
     "git": "2.53.0",
     "node": "v24.14.0",
     "npm": "11.9.0",
     "python": "3.13.7",
-    "claude": "2.1.84",
-    "repomix": "1.12.0"
+    "claude": "2.1.84"
   },
   "endpoints": {
     "anthropic": "SET",
     "gemini": "SET",
     "openrouter": "SET",
-    "ollama": "UP (2 models)"
+    "ollama": "UP"
   },
-  "project_issues": [
-    "UNCOMMITTED (1 files): job-match",
-    "UNCOMMITTED (18 files): _studio"
-  ],
-  "studio_files": "ALL CRITICAL PRESENT",
-  "mobile_answers": "5 sessions pending"
+  "issues": [
+    "UNCOMMITTED (16 files): _studio",
+    "MOBILE ANSWERS PENDING: 5 sessions"
+  ]
 }

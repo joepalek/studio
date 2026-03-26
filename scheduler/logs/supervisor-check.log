@@ -4947,3 +4947,1133 @@ Two scheduler jobs ran overnight and completed:
 ---
 
 **Summary:** System is DEGRADED/WARNING — all tools and endpoints healthy, but two repos have uncommitted changes (`_studio` has 18 dirty files) and 5 mobile answers are waiting. No blockers on working.
+[Thu 03/26/2026  3:30:01.57] Supervisor check starting 
+You've hit your limit · resets 4am (America/Chicago)
+[Thu 03/26/2026  4:00:01.56] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 (UP — 2 models, active model: gemma3:4b)
+  ✓ gh 2.88.1
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (8 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting (hit Refresh in studio)
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (8 files): _studio — sidebar-agent.html, studio-context.md, whiteboard.json, logs, cache
+  [~] MOBILE ANSWERS PENDING: 5 sessions waiting in Supabase
+
+WATCH (3):
+  [-] Most agents have no heartbeat entries — only check-drift and sre-scout checked in
+  [-] sre-scout last heartbeat: flagged (overnight run issues)
+  [-] overnight-auto-answer hit quota limit at 3:30am — re-ran successfully at 4:00am reset
+
+STRESS VERDICT: WARNING
+
+VERDICT: DEGRADED (2 warnings, 0 criticals)
+ACTION: Commit _studio dirty files; import mobile answers in studio
+```
+
+---
+
+**SUPERVISOR DAILY BRIEFING — 2026-03-26**
+
+**Completed background tasks (overnight):**
+- **overnight-whiteboard-score** — ran successfully at 4:00am, scored whiteboard items, pushed 0 items above threshold to mobile-inbox (32 items total, none scored ≥7 yet)
+- **supervisor-check** — ran at 4:00am after quota reset; last report confirmed DEGRADED/WARNING state with 18 dirty files and 5 mobile answers pending
+- **overnight-auto-answer** — hit quota limit at 3:30am restart, ran again at 4:00am (no auto-answers generated — quota was the blocker)
+
+**Inbox (3 pending, all INFO):**
+- Constitutional Update + Agent Network Activation Complete
+- NIT Fire Drill — Synthetic Briefing
+- NIT Fire Drill Complete — PARTIAL (8/10 PASS)
+
+**Whiteboard:** 32 items, 0 ready for decision (none scored ≥7)
+
+**Dead agents:** All agents except `check-drift` and `sre-scout` are silent — no heartbeat entries from janitor, market-scout, orchestrator, etc.
+
+---
+
+**Recommended first action:** Commit the 8 dirty `_studio` files (sidebar-agent.html, studio-context.md, whiteboard.json, scheduler logs, cache). Then import the 5 pending mobile answers.
+[Thu 03/26/2026  4:30:01.69] Supervisor check starting 
+All data collected. Here is the full report:
+
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 — UP (2 models: gemma3:4b + 1 other)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ Supabase: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (10 files): _studio
+  ✓ 12 other projects clean
+
+STUDIO FILES
+  ✓ All 10 critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting (hit Refresh in studio)
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files, import mobile answers
+```
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (10 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions in Supabase
+
+WATCH (3):
+  [-] supervisor-inbox.json: 3 PENDING items (all INFO — no action blockers)
+  [-] Most agents missing heartbeats (only sre-scout + check-drift checked in)
+  [-] overnight-auto-answer hit Claude quota at 3:30am (resumed after 4am reset)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR HEALTH — BACKGROUND TASKS
+
+**Overnight runs (completed):**
+- `overnight-whiteboard-score` — ran at 4:00am, pushed 0 top-10 items to mobile-inbox.json (no items scored above threshold)
+- `overnight-auto-answer` — hit quota at 3:30am, resumed post-4am reset, completed
+- `supervisor-check` — last run 4:30am, recommended: commit dirty files + import mobile answers
+
+**Inbox (3 items, all INFO/PENDING):**
+- Constitutional Update + Agent Network Activation Complete
+- NIT Fire Drill — PARTIAL (8/10 PASS)
+- NIT Fire Drill synthetic briefing
+
+**Task queue:** Empty — no queued tasks waiting.
+
+---
+
+**Two things to handle this session:**
+1. Commit the 10 dirty `_studio` files
+2. Hit Refresh/importMobileAnswers in studio to pull in the 5 pending answers
+[Thu 03/26/2026  5:00:01.67] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78 — fine)
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (10 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit dirty _studio files; import mobile answers in studio
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (10 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions
+
+WATCH (2):
+  [-] Most agents missing heartbeats (only sre-scout checked in)
+  [-] overnight-auto-answer hit Claude quota at 3:30am (completed after reset)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR HEALTH — BACKGROUND TASKS
+
+**Overnight runs (all completed):**
+
+| Task | Time | Result |
+|---|---|---|
+| `overnight-whiteboard-score` | 4:00am | Scored items; pushed 0 to mobile-inbox (none hit top-10 threshold) |
+| `overnight-auto-answer` | 3:30am | Hit Claude quota mid-run, resumed + completed after 4am reset |
+| `overnight-job-delta` | 3:00am | 162 unique job URLs → `cc-discovered-raw.json` |
+| `supervisor-check` | 5:00am | Ran full cycle; flagged uncommitted files + mobile answers |
+
+**Top whiteboard scores** (from overnight scoring):
+- #3 SoBe Elixir revival — [8/10] BUILD
+- #4 eBay Item Identifier Consensus Engine — [8/10] BUILD
+- #5 AI Services Client Website — [8/10] BUILD
+
+**Inbox:** 3 PENDING items, all INFO-level (no blockers)
+
+**Task queue:** Empty
+
+**Two actions needed:**
+1. Commit the 10 dirty `_studio` files
+2. Import the 5 pending mobile answers via studio Refresh
+[Thu 03/26/2026  5:30:01.84] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: SET
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (10 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files; import mobile answers via studio Refresh
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (10 files): _studio
+  [~] MOBILE ANSWERS PENDING — 5 sessions, 5 answers
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE — BACKGROUND TASK SUMMARY
+
+**Overnight tasks completed (2026-03-25 night → 2026-03-26 morning):**
+
+| Task | Result |
+|---|---|
+| Auto-answer agent (3:30am) | Hit quota limit — did not run |
+| Whiteboard scoring | Ran successfully — scored 32 items |
+| Supervisor check (5am) | Full cycle ran — flagged same 2 issues |
+
+**Top whiteboard items scored overnight:**
+- `[8/10]` SoBe Elixir revival — BUILD
+- `[8/10]` eBay Item Identifier Consensus Engine — BUILD
+- `[8/10]` AI Services Client Website — BUILD
+
+**Inbox:** 3 PENDING items, all INFO-level (NIT fire drill + constitutional update) — no blockers.
+
+**Task queue:** Empty.
+
+---
+
+**Two actions needed:**
+1. Commit the 10 dirty `_studio` files
+2. Import the 5 pending mobile answers (hit Refresh in studio)
+[Thu 03/26/2026  6:00:01.65] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.7 ✓
+- Claude Code 2.1.84 ✓ (above expected 2.1.78)
+- Repomix 1.12.0 ✓
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Ollama: UP — 2 models (gemma3:4b) ✓
+- Gemini: UP ✓
+- OpenRouter: UP ✓
+
+**PROJECTS (13 checked)**
+- `!` UNCOMMITTED (11 files): _studio
+- 12 projects clean ✓
+
+**STUDIO FILES**
+- All critical files present ✓
+- No optional files missing
+
+**MOBILE ANSWERS**
+- `!` 5 sessions, 5 answers pending — hit Refresh in studio
+
+**VERDICT: DEGRADED (2 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (11 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions, 5 answers
+
+WATCH (2):
+  [-] Agent heartbeats mostly silent — only sre-scout has logged today
+  [-] overnight-auto-answer hit quota limit at ~3:30am, pushed 0 items
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR HEALTH CHECK
+
+**Inbox:** 3 pending items (all INFO)
+- Constitutional Update + Agent Network Activation Complete
+- NIT Fire Drill — PARTIAL (8/10 PASS) — 2026-03-25
+- NIT Fire Drill synthetic briefing
+
+**Task Queue:** Empty — no queued work
+
+**Whiteboard:** 32 items, 0 flagged high-priority
+
+---
+
+## COMPLETED BACKGROUND TASKS (overnight)
+
+**overnight-whiteboard-score** — ran, scored items. Top results:
+- #3 SoBe Elixir drink line revival [8/10] — BUILD
+- #4 eBay Item Identifier Consensus Engine [8/10] — BUILD
+- #5 AI Services Client Website [8/10] — BUILD
+- #6 Wing Commander IV 30th anniversary [7/10] — BUILD
+- Several 7/10 items (Dymaxion Car, DeLorean, 90s Green Day, privacy nostalgia)
+
+**overnight-auto-answer** — ran at 3:30am but **hit Claude quota limit**. Pushed 0 items to mobile-inbox.json. Quota resets at 4am CT.
+
+---
+
+**Actions needed:**
+1. Commit the 11 dirty `_studio` files
+2. Import mobile answers (5 pending in Supabase)
+3. NIT fire drill result needs review — 8/10 PASS, 2 failures to investigate
+[Thu 03/26/2026  6:30:01.76] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 — UP, 2 models
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic: SET
+  ✓ Gemini: SET
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (11 files): _studio
+  ✓ 12 other projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files; import mobile answers in studio
+```
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (11 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions, 5 answers
+
+WATCH (2):
+  [-] overnight-auto-answer hit Claude quota at 3:30am (resets 4am CT)
+  [-] stress-log.json has 0 entries — stress test logging not active
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR — COMPLETED BACKGROUND TASKS
+
+**Overnight runs (3am–4am):**
+
+| Agent | Status | Result |
+|---|---|---|
+| overnight-job-delta (3:00am) | DONE | 162 unique job URLs discovered via CDX; 548 targets tracked (60 boards + 488 career pages) |
+| overnight-whiteboard-score (4:00am) | DONE | 32 items, 0 unscored — all already scored |
+| overnight-auto-answer (3:30am) | QUOTA HIT | Claude quota exhausted, reset at 4am CT |
+
+**Whiteboard top items (from overnight scoring):**
+- `[8]` Horror games 1000+ reviews — PUBLISH
+- `[8]` DuPont Corfam — RESEARCH
+- `[8]` SoBe Elixir revival — BUILD
+- `[8]` eBay Item Identifier / Consensus Engine — BUILD
+
+**Inbox (3 pending INFO items):** Constitutional update complete, NIT fire drill results (8/10 PASS — partial)
+
+**Supervisor cycle:** 0 tasks dispatched (work queue empty, no idle agents logged via gateway-log)
+[Thu 03/26/2026  7:00:01.70] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+  ✓ Supabase: configured
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (12 files): _studio
+  ✓ 12 other projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 warnings)
+ACTION: Commit _studio dirty files; import mobile answers in studio
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (12 files): _studio
+  [~] MOBILE ANSWERS: 5 sessions pending in Supabase
+
+WATCH (1):
+  [-] overnight-auto-answer.log: Claude quota hit at overnight run — resets 4am CT
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor Cycle:** 0 tasks dispatched — queue empty, no orchestrator plan queued.
+
+**Background Tasks Completed Overnight:**
+- `overnight-whiteboard-score.log` — **completed** at 4:00am (32 lines). Whiteboard scoring ran successfully.
+- `overnight-auto-answer.log` — **quota hit**. Claude hit its limit before completing; resets at 4am CT. Only 2 lines logged — effectively did not run.
+
+**Supervisor last ran:** 06:30am — no tasks dispatched, Ollama was UP.
+
+**Two items need attention:**
+1. **12 uncommitted files in `_studio`** — want me to commit them?
+2. **5 mobile answers pending** — hit Refresh in studio to import.
+[Thu 03/26/2026  7:30:01.70] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (12 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, missing
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files, import mobile answers in studio
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (12 files): _studio
+  [~] 5 mobile answer sessions pending in Supabase
+
+WATCH (2):
+  [-] gateway-log.txt optional file missing
+  [-] No agents recently active in gateway-log (all silent)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## Completed Background Tasks (overnight 2026-03-26)
+
+| Task | Status | Notes |
+|---|---|---|
+| **overnight-job-delta** | DONE | 162 unique job URLs → `cc-discovered-raw.json` |
+| **overnight-whiteboard-score** | DONE | 32 items scored; top items include DeLorean EV [7/10], 90s Green Day [7/10] |
+| **overnight-auto-answer** | QUOTA-HIT | Hit Claude.ai quota at ~3:30am; 0 items pushed to mobile-inbox |
+| **nightly-commit** | RAN | SRE open items logged |
+
+**Supervisor cycle:** 0 tasks dispatched (work queue empty, no pending orchestrator plan tasks).
+
+**Action items for this session:**
+1. `~` Import 5 pending mobile answers — hit Refresh/importMobileAnswers in studio
+2. `~` Commit the 12 dirty `_studio` files when ready
+[Thu 03/26/2026  8:00:01.68] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+**TOOLS**
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Claude Code 2.1.84 (above expected)
+✓ Repomix 1.12.0
+✓ Ollama 0.18.2 UP (2 models loaded)
+```
+
+**GATEWAY ENDPOINTS**
+```
+✓ Anthropic key: SET
+✓ Gemini: SET
+✓ OpenRouter: SET
+✓ Ollama: UP — gemma3:4b loaded
+```
+
+**PROJECTS (13 checked)**
+```
+! UNCOMMITTED (13 files): _studio
+✓ 12 projects clean
+```
+
+**STUDIO FILES** — All critical files present, all optionals present.
+
+**MOBILE ANSWERS** — 5 sessions, 5 answers pending (hit Refresh in studio).
+
+**VERDICT: DEGRADED (2 issues)**
+**ACTION: Commit _studio dirty files; import 5 mobile answers**
+
+---
+
+## STRESS REPORT
+
+```
+WARNING (2):
+  [~] UNCOMMITTED (13 files): _studio
+  [~] MOBILE ANSWERS: 5 sessions, 5 answers pending
+
+WATCH (3):
+  [-] Auto-answer hit Claude quota at 3:30am (reset at 4am)
+  [-] Supervisor: 0 agents active, 0 tasks dispatched last cycle
+  [-] SRE-Scout flagged every overnight run (4:31am, 5:01am, 5:31am, 6:01am)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR HEALTH CHECK
+
+**Last cycle:** 2026-03-26 07:30 — Ollama UP, Gemini available, **0 tasks dispatched, 0 agents active**
+
+**Pending inbox (3 items, all INFO):**
+- Constitutional Update + Agent Network Activation Complete (2026-03-25)
+- NIT Fire Drill — PARTIAL (8/10 PASS) (2026-03-25)
+- NIT Fire Drill synthetic briefing (2026-03-25)
+
+---
+
+## OVERNIGHT BACKGROUND TASKS
+
+**Auto-answer agent (3:30am):** Hit Claude quota limit at startup — no answers processed. Quota reset at 4am CT.
+
+**Whiteboard scoring (4:00am):** Completed successfully. 32 items total, 0 unscored (all already scored). Top items:
+- #1 `[8/10]` Horror game reviews — PUBLISH
+- #2 `[8/10]` DuPont Corfam — RESEARCH
+- #3 `[8/10]` SoBe Elixir nostalgia — BUILD
+- #4 `[8/10]` eBay Item Identifier Consensus Engine — BUILD
+- #5 `[8/10]` AI Services Client Website — BUILD
+
+---
+
+**Safe to work.** Two action items when convenient: commit the 13 dirty `_studio` files, and import the 5 mobile answers via studio Refresh.
+[Thu 03/26/2026  8:30:01.72] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+**TOOLS**
+- ✓ Git 2.53.0
+- ✓ Node v24.14.0
+- ✓ npm 11.9.0
+- ✓ Python 3.13.7
+- ✓ Claude Code 2.1.84 (above expected 2.1.78)
+- ✓ Repomix 1.12.0
+- ✓ Ollama 0.18.2 UP
+
+**GATEWAY ENDPOINTS**
+- ✓ Anthropic key: SET
+- ✓ Gemini key: SET
+- ✓ OpenRouter key: SET
+- ✓ Ollama: UP — 2 models (gemma3:4b)
+
+**PROJECTS (13 checked)**
+- ~ UNCOMMITTED (16 files): _studio
+- ✓ 12 projects clean
+
+**STUDIO FILES**
+- ✓ All critical files present
+- ✓ All optional files present
+
+**MOBILE ANSWERS**
+- ~ 5 sessions, 5 answers pending — run importMobileAnswers in studio
+
+**VERDICT: DEGRADED (2 issues)**
+**ACTION:** Commit _studio dirty files, import mobile answers in studio
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (16 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions, 5 answers
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+**Cycle result:** 0 tasks dispatched (work queue empty)
+
+- Ollama: UP | Gemini: available
+- Agents recently active via gateway log: 0 (gateway log has no recent entries — agents may be logging elsewhere or idle)
+- Work queue depth: 0 (orchestrator-plan.json has no `agent_runnable` entries)
+- Task queue: 0 pending
+
+**Supervisor Inbox (3 pending):**
+1. `[INFO]` Constitutional Update + Agent Network Activation Complete
+2. `[INFO]` NIT Fire Drill — synthetic briefing
+3. `[INFO]` NIT Fire Drill Complete — PARTIAL (8/10 PASS)
+
+**Heartbeat status:** 3 agents tracked, all checked in within 25h
+
+**Whiteboard:** 32 items, none scored >7 awaiting decision
+
+**Lateral flags:** 1 total, 0 unreviewed
+
+---
+
+## Background Tasks Completed
+
+No background tasks were running — this is a fresh session start. The 3 pending inbox items reflect completed automated runs from a prior session (NIT fire drill, constitutional update). No action required on those unless you want to review/clear them.
+
+**Two items needing attention:**
+1. **Commit _studio** — 16 dirty files (runtime logs, JSON state updates, sidebar-agent.html, etc.)
+2. **Import mobile answers** — 5 sessions waiting in Supabase
+[Thu 03/26/2026  9:00:01.72] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+**TOOLS**
+- ✓ Git 2.53.0 | Node v24.14.0 | npm 11.9.0 | Python 3.13.7
+- ✓ Claude Code 2.1.84 (above expected 2.1.78)
+- ✓ Repomix 1.12.0 | Ollama 0.18.2 UP
+
+**GATEWAY ENDPOINTS**
+- ✓ Anthropic: SET | Gemini: UP | OpenRouter: UP | Ollama: UP (2 models: gemma3:4b)
+
+**PROJECTS (13 checked)**
+- ~ UNCOMMITTED (16 files): _studio
+- ✓ 12 projects clean
+
+**STUDIO FILES** — ✓ All critical files present
+
+**MOBILE ANSWERS** — ~ 5 sessions, 5 answers pending
+
+**VERDICT: DEGRADED (2 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (16 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions, 5 answers
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Dispatched:** 0 tasks (work queue empty, not overnight hours)
+- **Ollama:** UP | **Gemini:** available | **Queue depth:** 0
+
+---
+
+## BACKGROUND TASKS COMPLETED (overnight)
+
+| Task | Time | Result |
+|---|---|---|
+| Auto-answer agent | 3:30am | Hit Claude quota — 0 answers processed |
+| Product archaeology | 2:00am | Completed |
+| Whiteboard scoring | 4:00am | ✓ All 32 items already scored, 0 new |
+| Overnight job delta | 3:00am | Completed |
+| Orchestrator briefing | 8:02am | ✓ Briefing generated via Gemini 2.5 Flash |
+| Supervisor check | 9:00am | ✓ Ran, report saved |
+
+**Top whiteboard items (all scored 8/10):** Horror game reviews, DuPont Corfam, SoBe Elixir nostalgia, eBay Consensus Engine, AI Services Client Website.
+
+---
+
+**Two action items:**
+1. `git commit` — 16 dirty `_studio` files
+2. Import 5 mobile answers — hit Refresh in studio
+[Thu 03/26/2026  9:30:01.77] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.7 ✓
+- Claude Code 2.1.84 ✓ (above expected 2.1.78)
+- Repomix 1.12.0 ✓
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Gemini: UP ✓
+- OpenRouter: SET ✓
+- Ollama: UP — 2 models ✓
+
+**PROJECTS (13 checked)**
+- `! UNCOMMITTED (16 files): _studio`
+- 12 projects clean ✓
+
+**STUDIO FILES**
+- All critical files present ✓
+- `gateway-log.txt` — optional, missing
+
+**MOBILE ANSWERS**
+- `! 5 sessions pending — 5 answers waiting`
+
+**VERDICT: DEGRADED (2 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+WARNING (2):
+  [~] UNCOMMITTED (16 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions, 5 answers
+
+WATCH (3):
+  [-] gateway-log.txt missing
+  [-] sre-scout heartbeat flagged (prior run)
+  [-] supervisor heartbeat flagged (prior run)
+
+STRESS VERDICT: WARNING
+ACTION: Commit _studio changes; import 5 mobile answers in studio
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+**0 tasks dispatched** — no agent-runnable items in queue (all active work requires human decisions first per today's orchestrator briefing).
+
+---
+
+## BACKGROUND TASK SUMMARY (Overnight 2026-03-26)
+
+**Orchestrator Briefing (3:30am)** — Ran successfully.
+- Today's top priorities: job-match (5 pending decisions), listing-optimizer (2 pending decisions), CTW (portrait images + trait detector fix)
+- No agent-runnable tasks — all active work gated on human decisions
+- Note flagged: `gemini-1.5-flash` in orchestrator.md is deprecated; task used `gemini-2.5-flash`
+
+**Auto-Answer Agent (3:30am)** — Hit Claude quota limit at run time ("resets 4am"). Pushed 0 items.
+
+**Whiteboard Scorer (4:00am)** — Ran successfully. Scored top 10 items:
+- #1 `[8/10]` Horror game reviews — PUBLISH
+- #2 `[8/10]` DuPont Corfam — RESEARCH
+- #3 `[8/10]` SoBe Elixir nostalgia — BUILD
+- #4 `[8/10]` eBay Item Identifier Consensus Engine — BUILD
+- #5 `[8/10]` AI Services Client Website — BUILD
+- Items #6–10 scored 7/10
+
+Pushed 0 items to mobile-inbox.json (likely quota/filter threshold — check `mobile-inbox.json` manually).
+[Thu 03/26/2026 10:00:01.66] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 — UP, 2 models (gemma3:4b + 1 other)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (16 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio dirty files; import mobile answers in studio
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (16 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions
+
+WATCH (2):
+  [-] orchestrator.md references deprecated gemini-1.5-flash — should be gemini-2.5-flash
+  [-] overnight-auto-answer hit quota limit at 3:30am (resets 4am CT)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR HEALTH CHECK
+
+**Cycle:** 0 tasks dispatched (no agent-runnable queue items)
+**Ollama:** UP | **Gemini:** available | **Active agents in log:** none
+
+**Inbox (3 pending):**
+- `[INFO]` Constitutional Update + Agent Network Activation Complete
+- `[INFO]` NIT Fire Drill — synthetic briefing (2026-03-25)
+- `[INFO]` NIT Fire Drill Complete — PARTIAL (8/10 PASS)
+
+---
+
+## COMPLETED BACKGROUND TASKS (overnight/scheduled)
+
+| Task | Status | Notes |
+|---|---|---|
+| **Whiteboard scorer** (4am) | DONE | Ran successfully, pushed 0 items to mobile-inbox (threshold filter) |
+| **Orchestrator briefing** (daily) | DONE | Generated via gemini-2.5-flash |
+| **Auto-answer agent** (3:30am) | PARTIAL | Hit Claude quota limit, stopped early — reset at 4am CT |
+| **Supervisor check** (10am) | DONE | Whiteboard scoring ran |
+
+---
+
+## TODAY'S ORCHESTRATOR FOCUS (from morning briefing)
+
+1. **Job-match** — 5 pending decisions (direct income)
+2. **Listing-optimizer** — 2 pending decisions (daily eBay revenue)
+3. **CTW** — generate portrait images, fix trait detector calibration
+4. **Deferred:** acuscan-ar, arbitrage-pulse, hibid-analyzer, nutrimind, squeeze-empire, whatnot-apps
+
+**Blocker:** Sentinel suite blocked on LLC formation.
+
+**Note:** `orchestrator.md` still references deprecated `gemini-1.5-flash` — worth a quick update to `gemini-2.5-flash`.
+[Thu 03/26/2026 10:30:01.79] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: SET
+  ✓ OpenRouter: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+  ✓ Supabase: SET
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (16 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending, 5 answers waiting
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit _studio changes; hit Refresh in studio to import mobile answers
+```
+
+```
+=== STRESS REPORT ===
+CRITICAL (0): none
+WARNING (2):
+  [~] UNCOMMITTED (16 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions, 5 answers
+WATCH (0): none
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR HEALTH CHECK
+
+**Cycle result:** 0 tasks dispatched (work queue empty, not overnight hours)
+
+**Agents recently active:** None found in gateway-log.txt this session
+
+**Heartbeat status (today's entries):**
+- `orchestrator` — CLEAN: daily briefing generated via gemini-2.5-flash, 8 human-required items surfaced
+- `sre-scout` — FLAGGED ×3: same 2 issues (uncommitted files + mobile answers)
+- `supervisor` — CLEAN: session start DEGRADED health noted
+
+---
+
+## BACKGROUND TASKS COMPLETED
+
+| Task | Result |
+|---|---|
+| **overnight-whiteboard-score** (4am) | Ran. Pushed **0** top-10 items to mobile-inbox.json (none scored high enough) |
+| **overnight-auto-answer** (3:30am) | Hit Claude quota limit at start — 0 answers processed. Resets 4am CT |
+
+**Notable:** Auto-answer hit quota before doing any work. The whiteboard scorer ran clean but found nothing worth surfacing. Both scheduled tasks are healthy — auto-answer was just a quota timing issue.
+[Thu 03/26/2026 11:00:01.67] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (ahead of expected 2.1.78)
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ! OpenRouter: DOWN — timeout (Tier 1 unavailable)
+  ✓ Ollama: UP — 2 models
+  ✓ Supabase: configured
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (16 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ! 5 sessions pending — 5 answers waiting
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Check OpenRouter connectivity, commit _studio files, import mobile answers
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] OpenRouter DOWN — timeout (Tier 1 fallback unavailable)
+  [~] UNCOMMITTED (16 files): _studio
+  [~] 5 mobile answer sessions pending in Supabase
+
+WATCH (1):
+  [-] orchestrator-briefing.json references deprecated gemini-1.5-flash model
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## Supervisor Health Check
+
+**Supervisor Inbox (3 items, all PENDING):**
+- Constitutional Update + Agent Network Activation Complete
+- NIT Fire Drill — synthetic briefing
+- NIT Fire Drill Complete — PARTIAL (8/10 PASS)
+
+**Task Queue:** Empty (0 tasks waiting)
+
+---
+
+## Background Tasks Completed (Overnight/Scheduled)
+
+| Task | Time | Result |
+|---|---|---|
+| Overnight Auto-Answer | 3:30am | **FAILED** — hit Claude quota before doing any work (resets 4am CT) |
+| Overnight Whiteboard Score | 4:00am | **CLEAN** — ran fine, found 0 items above threshold to push |
+| Orchestrator Briefing | ~8am | **COMPLETE** — generated via gemini-2.5-flash |
+| Supervisor Check | ~10:30am | **CLEAN** — cycle ran, 0 tasks dispatched (empty queue) |
+
+**Orchestrator's top recommendations for today:**
+1. **job-match** — 5 pending decisions (Priority 1 — income replacement)
+2. **listing-optimizer** — 2 pending decisions (Priority 2 — daily eBay revenue)
+3. **CTW** — generate portrait images, fix trait detector (Priority 4)
+
+**Key blocker:** Sentinel Core/Performer/Viewer blocked on LLC formation.
+
+---
+
+**Open items needing your attention:**
+- OpenRouter timeout — may just be transient, worth a retry if you need Tier 1
+- 16 uncommitted files in `_studio` — ready to commit whenever
+- 5 mobile answers in Supabase — hit Refresh in studio to import

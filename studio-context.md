@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-26 03:00 | Auto-built by generate-context.py
-Next regeneration: 2026-03-26 11:00 (approximate — runs at every session start)
+Generated: 2026-03-26 11:00 | Auto-built by generate-context.py
+Next regeneration: 2026-03-26 19:00 (approximate — runs at every session start)
 Handoff: System tightness last reviewed: 2026-03-25 — PARTIAL (NIT 8/10, T06 fixed, T05 dismissed)
 
 ## WHO IS JOE
@@ -1823,7 +1823,7 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-03-26T02:00:01.468655
+Last updated: 2026-03-26T04:00:01.281414
 Total items: 32
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
@@ -2477,4 +2477,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-26 03:00
+End of context. Generated: 2026-03-26 11:00

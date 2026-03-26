@@ -1,30 +1,104 @@
-{
-  "_schema": "1.0",
-  "_description": "Daily agent checkin log",
-  "entries": [
-    {
-      "date": "2026-03-26 02:53",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-03-26 02:53",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-03-26 02:54",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-03-26 03:01",
-      "agent": "sre-scout",
-      "status": "flagged",
-      "notes": "DEGRADED: 2 uncommitted repos, 5 mobile answers pending"
-    }
-  ]
-}
+[
+  {
+    "date": "2026-03-26T04:31",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 10 uncommitted _studio files, 5 mobile answers pending, supervisor-inbox parse error"
+  },
+  {
+    "date": "2026-03-26T05:01:27.437527",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 10 uncommitted _studio files, 5 mobile answers pending, agent heartbeats mostly silent"
+  },
+  {
+    "date": "2026-03-26T05:31:25.234107",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 10 uncommitted _studio files, 5 mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T06:01:26.515150",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 11 uncommitted _studio files, 5 mobile answers pending, agent heartbeats mostly silent"
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 11 uncommitted _studio files; 5 mobile answers pending; auto-answer hit quota at 3:30am"
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "supervisor",
+    "status": "flagged",
+    "notes": "Health check complete: DEGRADED \u2014 2 warnings. Overnight tasks: job-delta OK (162 URLs), whiteboard-score OK (32 items), auto-answer QUOTA-HIT"
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 12 uncommitted _studio files; 5 mobile answers pending in Supabase"
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 12 uncommitted _studio files; 5 mobile answers pending in Supabase"
+  },
+  {
+    "date": "2026-03-26T08:01:12.863391",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 13 uncommitted _studio files; 5 mobile answers pending; auto-answer hit quota at 3:30am"
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 13 uncommitted files in _studio; 5 mobile answer sessions pending"
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "orchestrator",
+    "status": "clean",
+    "notes": "Daily briefing generated via gemini-2.5-flash. 8 human-required tasks, 1 blocked (Sentinel/LLC)."
+  },
+  {
+    "date": "2026-03-26",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: _studio 16 uncommitted files, 5 mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T09:01:27.899416",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 16 uncommitted _studio files; 5 mobile answers pending in Supabase"
+  },
+  {
+    "date": "2026-03-26T09:31:38.039503",
+    "agent": "supervisor",
+    "status": "clean",
+    "notes": "Session start health check: DEGRADED \u2014 16 uncommitted _studio files, 5 mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T10:01:40.288017",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED \u2014 16 uncommitted _studio files; 5 mobile answers pending. All tools/endpoints UP."
+  },
+  {
+    "date": "2026-03-26T10:31:25.130495",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 16 uncommitted _studio files; 5 mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T11:02:10.126827",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: OpenRouter DOWN, 16 uncommitted _studio files, 5 mobile answers pending"
+  }
+]
