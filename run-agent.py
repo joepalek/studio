@@ -143,8 +143,15 @@ def launch_claude(agent_name: str, mode: str = "") -> tuple[bool, str]:
         prompt = get_agent_prompt(agent_name, mode)
 
         # Try claude CLI — must be installed via: npm install -g @anthropic-ai/claude-code
+        # Use full path so Task Scheduler finds it regardless of session PATH
+        import shutil
+        claude_bin = (
+            shutil.which("claude.cmd") or
+            shutil.which("claude") or
+            r"C:\Users\jpalek\AppData\Roaming\npm\claude.cmd"
+        )
         result = subprocess.run(
-            ["claude", "--print", prompt],
+            [claude_bin, "--print", prompt],
             capture_output=True,
             text=True,
             timeout=3600,  # 1 hour max
