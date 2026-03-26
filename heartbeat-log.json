@@ -106,5 +106,17 @@
     "agent": "sre-scout",
     "status": "flagged",
     "notes": "WARNING: youtube_api_key MISSING, _studio uncommitted (2), 5 mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T14:31:34.072082",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 5 uncommitted _studio files; all endpoints UP"
+  },
+  {
+    "date": "2026-03-26T15:01:29.608402",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: _studio has 9 uncommitted files; all endpoints UP; no mobile answers pending"
   }
 ]

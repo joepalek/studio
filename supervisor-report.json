@@ -1,8 +1,8 @@
 {
-  "time": "2026-03-26T10:30:58.315282",
+  "time": "2026-03-26T15:01:29.618699",
   "ollama_up": true,
   "gemini_available": true,
-  "agents_recently_active": 0,
+  "agents_recently_active": 1,
   "work_queue_depth": 0,
   "dispatched": []
 }

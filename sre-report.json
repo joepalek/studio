@@ -1,33 +1,32 @@
 {
-  "timestamp": "2026-03-26T14:01:35.672574",
+  "timestamp": "2026-03-26T15:01:23.143319",
   "verdict": "DEGRADED",
-  "passes": {
-    "tools": {
-      "git": "2.53.0 OK",
-      "node": "v24.14.0 OK",
-      "npm": "11.9.0 OK",
-      "python": "3.13.7 OK",
-      "claude_code": "2.1.84 OK (above expected)",
-      "repomix": "1.12.0 OK",
-      "ollama": "0.18.2 UP"
-    },
-    "endpoints": {
-      "anthropic_key": "SET",
-      "gemini_key": "SET",
-      "openrouter_key": "SET",
-      "youtube_key": "MISSING",
-      "ollama": "UP \u2014 2 models",
-      "gemini_api": "UP",
-      "openrouter_api": "UP"
-    },
-    "projects": {
-      "issues": [
-        "UNCOMMITTED (2 files): _studio"
-      ],
-      "clean": 12
-    },
-    "studio_files": "All critical files present",
-    "mobile_answers": "5 sessions, 5 answers pending"
+  "tools": {
+    "git": "2.53.0 OK",
+    "node": "v24.14.0 OK",
+    "npm": "11.9.0 OK",
+    "python": "3.13.7 OK",
+    "claude_code": "2.1.84 OK (above expected 2.1.78)",
+    "repomix": "1.12.0 OK",
+    "ollama": "0.18.2 UP (2 models)"
   },
-  "issues_count": 3
+  "endpoints": {
+    "anthropic_api_key": "SET",
+    "gemini_api_key": "SET",
+    "openrouter_api_key": "SET",
+    "youtube_api_key": "SET",
+    "gemini": "UP",
+    "openrouter": "UP",
+    "ollama": "UP"
+  },
+  "projects": {
+    "issues": [
+      "UNCOMMITTED (9 files): _studio"
+    ],
+    "clean": 12
+  },
+  "studio_files": "All critical files present",
+  "mobile_answers": "No pending answers",
+  "task_queue": "0 tasks pending",
+  "inbox": "3 items (all INFO)"
 }

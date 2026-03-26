@@ -1,12 +1,10 @@
 {
-  "timestamp": "2026-03-26T14:01:35.657590",
-  "verdict": "WARNING",
+  "timestamp": "2026-03-26T15:01:23.143319",
+  "verdict": "WATCH",
   "critical": [],
   "warning": [
-    "youtube_api_key: MISSING \u2014 required for ai-intel-agent",
-    "UNCOMMITTED (2 files): _studio",
-    "MOBILE ANSWERS PENDING: 5 sessions, 5 answers"
+    "UNCOMMITTED (9 files): _studio"
   ],
   "watch": [],
-  "action_required": "Add youtube_api_key, commit _studio changes, import mobile answers in studio"
+  "action_required": "Commit dirty _studio files"
 }

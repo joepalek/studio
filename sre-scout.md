@@ -218,14 +218,23 @@ if not key or not url:
     exit()
 try:
     req = urllib.request.Request(
-        url + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=5',
+        url + '/rest/v1/mobile_answers?order=submitted_at.desc&limit=20',
         headers={'apikey': key, 'Authorization': 'Bearer ' + key}
     )
     r = urllib.request.urlopen(req, timeout=5)
     rows = json.loads(r.read())
-    if rows:
-        total = sum(r.get('total_answered', 0) for r in rows)
-        print(f'MOBILE ANSWERS PENDING: {len(rows)} sessions, {total} answers — run importMobileAnswers in studio')
+    # Filter to actual answer rows only — exclude sidebar_log type
+    real_answers = []
+    for row in rows:
+        try:
+            payload = json.loads(row.get('answers', '{}')) if isinstance(row.get('answers'), str) else row.get('answers', {})
+        except Exception:
+            payload = {}
+        if payload.get('type') != 'sidebar_log':
+            real_answers.append(row)
+    if real_answers:
+        total = sum(r.get('total_answered', 0) for r in real_answers)
+        print(f'MOBILE ANSWERS PENDING: {len(real_answers)} sessions, {total} answers — run importMobileAnswers in studio')
     else:
         print('SUPABASE: No pending mobile answers')
 except Exception as e:
