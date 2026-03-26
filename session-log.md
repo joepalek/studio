@@ -72,3 +72,13 @@ Updated by Claude Code after every major action.
 - **Status:** System clean — SRE DEGRADED issues resolved (Supabase queue cleared, all projects committed). Ollama service still down (manual start required).
 - **Next:** Resume project work
 
+### 23:07 | nit-fire-drill complete
+- **Action:** nit-fire-drill complete
+- **Result:** NIT fire drill complete_task test
+- **Next:** Review NIT results in nit-results.json
+
+### 23:08 | nit-fire-drill-complete complete
+- **Action:** nit-fire-drill-complete complete
+- **Result:** NIT complete: 8/10 PASS, PARTIAL verdict. T05 inbox render, T06 claude CLI path.
+- **Next:** Build studio.html supervisor panel (Step 8) to resolve T05. Install claude CLI globally to resolve T06.
+

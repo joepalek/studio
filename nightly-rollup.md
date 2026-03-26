@@ -110,7 +110,16 @@ log_action(
 )
 ```
 
-### Step 9 — Call complete_task()
+### Step 9 — Update session-handoff.md
+Append one line to session-handoff.md:
+```
+System tightness last reviewed: [YYYY-MM-DD] — [GREEN|YELLOW|RED] ([score]/100)
+```
+
+Read session-handoff.md first. Replace the existing "System tightness last reviewed" line
+if one already exists — keep only the most recent. Never append duplicates.
+
+### Step 10 — Call complete_task()
 ```python
 from session_logger import complete_task
 complete_task(

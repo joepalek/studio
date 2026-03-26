@@ -50,6 +50,7 @@ AGENT_MAP = {
     "market-scout":           "market-scout.md",
     "social-media-agent":     "social-media-agent.md",
     "nightly-rollup":         "nightly-rollup.md",
+    "ai-intel-agent":         "ai-intel-agent.md",
 }
 
 # ── Heartbeat helpers ───────────────────────────────────────────────────────

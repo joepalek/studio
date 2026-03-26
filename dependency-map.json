@@ -1,0 +1,60 @@
+{
+  "_schema": "1.0",
+  "_description": "Maps projects to their external dependencies. Used by ai-intel-agent to auto-escalate findings.",
+  "_note": "Update when a project adopts a new API, model, or tool.",
+  "projects": {
+    "listing-optimizer": {
+      "dependencies": ["anthropic-api", "claude-sonnet", "ebay-api"],
+      "priority": "high",
+      "notes": "Core revenue tool — API changes here are critical"
+    },
+    "hibid-analyzer": {
+      "dependencies": ["anthropic-api", "claude-haiku"],
+      "priority": "high",
+      "notes": "Lot analysis pipeline"
+    },
+    "squeeze-empire": {
+      "dependencies": ["anthropic-api", "openrouter", "ebay-api", "reddit-api"],
+      "priority": "high",
+      "notes": "eBay reseller automation — main production system"
+    },
+    "sentinel-core": {
+      "dependencies": ["anthropic-api", "claude-opus"],
+      "priority": "medium",
+      "notes": "Agent backbone"
+    },
+    "job-match": {
+      "dependencies": ["anthropic-api", "openrouter", "linkedin-api"],
+      "priority": "medium",
+      "notes": "Job matching and outreach"
+    },
+    "arbitrage-pulse": {
+      "dependencies": ["anthropic-api", "openrouter", "ebay-api", "keepa-api"],
+      "priority": "medium",
+      "notes": "Price arbitrage scanner"
+    },
+    "_studio": {
+      "dependencies": ["anthropic-api", "claude-sonnet", "openrouter", "ollama", "youtube-data-api-v3", "reddit-rss", "hn-algolia-api"],
+      "priority": "high",
+      "notes": "Agent orchestration system — changes here affect all agents"
+    },
+    "CTW": {
+      "dependencies": ["anthropic-api", "openrouter"],
+      "priority": "medium",
+      "notes": "Content/writing tool"
+    }
+  },
+  "dependency_keywords": {
+    "anthropic-api": ["anthropic", "claude", "claude api", "claude-sonnet", "claude-haiku", "claude-opus", "claude 4", "claude 3", "anthropic pricing", "anthropic rate limit"],
+    "claude-sonnet": ["sonnet", "claude-sonnet", "claude sonnet"],
+    "claude-haiku": ["haiku", "claude-haiku", "claude haiku"],
+    "claude-opus": ["opus", "claude-opus", "claude opus"],
+    "openrouter": ["openrouter", "open router"],
+    "ollama": ["ollama", "local llm", "local model"],
+    "ebay-api": ["ebay api", "ebay developer", "ebay selling api"],
+    "reddit-api": ["reddit api", "pushshift", "reddit rss"],
+    "youtube-data-api-v3": ["youtube api", "youtube data api", "youtube v3"],
+    "linkedin-api": ["linkedin api", "linkedin marketing api"],
+    "keepa-api": ["keepa", "amazon price tracker"]
+  }
+}

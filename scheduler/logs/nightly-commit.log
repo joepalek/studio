@@ -54,3 +54,28 @@ _studio: no state.json (skipped — expected)
 
 **Note:** `__pycache__/`, `.playwright-mcp/`, and `ollama-serve.log` were excluded from the commit as ephemeral/build artifacts — consider adding them to `.gitignore`.
 [Wed 03/25/2026 23:00:00.82] Nightly commit starting 
+Done. Here's the full summary:
+
+---
+
+**GIT COMMIT AGENT — REPORT**
+```
+✓ _studio   "chore(studio): session update — SRE health logs, audit tools, architecture docs"
+             10 files | committed + pushed to GitHub
+
+- 12 other projects: CLEAN — no uncommitted changes
+```
+
+**CHANGELOG AGENT — REPORT**
+```
+✓ CHANGELOG.md written for 12 projects (all showed as "new/initialized" — 
+  first time state.json was present in git HEAD)
+✓ MASTER-CHANGELOG.md updated — 12 projects
+✓ Pushed to GitHub
+```
+
+**SRE SCOUT — OPEN ITEMS**
+```
+! 5 mobile answer sessions pending — hit Refresh/importMobileAnswers in studio
+- gateway-log.txt: optional file missing (no impact)
+```
