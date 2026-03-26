@@ -1,8 +1,15 @@
 {
-  "time": "2026-03-26T01:31:16.184348",
+  "time": "2026-03-26T03:01:04.453542",
   "ollama_up": true,
   "gemini_available": true,
   "agents_recently_active": 0,
   "work_queue_depth": 0,
-  "dispatched": []
+  "dispatched": [
+    {
+      "agent": "wayback-cdx",
+      "task": "Continue overnight research batch",
+      "tier": "ollama",
+      "cost": 0
+    }
+  ]
 }
