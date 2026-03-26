@@ -44,13 +44,20 @@ Flag if any version is LOWER than expected. Do not flag if higher.
 Read keys from studio-config.json then ping each endpoint.
 
 ```bash
-# Read config
+# Read config — validate required keys (never print values)
 python -c "
 import json
 c = json.load(open('G:/My Drive/Projects/_studio/studio-config.json'))
-print('ANTHROPIC:', 'SET' if c.get('anthropic_api_key','').startswith('sk-ant') else 'MISSING')
-print('GEMINI:', 'SET' if c.get('gemini_api_key','').startswith('AIza') else 'MISSING')
-print('OPENROUTER:', 'SET' if c.get('openrouter_api_key','').startswith('sk-or') else 'MISSING')
+keys = {
+    'anthropic_api_key':  ('SET' if str(c.get('anthropic_api_key') or '').startswith('sk-ant') else 'MISSING'),
+    'gemini_api_key':     ('SET' if str(c.get('gemini_api_key') or '').startswith('AIza')   else 'MISSING'),
+    'openrouter_api_key': ('SET' if str(c.get('openrouter_api_key') or '').startswith('sk-or') else 'MISSING'),
+    'youtube_api_key':    ('SET' if str(c.get('youtube_api_key') or '').startswith('AIza')  else 'MISSING'),
+}
+for k, v in keys.items():
+    print(f'{k.upper().replace(\"_\", \" \")}: {v}')
+    if v == 'MISSING':
+        print(f'  [WARN] {k} is empty or missing — flag in STRESS REPORT as WARNING')
 print('OLLAMA_MODEL:', c.get('ollama_model', 'NOT SET'))
 "
 
@@ -298,16 +305,20 @@ This goes in `sre-stress-report.json` and is printed in the SRE output.
 
 **CRITICAL** — must fix before working:
 - Any missing critical studio file
-- Any missing or blank API key (anthropic_api_key, supabase_anon_key)
+- anthropic_api_key missing or blank (blocks all Claude work)
 - Git repo in a broken state (merge conflict, detached HEAD)
 - Python or Node not found
 
 **WARNING** — fix within the session:
+- gemini_api_key missing or blank
+- openrouter_api_key missing or blank
+- youtube_api_key missing or blank (required for ai-intel-agent)
 - Uncommitted changes in any project repo
 - Stale state.json (>7 days) on any project
 - Ollama DOWN
 - Gemini or OpenRouter DOWN
 - Mobile answers pending in Supabase
+Note: never expose key values in output — report only SET or MISSING
 
 **WATCH** — note but no action required now:
 - Optional files missing (gateway-log.txt, janitor-report.json)
