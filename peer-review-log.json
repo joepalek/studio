@@ -1,0 +1,6 @@
+{
+  "_schema": "1.0",
+  "_description": "Weekly cross-agent review findings",
+  "_rotation": "See agent-rotation-schedule.json for pair assignments",
+  "entries": []
+}

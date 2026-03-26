@@ -1,0 +1,10 @@
+{
+  "_schema": "1.0",
+  "_description": "Weekly peer review rotation pairs",
+  "rotation": [
+    {"week_slot": 1, "pairs": [["stress-tester","janitor"],["janitor","git-scout"]]},
+    {"week_slot": 2, "pairs": [["git-scout","intel-feed"],["intel-feed","sre-scout"]]},
+    {"week_slot": 3, "pairs": [["sre-scout","reconciler"],["reconciler","stress-tester"]]},
+    {"week_slot": 4, "pairs": [["workflow-intelligence","skill-improver"],["supervisor","stress-tester"]]}
+  ]
+}

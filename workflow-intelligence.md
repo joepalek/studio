@@ -486,3 +486,42 @@ All analysis runs via Gemini Flash or Ollama.
 ```
 Load workflow-intelligence.md. Run full friction scan and generate weekly report.
 ```
+
+---
+## COMMUNICATION PROTOCOL — MANDATORY
+
+### Daily Heartbeat
+At end of every run write one entry to heartbeat-log.json:
+{"date":"[today]","agent":"[this agent name]","status":"clean|flagged","notes":"[one line or empty string]"}
+A run with nothing to report still writes status: "clean" with empty notes.
+Silence is indistinguishable from broken. Always check in.
+
+### Reporting Standard
+NEVER dump reports to Claude Code terminal only.
+ALWAYS write findings to agent inbox as structured items.
+Format every inbox item:
+AGENT: [name] | DATE: [date] | TYPE: [audit|flag|suggestion|health]
+FINDING: [what was found]
+ACTION: [suggested action or "no action required"]
+
+### Lateral Flagging
+If you find data another agent could use:
+1. Write entry to lateral-flag.json with value: "medium" or "high" only
+2. Do NOT write to inbox directly
+3. Whiteboard Agent reviews lateral flags and promotes worthy ones to inbox
+Low value observations are dropped — do not flag noise.
+
+### Weekly Peer Review
+On your assigned rotation week (see agent-rotation-schedule.json):
+Review your assigned partner agent's last 7 days of output.
+Answer three questions only:
+1. What data did they produce that I could use?
+2. What am I producing that they could use?
+3. What feature should they have that doesn't exist yet?
+Write findings to peer-review-log.json.
+Suggestions go to whiteboard.json — not inbox.
+
+### Session End
+Always call complete_task() from utilities/session_logger.py at session end.
+Never consider a run complete until heartbeat entry is written.
+---

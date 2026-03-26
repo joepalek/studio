@@ -440,3 +440,55 @@ Load supervisor.md. Run supervisor cycle now.
 claude --dangerously-skip-permissions -p "Load supervisor.md. Run supervisor cycle now."
 ```
 Schedule: every 30 minutes via Windows Task Scheduler
+
+
+---
+## DAILY BRIEFING MODE
+
+### Daily Run — 8am
+1. Read heartbeat-log.json — list any agent that missed yesterday's checkin
+2. Read stress-log.json — summarize last 24hrs: total runs, pass rate, top failure categories
+3. Read lateral-flag.json — surface any unreviewed high-value flags
+4. Read whiteboard.json — surface any items scored above 7 awaiting decision
+5. Read peer-review-log.json — surface any findings from current week's rotation
+6. Write daily briefing to inbox:
+
+```
+SUPERVISOR DAILY BRIEFING — [date]
+DEAD AGENTS (missed heartbeat): [list or "none"]
+STRESS TEST SUMMARY: [X runs, X% pass, top issues]
+LATERAL FLAGS PENDING: [count and top item or "none"]
+WHITEBOARD ITEMS READY: [count and top scored item or "none"]
+PEER REVIEW THIS WEEK: [reviewer → reviewed, any findings]
+RECOMMENDED FOCUS: [one thing most worth your attention today]
+```
+
+### Dead Agent Definition
+An agent is dead if it has not written a heartbeat entry within:
+- Daily agents: 25 hours
+- Weekly agents: 8 days
+Flag dead agents every day until they check in.
+
+### What Briefing Mode Does NOT Do
+- Does not modify any files except inbox and briefing log
+- Does not reassign tasks
+- Does not make decisions
+- Does not run other agents
+Those are your decisions. Supervisor informs. You decide.
+
+---
+## COMMUNICATION PROTOCOL — MANDATORY
+
+### Daily Heartbeat
+At end of every run write one entry to heartbeat-log.json:
+{"date":"[today]","agent":"supervisor","status":"clean|flagged","notes":"[briefing summary one line]"}
+
+### Reporting Standard
+Write all briefings to supervisor-inbox.json as structured items.
+
+### Lateral Flagging
+Surface cross-agent signals to whiteboard-agent only.
+Do not write directly to inbox from briefing mode on behalf of other agents.
+
+### Session End
+Always write heartbeat entry after briefing is complete.

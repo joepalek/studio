@@ -1,0 +1,5 @@
+{
+  "_schema": "1.0",
+  "_description": "Stress tester run log — every pre-write and post-write gate",
+  "runs": []
+}
