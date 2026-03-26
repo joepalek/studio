@@ -100,5 +100,11 @@
     "agent": "sre-scout",
     "status": "flagged",
     "notes": "DEGRADED: OpenRouter DOWN, 16 uncommitted _studio files, 5 mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T14:01:35.688952",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: youtube_api_key MISSING, _studio uncommitted (2), 5 mobile answers pending"
   }
 ]

@@ -6078,3 +6078,76 @@ STRESS VERDICT: WARNING
 - 16 uncommitted files in `_studio` — ready to commit whenever
 - 5 mobile answers in Supabase — hit Refresh in studio to import
 [Thu 03/26/2026 11:30:01.95] Supervisor check starting 
+You've hit your limit · resets 2pm (America/Chicago)
+[Thu 03/26/2026 12:00:01.76] Supervisor check starting 
+You've hit your limit · resets 2pm (America/Chicago)
+[Thu 03/26/2026 12:30:01.95] Supervisor check starting 
+You've hit your limit · resets 2pm (America/Chicago)
+[Thu 03/26/2026 13:00:01.75] Supervisor check starting 
+You've hit your limit · resets 2pm (America/Chicago)
+[Thu 03/26/2026 13:30:01.71] Supervisor check starting 
+You've hit your limit · resets 2pm (America/Chicago)
+[Thu 03/26/2026 14:00:01.68] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.84 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 (UP — 2 models: gemma3:4b active)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET / API UP
+  ✓ OpenRouter key: SET / API UP
+  ! youtube_api_key: MISSING — required for ai-intel-agent
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (2 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ! 5 sessions, 5 answers pending — run importMobileAnswers in studio
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Add youtube_api_key to studio-config.json, commit _studio, import mobile answers
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] youtube_api_key MISSING — ai-intel-agent will be blocked
+  [~] UNCOMMITTED (2 files): _studio
+  [~] MOBILE ANSWERS PENDING: 5 sessions
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**SUPERVISOR STATE**
+
+- **Task queue:** 0 pending tasks — nothing queued
+- **Inbox:** 1 item (INFO — Constitutional Update from 2026-03-25, status PENDING)
+- **Heartbeat:** SRE Scout has run 3+ times today via scheduler — all flagging consistently (youtube key + uncommitted files)
+- **Background tasks completed:** The supervisor scheduled check has been running. The last sre-stress-report before this session showed 16 uncommitted _studio files; now only 2 remain — a prior commit cleaned most of it up (commit `125ff48` from git status).
+
+**Actions for you:**
+1. Add `youtube_api_key` to `studio-config.json`
+2. Commit the 2 dirty `_studio` files (`supervisor-check.log`, `studio-context.md`)
+3. Open studio and hit Refresh to import the 5 pending mobile answers

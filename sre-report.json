@@ -1,21 +1,33 @@
 {
-  "timestamp": "2026-03-26T11:24:36.373341",
+  "timestamp": "2026-03-26T14:01:35.672574",
   "verdict": "DEGRADED",
-  "tools": {
-    "git": "2.53.0",
-    "node": "v24.14.0",
-    "npm": "11.9.0",
-    "python": "3.13.7",
-    "claude": "2.1.84"
+  "passes": {
+    "tools": {
+      "git": "2.53.0 OK",
+      "node": "v24.14.0 OK",
+      "npm": "11.9.0 OK",
+      "python": "3.13.7 OK",
+      "claude_code": "2.1.84 OK (above expected)",
+      "repomix": "1.12.0 OK",
+      "ollama": "0.18.2 UP"
+    },
+    "endpoints": {
+      "anthropic_key": "SET",
+      "gemini_key": "SET",
+      "openrouter_key": "SET",
+      "youtube_key": "MISSING",
+      "ollama": "UP \u2014 2 models",
+      "gemini_api": "UP",
+      "openrouter_api": "UP"
+    },
+    "projects": {
+      "issues": [
+        "UNCOMMITTED (2 files): _studio"
+      ],
+      "clean": 12
+    },
+    "studio_files": "All critical files present",
+    "mobile_answers": "5 sessions, 5 answers pending"
   },
-  "endpoints": {
-    "anthropic": "SET",
-    "gemini": "SET",
-    "openrouter": "SET",
-    "ollama": "UP"
-  },
-  "issues": [
-    "UNCOMMITTED (16 files): _studio",
-    "MOBILE ANSWERS PENDING: 5 sessions"
-  ]
+  "issues_count": 3
 }
