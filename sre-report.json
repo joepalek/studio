@@ -1,42 +1,25 @@
 {
-  "date": "2026-03-26",
-  "generated_at": "2026-03-26T01:31:56.947851",
-  "passes": {
-    "tools": {
-      "git": "2.53.0 (OK)",
-      "node": "v24.14.0 (OK)",
-      "npm": "11.9.0 (OK)",
-      "python": "3.13.7 (OK)",
-      "claude_code": "2.1.84 (newer than expected 2.1.78)",
-      "repomix": "1.12.0 (OK)",
-      "ollama": "0.18.2 (OK)"
-    },
-    "endpoints": {
-      "anthropic": "SET",
-      "gemini": "UP",
-      "openrouter": "UP",
-      "ollama": "UP \u2014 2 models (gemma3:4b)",
-      "ollama_model": "gemma3:4b"
-    },
-    "projects": {
-      "issues": 13,
-      "detail": "All 12 project repos have uncommitted CHANGELOG.md (nightly changelog agent run). _studio has 8 uncommitted files (logs, state files, pycache).",
-      "root_cause": "nightly changelog agent wrote CHANGELOGs but commit did not run for individual project repos"
-    },
-    "studio_files": {
-      "critical": "ALL PRESENT",
-      "optional_missing": [
-        "gateway-log.txt"
-      ]
-    },
-    "mobile_answers": {
-      "status": "5 sessions pending, 5 answers \u2014 run importMobileAnswers in studio"
-    }
-  },
+  "timestamp": "2026-03-26T03:01:42.469140",
   "verdict": "DEGRADED",
-  "issue_count": 2,
-  "actions": [
-    "Commit CHANGELOG.md across all 12 project repos",
-    "Import 5 pending mobile answer sessions in studio"
-  ]
+  "issues": 3,
+  "tools": {
+    "git": "2.53.0",
+    "node": "v24.14.0",
+    "npm": "11.9.0",
+    "python": "3.13.7",
+    "claude": "2.1.84",
+    "repomix": "1.12.0"
+  },
+  "endpoints": {
+    "anthropic": "SET",
+    "gemini": "SET",
+    "openrouter": "SET",
+    "ollama": "UP (2 models)"
+  },
+  "project_issues": [
+    "UNCOMMITTED (1 files): job-match",
+    "UNCOMMITTED (18 files): _studio"
+  ],
+  "studio_files": "ALL CRITICAL PRESENT",
+  "mobile_answers": "5 sessions pending"
 }

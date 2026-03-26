@@ -14,5 +14,6 @@ Last NIT fire drill: 2026-03-25 — PARTIAL (T05 dismissed, T06 fixed)
 - claude CLI path: C:\Users\jpalek\AppData\Roaming\npm\claude.cmd
 - Task Scheduler: 14 tasks registered under Studio\
 - Supervisor inbox panel: dismissed (inbox.json feeds existing flow)
-- YouTube Data API key: NOT YET CREATED (required for ai-intel-agent)
-  Create at: console.cloud.google.com → APIs → YouTube Data API v3
+- YouTube Data API key: NOT YET CREATED (required for ai-intel-agent) — create at console.cloud.google.com
+
+System tightness last reviewed: 2026-03-25 — PARTIAL (NIT 8/10, T06 fixed, T05 dismissed)

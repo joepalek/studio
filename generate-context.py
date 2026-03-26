@@ -178,12 +178,36 @@ def read_state(project):
     return None
 
 
+def _load_last_handoff_line():
+    """Return the last non-empty line from session-handoff.md, or empty string."""
+    handoff_path = os.path.join(STUDIO, "session-handoff.md")
+    try:
+        with open(handoff_path, "r", encoding="utf-8") as f:
+            lines = [l.rstrip() for l in f.readlines() if l.strip()]
+        return lines[-1] if lines else ""
+    except Exception:
+        return ""
+
+
+def _next_regen_time():
+    """Return the next scheduled regen time (next session start — approximate)."""
+    from datetime import timedelta
+    now = datetime.now()
+    # Context regenerates at every session start — estimate next as 8h from now
+    nxt = now + timedelta(hours=8)
+    return nxt.strftime("%Y-%m-%d %H:%M")
+
+
 def build_context():
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     lines = []
 
     lines.append("# STUDIO SYSTEM CONTEXT")
     lines.append(f"Generated: {now} | Auto-built by generate-context.py")
+    lines.append(f"Next regeneration: {_next_regen_time()} (approximate — runs at every session start)")
+    handoff_line = _load_last_handoff_line()
+    if handoff_line:
+        lines.append(f"Handoff: {handoff_line}")
     lines.append("")
 
     # ── WHO IS JOE ────────────────────────────────────────────────────────────

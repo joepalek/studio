@@ -1,0 +1,6 @@
+{
+  "_schema": "1.0",
+  "_description": "Standing decisions log — append only. Log every architectural or process decision with reason and permanence.",
+  "_note": "Never delete entries. Mark superseded decisions with status: superseded and point to successor.",
+  "decisions": []
+}

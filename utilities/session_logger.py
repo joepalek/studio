@@ -277,6 +277,35 @@ def update_status(
     )
 
 
+def log_gateway_call(
+    agent: str,
+    action: str,
+    model: str,
+    tokens: int = 0,
+    cost: float = 0.0,
+):
+    """
+    Append one line to gateway-log.txt.
+    Format: [timestamp] | [agent] | [action] | [model] | [tokens] | [cost]
+
+    Args:
+        agent:   Which agent made the call
+        action:  Task type (translate, summarize, generate-code, etc.)
+        model:   Model used (claude-sonnet, gemini-flash, ollama/llama3, etc.)
+        tokens:  Token count (0 if unknown)
+        cost:    Estimated USD cost (0.0 if free/unknown)
+    """
+    gateway_log = STUDIO + '/gateway-log.txt'
+    try:
+        ts = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        cost_str = f'${cost:.4f}' if cost > 0 else '$0.0000'
+        line = f'[{ts}] | {agent} | {action} | {model} | {tokens} tokens | {cost_str}\n'
+        with open(gateway_log, 'a', encoding='utf-8') as f:
+            f.write(line)
+    except Exception:
+        pass  # Never crash the caller over a log write
+
+
 def complete_task(
     task_name: str,
     result_summary: str = '',

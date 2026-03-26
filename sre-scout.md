@@ -285,8 +285,98 @@ Total cost: $0.00 for GREEN/DEGRADED, ~$0.001 for CRITICAL analysis
 
 After report prints:
 1. Write report to `G:\My Drive\Projects\_studio\sre-report.json`
-2. If any CRITICAL issues — post to studio inbox as high-priority item
-3. If mobile answers pending — remind user to hit Refresh in studio
+2. Write stress report to `G:\My Drive\Projects\_studio\sre-stress-report.json`
+3. If any CRITICAL issues — post to studio inbox as high-priority item
+4. If mobile answers pending — remind user to hit Refresh in studio
+
+## STRESS REPORT
+
+After the 5 passes complete, compile a ranked stress report.
+This goes in `sre-stress-report.json` and is printed in the SRE output.
+
+### Severity Classification
+
+**CRITICAL** — must fix before working:
+- Any missing critical studio file
+- Any missing or blank API key (anthropic_api_key, supabase_anon_key)
+- Git repo in a broken state (merge conflict, detached HEAD)
+- Python or Node not found
+
+**WARNING** — fix within the session:
+- Uncommitted changes in any project repo
+- Stale state.json (>7 days) on any project
+- Ollama DOWN
+- Gemini or OpenRouter DOWN
+- Mobile answers pending in Supabase
+
+**WATCH** — note but no action required now:
+- Optional files missing (gateway-log.txt, janitor-report.json)
+- Any project with drift_risk: HIGH in its state.json
+- Claude Code version below expected
+- Scheduler tasks not found in `schtasks /query`
+
+### Stress Report Output Format
+
+Print this block immediately after the main SRE report:
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (N):
+  [!] Missing anthropic_api_key in studio-config.json
+  [!] studio.html not found
+
+WARNING (N):
+  [~] UNCOMMITTED (3 files): CTW
+  [~] Ollama DOWN
+
+WATCH (N):
+  [-] drift_risk HIGH: nutrimind (22d)
+  [-] gateway-log.txt missing
+
+STRESS VERDICT: CLEAN|WATCH|WARNING|CRITICAL
+```
+
+Stress verdict rules:
+- Any CRITICAL item → **CRITICAL**
+- Any WARNING item, no CRITICAL → **WARNING**
+- Only WATCH items → **WATCH**
+- No items → **CLEAN**
+
+### Write sre-stress-report.json
+
+```python
+import json
+from datetime import datetime
+
+stress_report = {
+    "timestamp": datetime.now().isoformat(),
+    "verdict": "CLEAN|WATCH|WARNING|CRITICAL",
+    "critical": [],   # list of strings
+    "warning": [],
+    "watch": [],
+    "action_required": ""   # one-line instruction for CRITICAL/WARNING
+}
+
+with open('G:/My Drive/Projects/_studio/sre-stress-report.json', 'w') as f:
+    json.dump(stress_report, f, indent=2)
+```
+
+### Push CRITICAL to supervisor-inbox.json
+
+If stress verdict is CRITICAL, append to supervisor-inbox.json:
+```json
+{
+  "id": "sre-critical-YYYYMMDDHHMMSS",
+  "source": "sre-scout",
+  "type": "health",
+  "urgency": "ALERT",
+  "title": "SRE CRITICAL — [N] blocking issues",
+  "finding": "[first critical item]. See sre-stress-report.json.",
+  "status": "PENDING",
+  "date": "ISO-8601"
+}
+```
 
 ## Rules
 - Never skip a pass even if previous pass failed
@@ -294,6 +384,7 @@ After report prints:
 - Always complete in under 60 seconds
 - Always print the verdict line last
 - Add supabase_anon_key and supabase_url to studio-config.json if missing
+- Always write sre-stress-report.json even on CLEAN runs
 
 ## Starting SRE Scout
 Load alongside ai-gateway.md:

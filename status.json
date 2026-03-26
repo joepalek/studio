@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-25T23:08:36",
+  "last_updated": "2026-03-26T02:54:05",
   "current_task": "",
   "completed_today": [
     "SRE health check run: CRITICAL resolved → all issues fixed",
@@ -20,7 +20,8 @@
     "sidebar-agent.html created — Opera sidebar with Gemini chat, status panel, task queue via Supabase",
     "supervisor.md updated — quota-aware mode, task-queue.json, sidebar-log.txt, daily summary protocol",
     "nit-fire-drill -- NIT fire drill complete_task test",
-    "nit-fire-drill-complete -- NIT complete: 8/10 PASS, PARTIAL verdict. T05 inbox render, T06 claude CLI path."
+    "nit-fire-drill-complete -- NIT complete: 8/10 PASS, PARTIAL verdict. T05 inbox render, T06 claude CLI path.",
+    "check-drift -- 0/12 projects drift_risk HIGH"
   ],
   "pending": [
     "run company registry pass1 again to test fixed sources",
@@ -44,11 +45,11 @@
     "scheduler needs admin terminal",
     "OpenCorporates needs free API key"
   ],
-  "next_recommended": "Build studio.html supervisor panel (Step 8) to resolve T05. Install claude CLI globally to resolve T06.",
+  "next_recommended": "",
   "overnight_summary": {
     "ghost_book_pass3": "SUCCESS — 3 concat opportunities: vedic+CS, hemp+fiber, microbiome+gut",
     "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 101
+  "v": 104
 }

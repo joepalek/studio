@@ -24,6 +24,39 @@
       "findings_count": 2,
       "notes": "[NIT] Fire drill complete: 8/10 PASS. PARTIAL verdict. 2 broken paths.",
       "session_id": ""
+    },
+    {
+      "id": "ACT-20260326-0253-checkdrift-002",
+      "timestamp": "2026-03-26T02:53:43.783250",
+      "agent": "check-drift",
+      "action_type": "rollup",
+      "target": "supervisor-inbox.json",
+      "result": "clean",
+      "findings_count": 0,
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260326-0253-checkdrift-003",
+      "timestamp": "2026-03-26T02:53:54.933470",
+      "agent": "check-drift",
+      "action_type": "rollup",
+      "target": "supervisor-inbox.json",
+      "result": "clean",
+      "findings_count": 0,
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260326-0254-checkdrift-004",
+      "timestamp": "2026-03-26T02:54:05.472724",
+      "agent": "check-drift",
+      "action_type": "rollup",
+      "target": "supervisor-inbox.json",
+      "result": "clean",
+      "findings_count": 0,
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH",
+      "session_id": ""
     }
   ]
 }

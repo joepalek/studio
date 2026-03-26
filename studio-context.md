@@ -1,5 +1,7 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-26 01:30 | Auto-built by generate-context.py
+Generated: 2026-03-26 03:00 | Auto-built by generate-context.py
+Next regeneration: 2026-03-26 11:00 (approximate — runs at every session start)
+Handoff: System tightness last reviewed: 2026-03-25 — PARTIAL (NIT 8/10, T06 fixed, T05 dismissed)
 
 ## WHO IS JOE
 
@@ -286,6 +288,8 @@ If it does:
     progress_pct: 20
     persona: Someone with wrist or hand pain looking for quick relief at their desk. Not technical. Has 2 minutes. Using a phone they're already holding. Wants to feel helped, not confused. Will not read instructions.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: acuscan-ar.html
     draft: acuscan-ar.draft.html
@@ -311,7 +315,7 @@ If it does:
       options: 
         - WebXR
         - Canvas overlay on video element
-      recommendation: Canvas overlay — broader mobile browser support, simpler implementation for MVP
+      recommendation: Canvas overlay â€” broader mobile browser support, simpler implementation for MVP
       confidence: 85%
       confidence_reason: WebXR has spotty iOS support. Canvas overlay works everywhere.
       depends_on: None
@@ -325,7 +329,7 @@ If it does:
   proactive_questions: 
     - 
       id: proactive_001
-      question: If hand tracking lags on older phones — prioritize speed or visual accuracy?
+      question: If hand tracking lags on older phones â€” prioritize speed or visual accuracy?
       context: TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate.
       answer: None
       answered_date: None
@@ -347,7 +351,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Research TF.js MediaPipe Hands browser compatibility — document which mobile browsers work
+      task: Research TF.js MediaPipe Hands browser compatibility â€” document which mobile browsers work
       size: small
       size_estimate: 20min
       depends_on: None
@@ -355,7 +359,7 @@ If it does:
       completed_date: None
     - 
       id: auto_002
-      task: Define acupoints data model — LI4, PC6, HT7, TW4, LU9 with landmark indices and descriptions
+      task: Define acupoints data model â€” LI4, PC6, HT7, TW4, LU9 with landmark indices and descriptions
       size: small
       size_estimate: 15min
       depends_on: None
@@ -384,7 +388,7 @@ If it does:
       confirmed: False
       confirmed_date: None
     - 
-      assumption: App is personal use, not clinical — no medical disclaimers needed beyond basic note
+      assumption: App is personal use, not clinical â€” no medical disclaimers needed beyond basic note
       confirmed: True
       confirmed_date: 2026-03-12
     - 
@@ -431,6 +435,8 @@ If it does:
     progress_pct: 0
     persona: Active reseller (Joe) who knows what sells but doesn't have time to scroll Marketplace manually for hours. Wants a 30-second morning decision: which 5 items are worth pursuing today.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: arbitrage-pulse.js
     draft: arbitrage-pulse.draft.js
@@ -452,12 +458,12 @@ If it does:
   decisions: 
     - 
       id: decision_001
-      question: What geographic area to monitor — Tennessee local, Illinois local, or both?
+      question: What geographic area to monitor â€” Tennessee local, Illinois local, or both?
       options: 
         - Tennessee (Atwood/McKenzie area)
         - Illinois (Woodstock area)
-        - Both — separate digests
-      recommendation: Both with separate digests — you travel between both regularly
+        - Both â€” separate digests
+      recommendation: Both with separate digests â€” you travel between both regularly
       confidence: 70%
       confidence_reason: Depends on where you actually source inventory. User knows best.
       depends_on: None
@@ -470,11 +476,11 @@ If it does:
       sessions_pending: 0
     - 
       id: decision_002
-      question: Scraping approach — Apify Actor or direct browser automation via Chrome extension?
+      question: Scraping approach â€” Apify Actor or direct browser automation via Chrome extension?
       options: 
         - Apify (paid, reliable, maintained)
         - Chrome extension automation (free, may break with FB updates)
-      recommendation: Start with Chrome extension automation — free, and we already have it set up
+      recommendation: Start with Chrome extension automation â€” free, and we already have it set up
       confidence: 65%
       confidence_reason: Facebook actively fights scrapers. Apify is more reliable long-term but costs money. Prove concept free first.
       depends_on: None
@@ -495,14 +501,14 @@ If it does:
       unlocks: Keyword filter design
     - 
       id: proactive_002
-      question: Minimum profit margin to include in digest — e.g. only show items with 40%+ margin?
+      question: Minimum profit margin to include in digest â€” e.g. only show items with 40%+ margin?
       context: Sets the filter threshold for the margin analysis step.
       answer: None
       answered_date: None
       unlocks: Margin filter logic
     - 
       id: proactive_003
-      question: Digest delivery format — Markdown file in Drive, email, or dashboard card?
+      question: Digest delivery format â€” Markdown file in Drive, email, or dashboard card?
       context: Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio.
       answer: None
       answered_date: None
@@ -510,7 +516,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Research eBay Sold Listings API — document how to query sold prices for a given item keyword
+      task: Research eBay Sold Listings API â€” document how to query sold prices for a given item keyword
       size: small
       size_estimate: 20min
       depends_on: None
@@ -518,7 +524,7 @@ If it does:
       completed_date: None
     - 
       id: auto_002
-      task: Design margin calculation formula — (eBay avg sold - FB asking price) / FB asking price
+      task: Design margin calculation formula â€” (eBay avg sold - FB asking price) / FB asking price
       size: small
       size_estimate: 15min
       depends_on: None
@@ -535,7 +541,7 @@ If it does:
   decision_log: []
   assumption_log: 
     - 
-      assumption: Facebook Marketplace is primary source — not OfferUp, Craigslist, etc.
+      assumption: Facebook Marketplace is primary source â€” not OfferUp, Craigslist, etc.
       confirmed: False
       confirmed_date: None
     - 
@@ -572,14 +578,16 @@ If it does:
   name: CTW
   status: active
   progress: 40
-  handoff: Phase 2 complete. Stress test runner working. Céleste validated at deployment quality. Next: Phase 3 day structure and time engine, plus real character portrait images to replace SVG placeholders.
+  handoff: Phase 2 complete. Stress test runner working. CÃ©leste validated at deployment quality. Next: Phase 3 day structure and time engine, plus real character portrait images to replace SVG placeholders.
   lastUpdated: 2026-03-25
   blockers: 
-    - Real portrait images not yet generated — using SVG placeholders
+    - Real portrait images not yet generated â€” using SVG placeholders
     - Trait activation detector needs calibration against more test runs
     - comfort bar still overcorrects downward under pressure
   nextAction: Generate portrait images for all 4 characters using Perchance with provided prompts, add paths to character JSONs, then begin Phase 3 day structure build
-  sessionSummary: Full Phase 2 built including story loader, provider dropdown, stress test battery, and character library. Céleste test run validated core architecture — appeasement resistance held through pressure phase. Three scoring bugs fixed.
+  sessionSummary: Full Phase 2 built including story loader, provider dropdown, stress test battery, and character library. CÃ©leste test run validated core architecture â€” appeasement resistance held through pressure phase. Three scoring bugs fixed.
+  last_touched: 2026-03-25
+  drift_risk: LOW
 
 ### hibid-analyzer
   _schema_version: 1.0
@@ -595,6 +603,8 @@ If it does:
     progress_pct: 60
     persona: Active auction bidder (Joe) sitting at a computer during a live HiBid auction. Needs value estimates fast. No time to research manually. Wants notes saved automatically so he can bid with confidence.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: hibid-analyzer.js
     draft: hibid-analyzer.draft.js
@@ -605,7 +615,7 @@ If it does:
     mode: None
     active: False
     started: None
-    handoff_note: Gemini API image analysis works. Blocked on HiBid textarea DOM automation. Chrome extension is now available — this changes the approach entirely. First session should attempt textarea interaction via extension before any other approach.
+    handoff_note: Gemini API image analysis works. Blocked on HiBid textarea DOM automation. Chrome extension is now available â€” this changes the approach entirely. First session should attempt textarea interaction via extension before any other approach.
   test_lock: 
     locked: False
     lock_reason: None
@@ -616,12 +626,12 @@ If it does:
   decisions: 
     - 
       id: decision_001
-      question: Now that Chrome extension is available — attempt textarea via extension first or continue investigating DOM approach?
+      question: Now that Chrome extension is available â€” attempt textarea via extension first or continue investigating DOM approach?
       options: 
-        - Extension first — highest probability of success
-        - DOM investigation — understand root cause first
+        - Extension first â€” highest probability of success
+        - DOM investigation â€” understand root cause first
         - Both in parallel
-      recommendation: Extension first — Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely
+      recommendation: Extension first â€” Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely
       confidence: 85%
       confidence_reason: Extension confirmed working on first try per user. Direct browser access eliminates the automation layer that was blocking.
       depends_on: None
@@ -657,7 +667,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Document current Gemini API integration — what prompt is used, what format is returned, what works
+      task: Document current Gemini API integration â€” what prompt is used, what format is returned, what works
       size: small
       size_estimate: 15min
       depends_on: None
@@ -665,7 +675,7 @@ If it does:
       completed_date: None
     - 
       id: auto_002
-      task: Research HiBid watchlist page structure — document what the notes field looks like in the DOM
+      task: Research HiBid watchlist page structure â€” document what the notes field looks like in the DOM
       size: small
       size_estimate: 20min
       depends_on: None
@@ -692,13 +702,13 @@ If it does:
       confirmed: True
       confirmed_date: 2026-03-12
     - 
-      assumption: No backend needed — runs locally in browser
+      assumption: No backend needed â€” runs locally in browser
       confirmed: True
       confirmed_date: 2026-03-12
   scope_flags: []
   reusable_findings: 
     - 
-      finding: Gemini API base64 inline image analysis pattern — works reliably for lot image processing
+      finding: Gemini API base64 inline image analysis pattern â€” works reliably for lot image processing
       applicable_to: 
         - acuscan-ar
         - listing-optimizer
@@ -724,7 +734,7 @@ If it does:
         - state.json initialized
         - Chrome extension confirmed working on first try
       blockers: 
-        - Textarea DOM automation unresolved — extension approach now primary
+        - Textarea DOM automation unresolved â€” extension approach now primary
       next_action: Attempt textarea write via Chrome extension on live HiBid page
   strategy_notes: []
 
@@ -736,12 +746,14 @@ If it does:
   _last_updated: 2026-03-25
   project: 
     name: Talent Insight Engine (Job Match Platform)
-    description: AI-powered job matching platform. Two sides: (1) Job Seeker — narrative interview generates behavioral profile, matched against live job pool. (2) Employer — browse candidate profiles with AI alignment scoring. Scraping engine runs two-tier crawl: monthly broad discovery + daily targeted delta fetch with JIT dead-link validation.
+    description: AI-powered job matching platform. Two sides: (1) Job Seeker â€” narrative interview generates behavioral profile, matched against live job pool. (2) Employer â€” browse candidate profiles with AI alignment scoring. Scraping engine runs two-tier crawl: monthly broad discovery + daily targeted delta fetch with JIT dead-link validation.
     status: active
     complexity_budget: medium
     progress_pct: 55
-    persona: Job seeker tired of irrelevant results, scam listings, and dead links. Wants a ranked list of real, attainable opportunities matched to their actual behavioral profile — not just keywords. Also: employer who wants behavioral fit data, not just credentials.
+    persona: Job seeker tired of irrelevant results, scam listings, and dead links. Wants a ranked list of real, attainable opportunities matched to their actual behavioral profile â€” not just keywords. Also: employer who wants behavioral fit data, not just credentials.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: Talent-Insight-Engine/server/routes.ts
     draft: Talent-Insight-Engine/server/routes.draft.ts
@@ -752,19 +764,19 @@ If it does:
     frontend: React 18 + TypeScript + Vite + Tailwind + shadcn/ui
     backend: Node.js + Express + TypeScript
     database: PostgreSQL + Drizzle ORM
-    ai: OpenAI GPT-4o via Replit proxy — NEEDS MIGRATION to Anthropic API
-    auth: Replit Auth (OpenID Connect) — NEEDS MIGRATION to standard auth
-    scraping: NOT YET BUILT — architecture designed, ready to implement
+    ai: OpenAI GPT-4o via Replit proxy â€” NEEDS MIGRATION to Anthropic API
+    auth: Replit Auth (OpenID Connect) â€” NEEDS MIGRATION to standard auth
+    scraping: NOT YET BUILT â€” architecture designed, ready to implement
   what_is_built: 
     working: 
       - Resume upload and parsing (PDF + DOCX)
-      - Narrative interview — story-based questions for job seekers
+      - Narrative interview â€” story-based questions for job seekers
       - GPT-4o generates: aiSummary, employerSummary, workingTendencies, internalTraits
       - Eligibility evaluation (degree, experience, location)
       - Effort reduction flags (spam detection, input quality)
-      - Employer portal — browse candidate profiles
-      - AI alignment scoring — fitBand + signals between candidate and employer intent
-      - PostgreSQL schema — users, sessions, profiles, conversations, messages
+      - Employer portal â€” browse candidate profiles
+      - AI alignment scoring â€” fitBand + signals between candidate and employer intent
+      - PostgreSQL schema â€” users, sessions, profiles, conversations, messages
       - Full shadcn/ui component library
       - Landing page, seeker flow, employer flow
     not_built: 
@@ -777,48 +789,48 @@ If it does:
       - Stale listing feedback loop
       - Application answer auto-generation
     needs_migration: 
-      - Replit Auth → standard auth (Passport.js + JWT or similar)
-      - OpenAI via Replit proxy → Anthropic Claude API
-      - PostgreSQL connection — needs new DATABASE_URL outside Replit
+      - Replit Auth â†’ standard auth (Passport.js + JWT or similar)
+      - OpenAI via Replit proxy â†’ Anthropic Claude API
+      - PostgreSQL connection â€” needs new DATABASE_URL outside Replit
   scraping_architecture: 
     tier_1_monthly_broad_crawl: 
-      purpose: Discover all job boards, career pages, niche listings — build the address book
+      purpose: Discover all job boards, career pages, niche listings â€” build the address book
       sources: 
         - Common Crawl data
         - headless browser cluster
         - company 'Work with Us' footers
         - niche job boards
         - government job portals
-      output: master_sources.json — prioritized URL/API endpoint list fed to daily scraper
+      output: master_sources.json â€” prioritized URL/API endpoint list fed to daily scraper
       frequency: monthly
       agent: monthly_discovery_agent
     tier_2_daily_delta_fetch: 
-      purpose: High-frequency extraction from known sources — new and updated listings only
+      purpose: High-frequency extraction from known sources â€” new and updated listings only
       sources: URLs from master_sources.json
-      method: Check new/updated headers only — save bandwidth
+      method: Check new/updated headers only â€” save bandwidth
       output: daily_jobs_raw.json
       frequency: daily
       agent: daily_scrape_agent
     deduplication_pipeline: 
-      stage_1: Normalize — standardize titles, salaries, locations
-      stage_2: Cluster — MinHash or similar to group near-duplicate descriptions across boards
-      stage_3: Head record — select most reputable source (direct company site preferred) as primary
+      stage_1: Normalize â€” standardize titles, salaries, locations
+      stage_2: Cluster â€” MinHash or similar to group near-duplicate descriptions across boards
+      stage_3: Head record â€” select most reputable source (direct company site preferred) as primary
       stage_4: Collapse duplicates under head record with + expand UI
     jit_dead_link_checker: 
       trigger: Every time results are returned to user
-      method: Async HEAD requests via httpx/aiohttp — ping all URLs simultaneously
+      method: Async HEAD requests via httpx/aiohttp â€” ping all URLs simultaneously
       logic: 
         200: Deliver to user
         404_410: Silently flag as Stale in DB, remove from current view
         301_302: Follow redirect, update Head URL in DB
-        403_429: Flag as Throttled — scraper may be blocked
+        403_429: Flag as Throttled â€” scraper may be blocked
     scam_and_funnel_detection: 
       heuristics: 
         - Multiple listings from different recruiters for same role with different pay = lead-gen funnel
         - Same job reposted every 3 days for 6+ months = ghost listing or scam
         - Domain reputation cross-reference against scam database
         - URL redirect chain > 3 hops = data funnel
-        - Third-party aggregator vs direct company site — weight direct higher
+        - Third-party aggregator vs direct company site â€” weight direct higher
       action: Do NOT delete. Push to bottom tier, apply Suspect Listing flag
       database_fields: 
         original_source: Where first found in monthly crawl
@@ -829,19 +841,19 @@ If it does:
         last_verified: Last successful HEAD request
     stale_listing_feedback: 
       dead_link: Auto-flag if HEAD returns 404
-      applicant_sentiment: If 10+ users referred and none report response — flag as Stale/Unresponsive
+      applicant_sentiment: If 10+ users referred and none report response â€” flag as Stale/Unresponsive
       age_threshold: Flag listings > 30 days old with no update
   matching_engine: 
     tier_1_high_match: Direct correlation between seeker internalTraits and job requirements
     tier_2_limit_pushers: 
-      rule: If YearsExperience >= JobRequirement + 2 → flag as Equivalent Match
+      rule: If YearsExperience >= JobRequirement + 2 â†’ flag as Equivalent Match
       display: Show to user with disclaimer: 'Matches structural requirements; specific credential may require upskilling'
-      flag: not_true_match — helps users explore stretch opportunities
+      flag: not_true_match â€” helps users explore stretch opportunities
     geospatial_filter: 
-      local: Commute distance based on zip code — not just city name
-      remote: Verified Remote-First tag — separate bucket from local results
+      local: Commute distance based on zip code â€” not just city name
+      remote: Verified Remote-First tag â€” separate bucket from local results
     knowledge_match: 
-      example: User has 'programming logic background' + job requires 'Python' → flag as Knowledge Match
+      example: User has 'programming logic background' + job requires 'Python' â†’ flag as Knowledge Match
       display: Matches structural logic requirements; specific syntax may require upskilling
   session: 
     mode: None
@@ -858,16 +870,16 @@ If it does:
   decisions: 
     - 
       id: decision_001
-      question: Replit migration — confirmed complete?
+      question: Replit migration â€” confirmed complete?
       options: 
-        - Yes — Talent-Insight-Engine folder is in job-match folder
-        - No — still pending
+        - Yes â€” Talent-Insight-Engine folder is in job-match folder
+        - No â€” still pending
       recommendation: Confirmed complete based on current Claude Code session finding the files
       confidence: 95%
       confidence_reason: Claude Code session found Talent-Insight-Engine subdirectory present
       depends_on: None
       status: answered
-      answer: Yes — migration complete
+      answer: Yes â€” migration complete
       resolved_by: user_confirmation
       resolved_date: 2026-03-13
       created: 2026-03-12
@@ -875,13 +887,13 @@ If it does:
       sessions_pending: 0
     - 
       id: decision_002
-      question: Auth migration — replace Replit Auth with what?
+      question: Auth migration â€” replace Replit Auth with what?
       options: 
         - Passport.js + JWT (self-managed)
         - Clerk (hosted auth, fast setup)
         - Auth0 (enterprise-grade)
         - Simple session-based with bcrypt (no third party)
-      recommendation: Clerk — fastest to swap in, handles sessions/JWT/OAuth, generous free tier, minimal code change
+      recommendation: Clerk â€” fastest to swap in, handles sessions/JWT/OAuth, generous free tier, minimal code change
       confidence: 75%
       confidence_reason: Clerk is the fastest Replit Auth replacement with least code rewrite. Auth0 is more powerful but overkill for current stage.
       depends_on: None
@@ -894,12 +906,12 @@ If it does:
       sessions_pending: 0
     - 
       id: decision_003
-      question: AI migration — keep GPT-4o or switch to Claude (Anthropic API)?
+      question: AI migration â€” keep GPT-4o or switch to Claude (Anthropic API)?
       options: 
         - Keep GPT-4o (swap API key only)
         - Switch to Claude Sonnet (Anthropic API)
-        - Run both — A/B test quality
-      recommendation: Switch to Claude Sonnet — you already have Anthropic API access via Claude Pro, no new account needed, narrative/behavioral analysis is a Claude strength
+        - Run both â€” A/B test quality
+      recommendation: Switch to Claude Sonnet â€” you already have Anthropic API access via Claude Pro, no new account needed, narrative/behavioral analysis is a Claude strength
       confidence: 80%
       confidence_reason: Anthropic API already in your stack. Claude is strong at narrative interpretation which is core to this app.
       depends_on: None
@@ -912,13 +924,13 @@ If it does:
       sessions_pending: 0
     - 
       id: decision_004
-      question: Database — where does PostgreSQL run after leaving Replit?
+      question: Database â€” where does PostgreSQL run after leaving Replit?
       options: 
         - Supabase (hosted Postgres, free tier)
         - Railway (hosted, simple)
         - Local PostgreSQL on your machine
         - Neon (serverless Postgres)
-      recommendation: Supabase — free tier is generous, has good dashboard UI, and pairs well with your existing stack
+      recommendation: Supabase â€” free tier is generous, has good dashboard UI, and pairs well with your existing stack
       confidence: 80%
       confidence_reason: Free tier covers development and early production. Easy migration path from Replit's Postgres.
       depends_on: None
@@ -931,12 +943,12 @@ If it does:
       sessions_pending: 0
     - 
       id: decision_005
-      question: Scraping engine — start with monthly broad crawl or daily delta fetch first?
+      question: Scraping engine â€” start with monthly broad crawl or daily delta fetch first?
       options: 
-        - Monthly broad crawl first — build the address book
-        - Daily delta fetch first — prove the pipeline works on known sources
+        - Monthly broad crawl first â€” build the address book
+        - Daily delta fetch first â€” prove the pipeline works on known sources
         - Both simultaneously
-      recommendation: Daily delta fetch first — use known free sources (RemoteOK, We Work Remotely, Adzuna) to prove pipeline works before investing in broad crawl infrastructure
+      recommendation: Daily delta fetch first â€” use known free sources (RemoteOK, We Work Remotely, Adzuna) to prove pipeline works before investing in broad crawl infrastructure
       confidence: 85%
       confidence_reason: Broad crawl is expensive and complex. Proving the pipeline on known sources de-risks the architecture before scaling up.
       depends_on: None
@@ -964,7 +976,7 @@ If it does:
       unlocks: Build sequence for next 5 sessions
     - 
       id: proactive_003
-      question: For the scam database — should it be private to your platform or eventually shared/open source?
+      question: For the scam database â€” should it be private to your platform or eventually shared/open source?
       context: Shared scam database becomes a community moat. Private keeps it proprietary. Open source builds trust and contributions.
       answer: None
       answered_date: None
@@ -979,7 +991,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Complete codebase inventory — document all existing files, what each does, what works vs incomplete
+      task: Complete codebase inventory â€” document all existing files, what each does, what works vs incomplete
       size: medium
       size_estimate: 30min
       depends_on: None
@@ -987,7 +999,7 @@ If it does:
       completed_date: None
     - 
       id: auto_002
-      task: Document Replit Auth dependency — identify every file that imports or uses replitAuth, map migration scope
+      task: Document Replit Auth dependency â€” identify every file that imports or uses replitAuth, map migration scope
       size: small
       size_estimate: 20min
       depends_on: auto_001
@@ -995,7 +1007,7 @@ If it does:
       completed_date: None
     - 
       id: auto_003
-      task: Document OpenAI dependency — identify every API call, map to equivalent Anthropic Claude API calls
+      task: Document OpenAI dependency â€” identify every API call, map to equivalent Anthropic Claude API calls
       size: small
       size_estimate: 20min
       depends_on: auto_001
@@ -1003,7 +1015,7 @@ If it does:
       completed_date: None
     - 
       id: auto_004
-      task: Research RemoteOK and We Work Remotely API/RSS endpoints — document structure, rate limits, fields returned
+      task: Research RemoteOK and We Work Remotely API/RSS endpoints â€” document structure, rate limits, fields returned
       size: small
       size_estimate: 20min
       depends_on: None
@@ -1011,7 +1023,7 @@ If it does:
       completed_date: None
     - 
       id: auto_005
-      task: Research Adzuna API — free tier limits, endpoint structure, job field mapping
+      task: Research Adzuna API â€” free tier limits, endpoint structure, job field mapping
       size: small
       size_estimate: 20min
       depends_on: None
@@ -1019,7 +1031,7 @@ If it does:
       completed_date: None
     - 
       id: auto_006
-      task: Design scam detection heuristic ruleset — document all criteria, scoring weights, action thresholds
+      task: Design scam detection heuristic ruleset â€” document all criteria, scoring weights, action thresholds
       size: medium
       size_estimate: 45min
       depends_on: None
@@ -1027,7 +1039,7 @@ If it does:
       completed_date: None
     - 
       id: auto_007
-      task: Design deduplication pipeline — MinHash implementation spec, normalization rules, head record selection criteria
+      task: Design deduplication pipeline â€” MinHash implementation spec, normalization rules, head record selection criteria
       size: medium
       size_estimate: 45min
       depends_on: None
@@ -1035,7 +1047,7 @@ If it does:
       completed_date: None
     - 
       id: auto_008
-      task: Design JIT dead-link checker — async HEAD request implementation, status code handling, DB update logic
+      task: Design JIT dead-link checker â€” async HEAD request implementation, status code handling, DB update logic
       size: small
       size_estimate: 30min
       depends_on: None
@@ -1043,7 +1055,7 @@ If it does:
       completed_date: None
     - 
       id: auto_009
-      task: Research Supabase free tier — setup requirements, Postgres migration from Replit, connection string format
+      task: Research Supabase free tier â€” setup requirements, Postgres migration from Replit, connection string format
       size: small
       size_estimate: 20min
       depends_on: decision_004
@@ -1051,7 +1063,7 @@ If it does:
       completed_date: None
     - 
       id: auto_010
-      task: Map matching engine logic — how internalTraits from narrative interview connect to job requirement fields
+      task: Map matching engine logic â€” how internalTraits from narrative interview connect to job requirement fields
       size: medium
       size_estimate: 45min
       depends_on: auto_001
@@ -1066,7 +1078,7 @@ If it does:
       resolved_by: existing_constraint
     - 
       id: decided_002
-      decision: Scam/low-quality listings are NOT deleted — pushed to bottom tier and flagged
+      decision: Scam/low-quality listings are NOT deleted â€” pushed to bottom tier and flagged
       reason: Valid jobs can get caught in scam-adjacent patterns. Flagging preserves data integrity while protecting user experience.
       date: 2026-03-13
       resolved_by: architecture_decision
@@ -1092,7 +1104,7 @@ If it does:
   scope_flags: []
   reusable_findings: 
     - 
-      finding: Narrative interview + behavioral trait extraction pattern — applicable to Sentinel Performer personality clone intake
+      finding: Narrative interview + behavioral trait extraction pattern â€” applicable to Sentinel Performer personality clone intake
       applicable_to: 
         - sentinel-performer
       date: 2026-03-13
@@ -1134,7 +1146,7 @@ If it does:
       mode: inventory
       completed: 
         - Replit migration confirmed complete
-        - Codebase analyzed — 55% complete, not 35%
+        - Codebase analyzed â€” 55% complete, not 35%
         - Scraping architecture fully designed from recovered conversation
         - state.json updated with full architecture
       blockers: 
@@ -1143,9 +1155,9 @@ If it does:
         - PostgreSQL needs new host
       next_action: Begin migration: (1) set up Supabase project + paste DATABASE_URL, (2) swap OpenAI calls to Anthropic Claude Sonnet, (3) install Clerk + replace Replit Auth. Then build daily delta scraper (RemoteOK, Adzuna).
   strategy_notes: 
-    - Narrative interview differentiator is genuinely unique — preserve and emphasize it
-    - Migration unblocks everything — prioritize auth + database + AI swap before any new features
-    - Scraping engine is the missing half — daily delta fetch first, monthly broad crawl second
+    - Narrative interview differentiator is genuinely unique â€” preserve and emphasize it
+    - Migration unblocks everything â€” prioritize auth + database + AI swap before any new features
+    - Scraping engine is the missing half â€” daily delta fetch first, monthly broad crawl second
     - Reusable finding: narrative intake pattern applies to Sentinel Performer personality clone
 
 ### listing-optimizer
@@ -1162,6 +1174,8 @@ If it does:
     progress_pct: 0
     persona: eBay reseller (Joe, 572 active listings) who knows his inventory but doesn't have time to manually optimize every title and fill missing fields. Wants to drop a CSV in and get a better CSV out.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: listing-optimizer.html
     draft: listing-optimizer.draft.html
@@ -1185,10 +1199,10 @@ If it does:
       id: decision_001
       question: Personal tool only or productize for other sellers?
       options: 
-        - Personal only — optimize Joe's 572 listings
+        - Personal only â€” optimize Joe's 572 listings
         - Beta test with select sellers
         - Full SaaS product
-      recommendation: Personal first — prove it works on your own inventory, then decide
+      recommendation: Personal first â€” prove it works on your own inventory, then decide
       confidence: 90%
       confidence_reason: Building for yourself first is faster and gives you real feedback before committing to multi-user architecture.
       depends_on: None
@@ -1201,12 +1215,12 @@ If it does:
       sessions_pending: 0
     - 
       id: decision_002
-      question: Input format — eBay bulk export CSV or manual entry or both?
+      question: Input format â€” eBay bulk export CSV or manual entry or both?
       options: 
         - eBay bulk export CSV only
         - Manual entry only
         - Both
-      recommendation: eBay bulk export CSV — you already have 572 listings to process
+      recommendation: eBay bulk export CSV â€” you already have 572 listings to process
       confidence: 95%
       confidence_reason: CSV batch processing is the highest leverage use case given existing inventory size.
       depends_on: None
@@ -1228,7 +1242,7 @@ If it does:
     - 
       id: proactive_002
       question: Which categories make up the majority of your 572 listings?
-      context: Category-specific title rules — e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first.
+      context: Category-specific title rules â€” e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first.
       answer: None
       answered_date: None
       unlocks: Category-specific optimization rules
@@ -1242,7 +1256,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Research eBay File Exchange CSV format — document all required and optional fields
+      task: Research eBay File Exchange CSV format â€” document all required and optional fields
       size: small
       size_estimate: 20min
       depends_on: None
@@ -1250,7 +1264,7 @@ If it does:
       completed_date: None
     - 
       id: auto_002
-      task: Design title optimization rules — keyword density, character limit, banned words, category-specific patterns
+      task: Design title optimization rules â€” keyword density, character limit, banned words, category-specific patterns
       size: small
       size_estimate: 25min
       depends_on: None
@@ -1258,7 +1272,7 @@ If it does:
       completed_date: None
     - 
       id: auto_003
-      task: Design missing field detection logic — which fields are commonly empty and how to auto-populate
+      task: Design missing field detection logic â€” which fields are commonly empty and how to auto-populate
       size: small
       size_estimate: 20min
       depends_on: None
@@ -1277,7 +1291,7 @@ If it does:
   scope_flags: []
   reusable_findings: 
     - 
-      finding: eBay API for sold listings pricing — being researched for Arbitrage Pulse, share the integration
+      finding: eBay API for sold listings pricing â€” being researched for Arbitrage Pulse, share the integration
       applicable_to: 
         - arbitrage-pulse
       date: 2026-03-12
@@ -1320,6 +1334,8 @@ If it does:
     progress_pct: 75
     persona: Person trying to eat better without spending too much time or money. Wants a plan handed to them. Will swap meals they don't like but won't build a plan from scratch. Cooking skill: basic.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: src/App.jsx
     draft: src/App.draft.jsx
@@ -1341,12 +1357,12 @@ If it does:
   decisions: 
     - 
       id: decision_001
-      question: What defines NutriMind as complete — what is the finish line?
+      question: What defines NutriMind as complete â€” what is the finish line?
       options: 
         - All planned features working
         - Personal use ready
         - Productize for other users
-      recommendation: Define personal use ready first — then decide if productizing is worth the extra work
+      recommendation: Define personal use ready first â€” then decide if productizing is worth the extra work
       confidence: 75%
       confidence_reason: Productizing adds significant scope. Better to finish core first.
       depends_on: None
@@ -1375,7 +1391,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Read iteration 3 code — document all features, what works, what's incomplete or broken
+      task: Read iteration 3 code â€” document all features, what works, what's incomplete or broken
       size: small
       size_estimate: 25min
       depends_on: None
@@ -1392,7 +1408,7 @@ If it does:
   decision_log: []
   assumption_log: 
     - 
-      assumption: React functional components and hooks only — no class components
+      assumption: React functional components and hooks only â€” no class components
       confirmed: True
       confirmed_date: 2026-03-12
     - 
@@ -1425,22 +1441,28 @@ If it does:
   strategy_notes: []
 
 ### sentinel-core
-  _note: SRE stub — active state in SENT-CORE-state-v1.json
+  _note: SRE stub â€” active state in SENT-CORE-state-v1.json
   _project: sentinel-core
   status: active
   last_updated: 2026-03-20
+  last_touched: 2026-03-20
+  drift_risk: LOW
 
 ### sentinel-performer
-  _note: SRE stub — active state in SENT-PERF-state-v1.json
+  _note: SRE stub â€” active state in SENT-PERF-state-v1.json
   _project: sentinel-performer
   status: active
   last_updated: 2026-03-20
+  last_touched: 2026-03-20
+  drift_risk: LOW
 
 ### sentinel-viewer
-  _note: SRE stub — active state in SENT-VIEW-state-v1.json
+  _note: SRE stub â€” active state in SENT-VIEW-state-v1.json
   _project: sentinel-viewer
   status: active
   last_updated: 2026-03-20
+  last_touched: 2026-03-20
+  drift_risk: LOW
 
 ### squeeze-empire
   _schema_version: 1.0
@@ -1456,6 +1478,8 @@ If it does:
     description: Single-file browser-based lemonade stand business simulation with multi-system economics, mini-games, and seasonal progression.
     persona: Casual gamer who wants a satisfying idle/incremental game. Plays in short sessions. Expects things to make sense without reading instructions. Wants to feel like their decisions matter.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: squeeze-empire.html
     draft: squeeze-empire.draft.html
@@ -1466,7 +1490,7 @@ If it does:
     mode: None
     active: False
     started: None
-    handoff_note: File recovered — resume late-game progression implementation.
+    handoff_note: File recovered â€” resume late-game progression implementation.
   test_lock: 
     locked: False
     lock_reason: None
@@ -1477,13 +1501,13 @@ If it does:
   decisions: 
     - 
       id: decision_001
-      question: What defines late-game completion — what is the win condition or final milestone?
+      question: What defines late-game completion â€” what is the win condition or final milestone?
       options: 
         - Reach a revenue target
         - Unlock all upgrades
-        - No win condition — infinite idle
+        - No win condition â€” infinite idle
         - Story ending
-      recommendation: Reach a revenue target + unlock all upgrades — gives clear progression and satisfying endpoint
+      recommendation: Reach a revenue target + unlock all upgrades â€” gives clear progression and satisfying endpoint
       confidence: 70%
       confidence_reason: Depends on original design intent. User knows best.
       depends_on: None
@@ -1504,7 +1528,7 @@ If it does:
       unlocks: Save system implementation
     - 
       id: proactive_002
-      question: After late-game is done — release publicly, keep personal, or productize?
+      question: After late-game is done â€” release publicly, keep personal, or productize?
       context: Affects whether we add analytics, sharing features, or mobile optimization pass.
       answer: None
       answered_date: None
@@ -1512,7 +1536,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Read squeeze-empire.html and document all current game systems — what exists and what state each is in
+      task: Read squeeze-empire.html and document all current game systems â€” what exists and what state each is in
       size: small
       size_estimate: 20min
       depends_on: None
@@ -1528,7 +1552,7 @@ If it does:
       completed_date: None
     - 
       id: auto_003
-      task: Run PERSONA adversarial test — play as confused first-time user for 20 sessions, log all friction points
+      task: Run PERSONA adversarial test â€” play as confused first-time user for 20 sessions, log all friction points
       size: medium
       size_estimate: 60min
       depends_on: None
@@ -1590,6 +1614,8 @@ If it does:
     progress_pct: 50
     persona: Whatnot hiring manager reviewing 50+ applications. Skims in 30 seconds. Looking for: platform knowledge, trust/safety instincts, resale market credibility, async communication ability.
     promotion_pending: False
+    last_touched: 2026-03-25
+    drift_risk: LOW
   files: 
     production: resume-fraud-agent.docx
     draft: resume-fraud-agent.draft.docx
@@ -1616,7 +1642,7 @@ If it does:
         - Fraud Agent
         - Trust & Safety Agent
         - CX Agent Overnight
-      recommendation: Trust & Safety Agent — best alignment with moderation background and written communication preference
+      recommendation: Trust & Safety Agent â€” best alignment with moderation background and written communication preference
       confidence: 75%
       confidence_reason: Commonwealth Picker moderation experience is a direct differentiator for T&S. Fraud Agent is close second.
       depends_on: None
@@ -1645,7 +1671,7 @@ If it does:
   autonomous_backlog: 
     - 
       id: auto_001
-      task: Review all three existing resume files — identify gaps, inconsistencies, weak sections
+      task: Review all three existing resume files â€” identify gaps, inconsistencies, weak sections
       size: small
       size_estimate: 20min
       depends_on: None
@@ -1653,7 +1679,7 @@ If it does:
       completed_date: None
     - 
       id: auto_002
-      task: Research current Whatnot job postings — pull exact language and requirements
+      task: Research current Whatnot job postings â€” pull exact language and requirements
       size: small
       size_estimate: 15min
       depends_on: None
@@ -1662,11 +1688,11 @@ If it does:
   decision_log: []
   assumption_log: 
     - 
-      assumption: Blackdot Group role ending May 2026 — available for remote start
+      assumption: Blackdot Group role ending May 2026 â€” available for remote start
       confirmed: True
       confirmed_date: 2026-03-12
     - 
-      assumption: Strong preference for written/async communication — feature not liability for T&S
+      assumption: Strong preference for written/async communication â€” feature not liability for T&S
       confirmed: True
       confirmed_date: 2026-03-12
   scope_flags: []
@@ -1679,7 +1705,7 @@ If it does:
         - All dates and titles accurate
         - Differentiators (resale network, moderation) prominent in first third
         - Cover letter under 300 words
-        - ATS-friendly formatting — no tables, no headers that confuse parsers
+        - ATS-friendly formatting â€” no tables, no headers that confuse parsers
       verified: False
       verified_date: None
   adversarial_log: []
@@ -1797,7 +1823,7 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-03-25T04:00:41.270323
+Last updated: 2026-03-26T02:00:01.468655
 Total items: 32
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
@@ -2451,4 +2477,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-26 01:30
+End of context. Generated: 2026-03-26 03:00
