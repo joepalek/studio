@@ -118,5 +118,11 @@
     "agent": "sre-scout",
     "status": "flagged",
     "notes": "DEGRADED: _studio has 9 uncommitted files; all endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T19:01:22.036006",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 1 warning \u2014 _studio has 2 uncommitted files"
   }
 ]
