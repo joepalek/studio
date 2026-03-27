@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-26T19:57:46.846877",
+  "updated": "2026-03-27T02:01:34.147359",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -930,7 +930,20 @@
       ],
       "added": "2026-03-26",
       "status": "new",
-      "priority": "HIGH"
+      "priority": "HIGH",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 6,
+        "revenue_potential": 7,
+        "urgency": 8,
+        "why_now": "The explosive growth in generative AI and demand for authentic, dynamic characters across gaming, education, and virtual experiences makes 2026 ideal for a validated historical character data pipeline.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "The complexity and accuracy of inferring nuanced character data from historical sources, especially regarding 'Mirror Test validation' and mitigating historical biases."
+      },
+      "scored_at": "2026-03-27T02:00:16.813642"
     },
     {
       "id": "ancient-tech-grading",
@@ -948,7 +961,20 @@
       ],
       "added": "2026-03-26",
       "status": "new",
-      "priority": "MEDIUM"
+      "priority": "MEDIUM",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 8,
+        "revenue_potential": 5,
+        "urgency": 6,
+        "why_now": "As public interest in ancient mysteries and the demand for critical thinking tools intensify, 2026 is an opportune time to introduce a structured evaluation system for often-speculative theories.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Difficulty in establishing objective criteria and perceived authority, potentially leading to user disagreement or dismissal of the system's validity."
+      },
+      "scored_at": "2026-03-27T02:00:30.877660"
     },
     {
       "id": "traitor-protocol",
@@ -967,7 +993,20 @@
       ],
       "added": "2026-03-26",
       "status": "new",
-      "priority": "HIGH"
+      "priority": "HIGH",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 6,
+        "revenue_potential": 9,
+        "urgency": 9,
+        "why_now": "As LLM adoption accelerates into critical enterprise functions, robust, automated hallucination detection becomes an indispensable and urgent requirement.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "The effectiveness of the 'Mayor' agent in reliably detecting subtle hallucination drift introduced by the 'Liar' agent."
+      },
+      "scored_at": "2026-03-27T02:00:42.852649"
     },
     {
       "id": "technical-council-review",
@@ -986,7 +1025,20 @@
       ],
       "added": "2026-03-26",
       "status": "new",
-      "priority": "HIGH"
+      "priority": "HIGH",
+      "gemini_score": {
+        "total_score": 6,
+        "market_gap_score": 8,
+        "build_feasibility": 3,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The increasing sophistication of AI models in understanding and generating complex text makes simulating historical expert perspectives more viable, while current AI solutions often lack the nuanced domain-specific judgment this idea promises.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "The immense technical challenge of accurately modeling and simulating the nuanced, adversarial architectural philosophies of complex historical figures in a practically useful and contextually relevant way."
+      },
+      "scored_at": "2026-03-27T02:00:55.616091"
     },
     {
       "id": "parcel-mesh-network",
@@ -1017,7 +1069,20 @@
       "proposal_approach": "Scored loose framework -> Waffle House concretizes -> federal funding -> form/hire implementation entity",
       "privacy_requirement": "Owner sees all pings forever via private key. Node is relay not recorder. Zero government read access without court order.",
       "funding_path": "FEMA Next Gen Warning + BRIC grants + HUD CDBG + Layer 2 ad revenue",
-      "status_note": "Hold on whiteboard until Historical Twins pipeline can generate council. Do not pitch until council has scored proposals."
+      "status_note": "Hold on whiteboard until Historical Twins pipeline can generate council. Do not pitch until council has scored proposals.",
+      "gemini_score": {
+        "total_score": 6,
+        "market_gap_score": 7,
+        "build_feasibility": 4,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "Increasing climate-related disasters and the urgent need for resilient, decentralized communication infrastructure make 2026 ideal for securing federal funding aimed at disaster preparedness.",
+        "recommended_action": "PITCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Securing widespread property owner adoption and managing the immense logistical complexities of decentralized deployment at scale."
+      },
+      "scored_at": "2026-03-27T02:01:13.924646"
     },
     {
       "id": "institutional-twin-councils",
@@ -1038,7 +1103,20 @@
       ],
       "social_media_angle": "Public brainstorm for novel use cases on launch",
       "added": "2026-03-26",
-      "source": "Joe session \u2014 expanded from Historical Twins concept"
+      "source": "Joe session \u2014 expanded from Historical Twins concept",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 9,
+        "build_feasibility": 4,
+        "revenue_potential": 9,
+        "urgency": 8,
+        "why_now": "The convergence of advanced AI capabilities with a pervasive market need for rapid, cost-effective expert insights makes 2026 an opportune moment to develop this concept.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Achieving sufficient AI reliability and institutional trust for high-stakes decision validation, coupled with acquiring sensitive proprietary institutional data."
+      },
+      "scored_at": "2026-03-27T02:01:30.146974"
     }
   ]
 }

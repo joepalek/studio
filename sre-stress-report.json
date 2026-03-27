@@ -1,12 +1,11 @@
 {
-  "timestamp": "2026-03-26T19:01:19.961450",
+  "timestamp": "2026-03-27T03:01:30.508407",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (2 files): _studio \u2014 scheduler/logs/supervisor-check.log, studio-context.md"
+    "UNCOMMITTED (1 files): job-match",
+    "UNCOMMITTED (10 files): _studio"
   ],
-  "watch": [
-    "sre-scout flagged 5x today \u2014 heartbeat shows repeated runs without clean status"
-  ],
-  "action_required": "Commit _studio dirty files; investigate why sre-scout flagged repeatedly"
+  "watch": [],
+  "action_required": "Commit dirty files in job-match and _studio"
 }

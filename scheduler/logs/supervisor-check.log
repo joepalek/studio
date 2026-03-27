@@ -6386,3 +6386,824 @@ STRESS VERDICT: WARNING
 **One action needed:** Commit `_studio` (supervisor-check.log + studio-context.md). After that, sre-scout should run clean.
 
 Pending decision from yesterday: approve `studio.html` supervisor panel write — say **"approved"** to proceed.
+[Thu 03/26/2026 19:30:02.41] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.85 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET / UP
+  ✓ OpenRouter key: SET / UP
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (2 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (0): none
+
+WATCH (1):
+  [-] UNCOMMITTED (2 files): _studio — supervisor-check.log + related
+
+STRESS VERDICT: WATCH
+
+VERDICT: WATCH (1 minor issue)
+ACTION: Commit _studio dirty files (supervisor-check.log)
+```
+
+---
+
+## Supervisor Health Check
+
+**Inbox (3 pending):**
+- `[INFO]` **Constitutional Update + Agent Network Activation Complete** — all 8 steps done except Step 8 (studio.html supervisor panel) which is HELD pending your approval
+- `[INFO]` NIT Fire Drill Complete — 8/10 PASS. T05 partial (studio.html inbox panel not built). T06 partial (scheduler check). Steps held on your decision.
+- `[INFO]` NIT Fire Drill synthetic briefing — auto-dismiss
+
+**Task Queue:** Empty
+
+**Heartbeat (recent):** sre-scout has been running every 30 min via scheduler all day — flagging the same 2 uncommitted `_studio` files each time.
+
+**Orchestrator Plan:** 0 agent-runnable tasks queued
+
+---
+
+## Background Task Summary
+
+The constitutional update + agent network activation from **2026-03-25** completed 7/8 steps:
+- CLAUDE.md updated, comms logs created, protocol appended to 18 agents, supervisor/whiteboard updated — all done
+- **Step 8 HELD:** studio.html supervisor panel write — waiting on your approval
+
+The scheduler has been running SRE checks throughout the day. All systems are healthy.
+
+**One action needed:** The _studio uncommitted files (supervisor-check.log + likely one more) are the only outstanding issue, clearing the repeated sre-scout flags.
+
+**Pending decision:** Say **"approved"** to write the studio.html supervisor panel (Step 8).
+[Thu 03/26/2026 20:00:01.86] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Ollama 0.18.2 (UP — 2 models loaded)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (5 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (1 issue)
+ACTION: Commit _studio dirty files
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (5 files): _studio
+      (heartbeat-log, sre-reports, studio-context.md, supervisor-check.log)
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR STATUS
+
+```
+Heartbeats today (3 agents):
+  ✓ orchestrator — clean
+  ✓ supervisor   — clean
+  ~ sre-scout    — flagged (uncommitted files, recurring)
+
+Task queue: 0 pending
+Work queue: 0 pending
+Agents recently active: 0 (gateway-log.txt has no recent activity)
+```
+
+**Inbox — 3 PENDING items (all INFO):**
+
+1. **Constitutional Update Complete** *(2026-03-25)* — Step 8 still HELD: `studio.html` inbox panel not yet written. Awaiting your "approved" to proceed.
+2. **NIT Fire Drill — PARTIAL (8/10 PASS)** — T05 partial (studio.html panel missing), T06 partial (claude CLI not at system PATH — graceful fail works)
+
+---
+
+**Background tasks completed since last session:** None — no scheduled agents fired successfully (run-agent.py executes but `claude` CLI not found at system PATH). The dispatcher is working, graceful-fail is working, but actual agent runs are not completing.
+
+**One open decision awaiting you:** Say `approved` or `write studio.html` to complete Step 8 of the constitutional activation.
+[Thu 03/26/2026 20:30:02.03] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.85 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (5 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (1 issue)
+ACTION: Commit pending _studio changes
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (5 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**SUPERVISOR CYCLE**
+
+- Last run: 2026-03-26 15:01 (auto-scheduled)
+- Task queue: 0 pending
+- Work dispatched: 0 (no queued work)
+- Ollama: UP
+
+**SUPERVISOR INBOX — 3 PENDING items:**
+- `[INFO]` Constitutional Update + Agent Network Activation Complete
+- `[INFO]` NIT Fire Drill synthetic briefing (2026-03-25)
+- `[INFO]` NIT Fire Drill Complete — PARTIAL (8/10 PASS) (2026-03-25)
+
+**BACKGROUND TASKS SUMMARY:** No completed background tasks from this session. The NIT fire drill from yesterday (Mar 25) ran at 8/10 pass — two items failed. The inbox items are informational and PENDING review.
+
+**One action item:** Commit the 5 dirty `_studio` files (heartbeat-log.json, sre-report.json, sre-stress-report.json, sre-stress-report.json, studio-context.md, scheduler logs). Want me to commit them now?
+[Thu 03/26/2026 21:00:02.19] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-26
+
+**TOOLS**
+- Git 2.53.0 — OK
+- Node v24.14.0 — OK
+- npm 11.9.0 — OK
+- Python 3.13.7 — OK
+- Claude Code 2.1.85 — OK (above expected 2.1.78)
+- Repomix 1.12.0 — OK
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini key: SET / UP
+- OpenRouter key: SET / UP
+- YouTube key: SET
+- Ollama: UP — 2 models (gemma3:4b)
+
+**PROJECTS (13 checked)**
+- `! UNCOMMITTED (5 files): _studio` — heartbeat-log.json, sre-report.json, sre-stress-report.json, scheduler/logs/supervisor-check.log, studio-context.md
+- 12 projects clean
+
+**STUDIO FILES** — All critical files present
+
+**MOBILE ANSWERS** — No pending mobile answers
+
+**VERDICT: DEGRADED (1 issue)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (5 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+ACTION: Commit 5 dirty _studio files
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Ollama:** UP
+- **Work queue:** empty (0 tasks)
+- **Task queue (Claude-needed):** empty
+- **No improvement proposals** pending
+
+**Supervisor inbox (3 items, all PENDING):**
+- `[INFO]` Constitutional Update + Agent Network Activation Complete
+- `[INFO]` NIT Fire Drill — synthetic briefing
+- `[INFO]` NIT Fire Drill Complete — PARTIAL (8/10 PASS)
+
+## COMPLETED BACKGROUND TASKS
+
+From supervisor-check.log: **No new background tasks completed this session.** The NIT fire drill result from the prior session (8/10 PASS) is already logged in inbox.
+
+---
+
+**One standing action item:** Commit the 5 dirty `_studio` files. Say "commit" to do it now.
+[Thu 03/26/2026 21:30:01.96] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-26 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.85 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+
+PROJECTS (13 checked)
+  ~ UNCOMMITTED (5 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (1 issue)
+ACTION: Commit uncommitted changes in _studio
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (5 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor Status:**
+- Task queue: empty (no queued tasks)
+- Agents active today: orchestrator, sre-scout, supervisor — all checked in 2026-03-26
+- Supervisor inbox: 3 pending INFO items (NIT fire drill results, constitutional update — no action blockers)
+
+**Completed background tasks:** None detected since last session. The 5 uncommitted files in `_studio` are the modified files shown in git status (`heartbeat-log.json`, `scheduler/logs/supervisor-check.log`, `sre-report.json`, `sre-stress-report.json`, `studio-context.md`).
+
+System is safe to work. The only open item is committing the dirty `_studio` files when convenient.
+[Thu 03/26/2026 22:00:01.95] Supervisor check starting 
+[Thu 03/26/2026 22:30:01.98] Supervisor check starting 
+You've hit your limit · resets 12am (America/Chicago)
+[Thu 03/26/2026 23:00:01.90] Supervisor check starting 
+You've hit your limit · resets 12am (America/Chicago)
+[Thu 03/26/2026 23:30:01.89] Supervisor check starting 
+You've hit your limit · resets 12am (America/Chicago)
+[Fri 03/27/2026  0:00:01.99] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-27 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 (UP — 2 models)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET / UP
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP (gemma3:4b model)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (6 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, missing (no impact)
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (1 issue)
+ACTION: Commit dirty _studio files (heartbeat-log, scheduler logs, sre reports, studio-context.md)
+
+=== STRESS REPORT ===
+CRITICAL (0): none
+WARNING (1):
+  [~] UNCOMMITTED (6 files): _studio
+WATCH (0): none
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor Summary:**
+
+- **Task queue:** Empty — no backlogged Claude tasks
+- **Inbox:** 3 pending INFO items — NIT fire drill results (8/10 PASS), constitutional update activation complete. No blockers.
+- **Scheduled tasks:** Supervisor checks ran every 30 min overnight but hit quota limits from ~22:00–23:30 on 3/26. Reset at midnight, 0:00 check started clean.
+- **Background tasks completed:** None detected. The 6 uncommitted `_studio` files are routine runtime logs + reports from yesterday's session.
+
+**One action available:** commit the 6 dirty `_studio` files when you're ready. Otherwise system is clean to work.
+[Fri 03/27/2026  0:30:01.99] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-27
+
+**TOOLS**
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Claude Code 2.1.85 (above expected 2.1.78)
+✓ Repomix 1.12.0
+✓ Ollama 0.18.2
+```
+
+**GATEWAY ENDPOINTS**
+```
+✓ Anthropic key: SET
+✓ Gemini key: SET
+✓ OpenRouter key: SET
+✓ YouTube key: SET
+✓ Ollama: UP — 2 models (gemma3:4b)
+✓ Gemini: UP
+✓ OpenRouter: UP
+```
+
+**PROJECTS (13 checked)**
+```
+! UNCOMMITTED (6 files): _studio
+✓ 12 projects clean
+```
+
+**STUDIO FILES**
+```
+✓ All critical files present
+```
+
+**MOBILE ANSWERS**
+```
+✓ No pending answers
+```
+
+**VERDICT: DEGRADED (1 issue)**
+**ACTION:** Commit dirty _studio files
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (6 files): _studio
+
+WATCH (1):
+  [-] Claude Code 2.1.85 > expected 2.1.78 — minor version drift
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+**Inbox items (3 pending):**
+1. `constitutional-update-2026-03-25` — Studio.html supervisor panel write still HELD, awaiting approval
+2. `nit-briefing-20260325230110` — NIT fire drill, auto-dismiss
+3. `nit-summary-20260325` — NIT PARTIAL (8/10 pass): `studio.html` inbox panel not built (Step 8 held); `claude` CLI not in system PATH (graceful fail confirmed working)
+
+**Background tasks completed (from yesterday's heartbeat/orchestrator):**
+- `job-delta`: OK — 162 URLs processed
+- `whiteboard-score`: OK — 32 items scored
+- `auto-answer`: QUOTA-HIT at ~3:30am (expected — free tier limit)
+- `orchestrator daily briefing`: CLEAN — generated via gemini-2.5-flash; 8 human-required tasks, 1 blocked (Sentinel/LLC)
+
+**Task queue:** 0 items pending
+
+**Open decision for you:** `studio.html` supervisor panel (inbox item `constitutional-update-2026-03-25`) is still held. Say "approved" or "write studio.html" to proceed, or I can dismiss it if stale.
+[Fri 03/27/2026  1:00:01.96] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-27
+
+**TOOLS**
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Claude Code 2.1.85 (above expected 2.1.78)
+✓ Repomix 1.12.0
+✓ Ollama UP — 2 models (gemma3:4b + 1 other)
+```
+
+**GATEWAY ENDPOINTS**
+```
+✓ Anthropic key: SET
+✓ Gemini key: SET  / Gemini: UP
+✓ OpenRouter key: SET
+✓ YouTube key: SET
+✓ Ollama: UP
+```
+
+**PROJECTS (13 checked)**
+```
+! UNCOMMITTED (6 files): _studio
+✓ 12 projects clean
+```
+
+**STUDIO FILES**
+```
+✓ All critical files present
+```
+
+**MOBILE ANSWERS**
+```
+✓ No pending answers
+```
+
+**VERDICT: DEGRADED (1 issue)**
+
+---
+
+## STRESS REPORT
+```
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (6 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+**Action:** Commit dirty `_studio` files before doing substantive work.
+
+---
+
+## SUPERVISOR BRIEFING
+
+**Task Queue:** 0 tasks waiting
+
+**Inbox (PENDING):**
+- `[INFO]` Constitutional Update + Agent Network Activation Complete (2026-03-25) — awaiting approval on `studio.html` supervisor panel write
+
+**Background Tasks / Heartbeat Review:**
+- Yesterday's SRE runs (03-26) were all `flagged` — 10–11 uncommitted `_studio` files + 5 mobile answers pending. Both are now resolved (6 uncommitted remain, 0 mobile answers). Improvement overnight.
+- No completed background tasks surfaced in queue or logs.
+
+**Recommended Focus:** The Constitutional Update inbox item from 03-25 is still `PENDING` — it requests approval to write the supervisor panel to `studio.html`. Ready to proceed if you say "approved."
+[Fri 03/27/2026  1:30:01.98] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-27
+
+**TOOLS**
+```
+✓ Git 2.53.0
+✓ Node v24.14.0
+✓ npm 11.9.0
+✓ Python 3.13.7
+✓ Ollama UP — 2 models (gemma3:4b)
+```
+
+**GATEWAY ENDPOINTS**
+```
+✓ Anthropic key: SET
+✓ Gemini key: SET
+✓ OpenRouter key: SET
+✓ YouTube key: SET
+✓ Ollama: UP
+```
+
+**PROJECTS (13 checked)**
+```
+! UNCOMMITTED (6 files): _studio
+✓ 12 projects clean
+```
+
+**STUDIO FILES** — All critical files present
+
+**MOBILE ANSWERS** — No pending answers
+
+**VERDICT: DEGRADED (1 issue)**
+**ACTION:** Commit dirty `_studio` files
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (6 files): _studio
+
+WATCH (1):
+  [-] NIT fire drill T06 PARTIAL — claude CLI not in system PATH for scheduler
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR BRIEFING
+
+**Inbox (3 pending items):**
+- `constitutional-update-2026-03-25` — All 8 activation steps complete. **Awaiting approval to write studio.html supervisor panel** (Step 8 held).
+- `nit-summary-20260325` — Fire drill 8/10 PASS. T05 partial (studio.html not built), T06 partial (scheduler fires but claude CLI not found in PATH — graceful fail works).
+- NIT fire drill synthetic briefing (auto-dismiss)
+
+**Background tasks since last session:**
+- Nightly commit ran 2026-03-19, committed _studio + 9 project changelogs, pushed to GitHub.
+- Supervisor scheduler check ran 2026-03-19 (last logged run).
+- Heartbeat logs show SRE scout ran repeatedly 2026-03-26 overnight — all flagged for uncommitted _studio files + mobile answers (now cleared).
+
+**Task queue:** Empty (0 pending).
+
+**Dead agents:** Most agents are silent — no heartbeats from janitor, market-scout, job-scraper, wayback, orchestrator. Normal if scheduled tasks haven't fired recently.
+
+---
+
+**Top action item:** The constitutional update (Step 8) is held — say **"approved"** to write the studio.html supervisor panel, or **"skip"** to defer.
+[Fri 03/27/2026  2:00:01.99] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-27
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (7 files): _studio
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (1 issue)
+ACTION: Commit dirty _studio files
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (7 files): _studio
+      Root cause: nightly-commit hit Claude quota limit last night
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR — Completed Background Tasks
+
+**Overnight product archaeology (ran 2am today):**
+- Scored items, pushed **0** to mobile-inbox.json (nothing cleared the bar)
+- Sample output included nostalgia/Green Day angle and AI privacy trend items
+
+**Nightly commit (ran 11pm last night):**
+- FAILED — hit Claude quota limit before completing
+- _studio files remain uncommitted (explains the 7-file warning above)
+
+**Supervisor check (ran 2am today):**
+- Task queue: empty
+- Dead agents: janitor, market-scout, job-scraper, wayback, orchestrator (normal — scheduled tasks haven't fired today yet)
+
+**Supervisor inbox (3 items, all INFO/old):**
+- Constitutional update Step 8 still held — waiting on your approval to write the studio.html supervisor panel
+- 2x NIT briefing items from 2026-03-25
+
+**Key action:** The 7 uncommitted files in _studio are just runtime logs + reports. Want me to commit them now?
+[Fri 03/27/2026  2:30:02.01] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-27 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Claude Code 2.1.85 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 — UP (2 models)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini API key: SET / UP
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (9 files): _studio (runtime logs + reports)
+  ✓ 12 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, missing
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (1 issue)
+ACTION: Commit _studio runtime files when ready
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (1):
+  [~] UNCOMMITTED (9 files): _studio
+
+WATCH (1):
+  [-] gateway-log.txt missing (optional)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**SUPERVISOR CYCLE**
+
+- Agents active in gateway-log: 0 (gateway-log.txt absent — no activity tracked)
+- Ollama: UP | Gemini: UP | Work queue: 0 items
+- Task queue: 0 pending
+- Improvement proposals: none
+
+**Heartbeats:**
+- `sre-scout`: last checked in today (2026-03-27) — flagged (1 issue)
+- `supervisor`: last ran 2026-03-26 09:31 — clean
+- `orchestrator`: last ran 2026-03-26 — clean
+
+---
+
+**Completed background tasks:**
+
+- **Overnight product archaeology** (03/27 ~2:01am) — **COMPLETED.** Pushed 1 top-10 item to `mobile-inbox.json`
+- **Nightly commit** (03/26 23:00) — **HIT QUOTA LIMIT** — ran but stopped when Claude quota reset at midnight (America/Chicago). Also noted 5 mobile answer sessions pending at that time (now cleared per Pass 5 — no pending answers currently)
+
+Only open action: commit the 9 dirty files in `_studio` (runtime logs, reports, whiteboard, scheduler logs). Want me to commit them?
+[Fri 03/27/2026  3:00:01.99] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-27 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.18.2 (UP — 2 models: gemma3:4b + 1 other)
+  ✓ gh 2.88.1
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (10 files): _studio
+  ✓ 11 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present (mobile-inbox.json, gateway-log.txt, etc.)
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (2):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (10 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+
+VERDICT: DEGRADED (2 issues)
+ACTION: Commit dirty files in job-match and _studio
+```
+
+---
+
+**Background Tasks Summary:**
+
+- **Overnight product archaeology** (~3am) — completed, pushed 1 item to `mobile-inbox.json`
+- **Supervisor check** (~3am) — ran, Ollama CDX scan returned 162 unique job URLs → `cc-discovered-raw.json`
+- **Nightly commit** (11pm 3/26) — hit Claude quota limit mid-run, stopped before completing
+
+The 10 dirty `_studio` files are the runtime logs, reports, and whiteboard from overnight runs. Want me to commit both `_studio` and `job-match`?

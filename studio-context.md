@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-26 19:00 | Auto-built by generate-context.py
-Next regeneration: 2026-03-27 03:00 (approximate — runs at every session start)
+Generated: 2026-03-27 03:00 | Auto-built by generate-context.py
+Next regeneration: 2026-03-27 11:00 (approximate — runs at every session start)
 Handoff: System tightness last reviewed: 2026-03-25 — PARTIAL (NIT 8/10, T06 fixed, T05 dismissed)
 
 ## WHO IS JOE
@@ -1823,8 +1823,8 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-03-26T04:00:01.281414
-Total items: 32
+Last updated: 2026-03-27T02:01:34.147359
+Total items: 38
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
     id:      arch-reddit-0001
@@ -1925,6 +1925,26 @@ Total items: 32
       revenue_estimate: LARGE
       top_risk: Client acquisition and standing out in a highly competitive AI services market.
     added:   2026-03-25
+
+  [8/10] Traitor Protocol Adversarial Testing
+    id:      traitor-protocol
+    type:    system-improvement
+    status:  new
+    source:  gemini-session-2026-03-26
+    description: One agent per overnight run designated as liar. Mayor must catch it. Catches hallucination drift. 7-step Mayor validation. Agent scoring 0-100 with dissolve threshold at 20.
+    score_breakdown:
+      total_score: 8
+      market_gap_score: 9
+      build_feasibility: 6
+      revenue_potential: 9
+      urgency: 9
+      why_now: As LLM adoption accelerates into critical enterprise functions, robust, automated hallucination detection becomes an indispensable and urgent requirement.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: The effectiveness of the 'Mayor' agent in reliably detecting subtle hallucination drift introduced by the 'Liar' agent.
+    tags:    testing, adversarial, hallucination, overnight, mayor
+    added:   2026-03-26
 
   [7/10] Wing Commander IV Turns 30... And Still Fascinates Me
     id:      arch-reddit-0002
@@ -2070,6 +2090,65 @@ On returning to it 30 years later, it certainly scratc
     added:   2026-03-19T15:20:25.783578
     url:     https://reddit.com/r/nostalgia/comments/1rgz8d7/summer_sleepovers_at_the_friends_house_who_had_a/
 
+  [7/10] Historical Twins Division
+    id:      historical-twins-division
+    type:    division
+    status:  new
+    source:  gemini-session-2026-03-26
+    description: Nightly scrape builds character data pools from historical figures. Three-bucket triage. Mirror Test validation. Static/Fluid toggle. Feeds CTW pipeline directly.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 7
+      build_feasibility: 6
+      revenue_potential: 7
+      urgency: 8
+      why_now: The explosive growth in generative AI and demand for authentic, dynamic characters across gaming, education, and virtual experiences makes 2026 ideal for a validated historical character data pipeline.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: The complexity and accuracy of inferring nuanced character data from historical sources, especially regarding 'Mirror Test validation' and mitigating historical biases.
+    tags:    ctw, historical, pipeline, characters, nightly
+    added:   2026-03-26
+
+  [7/10] Ancient Tech Grading System
+    id:      ancient-tech-grading
+    type:    tool
+    status:  new
+    source:  gemini-session-2026-03-26
+    description: Three-bucket system (Logical/Plausible/Reality-Flip) for evaluating ancient technologies and theories. Composite scoring. Ghost Book adjacent.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 8
+      build_feasibility: 8
+      revenue_potential: 5
+      urgency: 6
+      why_now: As public interest in ancient mysteries and the demand for critical thinking tools intensify, 2026 is an opportune time to introduce a structured evaluation system for often-speculative theories.
+      recommended_action: BUILD
+      effort_estimate: weeks
+      revenue_estimate: NICHE
+      top_risk: Difficulty in establishing objective criteria and perceived authority, potentially leading to user disagreement or dismissal of the system's validity.
+    tags:    ghost-book, grading, ancient-tech, scoring
+    added:   2026-03-26
+
+  [7/10] Institutional Twin Councils
+    id:      institutional-twin-councils
+    type:    platform+product
+    status:  WHITEBOARD
+    source:  Joe session — expanded from Historical Twins concept
+    description: Domain-expert and institutional knowledge twins grouped by board, field, or regulatory function. Queryable on demand for proposal stress-testing, regulatory pre-review, legal argument testing, academic peer review, and product validation. Three tiers: public historical commons, curated domain councils, custom institutional twins. Replaces $500-5000/hr expert panels at near-zero marginal cost.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 9
+      build_feasibility: 4
+      revenue_potential: 9
+      urgency: 8
+      why_now: The convergence of advanced AI capabilities with a pervasive market need for rapid, cost-effective expert insights makes 2026 an opportune moment to develop this concept.
+      recommended_action: RESEARCH
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: Achieving sufficient AI reliability and institutional trust for high-stakes decision validation, coupled with acquiring sensitive proprietary institutional data.
+    added:   2026-03-26
+
   [6/10] Google Glass
     id:      vint-0020
     type:    product_gap
@@ -2109,6 +2188,46 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, nostalgia, reddit
     added:   2026-03-19T15:20:25.783546
     url:     https://reddit.com/r/nostalgia/comments/1lgjctm/remember_when_pizza_hut_had_a_buffet_good_times/
+
+  [6/10] Technical Council Peer Review
+    id:      technical-council-review
+    type:    testing-improvement
+    status:  new
+    source:  gemini-session-2026-03-26
+    description: Load domain historical twins as adversarial reviewers for architecture decisions. Hamilton/Shannon/Kay/Hopper for system architecture. Better than generic AI scoring.
+    score_breakdown:
+      total_score: 6
+      market_gap_score: 8
+      build_feasibility: 3
+      revenue_potential: 7
+      urgency: 7
+      why_now: The increasing sophistication of AI models in understanding and generating complex text makes simulating historical expert perspectives more viable, while current AI solutions often lack the nuanced domain-specific judgment this idea promises.
+      recommended_action: RESEARCH
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: The immense technical challenge of accurately modeling and simulating the nuanced, adversarial architectural philosophies of complex historical figures in a practically useful and contextually relevant way.
+    tags:    architecture, review, historical-twins, peer-review, council
+    added:   2026-03-26
+
+  [6/10] Parcel Mesh Network
+    id:      parcel-mesh-network
+    type:    proposal
+    status:  WHITEBOARD
+    source:  manual
+    description: Distributed mesh network using parcel/property nodes. Federal funding path via FEMA/BRIC/HUD. Privacy-first architecture.
+    score_breakdown:
+      total_score: 6
+      market_gap_score: 7
+      build_feasibility: 4
+      revenue_potential: 8
+      urgency: 9
+      why_now: Increasing climate-related disasters and the urgent need for resilient, decentralized communication infrastructure make 2026 ideal for securing federal funding aimed at disaster preparedness.
+      recommended_action: PITCH
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: Securing widespread property owner adoption and managing the immense logistical complexities of decentralized deployment at scale.
+    tags:    mesh, privacy, federal-funding, infrastructure, council-needed
+    added:   2026-03-26
 
   [5/10] Tucker Torpedo
     id:      vint-0008
@@ -2477,4 +2596,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-26 19:00
+End of context. Generated: 2026-03-27 03:00

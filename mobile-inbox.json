@@ -484,5 +484,16 @@
     "priority": "medium",
     "created": "2026-03-25T04:00:41.303757",
     "status": "pending"
+  },
+  {
+    "id": "wb-top-traitor-protocol",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#6 WHITEBOARD] Traitor Protocol Adversarial Testing",
+    "context": "BUILD | Score: 8/10 | As LLM adoption accelerates into critical enterprise functions, robust, automated hallucination detection becomes an indispensable and urgent requirement. | Est: months | Revenue: LARGE | Risk: The effectiveness of the 'Mayor' agent in reliably detecting subtle hallucination drift introduced by the 'Liar' agent.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-27T02:01:34.190380",
+    "status": "pending"
   }
 ]

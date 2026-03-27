@@ -28,3 +28,33 @@ Wayback CDX fallback (domain prefix, local filter):
 
 CDX total: 162 unique job URLs -> cc-discovered-raw.json
 [Thu 03/26/2026  3:00:56.13] Done 
+[Fri 03/27/2026  3:00:01.81] Job source daily delta starting 
+Active job boards: 60
+Company career pages: 488
+Updated daily-scraper-config.json:
+  Job boards: 60
+  Career pages: 488
+  Total targets: 548
+
+=== CDX Pass: CC-MAIN-2024-51 ===
+CC-MAIN-2026-12 prefix queries + local filter:
+  lever (jobs.lever.co/): 0 matching URLs
+  greenhouse (boards.greenhouse.io/): 0 matching URLs
+  ashby (jobs.ashbyhq.com/): 1 matching URLs
+  whatnot (careers.whatnot.com/): 0 matching URLs
+  ebay (careers.ebayinc.com/): 0 matching URLs
+  mercari: ERROR - HTTP Error 504: Gateway Time-out
+  poshmark: ERROR - HTTP Error 404: Not Found
+  remoteok (remoteok.com/): 100 matching URLs
+  wwr (weworkremotely.com/remote-jobs/): 58 matching URLs
+
+Wayback CDX fallback (domain prefix, local filter):
+  Wayback lever: 0 URLs
+  Wayback greenhouse: 0 URLs
+  Wayback ashby: ERROR - timed out
+  Wayback whatnot: 1 URLs
+  Wayback ebay: 1 URLs
+  Wayback mercari: 1 URLs
+
+CDX total: 162 unique job URLs -> cc-discovered-raw.json
+[Fri 03/27/2026  3:01:14.37] Done 

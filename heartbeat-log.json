@@ -124,5 +124,83 @@
     "agent": "sre-scout",
     "status": "flagged",
     "notes": "DEGRADED: 1 warning \u2014 _studio has 2 uncommitted files"
+  },
+  {
+    "date": "2026-03-26T19:31:44.488984",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WATCH: _studio has 2 uncommitted files; all tools/endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T20:01:37.670995",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: _studio has uncommitted files; all tools/endpoints UP; 3 inbox items pending (studio.html step held, NIT partial)"
+  },
+  {
+    "date": "2026-03-26T20:41:20.282978",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: _studio has uncommitted files; all tools/endpoints UP"
+  },
+  {
+    "date": "2026-03-26T21:01:24.884205",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: _studio has 5 uncommitted files; all tools/endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-26T21:31:22.290349",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 1 warning \u2014 uncommitted files in _studio"
+  },
+  {
+    "date": "2026-03-27T00:01:41.498436",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 1 warning \u2014 uncommitted files in _studio"
+  },
+  {
+    "date": "2026-03-27T00:31:46.193917",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: _studio has 6 uncommitted files; all tools/endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-27T01:01:39.310718",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 6 uncommitted _studio files; all endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-27T01:31:00.456996",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 6 uncommitted _studio files; all endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-27T02:01:32.115422",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: _studio has 7 uncommitted files (nightly commit failed\u2014quota); all tools/endpoints UP; no mobile answers pending"
+  },
+  {
+    "date": "2026-03-27T02:31:33.689300",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "1 issue: _studio has 9 uncommitted files (runtime logs/reports)"
+  },
+  {
+    "date": "2026-03-27T02:31:33.689321",
+    "agent": "supervisor",
+    "status": "clean",
+    "notes": "cycle complete \u2014 0 tasks dispatched, 0 queued, ollama UP"
+  },
+  {
+    "date": "2026-03-27",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 2 uncommitted projects (job-match, _studio)"
   }
 ]
