@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-26T04:00:01.281414",
+  "updated": "2026-03-26T19:42:50.643166",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -912,6 +912,81 @@
         "top_risk": "Client acquisition and standing out in a highly competitive AI services market."
       },
       "scored_at": "2026-03-25T04:00:37.270038"
+    },
+    {
+      "id": "historical-twins-division",
+      "type": "division",
+      "title": "Historical Twins Division",
+      "description": "Nightly scrape builds character data pools from historical figures. Three-bucket triage. Mirror Test validation. Static/Fluid toggle. Feeds CTW pipeline directly.",
+      "viability": "HIGH",
+      "signal": "manual-capture",
+      "source": "gemini-session-2026-03-26",
+      "tags": [
+        "ctw",
+        "historical",
+        "pipeline",
+        "characters",
+        "nightly"
+      ],
+      "added": "2026-03-26",
+      "status": "new",
+      "priority": "HIGH"
+    },
+    {
+      "id": "ancient-tech-grading",
+      "type": "tool",
+      "title": "Ancient Tech Grading System",
+      "description": "Three-bucket system (Logical/Plausible/Reality-Flip) for evaluating ancient technologies and theories. Composite scoring. Ghost Book adjacent.",
+      "viability": "MEDIUM",
+      "signal": "manual-capture",
+      "source": "gemini-session-2026-03-26",
+      "tags": [
+        "ghost-book",
+        "grading",
+        "ancient-tech",
+        "scoring"
+      ],
+      "added": "2026-03-26",
+      "status": "new",
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "traitor-protocol",
+      "type": "system-improvement",
+      "title": "Traitor Protocol Adversarial Testing",
+      "description": "One agent per overnight run designated as liar. Mayor must catch it. Catches hallucination drift. 7-step Mayor validation. Agent scoring 0-100 with dissolve threshold at 20.",
+      "viability": "HIGH",
+      "signal": "manual-capture",
+      "source": "gemini-session-2026-03-26",
+      "tags": [
+        "testing",
+        "adversarial",
+        "hallucination",
+        "overnight",
+        "mayor"
+      ],
+      "added": "2026-03-26",
+      "status": "new",
+      "priority": "HIGH"
+    },
+    {
+      "id": "technical-council-review",
+      "type": "testing-improvement",
+      "title": "Technical Council Peer Review",
+      "description": "Load domain historical twins as adversarial reviewers for architecture decisions. Hamilton/Shannon/Kay/Hopper for system architecture. Better than generic AI scoring.",
+      "viability": "HIGH",
+      "signal": "manual-capture",
+      "source": "gemini-session-2026-03-26",
+      "tags": [
+        "architecture",
+        "review",
+        "historical-twins",
+        "peer-review",
+        "council"
+      ],
+      "added": "2026-03-26",
+      "status": "new",
+      "priority": "HIGH"
     }
   ]
 }
