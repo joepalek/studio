@@ -623,6 +623,97 @@ Return ONLY valid JSON:
         write_checkpoint(results)
 
 
+# ─── ROUND 2: COUNCIL REVIEW ─────────────────────────────────────────────────
+
+def run_council_review(gemini_key, results):
+    log("\n" + "="*60)
+    log("ROUND 2 — Council Review (Gemini Flash, simulated perspectives)")
+    log("="*60)
+
+    results_summary = json.dumps({
+        k: {
+            "name": v.get("name"),
+            "combined_score": v.get("combined_score"),
+            "dimension_total": v.get("dimension_total"),
+            "test_total": v.get("test_total"),
+            "notes": v.get("notes")
+        }
+        for k, v in results.get("configs", {}).items()
+        if v.get("status") == "complete"
+    }, indent=2)
+
+    winner = results.get("winner", "unknown")
+    recommendation = results.get("recommendation", {})
+
+    prompt = f"""You are simulating a council of domain experts reviewing a context architecture test for an AI developer studio.
+
+The studio needs shared context across three interfaces: Opera Sidebar, Claude.ai, and Claude Code CLI.
+A solo developer runs this on Windows 11 with Ollama local LLM, Supabase (free tier), and Git for state.
+
+Adopt these perspectives one at a time and give 2-3 sentences of feedback from each:
+
+1. Claude Shannon (information theory, signal/noise, compression efficiency)
+2. Grace Hopper (standardization, pragmatism, human-readable systems, ship it)
+3. Alan Kay (encapsulation, goal-oriented messaging, long-term design)
+4. Margaret Hamilton (fault tolerance, priority interrupts, error recovery)
+
+TEST RESULTS:
+{results_summary}
+
+CURRENT WINNER: {winner}
+CURRENT RECOMMENDATION: {json.dumps(recommendation, indent=2)[:600]}
+
+For each expert: what does this result tell you about the winning architecture? What would you change or reinforce?
+
+Return ONLY valid JSON:
+{{
+  "shannon": {{
+    "verdict": "APPROVE|REVISE|REJECT",
+    "feedback": "2-3 sentences from Shannon's perspective"
+  }},
+  "hopper": {{
+    "verdict": "APPROVE|REVISE|REJECT",
+    "feedback": "2-3 sentences from Hopper's perspective"
+  }},
+  "kay": {{
+    "verdict": "APPROVE|REVISE|REJECT",
+    "feedback": "2-3 sentences from Kay's perspective"
+  }},
+  "hamilton": {{
+    "verdict": "APPROVE|REVISE|REJECT",
+    "feedback": "2-3 sentences from Hamilton's perspective"
+  }},
+  "council_verdict": "APPROVE|REVISE|REJECT",
+  "council_summary": "one sentence combining all four perspectives"
+}}"""
+
+    try:
+        text = gemini_call(gemini_key, prompt, model=GEMINI_FLASH_MODEL)
+        text = text.replace("```json", "").replace("```", "").strip()
+        council = json.loads(text)
+        results["council_review"] = {
+            "council_simulation": True,
+            "note": "Simulated perspectives pending real Historical Twins build",
+            "run_at": datetime.now().isoformat(),
+            "members": ["Shannon", "Hopper", "Kay", "Hamilton"],
+            "feedback": council
+        }
+        write_checkpoint(results)
+        log(f"  Council verdict: {council.get('council_verdict')}")
+        log(f"  Summary: {council.get('council_summary')}")
+        for name in ["shannon", "hopper", "kay", "hamilton"]:
+            m = council.get(name, {})
+            log(f"  {name.capitalize()}: {m.get('verdict')} — {m.get('feedback','')[:80]}")
+    except Exception as e:
+        log(f"  Council review ERROR: {e}")
+        results["council_review"] = {
+            "council_simulation": True,
+            "note": "Simulated perspectives pending real Historical Twins build",
+            "error": str(e)[:120]
+        }
+        write_checkpoint(results)
+
+
 # ─── TASK LOG ────────────────────────────────────────────────────────────────
 
 def write_task_log_entry():
@@ -672,6 +763,8 @@ def main():
         time.sleep(SLEEP_BETWEEN_CALLS)
 
     run_final_synthesis(gemini_key, results)
+    time.sleep(SLEEP_BETWEEN_CALLS)
+    run_council_review(gemini_key, results)
     write_task_log_entry()
 
     complete = sum(1 for v in results["configs"].values() if v.get("status") == "complete")
