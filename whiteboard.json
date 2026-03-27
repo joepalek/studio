@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-26T19:42:50.643166",
+  "updated": "2026-03-26T19:54:04.708252",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -987,6 +987,37 @@
       "added": "2026-03-26",
       "status": "new",
       "priority": "HIGH"
+    },
+    {
+      "id": "parcel-mesh-network",
+      "type": "proposal",
+      "title": "Parcel Mesh Network",
+      "description": "Distributed mesh network using parcel/property nodes. Federal funding path via FEMA/BRIC/HUD. Privacy-first architecture.",
+      "status": "WHITEBOARD",
+      "added": "2026-03-26",
+      "source": "manual",
+      "tags": [
+        "mesh",
+        "privacy",
+        "federal-funding",
+        "infrastructure",
+        "council-needed"
+      ],
+      "next_action": "Build character council for proposal development",
+      "council_needed": [
+        "Jefferson (privacy/sovereignty)",
+        "Hamilton (federal funding structure)",
+        "Tesla (mesh/wireless physics)",
+        "Hopper (hardware standardization)",
+        "Fuller (efficiency/minimal infrastructure)",
+        "Shannon (bandwidth/signal architecture)",
+        "Snowden-adjacent (surveillance prevention)",
+        "Waffle House operational twin (institutional knowledge)"
+      ],
+      "proposal_approach": "Scored loose framework -> Waffle House concretizes -> federal funding -> form/hire implementation entity",
+      "privacy_requirement": "Owner sees all pings forever via private key. Node is relay not recorder. Zero government read access without court order.",
+      "funding_path": "FEMA Next Gen Warning + BRIC grants + HUD CDBG + Layer 2 ad revenue",
+      "status_note": "Hold on whiteboard until Historical Twins pipeline can generate council. Do not pitch until council has scored proposals."
     }
   ]
 }
