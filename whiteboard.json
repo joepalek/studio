@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-26T19:54:04.708252",
+  "updated": "2026-03-26T19:57:46.846877",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -1018,6 +1018,27 @@
       "privacy_requirement": "Owner sees all pings forever via private key. Node is relay not recorder. Zero government read access without court order.",
       "funding_path": "FEMA Next Gen Warning + BRIC grants + HUD CDBG + Layer 2 ad revenue",
       "status_note": "Hold on whiteboard until Historical Twins pipeline can generate council. Do not pitch until council has scored proposals."
+    },
+    {
+      "id": "institutional-twin-councils",
+      "title": "Institutional Twin Councils",
+      "description": "Domain-expert and institutional knowledge twins grouped by board, field, or regulatory function. Queryable on demand for proposal stress-testing, regulatory pre-review, legal argument testing, academic peer review, and product validation. Three tiers: public historical commons, curated domain councils, custom institutional twins. Replaces $500-5000/hr expert panels at near-zero marginal cost.",
+      "status": "WHITEBOARD",
+      "priority": "HIGH",
+      "type": "platform+product",
+      "revenue_potential": "Subscription tiers + custom enterprise builds",
+      "feeds_into": "Historical Twins Pipeline, CTW, STA, parcel-mesh-network",
+      "use_cases": [
+        "Government/regulatory pre-review",
+        "Legal argument stress-testing",
+        "Academic peer review simulation",
+        "Investor/board pitch rehearsal",
+        "Product validation councils",
+        "Emergency response planning (Waffle House project)"
+      ],
+      "social_media_angle": "Public brainstorm for novel use cases on launch",
+      "added": "2026-03-26",
+      "source": "Joe session \u2014 expanded from Historical Twins concept"
     }
   ]
 }
