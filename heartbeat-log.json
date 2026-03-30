@@ -1,62 +1,11 @@
-[
-  {
-    "date": "2026-03-28T03:30:10.014886",
-    "agent": "auto-answer-gemini",
-    "status": "clean",
-    "notes": "[auto-answer] auto-resolved 0, escalated 42 of 42 pending"
-  },
-  {
-    "date": "2026-03-29T03:30:09.576526",
-    "agent": "auto-answer-gemini",
-    "status": "clean",
-    "notes": "[auto-answer] auto-resolved 0, escalated 42 of 42 pending"
-  },
-  {
-    "date": "2026-03-29T16:01:51.591089",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 2 uncommitted repos (job-match, _studio); studio-config.json JSON syntax fixed"
-  },
-  {
-    "date": "2026-03-29T16:02:11.663855",
-    "agent": "supervisor",
-    "status": "flagged",
-    "notes": "SRE WARNING: 2 uncommitted repos; auto-answer HTTP 404 errors on all Supabase calls; nightly commit failing since 03-19"
-  },
-  {
-    "date": "2026-03-29",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 2 uncommitted projects (job-match, _studio). Quota exhausted nightly runs Mar 26-28, resets Mar 31."
-  },
-  {
-    "date": "2026-03-29T17:01:41.411857",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: uncommitted changes in _studio+job-match; quota blocked nightly commits"
-  },
-  {
-    "date": "2026-03-29T17:31:38.288933",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 2 uncommitted repos (job-match, _studio); Claude quota exhausted until Mar 31"
-  },
-  {
-    "date": "2026-03-29T18:01:25.895323",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 2 uncommitted repos (job-match, _studio); quota exhausted until Mar 31 5pm CT"
-  },
-  {
-    "date": "2026-03-29T18:31:35.142188",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 2 uncommitted repos; quota exhausted until Mar 31; 42 auto-answer escalations pending"
-  },
-  {
-    "date": "2026-03-29T19:01:31.309741",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 2 uncommitted repos (job-match, _studio); Claude quota exhausted until Mar 31 5pm CT; 4 overnight tasks completed successfully"
-  }
-]
+{
+  "_schema": "1.0",
+  "entries": [
+    {
+      "date": "2026-03-29T20:02:54.020346",
+      "agent": "context-vector-store",
+      "status": "clean",
+      "notes": "Index complete: 573 chunks from 573 documents"
+    }
+  ]
+}

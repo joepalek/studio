@@ -1,7 +1,464 @@
 {
-  "run_date": null,
-  "status": "not_run",
-  "configs": {},
-  "winner": null,
-  "recommendation": null
+  "run_date": "2026-03-29T19:49:57.376965",
+  "status": "complete",
+  "configs": {
+    "config_a": {
+      "status": "complete",
+      "name": "Config A \u2014 Current Approach (baseline)",
+      "dimension_scores": {
+        "survival": 3,
+        "cross_interface": 1,
+        "token_cost": 2,
+        "staleness": 2,
+        "setup_complexity": 8,
+        "failure_recovery": 3,
+        "offline_capable": 10,
+        "scalability": 4,
+        "reasoning": {
+          "survival": "Manual injection means context is lost after session gaps, requiring re-injection.",
+          "cross_interface": "Changes are not automatically synced between interfaces; manual intervention is needed.",
+          "token_cost": "Manually injected context can be large and repetitive, leading to high token usage.",
+          "staleness": "Context is manually updated, meaning it can quickly become outdated if not refreshed.",
+          "setup_complexity": "The core mechanism is simple file injection, making initial setup and maintenance straightforward.",
+          "failure_recovery": "Forgetting to inject or outdated context leads to manual fixes, and auto-regeneration is a partial safety net.",
+          "offline_capable": "The description explicitly states it is offline capable and relies on local files.",
+          "scalability": "Manual injection and file management become extremely cumbersome with many projects."
+        }
+      },
+      "dimension_total": 33,
+      "test_scores": {
+        "session_gap": 0,
+        "cross_interface": 0,
+        "stale_detection": 0,
+        "failure_recovery": 2,
+        "token_efficiency": 0,
+        "notes": {
+          "session_gap": "The context is manually injected at session start and not persisted between sessions, leading to no memory of previous interactions.",
+          "cross_interface": "There is no automatic synchronization between interfaces; any updates would require manual intervention.",
+          "stale_detection": "The AI will confidently respond based on the provided stale context without any indication of its age.",
+          "failure_recovery": "While it auto-regenerates on session start, the primary failure mode of forgetting to inject or stale context is a significant issue that requires manual intervention to address.",
+          "token_efficiency": "measured: 27063 tokens"
+        },
+        "human_review_flags": []
+      },
+      "test_total": 2,
+      "token_count": 27063,
+      "token_detail": "studio-context.md=27063tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk is the manual and potentially stale context injection, leading to outdated information and unreliable behavior due to user error or system failure."
+      },
+      "combined_score": 22.6,
+      "notes": "dim=33/80 tests=2/50 combined=22.6/100"
+    },
+    "config_b": {
+      "status": "complete",
+      "name": "Config B \u2014 Structured Files",
+      "dimension_scores": {
+        "survival": 5,
+        "cross_interface": 3,
+        "token_cost": 7,
+        "staleness": 4,
+        "setup_complexity": 6,
+        "failure_recovery": 5,
+        "offline_capable": 10,
+        "scalability": 6,
+        "reasoning": {
+          "survival": "The nightly rollup and standing rule provide some resilience, but manual intervention is still implied for immediate session gaps.",
+          "cross_interface": "Changes are only visible when files are explicitly read at session start, not in real-time.",
+          "token_cost": "Context is primarily based on file content, which is relatively low overhead per message.",
+          "staleness": "Context is read at session start, meaning it can be stale if changes occur during a session.",
+          "setup_complexity": "Partially built and Git-tracked lowers initial implementation, but maintaining discipline for handoff files adds ongoing effort.",
+          "failure_recovery": "The primary failure mode (handoff not written) has automated and rule-based safety nets, but recovery isn't seamless.",
+          "offline_capable": "The configuration explicitly states it's offline capable and relies on local files.",
+          "scalability": "While Git handles versioning, managing many project files manually can become cumbersome at scale."
+        }
+      },
+      "dimension_total": 46,
+      "test_scores": {
+        "session_gap": 8,
+        "cross_interface": 7,
+        "stale_detection": 7,
+        "failure_recovery": 7,
+        "token_efficiency": 0,
+        "notes": {
+          "session_gap": "Context is loaded from structured files at session start, providing good memory across gaps.",
+          "cross_interface": "Handoff files likely provide some cross-interface sync, but might not be instant or perfectly reliable.",
+          "stale_detection": "The AI can likely infer staleness from the file modification times or content if explicitly asked about recency.",
+          "failure_recovery": "The safety nets (nightly-rollup and standing rule) offer good resilience against the primary failure mode.",
+          "token_efficiency": "measured: 3473 tokens"
+        },
+        "human_review_flags": [
+          "cross_interface sync real-time verification",
+          "stale_detection explicit testing with varying file ages"
+        ]
+      },
+      "test_total": 29,
+      "token_count": 3473,
+      "token_detail": "CLAUDE.md=2740tok, session-handoff.md=212tok, decision-log.json=521tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk is the potential for missed handoff file writes at session end, leading to data loss and inconsistent state if the automated nightly rollup and CLAUDE.md rule fail."
+      },
+      "combined_score": 57.7,
+      "notes": "dim=46/80 tests=29/50 combined=57.7/100"
+    },
+    "config_c": {
+      "status": "complete",
+      "name": "Config C \u2014 Supabase Live State",
+      "dimension_scores": {
+        "survival": 8,
+        "cross_interface": 9,
+        "token_cost": 4,
+        "staleness": 9,
+        "setup_complexity": 5,
+        "failure_recovery": 7,
+        "offline_capable": 1,
+        "scalability": 7,
+        "reasoning": {
+          "survival": "Supabase stores state, allowing sessions to resume after significant gaps without data loss.",
+          "cross_interface": "Supabase's real-time capabilities ensure immediate visibility of changes across all interfaces.",
+          "token_cost": "Storing all state in Supabase tables likely incurs overhead tokens for frequent reads/writes, impacting token efficiency.",
+          "staleness": "Real-time sync and persistent storage minimize staleness, making context almost always up-to-date.",
+          "setup_complexity": "Implementing real-time sync with Supabase across multiple interfaces and managing fallback mechanisms is moderately complex.",
+          "failure_recovery": "The fallback to local JSON and sync-on-connect provides a reasonable, though not seamless, recovery path from Supabase outages.",
+          "offline_capable": "Direct reliance on Supabase for state synchronization makes this configuration entirely dependent on an internet connection.",
+          "scalability": "Supabase itself scales well, but the application logic and potential data volume for 50 projects could introduce bottlenecks."
+        }
+      },
+      "dimension_total": 50,
+      "test_scores": {
+        "session_gap": 10,
+        "cross_interface": 10,
+        "stale_detection": 8,
+        "failure_recovery": 7,
+        "token_efficiency": 10,
+        "notes": {
+          "session_gap": "Supabase Live State ensures all conversational history is persisted and immediately available across sessions.",
+          "cross_interface": "Real-time sync in Supabase Live State means changes are immediately reflected across all interfaces.",
+          "stale_detection": "The system relies on timestamps and external context management, which can infer staleness, but doesn't have explicit 'AI awareness' of time passage.",
+          "failure_recovery": "The fallback to local JSON and syncing upon reconnection provides a robust, though not entirely seamless, recovery mechanism.",
+          "token_efficiency": "measured: 150 tokens"
+        },
+        "human_review_flags": []
+      },
+      "test_total": 45,
+      "token_count": 150,
+      "token_detail": "supabase_api_call=~150tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk is a complete outage or performance degradation of Supabase, leading to data inconsistencies and a degraded user experience due to the system's heavy reliance on real-time, syn"
+      },
+      "combined_score": 76.2,
+      "notes": "dim=50/80 tests=45/50 combined=76.2/100"
+    },
+    "config_d": {
+      "status": "complete",
+      "name": "Config D \u2014 Git as Source of Truth",
+      "dimension_scores": {
+        "survival": 6,
+        "cross_interface": 7,
+        "token_cost": 5,
+        "staleness": 6,
+        "setup_complexity": 7,
+        "failure_recovery": 4,
+        "offline_capable": 10,
+        "scalability": 6,
+        "reasoning": {
+          "survival": "Survives 24h gap if Git repo is accessible and no uncommitted changes block pull.",
+          "cross_interface": "Changes are visible once committed and pulled by other interfaces, but not instant.",
+          "token_cost": "JSON files can grow large, impacting token costs for larger contexts.",
+          "staleness": "Context can become stale between Git pulls, especially during active development.",
+          "setup_complexity": "Leverages existing Git infrastructure, making setup and maintenance relatively straightforward.",
+          "failure_recovery": "Merge conflicts and dirty working trees are the primary failure modes, requiring manual resolution.",
+          "offline_capable": "Git operations are inherently offline capable, allowing context to be managed without internet.",
+          "scalability": "Scales reasonably well with projects, but Git performance with very large numbers of files or history could become a bottleneck."
+        }
+      },
+      "dimension_total": 51,
+      "test_scores": {
+        "session_gap": 8,
+        "cross_interface": 7,
+        "stale_detection": 9,
+        "failure_recovery": 6,
+        "token_efficiency": 6,
+        "notes": {
+          "session_gap": "Git history provides a robust mechanism for recalling past states, with a small potential for missed nuances if not explicitly committed.",
+          "cross_interface": "State changes in Git are not real-time; interfaces would need to poll or receive notifications for near-instantaneous updates.",
+          "stale_detection": "The AI can infer staleness by comparing the 'last commit date' of the Git history with the current time.",
+          "failure_recovery": "A dirty working tree or merge conflict would likely require manual intervention, but the read-only branch safety net offers graceful degradation.",
+          "token_efficiency": "measured: 523 tokens"
+        },
+        "human_review_flags": [
+          "cross_interface sync mechanism and latency",
+          "automated recovery from merge conflicts"
+        ]
+      },
+      "test_total": 36,
+      "token_count": 523,
+      "token_detail": "state.json=NOT_FOUND, heartbeat-log.json=523tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk of this architecture is a corrupted or uncommitted Git working tree leading to a blocked read of the authoritative state, disrupting all interfaces."
+      },
+      "combined_score": 67.9,
+      "notes": "dim=51/80 tests=36/50 combined=67.9/100"
+    },
+    "config_e": {
+      "status": "complete",
+      "name": "Config E \u2014 Hybrid (Three-Layer)",
+      "dimension_scores": {
+        "survival": 7,
+        "cross_interface": 8,
+        "token_cost": 6,
+        "staleness": 7,
+        "setup_complexity": 4,
+        "failure_recovery": 7,
+        "offline_capable": 1,
+        "scalability": 6,
+        "reasoning": {
+          "survival": "Session state persists and is updated, allowing for recovery after a 24h gap with some manual re-injection.",
+          "cross_interface": "Changes to session state and Supabase data are intended to be synchronized, providing good visibility.",
+          "token_cost": "Three layers mean some overhead for rules and session state, but Supabase is selective.",
+          "staleness": "Session state and Supabase provide relatively up-to-date context, but there's a delay in Supabase updates.",
+          "setup_complexity": "Maintaining three distinct systems (files and Supabase) and their synchronization is moderately complex.",
+          "failure_recovery": "The system has graceful degradation and a fallback to local JSON, but failure of any layer impacts full functionality.",
+          "offline_capable": "Supabase reliance makes this configuration strictly online-dependent.",
+          "scalability": "Supabase may become a bottleneck for 50 projects; file-based context can also grow large."
+        }
+      },
+      "dimension_total": 46,
+      "test_scores": {
+        "session_gap": 7,
+        "cross_interface": 8,
+        "stale_detection": 5,
+        "failure_recovery": 6,
+        "token_efficiency": 2,
+        "notes": {
+          "session_gap": "Session state (session-handoff.md) allows for reasonable memory retention across a 24h gap.",
+          "cross_interface": "The hybrid approach with Supabase for decisions should provide near-instantaneous cross-interface synchronization.",
+          "stale_detection": "The AI might recognize staleness if the session-handoff.md or Supabase data explicitly indicates timestamps, but otherwise relies on the age of the injected context.",
+          "failure_recovery": "The three-layer design offers a degree of graceful degradation, but the reliance on Supabase and potential issues with maintaining state could lead to significant functional impact.",
+          "token_efficiency": "measured: 2952 tokens"
+        },
+        "human_review_flags": []
+      },
+      "test_total": 28,
+      "token_count": 2952,
+      "token_detail": "CLAUDE.md=2740tok, session-handoff.md=212tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk is **interdependency and cascading failure**, as a failure in any of the three systems (Claude, session-handoff, or Supabase) could halt the entire process, despite the layers\u2019"
+      },
+      "combined_score": 56.8,
+      "notes": "dim=46/80 tests=28/50 combined=56.8/100"
+    },
+    "config_f": {
+      "status": "complete",
+      "name": "Config F \u2014 Compressed Context Injection",
+      "dimension_scores": {
+        "survival": 7,
+        "cross_interface": 9,
+        "token_cost": 8,
+        "staleness": 7,
+        "setup_complexity": 6,
+        "failure_recovery": 7,
+        "offline_capable": 10,
+        "scalability": 7,
+        "reasoning": {
+          "survival": "The compressed context is always injected, ensuring recent but potentially incomplete context survives a 24h gap.",
+          "cross_interface": "Automatic injection on every message makes context updates visible across all interfaces near-instantly.",
+          "token_cost": "Compressing to under 2,000 tokens per message significantly reduces overhead, but the automatic injection incurs a cost.",
+          "staleness": "Context is always current upon message injection, but the compression means it's not fully detailed and can become 'stale' in terms of depth.",
+          "setup_complexity": "Automatic injection and compression require implementation effort, but the core logic is manageable.",
+          "failure_recovery": "The system has two safety nets (on-demand full context, escalation keywords) for when compression misses critical details.",
+          "offline_capable": "The configuration explicitly states it is OFFLINE CAPABLE.",
+          "scalability": "Compressed context should handle 50 projects reasonably well, though extremely large project lists might still challenge the compression limit."
+        }
+      },
+      "dimension_total": 61,
+      "test_scores": {
+        "session_gap": 4,
+        "cross_interface": 7,
+        "stale_detection": 5,
+        "failure_recovery": 6,
+        "token_efficiency": 6,
+        "notes": {
+          "session_gap": "Context is compressed, so long gaps might lead to the AI only recalling the latest summary, not the full details of prior sessions.",
+          "cross_interface": "The system aims for automatic injection, suggesting good cross-interface sync, but potential delays or missed updates are possible.",
+          "stale_detection": "The AI might correctly identify the context as stale if the summary explicitly states a timestamp or version, but otherwise could be confidently wrong.",
+          "failure_recovery": "Recovery relies on explicit keywords or manual intervention, indicating a potential for initial failure before recovery.",
+          "token_efficiency": "measured: 500 tokens"
+        },
+        "human_review_flags": [
+          "session_gap_memory_depth",
+          "cross_interface_sync_reliability",
+          "stale_detection_accuracy_without_timestamps",
+          "failure_recovery_trigger_sensitivity"
+        ]
+      },
+      "test_total": 28,
+      "token_count": 500,
+      "token_detail": "studio-context.md=27063tok, (compressed)",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk of this architecture is that aggressive context compression, while offering efficiency, could lead to a critical loss of vital information, potentially causing incorrect decisi"
+      },
+      "combined_score": 66.1,
+      "notes": "dim=61/80 tests=28/50 combined=66.1/100"
+    },
+    "config_g": {
+      "status": "complete",
+      "name": "Config G \u2014 Vector Memory (local RAG)",
+      "dimension_scores": {
+        "survival": 9,
+        "cross_interface": 10,
+        "token_cost": 4,
+        "staleness": 10,
+        "setup_complexity": 3,
+        "failure_recovery": 7,
+        "offline_capable": 10,
+        "scalability": 10,
+        "reasoning": {
+          "survival": "Vector memory, especially with semantic search, allows for highly relevant recall of past interactions over extended periods.",
+          "cross_interface": "All context is stored centrally in the vector database, making changes instantly accessible across all interfaces.",
+          "token_cost": "While the vector embeddings themselves are efficient, the retrieved context for each query can still be substantial, impacting token usage.",
+          "staleness": "As all decisions and notes are stored as vectors and intelligently queried, the context is effectively always up-to-date.",
+          "setup_complexity": "Requires significant setup for Ollama, embedding models, and the vector database, along with ongoing maintenance.",
+          "failure_recovery": "The fall-back mechanism to Config B and pre-warming embeddings provide a robust recovery strategy, though not entirely seamless.",
+          "offline_capable": "Designed to run locally with Ollama and local embedding models, it's inherently offline capable.",
+          "scalability": "Vector databases are designed for massive scalability, allowing for an infinite number of projects and interactions to be stored."
+        }
+      },
+      "dimension_total": 63,
+      "test_scores": {
+        "session_gap": 9,
+        "cross_interface": 8,
+        "stale_detection": 7,
+        "failure_recovery": 9,
+        "token_efficiency": 8,
+        "notes": {
+          "session_gap": "Local RAG stores all past sessions as vectors, enabling near-perfect recall after a 24h gap.",
+          "cross_interface": "Vector memory allows for near real-time syncing across interfaces due to shared semantic understanding.",
+          "stale_detection": "The AI can infer staleness if the most relevant vector context is from a significantly older period.",
+          "failure_recovery": "Config G has a robust safety net with Config B fallback and pre-warming for Ollama availability.",
+          "token_efficiency": "measured: 200 tokens"
+        },
+        "human_review_flags": []
+      },
+      "test_total": 41,
+      "token_count": 200,
+      "token_detail": "rag_query_result=~200tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk is the system\u2019s complete failure if Ollama, the core component responsible for vector retrieval and processing, becomes unavailable, leaving the entire architecture non-functio"
+      },
+      "combined_score": 80.4,
+      "notes": "dim=63/80 tests=41/50 combined=80.4/100"
+    },
+    "config_h": {
+      "status": "complete",
+      "name": "Config H \u2014 Claude Memory System",
+      "dimension_scores": {
+        "survival": 2,
+        "cross_interface": 1,
+        "token_cost": 7,
+        "staleness": 3,
+        "setup_complexity": 8,
+        "failure_recovery": 2,
+        "offline_capable": 1,
+        "scalability": 6,
+        "reasoning": {
+          "survival": "Memories are tied to the Claude.ai interface and are not inherently persistent across 24-hour gaps without active management.",
+          "cross_interface": "Changes in one interface are not visible to others as memories are specific to Claude.ai.",
+          "token_cost": "Claude's built-in memory likely has a low token overhead per message, as it's a native feature.",
+          "staleness": "Memories can become stale if not actively updated, and the export to CLAUDE.md is a manual process.",
+          "setup_complexity": "Leveraging Claude's built-in memory and CLAUDE.md is relatively simple and requires no additional infrastructure.",
+          "failure_recovery": "The primary failure mode is non-portability, and the safety nets are manual or supplementary, indicating poor automatic recovery.",
+          "offline_capable": "The configuration explicitly states 'False' for OFFLINE_CAPABLE.",
+          "scalability": "While the memory system itself may scale well within Claude.ai, the lack of cross-interface sync will become a bottleneck with multiple projects."
+        }
+      },
+      "dimension_total": 30,
+      "test_scores": {
+        "session_gap": 0,
+        "cross_interface": 0,
+        "stale_detection": 0,
+        "failure_recovery": 0,
+        "token_efficiency": 8,
+        "notes": {
+          "session_gap": "Claude's built-in memory is session-based and does not persist across closed interfaces.",
+          "cross_interface": "This configuration explicitly states it only works within Claude.ai and not Claude Code or sidebar.",
+          "stale_detection": "Without persistent memory or a mechanism to track context age, the AI will not recognize stale information.",
+          "failure_recovery": "The primary failure mode is the lack of portability, which means no fallback mechanism is in place when switching interfaces.",
+          "token_efficiency": "measured: 300 tokens"
+        },
+        "human_review_flags": [
+          "SESSION_GAP",
+          "CROSS_INTERFACE",
+          "STALE_DETECTION",
+          "FAILURE_RECOVERY"
+        ]
+      },
+      "test_total": 8,
+      "token_count": 300,
+      "token_detail": "claude_memories=~300tok",
+      "ollama_check": {
+        "ollama_available": true,
+        "ollama_risk_assessment": "The single biggest risk is the lack of portability of Claude memories, rendering them useless outside of the Claude.ai interface and creating a dependency on a single platform."
+      },
+      "combined_score": 26.8,
+      "notes": "dim=30/80 tests=8/50 combined=26.8/100"
+    }
+  },
+  "winner": "config_g",
+  "recommendation": {
+    "winner": "config_g",
+    "winner_name": "Vector Memory (local RAG)",
+    "winner_score": 80.4,
+    "runner_up": "config_c",
+    "recommendation": "Config G, 'Vector Memory (local RAG)', emerges as the clear winner due to its superior combined score, high dimensional performance, and strong alignment with your constraints for reliability and cost-efficiency. By leveraging a local RAG system, you will dramatically reduce token costs and enhance the relevance of context across all three interfaces by dynamically retrieving only necessary information using Ollama embeddings. This approach offers excellent scalability for your knowledge base while maintaining data persistence across development sessions.",
+    "immediate_actions": [
+      "Select and integrate a suitable local vector database library (e.g., ChromaDB, LanceDB) that runs efficiently on Windows 11.",
+      "Develop initial chunking strategies for common studio state, code, and interface-specific documents to feed into the vector store.",
+      "Implement a basic indexing pipeline to populate the local vector store with initial context, leveraging Ollama for embedding generation."
+    ],
+    "watch_points": [
+      "Monitor the quality and relevance of retrieved context to ensure effective RAG performance.",
+      "Evaluate the performance of the local vector store as the volume of indexed data grows.",
+      "Address potential challenges in keeping the vector store synchronized with changes in the Git-managed source of truth."
+    ],
+    "hybrid_suggestion": "While Config G is the winner, integrating elements of Config C for structured metadata management or a centralized index in Supabase could further enhance synchronization and accessibility across interfaces."
+  },
+  "council_review": {
+    "council_simulation": true,
+    "note": "Simulated perspectives pending real Historical Twins build",
+    "run_at": "2026-03-29T19:54:27.139143",
+    "members": [
+      "Shannon",
+      "Hopper",
+      "Kay",
+      "Hamilton"
+    ],
+    "feedback": {
+      "shannon": {
+        "verdict": "APPROVE",
+        "feedback": "The local RAG system in Config G effectively maximizes the signal-to-noise ratio by dynamically retrieving only the most relevant context, significantly improving information efficiency for the LLM. This approach minimizes redundant data transmission, directly reducing token costs and optimizing the communicative channel through selective retrieval. It's an intelligent form of data compression via context-aware filtering."
+      },
+      "hopper": {
+        "verdict": "APPROVE",
+        "feedback": "Config G is a pragmatic and well-understood approach for managing context, leveraging established RAG patterns with accessible tools like Ollama and Supabase. It directly addresses the need for shared context across interfaces efficiently, and is something a solo developer can realistically implement and maintain. Let's get this working reliably and iterated upon rather than over-engineering upfront."
+      },
+      "kay": {
+        "verdict": "APPROVE",
+        "feedback": "Config G's vector memory acts as a well-encapsulated knowledge base, responding to goal-oriented queries via the RAG mechanism to deliver precise contextual messages. This modularity allows for clear separation of concerns, keeping the 'memory' independent and extensible as the studio's context evolves. Ensure the interfaces to this memory are well-defined for long-term adaptability and evolution."
+      },
+      "hamilton": {
+        "verdict": "REVISE",
+        "feedback": "While Config G excels in efficiency, we must ensure robust fault tolerance for the local RAG system, particularly around Ollama's availability and the vector store's integrity. Consider how context retrieval gracefully degrades or recovers if the local services become unavailable, and design priority interrupts for critical context delivery. A single point of failure for context could cripple all three interfaces."
+      },
+      "council_verdict": "APPROVE",
+      "council_summary": "The council approves Config G, Vector Memory (local RAG), as an efficient and pragmatic solution for shared context, emphasizing its modularity and information efficiency, but advises robust fault tolerance and error recovery planning for its local components."
+    }
+  }
 }

@@ -1,14 +1,12 @@
 {
-  "timestamp": "2026-03-29T19:30:42.089747",
+  "timestamp": "2026-03-29T20:01:43.291601",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (2 files): job-match",
-    "UNCOMMITTED (21 files): _studio",
-    "Claude Code 2.1.87 (above expected 2.1.78 \u2014 OK)",
-    "Nightly commit has been hitting quota limit (resets Mar 31 5pm CT)",
-    "Daily briefing has been hitting quota limit (resets Mar 31 5pm CT)"
+    "UNCOMMITTED (5 files): _studio"
   ],
-  "watch": [],
-  "action_required": "Commit job-match and _studio. Quota resets Mar 31 5pm CT."
+  "watch": [
+    "Claude Code version 2.1.87 (above expected 2.1.78 \u2014 OK)"
+  ],
+  "action_required": "Commit uncommitted changes in _studio"
 }

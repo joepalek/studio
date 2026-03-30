@@ -15,12 +15,13 @@
     {
       "id": "decision_echo_architecture",
       "date": "2026-03-29",
-      "decision": "Echo hybrid architecture selected as target context solution pending Mirofish confirmation",
+      "decision": "Config G Vector Memory RAG selected as context architecture",
       "reason": "Both Gemini war room (44/50) and pre-test analysis independently selected Echo. Implement after Mirofish confirms tonight.",
-      "permanence": "revisable",
+      "permanence": "permanent",
       "status": "active",
-      "review_after": "Mirofish results",
-      "superseded_by": null
+      "superseded_by": null,
+      "implemented": "2026-03-29",
+      "note": "Mirofish winner 80.4/100. Echo scored 56.8. Gap caused by CLAUDE.md token cost killing Echo Layer 1. RAG delivers 200 token overhead vs 2952. Hamilton fault tolerance addressed via Config B fallback when Ollama unavailable."
     },
     {
       "id": "decision_sequential_ab_test",

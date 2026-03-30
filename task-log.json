@@ -1,5 +1,13 @@
 {
   "_schema": "1.0",
   "_description": "Log of task routing decisions",
-  "tasks": []
+  "tasks": [
+    {
+      "date": "2026-03-29",
+      "task": "Mirofish context architecture test",
+      "routing": "python+gemini+ollama",
+      "reason": "fully mechanical scoring, zero Claude quota needed",
+      "quota_saved": true
+    }
+  ]
 }
