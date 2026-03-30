@@ -1,0 +1,237 @@
+{
+  "system": "Master Asset Creation & Distribution Router",
+  "version": "1.0",
+  "last_updated": "2026-03-29",
+  "created_by": "Joe Palek",
+  "purpose": "Route all agent-created assets to destinations, route through CX Agent validation, track usage for social media amplification",
+  
+  "creator_agents": {
+    "eBay_Listing_Agent": {
+      "creates": "product listings (JSON schema)",
+      "validation_rules": ["format", "quality_score", "brand_alignment"],
+      "routing": {
+        "destination": "eBay API",
+        "upload_protocol": "OAuth2 batch endpoint",
+        "quality_threshold": 8,
+        "fallback_on_fail": "staging_review (whiteboard)"
+      },
+      "usage_tracking": {
+        "monitor": "listing_views, conversion_rate, feedback",
+        "reporting_cadence": "daily",
+        "social_signal": "high_performers_to_feed"
+      }
+    },
+    
+    "CTW_Agent": {
+      "creates": ["app", "script", "mp4", "jpg", "excel", "character_files"],
+      "validation_rules": ["format", "quality_score", "brand_alignment"],
+      "routing": {
+        "rule_1": {
+          "condition": "output_type IN (app, script, mp4, jpg, excel)",
+          "destination": "project_folder/{project_name}",
+          "example": "G:/My Drive/Projects/CTW/character_builder/outputs/"
+        },
+        "rule_2": {
+          "condition": "output_type == character_file",
+          "destination": "characters_final_folder",
+          "location": "G:/My Drive/Projects/CTW/characters_final/",
+          "sub_destinations": ["viewer_access", "mirofish_queries", "api_endpoints"]
+        }
+      },
+      "quality_threshold": 8,
+      "usage_tracking": {
+        "monitor": "character_adoption_rate, viewer_loads, api_query_frequency",
+        "reporting_cadence": "daily",
+        "social_signal": "trending_characters_for_marketing"
+      }
+    },
+    
+    "Ghost_Book_Agent": {
+      "creates": ["scripts", "books", "story_content"],
+      "validation_rules": ["format", "quality_score", "brand_alignment"],
+      "routing": {
+        "draft_stage": {
+          "condition": "status == draft OR newly_created",
+          "destination": "G:/My Drive/Projects/Ghost_Book/scripts_books_draft/",
+          "purpose": "available for consumption by new creation processes",
+          "consumable_by": ["Ghost_Book_Agent", "CTW_Agent", "Content_Distribution"]
+        },
+        "done_stage": {
+          "condition": "status == complete AND ready_for_release",
+          "destination": "G:/My Drive/Projects/Ghost_Book/done_books_scripts/",
+          "purpose": "finalized, awaiting release decision",
+          "quality_threshold": 9
+        },
+        "final_stage": {
+          "condition": "status == released OR approved_for_market",
+          "destination": "G:/My Drive/Projects/Ghost_Book/final_books_scripts/",
+          "purpose": "live content for market distribution or video creation",
+          "sub_destinations": ["market_distribution", "video_creation_feed"]
+        }
+      },
+      "quality_threshold": 8,
+      "usage_tracking": {
+        "monitor": "downloads, reads, video_views, market_performance",
+        "reporting_cadence": "daily",
+        "social_signal": "trending_content_for_amplification"
+      }
+    },
+    
+    "Jobs_Agent": {
+      "creates": ["job_postings", "job_metadata"],
+      "validation_rules": ["format", "quality_score", "brand_alignment"],
+      "routing": {
+        "destination": "G:/My Drive/Projects/Job_Match/jobs_repository/",
+        "purpose": "central job depository for Job_Match app to query"
+      },
+      "maintenance": {
+        "daily_cull": {
+          "rule": "remove expired or no_longer_listed jobs",
+          "schedule": "every_24_hours",
+          "agent_responsible": "Jobs_Agent OR CX_Agent (daily_audit)"
+        }
+      },
+      "quality_threshold": 7,
+      "usage_tracking": {
+        "monitor": "job_impressions, application_rate, position_fill_time",
+        "reporting_cadence": "daily",
+        "social_signal": "high_demand_roles_for_promotion"
+      }
+    }
+  },
+
+  "cx_agent_workflow": {
+    "role": "Asset Quality Gate & Distribution Traffic Cop",
+    "incoming": "all_creator_agent_outputs",
+    "process": [
+      {
+        "step": 1,
+        "action": "receive_asset",
+        "input": "asset_metadata + content",
+        "validation": ["format_check", "quality_score", "brand_alignment_check"]
+      },
+      {
+        "step": 2,
+        "action": "grade_asset",
+        "scoring": {
+          "format_check": "pass/fail (schema validation)",
+          "quality_score": "1-10 scale",
+          "brand_alignment": "pass/fail (tone, values, visual consistency)",
+          "overall_status": "pass (>=8) OR review (5-7) OR reject (<5)"
+        }
+      },
+      {
+        "step": 3,
+        "action": "route_asset",
+        "logic": "consult asset_distribution_manifest.json for destination",
+        "delivery": "push to final_destination OR staging_for_review"
+      },
+      {
+        "step": 4,
+        "action": "track_usage",
+        "monitor": "where asset goes, how it performs, where it's consumed",
+        "logging": "asset_creation_log.json"
+      },
+      {
+        "step": 5,
+        "action": "feed_social_intel",
+        "output": "performance_signals to social_media_agent",
+        "examples": [
+          "high_conversion_listings → promote_on_social",
+          "trending_characters → create_character_spotlight_content",
+          "popular_books → feature_on_newsletter_or_youtube"
+        ]
+      }
+    ],
+    "output": "asset_creation_log entry + usage_telemetry",
+    "escalation": "quality_fails or_routing_errors → whiteboard for manual review"
+  },
+
+  "asset_creation_log_schema": {
+    "asset_id": "uuid or agent_name-timestamp",
+    "creator_agent": "string (e.g., eBay_Listing_Agent)",
+    "asset_type": "string (e.g., listing, character_file, book)",
+    "created_at": "ISO 8601 timestamp",
+    "content_preview": "string (first 500 chars or structured metadata)",
+    
+    "validation": {
+      "cx_agent_reviewed_at": "ISO 8601 timestamp",
+      "format_check": "pass/fail",
+      "quality_score": "1-10",
+      "brand_alignment": "pass/fail",
+      "overall_status": "pass/review/reject",
+      "cx_agent_notes": "string"
+    },
+    
+    "routing": {
+      "destination_type": "string (eBay, project_folder, characters_final, etc.)",
+      "destination_path": "string (full path or API endpoint)",
+      "routed_at": "ISO 8601 timestamp",
+      "routing_status": "success/pending/failed"
+    },
+    
+    "usage_tracking": {
+      "first_usage_at": "ISO 8601 timestamp (when first consumed/viewed/loaded)",
+      "usage_count": "integer (cumulative)",
+      "performance_signals": {
+        "views_impressions": "integer",
+        "engagement": "string (e.g., click_through_rate, conversion_rate)",
+        "feedback_score": "1-5 or null",
+        "social_amplification_triggered": "boolean"
+      },
+      "last_checked_at": "ISO 8601 timestamp",
+      "status": "active/archived/underperforming"
+    },
+    
+    "social_media_feed": {
+      "amplification_candidate": "boolean",
+      "signal_strength": "high/medium/low",
+      "suggested_channel": "string (Twitter, YouTube, Instagram, Newsletter)",
+      "suggested_narrative": "string (short hook for marketing)"
+    }
+  },
+
+  "sample_log_entry": {
+    "asset_id": "ebay_listing_20260329_001",
+    "creator_agent": "eBay_Listing_Agent",
+    "asset_type": "listing",
+    "created_at": "2026-03-29T14:32:00Z",
+    "content_preview": "{\"sku\": \"vintage_bears_poster\", \"title\": \"1985 Chicago Bears Championship Poster\", \"price\": 45.00, \"condition\": \"mint\"}",
+    
+    "validation": {
+      "cx_agent_reviewed_at": "2026-03-29T14:35:00Z",
+      "format_check": "pass",
+      "quality_score": 9,
+      "brand_alignment": "pass",
+      "overall_status": "pass",
+      "cx_agent_notes": "Strong imagery, accurate historical detail, aligns with Commonwealth Picker brand"
+    },
+    
+    "routing": {
+      "destination_type": "eBay",
+      "destination_path": "https://api.ebay.com/v1/item/upload",
+      "routed_at": "2026-03-29T14:36:00Z",
+      "routing_status": "success"
+    },
+    
+    "usage_tracking": {
+      "first_usage_at": "2026-03-29T15:00:00Z",
+      "usage_count": 12,
+      "performance_signals": {
+        "views_impressions": 342,
+        "engagement": "click_through_rate_5.2%",
+        "feedback_score": 5,
+        "social_amplification_triggered": true
+      },
+      "last_checked_at": "2026-03-29T18:00:00Z",
+      "status": "active"
+    },
+    
+    "social_media_feed": {
+      "amplification_candidate": true,
+      "signal_strength": "high",
+      "suggested_channel": "Twitter",
+      "suggested_narrative": "Nostalgia drop: 1985 Bears championship poster just listed. Perfect for collectors. Link in bio."
+    }
+  }
+}

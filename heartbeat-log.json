@@ -1,11 +1,8 @@
-{
-  "_schema": "1.0",
-  "entries": [
-    {
-      "date": "2026-03-29T20:02:54.020346",
-      "agent": "context-vector-store",
-      "status": "clean",
-      "notes": "Index complete: 573 chunks from 573 documents"
-    }
-  ]
-}
+[
+  {
+    "date": "2026-03-29T23:01:34.391548",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 12 uncommitted files in _studio"
+  }
+]
