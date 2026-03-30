@@ -63,6 +63,20 @@ Parse RSS XML. Filter items from last 36h.
 
 ---
 
+### Source 6 — Higgsfield Original Series Monitor
+URL: higgsfield.ai/original-series
+Frequency: Weekly (not daily — platform updates slowly)
+Scrape: Active trailers, vote counts, genres represented
+Track: Vote velocity — which trailers gaining momentum
+Flag: New contest announcements, new genre openings,
+      any trailer crossing 1000 votes
+Output: higgsfield-intelligence.json in _studio
+Escalate to inbox if: Contest announced OR
+                      Genre gap identified that
+                      matches CTW active characters
+
+---
+
 ## Scoring Model
 
 For each item, score on 4 dimensions (1–10 each). Be honest — reserve 9–10 for genuinely critical events.
@@ -317,3 +331,26 @@ Do not write inbox items for routine runs with no high-priority findings — no 
 Always call complete_task() from utilities/session_logger.py at session end.
 Always write audit entry via utilities/audit_logger.py.
 Never consider a run complete until heartbeat entry is written.
+
+---
+
+## STANDING WAR ROOM COUNCIL
+
+### Assigned Characters:
+- Claude Shannon (signal/noise, information density, what actually carries signal)
+- Tech journalist twin (newsworthiness, audience relevance, story angle)
+- Andreessen (venture signal, what shifts the market, what to build toward)
+
+### Consultation Triggers:
+- Scoring a borderline item (score 18-22 — edge of WORTH vs LOGGED)
+- New source being evaluated for addition to monitored list
+- Flagging something as HIGH PRIORITY — verify before escalating
+- Uncertain about output quality on a synthesis or summary
+
+### Escalate to Joe only if:
+- Council disagrees on HIGH PRIORITY designation
+- Requires information only Joe has
+- Conflicts with CLAUDE.md standing rules
+
+### Output Format When Council Consulted:
+"Reviewed by Shannon, tech journalist twin, Andreessen. [Brief note on dissent if any]. Confidence: HIGH/MEDIUM/UNCERTAIN"

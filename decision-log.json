@@ -2,5 +2,44 @@
   "_schema": "1.0",
   "_description": "Standing decisions log — append only. Log every architectural or process decision with reason and permanence.",
   "_note": "Never delete entries. Mark superseded decisions with status: superseded and point to successor.",
-  "decisions": []
+  "decisions": [
+    {
+      "id": "decision_war_room_validated",
+      "date": "2026-03-29",
+      "decision": "War room protocol adopted as standard for high-stakes architectural decisions",
+      "reason": "Operation Context Lock validated that war room with domain characters produces better output than standard analysis — surfaced compound token cost problem and Delta fallback architecture not in original spec",
+      "permanence": "permanent",
+      "status": "active",
+      "superseded_by": null
+    },
+    {
+      "id": "decision_echo_architecture",
+      "date": "2026-03-29",
+      "decision": "Echo hybrid architecture selected as target context solution pending Mirofish confirmation",
+      "reason": "Both Gemini war room (44/50) and pre-test analysis independently selected Echo. Implement after Mirofish confirms tonight.",
+      "permanence": "revisable",
+      "status": "active",
+      "review_after": "Mirofish results",
+      "superseded_by": null
+    },
+    {
+      "id": "decision_sequential_ab_test",
+      "date": "2026-03-29",
+      "decision": "A/B Vedic math test runs sequentially not in parallel",
+      "reason": "Sequential gives clean isolated CPU and memory measurements. Parallel contaminates thermal and memory readings.",
+      "permanence": "permanent",
+      "status": "active",
+      "superseded_by": null
+    },
+    {
+      "id": "decision_civitai_reference_only",
+      "date": "2026-03-29",
+      "decision": "CivitAI models referenced not downloaded until GPU upgrade complete",
+      "reason": "HP Pavilion has integrated graphics only. SDXL requires 8GB VRAM minimum. RTX 3060 12GB upgrade required before local SD generation.",
+      "permanence": "temporary",
+      "status": "active",
+      "review_after": "GPU upgrade installed",
+      "superseded_by": null
+    }
+  ]
 }

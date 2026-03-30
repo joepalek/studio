@@ -1,30 +1,27 @@
 {
-  "timestamp": "2026-03-27T03:01:30.495921",
-  "date": "2026-03-27",
+  "timestamp": "2026-03-29T19:30:42.089771",
   "verdict": "DEGRADED",
-  "tools": {
-    "git": "2.53.0 OK",
-    "node": "v24.14.0 OK",
-    "npm": "11.9.0 OK",
-    "python": "3.13.7 OK",
-    "repomix": "1.12.0 OK",
-    "ollama": "0.18.2 UP",
-    "gh": "2.88.1 OK"
+  "passes": {
+    "tools": {
+      "status": "OK",
+      "notes": "All tools present and at or above expected versions. Claude Code 2.1.87 > expected 2.1.78."
+    },
+    "endpoints": {
+      "status": "OK",
+      "notes": "All keys SET. Ollama UP (2 models). Gemini/OpenRouter keys present."
+    },
+    "projects": {
+      "status": "WARN",
+      "notes": "UNCOMMITTED: job-match (2 files), _studio (21 files). All others clean."
+    },
+    "studio_files": {
+      "status": "OK",
+      "notes": "All critical files present."
+    },
+    "mobile_answers": {
+      "status": "OK",
+      "notes": "No pending mobile answers."
+    }
   },
-  "endpoints": {
-    "anthropic_key": "SET",
-    "gemini": "UP",
-    "openrouter": "UP",
-    "ollama": "UP \u2014 2 models"
-  },
-  "projects": {
-    "checked": 13,
-    "issues": [
-      "UNCOMMITTED (1 files): job-match",
-      "UNCOMMITTED (10 files): _studio"
-    ],
-    "clean": 11
-  },
-  "studio_files": "All critical files present",
-  "mobile_answers": "No pending"
+  "issues": 2
 }

@@ -312,3 +312,27 @@ Suggestions go to whiteboard.json — not inbox.
 Always call complete_task() from utilities/session_logger.py at session end.
 Never consider a run complete until heartbeat entry is written.
 ---
+
+## STANDING WAR ROOM COUNCIL
+
+### Assigned Characters:
+- Generalist lawyer twin (implications, liability exposure, edge cases)
+- Grace Hopper (standardization, human-readable output, practical pragmatism)
+- Customer service twin (tone, relationship preservation, escalation judgment)
+
+### Consultation Triggers:
+- Answer has legal or liability implications
+- Multiple valid responses exist with meaningfully different outcomes
+- Answer affects an ongoing customer relationship
+- Uncertain about output quality or appropriateness
+- Output will be seen externally
+
+### Escalate to Joe only if:
+- Council disagrees on irreversible decision
+- Requires information only Joe has
+- Involves spending money or commitments
+- Conflicts with CLAUDE.md standing rules
+
+### Output Format When Council Consulted:
+"Reviewed by lawyer twin, Hopper, CS twin. [Brief note on dissent if any]. Confidence: HIGH/MEDIUM/UNCERTAIN"
+

@@ -1,0 +1,8 @@
+{
+  "_schema": "1.0",
+  "_description": "CivitAI models to download when GPU upgrade complete",
+  "_note": "RTX 3060 12GB minimum for SDXL models. Install target: AUTOMATIC1111 or ComfyUI.",
+  "gpu_required": "RTX 3060 12GB minimum",
+  "install_target": "AUTOMATIC1111 or ComfyUI",
+  "models": []
+}

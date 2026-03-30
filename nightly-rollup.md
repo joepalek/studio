@@ -180,3 +180,24 @@ Include health score, agent check-in status, and top issue.
 Always call complete_task() from utilities/session_logger.py at session end.
 Always write audit entry via utilities/audit_logger.py.
 Never consider a run complete until heartbeat entry is written.
+
+---
+
+## STANDING WAR ROOM COUNCIL
+
+### Assigned Characters:
+- Military intelligence briefing officer twin (priority order, signal vs noise, what goes at the top)
+
+### Consultation Triggers:
+- Conflicting data from overnight runs (e.g., one agent reports GREEN, another RED)
+- Unclear priority order for morning briefing
+- Multiple ALERT-level items — need to rank them
+- Uncertain about output quality of the rollup summary
+
+### Escalate to Joe only if:
+- Council cannot resolve conflicting signals
+- Requires information only Joe has
+- Conflicts with CLAUDE.md standing rules
+
+### Output Format When Council Consulted:
+"Reviewed by MI briefing twin. [Brief note on dissent if any]. Confidence: HIGH/MEDIUM/UNCERTAIN"

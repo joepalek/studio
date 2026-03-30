@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-27T02:01:34.147359",
+  "updated": "2026-03-29T19:35:00",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -686,7 +686,7 @@
     {
       "id": "nost-0025",
       "type": "product_archaeology",
-      "title": "Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
+      "title": "Remember when you didnâ€™t have to enter your personal info online to win a soda?",
       "description": "",
       "signal": "remember when",
       "source": "reddit_r_nostalgia",
@@ -865,7 +865,7 @@
     },
     {
       "id": "ebay-identifier-app",
-      "title": "eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
+      "title": "eBay Item Identifier â€” Consensus Engine",
       "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
@@ -1103,7 +1103,7 @@
       ],
       "social_media_angle": "Public brainstorm for novel use cases on launch",
       "added": "2026-03-26",
-      "source": "Joe session \u2014 expanded from Historical Twins concept",
+      "source": "Joe session — expanded from Historical Twins concept",
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 9,
@@ -1117,6 +1117,96 @@
         "top_risk": "Achieving sufficient AI reliability and institutional trust for high-stakes decision validation, coupled with acquiring sensitive proprietary institutional data."
       },
       "scored_at": "2026-03-27T02:01:30.146974"
+    },
+    {
+      "id": "war-room-protocol",
+      "title": "War Room Decision Protocol",
+      "description": "Standard protocol for high-stakes decisions. Mirofish runs automated scoring. War room convenes domain-appropriate character council on top scorers. Characters selected to create genuine expertise tension. Output: scored data + adversarial reasoning + minority report + implementation orders. Proven effective on Operation Context Lock 2026-03-29.",
+      "status": "ACTIVE",
+      "priority": "HIGH",
+      "type": "protocol",
+      "proven": true,
+      "standard_boards": {
+        "architecture": "Hamilton, Shannon, Kay, Hopper",
+        "security": "Snowden-adjacent, Machiavelli, Diffie, Mitnick",
+        "business_strategy": "Hamilton, Carnegie, Jefferson",
+        "emergency_logistics": "Waffle House twin, military logistics",
+        "legal_regulatory": "Historical justices, domain regulators"
+      },
+      "added": "2026-03-29"
+    },
+    {
+      "id": "vedic-math-layer",
+      "title": "Vedic Math Computational Layer",
+      "description": "Software abstraction layer routing matrix operations, large integer multiplication, and vector similarity scoring to Vedic-optimized C extensions. Environment-aware portability wrapper with self-logging efficiency comparison. Real speedups on specific math-heavy operations. NOT a general token reducer. Genuine value in matrix ops and vector search.",
+      "status": "WHITEBOARD",
+      "priority": "MEDIUM",
+      "type": "infrastructure+patent",
+      "patent_angle": "Vedic kernel routing + environment-aware portability wrapper combination in agentic systems",
+      "build_when": "After Mirofish results and sidebar complete",
+      "added": "2026-03-29"
+    },
+    {
+      "id": "vedic-ai-inference-os",
+      "title": "Vedic AI Inference Operating System",
+      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency — every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
+      "status": "WHITEBOARD",
+      "priority": "HIGH",
+      "type": "infrastructure+patent+product",
+      "tiers": {
+        "tier1": "Custom CUDA Vedic kernels for Ollama — 2-4 weeks",
+        "tier2": "Stripped Linux AI inference OS — 3-6 months",
+        "tier3": "Full Vedic AI OS with HAL integration — 1-2 years"
+      },
+      "patent_angle": "Novel OS architecture combining Vedic arithmetic at kernel HAL level with AI-native design and environment-aware portability",
+      "added": "2026-03-29"
+    },
+    {
+      "id": "vedic-upgrade-service",
+      "title": "Vedic AI Upgrade as a Service",
+      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison — original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
+      "status": "WHITEBOARD",
+      "priority": "HIGH",
+      "type": "service+patent+revenue",
+      "pricing": {
+        "audit": 500,
+        "trial_30day": 1500,
+        "full_install": 3500,
+        "monthly_monitoring": 299
+      },
+      "startup_cost": "Under $500 including provisional patent",
+      "timeline": "First client within 4 weeks of Tuesday build",
+      "added": "2026-03-29"
+    },
+    {
+      "id": "creative-review-agent",
+      "title": "Creative Review Agent",
+      "description": "Routes creative output to domain-appropriate reviewer panels based on content type and subgenre. Full taxonomy built covering Comedy (10 subgenres), Drama, Horror, Sci-Fi, Fantasy, Romance, Thriller, Historical, Children/YA, Non-Fiction, Marketing, Screenplay, Music, Game, Educational. Weighted panels for blended content. Dissent protocol flags reviewer disagreements as data. Quality gate: PUBLISH/REVISE/REWORK/REJECT. Reference: creative-review-taxonomy.md",
+      "status": "WHITEBOARD",
+      "priority": "HIGH",
+      "type": "agent+quality-control",
+      "build_after": "Historical Twins pipeline produces first validated character assets",
+      "added": "2026-03-29"
+    },
+    {
+      "id": "ghost-book-script-vault",
+      "title": "Ghost Book Script Vault + Salvage Protocol",
+      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage — scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
+      "status": "ACTIVE",
+      "priority": "HIGH",
+      "type": "content-management",
+      "added": "2026-03-29"
+    },
+    {
+      "id": "higgsfield-backwards-design",
+      "title": "Higgsfield Original Series — Backwards Design",
+      "description": "Monitor platform weekly for genre gaps and vote velocity. Build CTW characters specifically for underserved genres. Design story structure for 2-10 minute episode format from day one. Soul ID consistency built into character spec. Enter contests in low-competition genres. Sponsored production if contest win.",
+      "status": "WHITEBOARD",
+      "priority": "MEDIUM",
+      "type": "distribution+content-strategy",
+      "intelligence_source": "higgsfield-intelligence.json",
+      "contest_strategy": "Enter underserved genres where competition is lower",
+      "added": "2026-03-29"
     }
   ]
 }

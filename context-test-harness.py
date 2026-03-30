@@ -22,8 +22,8 @@ RESULTS_PATH = os.path.join(STUDIO, "context-test-results.json")
 CONFIG_PATH  = os.path.join(STUDIO, "studio-config.json")
 LOG_PATH     = os.path.join(STUDIO, "scheduler/logs/mirofish-test.log")
 
-GEMINI_LITE_MODEL  = "gemini-2.0-flash-lite"
-GEMINI_FLASH_MODEL = "gemini-2.0-flash"
+GEMINI_LITE_MODEL  = "gemini-2.5-flash-lite"
+GEMINI_FLASH_MODEL = "gemini-2.5-flash"
 OLLAMA_URL         = "http://localhost:11434"
 OLLAMA_MODEL       = "gemma3:4b"
 

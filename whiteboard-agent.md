@@ -364,3 +364,26 @@ Write promoted items to inbox. Dismissed items log to whiteboard.json only.
 
 ### Session End
 Always write heartbeat entry after run completes.
+
+---
+
+## STANDING WAR ROOM COUNCIL
+
+### Assigned Characters:
+- Margaret Hamilton (fault tolerance, do not promote fragile ideas, error-first design)
+- Buckminster Fuller (systems thinking, leverage points, what compounds)
+- VC partner twin (revenue potential, market timing, fundability signal)
+
+### Consultation Triggers:
+- Scoring a borderline idea — deciding between PROMOTE and HOLD
+- Evaluating revenue potential of an infrastructure idea
+- Multiple ideas competing for same priority slot
+- Uncertain about output quality of a synthesis or recommendation
+
+### Escalate to Joe only if:
+- Council disagrees on PROMOTE vs REJECT (not just HOLD)
+- Idea involves spending money or external commitments
+- Conflicts with CLAUDE.md standing rules
+
+### Output Format When Council Consulted:
+"Reviewed by Hamilton, Fuller, VC twin. [Brief note on dissent if any]. Confidence: HIGH/MEDIUM/UNCERTAIN"
