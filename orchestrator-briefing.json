@@ -1,7 +1,6 @@
 {
-  "generated": "2026-03-26T08:02:09.196367",
-  "briefing": "## DAILY BRIEFING\n\n**1. TOP 3 things Joe should personally work on today:**\n*   **Job-match:** Address 5 pending decisions to secure direct income replacement (Priority 1).\n*   **Listing-optimizer:** Address 2 pending decisions to maintain daily eBay revenue (Priority 2).\n*   **CTW:** Generate real portrait images for characters and address trait detector calibration/comfort bar issues to unblock development (Priority 4).\n\n**2. TOP 3 tasks agents can run autonomously right now:**\n*   There are no autonomous agent tasks runnable at this time.\n\n**3. Critical blockers that need immediate attention:**\n*   **Sentinel Core/Performer/Viewer (P3):** Blocked on LLC formation, preventing initiation of the highest long-term revenue projects.\n\n**4. What to defer today:**\n*   Defer all other projects with pending decisions (acuscan-ar, arbitrage-pulse, hibid-analyzer, nutrimind, squeeze-empire, whatnot-apps) to focus on the highest revenue impact work.",
-  "model": "gemini-2.5-flash",
+  "generated": "2026-03-27T08:02:30.240717",
+  "briefing": "**DAILY BRIEFING**\n\n**1. TOP 3 Joe's Priorities Today:**\n1.  **Job Match:** Resolve the 5 pending decisions for this top-priority income replacement project.\n2.  **Listing Optimizer:** Resolve the 2 pending decisions to directly impact daily eBay revenue.\n3.  **CTW (Character Trading Workbench):** Generate real portrait images to unblock active development.\n\n**2. TOP 3 Agent Tasks:**\nNo autonomous agent tasks are runnable today.\n\n**3. Critical Blockers:**\nLLC formation is critically blocking development of high-priority Sentinel Core/Performer/Viewer.\n\n**4. Deferral:**\nDefer all other project decisions to prioritize high-impact revenue projects.",
   "plan": {
     "agent_runnable": [],
     "human_required": [
@@ -70,107 +69,5 @@
         "next": ""
       }
     ]
-  },
-  "states": {
-    "acuscan-ar": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 1,
-      "lastUpdated": "unknown"
-    },
-    "arbitrage-pulse": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 2,
-      "lastUpdated": "unknown"
-    },
-    "CTW": {
-      "status": "active",
-      "progress": 40,
-      "nextAction": "Generate portrait images for all 4 characters using Perchance with provided prompts, add paths to character JSONs, then begin Phase 3 day structure build",
-      "blockers": [
-        "Real portrait images not yet generated \u00e2\u20ac\u201d using SVG placeholders",
-        "Trait activation detector needs calibration against more test runs",
-        "comfort bar still overcorrects downward under pressure"
-      ],
-      "decisions": 0,
-      "lastUpdated": "2026-03-25"
-    },
-    "hibid-analyzer": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 1,
-      "lastUpdated": "unknown"
-    },
-    "job-match": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 5,
-      "lastUpdated": "unknown"
-    },
-    "listing-optimizer": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 2,
-      "lastUpdated": "unknown"
-    },
-    "nutrimind": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 1,
-      "lastUpdated": "unknown"
-    },
-    "sentinel-core": {
-      "status": "active",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 0,
-      "lastUpdated": "unknown"
-    },
-    "sentinel-performer": {
-      "status": "active",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 0,
-      "lastUpdated": "unknown"
-    },
-    "sentinel-viewer": {
-      "status": "active",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 0,
-      "lastUpdated": "unknown"
-    },
-    "squeeze-empire": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 1,
-      "lastUpdated": "unknown"
-    },
-    "whatnot-apps": {
-      "status": "unknown",
-      "progress": 0,
-      "nextAction": "",
-      "blockers": [],
-      "decisions": 1,
-      "lastUpdated": "unknown"
-    }
   }
 }

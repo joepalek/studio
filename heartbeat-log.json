@@ -1,206 +1,62 @@
 [
   {
-    "date": "2026-03-26T04:31",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 10 uncommitted _studio files, 5 mobile answers pending, supervisor-inbox parse error"
+    "date": "2026-03-28T03:30:10.014886",
+    "agent": "auto-answer-gemini",
+    "status": "clean",
+    "notes": "[auto-answer] auto-resolved 0, escalated 42 of 42 pending"
   },
   {
-    "date": "2026-03-26T05:01:27.437527",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 10 uncommitted _studio files, 5 mobile answers pending, agent heartbeats mostly silent"
+    "date": "2026-03-29T03:30:09.576526",
+    "agent": "auto-answer-gemini",
+    "status": "clean",
+    "notes": "[auto-answer] auto-resolved 0, escalated 42 of 42 pending"
   },
   {
-    "date": "2026-03-26T05:31:25.234107",
+    "date": "2026-03-29T16:01:51.591089",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "WARNING: 10 uncommitted _studio files, 5 mobile answers pending"
+    "notes": "WARNING: 2 uncommitted repos (job-match, _studio); studio-config.json JSON syntax fixed"
   },
   {
-    "date": "2026-03-26T06:01:26.515150",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 11 uncommitted _studio files, 5 mobile answers pending, agent heartbeats mostly silent"
-  },
-  {
-    "date": "2026-03-26",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 11 uncommitted _studio files; 5 mobile answers pending; auto-answer hit quota at 3:30am"
-  },
-  {
-    "date": "2026-03-26",
+    "date": "2026-03-29T16:02:11.663855",
     "agent": "supervisor",
     "status": "flagged",
-    "notes": "Health check complete: DEGRADED \u2014 2 warnings. Overnight tasks: job-delta OK (162 URLs), whiteboard-score OK (32 items), auto-answer QUOTA-HIT"
+    "notes": "SRE WARNING: 2 uncommitted repos; auto-answer HTTP 404 errors on all Supabase calls; nightly commit failing since 03-19"
   },
   {
-    "date": "2026-03-26",
+    "date": "2026-03-29",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "DEGRADED: 12 uncommitted _studio files; 5 mobile answers pending in Supabase"
+    "notes": "DEGRADED: 2 uncommitted projects (job-match, _studio). Quota exhausted nightly runs Mar 26-28, resets Mar 31."
   },
   {
-    "date": "2026-03-26",
+    "date": "2026-03-29T17:01:41.411857",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "DEGRADED: 12 uncommitted _studio files; 5 mobile answers pending in Supabase"
+    "notes": "DEGRADED: uncommitted changes in _studio+job-match; quota blocked nightly commits"
   },
   {
-    "date": "2026-03-26T08:01:12.863391",
+    "date": "2026-03-29T17:31:38.288933",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "WARNING: 13 uncommitted _studio files; 5 mobile answers pending; auto-answer hit quota at 3:30am"
+    "notes": "DEGRADED: 2 uncommitted repos (job-match, _studio); Claude quota exhausted until Mar 31"
   },
   {
-    "date": "2026-03-26",
+    "date": "2026-03-29T18:01:25.895323",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "WARNING: 13 uncommitted files in _studio; 5 mobile answer sessions pending"
+    "notes": "DEGRADED: 2 uncommitted repos (job-match, _studio); quota exhausted until Mar 31 5pm CT"
   },
   {
-    "date": "2026-03-26",
-    "agent": "orchestrator",
-    "status": "clean",
-    "notes": "Daily briefing generated via gemini-2.5-flash. 8 human-required tasks, 1 blocked (Sentinel/LLC)."
-  },
-  {
-    "date": "2026-03-26",
+    "date": "2026-03-29T18:31:35.142188",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "WARNING: _studio 16 uncommitted files, 5 mobile answers pending"
+    "notes": "WARNING: 2 uncommitted repos; quota exhausted until Mar 31; 42 auto-answer escalations pending"
   },
   {
-    "date": "2026-03-26T09:01:27.899416",
+    "date": "2026-03-29T19:01:31.309741",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "WARNING: 16 uncommitted _studio files; 5 mobile answers pending in Supabase"
-  },
-  {
-    "date": "2026-03-26T09:31:38.039503",
-    "agent": "supervisor",
-    "status": "clean",
-    "notes": "Session start health check: DEGRADED \u2014 16 uncommitted _studio files, 5 mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T10:01:40.288017",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED \u2014 16 uncommitted _studio files; 5 mobile answers pending. All tools/endpoints UP."
-  },
-  {
-    "date": "2026-03-26T10:31:25.130495",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 16 uncommitted _studio files; 5 mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T11:02:10.126827",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: OpenRouter DOWN, 16 uncommitted _studio files, 5 mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T14:01:35.688952",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: youtube_api_key MISSING, _studio uncommitted (2), 5 mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T14:31:34.072082",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 5 uncommitted _studio files; all endpoints UP"
-  },
-  {
-    "date": "2026-03-26T15:01:29.608402",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: _studio has 9 uncommitted files; all endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T19:01:22.036006",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 1 warning \u2014 _studio has 2 uncommitted files"
-  },
-  {
-    "date": "2026-03-26T19:31:44.488984",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WATCH: _studio has 2 uncommitted files; all tools/endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T20:01:37.670995",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: _studio has uncommitted files; all tools/endpoints UP; 3 inbox items pending (studio.html step held, NIT partial)"
-  },
-  {
-    "date": "2026-03-26T20:41:20.282978",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: _studio has uncommitted files; all tools/endpoints UP"
-  },
-  {
-    "date": "2026-03-26T21:01:24.884205",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: _studio has 5 uncommitted files; all tools/endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-26T21:31:22.290349",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 1 warning \u2014 uncommitted files in _studio"
-  },
-  {
-    "date": "2026-03-27T00:01:41.498436",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 1 warning \u2014 uncommitted files in _studio"
-  },
-  {
-    "date": "2026-03-27T00:31:46.193917",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: _studio has 6 uncommitted files; all tools/endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-27T01:01:39.310718",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 6 uncommitted _studio files; all endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-27T01:31:00.456996",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: 6 uncommitted _studio files; all endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-27T02:01:32.115422",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "WARNING: _studio has 7 uncommitted files (nightly commit failed\u2014quota); all tools/endpoints UP; no mobile answers pending"
-  },
-  {
-    "date": "2026-03-27T02:31:33.689300",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "1 issue: _studio has 9 uncommitted files (runtime logs/reports)"
-  },
-  {
-    "date": "2026-03-27T02:31:33.689321",
-    "agent": "supervisor",
-    "status": "clean",
-    "notes": "cycle complete \u2014 0 tasks dispatched, 0 queued, ollama UP"
-  },
-  {
-    "date": "2026-03-27",
-    "agent": "sre-scout",
-    "status": "flagged",
-    "notes": "DEGRADED: 2 uncommitted projects (job-match, _studio)"
+    "notes": "DEGRADED: 2 uncommitted repos (job-match, _studio); Claude quota exhausted until Mar 31 5pm CT; 4 overnight tasks completed successfully"
   }
 ]

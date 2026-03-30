@@ -33,7 +33,7 @@ def save_json(path, data):
 
 
 def gemini_call(key, prompt):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
     payload = json.dumps({"contents": [{"parts": [{"text": prompt}]}]}).encode()
     req = urllib.request.Request(url, data=payload,
                                   headers={"Content-Type": "application/json"})

@@ -138,3 +138,72 @@ STRESS VERDICT: WARNING
 ---
 
 `orchestrator-briefing.json` saved. Note: orchestrator.md references `gemini-1.5-flash` which is deprecated — used `gemini-2.5-flash` instead. Worth updating the md file.
+[Fri 03/27/2026  8:00:01.52] Daily briefing starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-27
+
+**TOOLS**
+- ✓ Git 2.53.0
+- ✓ Node v24.14.0 / npm 11.9.0
+- ✓ Python 3.13.7
+- ✓ Claude Code 2.1.85 (above expected 2.1.78)
+- ✓ Repomix 1.12.0
+- ✓ Ollama 0.18.2 (UP — 2 models)
+
+**GATEWAY ENDPOINTS**
+- ✓ Anthropic key: SET
+- ✓ Gemini: UP
+- ✓ OpenRouter: UP
+- ✓ Ollama: UP
+
+**PROJECTS (13 checked)**
+- `~` UNCOMMITTED (2 files): job-match
+- `~` UNCOMMITTED (10 files): _studio
+- ✓ 11 projects clean
+
+**STUDIO FILES** — All critical files present
+
+**MOBILE ANSWERS** — No pending answers
+
+**VERDICT: DEGRADED (2 issues)**
+**ACTION:** Commit dirty repos (job-match, _studio)
+
+---
+
+## STRESS REPORT
+
+```
+WARNING (2):
+  [~] UNCOMMITTED (2 files): job-match
+  [~] UNCOMMITTED (10 files): _studio
+
+WATCH (1):
+  [-] gemini-1.5-flash deprecated — orchestrator.md uses old model name
+      (auto-resolved to gemini-2.5-flash this run)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## ORCHESTRATOR DAILY BRIEFING — 2026-03-27
+
+**TOP 3 FOR JOE TODAY:**
+1. **job-match** — Resolve 5 pending decisions (top income replacement, Blackdot ends May 2026)
+2. **listing-optimizer** — Resolve 2 pending decisions (direct daily eBay revenue impact)
+3. **CTW** — Generate portrait images for 4 characters to unblock active development at 40%
+
+**AGENT QUEUE:** No autonomous tasks runnable today (all projects have pending human decisions)
+
+**CRITICAL BLOCKER:** LLC formation blocking Sentinel Core/Performer/Viewer — highest long-term revenue potential
+
+**DEFER TODAY:** All other project decisions — focus only on job-match, listing-optimizer, CTW
+
+---
+
+Briefing saved to `orchestrator-briefing.json`. One WATCH item to note: **orchestrator.md references `gemini-1.5-flash`** which is now deprecated — auto-resolved to `gemini-2.5-flash` this run, but worth updating the .md file.
+[Sat 03/28/2026  8:00:01.66] Daily briefing starting 
+You've hit your limit · resets Mar 31, 5pm (America/Chicago)
+[Sun 03/29/2026  8:00:01.55] Daily briefing starting 
+You've hit your limit · resets Mar 31, 5pm (America/Chicago)

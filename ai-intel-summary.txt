@@ -1,3 +1,19 @@
-AI INTEL — not yet run
-Agent scheduled for 05:00 AM daily. First run will populate this file.
-YouTube Data API key required — create at: console.cloud.google.com
+AI INTEL - 2026-03-29
+Generated: 2026-03-29T22:01:57Z
+Sources: 8/8 OK | 0 HIGH / 36 WORTH / 107 LOGGED
+
+HIGH PRIORITY: None today.
+
+WORTH READING (36):
+  * Nicolas Carlini (67.2k citations on Google Scholar) says Claude is a better security resea | score:24 | https://reddit.com/r/artificial/comments/1s738xf/nicolas_carlini_672k_citations_on_google_scholar/
+  * We hit 150 stars on our AI setup tool! | score:24 | https://reddit.com/r/artificial/comments/1s6ycc1/we_hit_150_stars_on_our_ai_setup_tool/
+  * The CEO Who Builds AI Warfare Systems Just Confirmed What I Released For Free | score:23 | https://reddit.com/r/artificial/comments/1s6y7du/the_ceo_who_builds_ai_warfare_systems_just/
+  * built an open source tool that auto generates AI context files for any codebase, 150 stars | score:24 | https://reddit.com/r/artificial/comments/1s6pcue/built_an_open_source_tool_that_auto_generates_ai/
+  * built an open source CLI that auto generates AI setup files for your projects just hit 150 | score:24 | https://reddit.com/r/artificial/comments/1s6p556/built_an_open_source_cli_that_auto_generates_ai/
+  * [P] I built an autonomous ML agent that runs experiments on tabular data indefinitely - in | score:22 | https://reddit.com/r/MachineLearning/comments/1s73gma/p_i_built_an_autonomous_ml_agent_that_runs/
+  * [R] First open-source implementation of Hebbian fast-weight write-back for the BDH archite | score:24 | https://reddit.com/r/MachineLearning/comments/1s6nxd4/r_first_opensource_implementation_of_hebbian/
+  * [R] I built a benchmark that catches LLMs breaking physics laws | score:21 | https://reddit.com/r/MachineLearning/comments/1s6keh0/r_i_built_a_benchmark_that_catches_llms_breaking/
+  * New User - Quick Question about building a site | score:24 | https://reddit.com/r/ClaudeAI/comments/1s77d8a/new_user_quick_question_about_building_a_site/
+  * is claude api had a free plan ? | score:24 | https://reddit.com/r/ClaudeAI/comments/1s76g4c/is_claude_api_had_a_free_plan/
+
+DEPENDENCY FLAGS: none

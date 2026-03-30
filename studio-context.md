@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-27 03:00 | Auto-built by generate-context.py
-Next regeneration: 2026-03-27 11:00 (approximate — runs at every session start)
+Generated: 2026-03-29 19:30 | Auto-built by generate-context.py
+Next regeneration: 2026-03-30 03:30 (approximate — runs at every session start)
 Handoff: System tightness last reviewed: 2026-03-25 — PARTIAL (NIT 8/10, T06 fixed, T05 dismissed)
 
 ## WHO IS JOE
@@ -1441,28 +1441,46 @@ If it does:
   strategy_notes: []
 
 ### sentinel-core
-  _note: SRE stub â€” active state in SENT-CORE-state-v1.json
-  _project: sentinel-core
-  status: active
-  last_updated: 2026-03-20
-  last_touched: 2026-03-20
-  drift_risk: LOW
+  ProjectName: Sentinel Core
+  SystemStatus: INITIALIZING
+  LastSync: 2026-03-27T23:15:00Z
+  ActiveAgents: 
+    - performer
+    - viewer
+  GlobalFlags: 
+    MaintenanceMode: False
+    DebugLevel: INFO
+    UniversalLogEnabled: True
+  CurrentOrchestratorBriefing: Establishing baseline state for agent synchronization.
 
 ### sentinel-performer
-  _note: SRE stub â€” active state in SENT-PERF-state-v1.json
-  _project: sentinel-performer
-  status: active
-  last_updated: 2026-03-20
-  last_touched: 2026-03-20
-  drift_risk: LOW
+  ProjectName: Sentinel Performer
+  AgentRole: EXECUTION
+  Status: IDLE
+  LastCommandExecuted: None
+  ToolCapabilities: 
+    - FileIO
+    - PythonInterpreter
+    - SearchLive
+  ExecutionQueue: []
+  PendingCommits: 0
+  ResourceUsage: 
+    Latency: 0ms
+    Model: Claude-4.6-Sonnet
 
 ### sentinel-viewer
-  _note: SRE stub â€” active state in SENT-VIEW-state-v1.json
-  _project: sentinel-viewer
-  status: active
-  last_updated: 2026-03-20
-  last_touched: 2026-03-20
-  drift_risk: LOW
+  ProjectName: Sentinel Viewer
+  AgentRole: MONITORING
+  Status: READY
+  ActiveViews: 
+    - SystemHealth
+    - LogStream
+  Alerts: []
+  VisualizationConfig: 
+    RefreshRate: 5s
+    Theme: Dark
+    TailLogs: 50
+  LastLogIngested: None
 
 ### squeeze-empire
   _schema_version: 1.0
@@ -1823,7 +1841,7 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-03-27T02:01:34.147359
+Last updated: 2026-03-29T04:00:02.172535
 Total items: 38
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
@@ -2596,4 +2614,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-27 03:00
+End of context. Generated: 2026-03-29 19:30

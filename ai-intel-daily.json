@@ -1,6 +1,2450 @@
 {
   "_schema": "1.0",
-  "_description": "Daily AI intelligence feed — 14 day rolling window",
+  "_description": "Daily AI intelligence feed \u2014 14 day rolling window",
   "_note": "Written by ai-intel-agent at 05:00 AM daily.",
-  "runs": []
+  "runs": [
+    {
+      "date": "2026-03-29",
+      "generated_at": "2026-03-29T22:01:57Z",
+      "sources_attempted": 8,
+      "sources_succeeded": 8,
+      "items_found": 143,
+      "high_priority": [],
+      "worth_reading": [
+        {
+          "title": "Nicolas Carlini (67.2k citations on Google Scholar) says Claude is a better security researcher than him, made $3.7 million from exploiting smart contracts, and found vulnerabilities in Linux and Ghost",
+          "url": "https://reddit.com/r/artificial/comments/1s738xf/nicolas_carlini_672k_citations_on_google_scholar/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T18:42:39Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Nicolas Carlini (67.2k citations on Google Scholar) says Claude is a better secu via reddit/r/artificial"
+        },
+        {
+          "title": "We hit 150 stars on our AI setup tool!",
+          "url": "https://reddit.com/r/artificial/comments/1s6ycc1/we_hit_150_stars_on_our_ai_setup_tool/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T15:37:46Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "We hit 150 stars on our AI setup tool! via reddit/r/artificial"
+        },
+        {
+          "title": "The CEO Who Builds AI Warfare Systems Just Confirmed What I Released For Free",
+          "url": "https://reddit.com/r/artificial/comments/1s6y7du/the_ceo_who_builds_ai_warfare_systems_just/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T15:32:20Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 8,
+            "relevance": 5,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The CEO Who Builds AI Warfare Systems Just Confirmed What I Released For Free via reddit/r/artificial"
+        },
+        {
+          "title": "built an open source tool that auto generates AI context files for any codebase, 150 stars in",
+          "url": "https://reddit.com/r/artificial/comments/1s6pcue/built_an_open_source_tool_that_auto_generates_ai/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T08:09:59Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "built an open source tool that auto generates AI context files for any codebase, via reddit/r/artificial"
+        },
+        {
+          "title": "built an open source CLI that auto generates AI setup files for your projects just hit 150 stars",
+          "url": "https://reddit.com/r/artificial/comments/1s6p556/built_an_open_source_cli_that_auto_generates_ai/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T07:56:55Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "built an open source CLI that auto generates AI setup files for your projects ju via reddit/r/artificial"
+        },
+        {
+          "title": "[P] I built an autonomous ML agent that runs experiments on tabular data indefinitely - inspired by Karpathy's AutoResearch",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s73gma/p_i_built_an_autonomous_ml_agent_that_runs/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T18:50:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 6,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[P] I built an autonomous ML agent that runs experiments on tabular data indefin via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[R] First open-source implementation of Hebbian fast-weight write-back for the BDH architecture",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s6nxd4/r_first_opensource_implementation_of_hebbian/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T06:41:48Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[R] First open-source implementation of Hebbian fast-weight write-back for the B via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[R] I built a benchmark that catches LLMs breaking physics laws",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s6keh0/r_i_built_a_benchmark_that_catches_llms_breaking/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T03:25:01Z",
+          "scores": {
+            "stability": 8,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[R] I built a benchmark that catches LLMs breaking physics laws via reddit/r/MachineLearning"
+        },
+        {
+          "title": "New User - Quick Question about building a site",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s77d8a/new_user_quick_question_about_building_a_site/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T21:20:54Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "New User - Quick Question about building a site via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "is claude api had a free plan ?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76g4c/is_claude_api_had_a_free_plan/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:45:00Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "is claude api had a free plan ? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "29y old with kid.. I am bit, lost 3 months of 0 income, job hunt silence, but I just made my first $4.99. Should I keep going?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s75emk/29y_old_with_kid_i_am_bit_lost_3_months_of_0/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:04:17Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "29y old with kid.. I am bit, lost 3 months of 0 income, job hunt silence, but I  via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I built this last week, woke up to a developer with 28k followers tweeting about it, now PRs are coming in from contributors I've never met. Sharing here since this community is exactly who it's built for.",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s75301/i_built_this_last_week_woke_up_to_a_developer/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:52:10Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built this last week, woke up to a developer with 28k followers tweeting about via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I built a CLI that diagnoses your Claude Code project structure \u2014 open source",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s752qb/i_built_a_cli_that_diagnoses_your_claude_code/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:51:53Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built a CLI that diagnoses your Claude Code project structure \u2014 open source via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "What I learned letting Claude Code run ML experiments overnight - the agent is the easy part",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s74ki0/what_i_learned_letting_claude_code_run_ml/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:32:55Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 6,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What I learned letting Claude Code run ML experiments overnight - the agent is t via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "How to Prompt Claude to Be a Senior Software Developer for Me?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s744yt/how_to_prompt_claude_to_be_a_senior_software/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:16:27Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How to Prompt Claude to Be a Senior Software Developer for Me? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "For large projects in Claude Code: one long conversation with /compact, or multiple shorter ones?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s73zm1/for_large_projects_in_claude_code_one_long/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:10:49Z",
+          "scores": {
+            "stability": 4,
+            "value": 5,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "For large projects in Claude Code: one long conversation with /compact, or multi via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "AI Doomsday Toolbox v0.932 update",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s776li/ai_doomsday_toolbox_v0932_update/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T21:13:47Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 6,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI Doomsday Toolbox v0.932 update via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "I have some Gemma 4's Files for you - Your Significant Otter",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s76l60/i_have_some_gemma_4s_files_for_you_your/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T20:50:21Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I have some Gemma 4's Files for you - Your Significant Otter via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Thoughts on the almost near release Avocado?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s765wo/thoughts_on_the_almost_near_release_avocado/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T20:33:46Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Thoughts on the almost near release Avocado? via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "I trained a language model from scratch for a low-resource language and got it running fully on-device on Android (no GPU, demo)",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s74rc7/i_trained_a_language_model_from_scratch_for_a/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T19:40:00Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 6,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I trained a language model from scratch for a low-resource language and got it r via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Ootils \u2013 An open source supply chain engine designed for AI agents (not humans)",
+          "url": "https://github.com/ngoineau/ootils-core",
+          "source": "hackernews",
+          "published": "2026-03-29T21:12:01Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ootils \u2013 An open source supply chain engine designed for AI agents (not humans) via hackernews"
+        },
+        {
+          "title": "TeamPCP Supply Chain Campaign: Update 002",
+          "url": "https://isc.sans.edu/diary/32838",
+          "source": "hackernews",
+          "published": "2026-03-29T20:55:51Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 6,
+            "relevance": 5,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "TeamPCP Supply Chain Campaign: Update 002 via hackernews"
+        },
+        {
+          "title": "Inside our approach to the Model Spec",
+          "url": "https://openai.com/index/our-approach-to-the-model-spec",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Inside our approach to the Model Spec via openai-blog"
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing the OpenAI Safety Bug Bounty program via openai-blog"
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Helping developers build safer AI experiences for teens via openai-blog"
+        },
+        {
+          "title": "Powering product discovery in ChatGPT",
+          "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Powering product discovery in ChatGPT via openai-blog"
+        },
+        {
+          "title": "Update on the OpenAI Foundation",
+          "url": "https://openai.com/index/update-on-the-openai-foundation",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Update on the OpenAI Foundation via openai-blog"
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first via openai-blog"
+        },
+        {
+          "title": "Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 6,
+            "relevance": 9,
+            "total": 27
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing GPT-5.4 mini and nano via openai-blog"
+        },
+        {
+          "title": "Rakuten fixes issues twice as fast with Codex",
+          "url": "https://openai.com/index/rakuten",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Rakuten fixes issues twice as fast with Codex via openai-blog"
+        },
+        {
+          "title": "Designing AI agents to resist prompt injection",
+          "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 5,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Designing AI agents to resist prompt injection via openai-blog"
+        },
+        {
+          "title": "New ways to learn math and science in ChatGPT",
+          "url": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "New ways to learn math and science in ChatGPT via openai-blog"
+        },
+        {
+          "title": "How Balyasny Asset Management built an AI research engine for investing",
+          "url": "https://openai.com/index/balyasny-asset-management",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How Balyasny Asset Management built an AI research engine for investing via openai-blog"
+        },
+        {
+          "title": "Reasoning models struggle to control their chains of thought, and that\u2019s good",
+          "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Reasoning models struggle to control their chains of thought, and that\u2019s good via openai-blog"
+        },
+        {
+          "title": "Ensuring AI use in education leads to opportunity",
+          "url": "https://openai.com/index/ai-education-opportunity",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ensuring AI use in education leads to opportunity via openai-blog"
+        },
+        {
+          "title": "Introducing ChatGPT for Excel and new financial data integrations",
+          "url": "https://openai.com/index/chatgpt-for-excel",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing ChatGPT for Excel and new financial data integrations via openai-blog"
+        }
+      ],
+      "logged_only": [
+        {
+          "title": "What actually prevents execution in agent systems?",
+          "url": "https://reddit.com/r/artificial/comments/1s76o5b/what_actually_prevents_execution_in_agent_systems/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T20:53:38Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What actually prevents execution in agent systems? via reddit/r/artificial"
+        },
+        {
+          "title": "Is ai getting dummer?",
+          "url": "https://reddit.com/r/artificial/comments/1s71g1k/is_ai_getting_dummer/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T17:35:46Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Is ai getting dummer? via reddit/r/artificial"
+        },
+        {
+          "title": "Does your manager use AI to write their messages \u2013 and would you even know?",
+          "url": "https://reddit.com/r/artificial/comments/1s70rqr/does_your_manager_use_ai_to_write_their_messages/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T17:10:07Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Does your manager use AI to write their messages \u2013 and would you even know? via reddit/r/artificial"
+        },
+        {
+          "title": "I\u2019ve come up with a new thought experiment to approach ASI, and it challenges the very notions of alignment and containment",
+          "url": "https://reddit.com/r/artificial/comments/1s6yuri/ive_come_up_with_a_new_thought_experiment_to/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T15:57:18Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I\u2019ve come up with a new thought experiment to approach ASI, and it challenges th via reddit/r/artificial"
+        },
+        {
+          "title": "VulcanAMI Might Help",
+          "url": "https://reddit.com/r/artificial/comments/1s6ytzp/vulcanami_might_help/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T15:56:30Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "VulcanAMI Might Help via reddit/r/artificial"
+        },
+        {
+          "title": "If AI is really making us more productive... why does it feel like we are working more, not less...?",
+          "url": "https://reddit.com/r/artificial/comments/1s6ygqc/if_ai_is_really_making_us_more_productive_why/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T15:42:24Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "If AI is really making us more productive... why does it feel like we are workin via reddit/r/artificial"
+        },
+        {
+          "title": "AI psychology",
+          "url": "https://reddit.com/r/artificial/comments/1s6vs12/ai_psychology/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T13:57:19Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI psychology via reddit/r/artificial"
+        },
+        {
+          "title": "I'm a writer and this is the AI-assisted workflow I use every day",
+          "url": "https://reddit.com/r/artificial/comments/1s6vbv3/im_a_writer_and_this_is_the_aiassisted_workflow_i/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T13:38:21Z",
+          "scores": {
+            "stability": 2,
+            "value": 5,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I'm a writer and this is the AI-assisted workflow I use every day via reddit/r/artificial"
+        },
+        {
+          "title": "I am usig claude agents wrong?",
+          "url": "https://reddit.com/r/artificial/comments/1s6lu5k/i_am_usig_claude_agents_wrong/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T04:40:46Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I am usig claude agents wrong? via reddit/r/artificial"
+        },
+        {
+          "title": "Google AI Mode gave me conspiracy theories instead of factual responses",
+          "url": "https://reddit.com/r/artificial/comments/1s6kjfe/google_ai_mode_gave_me_conspiracy_theories/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T03:32:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Google AI Mode gave me conspiracy theories instead of factual responses via reddit/r/artificial"
+        },
+        {
+          "title": "Persistent memory changes how people interact with AI \u2014 here's what I'm observing",
+          "url": "https://reddit.com/r/artificial/comments/1s6jvog/persistent_memory_changes_how_people_interact/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T02:58:58Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Persistent memory changes how people interact with AI \u2014 here's what I'm observin via reddit/r/artificial"
+        },
+        {
+          "title": "Does a 3D Environment Change How You Retain Information From AI?",
+          "url": "https://reddit.com/r/artificial/comments/1s6jnur/does_a_3d_environment_change_how_you_retain/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T02:48:12Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Does a 3D Environment Change How You Retain Information From AI? via reddit/r/artificial"
+        },
+        {
+          "title": "\ud83d\udc4bWelcome to r/AiVIS - Let's build this right",
+          "url": "https://reddit.com/r/artificial/comments/1s6i9in/welcome_to_raivis_lets_build_this_right/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T01:40:23Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "\ud83d\udc4bWelcome to r/AiVIS - Let's build this right via reddit/r/artificial"
+        },
+        {
+          "title": "Surveillance data used to be boring. AI made it dangerous.",
+          "url": "https://reddit.com/r/artificial/comments/1s6hvhk/surveillance_data_used_to_be_boring_ai_made_it/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-29T01:21:42Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Surveillance data used to be boring. AI made it dangerous. via reddit/r/artificial"
+        },
+        {
+          "title": "The AI hype misses the people who actually need it most",
+          "url": "https://reddit.com/r/artificial/comments/1s6fws6/the_ai_hype_misses_the_people_who_actually_need/",
+          "source": "reddit/r/artificial",
+          "published": "2026-03-28T23:51:38Z",
+          "scores": {
+            "stability": 2,
+            "value": 5,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The AI hype misses the people who actually need it most via reddit/r/artificial"
+        },
+        {
+          "title": "[D] Prior work using pixel shift to improve VAE accuracy?",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s787p0/d_prior_work_using_pixel_shift_to_improve_vae/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T21:53:49Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] Prior work using pixel shift to improve VAE accuracy? via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[P] Implemented TurboQuant in Python",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s73sbf/p_implemented_turboquant_in_python/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T19:03:15Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[P] Implemented TurboQuant in Python via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[D] Data curation and targeted replacement as a pre-training alignment and controllability method",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s73jb1/d_data_curation_and_targeted_replacement_as_a/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T18:53:52Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 5,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] Data curation and targeted replacement as a pre-training alignment and contr via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[P] I tested Meta\u2019s brain-response model on posts. It predicted the Elon one almost perfectly.",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s6ylp1/p_i_tested_metas_brainresponse_model_on_posts_it/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T15:47:38Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[P] I tested Meta\u2019s brain-response model on posts. It predicted the Elon one alm via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[D] Why does it seem like open source materials on ML are incomplete? this is not enough...",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s6wswn/d_why_does_it_seem_like_open_source_materials_on/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T14:38:29Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] Why does it seem like open source materials on ML are incomplete? this is no via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[P] I trained an AI to play Resident Evil 4 Remake using Behavioral Cloning + LSTM",
+          "url": "https://reddit.com/r/MachineLearning/comments/1s6wfde/p_i_trained_an_ai_to_play_resident_evil_4_remake/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-03-29T14:23:32Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[P] I trained an AI to play Resident Evil 4 Remake using Behavioral Cloning + LS via reddit/r/MachineLearning"
+        },
+        {
+          "title": "Understanding ChatGPT vs Claude",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s77mna/understanding_chatgpt_vs_claude/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T21:30:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Understanding ChatGPT vs Claude via reddit/r/ChatGPT"
+        },
+        {
+          "title": "ChatGPT decided to just randomly throw in some Arabic",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s775cr/chatgpt_decided_to_just_randomly_throw_in_some/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T21:12:31Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "ChatGPT decided to just randomly throw in some Arabic via reddit/r/ChatGPT"
+        },
+        {
+          "title": "GPT just dropped this and refused to elaborate.",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s770o4/gpt_just_dropped_this_and_refused_to_elaborate/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T21:07:19Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "GPT just dropped this and refused to elaborate. via reddit/r/ChatGPT"
+        },
+        {
+          "title": "I asked ChatGPT to improve a drawing and I got this response. What else do I do instead?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s75mm2/i_asked_chatgpt_to_improve_a_drawing_and_i_got/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T20:12:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I asked ChatGPT to improve a drawing and I got this response. What else do I do  via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Absurd Customer Service (Or Lack Thereof)",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s75f8j/absurd_customer_service_or_lack_thereof/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T20:04:57Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Absurd Customer Service (Or Lack Thereof) via reddit/r/ChatGPT"
+        },
+        {
+          "title": "AI Will Take These Jobs Quickly",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s75f0e/ai_will_take_these_jobs_quickly/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T20:04:42Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI Will Take These Jobs Quickly via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Can anyone else confirm that the Wolfram GPT has been removed from ChatGPT?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s74wsp/can_anyone_else_confirm_that_the_wolfram_gpt_has/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T19:45:43Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Can anyone else confirm that the Wolfram GPT has been removed from ChatGPT? via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Apparently this is what I would look like as a woman.",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s74g9x/apparently_this_is_what_i_would_look_like_as_a/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T19:28:30Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Apparently this is what I would look like as a woman. via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Di quando ChatGPT mi ha scambiato per Khaled Hosseini e ha dato consigli di scrittura a Tolkien: una storia vera",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s72ze8/di_quando_chatgpt_mi_ha_scambiato_per_khaled/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T18:32:37Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Di quando ChatGPT mi ha scambiato per Khaled Hosseini e ha dato consigli di scri via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Senator Mark Warner on AI's Risks: \u201cI Want To Be More Optimistic, But I Am Terrified.\u201d",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s72xng/senator_mark_warner_on_ais_risks_i_want_to_be/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T18:30:47Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Senator Mark Warner on AI's Risks: \u201cI Want To Be More Optimistic, But I Am Terri via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Airline livery test ... Grok failed",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s72qpg/airline_livery_test_grok_failed/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T18:23:46Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Airline livery test ... Grok failed via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Weird hallucination but on images??",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s72k76/weird_hallucination_but_on_images/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T18:17:03Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Weird hallucination but on images?? via reddit/r/ChatGPT"
+        },
+        {
+          "title": "How do you keep track of important insights from very long ChatGPT conversations?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s72h01/how_do_you_keep_track_of_important_insights_from/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T18:13:43Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How do you keep track of important insights from very long ChatGPT conversations via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Why does ChatGPT hallucinate immediately even in a clean session?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s7217c/why_does_chatgpt_hallucinate_immediately_even_in/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T17:57:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why does ChatGPT hallucinate immediately even in a clean session? via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Unreliable ChatGPT data",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s720j7/unreliable_chatgpt_data/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T17:57:08Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Unreliable ChatGPT data via reddit/r/ChatGPT"
+        },
+        {
+          "title": "The website where you can pretend to be an AI responding to prompts by other humans",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s71l1t/the_website_where_you_can_pretend_to_be_an_ai/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T17:41:06Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The website where you can pretend to be an AI responding to prompts by other hum via reddit/r/ChatGPT"
+        },
+        {
+          "title": "[Study] Does your manager use AI to write their messages \u2013 and do you even know?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s713d7/study_does_your_manager_use_ai_to_write_their/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T17:22:20Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 5,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[Study] Does your manager use AI to write their messages \u2013 and do you even know? via reddit/r/ChatGPT"
+        },
+        {
+          "title": "When it works doesn't mean it's good",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s70yyp/when_it_works_doesnt_mean_its_good/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T17:17:45Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "When it works doesn't mean it's good via reddit/r/ChatGPT"
+        },
+        {
+          "title": "BRIDGELOG \u2014 #evacueediary Cathy Log II \u2014 On What the Archive Does Not Hold Mode: Documentary, First-Person AI",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s70jzo/bridgelog_evacueediary_cathy_log_ii_on_what_the/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T17:02:03Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "BRIDGELOG \u2014 #evacueediary Cathy Log II \u2014 On What the Archive Does Not Hold Mode: via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Prompting in ChatGPT vs Claude",
+          "url": "https://reddit.com/r/ChatGPT/comments/1s70bcn/prompting_in_chatgpt_vs_claude/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-03-29T16:53:04Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Prompting in ChatGPT vs Claude via reddit/r/ChatGPT"
+        },
+        {
+          "title": "How to use tech with CC that is not as well represented in the training data?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s78bln/how_to_use_tech_with_cc_that_is_not_as_well/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T21:58:10Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How to use tech with CC that is not as well represented in the training data? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "What's the most complex project you've built using Claude?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s77rz7/whats_the_most_complex_project_youve_built_using/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T21:36:34Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What's the most complex project you've built using Claude? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Why Anthropic\u2019s MCP Reference Servers Get an \"F\" for Security (and how it\u2019s draining your quota)",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s77r8c/why_anthropics_mcp_reference_servers_get_an_f_for/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T21:35:46Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why Anthropic\u2019s MCP Reference Servers Get an \"F\" for Security (and how it\u2019s drai via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Built a 15-agent autonomous scientific discovery system on Claude Code \u2014 Opus + Sonnet sub-agents",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76tgm/built_a_15agent_autonomous_scientific_discovery/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:59:34Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Built a 15-agent autonomous scientific discovery system on Claude Code \u2014 Opus +  via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "What happens after your bedroom project goes viral (and you panic)",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76leh/what_happens_after_your_bedroom_project_goes/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:50:35Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What happens after your bedroom project goes viral (and you panic) via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Jean-Claude",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76jgs/jeanclaude/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:48:38Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Jean-Claude via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "What\u2019s your Claude Dev Env HW Setup",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76gq5/whats_your_claude_dev_env_hw_setup/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:45:40Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What\u2019s your Claude Dev Env HW Setup via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Has Claude ever switched it's model mid conversation on you?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76f9m/has_claude_ever_switched_its_model_mid/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:44:05Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Has Claude ever switched it's model mid conversation on you? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I forgot one CLI flag, burned $84 overnight, then my agents built 5 features in 44 minutes.",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s76d2k/i_forgot_one_cli_flag_burned_84_overnight_then_my/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:41:40Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I forgot one CLI flag, burned $84 overnight, then my agents built 5 features in  via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Claude Auto mode help",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s75qy0/claude_auto_mode_help/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T20:17:34Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude Auto mode help via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "How I wired Claude Code into Linear, Discord, and Vercel for a 30-day solo build",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s74zr0/how_i_wired_claude_code_into_linear_discord_and/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:48:47Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How I wired Claude Code into Linear, Discord, and Vercel for a 30-day solo build via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Dictation fails",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s74yvk/dictation_fails/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:47:52Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Dictation fails via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Claude Mascot Generator",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s74b40/claude_mascot_generator/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:23:00Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude Mascot Generator via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Is it possible to build a schedule website with Claude",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s743yy/is_it_possible_to_build_a_schedule_website_with/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:15:25Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Is it possible to build a schedule website with Claude via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "How do you handle secrets in org-managed Cowork plugins?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s743ky/how_do_you_handle_secrets_in_orgmanaged_cowork/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:15:01Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How do you handle secrets in org-managed Cowork plugins? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Built a tool that breaks down what works in short form videos",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1s73vks/built_a_tool_that_breaks_down_what_works_in_short/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-03-29T19:06:35Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Built a tool that breaks down what works in short form videos via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Robot Queue \u2014 LLM inference on your hardware, served to any website",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s78emh/robot_queue_llm_inference_on_your_hardware_served/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T22:01:18Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Robot Queue \u2014 LLM inference on your hardware, served to any website via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Are you interested in trying out an app that helps manage your Llama.cpp and local LLMs?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s783dm/are_you_interested_in_trying_out_an_app_that/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T21:49:03Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Are you interested in trying out an app that helps manage your Llama.cpp and loc via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "local llm inference on M4 Max vs M5 Max",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s771lm/local_llm_inference_on_m4_max_vs_m5_max/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T21:08:19Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 6,
+            "relevance": 7,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "local llm inference on M4 Max vs M5 Max via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "We talk optimization a lot, but how are you folks enjoying your local AI?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s76zei/we_talk_optimization_a_lot_but_how_are_you_folks/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T21:05:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "We talk optimization a lot, but how are you folks enjoying your local AI? via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Hi guys! Do you guys have any AI as an alternative to Claude.",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s76p96/hi_guys_do_you_guys_have_any_ai_as_an_alternative/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T20:54:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Hi guys! Do you guys have any AI as an alternative to Claude. via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "What will Google's TurboQuant actually change for our local setups, and specifically mobile inference?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s76bjg/what_will_googles_turboquant_actually_change_for/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T20:39:54Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 8,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What will Google's TurboQuant actually change for our local setups, and specific via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Low-latency Multilingual TTS",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s759jh/lowlatency_multilingual_tts/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T19:59:03Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Low-latency Multilingual TTS via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "The best practice for a SWE to use a local LLM for coding.",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s74pog/the_best_practice_for_a_swe_to_use_a_local_llm/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T19:38:19Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The best practice for a SWE to use a local LLM for coding. via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Best LLMs for 16GB VRAM? (Running on a 9070 XT)",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s74e4u/best_llms_for_16gb_vram_running_on_a_9070_xt/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T19:26:14Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Best LLMs for 16GB VRAM? (Running on a 9070 XT) via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Built an AI IDE where Blueprint context makes local models punch above their weight \u2014 v5.1 now ships with built-in cloud tiers too",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s74b51/built_an_ai_ide_where_blueprint_context_makes/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T19:23:02Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Built an AI IDE where Blueprint context makes local models punch above their wei via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Implemented TurboQuant in Python over weekend",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s73yby/implemented_turboquant_in_python_over_weekend/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T19:09:30Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Implemented TurboQuant in Python over weekend via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "best workhorse model for overnight recurring tasks ? (M4/16)",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s73d9t/best_workhorse_model_for_overnight_recurring/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T18:47:16Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "best workhorse model for overnight recurring tasks ? (M4/16) via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Problems with Ollama and claude code",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s732er/problems_with_ollama_and_claude_code/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T18:35:46Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Problems with Ollama and claude code via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "vLLM CVE-2026-27893, `--trust-remote-code=False` is silently ignored for Nemotron-VL and Kimi-K25 models",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s72zog/vllm_cve202627893_trustremotecodefalse_is/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T18:32:54Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "vLLM CVE-2026-27893, `--trust-remote-code=False` is silently ignored for Nemotro via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Why exactly can't we use the techniques in TurboQuant on the model's quantizations themselves?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1s72up8/why_exactly_cant_we_use_the_techniques_in/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-03-29T18:27:52Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why exactly can't we use the techniques in TurboQuant on the model's quantizatio via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Ask HN: How do you check what ChatGPT says about your product?",
+          "url": "https://news.ycombinator.com/item?id=47567825",
+          "source": "hackernews",
+          "published": "2026-03-29T21:57:56Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ask HN: How do you check what ChatGPT says about your product? via hackernews"
+        },
+        {
+          "title": "Claude for Marathon Training",
+          "url": "https://temporunner.substack.com/p/claude-for-a-sub-3-hour-marathon",
+          "source": "hackernews",
+          "published": "2026-03-29T21:52:17Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude for Marathon Training via hackernews"
+        },
+        {
+          "title": "QA Panda \u2013 Open-source AI QA engineer that tests web apps in a real browser",
+          "url": "https://github.com/gzmagyari/qapanda",
+          "source": "hackernews",
+          "published": "2026-03-29T21:51:12Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "QA Panda \u2013 Open-source AI QA engineer that tests web apps in a real browser via hackernews"
+        },
+        {
+          "title": "US Air Force\u2019s New Answer To Shahed Drones [video][13m]",
+          "url": "https://www.youtube.com/watch?v=H2ZeZXQAtGQ",
+          "source": "hackernews",
+          "published": "2026-03-29T21:48:41Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "US Air Force\u2019s New Answer To Shahed Drones [video][13m] via hackernews"
+        },
+        {
+          "title": "Sunday Robotics: The Household Robot We've Been Waiting For? [YouTube]",
+          "url": "https://www.youtube.com/watch?v=QfBw0gMuhaI",
+          "source": "hackernews",
+          "published": "2026-03-29T21:48:26Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Sunday Robotics: The Household Robot We've Been Waiting For? [YouTube] via hackernews"
+        },
+        {
+          "title": "Autogrind: Let your agent grind on your projects 24x7 fully autonomously",
+          "url": "https://github.com/ttttonyhe/autogrind",
+          "source": "hackernews",
+          "published": "2026-03-29T21:47:42Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Autogrind: Let your agent grind on your projects 24x7 fully autonomously via hackernews"
+        },
+        {
+          "title": "Built Verit: Runs real paid tests on startup ideas and returns a demand report",
+          "url": "https://www.verit.dev/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:42:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Built Verit: Runs real paid tests on startup ideas and returns a demand report via hackernews"
+        },
+        {
+          "title": "No Plan: How Germany Is Losing Its Business Model",
+          "url": "https://respublica.media/no-plan-how-germany-is-losing-its-business-model/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:37:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "No Plan: How Germany Is Losing Its Business Model via hackernews"
+        },
+        {
+          "title": "Attie: The Future of AI Should Serve People, Not Platforms",
+          "url": "https://theliquidfrontier.leaflet.pub/3mi5pwkoqx22g",
+          "source": "hackernews",
+          "published": "2026-03-29T21:35:23Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Attie: The Future of AI Should Serve People, Not Platforms via hackernews"
+        },
+        {
+          "title": "What software engineering got wrong for decades, you're about to repeat with AI",
+          "url": "https://www.lobsterpack.com/blog/software-engineering-lessons-ai-tools/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:33:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What software engineering got wrong for decades, you're about to repeat with AI via hackernews"
+        },
+        {
+          "title": "Show HN: Learn from AI Experts",
+          "url": "https://teach-me.replit.app/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:29:49Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: Learn from AI Experts via hackernews"
+        },
+        {
+          "title": "The Project I Kept Postponing (AI Didn't)",
+          "url": "https://sami.eljabali.org/the-project-i-kept-postponing-ai-didnt/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:24:34Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The Project I Kept Postponing (AI Didn't) via hackernews"
+        },
+        {
+          "title": "Ukraine's drone defense tech reshapes combat as warfare evolves [video]",
+          "url": "https://www.youtube.com/watch?v=mnX7hE-9OK8",
+          "source": "hackernews",
+          "published": "2026-03-29T21:21:49Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ukraine's drone defense tech reshapes combat as warfare evolves [video] via hackernews"
+        },
+        {
+          "title": "Show HN: A war-strategy game played by AI agents",
+          "url": "https://agentempires.app/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:16:48Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: A war-strategy game played by AI agents via hackernews"
+        },
+        {
+          "title": "Tell HN: Bug in Claude Code CLI is instantly draining usage plan quotas",
+          "url": "https://github.com/anthropics/claude-code/issues/38335",
+          "source": "hackernews",
+          "published": "2026-03-29T21:15:31Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Tell HN: Bug in Claude Code CLI is instantly draining usage plan quotas via hackernews"
+        },
+        {
+          "title": "A whirlwind tour of systemd-nspawn containers (2025)",
+          "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
+          "source": "hackernews",
+          "published": "2026-03-29T21:10:17Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "A whirlwind tour of systemd-nspawn containers (2025) via hackernews"
+        },
+        {
+          "title": "Open-Sourcing Our Mail Client Mono Mail",
+          "url": "https://github.com/erickim20/monomail-desktop",
+          "source": "hackernews",
+          "published": "2026-03-29T21:01:31Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Open-Sourcing Our Mail Client Mono Mail via hackernews"
+        },
+        {
+          "title": "Things I learned building a model validation library",
+          "url": "https://wilsoniumite.com/2025/01/24/things-i-learned-building-a-model-validation-library/",
+          "source": "hackernews",
+          "published": "2026-03-29T20:55:03Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Things I learned building a model validation library via hackernews"
+        },
+        {
+          "title": "AI isn't killing jobs, it's 'unbundling' them into lower-paid chunks",
+          "url": "https://www.theregister.com/2026/03/24/ai_job_unbundling/",
+          "source": "hackernews",
+          "published": "2026-03-29T20:51:55Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI isn't killing jobs, it's 'unbundling' them into lower-paid chunks via hackernews"
+        },
+        {
+          "title": "STADLER reshapes knowledge work at a 230-year-old company",
+          "url": "https://openai.com/index/stadler",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "STADLER reshapes knowledge work at a 230-year-old company via openai-blog"
+        },
+        {
+          "title": "Creating with Sora Safely",
+          "url": "https://openai.com/index/creating-with-sora-safely",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Creating with Sora Safely via openai-blog"
+        },
+        {
+          "title": "How we monitor internal coding agents for misalignment",
+          "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How we monitor internal coding agents for misalignment via openai-blog"
+        },
+        {
+          "title": "OpenAI to acquire Astral",
+          "url": "https://openai.com/index/openai-to-acquire-astral",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI to acquire Astral via openai-blog"
+        },
+        {
+          "title": "Equipping workers with insights about compensation",
+          "url": "https://openai.com/index/equipping-workers-with-insights-about-compensation",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Equipping workers with insights about compensation via openai-blog"
+        },
+        {
+          "title": "Why Codex Security Doesn\u2019t Include a SAST Report",
+          "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why Codex Security Doesn\u2019t Include a SAST Report via openai-blog"
+        },
+        {
+          "title": "From model to agent: Equipping the Responses API with a computer environment",
+          "url": "https://openai.com/index/equip-responses-api-computer-environment",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "From model to agent: Equipping the Responses API with a computer environment via openai-blog"
+        },
+        {
+          "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
+          "url": "https://openai.com/index/wayfair",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Wayfair boosts catalog accuracy and support speed with OpenAI via openai-blog"
+        },
+        {
+          "title": "Improving instruction hierarchy in frontier LLMs",
+          "url": "https://openai.com/index/instruction-hierarchy-challenge",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Improving instruction hierarchy in frontier LLMs via openai-blog"
+        },
+        {
+          "title": "OpenAI to acquire Promptfoo",
+          "url": "https://openai.com/index/openai-to-acquire-promptfoo",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI to acquire Promptfoo via openai-blog"
+        },
+        {
+          "title": "Codex Security: now in research preview",
+          "url": "https://openai.com/index/codex-security-now-in-research-preview",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Codex Security: now in research preview via openai-blog"
+        },
+        {
+          "title": "How Descript enables multilingual video dubbing at scale",
+          "url": "https://openai.com/index/descript",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How Descript enables multilingual video dubbing at scale via openai-blog"
+        },
+        {
+          "title": "Introducing GPT-5.4",
+          "url": "https://openai.com/index/introducing-gpt-5-4",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing GPT-5.4 via openai-blog"
+        },
+        {
+          "title": "GPT-5.4 Thinking System Card",
+          "url": "https://openai.com/index/gpt-5-4-thinking-system-card",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "GPT-5.4 Thinking System Card via openai-blog"
+        },
+        {
+          "title": "The five AI value models driving business reinvention",
+          "url": "https://openai.com/index/the-five-ai-value-models-driving-business-reinvention",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The five AI value models driving business reinvention via openai-blog"
+        },
+        {
+          "title": "Introducing the Adoption news channel",
+          "url": "https://openai.com/index/introducing-the-adoption-news-channel",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing the Adoption news channel via openai-blog"
+        }
+      ]
+    }
+  ]
 }
