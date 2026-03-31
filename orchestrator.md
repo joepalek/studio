@@ -167,7 +167,7 @@ payload = json.dumps({
     'contents': [{'parts': [{'text': prompt}]}]
 }).encode()
 
-url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}'
+url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key={key}'
 req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
 
 try:

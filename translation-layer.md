@@ -40,7 +40,7 @@ if not key:
 prompt = f'Translate the following text to {target_lang}. Return only the translation, no explanation, no quotes:\n\n{text}'
 
 payload = json.dumps({'contents': [{'parts': [{'text': prompt}]}]}).encode()
-url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}'
+url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key={key}'
 req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
 
 try:
@@ -107,7 +107,7 @@ results = []
 for item in batch:
     prompt = f'Translate to {item[\"target\"]}. Return only the translation:\n\n{item[\"text\"]}'
     payload = json.dumps({'contents': [{'parts': [{'text': prompt}]}]}).encode()
-    url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}'
+    url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key={key}'
     req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
     try:
         r = urllib.request.urlopen(req, timeout=10)
@@ -159,7 +159,7 @@ print()
 for lang in languages:
     prompt = f'Translate this search query to {lang} as a native speaker would search for it. Return only the translation:\n\n{query}'
     payload = json.dumps({'contents': [{'parts': [{'text': prompt}]}]}).encode()
-    url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}'
+    url = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key={key}'
     req = urllib.request.Request(url, data=payload, headers={'Content-Type': 'application/json'})
     try:
         r = urllib.request.urlopen(req, timeout=10)

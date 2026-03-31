@@ -77,7 +77,7 @@ curl -s http://localhost:11434/api/generate \
 
 **Gemini Flash call (bash):**
 ```bash
-curl -s "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_GEMINI_KEY" \
+curl -s "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key=YOUR_GEMINI_KEY" \
   -H "Content-Type: application/json" \
   -d '{
     "contents": [{"parts": [{"text": "YOUR PROMPT HERE"}]}]
