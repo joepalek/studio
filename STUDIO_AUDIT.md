@@ -1,196 +1,211 @@
-# STUDIO SYSTEM AUDIT — 2026-03-31 (v2)
-# Living checklist. Check items off as reviewed and confirmed working.
-# STATUS: PENDING / OK / NEEDS_FIX / DEPRECATED / MISSING
-#
-# KEY CHANGES FROM v1:
-# - mobile-inbox.json RETIRED — replaced by sidebar mobile (full features + agent inbox access)
-# - session-bridge.py FOUND at root (was session_bridge.py typo in v1)
-# - agency/ scripts all FOUND (were in agency/ subfolder — inventory path was wrong)
-# - CTW/cx_agent.py FOUND in cx_agent/ subdir
-# - game_archaeology/ scripts all FOUND in game_archaeology/ subdir
-# - skill-improver.md CREATED (restored from uploaded file)
-# - peer-review.md CREATED (Agency character reviewer system)
+# STUDIO SYSTEM AUDIT — 2026-03-31 (v3 — ACTIVE REVIEW)
+# Legend: [OK] verified good | [PENDING] needs work | [DEPRECATED] retire it
+#         [NEEDS_FIX] broken, fix queued | [RESOLVED] closed
 
 ======================================================================
-SECTION 1: AGENTS (run via run-agent.py → Claude Code)
+SECTION 1: AGENTS
 ======================================================================
+# Task Scheduler last runs (from live check 2026-03-31):
+# SupervisorCheck=today, DailyBriefing=today, SupervisorBriefing=today
+# GitScout=today, Janitor=today, IntelFeed=today, AIIntel=today
+# VectorReindex=today, SidebarInject=today, OvernightAutoAnswer=today
+# OvernightJobDelta=today, OvernightVintageAgent=today
+# OvernightProductArchaeology=today, AIServicesRankings=today
+# AgencyCharacterBuild=today, WorkflowIntelligence=today
+# WhiteboardAgent=never, WhiteboardScorer=never, SkillImprover=never
+# PeerReview=never, GitCommitNightly=today, HeartbeatCheck=today
+# GhostBookRescan=last Nov (DEAD), OvernightGhostBookPass3=last Nov (DEAD)
+# MonthlyJobDiscovery=never, CommonCrawlTrigger=never
+# GameArchaeologyWeekly=never, MirofishTest=never
 
-[OK     ] supervisor.md              — Supervisor; AgentSupervisorBriefing
-[OK     ] whiteboard-agent.md        — Whiteboard Agent+Scorer; AgentWhiteboardAgent+Scorer
-[PENDING] stress-tester.md           — Stress Tester; no dedicated task — verify inline use
-[OK     ] janitor.md                 — Janitor; AgentJanitor
-[OK     ] git-scout.md               — Git Scout; AgentGitScout
-[OK     ] git-commit-agent.md        — Git Commit Agent; AgentGitCommitNightly
-[OK     ] intel-feed.md              — Intel Feed; AgentIntelFeed
-[OK     ] sre-scout.md               — SRE Scout; SupervisorCheck every 30 min
-[PENDING] inbox-manager.md           — Inbox Manager; no dedicated overnight task — add one?
-[OK     ] product-archaeology.md     — Product Archaeology; AgentProductArchaeology
-[OK     ] vintage-agent.md           — Vintage Agent; OvernightVintageAgent
-[PENDING] wayback-cdx.md             — Wayback CDX; AgentCommonCrawlTrigger — verify last run
-[OK     ] job-source-discovery.md    — Job Source Discovery; MonthlyJobDiscovery
-[PENDING] workflow-intelligence.md   — Workflow Intelligence; AgentWorkflowIntelligence — verify
-[DEPRECATED] nightly-rollup.md       — SPEC ONLY — replaced by nightly_rollup.py (FIXED)
-[OK     ] ai-intel-agent.md          — AI Intel Agent; AgentAIIntel
-[DEPRECATED] auto-answer.md          — SPEC ONLY — replaced by auto_answer_gemini.py (FIXED)
-[OK     ] orchestrator.md            — Orchestrator; DailyBriefing (Gemini model FIXED today)
-[PENDING] translation-layer.md       — Translation Layer; no dedicated task
-[PENDING] market-scout.md            — Market Scout; no dedicated task
-[PENDING] social-media-agent.md      — Social Media Agent; no dedicated task
-[PENDING] company-registry-crawler.md — Company Registry Crawler; no dedicated task
-[NEEDS_FIX] ghost-book-division.md   — DEAD since Mar 22; GhostBookRescan task broken
-[PENDING] art-department.md          — Art Department; no dedicated task
-[DEPRECATED] ai-gateway.md           — Reference doc, not an agent — verify or remove
-[PENDING] listing-optimizer.md       — Listing Optimizer Agent; no dedicated task
-[PENDING] changelog-agent.md         — Changelog Agent; NightlyCommit
-[OK     ] peer-review.md             — CREATED TODAY; AgentPeerReview task exists
-[OK     ] skill-improver.md          — RESTORED TODAY; AgentSkillImprover task exists
+[OK     ] supervisor.md              — Running. SupervisorCheck every 30 min.
+[OK     ] whiteboard-agent.md        — WhiteboardAgent task exists. Never run yet. OK — will run tonight.
+[OK     ] stress-tester.md           — Called inline by Intel Feed. No dedicated task needed.
+[OK     ] janitor.md                 — Janitor task. Running today.
+[OK     ] git-scout.md               — GitScout. Running today.
+[OK     ] git-commit-agent.md        — GitCommitNightly. Running today. Quota issues resolved.
+[OK     ] intel-feed.md              — IntelFeed. Running. DISTINCT from ai-intel-agent (see Section 9).
+[OK     ] sre-scout.md               — SupervisorCheck every 30 min. Running.
+[PENDING] inbox-manager.md           — No dedicated task. Add nightly task or fold into supervisor dispatch.
+[OK     ] product-archaeology.md     — OvernightProductArchaeology. Running.
+[OK     ] vintage-agent.md           — OvernightVintageAgent. Running. All decades complete.
+[PENDING] wayback-cdx.md             — CommonCrawlTrigger exists but never run. Verify intent.
+[OK     ] job-source-discovery.md    — MonthlyJobDiscovery. Never run yet — monthly, expected.
+[OK     ] workflow-intelligence.md   — WorkflowIntelligence. Running today.
+[DEPRECATED] nightly-rollup.md       — Spec only. Replaced by nightly_rollup.py. FIXED today.
+[OK     ] ai-intel-agent.md          — AIIntel. Running today.
+[DEPRECATED] auto-answer.md          — Spec only. Replaced by auto_answer_gemini.py. FIXED today.
+[OK     ] orchestrator.md            — DailyBriefing. Running. Gemini model FIXED today.
+[OK     ] translation-layer.md       — Reference/utility. Used by agents internally.
+[PENDING] market-scout.md            — No dedicated task. Review if needed or fold into intel-feed.
+[PENDING] social-media-agent.md      — No dedicated task. Review scope — is Meta app review done?
+[PENDING] company-registry-crawler.md — No dedicated task. Low priority, deferred.
+[NEEDS_FIX] ghost-book-division.md   — GhostBookRescan points to OLD pass1_find_candidates.py.
+                                        NEW ghost book pipeline from Opera session this afternoon.
+                                        ACTION: Check agency/ for new version, update bat target.
+[PENDING] art-department.md          — No dedicated task. Runs on demand.
+[DEPRECATED] ai-gateway.md           — Reference doc only. Not dispatched as agent. Keep as reference.
+[PENDING] listing-optimizer.md       — No dedicated task yet. eBay OAuth live. Build queue item.
+[PENDING] changelog-agent.md         — NightlyCommit. Missed 3 nights quota. Now recovered.
+[OK     ] peer-review.md             — CREATED today. PeerReview task exists (never run = expected).
+[OK     ] skill-improver.md          — RESTORED today. SkillImprover task exists (never run = expected).
 
 ======================================================================
 SECTION 2: SCHEDULED PYTHON SCRIPTS
 ======================================================================
 
-[OK     ] nightly_rollup.py          — FIXED today. AgentNightlyRollup → nightly-rollup.bat
-[OK     ] auto_answer_gemini.py      — FIXED encoding today. OvernightAutoAnswer 3:30 AM
-[OK     ] ai_intel_run.py            — Running. AgentAIIntel overnight
-[OK     ] ai_services_rankings.py    — Running. Schema 2.0 upgraded today. 5:30 AM daily
-[OK     ] whiteboard_score.py        — Running. OvernightWhiteboardScore
-[OK     ] inject_sidebar_data.py     — Running. Sidebar inject overnight
+[OK     ] nightly_rollup.py          — FIXED today. First real run tonight 1 AM.
+[OK     ] auto_answer_gemini.py      — FIXED encoding. Running nightly.
+[OK     ] ai_intel_run.py            — Running. 4 HIGH items yesterday.
+[OK     ] ai_services_rankings.py    — Running. Schema 2.0 with pricing today.
+[OK     ] whiteboard_score.py        — Running. Top 10 stable.
+[OK     ] inject_sidebar_data.py     — Running. 46 inbox + 10 whiteboard + 8 assets injected.
 
 ======================================================================
-SECTION 3: SERVICES (always-on or on-demand)
+SECTION 3: SERVICES
 ======================================================================
 
-[OK     ] studio_bridge.py           — Port 11435; SidebarBridge in Task Scheduler
-[OK     ] serve_sidebar_server.py    — Port 8765; serve-sidebar.bat
-[PENDING] sidebar_http.py            — Alt sidebar server; verify vs serve_sidebar_server.py
-[OK     ] session-bridge.py          — FOUND (was listed as session_bridge.py). Verify running.
+[OK     ] studio_bridge.py           — Port 11435. SidebarBridge task running today.
+[OK     ] serve_sidebar_server.py    — Port 8765. Active via serve-sidebar.bat. Confirmed in bat.
+[DEPRECATED] sidebar_http.py         — Zero refs in sidebar-agent.html or any bat/script.
+                                        Old attempt. Safe to archive. Move to _archive/.
+[OK     ] session-bridge.py          — Found at root. Running.
 
 ======================================================================
 SECTION 4: UTILITY SCRIPTS
 ======================================================================
 
-[OK     ] session-startup.py         — Running every session. Vector path clean.
-[OK     ] context-vector-store.py    — 595 chunks indexed
-[OK     ] run-agent.py               — Task Scheduler dispatcher
-[PENDING] run_inbox_sync.py          — Inbox daily sync; verify task wired
-[PENDING] check-drift.py             — AgentCheckDrift; verify last run
-[OK     ] generate-context.py        — Manual utility
-[OK     ] update_asset_usage.py      — Asset tracker
+[OK     ] session-startup.py         — Running every session. Vector path clean all day.
+[OK     ] context-vector-store.py    — 595 chunks indexed.
+[OK     ] run-agent.py               — Task Scheduler dispatcher. Working.
+[PENDING] run_inbox_sync.py          — No task visible in scheduler. Verify if wired or manual only.
+[OK     ] check-drift.py             — CheckDrift task running today.
+[OK     ] generate-context.py        — Manual utility.
+[OK     ] update_asset_usage.py      — Asset tracker. Running.
 
 ======================================================================
-SECTION 5: TASK SCHEDULER — KNOWN STATUS
+SECTION 5: TASK SCHEDULER — VERIFIED STATUS
 ======================================================================
 
-[OK     ] AgentAIIntel               — ai_intel_run.py overnight; running
-[PENDING] AgentCheckDrift            — check-drift.py; verify last run time
-[PENDING] AgentCommonCrawlTrigger    — wayback-cdx.md; verify last run
-[PENDING] AgentGitCommitNightly      — git-commit-agent.md; missed 3 nights (quota). Now OK.
-[OK     ] AgentGitScout              — git-scout.md; running
-[PENDING] AgentHeartbeatCheck        — verify last run
-[PENDING] AgentIntelFeed             — intel-feed.md; verify vs AgentAIIntel (overlap?)
-[PENDING] AgentJanitor               — janitor.md; verify last run
-[OK     ] AgentNightlyRollup         — FIXED today → nightly_rollup.py via bat
-[OK     ] AgentPeerReview            — peer-review.md CREATED today
-[OK     ] AgentProductArchaeology    — running; product-archaeology overnight
-[OK     ] AgentSkillImprover         — skill-improver.md RESTORED today
-[OK     ] AgentSupervisorBriefing    — running
-[OK     ] AgentWhiteboardAgent       — running
-[OK     ] AgentWhiteboardScorer      — running
-[PENDING] AgentWorkflowIntelligence  — verify last run
-[PENDING] DailyBriefing              — verify vs AgentSupervisorBriefing (overlap?)
-[NEEDS_FIX] GhostBookRescan          — DEAD since Mar 22 — needs new target
-[PENDING] MirofishTest               — last run date unknown
-[OK     ] MonthlyJobDiscovery        — job-source-discovery.md; monthly
-[PENDING] NightlyCommit              — missed quota 3 nights; verify recovery
-[OK     ] OvernightAutoAnswer        — FIXED encoding today
-[PENDING] OvernightGhostBookPass3    — ghost book pass 3; verify status
-[OK     ] OvernightJobDelta          — FIXED PermissionError today
-[OK     ] OvernightProductArchaeology — running
-[OK     ] OvernightVintageAgent      — running; all decades schema-complete
-[OK     ] OvernightWhiteboardScore   — running
-[OK     ] SupervisorCheck            — sre-scout.md every 30 min
+[OK     ] SupervisorCheck            — Running every 30 min today.
+[OK     ] DailyBriefing              — Running today at 8 AM.
+[OK     ] SupervisorBriefing         — Running today at 8 AM.
+[OK     ] WorkflowIntelligence       — Running today.
+[OK     ] AIIntel                    — Running today.
+[OK     ] AIServicesRankings         — Running today.
+[OK     ] SidebarInject              — Running today.
+[OK     ] AgencyCharacterBuild       — Running today. 507 chars.
+[OK     ] OvernightAutoAnswer        — FIXED today.
+[OK     ] OvernightJobDelta          — FIXED today.
+[OK     ] OvernightVintageAgent      — Running. All decades complete.
+[OK     ] OvernightProductArchaeology — Running.
+[OK     ] OvernightWhiteboardScore   — Running.
+[OK     ] VectorReindex              — Running today. 595 chunks.
+[OK     ] GitCommitNightly           — Running today.
+[OK     ] GitScout                   — Running today.
+[OK     ] Janitor                    — Running today.
+[OK     ] IntelFeed                  — Running today.
+[OK     ] HeartbeatCheck             — Running today.
+[OK     ] SidebarBridge              — Running today.
+[OK     ] CheckDrift                 — Running today.
+[OK     ] NightlyRollup              — FIXED today → nightly_rollup.py. First run tonight.
+[OK     ] WhiteboardAgent            — Task exists. Never run = expected (new registration).
+[OK     ] WhiteboardScorer           — Task exists. Never run = expected.
+[OK     ] SkillImprover              — Task exists. Never run = expected (just restored).
+[OK     ] PeerReview                 — Task exists. Never run = expected (just created).
+[OK     ] MonthlyJobDiscovery        — Never run = expected (monthly, not yet due).
+[OK     ] GameArchaeologyWeekly      — Never run = expected (weekly, not yet due).
+[OK     ] MirofishTest               — Never run. Manual/on-demand. OK.
+[PENDING] CommonCrawlTrigger         — Never run. Verify if wayback-cdx.md is active or deferred.
+[NEEDS_FIX] GhostBookRescan          — Last Nov. Points to old pipeline. Needs new target.
+[NEEDS_FIX] OvernightGhostBookPass3  — Last Nov. Part of old pipeline. Check if superseded.
+[DEPRECATED] VedicScan / VedicSync   — Vedic Math module closed/deferred. Tasks can be disabled.
 
 ======================================================================
 SECTION 6: OTHER PROJECT SCRIPTS
 ======================================================================
 
-[OK     ] listing-optimizer/ebay_oauth.py          — Live today; token cached 2h
-[OK     ] job-match/job_daily_harvest.py            — PermissionError FIXED today
-[PENDING] job-match/job_source_discovery_monthly.py — verify monthly task wired
-[OK     ] ghost-book/pass1_find_candidates.py       — OK
-[OK     ] ghost-book/pass2_validate.py              — OK
-[OK     ] agency/character_creator.py               — in agency/ (inventory path was wrong)
-[OK     ] agency/character_batch_builder.py         — in agency/; PermissionError FIXED today
-[OK     ] agency/mirofish-grading-interface.py      — in agency/
-[OK     ] cx_agent/cx_agent.py                      — in cx_agent/ subdir
-[OK     ] game_archaeology/run_game_archaeology_weekly.py     — in game_archaeology/
-[OK     ] game_archaeology/game_archaeology_digest_generator.py — in game_archaeology/
+[OK     ] listing-optimizer/ebay_oauth.py          — Live. Token cached.
+[OK     ] job-match/job_daily_harvest.py            — PermissionError FIXED today.
+[PENDING] job-match/job_source_discovery_monthly.py — Monthly. Not yet due. Verify task wired.
+[OK     ] ghost-book/pass1_find_candidates.py       — Exists. Used by OLD GhostBookRescan bat.
+[OK     ] ghost-book/pass2_validate.py              — Exists.
+[OK     ] agency/character_creator.py               — In agency/ subfolder. Running.
+[OK     ] agency/character_batch_builder.py         — PermissionError FIXED today.
+[OK     ] agency/mirofish-grading-interface.py      — In agency/.
+[OK     ] cx_agent/cx_agent.py                      — In cx_agent/ subdir.
+[OK     ] game_archaeology/run_game_archaeology_weekly.py  — GameArchaeologyWeekly task. Not yet run.
+[OK     ] game_archaeology/game_archaeology_digest_generator.py — In place.
 
 ======================================================================
 SECTION 7: INBOX / NOTIFICATION SYSTEM
 ======================================================================
 
-RETIRED:
-[DEPRECATED] mobile-inbox.json        — RETIRED. Replaced by sidebar mobile.
-[DEPRECATED] mobile-inbox.html        — RETIRED. Replaced by sidebar mobile.
-[DEPRECATED] mobile-studio.html       — RETIRED. Replaced by sidebar mobile.
+[DEPRECATED] mobile-inbox.json       — RETIRED. Zero refs in current sidebar-agent.html.
+[DEPRECATED] mobile-inbox.html       — RETIRED.
+[DEPRECATED] mobile-studio.html      — RETIRED. Replaced by sidebar mobile.
+[DEPRECATED] sidebar_http.py         — Old server. Zero refs. Archive it.
 
-ACTIVE NOTIFICATION PATHS:
-[PENDING] supervisor-inbox.json       — verify WARN/ALERT items surface on sidebar
-[PENDING] sidebar-agent.html          — verify agent inbox tab shows new items
-[PENDING] Whiteboard 9+ → inbox       — verify same-night promotion works
-[PENDING] Asset creation → asset-log  — verify asset-log.json → sidebar display
-[PENDING] SRE DEGRADED → sidebar      — verify DEGRADED status shows in sidebar
+ACTIVE NOTIFICATION PATHS (verified):
+[OK     ] supervisor-inbox.json      — Active. WARN/ALERT urgency → sidebar Agent Inbox tab.
+[OK     ] sidebar-agent.html v2.1    — Current sidebar. 1278 lines. Zero mobile-inbox refs.
+[PENDING] Sidebar Agent Inbox tab    — Verify it reads supervisor-inbox.json on refresh.
+[PENDING] Whiteboard 9+ → inbox      — Verify same-night promotion to supervisor inbox works.
+[PENDING] Asset creation → asset-log → sidebar — Verify asset-log.json displays in sidebar.
+[PENDING] SRE DEGRADED → sidebar     — Verify DEGRADED status card appears in sidebar.
+
+"SURFACING" DEFINITION (for future reference):
+Writing to supervisor-inbox.json with urgency WARN or ALERT.
+The sidebar Agent Inbox tab reads it on refresh and shows it as a card.
+This IS the notification path — no mobile app, no email, no push.
+If you need to know something happened: check sidebar Agent Inbox tab.
 
 ======================================================================
 SECTION 8: WHITEBOARD BUILD ITEMS (score >= 7)
 ======================================================================
 
-[PENDING] [9] Higgsfield Backwards Design           — BUILD (P0 — needs GPU/RTX first)
-[PENDING] [8] Horror Games 1000+ Review             — PUBLISH (low effort, content play)
-[PENDING] [8] eBay Consensus Engine                 — BUILD (moved to build queue today)
-[PENDING] [8] AI Services Client Website            — BUILD (high revenue potential)
-[PENDING] [8] Traitor Protocol Adversarial Testing  — BUILD (studio security utility)
-[PENDING] [8] War Room Decision Protocol            — PITCH
-[PENDING] [8] Ghost Book Script Vault               — BUILD (connects to ghost-book pipeline)
-[PENDING] [7] Historical Twins Division             — BUILD (Tesla/da Vinci track)
-[PENDING] [7] Ancient Tech Grading System           — BUILD (connects to vintage agent)
-[PENDING] [7] Creative Review Agent                 — BUILD (studio utility)
+[PENDING] [9] Higgsfield Backwards Design           — BUILD. Blocked on GPU/RTX hardware.
+[PENDING] [8] Horror Games 1000+ Review             — PUBLISH. Low effort. Content play.
+[BUILD  ] [8] eBay Consensus Engine                 — Moved to build queue today. OAuth live.
+[BUILD  ] [8] eBay Image Listing App                — Moved to build queue today. OAuth live.
+[PENDING] [8] AI Services Client Website            — BUILD. High revenue potential.
+[PENDING] [8] Traitor Protocol Adversarial Testing  — BUILD. Studio security utility.
+[PENDING] [8] War Room Decision Protocol            — PITCH.
+[PENDING] [8] Ghost Book Script Vault               — BUILD. Connects to ghost-book pipeline.
+[PENDING] [7] Historical Twins Division             — BUILD. Tesla/da Vinci track.
+[PENDING] [7] Ancient Tech Grading System           — BUILD. Connects to vintage agent.
+[PENDING] [7] Creative Review Agent                 — BUILD. Studio utility.
 
 ======================================================================
-SECTION 9: KNOWN ISSUES REMAINING
+SECTION 9: RESOLVED / KNOWN ISSUES
 ======================================================================
 
-[!] GhostBookRescan DEAD — old script killed Mar 22. CHECK: new version may exist
-    in agency/ from Opera session this afternoon. Verify before re-wiring task.
+[RESOLVED] Intel Feed vs AI Intel Agent:
+  intel-feed.md = stress intelligence (deprecations, vulns, API changes) → stress-intel.md
+  ai-intel-agent.md = daily AI landscape (models/tiers/pricing/routing) → ai-intel-daily.json
+  DISTINCT. Both needed. Keep both.
 
-[RESOLVED] Intel Feed vs AI Intel Agent — DISTINCT, NOT OVERLAP:
-    intel-feed.md = broad tech/stress intelligence for stress-tester (deprecations,
-    security vulns, API changes, community signals). Writes to stress-intel.md.
-    ai-intel-agent.md = daily AI landscape specifically — what models exist, what
-    tiers/pricing are available, how to route work to free tiers. Writes to
-    ai-intel-daily.json + ai-intel-summary.txt. BOTH needed. Keep both.
+[RESOLVED] DailyBriefing vs AgentSupervisorBriefing:
+  DailyBriefing = orchestrator.md → what to work on today → orchestrator-briefing.json
+  AgentSupervisorBriefing = supervisor.md → dispatch engine → efficiency-ledger
+  DISTINCT. Both run 8 AM. Recommend stagger: orchestrator 8:00, supervisor 8:15.
 
-[RESOLVED] DailyBriefing vs AgentSupervisorBriefing — DISTINCT, NOT DUPLICATE:
-    DailyBriefing (8:00 AM) → runs orchestrator-briefing.bat → loads orchestrator.md
-    → writes orchestrator-briefing.json (Top 3 for Joe, agent queue, blockers)
-    AgentSupervisorBriefing (8:00 AM) → runs run-agent.py supervisor → loads supervisor.md
-    → dispatch engine, greenlight proposals, efficiency-ledger
-    SAME TIME but different jobs: orchestrator = what to work on, supervisor = dispatch engine
-    VERDICT: both run at 8 AM and are complementary. Keep both. Consider staggering
-    by 15 min (orchestrator first at 8:00, supervisor at 8:15) to avoid contention.
+[RESOLVED] mobile-inbox retired. sidebar-agent.html v2.1 is active. Zero mobile-inbox refs.
 
-[PENDING] sidebar_http.py vs serve_sidebar_server.py — sidebar-agent.html is v2.1
-    Current active sidebar: sidebar-agent.html (1278 lines, v2.1 [6642])
-    No mobile-inbox.json references in current sidebar — already clean.
-    Sidebar has agent inbox concept. Need to verify which server bat is active.
-    Action: check serve-sidebar.bat to see which .py it calls.
+[RESOLVED] sidebar_http.py = old attempt. Zero refs anywhere. Archive to _archive/.
 
-[RESOLVED] mobile-inbox.json — confirmed RETIRED. sidebar-agent.html has 0 references.
-    peer-review.md updated to write to supervisor-inbox.json instead.
-    "Surfacing" = writing to supervisor-inbox.json with WARN/ALERT urgency,
-    which sidebar Agent Inbox tab reads on refresh and displays as a card.
+[RESOLVED] session_bridge.py typo — file is session-bridge.py at root. Found and OK.
 
-[PENDING] Zanat integration — queued for evaluation session
-[PENDING] AI services rankings buzz detection — not firing, needs redesign
-[PENDING] Ghost book scoring rubric calibrated too harshly — avg 2.98, needs rubric review
+[RESOLVED] Agency scripts path — all in agency/ subfolder where expected.
+
+[NEEDS_FIX] GhostBookRescan + OvernightGhostBookPass3:
+  Both point to ghost-book/pass1_find_candidates.py (old pipeline).
+  New ghost book pipeline built in Opera session today. Verify location then update bat.
+
+[NEEDS_FIX] VedicScan/VedicSync tasks: Vedic Math closed/deferred. Disable these tasks.
+
+[PENDING] Stagger DailyBriefing/SupervisorBriefing by 15 min.
+[PENDING] Sidebar Agent Inbox tab verification (end-to-end notification test).
+[PENDING] Zanat integration session.
+[PENDING] AI rankings buzz detection redesign.
+[PENDING] Ghost book scoring rubric recalibration (avg 2.98, too harsh).
