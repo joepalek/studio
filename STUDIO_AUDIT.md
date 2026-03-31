@@ -161,10 +161,36 @@ SECTION 8: WHITEBOARD BUILD ITEMS (score >= 7)
 SECTION 9: KNOWN ISSUES REMAINING
 ======================================================================
 
-[!] GhostBookRescan DEAD — task fires but script was killed Mar 22
-[!] Intel Feed vs AI Intel Agent — two tasks, possible overlap, needs review
-[!] DailyBriefing vs AgentSupervisorBriefing — possible duplicate, needs review
-[!] sidebar_http.py vs serve_sidebar_server.py — two sidebar servers, clarify which is active
-[!] Zanat integration — queued for evaluation session
-[!] AI services rankings buzz detection — not firing, needs redesign
-[!] Ghost book scoring rubric calibrated too harshly — avg 2.98, needs rubric review
+[!] GhostBookRescan DEAD — old script killed Mar 22. CHECK: new version may exist
+    in agency/ from Opera session this afternoon. Verify before re-wiring task.
+
+[RESOLVED] Intel Feed vs AI Intel Agent — DISTINCT, NOT OVERLAP:
+    intel-feed.md = broad tech/stress intelligence for stress-tester (deprecations,
+    security vulns, API changes, community signals). Writes to stress-intel.md.
+    ai-intel-agent.md = daily AI landscape specifically — what models exist, what
+    tiers/pricing are available, how to route work to free tiers. Writes to
+    ai-intel-daily.json + ai-intel-summary.txt. BOTH needed. Keep both.
+
+[RESOLVED] DailyBriefing vs AgentSupervisorBriefing — DISTINCT, NOT DUPLICATE:
+    DailyBriefing (8:00 AM) → runs orchestrator-briefing.bat → loads orchestrator.md
+    → writes orchestrator-briefing.json (Top 3 for Joe, agent queue, blockers)
+    AgentSupervisorBriefing (8:00 AM) → runs run-agent.py supervisor → loads supervisor.md
+    → dispatch engine, greenlight proposals, efficiency-ledger
+    SAME TIME but different jobs: orchestrator = what to work on, supervisor = dispatch engine
+    VERDICT: both run at 8 AM and are complementary. Keep both. Consider staggering
+    by 15 min (orchestrator first at 8:00, supervisor at 8:15) to avoid contention.
+
+[PENDING] sidebar_http.py vs serve_sidebar_server.py — sidebar-agent.html is v2.1
+    Current active sidebar: sidebar-agent.html (1278 lines, v2.1 [6642])
+    No mobile-inbox.json references in current sidebar — already clean.
+    Sidebar has agent inbox concept. Need to verify which server bat is active.
+    Action: check serve-sidebar.bat to see which .py it calls.
+
+[RESOLVED] mobile-inbox.json — confirmed RETIRED. sidebar-agent.html has 0 references.
+    peer-review.md updated to write to supervisor-inbox.json instead.
+    "Surfacing" = writing to supervisor-inbox.json with WARN/ALERT urgency,
+    which sidebar Agent Inbox tab reads on refresh and displays as a card.
+
+[PENDING] Zanat integration — queued for evaluation session
+[PENDING] AI services rankings buzz detection — not firing, needs redesign
+[PENDING] Ghost book scoring rubric calibrated too harshly — avg 2.98, needs rubric review
