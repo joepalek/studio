@@ -10,7 +10,7 @@
       "WebXR",
       "Canvas overlay on video element"
     ],
-    "recommendation": "Canvas overlay \u00e2\u20ac\u201d broader mobile browser support, simpler implementation for MVP",
+    "recommendation": "Canvas overlay â€” broader mobile browser support, simpler implementation for MVP",
     "context": "",
     "auto_answer": "WebXR is the standard and generally preferred approach for true AR rendering, offering native access to pose tracking, device capabilities, and immersive experiences compared to a canvas overlay.",
     "resolved_by": "gemini-flash",
@@ -19,7 +19,7 @@
   {
     "id": "state-acuscan-ar-2533adce",
     "project": "acuscan-ar",
-    "question": "If hand tracking lags on older phones \u00e2\u20ac\u201d prioritize speed or visual accuracy?",
+    "question": "If hand tracking lags on older phones â€” prioritize speed or visual accuracy?",
     "type": "proactive",
     "status": "auto-resolved",
     "created": "2026-03-19",
@@ -58,22 +58,22 @@
   {
     "id": "state-arbitrage-pulse-efb8d39d",
     "project": "arbitrage-pulse",
-    "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
+    "question": "What geographic area to monitor â€” Tennessee local, Illinois local, or both?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
     "options": [
       "Tennessee (Atwood/McKenzie area)",
       "Illinois (Woodstock area)",
-      "Both \u00e2\u20ac\u201d separate digests"
+      "Both â€” separate digests"
     ],
-    "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
+    "recommendation": "Both with separate digests â€” you travel between both regularly",
     "context": ""
   },
   {
     "id": "state-arbitrage-pulse-ec3e8edf",
     "project": "arbitrage-pulse",
-    "question": "Scraping approach \u00e2\u20ac\u201d Apify Actor or direct browser automation via Chrome extension?",
+    "question": "Scraping approach â€” Apify Actor or direct browser automation via Chrome extension?",
     "type": "required",
     "status": "auto-resolved",
     "created": "2026-03-19",
@@ -81,7 +81,7 @@
       "Apify (paid, reliable, maintained)",
       "Chrome extension automation (free, may break with FB updates)"
     ],
-    "recommendation": "Start with Chrome extension automation \u00e2\u20ac\u201d free, and we already have it set up",
+    "recommendation": "Start with Chrome extension automation â€” free, and we already have it set up",
     "context": "",
     "auto_answer": "Apify Actor is generally more efficient for a solo developer's AI studio, as it handles infrastructure, proxies, and scaling, allowing focus on data utilization rather than scraping operations.",
     "resolved_by": "gemini-flash",
@@ -101,7 +101,7 @@
   {
     "id": "state-arbitrage-pulse-16662fe7",
     "project": "arbitrage-pulse",
-    "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
+    "question": "Minimum profit margin to include in digest â€” e.g. only show items with 40%+ margin?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -112,7 +112,7 @@
   {
     "id": "state-arbitrage-pulse-91bf5e20",
     "project": "arbitrage-pulse",
-    "question": "Digest delivery format \u00e2\u20ac\u201d Markdown file in Drive, email, or dashboard card?",
+    "question": "Digest delivery format â€” Markdown file in Drive, email, or dashboard card?",
     "type": "proactive",
     "status": "auto-resolved",
     "created": "2026-03-19",
@@ -126,16 +126,16 @@
   {
     "id": "state-hibid-analyzer-58575f97",
     "project": "hibid-analyzer",
-    "question": "Now that Chrome extension is available \u00e2\u20ac\u201d attempt textarea via extension first or continue investigating DOM approach?",
+    "question": "Now that Chrome extension is available â€” attempt textarea via extension first or continue investigating DOM approach?",
     "type": "required",
     "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
-      "Extension first \u00e2\u20ac\u201d highest probability of success",
-      "DOM investigation \u00e2\u20ac\u201d understand root cause first",
+      "Extension first â€” highest probability of success",
+      "DOM investigation â€” understand root cause first",
       "Both in parallel"
     ],
-    "recommendation": "Extension first \u00e2\u20ac\u201d Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
+    "recommendation": "Extension first â€” Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
     "context": "",
     "auto_answer": "Attempt the textarea interaction via the Chrome extension first. Extensions provide a more robust and privileged environment for web page interaction, often circumventing limitations faced by direct DOM manipulation.",
     "resolved_by": "gemini-flash",
@@ -211,7 +211,7 @@
   {
     "id": "state-job-match-379b1402",
     "project": "job-match",
-    "question": "For the scam database \u00e2\u20ac\u201d should it be private to your platform or eventually shared/open source?",
+    "question": "For the scam database â€” should it be private to your platform or eventually shared/open source?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -241,17 +241,17 @@
     "status": "pending",
     "created": "2026-03-19",
     "options": [
-      "Personal only \u00e2\u20ac\u201d optimize Joe's 572 listings",
+      "Personal only â€” optimize Joe's 572 listings",
       "Beta test with select sellers",
       "Full SaaS product"
     ],
-    "recommendation": "Personal first \u00e2\u20ac\u201d prove it works on your own inventory, then decide",
+    "recommendation": "Personal first â€” prove it works on your own inventory, then decide",
     "context": ""
   },
   {
     "id": "state-listing-optimizer-0b8aae0b",
     "project": "listing-optimizer",
-    "question": "Input format \u00e2\u20ac\u201d eBay bulk export CSV or manual entry or both?",
+    "question": "Input format â€” eBay bulk export CSV or manual entry or both?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
@@ -260,7 +260,7 @@
       "Manual entry only",
       "Both"
     ],
-    "recommendation": "eBay bulk export CSV \u00e2\u20ac\u201d you already have 572 listings to process",
+    "recommendation": "eBay bulk export CSV â€” you already have 572 listings to process",
     "context": ""
   },
   {
@@ -286,7 +286,7 @@
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Category-specific title rules \u00e2\u20ac\u201d e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first."
+    "context": "Category-specific title rules â€” e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first."
   },
   {
     "id": "state-listing-optimizer-2c74ef17",
@@ -302,7 +302,7 @@
   {
     "id": "state-nutrimind-86664a3a",
     "project": "nutrimind",
-    "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
+    "question": "What defines NutriMind as complete â€” what is the finish line?",
     "type": "required",
     "status": "pending",
     "created": "2026-03-19",
@@ -311,7 +311,7 @@
       "Personal use ready",
       "Productize for other users"
     ],
-    "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
+    "recommendation": "Define personal use ready first â€” then decide if productizing is worth the extra work",
     "context": ""
   },
   {
@@ -345,17 +345,17 @@
   {
     "id": "state-squeeze-empire-0ab2f8fb",
     "project": "squeeze-empire",
-    "question": "What defines late-game completion \u00e2\u20ac\u201d what is the win condition or final milestone?",
+    "question": "What defines late-game completion â€” what is the win condition or final milestone?",
     "type": "required",
     "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
       "Reach a revenue target",
       "Unlock all upgrades",
-      "No win condition \u00e2\u20ac\u201d infinite idle",
+      "No win condition â€” infinite idle",
       "Story ending"
     ],
-    "recommendation": "Reach a revenue target + unlock all upgrades \u00e2\u20ac\u201d gives clear progression and satisfying endpoint",
+    "recommendation": "Reach a revenue target + unlock all upgrades â€” gives clear progression and satisfying endpoint",
     "context": "",
     "auto_answer": "Late-game completion is defined by achieving the game's win condition or final milestone, which are the primary objectives or culminating events that signify the player's success and bring the main narrative or gameplay loop to a close.",
     "resolved_by": "gemini-flash",
@@ -375,7 +375,7 @@
   {
     "id": "state-squeeze-empire-f54344c9",
     "project": "squeeze-empire",
-    "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
+    "question": "After late-game is done â€” release publicly, keep personal, or productize?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-03-19",
@@ -395,7 +395,7 @@
       "Trust & Safety Agent",
       "CX Agent Overnight"
     ],
-    "recommendation": "Trust & Safety Agent \u00e2\u20ac\u201d best alignment with moderation background and written communication preference",
+    "recommendation": "Trust & Safety Agent â€” best alignment with moderation background and written communication preference",
     "context": ""
   },
   {
@@ -460,7 +460,7 @@
     "id": "wb-top-ebay-identifier-app",
     "type": "whiteboard_top10",
     "project": "_studio",
-    "question": "[#4 WHITEBOARD] eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
+    "question": "[#4 WHITEBOARD] eBay Item Identifier â€” Consensus Engine",
     "context": "BUILD | Score: 8/10 | Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generation (RAG) make this complex multi-modal identification feasible, while the reseller market remains eager for AI-driven efficiency. | Est: months | Revenue: MEDIUM | Risk: The sheer complexity and data acquisition challenge for comprehensive 'archive RAG' and fine-tuned VLM attribute extraction could make it prohibitively expensive or technically unachievable to a high standard.",
     "decision_type": "proactive",
     "priority": "high",
@@ -526,7 +526,7 @@
     "id": "wb-top-nost-0025",
     "type": "whiteboard_top10",
     "project": "_studio",
-    "question": "[#10 WHITEBOARD] Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
+    "question": "[#10 WHITEBOARD] Remember when you didnâ€™t have to enter your personal info online to win a soda?",
     "context": "PUBLISH | Score: 7/10 | In 2026, increasing AI data demands and persistent privacy concerns will amplify the nostalgia for low-stakes, data-free interactions, making this topic highly resonant. | Est: months | Revenue: NICHE | Risk: Failing to move beyond anecdotal nostalgia to provide deeper insights or a compelling narrative about the societal shift.",
     "decision_type": "proactive",
     "priority": "medium",
@@ -548,7 +548,7 @@
     "id": "wb-top-higgsfield-backwards-design",
     "type": "whiteboard_top10",
     "project": "_studio",
-    "question": "[#1 WHITEBOARD] Higgsfield Original Series \u2014 Backwards Design",
+    "question": "[#1 WHITEBOARD] Higgsfield Original Series — Backwards Design",
     "context": "BUILD | Score: 9/10 | Data-driven niche content creation and short-form distribution are key to success for new creators today. | Est: months | Revenue: MEDIUM | Risk: Success is highly dependent on accurately identifying viable niches and winning contests.",
     "decision_type": "proactive",
     "priority": "high",
@@ -576,5 +576,22 @@
     "priority": "high",
     "created": "2026-03-31T02:00:02.141658",
     "status": "pending"
+  },
+  {
+    "id": "idea-ebay-listing-creator-2026-03-31",
+    "project": "_studio",
+    "type": "new_project_idea",
+    "title": "eBay Listing Creator",
+    "question": "Should we create a new project for eBay listing creation — separate from Listing Optimizer?",
+    "context": "Joe mentioned needing a listing/lookup project for CREATION of new eBay listings (vs Listing Optimizer which handles bulk optimization of existing listings via CSV). Two related tools: (1) Listing Creator — guided flow for creating new listings from scratch, potentially photo-driven. (2) Visual Inventory Lookup — dynamic Google Photos-style browser of Joe's inventory. Both complement Listing Optimizer. Could be one project or two. Joe has 572+ active listings on joedealsonline.",
+    "status": "pending",
+    "created": "2026-03-31",
+    "tags": [
+      "ebay",
+      "new-project",
+      "inventory",
+      "visual-lookup"
+    ],
+    "source": "joe-session-2026-03-31"
   }
 ]
