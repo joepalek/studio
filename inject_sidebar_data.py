@@ -63,8 +63,9 @@ wb_top = [sanitize({"title": i.get("title",""), "description": (i.get("descripti
 intel_clean = intel_summary.encode("ascii","replace").decode("ascii")[:2000].replace("\\","\\\\").replace("`","'")
 assets_clean = sanitize(asset_log.get("assets",[]))
 services_clean = sanitize(services.get("categories",{}))
+services_date  = services.get("date", today)
 
-injected_json = json.dumps({"generated": now_iso, "inbox": inbox_items, "whiteboard": wb_top, "assets": assets_clean, "services": services_clean, "servicesDate": services.get("date",today), "intelSummary": intel_clean}, ensure_ascii=True)
+injected_json = json.dumps({"generated": now_iso, "inbox": inbox_items, "whiteboard": wb_top, "assets": assets_clean, "services": services_clean, "servicesDate": services_date, "intelSummary": intel_clean}, ensure_ascii=True)
 
 new_script_tag = (
     '<script>\n'
