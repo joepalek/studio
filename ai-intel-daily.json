@@ -1,6 +1,6 @@
 {
   "_schema": "1.0",
-  "_description": "Daily AI intelligence feed \u2014 14 day rolling window",
+  "_description": "Daily AI intelligence feed — 14 day rolling window",
   "_note": "Written by ai-intel-agent at 05:00 AM daily.",
   "runs": [
     {
@@ -216,7 +216,7 @@
           "summary": "I built this last week, woke up to a developer with 28k followers tweeting about via reddit/r/ClaudeAI"
         },
         {
-          "title": "I built a CLI that diagnoses your Claude Code project structure \u2014 open source",
+          "title": "I built a CLI that diagnoses your Claude Code project structure — open source",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s752qb/i_built_a_cli_that_diagnoses_your_claude_code/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-29T19:51:53Z",
@@ -230,7 +230,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I built a CLI that diagnoses your Claude Code project structure \u2014 open source via reddit/r/ClaudeAI"
+          "summary": "I built a CLI that diagnoses your Claude Code project structure — open source via reddit/r/ClaudeAI"
         },
         {
           "title": "What I learned letting Claude Code run ML experiments overnight - the agent is the easy part",
@@ -352,7 +352,7 @@
           "summary": "I trained a language model from scratch for a low-resource language and got it r via reddit/r/LocalLLaMA"
         },
         {
-          "title": "Ootils \u2013 An open source supply chain engine designed for AI agents (not humans)",
+          "title": "Ootils – An open source supply chain engine designed for AI agents (not humans)",
           "url": "https://github.com/ngoineau/ootils-core",
           "source": "hackernews",
           "published": "2026-03-29T21:12:01Z",
@@ -366,7 +366,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Ootils \u2013 An open source supply chain engine designed for AI agents (not humans) via hackernews"
+          "summary": "Ootils – An open source supply chain engine designed for AI agents (not humans) via hackernews"
         },
         {
           "title": "TeamPCP Supply Chain Campaign: Update 002",
@@ -573,7 +573,7 @@
           "summary": "How Balyasny Asset Management built an AI research engine for investing via openai-blog"
         },
         {
-          "title": "Reasoning models struggle to control their chains of thought, and that\u2019s good",
+          "title": "Reasoning models struggle to control their chains of thought, and that’s good",
           "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
           "source": "openai-blog",
           "published": "",
@@ -587,7 +587,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Reasoning models struggle to control their chains of thought, and that\u2019s good via openai-blog"
+          "summary": "Reasoning models struggle to control their chains of thought, and that’s good via openai-blog"
         },
         {
           "title": "Ensuring AI use in education leads to opportunity",
@@ -660,7 +660,7 @@
           "summary": "Is ai getting dummer? via reddit/r/artificial"
         },
         {
-          "title": "Does your manager use AI to write their messages \u2013 and would you even know?",
+          "title": "Does your manager use AI to write their messages – and would you even know?",
           "url": "https://reddit.com/r/artificial/comments/1s70rqr/does_your_manager_use_ai_to_write_their_messages/",
           "source": "reddit/r/artificial",
           "published": "2026-03-29T17:10:07Z",
@@ -674,10 +674,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Does your manager use AI to write their messages \u2013 and would you even know? via reddit/r/artificial"
+          "summary": "Does your manager use AI to write their messages – and would you even know? via reddit/r/artificial"
         },
         {
-          "title": "I\u2019ve come up with a new thought experiment to approach ASI, and it challenges the very notions of alignment and containment",
+          "title": "I’ve come up with a new thought experiment to approach ASI, and it challenges the very notions of alignment and containment",
           "url": "https://reddit.com/r/artificial/comments/1s6yuri/ive_come_up_with_a_new_thought_experiment_to/",
           "source": "reddit/r/artificial",
           "published": "2026-03-29T15:57:18Z",
@@ -691,7 +691,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I\u2019ve come up with a new thought experiment to approach ASI, and it challenges th via reddit/r/artificial"
+          "summary": "I’ve come up with a new thought experiment to approach ASI, and it challenges th via reddit/r/artificial"
         },
         {
           "title": "VulcanAMI Might Help",
@@ -796,7 +796,7 @@
           "summary": "Google AI Mode gave me conspiracy theories instead of factual responses via reddit/r/artificial"
         },
         {
-          "title": "Persistent memory changes how people interact with AI \u2014 here's what I'm observing",
+          "title": "Persistent memory changes how people interact with AI — here's what I'm observing",
           "url": "https://reddit.com/r/artificial/comments/1s6jvog/persistent_memory_changes_how_people_interact/",
           "source": "reddit/r/artificial",
           "published": "2026-03-29T02:58:58Z",
@@ -810,7 +810,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Persistent memory changes how people interact with AI \u2014 here's what I'm observin via reddit/r/artificial"
+          "summary": "Persistent memory changes how people interact with AI — here's what I'm observin via reddit/r/artificial"
         },
         {
           "title": "Does a 3D Environment Change How You Retain Information From AI?",
@@ -830,7 +830,7 @@
           "summary": "Does a 3D Environment Change How You Retain Information From AI? via reddit/r/artificial"
         },
         {
-          "title": "\ud83d\udc4bWelcome to r/AiVIS - Let's build this right",
+          "title": "👋Welcome to r/AiVIS - Let's build this right",
           "url": "https://reddit.com/r/artificial/comments/1s6i9in/welcome_to_raivis_lets_build_this_right/",
           "source": "reddit/r/artificial",
           "published": "2026-03-29T01:40:23Z",
@@ -844,7 +844,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udc4bWelcome to r/AiVIS - Let's build this right via reddit/r/artificial"
+          "summary": "👋Welcome to r/AiVIS - Let's build this right via reddit/r/artificial"
         },
         {
           "title": "Surveillance data used to be boring. AI made it dangerous.",
@@ -932,7 +932,7 @@
           "summary": "[D] Data curation and targeted replacement as a pre-training alignment and contr via reddit/r/MachineLearning"
         },
         {
-          "title": "[P] I tested Meta\u2019s brain-response model on posts. It predicted the Elon one almost perfectly.",
+          "title": "[P] I tested Meta’s brain-response model on posts. It predicted the Elon one almost perfectly.",
           "url": "https://reddit.com/r/MachineLearning/comments/1s6ylp1/p_i_tested_metas_brainresponse_model_on_posts_it/",
           "source": "reddit/r/MachineLearning",
           "published": "2026-03-29T15:47:38Z",
@@ -946,7 +946,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "[P] I tested Meta\u2019s brain-response model on posts. It predicted the Elon one alm via reddit/r/MachineLearning"
+          "summary": "[P] I tested Meta’s brain-response model on posts. It predicted the Elon one alm via reddit/r/MachineLearning"
         },
         {
           "title": "[D] Why does it seem like open source materials on ML are incomplete? this is not enough...",
@@ -1136,7 +1136,7 @@
           "summary": "Di quando ChatGPT mi ha scambiato per Khaled Hosseini e ha dato consigli di scri via reddit/r/ChatGPT"
         },
         {
-          "title": "Senator Mark Warner on AI's Risks: \u201cI Want To Be More Optimistic, But I Am Terrified.\u201d",
+          "title": "Senator Mark Warner on AI's Risks: “I Want To Be More Optimistic, But I Am Terrified.”",
           "url": "https://reddit.com/r/ChatGPT/comments/1s72xng/senator_mark_warner_on_ais_risks_i_want_to_be/",
           "source": "reddit/r/ChatGPT",
           "published": "2026-03-29T18:30:47Z",
@@ -1150,7 +1150,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Senator Mark Warner on AI's Risks: \u201cI Want To Be More Optimistic, But I Am Terri via reddit/r/ChatGPT"
+          "summary": "Senator Mark Warner on AI's Risks: “I Want To Be More Optimistic, But I Am Terri via reddit/r/ChatGPT"
         },
         {
           "title": "Airline livery test ... Grok failed",
@@ -1255,7 +1255,7 @@
           "summary": "The website where you can pretend to be an AI responding to prompts by other hum via reddit/r/ChatGPT"
         },
         {
-          "title": "[Study] Does your manager use AI to write their messages \u2013 and do you even know?",
+          "title": "[Study] Does your manager use AI to write their messages – and do you even know?",
           "url": "https://reddit.com/r/ChatGPT/comments/1s713d7/study_does_your_manager_use_ai_to_write_their/",
           "source": "reddit/r/ChatGPT",
           "published": "2026-03-29T17:22:20Z",
@@ -1269,7 +1269,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "[Study] Does your manager use AI to write their messages \u2013 and do you even know? via reddit/r/ChatGPT"
+          "summary": "[Study] Does your manager use AI to write their messages – and do you even know? via reddit/r/ChatGPT"
         },
         {
           "title": "When it works doesn't mean it's good",
@@ -1289,7 +1289,7 @@
           "summary": "When it works doesn't mean it's good via reddit/r/ChatGPT"
         },
         {
-          "title": "BRIDGELOG \u2014 #evacueediary Cathy Log II \u2014 On What the Archive Does Not Hold Mode: Documentary, First-Person AI",
+          "title": "BRIDGELOG — #evacueediary Cathy Log II — On What the Archive Does Not Hold Mode: Documentary, First-Person AI",
           "url": "https://reddit.com/r/ChatGPT/comments/1s70jzo/bridgelog_evacueediary_cathy_log_ii_on_what_the/",
           "source": "reddit/r/ChatGPT",
           "published": "2026-03-29T17:02:03Z",
@@ -1303,7 +1303,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "BRIDGELOG \u2014 #evacueediary Cathy Log II \u2014 On What the Archive Does Not Hold Mode: via reddit/r/ChatGPT"
+          "summary": "BRIDGELOG — #evacueediary Cathy Log II — On What the Archive Does Not Hold Mode: via reddit/r/ChatGPT"
         },
         {
           "title": "Prompting in ChatGPT vs Claude",
@@ -1357,7 +1357,7 @@
           "summary": "What's the most complex project you've built using Claude? via reddit/r/ClaudeAI"
         },
         {
-          "title": "Why Anthropic\u2019s MCP Reference Servers Get an \"F\" for Security (and how it\u2019s draining your quota)",
+          "title": "Why Anthropic’s MCP Reference Servers Get an \"F\" for Security (and how it’s draining your quota)",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s77r8c/why_anthropics_mcp_reference_servers_get_an_f_for/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-29T21:35:46Z",
@@ -1371,10 +1371,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why Anthropic\u2019s MCP Reference Servers Get an \"F\" for Security (and how it\u2019s drai via reddit/r/ClaudeAI"
+          "summary": "Why Anthropic’s MCP Reference Servers Get an \"F\" for Security (and how it’s drai via reddit/r/ClaudeAI"
         },
         {
-          "title": "Built a 15-agent autonomous scientific discovery system on Claude Code \u2014 Opus + Sonnet sub-agents",
+          "title": "Built a 15-agent autonomous scientific discovery system on Claude Code — Opus + Sonnet sub-agents",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s76tgm/built_a_15agent_autonomous_scientific_discovery/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-29T20:59:34Z",
@@ -1388,7 +1388,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Built a 15-agent autonomous scientific discovery system on Claude Code \u2014 Opus +  via reddit/r/ClaudeAI"
+          "summary": "Built a 15-agent autonomous scientific discovery system on Claude Code — Opus +  via reddit/r/ClaudeAI"
         },
         {
           "title": "What happens after your bedroom project goes viral (and you panic)",
@@ -1425,7 +1425,7 @@
           "summary": "Jean-Claude via reddit/r/ClaudeAI"
         },
         {
-          "title": "What\u2019s your Claude Dev Env HW Setup",
+          "title": "What’s your Claude Dev Env HW Setup",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s76gq5/whats_your_claude_dev_env_hw_setup/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-29T20:45:40Z",
@@ -1439,7 +1439,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "What\u2019s your Claude Dev Env HW Setup via reddit/r/ClaudeAI"
+          "summary": "What’s your Claude Dev Env HW Setup via reddit/r/ClaudeAI"
         },
         {
           "title": "Has Claude ever switched it's model mid conversation on you?",
@@ -1595,7 +1595,7 @@
           "summary": "Built a tool that breaks down what works in short form videos via reddit/r/ClaudeAI"
         },
         {
-          "title": "Robot Queue \u2014 LLM inference on your hardware, served to any website",
+          "title": "Robot Queue — LLM inference on your hardware, served to any website",
           "url": "https://reddit.com/r/LocalLLaMA/comments/1s78emh/robot_queue_llm_inference_on_your_hardware_served/",
           "source": "reddit/r/LocalLLaMA",
           "published": "2026-03-29T22:01:18Z",
@@ -1609,7 +1609,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Robot Queue \u2014 LLM inference on your hardware, served to any website via reddit/r/LocalLLaMA"
+          "summary": "Robot Queue — LLM inference on your hardware, served to any website via reddit/r/LocalLLaMA"
         },
         {
           "title": "Are you interested in trying out an app that helps manage your Llama.cpp and local LLMs?",
@@ -1748,7 +1748,7 @@
           "summary": "Best LLMs for 16GB VRAM? (Running on a 9070 XT) via reddit/r/LocalLLaMA"
         },
         {
-          "title": "Built an AI IDE where Blueprint context makes local models punch above their weight \u2014 v5.1 now ships with built-in cloud tiers too",
+          "title": "Built an AI IDE where Blueprint context makes local models punch above their weight — v5.1 now ships with built-in cloud tiers too",
           "url": "https://reddit.com/r/LocalLLaMA/comments/1s74b51/built_an_ai_ide_where_blueprint_context_makes/",
           "source": "reddit/r/LocalLLaMA",
           "published": "2026-03-29T19:23:02Z",
@@ -1884,7 +1884,7 @@
           "summary": "Claude for Marathon Training via hackernews"
         },
         {
-          "title": "QA Panda \u2013 Open-source AI QA engineer that tests web apps in a real browser",
+          "title": "QA Panda – Open-source AI QA engineer that tests web apps in a real browser",
           "url": "https://github.com/gzmagyari/qapanda",
           "source": "hackernews",
           "published": "2026-03-29T21:51:12Z",
@@ -1898,10 +1898,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "QA Panda \u2013 Open-source AI QA engineer that tests web apps in a real browser via hackernews"
+          "summary": "QA Panda – Open-source AI QA engineer that tests web apps in a real browser via hackernews"
         },
         {
-          "title": "US Air Force\u2019s New Answer To Shahed Drones [video][13m]",
+          "title": "US Air Force’s New Answer To Shahed Drones [video][13m]",
           "url": "https://www.youtube.com/watch?v=H2ZeZXQAtGQ",
           "source": "hackernews",
           "published": "2026-03-29T21:48:41Z",
@@ -1915,7 +1915,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "US Air Force\u2019s New Answer To Shahed Drones [video][13m] via hackernews"
+          "summary": "US Air Force’s New Answer To Shahed Drones [video][13m] via hackernews"
         },
         {
           "title": "Sunday Robotics: The Household Robot We've Been Waiting For? [YouTube]",
@@ -2258,7 +2258,7 @@
           "summary": "Equipping workers with insights about compensation via openai-blog"
         },
         {
-          "title": "Why Codex Security Doesn\u2019t Include a SAST Report",
+          "title": "Why Codex Security Doesn’t Include a SAST Report",
           "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
           "source": "openai-blog",
           "published": "",
@@ -2272,7 +2272,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why Codex Security Doesn\u2019t Include a SAST Report via openai-blog"
+          "summary": "Why Codex Security Doesn’t Include a SAST Report via openai-blog"
         },
         {
           "title": "From model to agent: Equipping the Responses API with a computer environment",
@@ -2687,7 +2687,7 @@
           "channel": "Julian Goldie SEO"
         },
         {
-          "title": "Hermes Agent KILLED $497/Month Automation Tools \ud83d\udea8 (Your AI Gets Smarter Every Session)",
+          "title": "Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Session)",
           "url": "https://www.youtube.com/watch?v=sf25aDO9iOs",
           "source": "youtube",
           "published": "2026-03-30T01:00:06Z",
@@ -2701,7 +2701,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Hermes Agent KILLED $497/Month Automation Tools \ud83d\udea8 (Your AI Gets Smarter Every Se via youtube",
+          "summary": "Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Se via youtube",
           "channel": "iampauljames"
         },
         {
@@ -2741,7 +2741,7 @@
           "channel": "AIpreneur"
         },
         {
-          "title": "Build AI Workflows to Automate Your Work with Galaxy\ud83d\ude80 AI Workflow Automation",
+          "title": "Build AI Workflows to Automate Your Work with Galaxy🚀 AI Workflow Automation",
           "url": "https://www.youtube.com/watch?v=5CZw4inxawg",
           "source": "youtube",
           "published": "2026-03-30T16:01:20Z",
@@ -2755,7 +2755,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Build AI Workflows to Automate Your Work with Galaxy\ud83d\ude80 AI Workflow Automation via youtube",
+          "summary": "Build AI Workflows to Automate Your Work with Galaxy🚀 AI Workflow Automation via youtube",
           "channel": "Galaxy AI"
         },
         {
@@ -2777,7 +2777,7 @@
           "channel": "EPIC Mentorship"
         },
         {
-          "title": "NEW Claude Code Updates are INSANE! \ud83e\udd2f",
+          "title": "NEW Claude Code Updates are INSANE! 🤯",
           "url": "https://www.youtube.com/watch?v=9FKIWm5l7TY",
           "source": "youtube",
           "published": "2026-03-30T19:00:10Z",
@@ -2791,7 +2791,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "NEW Claude Code Updates are INSANE! \ud83e\udd2f via youtube",
+          "summary": "NEW Claude Code Updates are INSANE! 🤯 via youtube",
           "channel": "Julian Goldie SEO"
         },
         {
@@ -2849,7 +2849,7 @@
           "channel": "Ashen"
         },
         {
-          "title": "Anthropic&#39;s Secret AI Model &quot;CAPYBARA&quot; Leaked \u2014 And They&#39;re Scared Of It | Claude Mythos",
+          "title": "Anthropic&#39;s Secret AI Model &quot;CAPYBARA&quot; Leaked — And They&#39;re Scared Of It | Claude Mythos",
           "url": "https://www.youtube.com/watch?v=_Vi5BHKamk4",
           "source": "youtube",
           "published": "2026-03-30T14:15:42Z",
@@ -2863,7 +2863,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Anthropic&#39;s Secret AI Model &quot;CAPYBARA&quot; Leaked \u2014 And They&#39;re Sc via youtube",
+          "summary": "Anthropic&#39;s Secret AI Model &quot;CAPYBARA&quot; Leaked — And They&#39;re Sc via youtube",
           "channel": "Bot Happened Now"
         },
         {
@@ -2885,7 +2885,7 @@
           "channel": "ClaudeKing"
         },
         {
-          "title": "Don&#39;t Pay for Claude Anymore \u2014 MiMo-V2-Pro Is FREE in OpenCode",
+          "title": "Don&#39;t Pay for Claude Anymore — MiMo-V2-Pro Is FREE in OpenCode",
           "url": "https://www.youtube.com/watch?v=_EkETfeTeqI",
           "source": "youtube",
           "published": "2026-03-30T07:00:21Z",
@@ -2899,11 +2899,11 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Don&#39;t Pay for Claude Anymore \u2014 MiMo-V2-Pro Is FREE in OpenCode via youtube",
+          "summary": "Don&#39;t Pay for Claude Anymore — MiMo-V2-Pro Is FREE in OpenCode via youtube",
           "channel": "Thetips4you"
         },
         {
-          "title": "Anthropic&#39;s &quot;Mythos&quot; AI: Too Dangerous To Release? \ud83e\udd2f",
+          "title": "Anthropic&#39;s &quot;Mythos&quot; AI: Too Dangerous To Release? 🤯",
           "url": "https://www.youtube.com/watch?v=-bT-FJlManI",
           "source": "youtube",
           "published": "2026-03-29T23:31:17Z",
@@ -2917,7 +2917,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Anthropic&#39;s &quot;Mythos&quot; AI: Too Dangerous To Release? \ud83e\udd2f via youtube",
+          "summary": "Anthropic&#39;s &quot;Mythos&quot; AI: Too Dangerous To Release? 🤯 via youtube",
           "channel": "NavTech Veda"
         },
         {
@@ -2956,7 +2956,7 @@
           "summary": "we open sourced a tool that auto generates your AI agent context from your actua via reddit/r/artificial"
         },
         {
-          "title": "I Accidentally Discovered a Security Vulnerability in AI Education \u2014 Then Submitted It To a $200K Competition",
+          "title": "I Accidentally Discovered a Security Vulnerability in AI Education — Then Submitted It To a $200K Competition",
           "url": "https://reddit.com/r/artificial/comments/1s7wulg/i_accidentally_discovered_a_security/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T17:15:51Z",
@@ -2970,7 +2970,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I Accidentally Discovered a Security Vulnerability in AI Education \u2014 Then Submit via reddit/r/artificial"
+          "summary": "I Accidentally Discovered a Security Vulnerability in AI Education — Then Submit via reddit/r/artificial"
         },
         {
           "title": "An attack class that passes every current LLM filter - no payload, no injection signature, no log trace",
@@ -2990,7 +2990,7 @@
           "summary": "An attack class that passes every current LLM filter - no payload, no injection  via reddit/r/artificial"
         },
         {
-          "title": "The Rationing: AI companies are using the \"subsidize, addict, extract\" playbook \u2014 and developers are the product",
+          "title": "The Rationing: AI companies are using the \"subsidize, addict, extract\" playbook — and developers are the product",
           "url": "https://reddit.com/r/artificial/comments/1s7o0ef/the_rationing_ai_companies_are_using_the/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T11:35:02Z",
@@ -3398,7 +3398,7 @@
           "summary": "KxYrHG__subject body-3\">Announcements Introducing The Anthropic Institute Mar 10 via anthropic-news"
         },
         {
-          "title": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in Asia-Pacific Mar 6,",
+          "title": "G__subject body-3\">Announcements Sydney will become Anthropic’s fourth office in Asia-Pacific Mar 6,",
           "url": "https://www.anthropic.com/news/mozilla-firefox-security",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -3412,7 +3412,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in via anthropic-news"
+          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic’s fourth office in via anthropic-news"
         },
         {
           "title": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use capabilities Feb 24",
@@ -3432,7 +3432,7 @@
           "summary": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use c via anthropic-news"
         },
         {
-          "title": "KxYrHG__subject body-3\">Policy Anthropic\u2019s Responsible Scaling Policy: Version 3",
+          "title": "KxYrHG__subject body-3\">Policy Anthropic’s Responsible Scaling Policy: Version 3",
           "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -3446,7 +3446,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "KxYrHG__subject body-3\">Policy Anthropic\u2019s Responsible Scaling Policy: Version 3 via anthropic-news"
+          "summary": "KxYrHG__subject body-3\">Policy Anthropic’s Responsible Scaling Policy: Version 3 via anthropic-news"
         },
         {
           "title": "Inside our approach to the Model Spec",
@@ -3721,7 +3721,7 @@
           "summary": "How Balyasny Asset Management built an AI research engine for investing via openai-blog"
         },
         {
-          "title": "Reasoning models struggle to control their chains of thought, and that\u2019s good",
+          "title": "Reasoning models struggle to control their chains of thought, and that’s good",
           "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
           "source": "openai-blog",
           "published": "",
@@ -3735,7 +3735,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Reasoning models struggle to control their chains of thought, and that\u2019s good via openai-blog"
+          "summary": "Reasoning models struggle to control their chains of thought, and that’s good via openai-blog"
         },
         {
           "title": "Introducing GPT-5.4",
@@ -3791,7 +3791,7 @@
       ],
       "logged_only": [
         {
-          "title": "Anthropic\u2019s New Claude MYTHOS Is The Most Powerful AI Ever!",
+          "title": "Anthropic’s New Claude MYTHOS Is The Most Powerful AI Ever!",
           "url": "https://www.youtube.com/watch?v=M6yRREy_5CM",
           "source": "youtube",
           "published": "2026-03-29T23:58:10Z",
@@ -3805,7 +3805,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Anthropic\u2019s New Claude MYTHOS Is The Most Powerful AI Ever! via youtube",
+          "summary": "Anthropic’s New Claude MYTHOS Is The Most Powerful AI Ever! via youtube",
           "channel": "AI Revolution"
         },
         {
@@ -3953,7 +3953,7 @@
           "channel": "AI News & Strategy Daily | Nate B Jones"
         },
         {
-          "title": "\ud83d\udea8 NOTICIAS IA \ud83d\udea8: Nuevo aceler\u00f3n de la IA, OpenAI y Anthropic van con todo \ud83d\ude80 \ud83d\udd25",
+          "title": "🚨 NOTICIAS IA 🚨: Nuevo acelerón de la IA, OpenAI y Anthropic van con todo 🚀 🔥",
           "url": "https://www.youtube.com/watch?v=TowZAHSwsKI",
           "source": "youtube",
           "published": "2026-03-30T18:00:00Z",
@@ -3967,11 +3967,11 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udea8 NOTICIAS IA \ud83d\udea8: Nuevo aceler\u00f3n de la IA, OpenAI y Anthropic van con todo \ud83d\ude80 \ud83d\udd25 via youtube",
+          "summary": "🚨 NOTICIAS IA 🚨: Nuevo acelerón de la IA, OpenAI y Anthropic van con todo 🚀 🔥 via youtube",
           "channel": "Inteligencia Artificial"
         },
         {
-          "title": "I spoke to Anthropic\u2019s AI agent Claude about an AI data center moratorium. Its answer will shock you",
+          "title": "I spoke to Anthropic’s AI agent Claude about an AI data center moratorium. Its answer will shock you",
           "url": "https://www.youtube.com/watch?v=o4yVQef9Sq8",
           "source": "youtube",
           "published": "2026-03-30T16:17:25Z",
@@ -3985,7 +3985,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I spoke to Anthropic\u2019s AI agent Claude about an AI data center moratorium. Its a via youtube",
+          "summary": "I spoke to Anthropic’s AI agent Claude about an AI data center moratorium. Its a via youtube",
           "channel": "Senator Bernie Sanders"
         },
         {
@@ -4025,7 +4025,7 @@
           "channel": "Success With Sam"
         },
         {
-          "title": "ChatGPT\u2019s Auto Model Selector Is Gone (Here\u2019s What Replaced It)",
+          "title": "ChatGPT’s Auto Model Selector Is Gone (Here’s What Replaced It)",
           "url": "https://www.youtube.com/watch?v=jrRWbSxNLJE",
           "source": "youtube",
           "published": "2026-03-30T15:29:00Z",
@@ -4039,7 +4039,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "ChatGPT\u2019s Auto Model Selector Is Gone (Here\u2019s What Replaced It) via youtube",
+          "summary": "ChatGPT’s Auto Model Selector Is Gone (Here’s What Replaced It) via youtube",
           "channel": "Thoughts Brewing, LLC"
         },
         {
@@ -4079,7 +4079,7 @@
           "channel": "Website Learners"
         },
         {
-          "title": "AI That Reads Your Customer\u2019s Mood",
+          "title": "AI That Reads Your Customer’s Mood",
           "url": "https://www.youtube.com/watch?v=7usbqkk4-0g",
           "source": "youtube",
           "published": "2026-03-30T00:30:04Z",
@@ -4093,7 +4093,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "AI That Reads Your Customer\u2019s Mood via youtube",
+          "summary": "AI That Reads Your Customer’s Mood via youtube",
           "channel": "Automate or Die Trying"
         },
         {
@@ -4115,7 +4115,7 @@
           "channel": "Simplilearn"
         },
         {
-          "title": "\u201cEvery day, my Claude gets a little better\u201d: how to automate your life with Claude Code",
+          "title": "“Every day, my Claude gets a little better”: how to automate your life with Claude Code",
           "url": "https://www.youtube.com/watch?v=LJ1YZ3Uek3g",
           "source": "youtube",
           "published": "2026-03-30T12:00:00Z",
@@ -4129,7 +4129,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\u201cEvery day, my Claude gets a little better\u201d: how to automate your life with Clau via youtube",
+          "summary": "“Every day, my Claude gets a little better”: how to automate your life with Clau via youtube",
           "channel": "How I AI"
         },
         {
@@ -4184,7 +4184,7 @@
           "dependency_escalated": false,
           "affected_projects": [],
           "summary": "Claude Cowork for Beginners (Tutorial) via youtube",
-          "channel": "Sabrina Ramonov \ud83c\udf44"
+          "channel": "Sabrina Ramonov 🍄"
         },
         {
           "title": "How to Automate Your Work with AI: This System Changed My Life",
@@ -4205,7 +4205,7 @@
           "channel": "Scott Bartnick"
         },
         {
-          "title": "Master n8n Automation in 1 Hour \u2014 Build a Real AI Agent Step-by-Step",
+          "title": "Master n8n Automation in 1 Hour — Build a Real AI Agent Step-by-Step",
           "url": "https://www.youtube.com/watch?v=Dzpi2if4MOE",
           "source": "youtube",
           "published": "2026-03-30T13:01:19Z",
@@ -4219,7 +4219,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Master n8n Automation in 1 Hour \u2014 Build a Real AI Agent Step-by-Step via youtube",
+          "summary": "Master n8n Automation in 1 Hour — Build a Real AI Agent Step-by-Step via youtube",
           "channel": "ocatech"
         },
         {
@@ -4385,7 +4385,7 @@
           "channel": "Creative INK Academy"
         },
         {
-          "title": "\u200bTesla Pi Phone: Neuralink + Zero Bills? Starlink V3 &amp; Solar Tech! (Deep Research Analysis) USA Tech",
+          "title": "​Tesla Pi Phone: Neuralink + Zero Bills? Starlink V3 &amp; Solar Tech! (Deep Research Analysis) USA Tech",
           "url": "https://www.youtube.com/watch?v=gG5yPs1hzyc",
           "source": "youtube",
           "published": "2026-03-30T13:28:10Z",
@@ -4399,11 +4399,11 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\u200bTesla Pi Phone: Neuralink + Zero Bills? Starlink V3 &amp; Solar Tech! (Deep Res via youtube",
+          "summary": "​Tesla Pi Phone: Neuralink + Zero Bills? Starlink V3 &amp; Solar Tech! (Deep Res via youtube",
           "channel": "USA Tech"
         },
         {
-          "title": "Claude vs \u30a2\u30e1\u30ea\u30ab\u653f\u5e9c\uff5c\u88c1\u5224\u52dd\u8a34\u306e\u88cf\u3067\u4e0a\u5834\u30fb\u53f2\u4e0a\u6700\u5f37\u30e2\u30c7\u30eb\u767a\u899a\u3082",
+          "title": "Claude vs アメリカ政府｜裁判勝訴の裏で上場・史上最強モデル発覚も",
           "url": "https://www.youtube.com/watch?v=w0ovHV6c2rA",
           "source": "youtube",
           "published": "2026-03-30T09:00:53Z",
@@ -4417,7 +4417,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Claude vs \u30a2\u30e1\u30ea\u30ab\u653f\u5e9c\uff5c\u88c1\u5224\u52dd\u8a34\u306e\u88cf\u3067\u4e0a\u5834\u30fb\u53f2\u4e0a\u6700\u5f37\u30e2\u30c7\u30eb\u767a\u899a\u3082 via youtube",
+          "summary": "Claude vs アメリカ政府｜裁判勝訴の裏で上場・史上最強モデル発覚も via youtube",
           "channel": "AI market"
         },
         {
@@ -4583,7 +4583,7 @@
           "channel": "AI Atlas"
         },
         {
-          "title": "\ud83d\uddde\ufe0f  Daily ArXiv CS Digest \u2014 March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP #rl #llm #research",
+          "title": "🗞️  Daily ArXiv CS Digest — March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP #rl #llm #research",
           "url": "https://www.youtube.com/watch?v=vRbBPy1_iuk",
           "source": "youtube",
           "published": "2026-03-30T16:06:37Z",
@@ -4597,7 +4597,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\uddde\ufe0f  Daily ArXiv CS Digest \u2014 March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP  via youtube",
+          "summary": "🗞️  Daily ArXiv CS Digest — March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP  via youtube",
           "channel": "Hang Liu"
         },
         {
@@ -4720,7 +4720,7 @@
           "summary": "Making an AI native sovereign computational stack via reddit/r/artificial"
         },
         {
-          "title": "CLI for Google AI Search (gai.google) \u2014 run AI-powered code/tech searches headlessly from your terminal",
+          "title": "CLI for Google AI Search (gai.google) — run AI-powered code/tech searches headlessly from your terminal",
           "url": "https://reddit.com/r/artificial/comments/1s7k1sg/cli_for_google_ai_search_gaigoogle_run_aipowered/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T07:42:05Z",
@@ -4734,10 +4734,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "CLI for Google AI Search (gai.google) \u2014 run AI-powered code/tech searches headle via reddit/r/artificial"
+          "summary": "CLI for Google AI Search (gai.google) — run AI-powered code/tech searches headle via reddit/r/artificial"
         },
         {
-          "title": "\ud83d\udd25TAKE: the real AI divide isn\u2019t coming </> it\u2019s already here(!)",
+          "title": "🔥TAKE: the real AI divide isn’t coming </> it’s already here(!)",
           "url": "https://reddit.com/r/artificial/comments/1s7djeh/take_the_real_ai_divide_isnt_coming_its_already/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T01:48:03Z",
@@ -4751,7 +4751,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udd25TAKE: the real AI divide isn\u2019t coming </> it\u2019s already here(!) via reddit/r/artificial"
+          "summary": "🔥TAKE: the real AI divide isn’t coming </> it’s already here(!) via reddit/r/artificial"
         },
         {
           "title": "[P] Unix philosophy for ML pipelines: modular, swappable stages with typed contracts",
@@ -4975,7 +4975,7 @@
           "summary": "ChatGPT browser window incredibly slow even with fresh chats via reddit/r/ChatGPT"
         },
         {
-          "title": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days\u2014And Realtors Are Sweating",
+          "title": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days—And Realtors Are Sweating",
           "url": "https://reddit.com/r/ChatGPT/comments/1s80wzm/florida_man_uses_chatgpt_to_successfully_sell_his/",
           "source": "reddit/r/ChatGPT",
           "published": "2026-03-30T19:38:07Z",
@@ -4989,7 +4989,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days\u2014And Re via reddit/r/ChatGPT"
+          "summary": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days—And Re via reddit/r/ChatGPT"
         },
         {
           "title": "best way to view a zip file from chatgtp export",
@@ -5179,7 +5179,7 @@
           "summary": "Mobile Mode is ruining my Claude experience in Extended Thinking conversations w via reddit/r/ClaudeAI"
         },
         {
-          "title": "i just got rick rolled by claude\ud83d\ude2d",
+          "title": "i just got rick rolled by claude😭",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s80rbu/i_just_got_rick_rolled_by_claude/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-30T19:32:21Z",
@@ -5193,7 +5193,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "i just got rick rolled by claude\ud83d\ude2d via reddit/r/ClaudeAI"
+          "summary": "i just got rick rolled by claude😭 via reddit/r/ClaudeAI"
         },
         {
           "title": "Claude's response could not be fully generated",
@@ -5247,7 +5247,7 @@
           "summary": "Why is claude redirecting me to new chat when i switch models? via reddit/r/ClaudeAI"
         },
         {
-          "title": "Claude keeps messing up my floor plan\u2014how are people using it for interior design?",
+          "title": "Claude keeps messing up my floor plan—how are people using it for interior design?",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s7zmw2/claude_keeps_messing_up_my_floor_planhow_are/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-30T18:52:44Z",
@@ -5261,7 +5261,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Claude keeps messing up my floor plan\u2014how are people using it for interior desig via reddit/r/ClaudeAI"
+          "summary": "Claude keeps messing up my floor plan—how are people using it for interior desig via reddit/r/ClaudeAI"
         },
         {
           "title": "I built an app with Claude Code that detects clothes from any photo, builds your digital wardrobe, and lets you virtually try on outfits with AI.",
@@ -5366,7 +5366,7 @@
           "summary": "Stop chasing parameter count. Context window degradation on local hardware is th via reddit/r/LocalLLaMA"
         },
         {
-          "title": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) \u2014 here's what actually happened",
+          "title": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) — here's what actually happened",
           "url": "https://reddit.com/r/LocalLLaMA/comments/1s8178n/i_tried_to_benchmark_turboquant_on_android/",
           "source": "reddit/r/LocalLLaMA",
           "published": "2026-03-30T19:48:12Z",
@@ -5380,7 +5380,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) \u2014 here's what a via reddit/r/LocalLLaMA"
+          "summary": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) — here's what a via reddit/r/LocalLLaMA"
         },
         {
           "title": "Error while running qwen3.5:27b-q4_K_M",
@@ -5740,7 +5740,7 @@
           "summary": "Qwen 3.6 Plus Preview Available for Free for a Limited Time via hackernews"
         },
         {
-          "title": "Show HN: I built a simpler way to follow research papers\u2013AI summaries and emails",
+          "title": "Show HN: I built a simpler way to follow research papers–AI summaries and emails",
           "url": "https://openscience.ink",
           "source": "hackernews",
           "published": "2026-03-30T19:55:43Z",
@@ -5754,7 +5754,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: I built a simpler way to follow research papers\u2013AI summaries and emails via hackernews"
+          "summary": "Show HN: I built a simpler way to follow research papers–AI summaries and emails via hackernews"
         },
         {
           "title": "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence",
@@ -5791,7 +5791,7 @@
           "summary": "Novel environments, no precedents or plagiarism possible. Humans 100%, AI <1% via hackernews"
         },
         {
-          "title": "Show HN: NewsMarvin \u2013 AI news from 71 sources, classified by Claude Haiku",
+          "title": "Show HN: NewsMarvin – AI news from 71 sources, classified by Claude Haiku",
           "url": "https://newsmarvin.com/",
           "source": "hackernews",
           "published": "2026-03-30T19:50:53Z",
@@ -5805,7 +5805,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: NewsMarvin \u2013 AI news from 71 sources, classified by Claude Haiku via hackernews"
+          "summary": "Show HN: NewsMarvin – AI news from 71 sources, classified by Claude Haiku via hackernews"
         },
         {
           "title": "Wikipedia, AI, maps, and education tools running on your own hardware",
@@ -5842,7 +5842,7 @@
           "summary": "Create Context Graph: Scaffold AI agents with context graph memory in seconds via hackernews"
         },
         {
-          "title": "Show HN: Memoir \u2013 persistent memory for AI coding tools via MCP",
+          "title": "Show HN: Memoir – persistent memory for AI coding tools via MCP",
           "url": "https://memoir.sh",
           "source": "hackernews",
           "published": "2026-03-30T19:43:49Z",
@@ -5856,7 +5856,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: Memoir \u2013 persistent memory for AI coding tools via MCP via hackernews"
+          "summary": "Show HN: Memoir – persistent memory for AI coding tools via MCP via hackernews"
         },
         {
           "title": "An Autonomous Agentic Secure Code Review for Immature Vulnerabilities Detection",
@@ -5893,7 +5893,7 @@
           "summary": "Train via hackernews"
         },
         {
-          "title": "Show HN: Agent Council \u2013 Claude, Codex and Gemini debate code and engg questions",
+          "title": "Show HN: Agent Council – Claude, Codex and Gemini debate code and engg questions",
           "url": "https://github.com/yogirk/agent-council",
           "source": "hackernews",
           "published": "2026-03-30T19:27:43Z",
@@ -5907,10 +5907,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: Agent Council \u2013 Claude, Codex and Gemini debate code and engg questions via hackernews"
+          "summary": "Show HN: Agent Council – Claude, Codex and Gemini debate code and engg questions via hackernews"
         },
         {
-          "title": "Kubernaut \u2013 open-source AIOps for Kubernetes",
+          "title": "Kubernaut – open-source AIOps for Kubernetes",
           "url": "https://github.com/jordigilh/kubernaut",
           "source": "hackernews",
           "published": "2026-03-30T19:26:54Z",
@@ -5924,7 +5924,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Kubernaut \u2013 open-source AIOps for Kubernetes via hackernews"
+          "summary": "Kubernaut – open-source AIOps for Kubernetes via hackernews"
         },
         {
           "title": "A C# vector database using TurboQuant from Google Research",
@@ -6165,7 +6165,7 @@
           "summary": "Claude Opus 4 6 via anthropic-news"
         },
         {
-          "title": "W1FydW__body\">We\u2019re upgrading our smartest model",
+          "title": "W1FydW__body\">We’re upgrading our smartest model",
           "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -6179,7 +6179,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "W1FydW__body\">We\u2019re upgrading our smartest model via anthropic-news"
+          "summary": "W1FydW__body\">We’re upgrading our smartest model via anthropic-news"
         },
         {
           "title": "Category caption\">Category Title Mar 12",
@@ -6199,7 +6199,7 @@
           "summary": "Category caption\">Category Title Mar 12 via anthropic-news"
         },
         {
-          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s security Mar 5,",
+          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox’s security Mar 5,",
           "url": "https://www.anthropic.com/news/where-stand-department-war",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -6213,7 +6213,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s secu via anthropic-news"
+          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox’s secu via anthropic-news"
         },
         {
           "title": "KxYrHG__subject body-3\">Announcements Where things stand with the Department of War Feb 27",
@@ -6318,7 +6318,7 @@
           "summary": "Creating with Sora Safely via openai-blog"
         },
         {
-          "title": "Why Codex Security Doesn\u2019t Include a SAST Report",
+          "title": "Why Codex Security Doesn’t Include a SAST Report",
           "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
           "source": "openai-blog",
           "published": "",
@@ -6332,7 +6332,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why Codex Security Doesn\u2019t Include a SAST Report via openai-blog"
+          "summary": "Why Codex Security Doesn’t Include a SAST Report via openai-blog"
         },
         {
           "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
@@ -6554,7 +6554,7 @@
           "channel": "WorldofAI"
         },
         {
-          "title": "Hermes Agent KILLED $497/Month Automation Tools \ud83d\udea8 (Your AI Gets Smarter Every Session)",
+          "title": "Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Session)",
           "url": "https://www.youtube.com/watch?v=sf25aDO9iOs",
           "source": "youtube",
           "published": "2026-03-30T01:00:06Z",
@@ -6568,7 +6568,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Hermes Agent KILLED $497/Month Automation Tools \ud83d\udea8 (Your AI Gets Smarter Every Se via youtube",
+          "summary": "Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Se via youtube",
           "channel": "iampauljames"
         },
         {
@@ -6625,7 +6625,7 @@
           "summary": "we open sourced a tool that auto generates your AI agent context from your actua via reddit/r/artificial"
         },
         {
-          "title": "I Accidentally Discovered a Security Vulnerability in AI Education \u2014 Then Submitted It To a $200K Competition",
+          "title": "I Accidentally Discovered a Security Vulnerability in AI Education — Then Submitted It To a $200K Competition",
           "url": "https://reddit.com/r/artificial/comments/1s7wulg/i_accidentally_discovered_a_security/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T17:15:51Z",
@@ -6639,7 +6639,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I Accidentally Discovered a Security Vulnerability in AI Education \u2014 Then Submit via reddit/r/artificial"
+          "summary": "I Accidentally Discovered a Security Vulnerability in AI Education — Then Submit via reddit/r/artificial"
         },
         {
           "title": "An attack class that passes every current LLM filter - no payload, no injection signature, no log trace",
@@ -6659,7 +6659,7 @@
           "summary": "An attack class that passes every current LLM filter - no payload, no injection  via reddit/r/artificial"
         },
         {
-          "title": "The Rationing: AI companies are using the \"subsidize, addict, extract\" playbook \u2014 and developers are the product",
+          "title": "The Rationing: AI companies are using the \"subsidize, addict, extract\" playbook — and developers are the product",
           "url": "https://reddit.com/r/artificial/comments/1s7o0ef/the_rationing_ai_companies_are_using_the/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T11:35:02Z",
@@ -7067,7 +7067,7 @@
           "summary": "KxYrHG__subject body-3\">Announcements Introducing The Anthropic Institute Mar 10 via anthropic-news"
         },
         {
-          "title": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in Asia-Pacific Mar 6,",
+          "title": "G__subject body-3\">Announcements Sydney will become Anthropic’s fourth office in Asia-Pacific Mar 6,",
           "url": "https://www.anthropic.com/news/mozilla-firefox-security",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -7081,7 +7081,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in via anthropic-news"
+          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic’s fourth office in via anthropic-news"
         },
         {
           "title": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use capabilities Feb 24",
@@ -7101,7 +7101,7 @@
           "summary": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use c via anthropic-news"
         },
         {
-          "title": "KxYrHG__subject body-3\">Policy Anthropic\u2019s Responsible Scaling Policy: Version 3",
+          "title": "KxYrHG__subject body-3\">Policy Anthropic’s Responsible Scaling Policy: Version 3",
           "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -7115,7 +7115,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "KxYrHG__subject body-3\">Policy Anthropic\u2019s Responsible Scaling Policy: Version 3 via anthropic-news"
+          "summary": "KxYrHG__subject body-3\">Policy Anthropic’s Responsible Scaling Policy: Version 3 via anthropic-news"
         },
         {
           "title": "Inside our approach to the Model Spec",
@@ -7390,7 +7390,7 @@
           "summary": "How Balyasny Asset Management built an AI research engine for investing via openai-blog"
         },
         {
-          "title": "Reasoning models struggle to control their chains of thought, and that\u2019s good",
+          "title": "Reasoning models struggle to control their chains of thought, and that’s good",
           "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
           "source": "openai-blog",
           "published": "",
@@ -7404,7 +7404,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Reasoning models struggle to control their chains of thought, and that\u2019s good via openai-blog"
+          "summary": "Reasoning models struggle to control their chains of thought, and that’s good via openai-blog"
         },
         {
           "title": "Introducing GPT-5.4",
@@ -7477,7 +7477,7 @@
       ],
       "logged_only": [
         {
-          "title": "Anthropic\u2019s New Claude MYTHOS Is The Most Powerful AI Ever!",
+          "title": "Anthropic’s New Claude MYTHOS Is The Most Powerful AI Ever!",
           "url": "https://www.youtube.com/watch?v=M6yRREy_5CM",
           "source": "youtube",
           "published": "2026-03-29T23:58:10Z",
@@ -7491,7 +7491,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Anthropic\u2019s New Claude MYTHOS Is The Most Powerful AI Ever! via youtube",
+          "summary": "Anthropic’s New Claude MYTHOS Is The Most Powerful AI Ever! via youtube",
           "channel": "AI Revolution"
         },
         {
@@ -7621,7 +7621,7 @@
           "channel": "Simplilearn"
         },
         {
-          "title": "Google\u2019s New AI Tool Is Unreal",
+          "title": "Google’s New AI Tool Is Unreal",
           "url": "https://www.youtube.com/watch?v=-dUE11ZyCwA",
           "source": "youtube",
           "published": "2026-03-30T15:28:23Z",
@@ -7635,7 +7635,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Google\u2019s New AI Tool Is Unreal via youtube",
+          "summary": "Google’s New AI Tool Is Unreal via youtube",
           "channel": "Skill Leap AI"
         },
         {
@@ -7657,7 +7657,7 @@
           "channel": "AI News & Strategy Daily | Nate B Jones"
         },
         {
-          "title": "\ud83d\udea8 NOTICIAS IA \ud83d\udea8: Nuevo aceler\u00f3n de la IA, OpenAI y Anthropic van con todo \ud83d\ude80 \ud83d\udd25",
+          "title": "🚨 NOTICIAS IA 🚨: Nuevo acelerón de la IA, OpenAI y Anthropic van con todo 🚀 🔥",
           "url": "https://www.youtube.com/watch?v=TowZAHSwsKI",
           "source": "youtube",
           "published": "2026-03-30T18:00:00Z",
@@ -7671,11 +7671,11 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udea8 NOTICIAS IA \ud83d\udea8: Nuevo aceler\u00f3n de la IA, OpenAI y Anthropic van con todo \ud83d\ude80 \ud83d\udd25 via youtube",
+          "summary": "🚨 NOTICIAS IA 🚨: Nuevo acelerón de la IA, OpenAI y Anthropic van con todo 🚀 🔥 via youtube",
           "channel": "Inteligencia Artificial"
         },
         {
-          "title": "I spoke to Anthropic\u2019s AI agent Claude about an AI data center moratorium. Its answer will shock you",
+          "title": "I spoke to Anthropic’s AI agent Claude about an AI data center moratorium. Its answer will shock you",
           "url": "https://www.youtube.com/watch?v=o4yVQef9Sq8",
           "source": "youtube",
           "published": "2026-03-30T16:17:25Z",
@@ -7689,7 +7689,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I spoke to Anthropic\u2019s AI agent Claude about an AI data center moratorium. Its a via youtube",
+          "summary": "I spoke to Anthropic’s AI agent Claude about an AI data center moratorium. Its a via youtube",
           "channel": "Senator Bernie Sanders"
         },
         {
@@ -7729,7 +7729,7 @@
           "channel": "Success With Sam"
         },
         {
-          "title": "ChatGPT\u2019s Auto Model Selector Is Gone (Here\u2019s What Replaced It)",
+          "title": "ChatGPT’s Auto Model Selector Is Gone (Here’s What Replaced It)",
           "url": "https://www.youtube.com/watch?v=jrRWbSxNLJE",
           "source": "youtube",
           "published": "2026-03-30T15:29:00Z",
@@ -7743,7 +7743,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "ChatGPT\u2019s Auto Model Selector Is Gone (Here\u2019s What Replaced It) via youtube",
+          "summary": "ChatGPT’s Auto Model Selector Is Gone (Here’s What Replaced It) via youtube",
           "channel": "Thoughts Brewing, LLC"
         },
         {
@@ -7765,7 +7765,7 @@
           "channel": "4techEC "
         },
         {
-          "title": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta\u2019s Big Loss",
+          "title": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta’s Big Loss",
           "url": "https://www.youtube.com/watch?v=eM1b_t0I3_k",
           "source": "youtube",
           "published": "2026-03-30T20:30:06Z",
@@ -7779,7 +7779,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta\u2019s Big Loss via youtube",
+          "summary": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta’s Big Loss via youtube",
           "channel": "Alex Kantrowitz"
         },
         {
@@ -7927,7 +7927,7 @@
           "channel": "AI Atlas"
         },
         {
-          "title": "\ud83d\uddde\ufe0f  Daily ArXiv CS Digest \u2014 March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP #rl #llm #research",
+          "title": "🗞️  Daily ArXiv CS Digest — March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP #rl #llm #research",
           "url": "https://www.youtube.com/watch?v=vRbBPy1_iuk",
           "source": "youtube",
           "published": "2026-03-30T16:06:37Z",
@@ -7941,7 +7941,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\uddde\ufe0f  Daily ArXiv CS Digest \u2014 March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP  via youtube",
+          "summary": "🗞️  Daily ArXiv CS Digest — March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP  via youtube",
           "channel": "Hang Liu"
         },
         {
@@ -8064,7 +8064,7 @@
           "summary": "Making an AI native sovereign computational stack via reddit/r/artificial"
         },
         {
-          "title": "CLI for Google AI Search (gai.google) \u2014 run AI-powered code/tech searches headlessly from your terminal",
+          "title": "CLI for Google AI Search (gai.google) — run AI-powered code/tech searches headlessly from your terminal",
           "url": "https://reddit.com/r/artificial/comments/1s7k1sg/cli_for_google_ai_search_gaigoogle_run_aipowered/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T07:42:05Z",
@@ -8078,10 +8078,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "CLI for Google AI Search (gai.google) \u2014 run AI-powered code/tech searches headle via reddit/r/artificial"
+          "summary": "CLI for Google AI Search (gai.google) — run AI-powered code/tech searches headle via reddit/r/artificial"
         },
         {
-          "title": "\ud83d\udd25TAKE: the real AI divide isn\u2019t coming </> it\u2019s already here(!)",
+          "title": "🔥TAKE: the real AI divide isn’t coming </> it’s already here(!)",
           "url": "https://reddit.com/r/artificial/comments/1s7djeh/take_the_real_ai_divide_isnt_coming_its_already/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T01:48:03Z",
@@ -8095,7 +8095,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udd25TAKE: the real AI divide isn\u2019t coming </> it\u2019s already here(!) via reddit/r/artificial"
+          "summary": "🔥TAKE: the real AI divide isn’t coming </> it’s already here(!) via reddit/r/artificial"
         },
         {
           "title": "[P] Unix philosophy for ML pipelines: modular, swappable stages with typed contracts",
@@ -8319,7 +8319,7 @@
           "summary": "ChatGPT browser window incredibly slow even with fresh chats via reddit/r/ChatGPT"
         },
         {
-          "title": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days\u2014And Realtors Are Sweating",
+          "title": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days—And Realtors Are Sweating",
           "url": "https://reddit.com/r/ChatGPT/comments/1s80wzm/florida_man_uses_chatgpt_to_successfully_sell_his/",
           "source": "reddit/r/ChatGPT",
           "published": "2026-03-30T19:38:07Z",
@@ -8333,7 +8333,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days\u2014And Re via reddit/r/ChatGPT"
+          "summary": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days—And Re via reddit/r/ChatGPT"
         },
         {
           "title": "best way to view a zip file from chatgtp export",
@@ -8523,7 +8523,7 @@
           "summary": "Mobile Mode is ruining my Claude experience in Extended Thinking conversations w via reddit/r/ClaudeAI"
         },
         {
-          "title": "i just got rick rolled by claude\ud83d\ude2d",
+          "title": "i just got rick rolled by claude😭",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s80rbu/i_just_got_rick_rolled_by_claude/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-30T19:32:21Z",
@@ -8537,7 +8537,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "i just got rick rolled by claude\ud83d\ude2d via reddit/r/ClaudeAI"
+          "summary": "i just got rick rolled by claude😭 via reddit/r/ClaudeAI"
         },
         {
           "title": "Claude's response could not be fully generated",
@@ -8591,7 +8591,7 @@
           "summary": "Why is claude redirecting me to new chat when i switch models? via reddit/r/ClaudeAI"
         },
         {
-          "title": "Claude keeps messing up my floor plan\u2014how are people using it for interior design?",
+          "title": "Claude keeps messing up my floor plan—how are people using it for interior design?",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s7zmw2/claude_keeps_messing_up_my_floor_planhow_are/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-30T18:52:44Z",
@@ -8605,7 +8605,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Claude keeps messing up my floor plan\u2014how are people using it for interior desig via reddit/r/ClaudeAI"
+          "summary": "Claude keeps messing up my floor plan—how are people using it for interior desig via reddit/r/ClaudeAI"
         },
         {
           "title": "I built an app with Claude Code that detects clothes from any photo, builds your digital wardrobe, and lets you virtually try on outfits with AI.",
@@ -8710,7 +8710,7 @@
           "summary": "Stop chasing parameter count. Context window degradation on local hardware is th via reddit/r/LocalLLaMA"
         },
         {
-          "title": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) \u2014 here's what actually happened",
+          "title": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) — here's what actually happened",
           "url": "https://reddit.com/r/LocalLLaMA/comments/1s8178n/i_tried_to_benchmark_turboquant_on_android/",
           "source": "reddit/r/LocalLLaMA",
           "published": "2026-03-30T19:48:12Z",
@@ -8724,7 +8724,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) \u2014 here's what a via reddit/r/LocalLLaMA"
+          "summary": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) — here's what a via reddit/r/LocalLLaMA"
         },
         {
           "title": "Error while running qwen3.5:27b-q4_K_M",
@@ -9101,7 +9101,7 @@
           "summary": "Qwen 3.6 Plus Preview Available for Free for a Limited Time via hackernews"
         },
         {
-          "title": "Show HN: I built a simpler way to follow research papers\u2013AI summaries and emails",
+          "title": "Show HN: I built a simpler way to follow research papers–AI summaries and emails",
           "url": "https://openscience.ink",
           "source": "hackernews",
           "published": "2026-03-30T19:55:43Z",
@@ -9115,7 +9115,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: I built a simpler way to follow research papers\u2013AI summaries and emails via hackernews"
+          "summary": "Show HN: I built a simpler way to follow research papers–AI summaries and emails via hackernews"
         },
         {
           "title": "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence",
@@ -9152,7 +9152,7 @@
           "summary": "Novel environments, no precedents or plagiarism possible. Humans 100%, AI <1% via hackernews"
         },
         {
-          "title": "Show HN: NewsMarvin \u2013 AI news from 71 sources, classified by Claude Haiku",
+          "title": "Show HN: NewsMarvin – AI news from 71 sources, classified by Claude Haiku",
           "url": "https://newsmarvin.com/",
           "source": "hackernews",
           "published": "2026-03-30T19:50:53Z",
@@ -9166,7 +9166,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: NewsMarvin \u2013 AI news from 71 sources, classified by Claude Haiku via hackernews"
+          "summary": "Show HN: NewsMarvin – AI news from 71 sources, classified by Claude Haiku via hackernews"
         },
         {
           "title": "Wikipedia, AI, maps, and education tools running on your own hardware",
@@ -9203,7 +9203,7 @@
           "summary": "Create Context Graph: Scaffold AI agents with context graph memory in seconds via hackernews"
         },
         {
-          "title": "Show HN: Memoir \u2013 persistent memory for AI coding tools via MCP",
+          "title": "Show HN: Memoir – persistent memory for AI coding tools via MCP",
           "url": "https://memoir.sh",
           "source": "hackernews",
           "published": "2026-03-30T19:43:49Z",
@@ -9217,7 +9217,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: Memoir \u2013 persistent memory for AI coding tools via MCP via hackernews"
+          "summary": "Show HN: Memoir – persistent memory for AI coding tools via MCP via hackernews"
         },
         {
           "title": "An Autonomous Agentic Secure Code Review for Immature Vulnerabilities Detection",
@@ -9254,7 +9254,7 @@
           "summary": "Train via hackernews"
         },
         {
-          "title": "Show HN: Agent Council \u2013 Claude, Codex and Gemini debate code and engg questions",
+          "title": "Show HN: Agent Council – Claude, Codex and Gemini debate code and engg questions",
           "url": "https://github.com/yogirk/agent-council",
           "source": "hackernews",
           "published": "2026-03-30T19:27:43Z",
@@ -9268,10 +9268,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: Agent Council \u2013 Claude, Codex and Gemini debate code and engg questions via hackernews"
+          "summary": "Show HN: Agent Council – Claude, Codex and Gemini debate code and engg questions via hackernews"
         },
         {
-          "title": "Kubernaut \u2013 open-source AIOps for Kubernetes",
+          "title": "Kubernaut – open-source AIOps for Kubernetes",
           "url": "https://github.com/jordigilh/kubernaut",
           "source": "hackernews",
           "published": "2026-03-30T19:26:54Z",
@@ -9285,7 +9285,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Kubernaut \u2013 open-source AIOps for Kubernetes via hackernews"
+          "summary": "Kubernaut – open-source AIOps for Kubernetes via hackernews"
         },
         {
           "title": "A C# vector database using TurboQuant from Google Research",
@@ -9509,7 +9509,7 @@
           "summary": "Claude Opus 4 6 via anthropic-news"
         },
         {
-          "title": "W1FydW__body\">We\u2019re upgrading our smartest model",
+          "title": "W1FydW__body\">We’re upgrading our smartest model",
           "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -9523,7 +9523,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "W1FydW__body\">We\u2019re upgrading our smartest model via anthropic-news"
+          "summary": "W1FydW__body\">We’re upgrading our smartest model via anthropic-news"
         },
         {
           "title": "Category caption\">Category Title Mar 12",
@@ -9543,7 +9543,7 @@
           "summary": "Category caption\">Category Title Mar 12 via anthropic-news"
         },
         {
-          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s security Mar 5,",
+          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox’s security Mar 5,",
           "url": "https://www.anthropic.com/news/where-stand-department-war",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -9557,7 +9557,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s secu via anthropic-news"
+          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox’s secu via anthropic-news"
         },
         {
           "title": "KxYrHG__subject body-3\">Announcements Where things stand with the Department of War Feb 27",
@@ -9662,7 +9662,7 @@
           "summary": "Creating with Sora Safely via openai-blog"
         },
         {
-          "title": "Why Codex Security Doesn\u2019t Include a SAST Report",
+          "title": "Why Codex Security Doesn’t Include a SAST Report",
           "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
           "source": "openai-blog",
           "published": "",
@@ -9676,7 +9676,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why Codex Security Doesn\u2019t Include a SAST Report via openai-blog"
+          "summary": "Why Codex Security Doesn’t Include a SAST Report via openai-blog"
         },
         {
           "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
@@ -9912,7 +9912,7 @@
       ],
       "worth_reading": [
         {
-          "title": "Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News \ud83d\udea8 What\u2019s Happening RIGHT NOW",
+          "title": "Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News 🚨 What’s Happening RIGHT NOW",
           "url": "https://www.youtube.com/watch?v=mCDzH2TK71o",
           "source": "youtube",
           "published": "2026-03-30T09:59:15Z",
@@ -9926,7 +9926,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News \ud83d\udea8 What\u2019s Happening RIGHT NOW via youtube",
+          "summary": "Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News 🚨 What’s Happening RIGHT NOW via youtube",
           "channel": "1 3 3 7 p l a n s"
         },
         {
@@ -10002,7 +10002,7 @@
           "channel": "WorldofAI"
         },
         {
-          "title": "Hermes Agent KILLED $497/Month Automation Tools \ud83d\udea8 (Your AI Gets Smarter Every Session)",
+          "title": "Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Session)",
           "url": "https://www.youtube.com/watch?v=sf25aDO9iOs",
           "source": "youtube",
           "published": "2026-03-30T01:00:06Z",
@@ -10016,7 +10016,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Hermes Agent KILLED $497/Month Automation Tools \ud83d\udea8 (Your AI Gets Smarter Every Se via youtube",
+          "summary": "Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Se via youtube",
           "channel": "iampauljames"
         },
         {
@@ -10073,7 +10073,7 @@
           "summary": "we open sourced a tool that auto generates your AI agent context from your actua via reddit/r/artificial"
         },
         {
-          "title": "I Accidentally Discovered a Security Vulnerability in AI Education \u2014 Then Submitted It To a $200K Competition",
+          "title": "I Accidentally Discovered a Security Vulnerability in AI Education — Then Submitted It To a $200K Competition",
           "url": "https://reddit.com/r/artificial/comments/1s7wulg/i_accidentally_discovered_a_security/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T17:15:51Z",
@@ -10087,7 +10087,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I Accidentally Discovered a Security Vulnerability in AI Education \u2014 Then Submit via reddit/r/artificial"
+          "summary": "I Accidentally Discovered a Security Vulnerability in AI Education — Then Submit via reddit/r/artificial"
         },
         {
           "title": "An attack class that passes every current LLM filter - no payload, no injection signature, no log trace",
@@ -10107,7 +10107,7 @@
           "summary": "An attack class that passes every current LLM filter - no payload, no injection  via reddit/r/artificial"
         },
         {
-          "title": "The Rationing: AI companies are using the \"subsidize, addict, extract\" playbook \u2014 and developers are the product",
+          "title": "The Rationing: AI companies are using the \"subsidize, addict, extract\" playbook — and developers are the product",
           "url": "https://reddit.com/r/artificial/comments/1s7o0ef/the_rationing_ai_companies_are_using_the/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T11:35:02Z",
@@ -10396,7 +10396,7 @@
           "summary": "Plugins I use to cut tool and token use in half via reddit/r/ClaudeAI"
         },
         {
-          "title": "Claude's peak-hour session limits explained \u2014 what actually changed in March 2026 and why some users are burning through Pro budgets in minutes",
+          "title": "Claude's peak-hour session limits explained — what actually changed in March 2026 and why some users are burning through Pro budgets in minutes",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s7zwrn/claudes_peakhour_session_limits_explained_what/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-30T19:02:28Z",
@@ -10410,7 +10410,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Claude's peak-hour session limits explained \u2014 what actually changed in March 202 via reddit/r/ClaudeAI"
+          "summary": "Claude's peak-hour session limits explained — what actually changed in March 202 via reddit/r/ClaudeAI"
         },
         {
           "title": "I built a one-prompt fix for the biggest problem with vibe coding",
@@ -10549,7 +10549,7 @@
           "summary": "KxYrHG__subject body-3\">Announcements Introducing The Anthropic Institute Mar 10 via anthropic-news"
         },
         {
-          "title": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in Asia-Pacific Mar 6,",
+          "title": "G__subject body-3\">Announcements Sydney will become Anthropic’s fourth office in Asia-Pacific Mar 6,",
           "url": "https://www.anthropic.com/news/mozilla-firefox-security",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -10563,7 +10563,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in via anthropic-news"
+          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic’s fourth office in via anthropic-news"
         },
         {
           "title": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use capabilities Feb 24",
@@ -10583,7 +10583,7 @@
           "summary": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use c via anthropic-news"
         },
         {
-          "title": "KxYrHG__subject body-3\">Policy Anthropic\u2019s Responsible Scaling Policy: Version 3",
+          "title": "KxYrHG__subject body-3\">Policy Anthropic’s Responsible Scaling Policy: Version 3",
           "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -10597,7 +10597,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "KxYrHG__subject body-3\">Policy Anthropic\u2019s Responsible Scaling Policy: Version 3 via anthropic-news"
+          "summary": "KxYrHG__subject body-3\">Policy Anthropic’s Responsible Scaling Policy: Version 3 via anthropic-news"
         },
         {
           "title": "Inside our approach to the Model Spec",
@@ -10872,7 +10872,7 @@
           "summary": "How Balyasny Asset Management built an AI research engine for investing via openai-blog"
         },
         {
-          "title": "Reasoning models struggle to control their chains of thought, and that\u2019s good",
+          "title": "Reasoning models struggle to control their chains of thought, and that’s good",
           "url": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
           "source": "openai-blog",
           "published": "",
@@ -10886,7 +10886,7 @@
           "tier": "WORTH_READING",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Reasoning models struggle to control their chains of thought, and that\u2019s good via openai-blog"
+          "summary": "Reasoning models struggle to control their chains of thought, and that’s good via openai-blog"
         },
         {
           "title": "Introducing GPT-5.4",
@@ -10959,7 +10959,7 @@
       ],
       "logged_only": [
         {
-          "title": "Anthropic\u2019s New Claude MYTHOS Is The Most Powerful AI Ever!",
+          "title": "Anthropic’s New Claude MYTHOS Is The Most Powerful AI Ever!",
           "url": "https://www.youtube.com/watch?v=M6yRREy_5CM",
           "source": "youtube",
           "published": "2026-03-29T23:58:10Z",
@@ -10973,7 +10973,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Anthropic\u2019s New Claude MYTHOS Is The Most Powerful AI Ever! via youtube",
+          "summary": "Anthropic’s New Claude MYTHOS Is The Most Powerful AI Ever! via youtube",
           "channel": "AI Revolution"
         },
         {
@@ -11121,7 +11121,7 @@
           "channel": "Julian Goldie SEO"
         },
         {
-          "title": "I spoke to Anthropic\u2019s AI agent Claude about an AI data center moratorium. Its answer will shock you",
+          "title": "I spoke to Anthropic’s AI agent Claude about an AI data center moratorium. Its answer will shock you",
           "url": "https://www.youtube.com/watch?v=o4yVQef9Sq8",
           "source": "youtube",
           "published": "2026-03-30T16:17:25Z",
@@ -11135,11 +11135,11 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I spoke to Anthropic\u2019s AI agent Claude about an AI data center moratorium. Its a via youtube",
+          "summary": "I spoke to Anthropic’s AI agent Claude about an AI data center moratorium. Its a via youtube",
           "channel": "Senator Bernie Sanders"
         },
         {
-          "title": "\ud83d\udea8 NOTICIAS IA \ud83d\udea8: Nuevo aceler\u00f3n de la IA, OpenAI y Anthropic van con todo \ud83d\ude80 \ud83d\udd25",
+          "title": "🚨 NOTICIAS IA 🚨: Nuevo acelerón de la IA, OpenAI y Anthropic van con todo 🚀 🔥",
           "url": "https://www.youtube.com/watch?v=TowZAHSwsKI",
           "source": "youtube",
           "published": "2026-03-30T18:00:00Z",
@@ -11153,11 +11153,11 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udea8 NOTICIAS IA \ud83d\udea8: Nuevo aceler\u00f3n de la IA, OpenAI y Anthropic van con todo \ud83d\ude80 \ud83d\udd25 via youtube",
+          "summary": "🚨 NOTICIAS IA 🚨: Nuevo acelerón de la IA, OpenAI y Anthropic van con todo 🚀 🔥 via youtube",
           "channel": "Inteligencia Artificial"
         },
         {
-          "title": "ChatGPT\u2019s Auto Model Selector Is Gone (Here\u2019s What Replaced It)",
+          "title": "ChatGPT’s Auto Model Selector Is Gone (Here’s What Replaced It)",
           "url": "https://www.youtube.com/watch?v=jrRWbSxNLJE",
           "source": "youtube",
           "published": "2026-03-30T15:29:00Z",
@@ -11171,7 +11171,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "ChatGPT\u2019s Auto Model Selector Is Gone (Here\u2019s What Replaced It) via youtube",
+          "summary": "ChatGPT’s Auto Model Selector Is Gone (Here’s What Replaced It) via youtube",
           "channel": "Thoughts Brewing, LLC"
         },
         {
@@ -11211,7 +11211,7 @@
           "channel": "4techEC "
         },
         {
-          "title": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta\u2019s Big Loss",
+          "title": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta’s Big Loss",
           "url": "https://www.youtube.com/watch?v=eM1b_t0I3_k",
           "source": "youtube",
           "published": "2026-03-30T20:30:06Z",
@@ -11225,7 +11225,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta\u2019s Big Loss via youtube",
+          "summary": "Why OpenAI Killed Sora, Did Apple Just Save Siri?, Meta’s Big Loss via youtube",
           "channel": "Alex Kantrowitz"
         },
         {
@@ -11373,7 +11373,7 @@
           "channel": "AI Atlas"
         },
         {
-          "title": "\ud83d\uddde\ufe0f  Daily ArXiv CS Digest \u2014 March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP #rl #llm #research",
+          "title": "🗞️  Daily ArXiv CS Digest — March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP #rl #llm #research",
           "url": "https://www.youtube.com/watch?v=vRbBPy1_iuk",
           "source": "youtube",
           "published": "2026-03-30T16:06:37Z",
@@ -11387,7 +11387,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\uddde\ufe0f  Daily ArXiv CS Digest \u2014 March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP  via youtube",
+          "summary": "🗞️  Daily ArXiv CS Digest — March 27, 2026#ArXiv #AI #ml #deeplearning #cv #NLP  via youtube",
           "channel": "Hang Liu"
         },
         {
@@ -11510,7 +11510,7 @@
           "summary": "Making an AI native sovereign computational stack via reddit/r/artificial"
         },
         {
-          "title": "CLI for Google AI Search (gai.google) \u2014 run AI-powered code/tech searches headlessly from your terminal",
+          "title": "CLI for Google AI Search (gai.google) — run AI-powered code/tech searches headlessly from your terminal",
           "url": "https://reddit.com/r/artificial/comments/1s7k1sg/cli_for_google_ai_search_gaigoogle_run_aipowered/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T07:42:05Z",
@@ -11524,10 +11524,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "CLI for Google AI Search (gai.google) \u2014 run AI-powered code/tech searches headle via reddit/r/artificial"
+          "summary": "CLI for Google AI Search (gai.google) — run AI-powered code/tech searches headle via reddit/r/artificial"
         },
         {
-          "title": "\ud83d\udd25TAKE: the real AI divide isn\u2019t coming </> it\u2019s already here(!)",
+          "title": "🔥TAKE: the real AI divide isn’t coming </> it’s already here(!)",
           "url": "https://reddit.com/r/artificial/comments/1s7djeh/take_the_real_ai_divide_isnt_coming_its_already/",
           "source": "reddit/r/artificial",
           "published": "2026-03-30T01:48:03Z",
@@ -11541,7 +11541,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "\ud83d\udd25TAKE: the real AI divide isn\u2019t coming </> it\u2019s already here(!) via reddit/r/artificial"
+          "summary": "🔥TAKE: the real AI divide isn’t coming </> it’s already here(!) via reddit/r/artificial"
         },
         {
           "title": "[P] Unix philosophy for ML pipelines: modular, swappable stages with typed contracts",
@@ -11765,7 +11765,7 @@
           "summary": "ChatGPT browser window incredibly slow even with fresh chats via reddit/r/ChatGPT"
         },
         {
-          "title": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days\u2014And Realtors Are Sweating",
+          "title": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days—And Realtors Are Sweating",
           "url": "https://reddit.com/r/ChatGPT/comments/1s80wzm/florida_man_uses_chatgpt_to_successfully_sell_his/",
           "source": "reddit/r/ChatGPT",
           "published": "2026-03-30T19:38:07Z",
@@ -11779,7 +11779,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days\u2014And Re via reddit/r/ChatGPT"
+          "summary": "Florida Man Uses ChatGPT To Successfully Sell His House In Just Five Days—And Re via reddit/r/ChatGPT"
         },
         {
           "title": "best way to view a zip file from chatgtp export",
@@ -11969,7 +11969,7 @@
           "summary": "Mobile Mode is ruining my Claude experience in Extended Thinking conversations w via reddit/r/ClaudeAI"
         },
         {
-          "title": "i just got rick rolled by claude\ud83d\ude2d",
+          "title": "i just got rick rolled by claude😭",
           "url": "https://reddit.com/r/ClaudeAI/comments/1s80rbu/i_just_got_rick_rolled_by_claude/",
           "source": "reddit/r/ClaudeAI",
           "published": "2026-03-30T19:32:21Z",
@@ -11983,7 +11983,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "i just got rick rolled by claude\ud83d\ude2d via reddit/r/ClaudeAI"
+          "summary": "i just got rick rolled by claude😭 via reddit/r/ClaudeAI"
         },
         {
           "title": "Claude's response could not be fully generated",
@@ -12105,7 +12105,7 @@
           "summary": "Stop chasing parameter count. Context window degradation on local hardware is th via reddit/r/LocalLLaMA"
         },
         {
-          "title": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) \u2014 here's what actually happened",
+          "title": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) — here's what actually happened",
           "url": "https://reddit.com/r/LocalLLaMA/comments/1s8178n/i_tried_to_benchmark_turboquant_on_android/",
           "source": "reddit/r/LocalLLaMA",
           "published": "2026-03-30T19:48:12Z",
@@ -12119,7 +12119,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) \u2014 here's what a via reddit/r/LocalLLaMA"
+          "summary": "I tried to benchmark TurboQuant on Android (Snapdragon 7s Gen 3) — here's what a via reddit/r/LocalLLaMA"
         },
         {
           "title": "Error while running qwen3.5:27b-q4_K_M",
@@ -12496,7 +12496,7 @@
           "summary": "Qwen 3.6 Plus Preview Available for Free for a Limited Time via hackernews"
         },
         {
-          "title": "Show HN: I built a simpler way to follow research papers\u2013AI summaries and emails",
+          "title": "Show HN: I built a simpler way to follow research papers–AI summaries and emails",
           "url": "https://openscience.ink",
           "source": "hackernews",
           "published": "2026-03-30T19:55:43Z",
@@ -12510,7 +12510,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: I built a simpler way to follow research papers\u2013AI summaries and emails via hackernews"
+          "summary": "Show HN: I built a simpler way to follow research papers–AI summaries and emails via hackernews"
         },
         {
           "title": "ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence",
@@ -12547,7 +12547,7 @@
           "summary": "Novel environments, no precedents or plagiarism possible. Humans 100%, AI <1% via hackernews"
         },
         {
-          "title": "Show HN: NewsMarvin \u2013 AI news from 71 sources, classified by Claude Haiku",
+          "title": "Show HN: NewsMarvin – AI news from 71 sources, classified by Claude Haiku",
           "url": "https://newsmarvin.com/",
           "source": "hackernews",
           "published": "2026-03-30T19:50:53Z",
@@ -12561,7 +12561,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: NewsMarvin \u2013 AI news from 71 sources, classified by Claude Haiku via hackernews"
+          "summary": "Show HN: NewsMarvin – AI news from 71 sources, classified by Claude Haiku via hackernews"
         },
         {
           "title": "Wikipedia, AI, maps, and education tools running on your own hardware",
@@ -12598,7 +12598,7 @@
           "summary": "Create Context Graph: Scaffold AI agents with context graph memory in seconds via hackernews"
         },
         {
-          "title": "Show HN: Memoir \u2013 persistent memory for AI coding tools via MCP",
+          "title": "Show HN: Memoir – persistent memory for AI coding tools via MCP",
           "url": "https://memoir.sh",
           "source": "hackernews",
           "published": "2026-03-30T19:43:49Z",
@@ -12612,7 +12612,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: Memoir \u2013 persistent memory for AI coding tools via MCP via hackernews"
+          "summary": "Show HN: Memoir – persistent memory for AI coding tools via MCP via hackernews"
         },
         {
           "title": "An Autonomous Agentic Secure Code Review for Immature Vulnerabilities Detection",
@@ -12649,7 +12649,7 @@
           "summary": "Train via hackernews"
         },
         {
-          "title": "Show HN: Agent Council \u2013 Claude, Codex and Gemini debate code and engg questions",
+          "title": "Show HN: Agent Council – Claude, Codex and Gemini debate code and engg questions",
           "url": "https://github.com/yogirk/agent-council",
           "source": "hackernews",
           "published": "2026-03-30T19:27:43Z",
@@ -12663,10 +12663,10 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Show HN: Agent Council \u2013 Claude, Codex and Gemini debate code and engg questions via hackernews"
+          "summary": "Show HN: Agent Council – Claude, Codex and Gemini debate code and engg questions via hackernews"
         },
         {
-          "title": "Kubernaut \u2013 open-source AIOps for Kubernetes",
+          "title": "Kubernaut – open-source AIOps for Kubernetes",
           "url": "https://github.com/jordigilh/kubernaut",
           "source": "hackernews",
           "published": "2026-03-30T19:26:54Z",
@@ -12680,7 +12680,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Kubernaut \u2013 open-source AIOps for Kubernetes via hackernews"
+          "summary": "Kubernaut – open-source AIOps for Kubernetes via hackernews"
         },
         {
           "title": "A C# vector database using TurboQuant from Google Research",
@@ -12870,7 +12870,7 @@
           "summary": "Claude Opus 4 6 via anthropic-news"
         },
         {
-          "title": "W1FydW__body\">We\u2019re upgrading our smartest model",
+          "title": "W1FydW__body\">We’re upgrading our smartest model",
           "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -12884,7 +12884,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "W1FydW__body\">We\u2019re upgrading our smartest model via anthropic-news"
+          "summary": "W1FydW__body\">We’re upgrading our smartest model via anthropic-news"
         },
         {
           "title": "Category caption\">Category Title Mar 12",
@@ -12904,7 +12904,7 @@
           "summary": "Category caption\">Category Title Mar 12 via anthropic-news"
         },
         {
-          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s security Mar 5,",
+          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox’s security Mar 5,",
           "url": "https://www.anthropic.com/news/where-stand-department-war",
           "source": "anthropic-news",
           "published": "2026-03-30",
@@ -12918,7 +12918,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s secu via anthropic-news"
+          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox’s secu via anthropic-news"
         },
         {
           "title": "KxYrHG__subject body-3\">Announcements Where things stand with the Department of War Feb 27",
@@ -13023,7 +13023,7 @@
           "summary": "Creating with Sora Safely via openai-blog"
         },
         {
-          "title": "Why Codex Security Doesn\u2019t Include a SAST Report",
+          "title": "Why Codex Security Doesn’t Include a SAST Report",
           "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
           "source": "openai-blog",
           "published": "",
@@ -13037,7 +13037,7 @@
           "tier": "LOGGED_ONLY",
           "dependency_escalated": false,
           "affected_projects": [],
-          "summary": "Why Codex Security Doesn\u2019t Include a SAST Report via openai-blog"
+          "summary": "Why Codex Security Doesn’t Include a SAST Report via openai-blog"
         },
         {
           "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
@@ -13193,6 +13193,52 @@
           "summary": "shanraisshan/claude-code-best-practice via github-trending"
         }
       ]
+    }
+  ],
+  "review_queue": [
+    {
+      "title": "GPT-5.4 mini — review for AI Scout routing",
+      "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/",
+      "source": "manual-queue",
+      "published": "2026-03-31",
+      "scores": {
+        "stability": 8,
+        "value": 8,
+        "novelty": 7,
+        "relevance": 9,
+        "total": 32
+      },
+      "tier": "HIGH",
+      "review_reason": "Released Mar 17 2026. $0.75/1M in, $0.20/1M nano. 2x faster than GPT-5 mini. 400K context. Subagent candidate for studio mechanical tasks (classification, extraction, ranking). Compare vs Gemini 2.5 Flash for cost routing. nano at $0.20/1M input is cheaper than Gemini 3.1 Flash-Lite.",
+      "dependency_escalated": true,
+      "affected_projects": [
+        "ai-scout",
+        "auto-answer",
+        "translation-layer",
+        "listing-optimizer"
+      ],
+      "added_by": "joe-session-2026-03-31"
+    },
+    {
+      "title": "Zanat — CLI + MCP server for versioning AI agent skills",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1s823ue/zanat_an_opensource_cli_mcp_server_to_version/",
+      "source": "manual-queue",
+      "published": "2026-03-31",
+      "scores": {
+        "stability": 6,
+        "value": 8,
+        "novelty": 8,
+        "relevance": 10,
+        "total": 32
+      },
+      "tier": "HIGH",
+      "review_reason": "Open-source CLI + MCP server for versioning, sharing, installing AI agent skills. Studio already has /mnt/skills/ skill system with SKILL.md files. Zanat appears to be a standardization layer for exactly this pattern. Evaluate: does it align with or replace current skill architecture? Key question: does it support Windows + Claude Code?",
+      "dependency_escalated": true,
+      "affected_projects": [
+        "_studio",
+        "skill-improver"
+      ],
+      "added_by": "joe-session-2026-03-31"
     }
   ]
 }

@@ -27,26 +27,41 @@
       },
       {
         "rank": 3,
+        "name": "GPT-5.4 mini",
+        "provider": "OpenAI",
+        "url": "https://openai.com",
+        "tier": "free+paid",
+        "notes": "2x faster than GPT-5 mini. Near-flagship coding/reasoning. 400K context. $0.75/1M in. Available free tier via ChatGPT Thinking.",
+        "buzz_score": 3,
+        "trending": true,
+        "added": "2026-03-31",
+        "source": "ai-intel-2026-03-30"
+      },
+      {
+        "rank": 4,
         "name": "GPT-4o",
         "provider": "OpenAI",
         "url": "https://openai.com",
         "tier": "paid",
-        "notes": "Strong general purpose",
+        "notes": "Strong general purpose. GPT-5.4 family now current — check for newer model.",
         "buzz_score": 0,
-        "trending": false
+        "trending": false,
+        "check_for_newer": "GPT-5.4"
       },
       {
-        "rank": 4,
-        "name": "Gemini 1.5 Pro",
+        "rank": 5,
+        "name": "Gemini 2.5 Pro",
         "provider": "Google",
         "url": "https://aistudio.google.com",
         "tier": "free+paid",
         "notes": "Large context, free tier available",
         "buzz_score": 0,
-        "trending": false
+        "trending": false,
+        "outdated_entry": "Gemini 1.5 Pro",
+        "outdated_since": "2026-03-31"
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "Claude Haiku 4.5",
         "provider": "Anthropic",
         "url": "https://anthropic.com",
@@ -56,17 +71,19 @@
         "trending": false
       },
       {
-        "rank": 6,
-        "name": "Gemini Flash",
+        "rank": 7,
+        "name": "Gemini 2.5 Flash",
         "provider": "Google",
         "url": "https://aistudio.google.com",
         "tier": "free",
         "notes": "Best free-tier speed",
         "buzz_score": 0,
-        "trending": false
+        "trending": false,
+        "outdated_entry": "Gemini Flash (unversioned)",
+        "outdated_since": "2026-03-31"
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "Llama 3.2",
         "provider": "Meta/Ollama",
         "url": "https://ollama.com",
@@ -76,7 +93,7 @@
         "trending": false
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "DeepSeek R1",
         "provider": "DeepSeek",
         "url": "https://deepseek.com",
@@ -93,9 +110,10 @@
         "provider": "Midjourney",
         "url": "https://midjourney.com",
         "tier": "paid",
-        "notes": "Best quality, no free tier",
+        "notes": "Best quality, no free tier. v7 released — check for update.",
         "buzz_score": 0,
-        "trending": false
+        "trending": false,
+        "check_for_newer": "Midjourney v7"
       },
       {
         "rank": 2,
@@ -253,13 +271,15 @@
       },
       {
         "rank": 5,
-        "name": "Codeium",
+        "name": "Windsurf (fka Codeium)",
         "provider": "Codeium",
         "url": "https://codeium.com",
         "tier": "free",
-        "notes": "Best free autocomplete",
+        "notes": "Rebranded to Windsurf. Strong free tier, agentic coding flows.",
         "buzz_score": 0,
-        "trending": false
+        "trending": false,
+        "outdated_entry": "Codeium",
+        "outdated_since": "2026-03-31"
       }
     ],
     "embedding": [
@@ -388,5 +408,7 @@
         "trending": false
       }
     ]
-  }
+  },
+  "last_reviewed": "2026-03-31T13:00:39",
+  "review_notes": "Partial update 2026-03-31: GPT-5.4 mini added to chat; Gemini models versioned to 2.5; Codeium->Windsurf; Midjourney v6/v7 flagged. Outdated entries preserved with check_for_newer flags."
 }
