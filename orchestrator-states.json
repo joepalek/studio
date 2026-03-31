@@ -60,7 +60,7 @@
     "lastUpdated": "unknown"
   },
   "sentinel-core": {
-    "status": "active",
+    "status": "unknown",
     "progress": 0,
     "nextAction": "",
     "blockers": [],
@@ -68,7 +68,7 @@
     "lastUpdated": "unknown"
   },
   "sentinel-performer": {
-    "status": "active",
+    "status": "unknown",
     "progress": 0,
     "nextAction": "",
     "blockers": [],
@@ -76,7 +76,7 @@
     "lastUpdated": "unknown"
   },
   "sentinel-viewer": {
-    "status": "active",
+    "status": "unknown",
     "progress": 0,
     "nextAction": "",
     "blockers": [],

@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-061",
+  "name": "Jade Davis",
+  "universe": "original-fiction",
+  "archetype": "unlikely_hero",
+  "created_date": "2026-03-30T13:15:04.685217",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Jade Davis",
+    "pronouns": "she/her",
+    "age": 28,
+    "personality_traits": [
+      "principled",
+      "paranoid",
+      "suspicious",
+      "observant",
+      "resilient"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Has a complicated relationship with their past that shapes everything they do."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:04.685239",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

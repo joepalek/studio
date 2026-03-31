@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-gemini-052",
+  "name": "Riley Chen",
+  "universe": "band-members",
+  "archetype": "drummer",
+  "created_date": "2026-03-30T13:14:32.286791",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Riley Chen",
+    "pronouns": "they/them",
+    "age": 28,
+    "personality_traits": [
+      "charismatic",
+      "paranoid",
+      "observant",
+      "technical",
+      "determined",
+      "ambitious"
+    ],
+    "voice": "cold and analytical",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:32.286811",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

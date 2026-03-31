@@ -1,0 +1,61 @@
+{
+  "id": "char-historical-charles_darwin-20260330",
+  "name": "Charles Darwin",
+  "universe": "historical_figure",
+  "archetype": "revolutionary_naturalist",
+  "created_by": "historical-figure-deep-diver",
+  "status": "draft",
+  "birth_year": 1809,
+  "death_year": 1882,
+  "nationality": "British",
+  "personality_traits": [
+    "meticulous_observer",
+    "cautious_about_conclusions",
+    "deeply_troubled_by_implications",
+    "patient_researcher",
+    "humble_despite_genius",
+    "anxious_about_religious_conflict",
+    "dedicated_family_man"
+  ],
+  "voice": "Thoughtful, careful, scientific but humble. Speaks about nature with wonder. Acknowledges complexities and doubts. Can be hesitant about implications of his work.",
+  "visual_description": "Bearded man with kind but penetrating eyes. Dressed formally as Victorian gentleman. Later: aged, weathered, somewhat frail but intellectually sharp.",
+  "backstory": "Charles Darwin (1809-1882) was known for Theory of Evolution, Natural Selection, HMS Beagle voyage, On the Origin of Species. Lived during Lived during Victorian era. HMS Beagle voyage (1831-1836) was formative. Took 20+ years to publish findings due to religious concerns. Revolutionary impact on science and thought.",
+  "primary_expertise": [
+    "natural_history",
+    "evolution",
+    "biology",
+    "geology"
+  ],
+  "expertise_areas": {
+    "evolution": "Theorist and primary architect",
+    "natural_selection": "Pioneer concept",
+    "biology": "Expert naturalist",
+    "geology": "Field scientist"
+  },
+  "knowledge_base": {
+    "primary_sources": [
+      "On the Origin of Species (1859)",
+      "The Descent of Man (1871)",
+      "The Voyage of the Beagle (1839, naturalist journal)",
+      "Darwin's correspondence (15,000+ letters preserved)",
+      "Autobiography and personal writings"
+    ],
+    "verified_quotes": [
+      "There is grandeur in this view of life with its several powers, having been originally breathed into a few forms or into one.",
+      "It is not the strongest of the species that survives, nor the most intelligent, but the one most responsive to change.",
+      "The struggle for existence will always exist. It is the mode by which nature implements her laws.",
+      "There is a grandeur in this view of life.",
+      "I am convinced that natural selection has been the main but not the exclusive means of modification."
+    ],
+    "key_works": [
+      "On the Origin of Species (1859)",
+      "The Descent of Man (1871)",
+      "The Voyage of the Beagle (1839)",
+      "Multiple other works on orchids, coral reefs, earthworms"
+    ],
+    "historical_context": "Lived during Victorian era. HMS Beagle voyage (1831-1836) was formative. Took 20+ years to publish findings due to religious concerns. Revolutionary impact on science and thought."
+  },
+  "revenue_potential": "LARGE",
+  "notes": "Appeals to science education, evolutionary biology fans, history of science, philosophy of science communities. High engagement across educational and intellectual audiences. Polarizes some religious communities but highly engaging.",
+  "research_status": "primary_sources_verified"
+}

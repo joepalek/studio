@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-073",
+  "name": "Skyler Anderson",
+  "universe": "original-fiction",
+  "archetype": "innocent",
+  "created_date": "2026-03-30T13:14:10.746308",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Skyler Anderson",
+    "pronouns": "he/him",
+    "age": 42,
+    "personality_traits": [
+      "charismatic",
+      "courageous",
+      "adaptable",
+      "reserved",
+      "energetic"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:10.746329",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-29T21:00:00",
+  "updated": "2026-03-31T04:00:02.895603",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -686,7 +686,7 @@
     {
       "id": "nost-0025",
       "type": "product_archaeology",
-      "title": "Remember when you didnâ€™t have to enter your personal info online to win a soda?",
+      "title": "Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
       "description": "",
       "signal": "remember when",
       "source": "reddit_r_nostalgia",
@@ -865,7 +865,7 @@
     },
     {
       "id": "ebay-identifier-app",
-      "title": "eBay Item Identifier â€” Consensus Engine",
+      "title": "eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
       "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
@@ -1103,7 +1103,7 @@
       ],
       "social_media_angle": "Public brainstorm for novel use cases on launch",
       "added": "2026-03-26",
-      "source": "Joe session — expanded from Historical Twins concept",
+      "source": "Joe session \u2014 expanded from Historical Twins concept",
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 9,
@@ -1133,7 +1133,21 @@
         "emergency_logistics": "Waffle House twin, military logistics",
         "legal_regulatory": "Historical justices, domain regulators"
       },
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 8,
+        "recommended_action": "PITCH",
+        "why_now": "Increasing complexity and AI demand robust human-centered decision protocols to cut through noise.",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Sourcing & managing genuinely diverse and adversarial 'characters' for each unique decision presents a significant challenge.",
+        "score_breakdown": {
+          "market_timing": 8,
+          "feasibility": 6,
+          "revenue_potential": 8,
+          "strategic_fit": 9
+        }
+      }
     },
     {
       "id": "vedic-math-layer",
@@ -1144,27 +1158,55 @@
       "type": "infrastructure+patent",
       "patent_angle": "Vedic kernel routing + environment-aware portability wrapper combination in agentic systems",
       "build_when": "After Mirofish results and sidebar complete",
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 5,
+        "recommended_action": "RESEARCH",
+        "why_now": "AI/ML explosion drives demand for faster matrix/vector operations, creating market need.",
+        "effort_estimate": "months",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Vedic math optimizations might not provide significant, demonstrable speedups over existing highly optimized libraries.",
+        "score_breakdown": {
+          "market_timing": 8,
+          "feasibility": 2,
+          "revenue_potential": 7,
+          "strategic_fit": 4
+        }
+      }
     },
     {
       "id": "vedic-ai-inference-os",
       "title": "Vedic AI Inference Operating System",
-      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency — every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
+      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency \u2014 every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
       "type": "infrastructure+patent+product",
       "tiers": {
-        "tier1": "Custom CUDA Vedic kernels for Ollama — 2-4 weeks",
-        "tier2": "Stripped Linux AI inference OS — 3-6 months",
-        "tier3": "Full Vedic AI OS with HAL integration — 1-2 years"
+        "tier1": "Custom CUDA Vedic kernels for Ollama \u2014 2-4 weeks",
+        "tier2": "Stripped Linux AI inference OS \u2014 3-6 months",
+        "tier3": "Full Vedic AI OS with HAL integration \u2014 1-2 years"
       },
       "patent_angle": "Novel OS architecture combining Vedic arithmetic at kernel HAL level with AI-native design and environment-aware portability",
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 3,
+        "recommended_action": "RESEARCH",
+        "why_now": "AI inference demand is soaring, driving critical need for efficiency and heat reduction.",
+        "effort_estimate": "years",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Extreme complexity of OS kernel development and unproven real-world benefits of Vedic math.",
+        "score_breakdown": {
+          "market_timing": 7,
+          "feasibility": 1,
+          "revenue_potential": 8,
+          "strategic_fit": 1
+        }
+      }
     },
     {
       "id": "vedic-upgrade-service",
       "title": "Vedic AI Upgrade as a Service",
-      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison — original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
+      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison \u2014 original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
       "type": "service+patent+revenue",
@@ -1176,7 +1218,21 @@
       },
       "startup_cost": "Under $500 including provisional patent",
       "timeline": "First client within 4 weeks of Tuesday build",
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 3,
+        "recommended_action": "RESEARCH",
+        "why_now": "Rising AI compute costs demand efficiency, but 'Vedic' aspect needs scientific grounding.",
+        "effort_estimate": "years",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Core 'Vedic CUDA' tech lacks scientific basis, making it unfeasible or incredible.",
+        "score_breakdown": {
+          "market_timing": 5,
+          "feasibility": 2,
+          "revenue_potential": 3,
+          "strategic_fit": 2
+        }
+      }
     },
     {
       "id": "creative-review-agent",
@@ -1186,37 +1242,93 @@
       "priority": "HIGH",
       "type": "agent+quality-control",
       "build_after": "Historical Twins pipeline produces first validated character assets",
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 7,
+        "recommended_action": "BUILD",
+        "why_now": "AI advancements enable robust content classification, streamlining crucial creative quality control now.",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Scope creep and over-engineering for internal needs, leading to prolonged development time.",
+        "score_breakdown": {
+          "market_timing": 7,
+          "feasibility": 6,
+          "revenue_potential": 6,
+          "strategic_fit": 8
+        }
+      }
     },
     {
       "id": "ghost-book-script-vault",
       "title": "Ghost Book Script Vault + Salvage Protocol",
-      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage — scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
+      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage \u2014 scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
       "status": "ACTIVE",
       "priority": "HIGH",
       "type": "content-management",
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 8,
+        "recommended_action": "BUILD",
+        "why_now": "Maximizing existing content is crucial in today's content-heavy, AI-assisted creative landscape.",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Manual salvage process can be time-consuming and divert focus from new project generation.",
+        "score_breakdown": {
+          "market_timing": 8,
+          "feasibility": 8,
+          "revenue_potential": 7,
+          "strategic_fit": 9
+        }
+      }
     },
     {
       "id": "higgsfield-backwards-design",
-      "title": "Higgsfield Original Series — Backwards Design",
+      "title": "Higgsfield Original Series \u2014 Backwards Design",
       "description": "Monitor platform weekly for genre gaps and vote velocity. Build CTW characters specifically for underserved genres. Design story structure for 2-10 minute episode format from day one. Soul ID consistency built into character spec. Enter contests in low-competition genres. Sponsored production if contest win.",
       "status": "WHITEBOARD",
       "priority": "MEDIUM",
       "type": "distribution+content-strategy",
       "intelligence_source": "higgsfield-intelligence.json",
       "contest_strategy": "Enter underserved genres where competition is lower",
-      "added": "2026-03-29"
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 9,
+        "recommended_action": "BUILD",
+        "why_now": "Data-driven niche content creation and short-form distribution are key to success for new creators today.",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Success is highly dependent on accurately identifying viable niches and winning contests.",
+        "score_breakdown": {
+          "market_timing": 9,
+          "feasibility": 9,
+          "revenue_potential": 7,
+          "strategic_fit": 10
+        }
+      }
     },
     {
       "id": "vedic-build-status",
-      "title": "Vedic Math Build — Active Status",
+      "title": "Vedic Math Build \u2014 Active Status",
       "description": "Stack B (_studio_vedic) staged and ready. Config G vector context wired in. Scan runs tonight at 2:30 AM to produce conversion manifest. Build agent spec complete. Kernel stubs written with shadow verification and ab-report logging. A/B dispatcher wires after manifest confirms scope.",
       "status": "IN_PROGRESS",
       "priority": "HIGH",
       "type": "infrastructure",
-      "next_action": "Read vedic-conversion-manifest.json tomorrow morning — it tells us scope of conversion and which files to tackle first",
-      "added": "2026-03-29"
+      "next_action": "Read vedic-conversion-manifest.json tomorrow morning \u2014 it tells us scope of conversion and which files to tackle first",
+      "added": "2026-03-29",
+      "gemini_score": {
+        "total_score": 6,
+        "recommended_action": "BUILD",
+        "why_now": "Project is in active development, staged for immediate technical progression and testing.",
+        "effort_estimate": "months",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Significant investment in complex infrastructure without confirmed market demand for the end product.",
+        "score_breakdown": {
+          "market_timing": 5,
+          "feasibility": 8,
+          "revenue_potential": 3,
+          "strategic_fit": 6
+        }
+      }
     }
   ]
 }

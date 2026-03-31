@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-gemini-015",
+  "name": "Phoenix Rodriguez",
+  "universe": "original-fiction",
+  "archetype": "innocent",
+  "created_date": "2026-03-30T13:14:22.916787",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Phoenix Rodriguez",
+    "pronouns": "she/her",
+    "age": 42,
+    "personality_traits": [
+      "delusional",
+      "insecure",
+      "thoughtful",
+      "creative",
+      "patient",
+      "cautious",
+      "compassionate"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:22.916809",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

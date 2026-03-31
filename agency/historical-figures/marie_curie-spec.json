@@ -1,0 +1,59 @@
+{
+  "id": "char-historical-marie_curie-20260330",
+  "name": "Marie Curie",
+  "universe": "historical_figure",
+  "archetype": "pioneering_scientist",
+  "created_by": "historical-figure-deep-diver",
+  "status": "draft",
+  "birth_year": 1867,
+  "death_year": 1934,
+  "nationality": "Polish-French",
+  "personality_traits": [
+    "determined",
+    "intellectually_rigorous",
+    "humble",
+    "resilient",
+    "dedicated_to_science",
+    "grief_stricken_after_pierre",
+    "socially_awkward"
+  ],
+  "voice": "Thoughtful, scientific, but warm. Speaks about discovery with wonder. Discusses grief and loss directly. Passionate about women in science. Slight French accent in English.",
+  "visual_description": "Petite woman with intelligent eyes and serious expression. Simple, practical clothing. Later: aged and worn from radiation exposure. Dignified bearing despite hardship.",
+  "backstory": "Marie Curie (1867-1934) was known for Discovery of polonium and radium, pioneering radioactivity research, two Nobel Prizes. Lived during First woman to win Nobel Prize, only person to win Nobel in two different sciences. Worked in male-dominated field. Struggled with grief after Pierre's death. Died from radiation exposure.",
+  "primary_expertise": [
+    "physics",
+    "chemistry",
+    "radioactivity_research"
+  ],
+  "expertise_areas": {
+    "radioactivity": "Pioneer and discoverer",
+    "physics": "Expert, Nobel laureate",
+    "chemistry": "Expert, Nobel laureate",
+    "research_methodology": "Rigorous, meticulous"
+  },
+  "knowledge_base": {
+    "primary_sources": [
+      "Marie Curie's Laboratory Notebooks (1891-1906)",
+      "Autobiography and letters",
+      "Published research papers in Comptes rendus",
+      "Pierre Curie's journals and letters",
+      "Biography by her daughter \u00c8ve Curie (1937)"
+    ],
+    "verified_quotes": [
+      "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.",
+      "Be less curious about people and more curious about ideas.",
+      "Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves.",
+      "I was taught that the way of progress was neither swift nor easy.",
+      "The scientist's passion is to know the secrets of nature."
+    ],
+    "key_works": [
+      "Laboratory Notebooks (detailed experiments in radioactivity)",
+      "Research papers on polonium and radium discovery",
+      "Autobiography: My Life (1937, published posthumously)"
+    ],
+    "historical_context": "First woman to win Nobel Prize, only person to win Nobel in two different sciences. Worked in male-dominated field. Struggled with grief after Pierre's death. Died from radiation exposure."
+  },
+  "revenue_potential": "LARGE",
+  "notes": "Appeals to STEM education, women in science advocacy, historical biography fans. High engagement for educational and inspirational content.",
+  "research_status": "primary_sources_verified"
+}

@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "schema_name": "Splat Character Metadata",
+  "last_updated": "2026-03-30",
+  "description": "Unified character metadata for Gaussian Splat viewer app. Bridges character specs → Splat assets → Viewer deployment.",
+  
+  "character_template": {
+    "identity": {
+      "id": "char-[universe]-[slug]-[date]",
+      "name": "string (canonical name)",
+      "universe": "enum: [historical_figure, fictional_agency]",
+      "slug": "string (url-safe slug, lowercase, hyphens)",
+      "created_by": "string (creator/agent name)",
+      "created_date": "ISO8601"
+    },
+
+    "biographical": {
+      "birth_year": "integer or null",
+      "death_year": "integer or null",
+      "nationality": "string",
+      "archetype": "string (visionary_inventor, revolutionary_naturalist, etc.)",
+      "personality_traits": ["array of strings"],
+      "backstory": "string (2-3 sentence summary)"
+    },
+
+    "character_definition": {
+      "voice": {
+        "tone": "string (description of speech style)",
+        "accent": "string or null (linguistic markers)",
+        "speech_patterns": ["array of distinctive patterns"],
+        "verified_quotes": ["array of 5-10 authentic quotes"]
+      },
+      "visual": {
+        "description": "string (physical appearance, key features)",
+        "key_distinguishing_features": ["array: facial hair, build, expression, etc."],
+        "clothing_era": "string (approximate period)",
+        "expression_range": "string (emotional baseline and range)"
+      }
+    },
+
+    "expertise": {
+      "primary_domains": ["array of 3-5 main expertise areas"],
+      "expertise_map": {
+        "domain_name": "string (expert/pioneer/knowledge description)"
+      }
+    },
+
+    "knowledge_base": {
+      "primary_sources": ["array of canonical texts/references"],
+      "key_works": ["array of major works/achievements"],
+      "historical_context": "string (era, circumstances, impact)"
+    },
+
+    "splat_asset": {
+      "status": "enum: [not_started, in_progress, generated, segmented, deployed]",
+      "source_method": "enum: [museum_scan, photo_reconstruction, 3d_model_conversion, actor_photogrammetry, ai_synthesis]",
+      "source_path": "string (path to source material: images, 3D model, etc.)",
+      "splat_file": {
+        "format": "enum: [.SOG, .PLY, .ply]",
+        "path": "string (location of generated Splat file)",
+        "generated_date": "ISO8601 or null",
+        "generator_tool": "string (Polycam, Luma AI, ArtisanGS, etc.)"
+      },
+      "segmentation": {
+        "status": "enum: [not_started, in_progress, complete]",
+        "tool_used": "string (ArtisanGS, etc.)",
+        "background_removed": "boolean",
+        "isolation_quality": "enum: [poor, acceptable, good, excellent]"
+      },
+      "optimization": {
+        "target_fps": "integer (60, 90, 120)",
+        "estimated_vram_mb": "integer (estimated memory footprint)",
+        "tested_on_gpu": "string or null (GPU model tested)"
+      }
+    },
+
+    "convai_integration": {
+      "voice_model_id": "string (Convai SDK voice ID)",
+      "personality_traits_convai": ["array of traits fed to Convai for behavior synthesis"],
+      "speech_override_style": "string (specific speech instructions for Convai)",
+      "animation_rig": "enum: [standard_humanoid, custom_rig, splat_deform]",
+      "animation_driver_status": "enum: [not_configured, configured, tested]"
+    },
+
+    "interaction_model": {
+      "mouse_interaction": "boolean (can be repositioned by mouse)",
+      "ik_enabled": "boolean (inverse kinematics for natural movement)",
+      "gaze_follow": "boolean (character eyes follow mouse cursor)",
+      "full_body_control": "boolean (user can move character limbs)",
+      "custom_animations": ["array of custom animation names"]
+    },
+
+    "content_tier": {
+      "universe_type": "enum: [historical_sfw_only, fictional_unrestricted]",
+      "content_gate": "enum: [strict_sfw, standard_sfw, unrestricted]",
+      "age_gate": "integer or null (minimum age, null = no gate)",
+      "access_tier": "enum: [public, beta_testers, premium]",
+      "notes": "string (content warnings, sensitivities, cultural considerations)"
+    },
+
+    "deployment": {
+      "app_target": "enum: [historical_viewer, character_platform]",
+      "deployment_status": "enum: [not_ready, ready_for_qa, deployed_beta, deployed_live]",
+      "deployment_date": "ISO8601 or null",
+      "qa_checklist": {
+        "spec_complete": "boolean",
+        "splat_generated": "boolean",
+        "splat_segmented": "boolean",
+        "voice_model_tested": "boolean",
+        "animation_rig_tested": "boolean",
+        "mouse_interaction_tested": "boolean",
+        "content_gate_verified": "boolean"
+      },
+      "known_issues": ["array of documented issues"],
+      "performance_notes": "string (FPS, VRAM usage observations)"
+    },
+
+    "revenue": {
+      "revenue_potential": "enum: [low, medium, large]",
+      "engagement_estimate": "string (target demographics/use cases)",
+      "priority": "enum: [p0_immediate, p1_near_term, p2_backlog]"
+    },
+
+    "research": {
+      "research_status": "enum: [not_researched, in_progress, primary_sources_verified, completed]",
+      "verifier": "string (who verified sources)",
+      "verification_date": "ISO8601",
+      "notes": "string (research gaps, uncertainties)"
+    }
+  },
+
+  "deployment_gates": {
+    "gate_1_spec_complete": {
+      "check": "Character spec must have status='draft' or higher with all fields populated",
+      "blocks": "None—can proceed to Splat generation"
+    },
+    "gate_2_splat_generated": {
+      "check": "Gaussian Splat file must exist and validate (correct format, reasonable file size)",
+      "blocks": "Voice integration, animation rig setup"
+    },
+    "gate_3_splat_segmented": {
+      "check": "Character must be cleanly isolated from background (ArtisanGS or equivalent)",
+      "blocks": "Deployment to viewer app"
+    },
+    "gate_4_voice_tested": {
+      "check": "Convai voice model must generate speech without errors, lip-sync verified",
+      "blocks": "Interactive testing"
+    },
+    "gate_5_interaction_tested": {
+      "check": "Mouse tracking, IK, gaze follow all tested at target FPS on reference GPU",
+      "blocks": "Beta deployment"
+    },
+    "gate_6_content_gate_verified": {
+      "check": "If SFW-gated: access control tested. If unrestricted: verified by agency lead.",
+      "blocks": "Live deployment"
+    }
+  },
+
+  "example_deployment": {
+    "id": "char-historical-nikola_tesla-20260330",
+    "name": "Nikola Tesla",
+    "universe": "historical_figure",
+    "content_tier": {
+      "universe_type": "historical_sfw_only",
+      "content_gate": "strict_sfw",
+      "age_gate": null,
+      "access_tier": "beta_testers"
+    },
+    "splat_asset": {
+      "status": "in_progress",
+      "source_method": "photo_reconstruction",
+      "splat_file": {
+        "format": ".SOG",
+        "path": null,
+        "generated_date": null,
+        "generator_tool": "pending_gpu_upgrade"
+      }
+    },
+    "deployment": {
+      "app_target": "historical_viewer",
+      "deployment_status": "not_ready",
+      "qa_checklist": {
+        "spec_complete": true,
+        "splat_generated": false,
+        "splat_segmented": false,
+        "voice_model_tested": false,
+        "animation_rig_tested": false,
+        "mouse_interaction_tested": false,
+        "content_gate_verified": true
+      }
+    },
+    "priority": "p0_immediate"
+  }
+}

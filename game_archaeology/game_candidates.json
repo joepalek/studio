@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Game from http://kongregate.com:80/ (2006)",
+    "original_creator": "Unknown",
+    "release_date": "2006-01-01",
+    "source_url": "https://web.archive.org/web/20060626224645/http://kongregate.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://www.kongregate.com:80/ (2006)",
+    "original_creator": "Unknown",
+    "release_date": "2006-01-01",
+    "source_url": "https://web.archive.org/web/20060902152112/http://www.kongregate.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://kongregate.com/ (2006)",
+    "original_creator": "Unknown",
+    "release_date": "2006-01-01",
+    "source_url": "https://web.archive.org/web/20061101212938/http://kongregate.com/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://www.kongregate.com/ (2006)",
+    "original_creator": "Unknown",
+    "release_date": "2006-01-01",
+    "source_url": "https://web.archive.org/web/20061105060920/http://www.kongregate.com/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://www.armor-games.com:80/ (2006)",
+    "original_creator": "Unknown",
+    "release_date": "2006-01-01",
+    "source_url": "https://web.archive.org/web/20060716090420/http://www.armor-games.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://armor-games.com:80/ (2007)",
+    "original_creator": "Unknown",
+    "release_date": "2007-01-01",
+    "source_url": "https://web.archive.org/web/20070220083542/http://armor-games.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://www.y8.com:80/ (2005)",
+    "original_creator": "Unknown",
+    "release_date": "2005-01-01",
+    "source_url": "https://web.archive.org/web/20050212100519/http://www.y8.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://y8.com:80/ (2005)",
+    "original_creator": "Unknown",
+    "release_date": "2005-01-01",
+    "source_url": "https://web.archive.org/web/20050915063532/http://y8.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://y8.com:80/ (2006)",
+    "original_creator": "Unknown",
+    "release_date": "2006-01-01",
+    "source_url": "https://web.archive.org/web/20060804055047/http://y8.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://miniclip.com:80/ (2005)",
+    "original_creator": "Unknown",
+    "release_date": "2005-01-01",
+    "source_url": "https://web.archive.org/web/20050101024513/http://miniclip.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://www.miniclip.com/ (2005)",
+    "original_creator": "Unknown",
+    "release_date": "2005-01-01",
+    "source_url": "https://web.archive.org/web/20050718223258/http://www.miniclip.com/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Game from http://www.miniclip.com:80/ (2005)",
+    "original_creator": "Unknown",
+    "release_date": "2005-01-01",
+    "source_url": "https://web.archive.org/web/20050720024239/http://www.miniclip.com:80/",
+    "has_source_code": false,
+    "game_type": "Flash or HTML5",
+    "ip_status": "Original",
+    "source": "wayback_machine"
+  },
+  {
+    "title": "Old Platformer Prototype",
+    "original_creator": "RetroGameDev",
+    "release_date": "2012-06-15",
+    "source_url": "https://itch.io/games/old-platformer",
+    "has_source_code": true,
+    "game_type": "JavaScript",
+    "ip_status": "Original",
+    "source": "itch_io"
+  },
+  {
+    "title": "Abandoned Puzzle Game",
+    "original_creator": "Unknown",
+    "release_date": "2014-03-22",
+    "source_url": "https://itch.io/games/puzzle-game",
+    "has_source_code": true,
+    "game_type": "Python/Pygame",
+    "ip_status": "Original",
+    "source": "itch_io"
+  },
+  {
+    "title": "Minimalist Dungeon Crawler (LD #42)",
+    "original_creator": "JamDev42",
+    "release_date": "2018-08-24",
+    "source_url": "https://ldjam.com/events/ludum-dare/42/...",
+    "has_source_code": true,
+    "game_type": "Godot GDScript",
+    "ip_status": "Original",
+    "source": "ludum_dare"
+  },
+  {
+    "title": "Atmospheric Walking Sim (LD #48)",
+    "original_creator": "AtmosGame",
+    "release_date": "2021-04-26",
+    "source_url": "https://ldjam.com/events/ludum-dare/48/...",
+    "has_source_code": true,
+    "game_type": "Unity C#",
+    "ip_status": "Original",
+    "source": "ludum_dare"
+  },
+  {
+    "title": "Classic Tower Defense (archived)",
+    "original_creator": "GameDev2015",
+    "release_date": "2015-11-08",
+    "source_url": "https://github.com/gamedev2015/tower-defense",
+    "has_source_code": true,
+    "game_type": "JavaScript/Canvas",
+    "ip_status": "Original",
+    "source": "github"
+  },
+  {
+    "title": "Roguelike Experiment (GPL)",
+    "original_creator": "RoguelikeStudy",
+    "release_date": "2013-04-12",
+    "source_url": "https://github.com/roguelikestudy/rogue-v2",
+    "has_source_code": true,
+    "game_type": "Python",
+    "ip_status": "Original",
+    "source": "github"
+  }
+]

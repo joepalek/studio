@@ -1,0 +1,9 @@
+2026-03-30 00:09:58,670 [CX_AGENT] INFO: === DAILY CX AGENT SCAN ===
+2026-03-30 00:12:03,025 [CX_AGENT] INFO: === DAILY CX AGENT SCAN ===
+2026-03-30 00:12:03,029 [CX_AGENT] INFO: Culled 0 expired jobs
+2026-03-30 00:12:03,029 [CX_AGENT] INFO: Identified 4 amplification candidates
+2026-03-30 00:12:03,030 [CX_AGENT] INFO:   → ebay_listing_20260329_001 (listing): quality=9
+2026-03-30 00:12:03,031 [CX_AGENT] INFO:   → ctw_character_mara_20260329 (character_file): quality=9
+2026-03-30 00:12:03,054 [CX_AGENT] INFO:   → ghost_book_script_draft_20260329_001 (script_draft): quality=8
+2026-03-30 00:12:03,055 [CX_AGENT] INFO:   → job_posting_20260329_001 (job_posting): quality=8
+2026-03-30 00:12:03,103 [CX_AGENT] INFO: Wrote social media feed to data/social_media_feed.json

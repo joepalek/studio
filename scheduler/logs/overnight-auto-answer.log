@@ -111,3 +111,35 @@ You've hit your limit · resets 4am (America/Chicago)
 
 [auto-answer] auto-resolved 0, escalated 42 of 42 pending
 [Sun 03/29/2026  3:30:09.63] Done 
+[Mon 03/30/2026  3:30:01.89] Auto-answer agent starting (Gemini Flash) 
+[auto-answer] Inbox: 42 total, 42 pending
+[auto-answer] Rules: 12 | Memory: 0 entries
+  [ERROR] Use WebXR or Canvas overlay for AR rendering?: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] Should point descriptions be text overlaid on scre: HTTP Error 503: Service Unavailable
+  [ERROR] Eventually monetize this or keep it free/personal?: HTTP Error 503: Service Unavailable
+  [ERROR] Now that Chrome extension is available — attempt: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] What format do you want the watchlist notes in? (e: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] Should this work on mobile Chrome or desktop only?: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] Should employer portal be prioritized before or af: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] Should job ratings be shown to users in v1 or held: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] Should the app remember your meal history to avoid: 'charmap' codec can't encode character '\u2192' in position 
+  [ERROR] What defines late-game completion — what is the : 'charmap' codec can't encode character '\u2192' in position 
+
+[auto-answer] auto-resolved 8, escalated 42 of 42 pending
+[Mon 03/30/2026  3:32:40.20] Done 
+[Tue 03/31/2026  3:30:01.55] Auto-answer agent starting (Gemini Flash) 
+[auto-answer] Inbox: 45 total, 37 pending
+[auto-answer] Rules: 12 | Memory: 0 entries
+  [GEMINI] If hand tracking lags on older phones â€” prioritize sp → Prioritize speed for responsiveness. A s
+  [GEMINI] Should point descriptions be text overlaid on screen or → Opt for a separate info panel below the 
+  [GEMINI] Scraping approach â€” Apify Actor or direct browser aut → Apify Actor is generally more efficient 
+  [GEMINI] Digest delivery format â€” Markdown file in Drive, emai → A Markdown file in Drive is recommended 
+  [GEMINI] Should analysis run on all lots automatically or only w → Opt for a manual trigger initially to co
+  [ERROR] Should the platform be offered as SaaS to other jo: HTTP Error 503: Service Unavailable
+  [ERROR] For the scam database â€” should it be private to : HTTP Error 503: Service Unavailable
+  [GEMINI] What are your SKU prefix conventions for physical stora → As a solo developer's AI studio, there a
+  [GEMINI] Should shopping list generation be part of the MVP or p → Post-launch.
+  [GEMINI] Should we build a general Whatnot cover letter or three → Opt for a general cover letter with swap
+
+[auto-answer] auto-resolved 8, escalated 29 of 37 pending
+[Tue 03/31/2026  3:32:07.59] Done 

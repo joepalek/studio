@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-038",
+  "name": "Casey Martinez",
+  "universe": "band-members",
+  "archetype": "session_musician",
+  "created_date": "2026-03-30T13:14:57.601449",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Casey Martinez",
+    "pronouns": "he/him",
+    "age": 35,
+    "personality_traits": [
+      "intuitive",
+      "paranoid",
+      "courageous",
+      "technical",
+      "compassionate",
+      "ambitious"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:57.601469",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

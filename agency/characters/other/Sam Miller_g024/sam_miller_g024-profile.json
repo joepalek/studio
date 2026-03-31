@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-024",
+  "name": "Sam Miller",
+  "universe": "other",
+  "archetype": "activist",
+  "created_date": "2026-03-30T13:14:25.002368",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Miller",
+    "pronouns": "they/them",
+    "age": 18,
+    "personality_traits": [
+      "principled",
+      "courageous",
+      "diplomatic",
+      "paranoid"
+    ],
+    "voice": "quiet and introspective",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:25.002390",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

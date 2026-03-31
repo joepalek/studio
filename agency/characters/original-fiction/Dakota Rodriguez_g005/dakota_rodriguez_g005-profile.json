@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-005",
+  "name": "Dakota Rodriguez",
+  "universe": "original-fiction",
+  "archetype": "sage",
+  "created_date": "2026-03-30T13:14:19.881137",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Dakota Rodriguez",
+    "pronouns": "they/them",
+    "age": 28,
+    "personality_traits": [
+      "observant",
+      "destructive",
+      "technical",
+      "reckless"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:19.881159",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

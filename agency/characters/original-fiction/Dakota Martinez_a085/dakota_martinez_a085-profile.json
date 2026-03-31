@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-085",
+  "name": "Dakota Martinez",
+  "universe": "original-fiction",
+  "archetype": "caregiver",
+  "created_date": "2026-03-30T13:15:12.229632",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Dakota Martinez",
+    "pronouns": "he/him",
+    "age": 65,
+    "personality_traits": [
+      "principled",
+      "insecure",
+      "destructive",
+      "determined",
+      "cynical"
+    ],
+    "voice": "quiet and introspective",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:12.229660",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

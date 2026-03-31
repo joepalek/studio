@@ -1,0 +1,53 @@
+{
+  "id": "char-spec-claude-053",
+  "name": "Dakota Smith",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-03-30T13:14:04.925693",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Dakota Smith",
+    "pronouns": "she/her",
+    "age": 65,
+    "personality_traits": [
+      "independent",
+      "reserved",
+      "analytical"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:04.925716",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

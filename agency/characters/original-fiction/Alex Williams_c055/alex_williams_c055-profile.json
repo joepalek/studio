@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-claude-055",
+  "name": "Alex Williams",
+  "universe": "original-fiction",
+  "archetype": "trickster",
+  "created_date": "2026-03-30T13:14:05.542975",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Alex Williams",
+    "pronouns": "they/them",
+    "age": 42,
+    "personality_traits": [
+      "meticulous",
+      "diplomatic",
+      "technical",
+      "resilient",
+      "obsessive",
+      "empathetic"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Comes from privilege but rejects it to find authentic meaning."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:05.542995",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

@@ -1,33 +1,28 @@
 {
-  "timestamp": "2026-03-29T23:31:48.708370",
+  "timestamp": "2026-03-31T10:02:04.261258",
   "verdict": "DEGRADED",
-  "passes": {
-    "tools": {
-      "git": "2.53.0 OK",
-      "node": "v24.14.0 OK",
-      "npm": "11.9.0 OK",
-      "python": "3.13.7 OK",
-      "repomix": "1.12.0 OK",
-      "ollama": "0.18.3 OK"
-    },
-    "endpoints": {
-      "anthropic_key": "SET",
-      "gemini_key": "SET",
-      "openrouter_key": "SET",
-      "youtube_key": "SET",
-      "ollama": "UP \u2014 2 models"
-    },
-    "projects": {
-      "issues": [
-        "UNCOMMITTED (12 files): _studio"
-      ],
-      "clean": 12
-    },
-    "studio_files": "All critical files present",
-    "mobile_answers": "No pending"
+  "tools": {
+    "git": "2.53.0 OK",
+    "node": "v24.14.0 OK",
+    "npm": "11.9.0 OK",
+    "python": "3.13.12 OK",
+    "claude_code": "2.1.88 OK",
+    "repomix": "1.12.0 OK",
+    "ollama": "0.19.0 UP"
   },
-  "issues": [
-    "UNCOMMITTED (12 files): _studio"
-  ],
-  "action": "Commit _studio dirty files"
+  "endpoints": {
+    "ollama": "UP - 2 models",
+    "gemini": "UP",
+    "openrouter": "SET",
+    "anthropic": "SET"
+  },
+  "projects": {
+    "issues": [
+      "UNCOMMITTED (84 files): _studio"
+    ],
+    "clean": 12
+  },
+  "studio_files": "all critical present",
+  "mobile_answers": "none pending",
+  "task_queue": "0 tasks queued"
 }

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Studio Sidebar v2.1 [6642]</title>
+<!-- GENERATED: 1774926642 -->
+<style>
+:root {
+  --bg:#0d1117; --panel:#161b22; --border:#21262d;
+  --green:#3fb950; --green-dim:#1a4a1e;
+  --text:#c9d1d9; --text-dim:#6e7681;
+  --amber:#d29922; --red:#f85149; --blue:#58a6ff;
+  --font:'Segoe UI',Arial,sans-serif;
+  --mono:'Consolas','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:13px;
+  line-height:1.6;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+
+/* TAB BAR */
+#tab-bar{display:flex;border-bottom:1px solid var(--border);background:var(--panel);
+  flex-shrink:0;overflow-x:auto;}
+#tab-bar::-webkit-scrollbar{height:2px;}
+#tab-bar::-webkit-scrollbar-thumb{background:var(--border);}
+.tab{flex-shrink:0;padding:7px 3px;text-align:center;font-size:10px;letter-spacing:0.3px;
+  cursor:pointer;color:var(--text-dim);border-bottom:2px solid transparent;
+  transition:all 0.15s;user-select:none;white-space:nowrap;flex:1;position:relative;}
+.tab:hover{color:var(--text);}
+.tab.active{color:var(--green);border-bottom-color:var(--green);}
+.tab-badge{position:absolute;top:1px;right:1px;background:var(--red);color:#fff;
+  font-size:8px;font-weight:bold;border-radius:8px;padding:0 3px;min-width:13px;
+  text-align:center;line-height:13px;display:none;}
+
+/* PANELS */
+.panel{display:none;flex-direction:column;flex:1;overflow:hidden;}
+.panel.active{display:flex;}
+.panel-scroll{flex:1;overflow-y:auto;padding:10px;}
+.panel-scroll::-webkit-scrollbar{width:3px;}
+.panel-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+
+/* BLOCKS */
+.block{background:var(--panel);border:1px solid var(--border);border-radius:6px;
+  padding:9px 11px;margin-bottom:8px;}
+.lbl{font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;
+  margin-bottom:5px;}
+.sec{font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;
+  margin-bottom:7px;padding-bottom:3px;border-bottom:1px solid var(--border);}
+.status-ok{color:var(--green);} .status-warn{color:var(--amber);} .status-err{color:var(--red);}
+
+/* BUTTONS */
+.btn{padding:7px 10px;border-radius:4px;cursor:pointer;font-family:var(--font);
+  font-size:11px;transition:all 0.15s;border:1px solid var(--border);
+  background:none;color:var(--text-dim);}
+.btn:hover{border-color:var(--green);color:var(--green);}
+.btn-g{background:var(--green-dim);border-color:var(--green);color:var(--green);}
+.btn-g:hover{background:var(--green);color:var(--bg);}
+.btn-r{border-color:var(--red);color:var(--red);}
+.btn-b{border-color:var(--blue);color:var(--blue);}
+.btn-a{border-color:var(--amber);color:var(--amber);}
+.btn-w{width:100%;display:block;text-align:center;margin-bottom:7px;}
+
+/* FORMS */
+.fi,.fs,.ft{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);
+  font-family:var(--font);font-size:12px;padding:6px 8px;border-radius:4px;
+  margin-bottom:7px;outline:none;}
+.fi:focus,.fs:focus,.ft:focus{border-color:var(--green);}
+.ft{resize:vertical;min-height:55px;line-height:1.5;}
+
+/* PROGRESS */
+.prog-row{display:flex;align-items:center;gap:7px;margin-bottom:5px;}
+.prog-name{font-size:11px;color:var(--text);flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.prog-bar{flex:2;height:5px;background:var(--bg);border-radius:3px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:3px;background:var(--green);}
+.prog-pct{font-size:10px;color:var(--text-dim);width:26px;text-align:right;}
+
+/* INBOX */
+.icard{background:var(--panel);border:1px solid var(--border);border-radius:5px;
+  padding:9px 11px;margin-bottom:7px;}
+.icard.u-WARN{border-left:3px solid var(--amber);}
+.icard.u-CRIT{border-left:3px solid var(--red);}
+.icard.u-INFO{border-left:3px solid var(--blue);}
+.icard-title{font-size:11px;font-weight:bold;color:var(--text);margin-bottom:3px;}
+.icard-find{font-size:10px;color:var(--text-dim);margin-bottom:5px;line-height:1.5;}
+.icard-meta{font-size:9px;color:var(--text-dim);margin-bottom:6px;}
+.icard-acts{display:flex;gap:5px;}
+.icard-acts button{flex:1;padding:3px 5px;font-size:9px;border-radius:3px;cursor:pointer;
+  background:none;transition:all 0.15s;}
+
+/* AGENT GRID */
+.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px;}
+.abtn{padding:6px 5px;font-size:10px;border-radius:4px;cursor:pointer;
+  background:var(--panel);border:1px solid var(--border);color:var(--text-dim);
+  text-align:center;transition:all 0.15s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.abtn:hover{border-color:var(--green);color:var(--green);}
+
+/* LAUNCH */
+.lbtn{display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:4px;
+  background:var(--panel);border:1px solid var(--border);color:var(--text-dim);
+  cursor:pointer;margin-bottom:5px;font-size:11px;transition:all 0.15s;}
+.lbtn:hover{border-color:var(--blue);color:var(--blue);}
+.lbtn-icon{font-size:14px;flex-shrink:0;}
+.lbtn-name{flex:1;}
+.lbtn-del{font-size:12px;color:var(--red);opacity:0;transition:opacity 0.15s;}
+.lbtn:hover .lbtn-del{opacity:1;}
+
+/* RESOURCES */
+.res-card{background:var(--panel);border:1px solid var(--border);border-radius:5px;
+  padding:8px 10px;margin-bottom:6px;}
+.res-top{display:flex;align-items:center;gap:7px;margin-bottom:4px;}
+.res-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.dot-g{background:var(--green);}
+.dot-y{background:var(--amber);}
+.dot-r{background:var(--red);}
+.dot-grey{background:var(--text-dim);}
+.res-name{font-size:12px;font-weight:bold;color:var(--text);flex:1;}
+.res-tier{font-size:8px;padding:1px 5px;border-radius:3px;flex-shrink:0;}
+.tier-f{background:#1a2a1a;color:var(--green);border:1px solid var(--green);}
+.tier-p{background:#2a1a1a;color:var(--red);border:1px solid var(--red);}
+.tier-fp{background:#2a2200;color:var(--amber);border:1px solid var(--amber);}
+.res-notes{font-size:10px;color:var(--text-dim);margin-bottom:4px;}
+.usage-bar{height:4px;background:var(--bg);border-radius:2px;overflow:hidden;margin-bottom:3px;}
+.usage-fill{height:100%;border-radius:2px;}
+.fill-g{background:var(--green);} .fill-y{background:var(--amber);} .fill-r{background:var(--red);}
+.res-stats{font-size:9px;color:var(--text-dim);display:flex;justify-content:space-between;}
+
+/* SERVICES */
+.svc-card{background:var(--panel);border:1px solid var(--border);border-radius:5px;
+  padding:7px 9px;margin-bottom:5px;display:flex;align-items:flex-start;gap:7px;}
+.svc-rank{font-size:10px;color:var(--text-dim);width:16px;flex-shrink:0;text-align:center;padding-top:1px;}
+.svc-info{flex:1;min-width:0;}
+.svc-name{font-size:11px;color:var(--text);font-weight:bold;}
+.svc-sub{font-size:9px;color:var(--text-dim);}
+.svc-notes{font-size:9px;color:var(--text-dim);margin-top:2px;}
+.svc-trending{font-size:8px;color:var(--amber);margin-left:3px;}
+
+/* CHAT */
+#chat-msgs{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:8px;}
+#chat-msgs::-webkit-scrollbar{width:3px;}
+#chat-msgs::-webkit-scrollbar-thumb{background:var(--border);}
+.msg{padding:7px 10px;border-radius:5px;font-size:12px;line-height:1.6;
+  max-width:96%;word-wrap:break-word;}
+.msg-u{background:var(--green-dim);border:1px solid var(--green);align-self:flex-end;}
+.msg-a{background:var(--panel);border:1px solid var(--border);align-self:flex-start;}
+.msg-s{background:transparent;border:none;color:var(--text-dim);font-size:10px;
+  align-self:center;font-style:italic;}
+.msg pre{background:var(--bg);border:1px solid var(--border);border-radius:3px;
+  padding:7px;margin-top:5px;overflow-x:auto;font-family:var(--mono);font-size:10px;
+  white-space:pre;}
+.msg code{font-family:var(--mono);font-size:11px;background:var(--bg);padding:1px 3px;border-radius:2px;}
+#chat-bottom{border-top:1px solid var(--border);padding:8px;flex-shrink:0;}
+#chat-attach-tray{display:none;padding:4px 0 6px;border-bottom:1px solid var(--border);
+  margin-bottom:6px;font-size:10px;color:var(--text-dim);}
+#chat-row{display:flex;gap:7px;}
+#chat-in{flex:1;background:var(--panel);border:1px solid var(--border);color:var(--text);
+  font-family:var(--font);font-size:12px;padding:7px 9px;border-radius:4px;resize:none;
+  line-height:1.5;min-height:36px;max-height:110px;outline:none;}
+#chat-in:focus{border-color:var(--green);}
+#chat-send{background:var(--green-dim);border:1px solid var(--green);color:var(--green);
+  font-size:15px;padding:0 11px;border-radius:4px;cursor:pointer;transition:background 0.15s;flex-shrink:0;}
+#chat-send:hover{background:var(--green);color:var(--bg);}
+#chat-send:disabled{opacity:0.4;cursor:not-allowed;}
+#chat-attach-btn{background:none;border:1px solid var(--border);color:var(--text-dim);
+  font-size:14px;padding:0 9px;border-radius:4px;cursor:pointer;flex-shrink:0;}
+#chat-attach-btn:hover{border-color:var(--blue);color:var(--blue);}
+
+/* NOTEPAD (PLAN) */
+#notepad-area{width:100%;flex:1;background:var(--panel);border:1px solid var(--border);
+  color:var(--text);font-family:var(--font);font-size:12px;padding:10px;
+  border-radius:4px;resize:none;line-height:1.6;outline:none;min-height:200px;}
+#notepad-area:focus{border-color:var(--green);}
+
+/* MODAL */
+#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);
+  z-index:100;align-items:flex-start;justify-content:center;padding-top:40px;}
+#modal-overlay.show{display:flex;}
+#modal-box{background:var(--panel);border:1px solid var(--border);border-radius:8px;
+  padding:16px;max-width:480px;width:90%;max-height:80vh;overflow-y:auto;}
+#modal-title{font-size:13px;font-weight:bold;color:var(--text);margin-bottom:10px;
+  display:flex;justify-content:space-between;align-items:center;}
+#modal-close{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:18px;}
+#modal-content{font-size:11px;color:var(--text);line-height:1.7;}
+#modal-content a{color:var(--blue);}
+
+/* CFG */
+.cfg-row{display:flex;align-items:center;gap:7px;margin-bottom:7px;}
+.cfg-row label{font-size:11px;color:var(--text-dim);width:80px;flex-shrink:0;}
+.cfg-row input{flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);
+  font-family:var(--mono);font-size:10px;padding:5px 7px;border-radius:4px;outline:none;}
+.cfg-row input:focus{border-color:var(--green);}
+.key-badge{font-size:10px;padding:2px 7px;border-radius:3px;flex-shrink:0;}
+.key-set{background:#1a4a1e;color:var(--green);border:1px solid var(--green);}
+.key-miss{background:#3a1a1a;color:var(--red);border:1px solid var(--red);}
+.rag-status{font-size:10px;padding:4px 8px;border-radius:4px;margin-bottom:6px;}
+.rag-ok{background:#1a4a1e;color:var(--green);border:1px solid var(--green);}
+.rag-down{background:#3a1a1a;color:var(--red);border:1px solid var(--red);}
+
+/* TIME */
+#time-wrap{text-align:center;padding:8px 0 5px;margin-bottom:8px;}
+#time-greet{font-size:10px;color:var(--text-dim);letter-spacing:1px;}
+#time-clock{font-size:20px;font-weight:bold;color:var(--green);font-family:var(--mono);}
+#time-date{font-size:9px;color:var(--text-dim);}
+
+/* INTEL CARD */
+#intel-card{background:var(--panel);border:1px solid var(--amber);border-radius:5px;
+  padding:7px 10px;margin-bottom:8px;cursor:pointer;}
+#intel-card:hover{border-color:var(--green);}
+.intel-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.intel-title{font-size:9px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;}
+.intel-hint{font-size:9px;color:var(--text-dim);}
+.intel-item{font-size:10px;color:var(--text);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;padding:1px 0;}
+
+/* TOAST + SPINNER */
+#toast{position:fixed;bottom:55px;left:50%;transform:translateX(-50%);
+  background:var(--green);color:var(--bg);padding:6px 16px;border-radius:18px;
+  font-size:11px;font-weight:bold;pointer-events:none;opacity:0;
+  transition:opacity 0.2s;z-index:999;white-space:nowrap;}
+#toast.show{opacity:1;}
+.spin{display:inline-block;width:11px;height:11px;border:2px solid var(--border);
+  border-top-color:var(--green);border-radius:50%;
+  animation:sp 0.7s linear infinite;vertical-align:middle;margin-right:5px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+.dots span{display:inline-block;width:5px;height:5px;background:var(--text-dim);
+  border-radius:50%;margin:0 2px;animation:bo 1.2s infinite;}
+.dots span:nth-child(2){animation-delay:0.2s;}
+.dots span:nth-child(3){animation-delay:0.4s;}
+@keyframes bo{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-5px);}}
+.empty{text-align:center;color:var(--text-dim);font-size:11px;padding:24px 0;}
+</style>
+</head>
+<body>
+<script>
+// INJECTED STUDIO DATA - generated: 2026-03-31T03:25:30Z
+const INJECTED = {"generated": "2026-03-31T03:25:30Z", "inbox": [{"id": "constitutional-update-2026-03-25", "title": "Constitutional Update + Agent Network Activation Complete", "finding": "All 8 activation steps executed. CLAUDE.md updated with constitutional principles. 5 comms log files created. Protocol appended to 18 agents. supervis", "urgency": "INFO", "date": "", "source": "supervisor"}, {"id": "nit-briefing-20260325230110", "title": "[NIT] Fire drill - synthetic briefing", "finding": "NIT fire drill test. Ignore. Auto-dismiss.", "urgency": "INFO", "date": "2026-03-25T23:01:10.621322", "source": "supervisor"}, {"id": "nit-summary-20260325", "title": "NIT Fire Drill Complete - PARTIAL (8/10 PASS)", "finding": "T01-T04,T07-T10 PASS. T05 PARTIAL (studio.html inbox panel not built, Step 8 HELD). T06 PARTIAL (scheduler fires, run-agent.py executes, claude CLI no", "urgency": "INFO", "date": "2026-03-25T23:08:31.298624", "source": "supervisor"}, {"id": "ai-intel-2026-03-30", "title": "AI Intel - 4 HIGH PRIORITY - 2026-03-30", "finding": "How you should be prompting GPT 5 for Agentic Persistence. See ai-intel-summary.txt.", "urgency": "WARN", "date": "2026-03-30T20:36:46Z", "source": "supervisor"}, {"id": "ai-intel-2026-03-30", "title": "AI Intel - 4 HIGH PRIORITY - 2026-03-30", "finding": "How you should be prompting GPT 5 for Agentic Persistence. See ai-intel-summary.txt.", "urgency": "WARN", "date": "2026-03-30T20:38:45Z", "source": "supervisor"}, {"id": "state-acuscan-ar-4c2b6686", "title": "Use WebXR or Canvas overlay for AR rendering?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-acuscan-ar-2533adce", "title": "If hand tracking lags on older phones \u00e2\u20ac\" prioritize speed or visual accuracy?", "finding": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-acuscan-ar-d91db37c", "title": "Should point descriptions be text overlaid on screen or a separate info panel below the camera?", "finding": "Affects UI layout significantly. Text on camera = cleaner but harder to read. Panel below = easier t", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-acuscan-ar-1653fa6d", "title": "Eventually monetize this or keep it free/personal?", "finding": "Affects whether we add any tracking, accounts, or premium features later.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-efb8d39d", "title": "What geographic area to monitor \u00e2\u20ac\" Tennessee local, Illinois local, or both?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-ec3e8edf", "title": "Scraping approach \u00e2\u20ac\" Apify Actor or direct browser automation via Chrome extension?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-35ebbf89", "title": "What categories do you want to monitor? (e.g. tools, electronics, collectibles, furniture, vintage)", "finding": "Keyword list drives everything. More specific = less noise = better digest.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-16662fe7", "title": "Minimum profit margin to include in digest \u00e2\u20ac\" e.g. only show items with 40%+ margin?", "finding": "Sets the filter threshold for the margin analysis step.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-91bf5e20", "title": "Digest delivery format \u00e2\u20ac\" Markdown file in Drive, email, or dashboard card?", "finding": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-58575f97", "title": "Now that Chrome extension is available \u00e2\u20ac\" attempt textarea via extension first or continue investig", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-db05ea3e", "title": "Should analysis run on all lots automatically or only when you click a button on a specific lot?", "finding": "Auto-run = more convenient but costs more API calls. Manual trigger = you control what gets analyzed", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-9542d880", "title": "What format do you want the watchlist notes in? (e.g. 'Est: $45-65 | Condition: Good | Items: cerami", "finding": "Note format determines what Gemini is asked to return. Standardized format makes notes scannable dur", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-8beea3b7", "title": "Should this work on mobile Chrome or desktop only?", "finding": "Mobile adds complexity but useful if bidding from phone at estate sales.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-14ffdba1", "title": "Should the platform be offered as SaaS to other job seekers or stay personal/portfolio use?", "finding": "Determines whether to add billing, multi-user accounts, and marketing infrastructure. Significant sc", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-79f41ad6", "title": "Should employer portal be prioritized before or after scraping engine?", "finding": "Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-379b1402", "title": "For the scam database \u00e2\u20ac\" should it be private to your platform or eventually shared/open source?", "finding": "Shared scam database becomes a community moat. Private keeps it proprietary. Open source builds trus", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-0472d4af", "title": "Should job ratings be shown to users in v1 or held back until v2?", "finding": "Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-c159724f", "title": "Personal tool only or productize for other sellers?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-0b8aae0b", "title": "Input format \u00e2\u20ac\" eBay bulk export CSV or manual entry or both?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-2f37099d", "title": "What are your SKU prefix conventions for physical storage location tracking?", "finding": "Optimizer needs to preserve or understand existing SKU format to not break your storage system.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-9609b02c", "title": "Which categories make up the majority of your 572 listings?", "finding": "Category-specific title rules \u00e2\u20ac\" e.g. books need ISBN, electronics need model numbers. Knowing top ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-2c74ef17", "title": "Should the optimizer suggest a price adjustment based on recent eBay sold data?", "finding": "Adds significant value but requires eBay API access. Could share that infrastructure with Arbitrage ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-nutrimind-86664a3a", "title": "What defines NutriMind as complete \u00e2\u20ac\" what is the finish line?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-nutrimind-e3a0a527", "title": "Should shopping list generation be part of the MVP or post-launch?", "finding": "Natural extension of meal planning. Medium complexity add.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-nutrimind-ee9e64da", "title": "Should the app remember your meal history to avoid repeating recent meals?", "finding": "Requires localStorage or backend. Adds significant value but adds complexity.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-squeeze-empire-0ab2f8fb", "title": "What defines late-game completion \u00e2\u20ac\" what is the win condition or final milestone?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-squeeze-empire-74ccd928", "title": "Should the game save state between sessions or reset each time?", "finding": "localStorage save would make it a true idle game. No save = arcade style. Significant architecture d", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-squeeze-empire-f54344c9", "title": "After late-game is done \u00e2\u20ac\" release publicly, keep personal, or productize?", "finding": "Affects whether we add analytics, sharing features, or mobile optimization pass.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-whatnot-apps-c3ac17b9", "title": "Which Whatnot role to prioritize for application submission first?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-whatnot-apps-26e411a4", "title": "Do you have the actual current Whatnot job posting URLs to tailor against?", "finding": "Resumes tailored to exact posting language score significantly higher on ATS systems.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-whatnot-apps-8413a3f4", "title": "Should we build a general Whatnot cover letter or three separate role-specific ones?", "finding": "Separate letters are stronger but more work. General letter with swap sections is faster.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-arch-reddit-0001", "title": "[#1 WHITEBOARD] I've played and reviewed 1.000+ horror games, here are some gems you might not h", "finding": "PUBLISH | Score: 8/10 | The continuous growth of the horror game genre makes a comprehensive, curate", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-vint-0011", "title": "[#2 WHITEBOARD] DuPont Corfam", "finding": "RESEARCH | Score: 8/10 | Modern material science and a booming demand for sustainable, high-performa", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-nost-0028", "title": "[#3 WHITEBOARD] Bring back the original SoBe Elixir drink line nationwide", "finding": "BUILD | Score: 8/10 | The strong wave of 90s and early 2000s nostalgia, amplified by dedicated onlin", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-ebay-identifier-app", "title": "[#4 WHITEBOARD] eBay Item Identifier \u00e2\u20ac\" Consensus Engine", "finding": "BUILD | Score: 8/10 | Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generati", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-client-services-website", "title": "[#5 WHITEBOARD] AI Services Client Website", "finding": "BUILD | Score: 8/10 | 2026 is an optimal time as businesses increasingly adopt AI but require struct", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-arch-reddit-0002", "title": "[#6 WHITEBOARD] Wing Commander IV Turns 30... And Still Fascinates Me", "finding": "BUILD | Score: 7/10 | 2026 marks the 30th anniversary of Wing Commander IV, providing a strong, time", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-vint-0005", "title": "[#7 WHITEBOARD] Dymaxion Car", "finding": "RESEARCH | Score: 7/10 | The ongoing global shift towards electric vehicles and sustainable transpor", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-vint-0015", "title": "[#8 WHITEBOARD] DeLorean DMC-12", "finding": "PITCH | Score: 7/10 | 2026 is timely due to the mature state of EV platforms, the thriving market fo", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-nost-0024", "title": "[#9 WHITEBOARD] 90s Green Day was pure chaos and I miss it.", "finding": "BUILD | Score: 7/10 | 2026 aligns with the peak of 90s nostalgia and Green Day's continued relevance", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-nost-0025", "title": "[#10 WHITEBOARD] Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?", "finding": "PUBLISH | Score: 7/10 | In 2026, increasing AI data demands and persistent privacy concerns will amp", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-traitor-protocol", "title": "[#6 WHITEBOARD] Traitor Protocol Adversarial Testing", "finding": "BUILD | Score: 8/10 | As LLM adoption accelerates into critical enterprise functions, robust, automa", "urgency": "WARN", "date": "", "source": "mobile"}], "whiteboard": [{"title": "Higgsfield Original Series - Backwards Design", "description": "Monitor platform weekly for genre gaps and vote velocity. Build CTW characters s", "score": 9, "action": "BUILD"}, {"title": "I've played and reviewed 1.000+ horror games, here are some gems you might not h", "description": "I've been in love with the genre for all my life and could write 30 pages of phi", "score": 8, "action": "PUBLISH"}, {"title": "DuPont Corfam", "description": "Yes, the search for a perfect synthetic leather that perfectly mimics natural pr", "score": 8, "action": "RESEARCH"}, {"title": "Bring back the original SoBe Elixir drink line nationwide", "description": "Remember SoBe Elixirs? That tangy, refreshing drink that just hit different? Tho", "score": 8, "action": "BUILD"}, {"title": "eBay Item Identifier \u00e2\u20ac\" Consensus Engine", "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identif", "score": 8, "action": "BUILD"}, {"title": "AI Services Client Website", "description": "Lead generation website for AI project services. Intake triggers Client Solution", "score": 8, "action": "BUILD"}, {"title": "Traitor Protocol Adversarial Testing", "description": "One agent per overnight run designated as liar. Mayor must catch it. Catches hal", "score": 8, "action": "BUILD"}, {"title": "War Room Decision Protocol", "description": "Standard protocol for high-stakes decisions. Mirofish runs automated scoring. Wa", "score": 8, "action": "PITCH"}, {"title": "Ghost Book Script Vault + Salvage Protocol", "description": "Permanent archive for unused scripts with active salvage pass before retirement.", "score": 8, "action": "BUILD"}, {"title": "Wing Commander IV Turns 30... And Still Fascinates Me", "description": "Times flies. This was the first game that I was truly hyped to play as a kid. A ", "score": 7, "action": "BUILD"}], "assets": [{"id": "anthropic-claude", "name": "Anthropic Claude API", "type": "llm", "service_type": "chat", "status": "active", "tier": "paid", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Primary reasoning engine. claude-sonnet-4-6 default.", "url": "https://console.anthropic.com"}, {"id": "gemini", "name": "Google Gemini API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 1500, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Used for spec grading, batch work, Gemini Flash free tier.", "url": "https://aistudio.google.com"}, {"id": "openrouter", "name": "OpenRouter API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Sidebar chat backend. Routes to best free model.", "url": "https://openrouter.ai"}, {"id": "ollama", "name": "Ollama (Local)", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Local LLM fallback. llama3.2 default.", "url": "http://localhost:11434"}, {"id": "youtube-data-v3", "name": "YouTube Data API v3", "type": "api", "service_type": "search", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 10000, "usage_this_month": {"calls": 7, "units": 710}, "last_used": "2026-03-30", "notes": "AI Intel agent. 100 units per search query. 7 queries = 700 units/day.", "url": "https://console.cloud.google.com"}, {"id": "ebay-api", "name": "eBay Developer API", "type": "api", "service_type": "ecommerce", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "eBay agent. OAuth2. Listing audit, pricing comps.", "url": "https://developer.ebay.com"}, {"id": "supabase", "name": "Supabase", "type": "database", "service_type": "database", "status": "active", "tier": "free", "monthly_limit": 500, "daily_limit": null, "usage_this_month": {"calls": 4, "storage_mb": 0}, "last_used": "2026-03-30", "notes": "Job Match platform DB. Free tier 500MB.", "url": "https://supabase.com"}, {"id": "adzuna", "name": "Adzuna Job API", "type": "api", "service_type": "jobs", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Job discovery. Free tier.", "url": "https://developer.adzuna.com"}], "services": {"chat": [{"rank": 1, "name": "Mistral Small", "provider": "Mistral", "url": "https://mistral.ai", "tier": "free+paid", "notes": "Good free tier via OpenRouter", "buzz_score": 1, "trending": false}, {"rank": 2, "name": "Claude Sonnet 4.6", "provider": "Anthropic", "url": "https://anthropic.com", "tier": "paid", "notes": "Best for reasoning/coding/agents", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "GPT-4o", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Strong general purpose", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Gemini 1.5 Pro", "provider": "Google", "url": "https://aistudio.google.com", "tier": "free+paid", "notes": "Large context, free tier available", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Claude Haiku 4.5", "provider": "Anthropic", "url": "https://anthropic.com", "tier": "paid", "notes": "Fast + cheap, good for batch", "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Gemini Flash", "provider": "Google", "url": "https://aistudio.google.com", "tier": "free", "notes": "Best free-tier speed", "buzz_score": 0, "trending": false}, {"rank": 7, "name": "Llama 3.2", "provider": "Meta/Ollama", "url": "https://ollama.com", "tier": "free", "notes": "Local, no API cost", "buzz_score": 0, "trending": false}, {"rank": 8, "name": "DeepSeek R1", "provider": "DeepSeek", "url": "https://deepseek.com", "tier": "free", "notes": "Strong reasoning, free via OpenRouter", "buzz_score": 0, "trending": false}], "image_gen": [{"rank": 1, "name": "Midjourney v6", "provider": "Midjourney", "url": "https://midjourney.com", "tier": "paid", "notes": "Best quality, no free tier", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "DALL-E 3", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Good prompt adherence", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Stable Diffusion (local)", "provider": "Stability AI", "url": "https://stability.ai", "tier": "free", "notes": "Free local via ComfyUI/A1111. RTX 3060 threshold.", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Ideogram 2", "provider": "Ideogram", "url": "https://ideogram.ai", "tier": "free+paid", "notes": "Best text-in-image. Free tier available.", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Flux 1.1 Pro", "provider": "Black Forest Labs", "url": "https://replicate.com", "tier": "paid", "notes": "Top open model quality", "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Playground v3", "provider": "Playground", "url": "https://playground.com", "tier": "free+paid", "notes": "Free tier, strong aesthetic quality", "buzz_score": 0, "trending": false}], "video_gen": [{"rank": 1, "name": "Sora", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Best coherence, limited access", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Runway Gen-3", "provider": "Runway", "url": "https://runwayml.com", "tier": "paid", "notes": "Best for creative control", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Kling 1.6", "provider": "Kuaishou", "url": "https://klingai.com", "tier": "free+paid", "notes": "Strong motion quality, free tier", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Higgsfield", "provider": "Higgsfield", "url": "https://higgsfield.ai", "tier": "free+paid", "notes": "Character-consistent video. Studio distribution target.", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Hailuo MiniMax", "provider": "MiniMax", "url": "https://hailuoai.com", "tier": "free", "notes": "Generous free tier", "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Veo 2", "provider": "Google", "url": "https://deepmind.google", "tier": "paid", "notes": "High quality, limited access", "buzz_score": 0, "trending": false}], "code": [{"rank": 1, "name": "Claude Code", "provider": "Anthropic", "url": "https://anthropic.com", "tier": "paid", "notes": "Best agentic coding. Primary studio tool.", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "GitHub Copilot", "provider": "Microsoft", "url": "https://github.com/copilot", "tier": "paid", "notes": "Best IDE integration", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Cursor", "provider": "Cursor", "url": "https://cursor.sh", "tier": "free+paid", "notes": "Strong Claude/GPT integration", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Gemini Code Assist", "provider": "Google", "url": "https://cloud.google.com", "tier": "free+paid", "notes": "Free tier via IDX", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Codeium", "provider": "Codeium", "url": "https://codeium.com", "tier": "free", "notes": "Best free autocomplete", "buzz_score": 0, "trending": false}], "embedding": [{"rank": 1, "name": "text-embedding-3-small", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Cheap, good quality", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Gemini Embedding", "provider": "Google", "url": "https://aistudio.google.com", "tier": "free", "notes": "Free tier available", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "nomic-embed-text", "provider": "Nomic/Ollama", "url": "https://ollama.com", "tier": "free", "notes": "Best free local embedding. Studio default (ChromaDB).", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "mxbai-embed-large", "provider": "MixedBread/Ollama", "url": "https://ollama.com", "tier": "free", "notes": "Strong local option", "buzz_score": 0, "trending": false}], "voice": [{"rank": 1, "name": "ElevenLabs", "provider": "ElevenLabs", "url": "https://elevenlabs.io", "tier": "free+paid", "notes": "Best voice cloning quality", "buzz_score": 1, "trending": false}, {"rank": 2, "name": "OpenAI TTS", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Fast, natural, cheap per char", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Google TTS", "provider": "Google", "url": "https://cloud.google.com", "tier": "free+paid", "notes": "WaveNet quality, free tier", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Whisper (local)", "provider": "OpenAI/Local", "url": "https://github.com/openai/whisper", "tier": "free", "notes": "Best free local STT", "buzz_score": 0, "trending": false}], "search": [{"rank": 1, "name": "Tavily", "provider": "Tavily", "url": "https://tavily.com", "tier": "free+paid", "notes": "Best AI-optimized search API. Studio connected.", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Perplexity API", "provider": "Perplexity", "url": "https://perplexity.ai", "tier": "paid", "notes": "Good for research tasks", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "SerpAPI", "provider": "SerpAPI", "url": "https://serpapi.com", "tier": "free+paid", "notes": "Google results scraping", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "DuckDuckGo (free)", "provider": "DDG", "url": "https://duckduckgo.com", "tier": "free", "notes": "No key needed, rate limited", "buzz_score": 0, "trending": false}]}, "servicesDate": "2026-03-30", "intelSummary": "AI INTEL - 2026-03-30\nGenerated: 2026-03-30T20:38:45Z\nSources: 11/11 OK | 4 HIGH / 61 WORTH / 130 LOGGED | YouTube: 8 videos surfaced\n\nHIGH PRIORITY (4):\n  * How you should be prompting GPT 5 for Agentic Persistence | score:28 | https://reddit.com/r/ChatGPT/comments/1s812gv/how_you_should_be_prompting_gpt_5_for_agentic/\n  * Playwright, but for native iOS/Android plus Flutter/React Native | score:30 | https://reddit.com/r/ClaudeAI/comments/1s80hbs/playwright_but_for_native_iosandroid_plus/\n  * Zanat: an open-source CLI + MCP server to version, share, and install AI agent skills via  | score:28 | https://reddit.com/r/LocalLLaMA/comments/1s823ue/zanat_an_opensource_cli_mcp_server_to_version/\n  * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano\n\nWORTH READING (61):\n  * Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News ? What?s Happening RIGHT NOW | score:21 | https://www.youtube.com/watch?v=mCDzH2TK71o\n  * Forget ChatGPT || This 5 AI Tools  Will BLOW Your Mind | score:20 | https://www.youtube.com/watch?v=0CD2QeAIRII\n  * ChatGPT 5.4 Features | Latest ChatGPT Features | ChatGPT 5.4 Update Explained | #Shorts #S | score:25 | https://www.youtube.com/watch?v=9kPg4uGTCm4\n  * I Built 500 AI Workflows, These 5 Actually Sell in 2026 | score:22 | https://www.youtube.com/watch?v=Y3PcRp5RFzk\n  * Turn Antigravity Into AN AI Autonomous Engineering Team! Automate Your Code with Subagents | score:20 | https://www.youtube.com/watch?v=yuaBPLNdNSU\n  * Hermes Agent KILLED $497/Month Automation Tools ? (Your AI Gets Smarter Every Session) | score:20 | https://www.youtube.com/watch?v=sf25aDO9iOs\n  * I Automated My Book&#39;s Worldbuilding with n8n (Full AI Workflow) | score:22 | https://www.youtube.com/watch?v=s-abfMWOWY8\n  * The AI Model Roller Coaster | score:21 | https://www.youtube.com/watch?v=vNSudpkwqTA\n  * we open sourced a tool that auto generates your AI agent context from your actual codebase | score:24 | https://reddit.com"};
+// END INJECTED DATA
+</script>
+<!-- TAB BAR: STATUS | INBOX | CHAT | PLAN | ASSETS | DATA | CFG -->
+<div id="tab-bar">
+  <div class="tab active" onclick="switchTab('status')">STATUS</div>
+  <div class="tab" onclick="switchTab('inbox')">INBOX<span class="tab-badge" id="inbox-badge">0</span></div>
+  <div class="tab" onclick="switchTab('chat')">CHAT<span class="tab-badge" id="chat-badge" style="background:var(--green);display:none;">AI</span></div>
+  <div class="tab" onclick="switchTab('plan')">PLAN</div>
+  <div class="tab" onclick="switchTab('assets')">ASSETS</div>
+  <div class="tab" onclick="switchTab('data')">DATA</div>
+  <div class="tab" onclick="switchTab('config')">CFG</div>
+</div>
+
+<!-- ═══ STATUS ═════════════════════════════════════════════════ -->
+<div id="panel-status" class="panel active">
+<div class="panel-scroll">
+
+  <div id="time-wrap">
+    <div id="time-greet">Good morning</div>
+    <div id="time-clock">--:-- --</div>
+    <div id="time-date">Loading...</div>
+    <div id="js-indicator" style="font-size:8px;color:var(--text-dim);margin-top:2px;">
+      Build: 1774926642
+    </div>
+  </div>
+
+  <!-- AI Intel Card - clickable to open modal -->
+  <div id="intel-card" onclick="openIntelModal()" style="display:none;">
+    <div class="intel-hdr">
+      <span class="intel-title">AI Intel Today</span>
+      <span class="intel-hint">tap to expand ↗</span>
+    </div>
+    <div id="intel-preview"></div>
+  </div>
+
+  <button class="btn btn-g btn-w" onclick="loadStatus()">↻ Refresh</button>
+
+  <div class="block">
+    <div class="lbl">System</div>
+    <div id="sys-status"><span style="color:var(--text-dim)">loading...</span></div>
+  </div>
+
+  <div class="block" onclick="switchTab('inbox')" style="cursor:pointer;">
+    <div class="lbl">Inbox</div>
+    <div id="sys-inbox">-</div>
+  </div>
+
+  <!-- Projects -->
+  <div class="block">
+    <div class="lbl">Projects</div>
+    <div id="sys-projects"></div>
+  </div>
+
+  <!-- Agent Run Buttons -->
+  <div class="block">
+    <div class="lbl" style="margin-bottom:7px;">Run Agent / Task</div>
+    <div class="agent-grid">
+      <button class="abtn" onclick="queueAgent('AI Intel')">AI Intel</button>
+      <button class="abtn" onclick="queueAgent('eBay Agent')">eBay Agent</button>
+      <button class="abtn" onclick="queueAgent('Vintage')">Vintage</button>
+      <button class="abtn" onclick="queueAgent('Job Delta')">Job Delta</button>
+      <button class="abtn" onclick="queueAgent('Whiteboard')">Whiteboard</button>
+      <button class="abtn" onclick="queueAgent('Auto-Answer')">Auto-Answer</button>
+      <button class="abtn" onclick="queueAgent('Agency Build')">Agency Build</button>
+      <button class="abtn" onclick="queueAgent('Svc Rankings')">Svc Rankings</button>
+    </div>
+  </div>
+
+  <!-- Launch Buttons -->
+  <div class="block">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+      <div class="lbl" style="margin:0;">Launch</div>
+      <button class="btn btn-b" style="padding:3px 8px;font-size:10px;" onclick="showAddLaunch()">+ Add</button>
+    </div>
+    <div id="launch-list"></div>
+    <!-- Add launch form (hidden) -->
+    <div id="add-launch-form" style="display:none;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;">
+      <input class="fi" id="launch-name-in" placeholder="Name (e.g. CTW)" style="margin-bottom:5px;">
+      <input class="fi" id="launch-url-in" placeholder="URL or file path" style="margin-bottom:5px;">
+      <div style="display:flex;gap:6px;">
+        <button class="btn btn-g" style="flex:1;" onclick="saveLaunch()">Save</button>
+        <button class="btn" style="flex:1;" onclick="hideLaunchForm()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══ INBOX ══════════════════════════════════════════════════ -->
+<div id="panel-inbox" class="panel">
+  <!-- Filter bar -->
+  <div style="display:flex;gap:5px;padding:8px 10px 0;flex-shrink:0;flex-wrap:wrap;">
+    <select class="fs" id="inbox-filter" onchange="renderInbox()" style="flex:1;margin:0;font-size:10px;padding:4px 6px;">
+      <option value="">All</option>
+      <option value="WARN">WARN</option>
+      <option value="CRIT">CRIT</option>
+      <option value="INFO">INFO</option>
+    </select>
+    <select class="fs" id="inbox-sort" onchange="renderInbox()" style="flex:1;margin:0;font-size:10px;padding:4px 6px;">
+      <option value="urgency">By Urgency</option>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+      <option value="source">By Source</option>
+    </select>
+    <button class="btn" style="padding:4px 8px;font-size:10px;" onclick="loadInbox()">↻</button>
+  </div>
+  <div class="panel-scroll" id="inbox-list" style="padding-top:8px;">
+    <div class="empty">Loading inbox...</div>
+  </div>
+</div>
+
+<!-- ═══ CHAT ═══════════════════════════════════════════════════ -->
+<div id="panel-chat" class="panel">
+  <div id="chat-msgs">
+    <div class="msg msg-s">Studio AI · OpenRouter free (no cost) · Anthropic optional</div>
+    <div class="msg msg-a">Connected to your studio. Ask about projects, agents, inbox items, or anything in the system.</div>
+  </div>
+  <div id="chat-bottom">
+    <div id="chat-attach-tray"></div>
+    <div id="chat-row">
+      <label id="chat-attach-btn" title="Attach file">📎
+        <input type="file" id="chat-file-in" style="display:none;" onchange="attachFile(event)">
+      </label>
+      <textarea id="chat-in" placeholder="Ask AI..." rows="1"
+        onkeydown="chatKey(event)" oninput="autoSize(this)"></textarea>
+      <button id="chat-send" onclick="sendChat()">➤</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PLAN (was QUEUE) ═══════════════════════════════════════ -->
+<div id="panel-plan" class="panel" style="flex-direction:column;">
+  <!-- Whiteboard: collapsible -->
+  <div style="flex-shrink:0;border-bottom:1px solid var(--border);">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 10px;cursor:pointer;"
+      onclick="toggleWB()">
+      <span style="font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;">
+        Whiteboard Top 10</span>
+      <span id="wb-toggle" style="font-size:11px;color:var(--text-dim);">▼</span>
+    </div>
+    <div id="plan-wb-body" style="display:none;max-height:160px;overflow-y:auto;padding:0 10px 8px;">
+      <div id="plan-whiteboard"></div>
+    </div>
+  </div>
+  <!-- Notes: fills remaining space -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 10px 4px;flex-shrink:0;">
+    <span style="font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;">Notes</span>
+    <div style="display:flex;gap:5px;">
+      <button class="btn" style="padding:2px 7px;font-size:10px;" onclick="clearNotes()">Clear</button>
+      <button class="btn btn-g" style="padding:2px 7px;font-size:10px;" onclick="saveNotes()">Save</button>
+    </div>
+  </div>
+  <div style="flex:1;padding:0 10px 4px;display:flex;flex-direction:column;min-height:0;">
+    <textarea id="notepad-area" style="flex:1;min-height:0;"
+      placeholder="Type notes, next steps, decisions...&#10;Auto-saves to localStorage."></textarea>
+  </div>
+  <div style="padding:3px 10px 5px;font-size:9px;color:var(--text-dim);flex-shrink:0;" id="notes-saved"></div>
+</div>
+
+<!-- ═══ ASSETS ═════════════════════════════════════════════════ -->
+<div id="panel-assets" class="panel">
+  <div style="display:flex;border-bottom:1px solid var(--border);flex-shrink:0;">
+    <button class="tab active" id="at-res" onclick="assetsTab('res')" style="flex:1;font-size:10px;">RESOURCES</button>
+    <button class="tab" id="at-svc" onclick="assetsTab('svc')" style="flex:1;font-size:10px;">AI SERVICES</button>
+  </div>
+
+  <!-- RESOURCES sub-panel -->
+  <div id="ap-res" class="panel-scroll" style="display:block;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 8px;">
+      <div class="sec" style="margin:0;border:none;">API & Resource Status</div>
+      <button class="btn" style="padding:3px 7px;font-size:10px;" onclick="loadResources()">↻</button>
+    </div>
+    <div id="resource-list"><div class="empty">Loading...</div></div>
+  </div>
+
+  <!-- AI SERVICES sub-panel -->
+  <div id="ap-svc" class="panel-scroll" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 8px;">
+      <div class="sec" style="margin:0;border:none;">AI Services Rankings</div>
+      <span style="font-size:9px;color:var(--text-dim);" id="svc-date">-</span>
+    </div>
+    <select class="fs" id="svc-cat" onchange="renderServices()" style="margin-bottom:8px;">
+      <option value="chat">Chat / LLM</option>
+      <option value="image_gen">Image Generation</option>
+      <option value="video_gen">Video Generation</option>
+      <option value="code">Code Assistants</option>
+      <option value="embedding">Embeddings</option>
+      <option value="voice">Voice / TTS / STT</option>
+      <option value="search">Search APIs</option>
+    </select>
+    <div id="svc-list"><div class="empty">Loading...</div></div>
+  </div>
+</div>
+
+<!-- ═══ DATA EXPLORER ══════════════════════════════════════════ -->
+<div id="panel-data" class="panel">
+<div class="panel-scroll">
+  <div class="sec" style="margin-bottom:8px;">Data Explorer</div>
+  <select class="fs" id="data-sel">
+    <option value="">- Choose a file -</option>
+    <optgroup label="AI Intel">
+      <option value="ai-intel-daily.json">ai-intel-daily.json</option>
+      <option value="ai-services-rankings.json">ai-services-rankings.json</option>
+    </optgroup>
+    <optgroup label="Studio Logs">
+      <option value="whiteboard.json">whiteboard.json</option>
+      <option value="supervisor-inbox.json">supervisor-inbox.json</option>
+      <option value="heartbeat-log.json">heartbeat-log.json</option>
+      <option value="asset-log.json">asset-log.json</option>
+      <option value="dependency-map.json">dependency-map.json</option>
+    </optgroup>
+  </select>
+  <div style="display:flex;gap:6px;margin-bottom:10px;">
+    <button class="btn btn-g" style="flex:1;" onclick="loadData()">Load &amp; Analyze</button>
+    <label class="btn" style="flex:1;text-align:center;cursor:pointer;padding:7px 10px;">
+      Upload<input type="file" accept=".json,.txt,.md" style="display:none" onchange="uploadData(event)">
+    </label>
+  </div>
+  <div id="data-msgs" style="display:flex;flex-direction:column;gap:8px;"></div>
+  <div id="data-followup" style="display:none;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;">
+    <div style="display:flex;gap:6px;">
+      <input class="fi" id="data-q" placeholder="Ask a question about this data..." style="flex:1;margin:0;"
+        onkeydown="if(event.key==='Enter')dataQ()">
+      <button class="btn btn-g" onclick="dataQ()">➤</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ CONFIG ══════════════════════════════════════════════════ -->
+<div id="panel-config" class="panel">
+<div class="panel-scroll">
+
+  <!-- Vector RAG Status -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">Context System (Config G / Vector RAG)</div>
+    <div id="rag-status" style="font-size:10px;color:var(--text-dim);padding:4px 0;" id="rag-status">Click tab to check Ollama status</div>
+    <div style="font-size:10px;color:var(--text-dim);margin-top:4px;">
+      Context is loaded from ChromaDB via session-startup.py.<br>
+      The sidebar chat uses your Anthropic API key below for fresh queries.
+    </div>
+  </div>
+
+  <!-- Anthropic API Key -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">Anthropic API (Optional · Billed to API account)</div>
+    <div style="font-size:10px;color:var(--text-dim);margin-bottom:6px;">
+      Not required. OpenRouter free tier handles chat at zero cost.<br>
+      Add this only if you want Claude-quality responses in the sidebar.<br>
+      Cost: ~$0.001-0.003/message (Haiku). Separate from Claude.ai Pro subscription.
+    </div>
+    <div class="cfg-row">
+      <label>API Key</label>
+      <input type="password" id="cfg-ant-key" placeholder="sk-ant-...">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('ant')">Save</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;margin-top:2px;">
+      <span class="key-badge key-miss" id="ant-status">NOT SET</span>
+      <button class="btn" style="padding:3px 8px;font-size:10px;" onclick="testAnt()">Test</button>
+      <span id="ant-test-result" style="font-size:10px;color:var(--text-dim);"></span>
+    </div>
+  </div>
+
+  <!-- OpenRouter - primary free chat backend -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">OpenRouter (Primary Chat - Free)</div>
+    <div style="font-size:10px;color:var(--text-dim);margin-bottom:6px;">
+      Free tier routes to Llama 3.1 8B and similar models at zero cost.<br>
+      Get key at openrouter.ai - takes 2 minutes, no credit card needed.
+    </div>
+    <div class="cfg-row">
+      <label>API Key</label>
+      <input type="password" id="cfg-or-key" placeholder="sk-or-...">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('or')">Save</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;margin-top:2px;">
+      <span class="key-badge key-miss" id="or-status">NOT SET</span>
+      <button class="btn" style="padding:3px 8px;font-size:10px;" onclick="testOR()">Test</button>
+      <span id="or-test-result" style="font-size:10px;color:var(--text-dim);"></span>
+    </div>
+  </div>
+
+  <!-- Ollama -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">Ollama (Local)</div>
+    <div class="cfg-row">
+      <label>URL</label>
+      <input type="text" id="cfg-ollama-url" placeholder="http://localhost:11434">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('ollama')">Save</button>
+    </div>
+    <div class="cfg-row">
+      <label>Model</label>
+      <input type="text" id="cfg-ollama-model" placeholder="gemma3:4b">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('ollamaModel')">Save</button>
+    </div>
+    <button class="btn btn-w" style="margin-top:2px;" onclick="testOllama()">Test Ollama</button>
+    <div id="ollama-result" style="font-size:10px;color:var(--text-dim);margin-top:3px;"></div>
+  </div>
+
+  <div id="cfg-msg" style="font-size:10px;color:var(--green);margin-top:6px;"></div>
+</div>
+</div>
+
+<!-- INTEL MODAL -->
+<div id="modal-overlay">
+  <div id="modal-box">
+    <div id="modal-title">
+      AI Intel
+      <button id="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ═══ STATE ════════════════════════════════════════════════════
+const SK = 'sb_cfg_v3';
+let cfg = {antKey:'',orKey:'',ollamaUrl:'http://localhost:11434',ollamaModel:'gemma3:4b'};
+let chatHist = [], attachedFiles = [], inboxItems = [], servicesData = null;
+const TABS = ['status','inbox','chat','plan','assets','data','config'];
+
+// Default launch buttons
+const DEFAULT_LAUNCHES = [
+  {id:'gh-pages', name:'Studio GitHub Pages', icon:'🌐', url:'https://joepalek.github.io/studio/'},
+  {id:'claude-ai', name:'Claude.ai', icon:'🤖', url:'https://claude.ai'},
+  {id:'ebay-seller', name:'eBay Seller Hub', icon:'🛒', url:'https://www.ebay.com/sh/ovw'},
+];
+
+// ═══ INIT ════════════════════════════════════════════════════
+window.onload = () => {
+  loadCfg();
+  startClock();
+  loadLaunches();
+  loadPlanData();
+  // Fire async calls independently - no blocking
+  setTimeout(() => loadStatus(), 50);
+  setTimeout(() => loadInbox(), 100);
+  setTimeout(() => { loadResources(); loadServices(); }, 150);
+  // RAG/Ollama status only checked when CFG tab opened - not on load
+};
+
+// ═══ CFG ═════════════════════════════════════════════════════
+function loadCfg() {
+  try { const s = localStorage.getItem(SK); if(s) cfg = {...cfg,...JSON.parse(s)}; } catch(e){}
+  const urlEl = document.getElementById('cfg-ollama-url');
+  const modelEl = document.getElementById('cfg-ollama-model');
+  if (urlEl) urlEl.value = cfg.ollamaUrl;
+  if (modelEl) modelEl.value = cfg.ollamaModel;
+  try { updateKeyBadges(); } catch(e){}
+  // Notepad setup deferred to loadPlanData() to avoid null ref on hidden element
+}
+
+function setupNotepad() {
+  const ta = document.getElementById('notepad-area');
+  if (!ta || ta.dataset.listenerAttached) return;
+  ta.dataset.listenerAttached = '1';
+  ta.value = localStorage.getItem('sb_notes') || '';
+  ta.addEventListener('input', () => {
+    try {
+      localStorage.setItem('sb_notes', ta.value);
+      const saved = document.getElementById('notes-saved');
+      if (saved) saved.textContent = 'Auto-saved ' + new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit'});
+    } catch(e) {}
+  });
+}
+
+function saveKey(type) {
+  const map = {
+    ant: ['cfg-ant-key','antKey'],
+    or:  ['cfg-or-key','orKey'],
+    ollama: ['cfg-ollama-url','ollamaUrl'],
+    ollamaModel: ['cfg-ollama-model','ollamaModel']
+  };
+  const [elId, prop] = map[type];
+  const val = document.getElementById(elId).value.trim();
+  if (!val) return;
+  cfg[prop] = val;
+  localStorage.setItem(SK, JSON.stringify(cfg));
+  updateKeyBadges();
+  toast('Saved');
+  if (type === 'ant') document.getElementById('cfg-ant-key').value = '';
+  if (type === 'or') document.getElementById('cfg-or-key').value = '';
+}
+
+function updateKeyBadges() {
+  const antEl = document.getElementById('ant-status');
+  const orEl = document.getElementById('or-status');
+  const chatBadge = document.getElementById('chat-badge');
+  if (antEl) {
+    if (cfg.antKey && cfg.antKey.length > 10) {
+      antEl.textContent = 'SET ✓'; antEl.className = 'key-badge key-set';
+      if (chatBadge) chatBadge.style.display = 'inline-block';
+    } else {
+      antEl.textContent = 'NOT SET'; antEl.className = 'key-badge key-miss';
+    }
+  }
+  if (orEl) {
+    if (cfg.orKey && cfg.orKey.length > 10) {
+      orEl.textContent = 'SET ✓'; orEl.className = 'key-badge key-set';
+    } else {
+      orEl.textContent = 'NOT SET'; orEl.className = 'key-badge key-miss';
+    }
+  }
+}
+
+async function testOR() {
+  const el = document.getElementById('or-test-result');
+  el.textContent = 'Testing...';
+  if (!cfg.orKey) { el.textContent = 'No key saved'; return; }
+  try {
+    const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Authorization':'Bearer '+cfg.orKey,
+        'HTTP-Referer':'https://joepalek.github.io','X-Title':'Studio Sidebar'},
+      body: JSON.stringify({model:'google/gemma-3-4b-it:free',
+        messages:[{role:'user',content:'reply with just the word OK'}], max_tokens:5})
+    });
+    if (r.ok) { el.style.color='var(--green)'; el.textContent = '✓ Connected - free tier active'; }
+    else { const d=await r.json(); el.style.color='var(--red)'; el.textContent = '✗ ' + (d.error?.message||r.status); }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ ' + e.message.substring(0,40); }
+}
+
+async function testAnt() {
+  const el = document.getElementById('ant-test-result');
+  el.textContent = 'Testing...';
+  if (!cfg.antKey) { el.textContent = '✗ No key saved'; return; }
+  try {
+    const r = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':cfg.antKey,'anthropic-version':'2023-06-01'},
+      body: JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:10,messages:[{role:'user',content:'hi'}]})
+    });
+    if (r.ok) { el.style.color='var(--green)'; el.textContent = '✓ Connected'; }
+    else { const d = await r.json(); el.style.color='var(--red)'; el.textContent = '✗ ' + (d.error?.message||r.status); }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ ' + e.message.substring(0,40); }
+}
+
+async function testOllama() {
+  const el = document.getElementById('ollama-result');
+  el.textContent = 'Testing...';
+  try {
+    const r = await fetch(cfg.ollamaUrl + '/api/tags', {signal:AbortSignal.timeout(4000)});
+    if (r.ok) {
+      const d = await r.json();
+      const models = (d.models||[]).map(m=>m.name).join(', ') || '(none)';
+      el.style.color='var(--green)'; el.textContent = '✓ Connected · ' + models.substring(0,60);
+    } else { el.style.color='var(--red)'; el.textContent = '✗ HTTP ' + r.status; }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ Not reachable'; }
+}
+
+async function checkRagStatus() {
+  const el = document.getElementById('rag-status');
+  el.style.cssText = 'font-size:10px;padding:4px 6px;border-radius:4px;margin-bottom:6px;';
+  el.textContent = 'Checking...';
+  try {
+    const r = await fetch(cfg.ollamaUrl + '/api/tags', {signal:AbortSignal.timeout(3000)});
+    if (r.ok) {
+      el.style.background = '#1a4a1e'; el.style.color = 'var(--green)'; el.style.border = '1px solid var(--green)';
+      el.textContent = '✓ Ollama running - Config G (Vector RAG) active';
+    } else { throw new Error('HTTP ' + r.status); }
+  } catch(e) {
+    el.style.background = '#2a2200'; el.style.color = 'var(--amber)'; el.style.border = '1px solid var(--amber)';
+    el.textContent = '⚠ Ollama offline - chat uses OpenRouter/Anthropic instead. This is fine.';
+  }
+}
+
+// ═══ TABS ════════════════════════════════════════════════════
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    t.classList.remove('active');
+    if (TABS[i] === name) t.classList.add('active');
+  });
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  const p = document.getElementById('panel-' + name);
+  if (p) p.classList.add('active');
+  if (name === 'status') loadStatus();
+  if (name === 'inbox') renderInbox();
+  if (name === 'assets') { loadResources(); loadServices(); }
+  if (name === 'plan') loadPlanData();
+  if (name === 'config') checkRagStatus();
+}
+
+// ═══ CLOCK ═══════════════════════════════════════════════════
+function startClock() {
+  function tick() {
+    const ct = new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));
+    const h = ct.getHours(), m = ct.getMinutes();
+    document.getElementById('time-clock').textContent =
+      (h%12||12) + ':' + String(m).padStart(2,'0') + ' ' + (h>=12?'PM':'AM');
+    document.getElementById('time-date').textContent =
+      ct.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}) + ' CT';
+    document.getElementById('time-greet').textContent =
+      h<12 ? 'Good morning' : h<17 ? 'Good afternoon' : 'Good evening';
+  }
+  tick(); setInterval(tick, 15000);
+}
+
+// ═══ STATUS ══════════════════════════════════════════════════
+async function loadStatus() {
+  // Always render immediately from local data - never wait on network
+  document.getElementById('sys-status').innerHTML = '<span class="status-ok">* Local</span>';
+  loadIntelStrip();
+  loadProjects();
+  // Try network in background - update if it responds
+  try {
+    const r = await fetch('https://joepalek.github.io/studio/status.json',
+      {signal: AbortSignal.timeout(4000)});
+    if (r.ok) {
+      document.getElementById('sys-status').innerHTML = '<span class="status-ok">* Online</span>';
+    }
+  } catch(e) { /* silent - local mode is fine */ }
+}
+
+function loadProjects() {
+  const projects = [
+    {name:'CX Agent',pct:85},{name:'eBay Agent',pct:70},
+    {name:'AI Intel',pct:90},{name:'Agency',pct:75},
+    {name:'Job Match',pct:55},{name:'CTW',pct:80},
+    {name:'Ghost Book',pct:40},{name:'Sentinel',pct:20},
+    {name:'Sidebar',pct:97},
+  ];
+  document.getElementById('sys-projects').innerHTML = projects.map(p =>
+    `<div class="prog-row">
+      <span class="prog-name">${p.name}</span>
+      <div class="prog-bar"><div class="prog-fill" style="width:${p.pct}%"></div></div>
+      <span class="prog-pct">${p.pct}%</span>
+    </div>`).join('');
+}
+
+function loadIntelStrip() {
+  if (typeof INJECTED === 'undefined' || !INJECTED.intelSummary) return;
+  const lines = INJECTED.intelSummary.split('\n');
+  const items = lines.filter(l => l.trim().startsWith('*')).slice(0,3);
+  if (!items.length) return;
+  document.getElementById('intel-card').style.display = 'block';
+  document.getElementById('intel-preview').innerHTML = items.slice(0,2).map(l =>
+    `<div class="intel-item">▸ ${esc(l.replace(/^\s*\*/,'').replace(/\|score:\d+.*/,'').trim())}</div>`
+  ).join('');
+}
+
+function openIntelModal() {
+  if (typeof INJECTED === 'undefined' || !INJECTED.intelSummary) return;
+  document.getElementById('modal-title').innerHTML = 'AI Intel Today <button id="modal-close" onclick="closeModal()">✕</button>';
+  const content = INJECTED.intelSummary;
+  // Format into readable sections with clickable links
+  let html = '';
+  content.split('\n').forEach(line => {
+    if (line.startsWith('AI INTEL') || line.startsWith('Generated') || line.startsWith('Sources')) {
+      html += `<div style="font-size:9px;color:var(--text-dim);margin-bottom:4px;">${esc(line)}</div>`;
+    } else if (line.includes('HIGH PRIORITY') || line.includes('WORTH READING') || line.includes('YOUTUBE')) {
+      html += `<div style="font-size:10px;font-weight:bold;color:var(--amber);margin:8px 0 4px;">${esc(line)}</div>`;
+    } else if (line.trim().startsWith('*')) {
+      const urlM = line.match(/https?:\/\/[^\s]+/);
+      const clean = line.replace(/^\s*\*/,'').replace(/\|score:\d+/,'').replace(/https?:\/\/[^\s]+/,'').trim();
+      html += `<div style="font-size:11px;padding:3px 0;border-bottom:1px solid var(--border);">
+        ${esc(clean)}${urlM ? ` <a href="${urlM[0]}" target="_blank" style="color:var(--blue);font-size:10px;">→ link</a>` : ''}
+      </div>`;
+    } else if (line.trim()) {
+      html += `<div style="font-size:10px;color:var(--text-dim);padding:1px 0;">${esc(line)}</div>`;
+    }
+  });
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+
+function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
+
+// ═══ LAUNCH BUTTONS ══════════════════════════════════════════
+function loadLaunches() {
+  let saved = [];
+  try { saved = JSON.parse(localStorage.getItem('sb_launches') || '[]'); } catch(e){}
+  if (!saved.length) { saved = DEFAULT_LAUNCHES; localStorage.setItem('sb_launches', JSON.stringify(saved)); }
+  renderLaunches(saved);
+}
+
+function renderLaunches(items) {
+  document.getElementById('launch-list').innerHTML = items.map((item,i) =>
+    `<div class="lbtn" onclick="openLaunch('${esc(item.url)}')">
+      <span class="lbtn-icon">${item.icon||'🔗'}</span>
+      <span class="lbtn-name">${esc(item.name)}</span>
+      <span class="lbtn-del" onclick="deleteLaunch(event,${i})">✕</span>
+    </div>`).join('');
+}
+
+function openLaunch(url) { window.open(url, '_blank'); }
+
+function deleteLaunch(e, idx) {
+  e.stopPropagation();
+  let saved = JSON.parse(localStorage.getItem('sb_launches') || '[]');
+  saved.splice(idx, 1);
+  localStorage.setItem('sb_launches', JSON.stringify(saved));
+  renderLaunches(saved);
+}
+
+function showAddLaunch() {
+  document.getElementById('add-launch-form').style.display = 'block';
+  document.getElementById('launch-name-in').focus();
+}
+function hideLaunchForm() {
+  document.getElementById('add-launch-form').style.display = 'none';
+  document.getElementById('launch-name-in').value = '';
+  document.getElementById('launch-url-in').value = '';
+}
+
+function saveLaunch() {
+  const name = document.getElementById('launch-name-in').value.trim();
+  const url  = document.getElementById('launch-url-in').value.trim();
+  if (!name || !url) { toast('Name and URL required'); return; }
+  let saved = JSON.parse(localStorage.getItem('sb_launches') || '[]');
+  saved.push({id: 'u-' + Date.now(), name, url, icon:'🔗'});
+  localStorage.setItem('sb_launches', JSON.stringify(saved));
+  renderLaunches(saved);
+  hideLaunchForm();
+  toast('Launch button added');
+}
+
+function queueAgent(name) {
+  // Add to notes as a reminder + toast
+  const ta = document.getElementById('notepad-area');
+  const ts = new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit'});
+  ta.value += (ta.value ? '\n' : '') + '[' + ts + '] Run agent: ' + name;
+  localStorage.setItem('sb_notes', ta.value);
+  toast('Noted: Run ' + name);
+}
+
+// ═══ INBOX ═══════════════════════════════════════════════════
+function loadInbox() {
+  inboxItems = (typeof INJECTED !== 'undefined') ? (INJECTED.inbox || []) : [];
+  updateInboxBadge();
+  renderInbox();
+}
+
+function renderInbox() {
+  const filter = document.getElementById('inbox-filter')?.value || '';
+  const sort   = document.getElementById('inbox-sort')?.value || 'urgency';
+  let items = [...inboxItems];
+  if (filter) items = items.filter(i => i.urgency === filter);
+
+  const order = {CRIT:0,WARN:1,INFO:2};
+  if (sort === 'urgency') items.sort((a,b) => (order[a.urgency]||3)-(order[b.urgency]||3));
+  else if (sort === 'newest') items.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+  else if (sort === 'oldest') items.sort((a,b) => (a.date||'').localeCompare(b.date||''));
+  else if (sort === 'source') items.sort((a,b) => (a.source||'').localeCompare(b.source||''));
+
+  const el = document.getElementById('inbox-list');
+  if (!items.length) {
+    el.innerHTML = '<div class="empty">✓ Inbox clear</div>';
+    return;
+  }
+  el.innerHTML = items.map(item => {
+    const urg = item.urgency || 'INFO';
+    const src = item.source === 'mobile' ? '📱 Mobile' : '🤖 Supervisor';
+    const dt = item.date ? new Date(item.date).toLocaleDateString('en-US',
+      {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+    return `<div class="icard u-${urg}" data-id="${esc(item.id||'')}">
+      <div class="icard-title">${esc(item.title||'Untitled')}</div>
+      ${item.finding?`<div class="icard-find">${esc(item.finding.substring(0,180))}${item.finding.length>180?'…':''}</div>`:''}
+      <div class="icard-meta">${src} · ${urg} · ${dt}</div>
+      <div class="icard-acts">
+        <button class="btn btn-g" style="font-size:9px;padding:3px 5px;" onclick="resolveItem(this)">✓ Resolve</button>
+        <button class="btn btn-a" style="font-size:9px;padding:3px 5px;" onclick="escalateItem(this)">↑ Escalate</button>
+        <button class="btn" style="font-size:9px;padding:3px 5px;" onclick="snoozeItem(this)">⏱ Snooze</button>
+        <button class="btn btn-b" style="font-size:9px;padding:3px 5px;" onclick="askAboutItem(this,'${esc(item.title||'')}')">💬 Ask AI</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function resolveItem(btn) {
+  const card = btn.closest('.icard');
+  const id = card.dataset.id;
+  inboxItems = inboxItems.filter(i => i.id !== id);
+  card.style.transition = 'opacity 0.3s';
+  card.style.opacity = '0';
+  setTimeout(() => { card.remove(); updateInboxBadge(); }, 300);
+  toast('Resolved');
+}
+function escalateItem(btn) {
+  btn.closest('.icard').style.borderColor = 'var(--red)';
+  toast('Escalated');
+}
+function snoozeItem(btn) {
+  const card = btn.closest('.icard');
+  card.style.opacity = '0.4';
+  toast('Snoozed');
+  setTimeout(() => card.style.opacity = '1', 5000);
+}
+function askAboutItem(btn, title) {
+  switchTab('chat');
+  document.getElementById('chat-in').value = 'Tell me about this inbox item: ' + title;
+  document.getElementById('chat-in').focus();
+}
+
+function updateInboxBadge() {
+  const n = inboxItems.length;
+  const b = document.getElementById('inbox-badge');
+  if (n > 0) { b.textContent = n > 99 ? '99+' : n; b.style.display = 'inline-block'; }
+  else { b.style.display = 'none'; }
+  document.getElementById('sys-inbox').textContent = n + ' pending decisions';
+}
+
+// ═══ PLAN ════════════════════════════════════════════════════
+function loadPlanData() {
+  setupNotepad();
+  const wb = (typeof INJECTED !== 'undefined') ? (INJECTED.whiteboard || []) : [];
+  const el = document.getElementById('plan-whiteboard');
+  if (!wb.length) { el.innerHTML = '<div class="empty" style="padding:6px 0;">No scored items</div>'; return; }
+  el.innerHTML = wb.map(i =>
+    `<div style="display:flex;gap:6px;align-items:flex-start;padding:4px 0;border-bottom:1px solid var(--border);">
+      <span style="font-size:12px;font-weight:bold;color:var(--amber);width:18px;flex-shrink:0;">${i.score}</span>
+      <div>
+        <div style="font-size:11px;color:var(--text);">${esc(i.title||'')}</div>
+        <div style="font-size:9px;color:var(--amber);">${esc(i.action||'')}</div>
+      </div>
+    </div>`).join('');
+}
+
+function toggleWB() {
+  const body = document.getElementById('plan-wb-body');
+  const tog  = document.getElementById('wb-toggle');
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  tog.textContent = open ? '▶' : '▼';
+}
+
+function saveNotes() {
+  localStorage.setItem('sb_notes', document.getElementById('notepad-area').value);
+  document.getElementById('notes-saved').textContent = 'Saved ' + new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit'});
+  toast('Notes saved');
+}
+function clearNotes() {
+  if (confirm('Clear all notes?')) {
+    document.getElementById('notepad-area').value = '';
+    localStorage.removeItem('sb_notes');
+    document.getElementById('notes-saved').textContent = 'Cleared';
+  }
+}
+
+// ═══ ASSETS TABS ═════════════════════════════════════════════
+function assetsTab(which) {
+  ['res','svc'].forEach(t => {
+    document.getElementById('ap-' + t).style.display = t === which ? 'block' : 'none';
+    document.getElementById('at-' + t).classList.toggle('active', t === which);
+  });
+}
+
+// ═══ RESOURCES ════════════════════════════════════════════════
+function loadResources() {
+  const assets = (typeof INJECTED !== 'undefined' && INJECTED.assets) ? INJECTED.assets : [];
+  const el = document.getElementById('resource-list');
+  if (!assets.length) { el.innerHTML = '<div class="empty">No asset data - run inject_sidebar_data.py</div>'; return; }
+  const now = new Date();
+  const active30 = assets.filter(a => {
+    if (!a.last_used) return false;
+    const d = new Date(a.last_used);
+    return (now - d) / (1000*60*60*24) <= 30;
+  });
+  const inactive = assets.filter(a => !active30.includes(a));
+
+  function renderAsset(a) {
+    const dot = a.status === 'active' ? 'dot-g' : 'dot-grey';
+    const tier = a.tier === 'free' ? 'tier-f' : a.tier === 'paid' ? 'tier-p' : 'tier-fp';
+    // Usage bar
+    let usagePct = 0, usageLabel = '', fillCls = 'fill-g';
+    if (a.daily_limit && a.usage_this_month?.calls) {
+      usagePct = Math.min(100, Math.round((a.usage_this_month.calls / a.daily_limit) * 100));
+      usageLabel = a.usage_this_month.calls.toLocaleString() + ' / ' + a.daily_limit.toLocaleString() + ' daily';
+    } else if (a.monthly_limit && a.usage_this_month?.storage_mb) {
+      usagePct = Math.min(100, Math.round((a.usage_this_month.storage_mb / a.monthly_limit) * 100));
+      usageLabel = a.usage_this_month.storage_mb + 'MB / ' + a.monthly_limit + 'MB';
+    }
+    if (usagePct > 75) fillCls = 'fill-y';
+    if (usagePct > 90) fillCls = 'fill-r';
+    return `<div class="res-card">
+      <div class="res-top">
+        <span class="res-dot ${dot}"></span>
+        <span class="res-name">${esc(a.name)}</span>
+        <span class="res-tier ${tier}">${a.tier}</span>
+      </div>
+      <div class="res-notes">${esc(a.notes||'')}</div>
+      ${usagePct > 0 ? `<div class="usage-bar"><div class="usage-fill ${fillCls}" style="width:${usagePct}%"></div></div>
+      <div class="res-stats"><span>${usageLabel}</span><span>${usagePct}% used</span></div>` : ''}
+      <div style="font-size:9px;color:var(--text-dim);margin-top:3px;">Last used: ${a.last_used||'-'}</div>
+    </div>`;
+  }
+  let html = '';
+  if (active30.length) { html += `<div style="font-size:9px;color:var(--text-dim);margin-bottom:5px;">ACTIVE THIS MONTH</div>`; active30.forEach(a => html += renderAsset(a)); }
+  if (inactive.length) { html += `<div style="font-size:9px;color:var(--text-dim);margin:8px 0 5px;">INACTIVE / UNUSED</div>`; inactive.forEach(a => html += renderAsset(a)); }
+  el.innerHTML = html;
+}
+
+// ═══ AI SERVICES ══════════════════════════════════════════════
+function loadServices() {
+  if (typeof INJECTED !== 'undefined' && INJECTED.services && Object.keys(INJECTED.services).length) {
+    servicesData = {categories: INJECTED.services};
+    document.getElementById('svc-date').textContent = 'Updated: ' + (INJECTED.servicesDate||'-');
+    renderServices();
+  } else {
+    document.getElementById('svc-list').innerHTML = '<div class="empty">Run inject_sidebar_data.py to embed rankings</div>';
+  }
+}
+
+function renderServices() {
+  const cat = document.getElementById('svc-cat')?.value || 'chat';
+  if (!servicesData) return;
+  const items = servicesData.categories?.[cat] || [];
+  const el = document.getElementById('svc-list');
+  if (!items.length) { el.innerHTML = '<div class="empty">No data for this category</div>'; return; }
+  const tc = t => t==='free'?'tier-f':t==='paid'?'tier-p':'tier-fp';
+  el.innerHTML = items.map(s =>
+    `<div class="svc-card">
+      <div class="svc-rank">#${s.rank}</div>
+      <div class="svc-info">
+        <div style="display:flex;align-items:center;gap:4px;">
+          <a href="${esc(s.url)}" target="_blank" class="svc-name" style="text-decoration:none;color:var(--text);"
+            onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color='var(--text)'">${esc(s.name)}</a>
+          ${s.trending?'<span class="svc-trending">🔥</span>':''}
+        </div>
+        <div class="svc-sub">${esc(s.provider)}</div>
+        <div class="svc-notes">${esc(s.notes||'')}</div>
+      </div>
+      <span class="res-tier ${tc(s.tier)}" style="font-size:8px;padding:1px 4px;">${s.tier}</span>
+    </div>`).join('');
+}
+
+// ═══ CHAT ════════════════════════════════════════════════════
+function chatKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); } }
+
+async function sendChat() {
+  const input = document.getElementById('chat-in');
+  const msg = input.value.trim();
+  if (!msg && !attachedFiles.length) return;
+  input.value = ''; autoSize(input);
+  document.getElementById('chat-send').disabled = true;
+
+  const msgsEl = document.getElementById('chat-msgs');
+  let userContent = msg;
+  if (attachedFiles.length) userContent += '\n[Attached: ' + attachedFiles.map(f=>f.name).join(', ') + ']';
+  msgsEl.innerHTML += `<div class="msg msg-u">${esc(userContent)}</div>`;
+  const typingId = 'ty-' + Date.now();
+  const backendLabel = cfg.orKey ? 'OpenRouter' : cfg.antKey ? 'Anthropic' : 'Ollama (' + (cfg.ollamaModel||'gemma3:4b') + ')';
+  msgsEl.innerHTML += `<div class="msg msg-a" id="${typingId}"><span style="font-size:10px;color:var(--text-dim);" id="${typingId}-lbl">trying ${backendLabel}...</span> <div class="dots" style="display:inline-flex;"><span></span><span></span><span></span></div></div>`;
+  let _secs = 0; const _timer = setInterval(() => { const el = document.getElementById(typingId+'-lbl'); if(el) el.textContent = 'trying ' + backendLabel + '... ' + (++_secs) + 's'; else clearInterval(_timer); }, 1000);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+
+  // Build system context from injected studio data
+  let sysCtx = 'You are a studio AI assistant for Joe Palek\'s autonomous AI development studio based in Atwood, TN.\n';
+  sysCtx += 'Today: ' + new Date().toLocaleDateString('en-US',{timeZone:'America/Chicago'}) + ' CT.\n';
+  if (typeof INJECTED !== 'undefined') {
+    sysCtx += 'Inbox: ' + (INJECTED.inbox?.length||0) + ' pending items.\n';
+    if (INJECTED.intelSummary) sysCtx += 'AI Intel summary:\n' + INJECTED.intelSummary.substring(0,800) + '\n';
+    if (INJECTED.whiteboard?.length) sysCtx += 'Top whiteboard item: ' + INJECTED.whiteboard[0].title + ' (score:' + INJECTED.whiteboard[0].score + ').\n';
+  }
+  sysCtx += 'Be concise. Answer in plain text. Avoid markdown headers unless listing multiple items.';
+
+  chatHist.push({role:'user', content: msg});
+  const response = await callAI(chatHist, sysCtx);
+  chatHist.push({role:'assistant', content: response});
+
+  clearInterval(_timer);
+  document.getElementById(typingId).outerHTML = `<div class="msg msg-a">${fmtMsg(response)}</div>`;
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+  document.getElementById('chat-send').disabled = false;
+  attachedFiles = [];
+  document.getElementById('chat-attach-tray').style.display = 'none';
+  document.getElementById('chat-attach-tray').innerHTML = '';
+}
+
+function attachFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    attachedFiles.push({name: file.name, content: e.target.result.substring(0, 4000)});
+    const tray = document.getElementById('chat-attach-tray');
+    tray.style.display = 'block';
+    tray.innerHTML = '📎 ' + attachedFiles.map(f => `<span style="color:var(--green);">${esc(f.name)}</span>`).join(', ');
+  };
+  reader.readAsText(file);
+}
+
+// ═══ AI BACKEND ═══════════════════════════════════════════════
+// PRIMARY: OpenRouter free (no cost) - routes to Llama/Gemini free models
+// OPTIONAL: Anthropic API (billed to your API account, ~fractions of a cent/msg)
+// FALLBACK: Ollama local (free, needs Ollama running)
+async function callAI(messages, systemPrompt) {
+  // OpenRouter FREE first - zero cost by default
+  if (cfg.orKey) {
+    try {
+      const orCtrl = new AbortController();
+      const orTimer = setTimeout(() => orCtrl.abort(), 5000);
+      const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        signal: orCtrl.signal,
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+cfg.orKey,
+          'HTTP-Referer':'https://joepalek.github.io','X-Title':'Studio Sidebar'},
+        body: JSON.stringify({
+          model:'google/gemma-3-4b-it:free',
+          messages:[{role:'system',content:systemPrompt},...messages.slice(-10)], max_tokens:1000
+        })
+      });
+      clearTimeout(orTimer);
+      if (r.ok) {
+        const d = await r.json();
+        const content = d.choices?.[0]?.message?.content || '';
+        if (content) return content;
+      }
+      // Non-OK or empty - fall through to next backend
+    } catch(e) {
+      // Network error - fall through
+    }
+  }
+  // Anthropic API (OPTIONAL - uses your API account, billed separately from Claude.ai Pro)
+  // Only used if orKey not set or OpenRouter fails AND antKey is configured
+  if (cfg.antKey) {
+    try {
+      const r = await fetch('https://api.anthropic.com/v1/messages', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','x-api-key':cfg.antKey,'anthropic-version':'2023-06-01'},
+        body: JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:1200,
+          system:systemPrompt, messages:messages.slice(-12)})
+      });
+      if (r.ok) { const d = await r.json(); return d.content?.[0]?.text || '(no response)'; }
+      const err = await r.json();
+      if (err.error?.type === 'authentication_error') {
+        cfg.antKey = ''; localStorage.setItem(SK, JSON.stringify(cfg)); updateKeyBadges();
+      }
+    } catch(e) {}
+  }
+  // Studio Bridge (localhost:11435) - uses session-startup.py vector context
+  // Falls back to raw Ollama if bridge not running
+  try {
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(), 60000);
+    const lastMsg = messages[messages.length-1]?.content || '';
+    let bridgeOk = false;
+    try { const p = await fetch('http://localhost:11435/ping',{signal:AbortSignal.timeout(800)}); bridgeOk=p.ok; } catch(e){}
+    if (bridgeOk) {
+      const r = await fetch('http://localhost:11435/chat', {
+        signal: ctrl.signal, method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({model: cfg.ollamaModel||'gemma3:4b', message: lastMsg})
+      });
+      if (r.ok) { const d = await r.json(); return d.response || '(no response)'; }
+    }
+    const r2 = await fetch(cfg.ollamaUrl + '/api/generate', {
+      signal: ctrl.signal, method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({model:cfg.ollamaModel||'gemma3:4b',
+        prompt: systemPrompt+'\n\nUser: '+lastMsg+'\nAssistant:', stream:false})
+    });
+    if (r2.ok) { const d=await r2.json(); return (d.response||'')+'\n\n_[No studio context - run studio_bridge.py for full knowledge]_'; }
+    const et = await r2.text().catch(()=>'');
+    return 'Ollama HTTP ' + r2.status + ': ' + et.substring(0,80);
+  } catch(e) {
+    if (e.name==='AbortError') return 'Ollama timed out (60s). Model may still be loading.';
+    return 'Error: ' + e.message.substring(0,100);
+  } catch(e) {
+    if (e.name === 'AbortError') return '⚠ Ollama timed out - model may still be loading, try again in 10s.';
+    if (e.message.includes('Failed to fetch')) return '⚠ Ollama CORS blocked. Run: setx OLLAMA_ORIGINS * then restart Ollama.';
+    return '⚠ Ollama: ' + e.message.substring(0,100);
+  }
+}
+
+// ═══ DATA EXPLORER ════════════════════════════════════════════
+async function loadData() {
+  const sel = document.getElementById('data-sel').value;
+  if (!sel) { toast('Choose a file first'); return; }
+  const el = document.getElementById('data-msgs');
+  el.innerHTML = `<div class="msg msg-s"><span class="spin"></span>Loading ${sel}...</div>`;
+  // Use injected data if available
+  if (typeof INJECTED !== 'undefined') {
+    let content = '';
+    if (sel === 'supervisor-inbox.json') content = JSON.stringify({items: INJECTED.inbox}, null, 2);
+    else if (sel === 'whiteboard.json') content = JSON.stringify({items: INJECTED.whiteboard}, null, 2);
+    else if (sel === 'asset-log.json') content = JSON.stringify({assets: INJECTED.assets}, null, 2);
+    else if (sel === 'ai-services-rankings.json') content = JSON.stringify({categories: INJECTED.services}, null, 2);
+    if (content) {
+      el.dataset.content = content.substring(0,8000);
+      el.innerHTML = `<div class="msg msg-a"><strong>📄 ${esc(sel)}</strong> (${(content.length/1024).toFixed(1)}KB - embedded data)<br><br><pre style="max-height:200px;overflow-y:auto;">${esc(content.substring(0,1500))}</pre></div>`;
+      document.getElementById('data-followup').style.display = 'block';
+      return;
+    }
+  }
+  el.innerHTML = `<div class="msg msg-s">Data only available when embedded via inject_sidebar_data.py</div>`;
+}
+
+async function uploadData(event) {
+  const file = event.target.files[0]; if (!file) return;
+  const text = await file.text();
+  const el = document.getElementById('data-msgs');
+  el.dataset.content = text.substring(0,8000);
+  el.innerHTML = `<div class="msg msg-a"><strong>📄 ${esc(file.name)}</strong><br><pre style="max-height:200px;overflow-y:auto;">${esc(text.substring(0,1500))}</pre></div>`;
+  document.getElementById('data-followup').style.display = 'block';
+}
+
+async function dataQ() {
+  const q = document.getElementById('data-q').value.trim(); if (!q) return;
+  const el = document.getElementById('data-msgs');
+  const content = el.dataset.content || '';
+  el.innerHTML += `<div class="msg msg-u">${esc(q)}</div>`;
+  const typingId = 'dty-' + Date.now();
+  el.innerHTML += `<div class="msg msg-a" id="${typingId}"><div class="dots"><span></span><span></span><span></span></div></div>`;
+  const r = await callAI([{role:'user',content:`Data:\n${content}\n\nQuestion: ${q}`}],
+    'You are a data analyst. Answer concisely based on the provided data.');
+  document.getElementById(typingId).outerHTML = `<div class="msg msg-a">${fmtMsg(r)}</div>`;
+  document.getElementById('data-q').value = '';
+}
+
+// ═══ UTILS ════════════════════════════════════════════════════
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function fmtMsg(text) {
+  if (!text) return '';
+  return esc(text)
+    .replace(/```[\w]*\n?([\s\S]*?)```/g, (_,c)=>`<pre><code>${c.trim()}</code></pre>`)
+    .replace(/`([^`]+)`/g,'<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\n/g,'<br>');
+}
+function autoSize(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,110)+'px'; }
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'), 2200);
+}
+
+
+// ═══ INJECTED STUDIO DATA (auto-generated by inject_sidebar_data.py) ═══
+// Generated: 2026-03-30T22:09:17Z
+// ═══ END INJECTED DATA ═══
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-gemini-035",
+  "name": "Blake Smith",
+  "universe": "other",
+  "archetype": "athlete",
+  "created_date": "2026-03-30T13:14:27.705097",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Smith",
+    "pronouns": "they/them",
+    "age": 42,
+    "personality_traits": [
+      "meticulous",
+      "suspicious",
+      "technical",
+      "cautious",
+      "rebellious",
+      "vindictive"
+    ],
+    "voice": "loud and confident",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:27.705119",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

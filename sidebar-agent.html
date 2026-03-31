@@ -2,1857 +2,1277 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Sidebar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Studio Sidebar v2.1 [6642]</title>
+<!-- GENERATED: 1774926642 -->
 <style>
-  :root {
-    --bg: #0d1117;
-    --panel: #161b22;
-    --border: #21262d;
-    --green: #3fb950;
-    --green-dim: #1a4a1e;
-    --text: #c9d1d9;
-    --text-dim: #6e7681;
-    --amber: #d29922;
-    --red: #f85149;
-    --blue: #58a6ff;
-    --font: 'Segoe UI', Arial, sans-serif;
-    --mono: 'Consolas', 'Courier New', monospace;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 13px;
-    line-height: 1.6;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  /* TABS */
-  #tab-bar {
-    display: flex;
-    border-bottom: 1px solid var(--border);
-    background: var(--panel);
-    flex-shrink: 0;
-    overflow-x: auto;
-  }
-
-  #tab-bar::-webkit-scrollbar { height: 2px; }
-  #tab-bar::-webkit-scrollbar-thumb { background: var(--border); }
-
-  .tab {
-    flex-shrink: 0;
-    min-width: 0;
-    padding: 8px 4px;
-    text-align: center;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    color: var(--text-dim);
-    border-bottom: 2px solid transparent;
-    transition: all 0.15s;
-    user-select: none;
-    white-space: nowrap;
-    flex: 1;
-  }
-
-  .tab:hover { color: var(--text); }
-  .tab.active { color: var(--green); border-bottom-color: var(--green); }
-
-  /* PANELS */
-  .panel {
-    display: none;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-  }
-  .panel.active { display: flex; }
-
-  .panel-scroll {
-    flex: 1;
-    overflow-y: auto;
-    padding: 12px;
-  }
-
-  .panel-scroll::-webkit-scrollbar { width: 4px; }
-  .panel-scroll::-webkit-scrollbar-track { background: var(--bg); }
-  .panel-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-  /* STATUS PANEL */
-  .status-block {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 10px 12px;
-    margin-bottom: 10px;
-  }
-
-  .status-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--text-dim);
-    margin-bottom: 6px;
-    text-transform: uppercase;
-  }
-
-  .status-value {
-    font-size: 13px;
-    color: var(--text);
-  }
-
-  .status-ok { color: var(--green); }
-  .status-warn { color: var(--amber); }
-  .status-err { color: var(--red); }
-
-  .log-entry {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--text-dim);
-    padding: 3px 0;
-    border-bottom: 1px solid var(--border);
-    word-break: break-all;
-  }
-
-  .log-entry:last-child { border-bottom: none; }
-
-  .log-ts { color: var(--text-dim); margin-right: 6px; }
-  .log-agent { color: var(--blue); margin-right: 6px; }
-  .log-msg { color: var(--text); }
-
-  .refresh-btn {
-    width: 100%;
-    padding: 8px;
-    background: var(--green-dim);
-    border: 1px solid var(--green);
-    color: var(--green);
-    font-family: var(--font);
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    transition: background 0.15s;
-  }
-  .refresh-btn:hover { background: var(--green); color: var(--bg); }
-
-  /* CHAT PANEL */
-  #chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #chat-messages::-webkit-scrollbar { width: 4px; }
-  #chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-  .msg {
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-    line-height: 1.6;
-    max-width: 95%;
-    word-wrap: break-word;
-  }
-
-  .msg-user {
-    background: var(--green-dim);
-    border: 1px solid var(--green);
-    color: var(--text);
-    align-self: flex-end;
-  }
-
-  .msg-ai {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    color: var(--text);
-    align-self: flex-start;
-  }
-
-  .msg-system {
-    background: transparent;
-    border: none;
-    color: var(--text-dim);
-    font-size: 11px;
-    align-self: center;
-    font-style: italic;
-  }
-
-  /* Code blocks inside chat */
-  .msg pre {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 8px;
-    margin-top: 6px;
-    overflow-x: auto;
-    font-family: var(--mono);
-    font-size: 11px;
-    line-height: 1.5;
-    white-space: pre;
-  }
-
-  .msg code {
-    font-family: var(--mono);
-    font-size: 12px;
-    background: var(--bg);
-    padding: 1px 4px;
-    border-radius: 3px;
-  }
-
-  #chat-input-area {
-    border-top: 1px solid var(--border);
-    padding: 10px;
-    display: flex;
-    gap: 8px;
-    flex-shrink: 0;
-  }
-
-  #chat-input {
-    flex: 1;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 13px;
-    padding: 8px 10px;
-    border-radius: 4px;
-    resize: none;
-    line-height: 1.5;
-    min-height: 38px;
-    max-height: 120px;
-    outline: none;
-  }
-
-  #chat-input:focus { border-color: var(--green); }
-
-  #send-btn {
-    background: var(--green-dim);
-    border: 1px solid var(--green);
-    color: var(--green);
-    font-size: 16px;
-    padding: 0 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.15s;
-    flex-shrink: 0;
-  }
-
-  #send-btn:hover { background: var(--green); color: var(--bg); }
-  #send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-
-  /* QUEUE PANEL */
-  .queue-item {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 10px 12px;
-    margin-bottom: 8px;
-    position: relative;
-  }
-
-  .queue-item-title {
-    font-size: 13px;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .queue-item-meta {
-    font-size: 11px;
-    color: var(--text-dim);
-  }
-
-  .queue-item-delete {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    background: none;
-    border: none;
-    color: var(--red);
-    cursor: pointer;
-    font-size: 14px;
-    opacity: 0.5;
-  }
-  .queue-item-delete:hover { opacity: 1; }
-
-  .queue-priority {
-    display: inline-block;
-    font-size: 10px;
-    padding: 1px 6px;
-    border-radius: 3px;
-    margin-right: 6px;
-    font-weight: bold;
-  }
-
-  .pri-high { background: #3a1a1a; color: var(--red); border: 1px solid var(--red); }
-  .pri-med { background: #2d2200; color: var(--amber); border: 1px solid var(--amber); }
-  .pri-low { background: var(--green-dim); color: var(--green); border: 1px solid var(--green); }
-
-  .add-task-form {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px;
-    margin-bottom: 12px;
-  }
-
-  .form-label {
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    margin-bottom: 4px;
-    display: block;
-  }
-
-  .form-input, .form-select, .form-textarea {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 13px;
-    padding: 7px 9px;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    outline: none;
-  }
-
-  .form-input:focus, .form-select:focus, .form-textarea:focus {
-    border-color: var(--green);
-  }
-
-  .form-textarea { resize: vertical; min-height: 60px; line-height: 1.5; }
-  .form-select option { background: var(--panel); }
-
-  .btn-primary {
-    width: 100%;
-    padding: 9px;
-    background: var(--green-dim);
-    border: 1px solid var(--green);
-    color: var(--green);
-    font-family: var(--font);
-    font-size: 13px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.15s;
-    letter-spacing: 1px;
-  }
-
-  .btn-primary:hover { background: var(--green); color: var(--bg); }
-
-  .empty-state {
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 12px;
-    padding: 30px 0;
-  }
-
-  /* CONFIG PANEL */
-  .config-section {
-    margin-bottom: 16px;
-  }
-
-  .config-title {
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .config-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .config-row label {
-    font-size: 12px;
-    color: var(--text-dim);
-    width: 90px;
-    flex-shrink: 0;
-  }
-
-  .config-row input {
-    flex: 1;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--mono);
-    font-size: 11px;
-    padding: 6px 8px;
-    border-radius: 4px;
-    outline: none;
-  }
-
-  .config-row input:focus { border-color: var(--green); }
-
-  .config-save {
-    padding: 7px 14px;
-    background: var(--green-dim);
-    border: 1px solid var(--green);
-    color: var(--green);
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.15s;
-    flex-shrink: 0;
-  }
-  .config-save:hover { background: var(--green); color: var(--bg); }
-
-  .config-status {
-    font-size: 11px;
-    color: var(--green);
-    margin-top: 4px;
-    min-height: 16px;
-  }
-
-  /* Upload/Download */
-  .file-zone {
-    border: 2px dashed var(--border);
-    border-radius: 6px;
-    padding: 16px;
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 12px;
-    cursor: pointer;
-    transition: border-color 0.15s;
-    margin-bottom: 10px;
-  }
-
-  .file-zone:hover, .file-zone.drag-over {
-    border-color: var(--green);
-    color: var(--green);
-  }
-
-  .file-zone input { display: none; }
-
-  .download-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-
-  .btn-dl {
-    flex: 1;
-    padding: 7px;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    text-align: center;
-    transition: border-color 0.15s;
-  }
-  .btn-dl:hover { border-color: var(--blue); color: var(--blue); }
-
-  /* Toast */
-  #toast {
-    position: fixed;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--green);
-    color: var(--bg);
-    padding: 7px 18px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s;
-    z-index: 999;
-    white-space: nowrap;
-  }
-
-  #toast.show { opacity: 1; }
-
-  /* Spinner */
-  .spinner {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: 2px solid var(--border);
-    border-top-color: var(--green);
-    border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* Typing indicator */
-  .typing-dots span {
-    display: inline-block;
-    width: 6px; height: 6px;
-    background: var(--text-dim);
-    border-radius: 50%;
-    margin: 0 2px;
-    animation: bounce 1.2s infinite;
-  }
-  .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-  .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes bounce { 0%,60%,100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
-
-  /* ASSET CARDS */
-  .asset-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 8px 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .asset-card-name { flex: 1; font-size: 12px; color: var(--text); word-break: break-all; }
-  .asset-card-meta { font-size: 10px; color: var(--text-dim); white-space: nowrap; }
-  .asset-card-btn { padding: 3px 8px; background: none; border: 1px solid var(--border); color: var(--text-dim); font-size: 11px; border-radius: 3px; cursor: pointer; white-space: nowrap; }
-  .asset-card-btn:hover { border-color: var(--blue); color: var(--blue); }
-
-  /* CHARACTER CARDS */
-  .char-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px;
-  }
-  .char-card-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
-  .char-avatar {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: var(--green-dim); border: 1px solid var(--green);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px; flex-shrink: 0; color: var(--green);
-  }
-  .char-info { flex: 1; }
-  .char-name { font-size: 14px; font-weight: bold; color: var(--text); }
-  .char-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
-  .char-badge {
-    font-size: 9px; padding: 2px 6px; border-radius: 3px;
-    font-weight: bold; letter-spacing: 1px;
-  }
-  .badge-validated { background: var(--green-dim); color: var(--green); border: 1px solid var(--green); }
-  .badge-beta { background: #2d2200; color: var(--amber); border: 1px solid var(--amber); }
-  .badge-draft { background: #1a1a2e; color: var(--blue); border: 1px solid var(--blue); }
-  .char-voice { font-size: 11px; color: var(--text-dim); font-style: italic; margin-bottom: 8px; }
-  .char-traits { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 10px; }
-  .char-trait {
-    font-size: 10px; padding: 2px 7px; border-radius: 10px;
-    background: var(--bg); border: 1px solid var(--border); color: var(--text-dim);
-  }
-  .char-btns { display: flex; gap: 6px; }
-  .char-btn {
-    flex: 1; padding: 6px 4px; font-size: 11px; border-radius: 4px; cursor: pointer;
-    background: none; border: 1px solid var(--border); color: var(--text-dim);
-    transition: all 0.15s; text-align: center; white-space: nowrap;
-  }
-  .char-btn:hover { border-color: var(--green); color: var(--green); }
-  .char-btn.primary-btn { background: var(--green-dim); border-color: var(--green); color: var(--green); }
+:root {
+  --bg:#0d1117; --panel:#161b22; --border:#21262d;
+  --green:#3fb950; --green-dim:#1a4a1e;
+  --text:#c9d1d9; --text-dim:#6e7681;
+  --amber:#d29922; --red:#f85149; --blue:#58a6ff;
+  --font:'Segoe UI',Arial,sans-serif;
+  --mono:'Consolas','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:13px;
+  line-height:1.6;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+
+/* TAB BAR */
+#tab-bar{display:flex;border-bottom:1px solid var(--border);background:var(--panel);
+  flex-shrink:0;overflow-x:auto;}
+#tab-bar::-webkit-scrollbar{height:2px;}
+#tab-bar::-webkit-scrollbar-thumb{background:var(--border);}
+.tab{flex-shrink:0;padding:7px 3px;text-align:center;font-size:10px;letter-spacing:0.3px;
+  cursor:pointer;color:var(--text-dim);border-bottom:2px solid transparent;
+  transition:all 0.15s;user-select:none;white-space:nowrap;flex:1;position:relative;}
+.tab:hover{color:var(--text);}
+.tab.active{color:var(--green);border-bottom-color:var(--green);}
+.tab-badge{position:absolute;top:1px;right:1px;background:var(--red);color:#fff;
+  font-size:8px;font-weight:bold;border-radius:8px;padding:0 3px;min-width:13px;
+  text-align:center;line-height:13px;display:none;}
+
+/* PANELS */
+.panel{display:none;flex-direction:column;flex:1;overflow:hidden;}
+.panel.active{display:flex;}
+.panel-scroll{flex:1;overflow-y:auto;padding:10px;}
+.panel-scroll::-webkit-scrollbar{width:3px;}
+.panel-scroll::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+
+/* BLOCKS */
+.block{background:var(--panel);border:1px solid var(--border);border-radius:6px;
+  padding:9px 11px;margin-bottom:8px;}
+.lbl{font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;
+  margin-bottom:5px;}
+.sec{font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;
+  margin-bottom:7px;padding-bottom:3px;border-bottom:1px solid var(--border);}
+.status-ok{color:var(--green);} .status-warn{color:var(--amber);} .status-err{color:var(--red);}
+
+/* BUTTONS */
+.btn{padding:7px 10px;border-radius:4px;cursor:pointer;font-family:var(--font);
+  font-size:11px;transition:all 0.15s;border:1px solid var(--border);
+  background:none;color:var(--text-dim);}
+.btn:hover{border-color:var(--green);color:var(--green);}
+.btn-g{background:var(--green-dim);border-color:var(--green);color:var(--green);}
+.btn-g:hover{background:var(--green);color:var(--bg);}
+.btn-r{border-color:var(--red);color:var(--red);}
+.btn-b{border-color:var(--blue);color:var(--blue);}
+.btn-a{border-color:var(--amber);color:var(--amber);}
+.btn-w{width:100%;display:block;text-align:center;margin-bottom:7px;}
+
+/* FORMS */
+.fi,.fs,.ft{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);
+  font-family:var(--font);font-size:12px;padding:6px 8px;border-radius:4px;
+  margin-bottom:7px;outline:none;}
+.fi:focus,.fs:focus,.ft:focus{border-color:var(--green);}
+.ft{resize:vertical;min-height:55px;line-height:1.5;}
+
+/* PROGRESS */
+.prog-row{display:flex;align-items:center;gap:7px;margin-bottom:5px;}
+.prog-name{font-size:11px;color:var(--text);flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.prog-bar{flex:2;height:5px;background:var(--bg);border-radius:3px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:3px;background:var(--green);}
+.prog-pct{font-size:10px;color:var(--text-dim);width:26px;text-align:right;}
+
+/* INBOX */
+.icard{background:var(--panel);border:1px solid var(--border);border-radius:5px;
+  padding:9px 11px;margin-bottom:7px;}
+.icard.u-WARN{border-left:3px solid var(--amber);}
+.icard.u-CRIT{border-left:3px solid var(--red);}
+.icard.u-INFO{border-left:3px solid var(--blue);}
+.icard-title{font-size:11px;font-weight:bold;color:var(--text);margin-bottom:3px;}
+.icard-find{font-size:10px;color:var(--text-dim);margin-bottom:5px;line-height:1.5;}
+.icard-meta{font-size:9px;color:var(--text-dim);margin-bottom:6px;}
+.icard-acts{display:flex;gap:5px;}
+.icard-acts button{flex:1;padding:3px 5px;font-size:9px;border-radius:3px;cursor:pointer;
+  background:none;transition:all 0.15s;}
+
+/* AGENT GRID */
+.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px;}
+.abtn{padding:6px 5px;font-size:10px;border-radius:4px;cursor:pointer;
+  background:var(--panel);border:1px solid var(--border);color:var(--text-dim);
+  text-align:center;transition:all 0.15s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.abtn:hover{border-color:var(--green);color:var(--green);}
+
+/* LAUNCH */
+.lbtn{display:flex;align-items:center;gap:7px;padding:7px 10px;border-radius:4px;
+  background:var(--panel);border:1px solid var(--border);color:var(--text-dim);
+  cursor:pointer;margin-bottom:5px;font-size:11px;transition:all 0.15s;}
+.lbtn:hover{border-color:var(--blue);color:var(--blue);}
+.lbtn-icon{font-size:14px;flex-shrink:0;}
+.lbtn-name{flex:1;}
+.lbtn-del{font-size:12px;color:var(--red);opacity:0;transition:opacity 0.15s;}
+.lbtn:hover .lbtn-del{opacity:1;}
+
+/* RESOURCES */
+.res-card{background:var(--panel);border:1px solid var(--border);border-radius:5px;
+  padding:8px 10px;margin-bottom:6px;}
+.res-top{display:flex;align-items:center;gap:7px;margin-bottom:4px;}
+.res-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.dot-g{background:var(--green);}
+.dot-y{background:var(--amber);}
+.dot-r{background:var(--red);}
+.dot-grey{background:var(--text-dim);}
+.res-name{font-size:12px;font-weight:bold;color:var(--text);flex:1;}
+.res-tier{font-size:8px;padding:1px 5px;border-radius:3px;flex-shrink:0;}
+.tier-f{background:#1a2a1a;color:var(--green);border:1px solid var(--green);}
+.tier-p{background:#2a1a1a;color:var(--red);border:1px solid var(--red);}
+.tier-fp{background:#2a2200;color:var(--amber);border:1px solid var(--amber);}
+.res-notes{font-size:10px;color:var(--text-dim);margin-bottom:4px;}
+.usage-bar{height:4px;background:var(--bg);border-radius:2px;overflow:hidden;margin-bottom:3px;}
+.usage-fill{height:100%;border-radius:2px;}
+.fill-g{background:var(--green);} .fill-y{background:var(--amber);} .fill-r{background:var(--red);}
+.res-stats{font-size:9px;color:var(--text-dim);display:flex;justify-content:space-between;}
+
+/* SERVICES */
+.svc-card{background:var(--panel);border:1px solid var(--border);border-radius:5px;
+  padding:7px 9px;margin-bottom:5px;display:flex;align-items:flex-start;gap:7px;}
+.svc-rank{font-size:10px;color:var(--text-dim);width:16px;flex-shrink:0;text-align:center;padding-top:1px;}
+.svc-info{flex:1;min-width:0;}
+.svc-name{font-size:11px;color:var(--text);font-weight:bold;}
+.svc-sub{font-size:9px;color:var(--text-dim);}
+.svc-notes{font-size:9px;color:var(--text-dim);margin-top:2px;}
+.svc-trending{font-size:8px;color:var(--amber);margin-left:3px;}
+
+/* CHAT */
+#chat-msgs{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:8px;}
+#chat-msgs::-webkit-scrollbar{width:3px;}
+#chat-msgs::-webkit-scrollbar-thumb{background:var(--border);}
+.msg{padding:7px 10px;border-radius:5px;font-size:12px;line-height:1.6;
+  max-width:96%;word-wrap:break-word;}
+.msg-u{background:var(--green-dim);border:1px solid var(--green);align-self:flex-end;}
+.msg-a{background:var(--panel);border:1px solid var(--border);align-self:flex-start;}
+.msg-s{background:transparent;border:none;color:var(--text-dim);font-size:10px;
+  align-self:center;font-style:italic;}
+.msg pre{background:var(--bg);border:1px solid var(--border);border-radius:3px;
+  padding:7px;margin-top:5px;overflow-x:auto;font-family:var(--mono);font-size:10px;
+  white-space:pre;}
+.msg code{font-family:var(--mono);font-size:11px;background:var(--bg);padding:1px 3px;border-radius:2px;}
+#chat-bottom{border-top:1px solid var(--border);padding:8px;flex-shrink:0;}
+#chat-attach-tray{display:none;padding:4px 0 6px;border-bottom:1px solid var(--border);
+  margin-bottom:6px;font-size:10px;color:var(--text-dim);}
+#chat-row{display:flex;gap:7px;}
+#chat-in{flex:1;background:var(--panel);border:1px solid var(--border);color:var(--text);
+  font-family:var(--font);font-size:12px;padding:7px 9px;border-radius:4px;resize:none;
+  line-height:1.5;min-height:36px;max-height:110px;outline:none;}
+#chat-in:focus{border-color:var(--green);}
+#chat-send{background:var(--green-dim);border:1px solid var(--green);color:var(--green);
+  font-size:15px;padding:0 11px;border-radius:4px;cursor:pointer;transition:background 0.15s;flex-shrink:0;}
+#chat-send:hover{background:var(--green);color:var(--bg);}
+#chat-send:disabled{opacity:0.4;cursor:not-allowed;}
+#chat-attach-btn{background:none;border:1px solid var(--border);color:var(--text-dim);
+  font-size:14px;padding:0 9px;border-radius:4px;cursor:pointer;flex-shrink:0;}
+#chat-attach-btn:hover{border-color:var(--blue);color:var(--blue);}
+
+/* NOTEPAD (PLAN) */
+#notepad-area{width:100%;flex:1;background:var(--panel);border:1px solid var(--border);
+  color:var(--text);font-family:var(--font);font-size:12px;padding:10px;
+  border-radius:4px;resize:none;line-height:1.6;outline:none;min-height:200px;}
+#notepad-area:focus{border-color:var(--green);}
+
+/* MODAL */
+#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);
+  z-index:100;align-items:flex-start;justify-content:center;padding-top:40px;}
+#modal-overlay.show{display:flex;}
+#modal-box{background:var(--panel);border:1px solid var(--border);border-radius:8px;
+  padding:16px;max-width:480px;width:90%;max-height:80vh;overflow-y:auto;}
+#modal-title{font-size:13px;font-weight:bold;color:var(--text);margin-bottom:10px;
+  display:flex;justify-content:space-between;align-items:center;}
+#modal-close{background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:18px;}
+#modal-content{font-size:11px;color:var(--text);line-height:1.7;}
+#modal-content a{color:var(--blue);}
+
+/* CFG */
+.cfg-row{display:flex;align-items:center;gap:7px;margin-bottom:7px;}
+.cfg-row label{font-size:11px;color:var(--text-dim);width:80px;flex-shrink:0;}
+.cfg-row input{flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);
+  font-family:var(--mono);font-size:10px;padding:5px 7px;border-radius:4px;outline:none;}
+.cfg-row input:focus{border-color:var(--green);}
+.key-badge{font-size:10px;padding:2px 7px;border-radius:3px;flex-shrink:0;}
+.key-set{background:#1a4a1e;color:var(--green);border:1px solid var(--green);}
+.key-miss{background:#3a1a1a;color:var(--red);border:1px solid var(--red);}
+.rag-status{font-size:10px;padding:4px 8px;border-radius:4px;margin-bottom:6px;}
+.rag-ok{background:#1a4a1e;color:var(--green);border:1px solid var(--green);}
+.rag-down{background:#3a1a1a;color:var(--red);border:1px solid var(--red);}
+
+/* TIME */
+#time-wrap{text-align:center;padding:8px 0 5px;margin-bottom:8px;}
+#time-greet{font-size:10px;color:var(--text-dim);letter-spacing:1px;}
+#time-clock{font-size:20px;font-weight:bold;color:var(--green);font-family:var(--mono);}
+#time-date{font-size:9px;color:var(--text-dim);}
+
+/* INTEL CARD */
+#intel-card{background:var(--panel);border:1px solid var(--amber);border-radius:5px;
+  padding:7px 10px;margin-bottom:8px;cursor:pointer;}
+#intel-card:hover{border-color:var(--green);}
+.intel-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.intel-title{font-size:9px;letter-spacing:2px;color:var(--amber);text-transform:uppercase;}
+.intel-hint{font-size:9px;color:var(--text-dim);}
+.intel-item{font-size:10px;color:var(--text);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;padding:1px 0;}
+
+/* TOAST + SPINNER */
+#toast{position:fixed;bottom:55px;left:50%;transform:translateX(-50%);
+  background:var(--green);color:var(--bg);padding:6px 16px;border-radius:18px;
+  font-size:11px;font-weight:bold;pointer-events:none;opacity:0;
+  transition:opacity 0.2s;z-index:999;white-space:nowrap;}
+#toast.show{opacity:1;}
+.spin{display:inline-block;width:11px;height:11px;border:2px solid var(--border);
+  border-top-color:var(--green);border-radius:50%;
+  animation:sp 0.7s linear infinite;vertical-align:middle;margin-right:5px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+.dots span{display:inline-block;width:5px;height:5px;background:var(--text-dim);
+  border-radius:50%;margin:0 2px;animation:bo 1.2s infinite;}
+.dots span:nth-child(2){animation-delay:0.2s;}
+.dots span:nth-child(3){animation-delay:0.4s;}
+@keyframes bo{0%,60%,100%{transform:translateY(0);}30%{transform:translateY(-5px);}}
+.empty{text-align:center;color:var(--text-dim);font-size:11px;padding:24px 0;}
 </style>
 </head>
 <body>
-
+<script>
+// INJECTED STUDIO DATA - generated: 2026-03-31T11:00:01Z
+const INJECTED = {"generated": "2026-03-31T11:00:01Z", "inbox": [{"id": "sre-warn-20260331", "title": "SRE WARNING - overnight job errors + dirty repos", "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.", "urgency": "WARN", "date": "2026-03-31T03:31:58.008220", "source": "supervisor"}, {"id": "state-acuscan-ar-4c2b6686", "title": "Use WebXR or Canvas overlay for AR rendering?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-acuscan-ar-2533adce", "title": "If hand tracking lags on older phones \u00e2\u20ac\" prioritize speed or visual accuracy?", "finding": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-acuscan-ar-d91db37c", "title": "Should point descriptions be text overlaid on screen or a separate info panel below the camera?", "finding": "Affects UI layout significantly. Text on camera = cleaner but harder to read. Panel below = easier t", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-acuscan-ar-1653fa6d", "title": "Eventually monetize this or keep it free/personal?", "finding": "Affects whether we add any tracking, accounts, or premium features later.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-efb8d39d", "title": "What geographic area to monitor \u00e2\u20ac\" Tennessee local, Illinois local, or both?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-ec3e8edf", "title": "Scraping approach \u00e2\u20ac\" Apify Actor or direct browser automation via Chrome extension?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-35ebbf89", "title": "What categories do you want to monitor? (e.g. tools, electronics, collectibles, furniture, vintage)", "finding": "Keyword list drives everything. More specific = less noise = better digest.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-16662fe7", "title": "Minimum profit margin to include in digest \u00e2\u20ac\" e.g. only show items with 40%+ margin?", "finding": "Sets the filter threshold for the margin analysis step.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-arbitrage-pulse-91bf5e20", "title": "Digest delivery format \u00e2\u20ac\" Markdown file in Drive, email, or dashboard card?", "finding": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-58575f97", "title": "Now that Chrome extension is available \u00e2\u20ac\" attempt textarea via extension first or continue investig", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-db05ea3e", "title": "Should analysis run on all lots automatically or only when you click a button on a specific lot?", "finding": "Auto-run = more convenient but costs more API calls. Manual trigger = you control what gets analyzed", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-9542d880", "title": "What format do you want the watchlist notes in? (e.g. 'Est: $45-65 | Condition: Good | Items: cerami", "finding": "Note format determines what Gemini is asked to return. Standardized format makes notes scannable dur", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-hibid-analyzer-8beea3b7", "title": "Should this work on mobile Chrome or desktop only?", "finding": "Mobile adds complexity but useful if bidding from phone at estate sales.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-14ffdba1", "title": "Should the platform be offered as SaaS to other job seekers or stay personal/portfolio use?", "finding": "Determines whether to add billing, multi-user accounts, and marketing infrastructure. Significant sc", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-79f41ad6", "title": "Should employer portal be prioritized before or after scraping engine?", "finding": "Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-379b1402", "title": "For the scam database \u00e2\u20ac\" should it be private to your platform or eventually shared/open source?", "finding": "Shared scam database becomes a community moat. Private keeps it proprietary. Open source builds trus", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-job-match-0472d4af", "title": "Should job ratings be shown to users in v1 or held back until v2?", "finding": "Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-c159724f", "title": "Personal tool only or productize for other sellers?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-0b8aae0b", "title": "Input format \u00e2\u20ac\" eBay bulk export CSV or manual entry or both?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-2f37099d", "title": "What are your SKU prefix conventions for physical storage location tracking?", "finding": "Optimizer needs to preserve or understand existing SKU format to not break your storage system.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-9609b02c", "title": "Which categories make up the majority of your 572 listings?", "finding": "Category-specific title rules \u00e2\u20ac\" e.g. books need ISBN, electronics need model numbers. Knowing top ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-listing-optimizer-2c74ef17", "title": "Should the optimizer suggest a price adjustment based on recent eBay sold data?", "finding": "Adds significant value but requires eBay API access. Could share that infrastructure with Arbitrage ", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-nutrimind-86664a3a", "title": "What defines NutriMind as complete \u00e2\u20ac\" what is the finish line?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-nutrimind-e3a0a527", "title": "Should shopping list generation be part of the MVP or post-launch?", "finding": "Natural extension of meal planning. Medium complexity add.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-nutrimind-ee9e64da", "title": "Should the app remember your meal history to avoid repeating recent meals?", "finding": "Requires localStorage or backend. Adds significant value but adds complexity.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-squeeze-empire-0ab2f8fb", "title": "What defines late-game completion \u00e2\u20ac\" what is the win condition or final milestone?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-squeeze-empire-74ccd928", "title": "Should the game save state between sessions or reset each time?", "finding": "localStorage save would make it a true idle game. No save = arcade style. Significant architecture d", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-squeeze-empire-f54344c9", "title": "After late-game is done \u00e2\u20ac\" release publicly, keep personal, or productize?", "finding": "Affects whether we add analytics, sharing features, or mobile optimization pass.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-whatnot-apps-c3ac17b9", "title": "Which Whatnot role to prioritize for application submission first?", "finding": "", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-whatnot-apps-26e411a4", "title": "Do you have the actual current Whatnot job posting URLs to tailor against?", "finding": "Resumes tailored to exact posting language score significantly higher on ATS systems.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "state-whatnot-apps-8413a3f4", "title": "Should we build a general Whatnot cover letter or three separate role-specific ones?", "finding": "Separate letters are stronger but more work. General letter with swap sections is faster.", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-arch-reddit-0001", "title": "[#1 WHITEBOARD] I've played and reviewed 1.000+ horror games, here are some gems you might not h", "finding": "PUBLISH | Score: 8/10 | The continuous growth of the horror game genre makes a comprehensive, curate", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-vint-0011", "title": "[#2 WHITEBOARD] DuPont Corfam", "finding": "RESEARCH | Score: 8/10 | Modern material science and a booming demand for sustainable, high-performa", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-nost-0028", "title": "[#3 WHITEBOARD] Bring back the original SoBe Elixir drink line nationwide", "finding": "BUILD | Score: 8/10 | The strong wave of 90s and early 2000s nostalgia, amplified by dedicated onlin", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-ebay-identifier-app", "title": "[#4 WHITEBOARD] eBay Item Identifier \u00e2\u20ac\" Consensus Engine", "finding": "BUILD | Score: 8/10 | Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generati", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-client-services-website", "title": "[#5 WHITEBOARD] AI Services Client Website", "finding": "BUILD | Score: 8/10 | 2026 is an optimal time as businesses increasingly adopt AI but require struct", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-arch-reddit-0002", "title": "[#6 WHITEBOARD] Wing Commander IV Turns 30... And Still Fascinates Me", "finding": "BUILD | Score: 7/10 | 2026 marks the 30th anniversary of Wing Commander IV, providing a strong, time", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-vint-0005", "title": "[#7 WHITEBOARD] Dymaxion Car", "finding": "RESEARCH | Score: 7/10 | The ongoing global shift towards electric vehicles and sustainable transpor", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-vint-0015", "title": "[#8 WHITEBOARD] DeLorean DMC-12", "finding": "PITCH | Score: 7/10 | 2026 is timely due to the mature state of EV platforms, the thriving market fo", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-nost-0024", "title": "[#9 WHITEBOARD] 90s Green Day was pure chaos and I miss it.", "finding": "BUILD | Score: 7/10 | 2026 aligns with the peak of 90s nostalgia and Green Day's continued relevance", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-nost-0025", "title": "[#10 WHITEBOARD] Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?", "finding": "PUBLISH | Score: 7/10 | In 2026, increasing AI data demands and persistent privacy concerns will amp", "urgency": "INFO", "date": "", "source": "mobile"}, {"id": "wb-top-traitor-protocol", "title": "[#6 WHITEBOARD] Traitor Protocol Adversarial Testing", "finding": "BUILD | Score: 8/10 | As LLM adoption accelerates into critical enterprise functions, robust, automa", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-higgsfield-backwards-design", "title": "[#1 WHITEBOARD] Higgsfield Original Series - Backwards Design", "finding": "BUILD | Score: 9/10 | Data-driven niche content creation and short-form distribution are key to succ", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-war-room-protocol", "title": "[#8 WHITEBOARD] War Room Decision Protocol", "finding": "PITCH | Score: 8/10 | Increasing complexity and AI demand robust human-centered decision protocols t", "urgency": "WARN", "date": "", "source": "mobile"}, {"id": "wb-top-ghost-book-script-vault", "title": "[#9 WHITEBOARD] Ghost Book Script Vault + Salvage Protocol", "finding": "BUILD | Score: 8/10 | Maximizing existing content is crucial in today's content-heavy, AI-assisted c", "urgency": "WARN", "date": "", "source": "mobile"}], "whiteboard": [{"title": "Higgsfield Original Series - Backwards Design", "description": "Monitor platform weekly for genre gaps and vote velocity. Build CTW characters s", "score": 9, "action": "BUILD"}, {"title": "I've played and reviewed 1.000+ horror games, here are some gems you might not h", "description": "I've been in love with the genre for all my life and could write 30 pages of phi", "score": 8, "action": "PUBLISH"}, {"title": "DuPont Corfam", "description": "Yes, the search for a perfect synthetic leather that perfectly mimics natural pr", "score": 8, "action": "RESEARCH"}, {"title": "Bring back the original SoBe Elixir drink line nationwide", "description": "Remember SoBe Elixirs? That tangy, refreshing drink that just hit different? Tho", "score": 8, "action": "BUILD"}, {"title": "eBay Item Identifier \u00e2\u20ac\" Consensus Engine", "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identif", "score": 8, "action": "BUILD"}, {"title": "AI Services Client Website", "description": "Lead generation website for AI project services. Intake triggers Client Solution", "score": 8, "action": "BUILD"}, {"title": "Traitor Protocol Adversarial Testing", "description": "One agent per overnight run designated as liar. Mayor must catch it. Catches hal", "score": 8, "action": "BUILD"}, {"title": "War Room Decision Protocol", "description": "Standard protocol for high-stakes decisions. Mirofish runs automated scoring. Wa", "score": 8, "action": "PITCH"}, {"title": "Ghost Book Script Vault + Salvage Protocol", "description": "Permanent archive for unused scripts with active salvage pass before retirement.", "score": 8, "action": "BUILD"}, {"title": "Wing Commander IV Turns 30... And Still Fascinates Me", "description": "Times flies. This was the first game that I was truly hyped to play as a kid. A ", "score": 7, "action": "BUILD"}], "assets": [{"id": "anthropic-claude", "name": "Anthropic Claude API", "type": "llm", "service_type": "chat", "status": "active", "tier": "paid", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Primary reasoning engine. claude-sonnet-4-6 default.", "url": "https://console.anthropic.com"}, {"id": "gemini", "name": "Google Gemini API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 1500, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Used for spec grading, batch work, Gemini Flash free tier.", "url": "https://aistudio.google.com"}, {"id": "openrouter", "name": "OpenRouter API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Sidebar chat backend. Routes to best free model.", "url": "https://openrouter.ai"}, {"id": "ollama", "name": "Ollama (Local)", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Local LLM fallback. llama3.2 default.", "url": "http://localhost:11434"}, {"id": "youtube-data-v3", "name": "YouTube Data API v3", "type": "api", "service_type": "search", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 10000, "usage_this_month": {"calls": 0, "units": 10}, "last_used": "2026-03-30", "notes": "AI Intel agent. 100 units per search query. 7 queries = 700 units/day.", "url": "https://console.cloud.google.com"}, {"id": "ebay-api", "name": "eBay Developer API", "type": "api", "service_type": "ecommerce", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "eBay agent. OAuth2. Listing audit, pricing comps.", "url": "https://developer.ebay.com"}, {"id": "supabase", "name": "Supabase", "type": "database", "service_type": "database", "status": "active", "tier": "free", "monthly_limit": 500, "daily_limit": null, "usage_this_month": {"calls": 1, "storage_mb": 0}, "last_used": "2026-03-30", "notes": "Job Match platform DB. Free tier 500MB.", "url": "https://supabase.com"}, {"id": "adzuna", "name": "Adzuna Job API", "type": "api", "service_type": "jobs", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Job discovery. Free tier.", "url": "https://developer.adzuna.com"}], "services": {"chat": [{"rank": 1, "name": "Mistral Small", "provider": "Mistral", "url": "https://mistral.ai", "tier": "free+paid", "notes": "Good free tier via OpenRouter", "buzz_score": 1, "trending": false}, {"rank": 2, "name": "Claude Sonnet 4.6", "provider": "Anthropic", "url": "https://anthropic.com", "tier": "paid", "notes": "Best for reasoning/coding/agents", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "GPT-4o", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Strong general purpose", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Gemini 1.5 Pro", "provider": "Google", "url": "https://aistudio.google.com", "tier": "free+paid", "notes": "Large context, free tier available", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Claude Haiku 4.5", "provider": "Anthropic", "url": "https://anthropic.com", "tier": "paid", "notes": "Fast + cheap, good for batch", "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Gemini Flash", "provider": "Google", "url": "https://aistudio.google.com", "tier": "free", "notes": "Best free-tier speed", "buzz_score": 0, "trending": false}, {"rank": 7, "name": "Llama 3.2", "provider": "Meta/Ollama", "url": "https://ollama.com", "tier": "free", "notes": "Local, no API cost", "buzz_score": 0, "trending": false}, {"rank": 8, "name": "DeepSeek R1", "provider": "DeepSeek", "url": "https://deepseek.com", "tier": "free", "notes": "Strong reasoning, free via OpenRouter", "buzz_score": 0, "trending": false}], "image_gen": [{"rank": 1, "name": "Midjourney v6", "provider": "Midjourney", "url": "https://midjourney.com", "tier": "paid", "notes": "Best quality, no free tier", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "DALL-E 3", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Good prompt adherence", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Stable Diffusion (local)", "provider": "Stability AI", "url": "https://stability.ai", "tier": "free", "notes": "Free local via ComfyUI/A1111. RTX 3060 threshold.", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Ideogram 2", "provider": "Ideogram", "url": "https://ideogram.ai", "tier": "free+paid", "notes": "Best text-in-image. Free tier available.", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Flux 1.1 Pro", "provider": "Black Forest Labs", "url": "https://replicate.com", "tier": "paid", "notes": "Top open model quality", "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Playground v3", "provider": "Playground", "url": "https://playground.com", "tier": "free+paid", "notes": "Free tier, strong aesthetic quality", "buzz_score": 0, "trending": false}], "video_gen": [{"rank": 1, "name": "Sora", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Best coherence, limited access", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Runway Gen-3", "provider": "Runway", "url": "https://runwayml.com", "tier": "paid", "notes": "Best for creative control", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Kling 1.6", "provider": "Kuaishou", "url": "https://klingai.com", "tier": "free+paid", "notes": "Strong motion quality, free tier", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Higgsfield", "provider": "Higgsfield", "url": "https://higgsfield.ai", "tier": "free+paid", "notes": "Character-consistent video. Studio distribution target.", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Hailuo MiniMax", "provider": "MiniMax", "url": "https://hailuoai.com", "tier": "free", "notes": "Generous free tier", "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Veo 2", "provider": "Google", "url": "https://deepmind.google", "tier": "paid", "notes": "High quality, limited access", "buzz_score": 0, "trending": false}], "code": [{"rank": 1, "name": "Claude Code", "provider": "Anthropic", "url": "https://anthropic.com", "tier": "paid", "notes": "Best agentic coding. Primary studio tool.", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "GitHub Copilot", "provider": "Microsoft", "url": "https://github.com/copilot", "tier": "paid", "notes": "Best IDE integration", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Cursor", "provider": "Cursor", "url": "https://cursor.sh", "tier": "free+paid", "notes": "Strong Claude/GPT integration", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Gemini Code Assist", "provider": "Google", "url": "https://cloud.google.com", "tier": "free+paid", "notes": "Free tier via IDX", "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Codeium", "provider": "Codeium", "url": "https://codeium.com", "tier": "free", "notes": "Best free autocomplete", "buzz_score": 0, "trending": false}], "embedding": [{"rank": 1, "name": "text-embedding-3-small", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Cheap, good quality", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Gemini Embedding", "provider": "Google", "url": "https://aistudio.google.com", "tier": "free", "notes": "Free tier available", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "nomic-embed-text", "provider": "Nomic/Ollama", "url": "https://ollama.com", "tier": "free", "notes": "Best free local embedding. Studio default (ChromaDB).", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "mxbai-embed-large", "provider": "MixedBread/Ollama", "url": "https://ollama.com", "tier": "free", "notes": "Strong local option", "buzz_score": 0, "trending": false}], "voice": [{"rank": 1, "name": "ElevenLabs", "provider": "ElevenLabs", "url": "https://elevenlabs.io", "tier": "free+paid", "notes": "Best voice cloning quality", "buzz_score": 1, "trending": false}, {"rank": 2, "name": "OpenAI TTS", "provider": "OpenAI", "url": "https://openai.com", "tier": "paid", "notes": "Fast, natural, cheap per char", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Google TTS", "provider": "Google", "url": "https://cloud.google.com", "tier": "free+paid", "notes": "WaveNet quality, free tier", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Whisper (local)", "provider": "OpenAI/Local", "url": "https://github.com/openai/whisper", "tier": "free", "notes": "Best free local STT", "buzz_score": 0, "trending": false}], "search": [{"rank": 1, "name": "Tavily", "provider": "Tavily", "url": "https://tavily.com", "tier": "free+paid", "notes": "Best AI-optimized search API. Studio connected.", "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Perplexity API", "provider": "Perplexity", "url": "https://perplexity.ai", "tier": "paid", "notes": "Good for research tasks", "buzz_score": 0, "trending": false}, {"rank": 3, "name": "SerpAPI", "provider": "SerpAPI", "url": "https://serpapi.com", "tier": "free+paid", "notes": "Google results scraping", "buzz_score": 0, "trending": false}, {"rank": 4, "name": "DuckDuckGo (free)", "provider": "DDG", "url": "https://duckduckgo.com", "tier": "free", "notes": "No key needed, rate limited", "buzz_score": 0, "trending": false}]}, "servicesDate": "2026-03-31", "intelSummary": "AI INTEL - 2026-03-30\nGenerated: 2026-03-30T20:38:45Z\nSources: 11/11 OK | 4 HIGH / 61 WORTH / 130 LOGGED | YouTube: 8 videos surfaced\n\nHIGH PRIORITY (4):\n  * How you should be prompting GPT 5 for Agentic Persistence | score:28 | https://reddit.com/r/ChatGPT/comments/1s812gv/how_you_should_be_prompting_gpt_5_for_agentic/\n  * Playwright, but for native iOS/Android plus Flutter/React Native | score:30 | https://reddit.com/r/ClaudeAI/comments/1s80hbs/playwright_but_for_native_iosandroid_plus/\n  * Zanat: an open-source CLI + MCP server to version, share, and install AI agent skills via  | score:28 | https://reddit.com/r/LocalLLaMA/comments/1s823ue/zanat_an_opensource_cli_mcp_server_to_version/\n  * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano\n\nWORTH READING (61):\n  * Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News ? What?s Happening RIGHT NOW | score:21 | https://www.youtube.com/watch?v=mCDzH2TK71o\n  * Forget ChatGPT || This 5 AI Tools  Will BLOW Your Mind | score:20 | https://www.youtube.com/watch?v=0CD2QeAIRII\n  * ChatGPT 5.4 Features | Latest ChatGPT Features | ChatGPT 5.4 Update Explained | #Shorts #S | score:25 | https://www.youtube.com/watch?v=9kPg4uGTCm4\n  * I Built 500 AI Workflows, These 5 Actually Sell in 2026 | score:22 | https://www.youtube.com/watch?v=Y3PcRp5RFzk\n  * Turn Antigravity Into AN AI Autonomous Engineering Team! Automate Your Code with Subagents | score:20 | https://www.youtube.com/watch?v=yuaBPLNdNSU\n  * Hermes Agent KILLED $497/Month Automation Tools ? (Your AI Gets Smarter Every Session) | score:20 | https://www.youtube.com/watch?v=sf25aDO9iOs\n  * I Automated My Book&#39;s Worldbuilding with n8n (Full AI Workflow) | score:22 | https://www.youtube.com/watch?v=s-abfMWOWY8\n  * The AI Model Roller Coaster | score:21 | https://www.youtube.com/watch?v=vNSudpkwqTA\n  * we open sourced a tool that auto generates your AI agent context from your actual codebase | score:24 | https://reddit.com"};
+// END INJECTED DATA
+</script>
+<!-- TAB BAR: STATUS | INBOX | CHAT | PLAN | ASSETS | DATA | CFG -->
 <div id="tab-bar">
   <div class="tab active" onclick="switchTab('status')">STATUS</div>
-  <div class="tab" onclick="switchTab('chat')">CHAT <span id="chat-backend" style="font-size:9px;opacity:0.7;"></span></div>
-  <div class="tab" onclick="switchTab('data')">DATA</div>
+  <div class="tab" onclick="switchTab('inbox')">INBOX<span class="tab-badge" id="inbox-badge">0</span></div>
+  <div class="tab" onclick="switchTab('chat')">CHAT<span class="tab-badge" id="chat-badge" style="background:var(--green);display:none;">AI</span></div>
+  <div class="tab" onclick="switchTab('plan')">PLAN</div>
   <div class="tab" onclick="switchTab('assets')">ASSETS</div>
-  <div class="tab" onclick="switchTab('chars')">CHARS</div>
-  <div class="tab" onclick="switchTab('queue')">QUEUE</div>
-  <div class="tab" onclick="switchTab('files')">FILES</div>
+  <div class="tab" onclick="switchTab('data')">DATA</div>
   <div class="tab" onclick="switchTab('config')">CFG</div>
 </div>
 
-<!-- STATUS PANEL -->
+<!-- ═══ STATUS ═════════════════════════════════════════════════ -->
 <div id="panel-status" class="panel active">
-  <div class="panel-scroll">
-    <button class="refresh-btn" onclick="loadStatus()">↻ Refresh Status</button>
+<div class="panel-scroll">
 
-    <div class="status-block">
-      <div class="status-label">System</div>
-      <div class="status-value" id="sys-status">Loading...</div>
+  <div id="time-wrap">
+    <div id="time-greet">Good morning</div>
+    <div id="time-clock">--:-- --</div>
+    <div id="time-date">Loading...</div>
+    <div id="js-indicator" style="font-size:8px;color:var(--text-dim);margin-top:2px;">
+      Build: 1774926642
     </div>
+  </div>
 
-    <div class="status-block">
-      <div class="status-label">Last Agent Activity</div>
-      <div class="status-value" id="sys-last-activity">—</div>
+  <!-- AI Intel Card - clickable to open modal -->
+  <div id="intel-card" onclick="openIntelModal()" style="display:none;">
+    <div class="intel-hdr">
+      <span class="intel-title">AI Intel Today</span>
+      <span class="intel-hint">tap to expand ↗</span>
     </div>
+    <div id="intel-preview"></div>
+  </div>
 
-    <div class="status-block">
-      <div class="status-label">Inbox</div>
-      <div class="status-value" id="sys-inbox">—</div>
+  <button class="btn btn-g btn-w" onclick="loadStatus()">↻ Refresh</button>
+
+  <div class="block">
+    <div class="lbl">System</div>
+    <div id="sys-status"><span style="color:var(--text-dim)">loading...</span></div>
+  </div>
+
+  <div class="block" onclick="switchTab('inbox')" style="cursor:pointer;">
+    <div class="lbl">Inbox</div>
+    <div id="sys-inbox">-</div>
+  </div>
+
+  <!-- Projects -->
+  <div class="block">
+    <div class="lbl">Projects</div>
+    <div id="sys-projects"></div>
+  </div>
+
+  <!-- Agent Run Buttons -->
+  <div class="block">
+    <div class="lbl" style="margin-bottom:7px;">Run Agent / Task</div>
+    <div class="agent-grid">
+      <button class="abtn" onclick="queueAgent('AI Intel')">AI Intel</button>
+      <button class="abtn" onclick="queueAgent('eBay Agent')">eBay Agent</button>
+      <button class="abtn" onclick="queueAgent('Vintage')">Vintage</button>
+      <button class="abtn" onclick="queueAgent('Job Delta')">Job Delta</button>
+      <button class="abtn" onclick="queueAgent('Whiteboard')">Whiteboard</button>
+      <button class="abtn" onclick="queueAgent('Auto-Answer')">Auto-Answer</button>
+      <button class="abtn" onclick="queueAgent('Agency Build')">Agency Build</button>
+      <button class="abtn" onclick="queueAgent('Svc Rankings')">Svc Rankings</button>
     </div>
+  </div>
 
-    <div class="status-block">
-      <div class="status-label">Active Projects</div>
-      <div id="sys-projects" class="status-value">—</div>
+  <!-- Launch Buttons -->
+  <div class="block">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px;">
+      <div class="lbl" style="margin:0;">Launch</div>
+      <button class="btn btn-b" style="padding:3px 8px;font-size:10px;" onclick="showAddLaunch()">+ Add</button>
     </div>
-
-    <div class="status-block">
-      <div class="status-label">Recent Log</div>
-      <div id="sys-log">
-        <div class="log-entry" style="color:var(--text-dim);font-style:italic;">Connect Drive in CONFIG to load logs</div>
+    <div id="launch-list"></div>
+    <!-- Add launch form (hidden) -->
+    <div id="add-launch-form" style="display:none;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;">
+      <input class="fi" id="launch-name-in" placeholder="Name (e.g. CTW)" style="margin-bottom:5px;">
+      <input class="fi" id="launch-url-in" placeholder="URL or file path" style="margin-bottom:5px;">
+      <div style="display:flex;gap:6px;">
+        <button class="btn btn-g" style="flex:1;" onclick="saveLaunch()">Save</button>
+        <button class="btn" style="flex:1;" onclick="hideLaunchForm()">Cancel</button>
       </div>
     </div>
   </div>
+
+</div>
 </div>
 
-<!-- CHAT PANEL -->
-<div id="panel-chat" class="panel">
-  <div id="chat-messages">
-    <div class="msg msg-system">Studio AI — OpenRouter (free) / Ollama fallback</div>
-    <div class="msg msg-ai">Hello! I'm connected to your studio context. Ask me about project status, agent tasks, or anything in your system.</div>
-  </div>
-  <div id="chat-input-area">
-    <textarea id="chat-input" placeholder="Ask AI..." rows="1"
-      onkeydown="handleChatKey(event)"
-      oninput="autoResize(this)"></textarea>
-    <button id="send-btn" onclick="sendChat()">➤</button>
-  </div>
-</div>
-
-<!-- DATA EXPLORER PANEL -->
-<div id="panel-data" class="panel">
-  <div class="panel-scroll">
-    <div class="config-title" style="margin-bottom:10px;">Data Explorer</div>
-    <label class="form-label">Select File</label>
-    <select id="data-file-select" class="form-select">
-      <option value="">— Choose a file —</option>
-      <optgroup label="AI Intel">
-        <option value="ai-intel-daily.json">ai-intel-daily.json</option>
-        <option value="ai-intel-summary.txt">ai-intel-summary.txt</option>
-      </optgroup>
-      <optgroup label="Studio Logs">
-        <option value="whiteboard.json">whiteboard.json</option>
-        <option value="supervisor-inbox.json">supervisor-inbox.json</option>
-        <option value="heartbeat-log.json">heartbeat-log.json</option>
-        <option value="lateral-flag.json">lateral-flag.json</option>
-        <option value="master-audit.json">master-audit.json</option>
-        <option value="nit-results.json">nit-results.json</option>
-        <option value="daily-digest.json">daily-digest.json</option>
-        <option value="decision-log.json">decision-log.json</option>
-        <option value="sre-report.json">sre-report.json</option>
-        <option value="dependency-map.json">dependency-map.json</option>
-      </optgroup>
-      <optgroup label="Archaeology">
-        <option value="product-archaeology-results.json">product-archaeology-results.json</option>
-      </optgroup>
+<!-- ═══ INBOX ══════════════════════════════════════════════════ -->
+<div id="panel-inbox" class="panel">
+  <!-- Filter bar -->
+  <div style="display:flex;gap:5px;padding:8px 10px 0;flex-shrink:0;flex-wrap:wrap;">
+    <select class="fs" id="inbox-filter" onchange="renderInbox()" style="flex:1;margin:0;font-size:10px;padding:4px 6px;">
+      <option value="">All</option>
+      <option value="WARN">WARN</option>
+      <option value="CRIT">CRIT</option>
+      <option value="INFO">INFO</option>
     </select>
-    <div style="display:flex;gap:8px;margin-bottom:12px;">
-      <button class="btn-primary" style="flex:1;" onclick="loadAndAnalyzeData()">Load &amp; Analyze</button>
-      <label class="btn-primary" style="flex:1;text-align:center;cursor:pointer;margin:0;padding:9px;">
-        Upload File
-        <input type="file" accept=".json,.txt,.md" style="display:none" onchange="uploadDataFileForAnalysis(event)">
+    <select class="fs" id="inbox-sort" onchange="renderInbox()" style="flex:1;margin:0;font-size:10px;padding:4px 6px;">
+      <option value="urgency">By Urgency</option>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+      <option value="source">By Source</option>
+    </select>
+    <button class="btn" style="padding:4px 8px;font-size:10px;" onclick="loadInbox()">↻</button>
+  </div>
+  <div class="panel-scroll" id="inbox-list" style="padding-top:8px;">
+    <div class="empty">Loading inbox...</div>
+  </div>
+</div>
+
+<!-- ═══ CHAT ═══════════════════════════════════════════════════ -->
+<div id="panel-chat" class="panel">
+  <div id="chat-msgs">
+    <div class="msg msg-s">Studio AI · OpenRouter free (no cost) · Anthropic optional</div>
+    <div class="msg msg-a">Connected to your studio. Ask about projects, agents, inbox items, or anything in the system.</div>
+  </div>
+  <div id="chat-bottom">
+    <div id="chat-attach-tray"></div>
+    <div id="chat-row">
+      <label id="chat-attach-btn" title="Attach file">📎
+        <input type="file" id="chat-file-in" style="display:none;" onchange="attachFile(event)">
       </label>
-    </div>
-    <div id="data-analysis-msgs" style="display:flex;flex-direction:column;gap:10px;"></div>
-    <div id="data-followup-area" style="display:none;margin-top:10px;border-top:1px solid var(--border);padding-top:10px;">
-      <div class="config-title" style="margin-bottom:6px;">Followup</div>
-      <div style="display:flex;gap:8px;">
-        <input class="form-input" id="data-followup-input" placeholder="Ask a followup question..." style="flex:1;margin:0;" onkeydown="if(event.key==='Enter')askDataFollowup()">
-        <button class="config-save" onclick="askDataFollowup()">➤</button>
-      </div>
+      <textarea id="chat-in" placeholder="Ask AI..." rows="1"
+        onkeydown="chatKey(event)" oninput="autoSize(this)"></textarea>
+      <button id="chat-send" onclick="sendChat()">➤</button>
     </div>
   </div>
 </div>
 
-<!-- ASSETS PANEL -->
+<!-- ═══ PLAN (was QUEUE) ═══════════════════════════════════════ -->
+<div id="panel-plan" class="panel" style="flex-direction:column;">
+  <!-- Whiteboard: collapsible -->
+  <div style="flex-shrink:0;border-bottom:1px solid var(--border);">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 10px;cursor:pointer;"
+      onclick="toggleWB()">
+      <span style="font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;">
+        Whiteboard Top 10</span>
+      <span id="wb-toggle" style="font-size:11px;color:var(--text-dim);">▼</span>
+    </div>
+    <div id="plan-wb-body" style="display:none;max-height:160px;overflow-y:auto;padding:0 10px 8px;">
+      <div id="plan-whiteboard"></div>
+    </div>
+  </div>
+  <!-- Notes: fills remaining space -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 10px 4px;flex-shrink:0;">
+    <span style="font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;">Notes</span>
+    <div style="display:flex;gap:5px;">
+      <button class="btn" style="padding:2px 7px;font-size:10px;" onclick="clearNotes()">Clear</button>
+      <button class="btn btn-g" style="padding:2px 7px;font-size:10px;" onclick="saveNotes()">Save</button>
+    </div>
+  </div>
+  <div style="flex:1;padding:0 10px 4px;display:flex;flex-direction:column;min-height:0;">
+    <textarea id="notepad-area" style="flex:1;min-height:0;"
+      placeholder="Type notes, next steps, decisions...&#10;Auto-saves to localStorage."></textarea>
+  </div>
+  <div style="padding:3px 10px 5px;font-size:9px;color:var(--text-dim);flex-shrink:0;" id="notes-saved"></div>
+</div>
+
+<!-- ═══ ASSETS ═════════════════════════════════════════════════ -->
 <div id="panel-assets" class="panel">
-  <div class="panel-scroll">
-    <div class="config-title" style="margin-bottom:8px;">Asset Viewer</div>
-    <input class="form-input" id="asset-filter" placeholder="Filter by name or extension..." oninput="filterAssets()" style="margin-bottom:8px;">
-    <label class="btn-primary" style="display:block;text-align:center;cursor:pointer;margin-bottom:12px;">
-      Load Files
-      <input type="file" multiple style="display:none" onchange="loadAssetsFromFiles(event)">
+  <div style="display:flex;border-bottom:1px solid var(--border);flex-shrink:0;">
+    <button class="tab active" id="at-res" onclick="assetsTab('res')" style="flex:1;font-size:10px;">RESOURCES</button>
+    <button class="tab" id="at-svc" onclick="assetsTab('svc')" style="flex:1;font-size:10px;">AI SERVICES</button>
+  </div>
+
+  <!-- RESOURCES sub-panel -->
+  <div id="ap-res" class="panel-scroll" style="display:block;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 8px;">
+      <div class="sec" style="margin:0;border:none;">API & Resource Status</div>
+      <button class="btn" style="padding:3px 7px;font-size:10px;" onclick="loadResources()">↻</button>
+    </div>
+    <div id="resource-list"><div class="empty">Loading...</div></div>
+  </div>
+
+  <!-- AI SERVICES sub-panel -->
+  <div id="ap-svc" class="panel-scroll" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 8px;">
+      <div class="sec" style="margin:0;border:none;">AI Services Rankings</div>
+      <span style="font-size:9px;color:var(--text-dim);" id="svc-date">-</span>
+    </div>
+    <select class="fs" id="svc-cat" onchange="renderServices()" style="margin-bottom:8px;">
+      <option value="chat">Chat / LLM</option>
+      <option value="image_gen">Image Generation</option>
+      <option value="video_gen">Video Generation</option>
+      <option value="code">Code Assistants</option>
+      <option value="embedding">Embeddings</option>
+      <option value="voice">Voice / TTS / STT</option>
+      <option value="search">Search APIs</option>
+    </select>
+    <div id="svc-list"><div class="empty">Loading...</div></div>
+  </div>
+</div>
+
+<!-- ═══ DATA EXPLORER ══════════════════════════════════════════ -->
+<div id="panel-data" class="panel">
+<div class="panel-scroll">
+  <div class="sec" style="margin-bottom:8px;">Data Explorer</div>
+  <select class="fs" id="data-sel">
+    <option value="">- Choose a file -</option>
+    <optgroup label="AI Intel">
+      <option value="ai-intel-daily.json">ai-intel-daily.json</option>
+      <option value="ai-services-rankings.json">ai-services-rankings.json</option>
+    </optgroup>
+    <optgroup label="Studio Logs">
+      <option value="whiteboard.json">whiteboard.json</option>
+      <option value="supervisor-inbox.json">supervisor-inbox.json</option>
+      <option value="heartbeat-log.json">heartbeat-log.json</option>
+      <option value="asset-log.json">asset-log.json</option>
+      <option value="dependency-map.json">dependency-map.json</option>
+    </optgroup>
+  </select>
+  <div style="display:flex;gap:6px;margin-bottom:10px;">
+    <button class="btn btn-g" style="flex:1;" onclick="loadData()">Load &amp; Analyze</button>
+    <label class="btn" style="flex:1;text-align:center;cursor:pointer;padding:7px 10px;">
+      Upload<input type="file" accept=".json,.txt,.md" style="display:none" onchange="uploadData(event)">
     </label>
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:10px;" id="asset-drive-hint">
-      Or <a href="#" onclick="loadAssetsFromDrive();return false;" style="color:var(--blue)">search Drive</a> for studio files (requires Drive auth)
-    </div>
-    <div id="asset-list" style="display:flex;flex-direction:column;gap:6px;"></div>
-    <div id="asset-viewer-panel" style="display:none;margin-top:12px;border-top:1px solid var(--border);padding-top:12px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-        <span class="config-title" id="asset-viewer-name" style="margin:0;"></span>
-        <button onclick="document.getElementById('asset-viewer-panel').style.display='none'" style="background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:16px;">✕</button>
-      </div>
-      <div id="asset-viewer-content" style="background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:10px;font-family:var(--mono);font-size:11px;max-height:400px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;"></div>
+  </div>
+  <div id="data-msgs" style="display:flex;flex-direction:column;gap:8px;"></div>
+  <div id="data-followup" style="display:none;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;">
+    <div style="display:flex;gap:6px;">
+      <input class="fi" id="data-q" placeholder="Ask a question about this data..." style="flex:1;margin:0;"
+        onkeydown="if(event.key==='Enter')dataQ()">
+      <button class="btn btn-g" onclick="dataQ()">➤</button>
     </div>
   </div>
 </div>
-
-<!-- CHARS PANEL -->
-<div id="panel-chars" class="panel">
-  <div class="panel-scroll">
-    <div class="config-title" style="margin-bottom:8px;">Character Loader</div>
-    <div style="display:flex;gap:8px;margin-bottom:10px;">
-      <button class="btn-primary" style="flex:1;" onclick="loadCharsFromDrive()">Load from Drive</button>
-      <label class="btn-primary" style="flex:1;text-align:center;cursor:pointer;margin:0;">
-        Upload JSON
-        <input type="file" multiple accept=".json" style="display:none" onchange="loadCharsFromFiles(event)">
-      </label>
-    </div>
-    <div style="font-size:11px;color:var(--text-dim);margin-bottom:12px;">Expects char_NNN_name.json format from CTW/characters/</div>
-    <div id="char-list" style="display:flex;flex-direction:column;gap:10px;"></div>
-    <!-- Inline character chat -->
-    <div id="char-chat-panel" style="display:none;margin-top:12px;border-top:1px solid var(--border);padding-top:12px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-        <span class="config-title" id="char-chat-name" style="margin:0;color:var(--amber);"></span>
-        <button onclick="closeCharChat()" style="background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:16px;">✕</button>
-      </div>
-      <div id="char-chat-msgs" style="display:flex;flex-direction:column;gap:8px;max-height:300px;overflow-y:auto;margin-bottom:10px;"></div>
-      <div style="display:flex;gap:8px;">
-        <input class="form-input" id="char-chat-input" placeholder="Speak to character..." style="flex:1;margin:0;" onkeydown="if(event.key==='Enter')sendCharMsg()">
-        <button class="config-save" onclick="sendCharMsg()">➤</button>
-      </div>
-    </div>
-  </div>
 </div>
 
-<!-- QUEUE PANEL -->
-<div id="panel-queue" class="panel">
-  <div class="panel-scroll">
-    <div class="add-task-form">
-      <div class="config-title">Add Task for Claude Code</div>
-      <label class="form-label">Task Description</label>
-      <textarea class="form-textarea" id="task-desc" placeholder="What should Claude Code do?"></textarea>
-      <label class="form-label">Project</label>
-      <input class="form-input" id="task-project" placeholder="e.g. sentinel, ebay-agent, studio">
-      <label class="form-label">Priority</label>
-      <select class="form-select" id="task-priority">
-        <option value="high">High</option>
-        <option value="med" selected>Medium</option>
-        <option value="low">Low</option>
-      </select>
-      <button class="btn-primary" onclick="addTask()">+ Queue Task</button>
-    </div>
-
-    <div class="config-title" style="margin-bottom:8px;">Pending Tasks</div>
-    <div id="task-list"><div class="empty-state">No tasks queued</div></div>
-
-    <div style="margin-top:12px;">
-      <button class="btn-primary" style="background:transparent;border-color:var(--text-dim);color:var(--text-dim);"
-        onclick="exportTasks()">Export task-queue.json</button>
-    </div>
-  </div>
-</div>
-
-<!-- FILES PANEL -->
-<div id="panel-files" class="panel">
-  <div class="panel-scroll">
-    <div class="config-title" style="margin-bottom:10px;">Upload File</div>
-    <div class="file-zone" id="drop-zone" onclick="document.getElementById('file-input').click()"
-      ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
-      <input type="file" id="file-input" multiple onchange="handleFileSelect(event)">
-      <div>Drop files here or click to browse</div>
-      <div style="font-size:10px;margin-top:4px;color:var(--text-dim)">JSON, HTML, MD, TXT, JS, PY supported</div>
-    </div>
-
-    <div id="upload-list" style="margin-bottom:16px;"></div>
-
-    <div class="config-title" style="margin-bottom:10px;">Download Files</div>
-    <div class="download-row">
-      <button class="btn-dl" onclick="downloadCurrentChat()">Chat Log</button>
-      <button class="btn-dl" onclick="downloadTaskQueue()">Task Queue</button>
-    </div>
-    <div class="download-row">
-      <button class="btn-dl" onclick="downloadFromDrive('claude-status.txt')">Status Log</button>
-      <button class="btn-dl" onclick="downloadFromDrive('studio-context.md')">Context File</button>
-    </div>
-    <div class="download-row">
-      <button class="btn-dl" onclick="downloadFromDrive('task-queue.json')">Task Queue (Drive)</button>
-      <button class="btn-dl" onclick="downloadFromDrive('standing-rules.json')">Standing Rules</button>
-    </div>
-
-    <div style="margin-top:12px;" id="file-status" class="config-status"></div>
-  </div>
-</div>
-
-<!-- CONFIG PANEL -->
+<!-- ═══ CONFIG ══════════════════════════════════════════════════ -->
 <div id="panel-config" class="panel">
-  <div class="panel-scroll">
-    <div class="config-section">
-      <div class="config-title">Ollama Settings</div>
-      <div class="config-row">
-        <label>Ollama URL</label>
-        <input type="text" id="cfg-ollama-url" placeholder="http://localhost:11434">
-        <button class="config-save" onclick="saveCfg('ollama-url')">Save</button>
-      </div>
-      <div class="config-row">
-        <label>Model</label>
-        <input type="text" id="cfg-ollama-model" placeholder="llama3.2">
-        <button class="config-save" onclick="saveCfg('ollama-model')">Save</button>
-      </div>
-    </div>
+<div class="panel-scroll">
 
-    <div class="config-section">
-      <div class="config-title">OpenRouter (Primary AI)</div>
-      <div class="config-row">
-        <label>API Key</label>
-        <input type="text" id="cfg-openrouter-key" placeholder="sk-or-...">
-        <button class="config-save" onclick="saveCfg('openrouter-key')">Save</button>
-      </div>
-      <div style="font-size:11px;color:var(--text-dim);margin-top:4px;">Free — uses best available free model automatically. Ollama is fallback if no key set.</div>
+  <!-- Vector RAG Status -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">Context System (Config G / Vector RAG)</div>
+    <div id="rag-status" style="font-size:10px;color:var(--text-dim);padding:4px 0;" id="rag-status">Click tab to check Ollama status</div>
+    <div style="font-size:10px;color:var(--text-dim);margin-top:4px;">
+      Context is loaded from ChromaDB via session-startup.py.<br>
+      The sidebar chat uses your Anthropic API key below for fresh queries.
     </div>
+  </div>
 
-    <div class="config-section">
-      <div class="config-title">Drive Paths</div>
-      <div class="config-row">
-        <label>Status File</label>
-        <input type="text" id="cfg-status-file" placeholder="claude-status.txt">
-        <button class="config-save" onclick="saveCfg('status-file')">Save</button>
-      </div>
-      <div class="config-row">
-        <label>Context File</label>
-        <input type="text" id="cfg-context-file" placeholder="studio-context.md">
-        <button class="config-save" onclick="saveCfg('context-file')">Save</button>
-      </div>
-      <div class="config-row">
-        <label>Queue File</label>
-        <input type="text" id="cfg-queue-file" placeholder="task-queue.json">
-        <button class="config-save" onclick="saveCfg('queue-file')">Save</button>
-      </div>
+  <!-- Anthropic API Key -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">Anthropic API (Optional · Billed to API account)</div>
+    <div style="font-size:10px;color:var(--text-dim);margin-bottom:6px;">
+      Not required. OpenRouter free tier handles chat at zero cost.<br>
+      Add this only if you want Claude-quality responses in the sidebar.<br>
+      Cost: ~$0.001-0.003/message (Haiku). Separate from Claude.ai Pro subscription.
     </div>
-
-    <div class="config-section">
-      <div class="config-title">Ollama Status</div>
-      <button class="btn-primary" onclick="testOllama()" style="margin-bottom:8px;">Test Connection</button>
-      <div id="ollama-status" class="config-status">Not tested</div>
+    <div class="cfg-row">
+      <label>API Key</label>
+      <input type="password" id="cfg-ant-key" placeholder="sk-ant-...">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('ant')">Save</button>
     </div>
-
-    <div class="config-section">
-      <div class="config-title">Drive Auth</div>
-      <button class="btn-primary" onclick="authDrive()" style="margin-bottom:8px;">Connect Google Drive</button>
-      <div id="drive-status" class="config-status">Not connected</div>
+    <div style="display:flex;align-items:center;gap:8px;margin-top:2px;">
+      <span class="key-badge key-miss" id="ant-status">NOT SET</span>
+      <button class="btn" style="padding:3px 8px;font-size:10px;" onclick="testAnt()">Test</button>
+      <span id="ant-test-result" style="font-size:10px;color:var(--text-dim);"></span>
     </div>
+  </div>
 
-    <div class="config-section">
-      <div class="config-title">Context (System Prompt)</div>
-      <textarea class="form-textarea" id="cfg-context-text" style="min-height:100px;"
-        placeholder="Paste studio-context.md content here so AI knows your studio setup..."></textarea>
-      <button class="btn-primary" onclick="saveContext()">Save Context</button>
+  <!-- OpenRouter - primary free chat backend -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">OpenRouter (Primary Chat - Free)</div>
+    <div style="font-size:10px;color:var(--text-dim);margin-bottom:6px;">
+      Free tier routes to Llama 3.1 8B and similar models at zero cost.<br>
+      Get key at openrouter.ai - takes 2 minutes, no credit card needed.
     </div>
+    <div class="cfg-row">
+      <label>API Key</label>
+      <input type="password" id="cfg-or-key" placeholder="sk-or-...">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('or')">Save</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;margin-top:2px;">
+      <span class="key-badge key-miss" id="or-status">NOT SET</span>
+      <button class="btn" style="padding:3px 8px;font-size:10px;" onclick="testOR()">Test</button>
+      <span id="or-test-result" style="font-size:10px;color:var(--text-dim);"></span>
+    </div>
+  </div>
 
-    <div id="cfg-status" class="config-status" style="margin-top:8px;"></div>
+  <!-- Ollama -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">Ollama (Local)</div>
+    <div class="cfg-row">
+      <label>URL</label>
+      <input type="text" id="cfg-ollama-url" placeholder="http://localhost:11434">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('ollama')">Save</button>
+    </div>
+    <div class="cfg-row">
+      <label>Model</label>
+      <input type="text" id="cfg-ollama-model" placeholder="gemma3:4b">
+      <button class="btn btn-g" style="padding:5px 9px;" onclick="saveKey('ollamaModel')">Save</button>
+    </div>
+    <button class="btn btn-w" style="margin-top:2px;" onclick="testOllama()">Test Ollama</button>
+    <div id="ollama-result" style="font-size:10px;color:var(--text-dim);margin-top:3px;"></div>
+  </div>
+
+  <div id="cfg-msg" style="font-size:10px;color:var(--green);margin-top:6px;"></div>
+</div>
+</div>
+
+<!-- INTEL MODAL -->
+<div id="modal-overlay">
+  <div id="modal-box">
+    <div id="modal-title">
+      AI Intel
+      <button id="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div id="modal-content"></div>
   </div>
 </div>
 
 <div id="toast"></div>
 
 <script>
-// ─── STATE ─────────────────────────────────────────────────────────────────
-const CFG_KEY = 'sidebar_cfg';
-let cfg = {
-  openrouterKey: '',
-  ollamaUrl: 'http://localhost:11434',
-  ollamaModel: 'llama3.2',
-  driveToken: '',
-  statusFile: 'claude-status.txt',
-  contextFile: 'studio-context.md',
-  queueFile: 'task-queue.json',
-  context: ''
-};
-let tasks = [];
-let chatHistory = [];
-let uploadedFiles = {};
+// ═══ STATE ════════════════════════════════════════════════════
+const SK = 'sb_cfg_v3';
+let cfg = {antKey:'',orKey:'',ollamaUrl:'http://localhost:11434',ollamaModel:'gemma3:4b'};
+let chatHist = [], attachedFiles = [], inboxItems = [], servicesData = null;
+const TABS = ['status','inbox','chat','plan','assets','data','config'];
 
-// ─── INIT ──────────────────────────────────────────────────────────────────
+// Default launch buttons
+const DEFAULT_LAUNCHES = [
+  {id:'gh-pages', name:'Studio GitHub Pages', icon:'🌐', url:'https://joepalek.github.io/studio/'},
+  {id:'claude-ai', name:'Claude.ai', icon:'🤖', url:'https://claude.ai'},
+  {id:'ebay-seller', name:'eBay Seller Hub', icon:'🛒', url:'https://www.ebay.com/sh/ovw'},
+];
+
+// ═══ INIT ════════════════════════════════════════════════════
 window.onload = () => {
-  loadConfig();
-  renderTasks();
-  loadStatus();
+  loadCfg();
+  startClock();
+  loadLaunches();
+  loadPlanData();
+  // Fire async calls independently - no blocking
+  setTimeout(() => loadStatus(), 50);
+  setTimeout(() => loadInbox(), 100);
+  setTimeout(() => { loadResources(); loadServices(); }, 150);
+  // RAG/Ollama status only checked when CFG tab opened - not on load
 };
 
-// ─── CONFIG ────────────────────────────────────────────────────────────────
-function loadConfig() {
-  try {
-    const saved = localStorage.getItem(CFG_KEY);
-    if (saved) {
-      cfg = { ...cfg, ...JSON.parse(saved) };
-    }
-  } catch(e) {}
-
-  document.getElementById('cfg-ollama-url').value = cfg.ollamaUrl || 'http://localhost:11434';
-  document.getElementById('cfg-ollama-model').value = cfg.ollamaModel || 'llama3.2';
-  document.getElementById('cfg-openrouter-key').value = '';
-  updateBackendIndicator();
-  document.getElementById('cfg-status-file').value = cfg.statusFile;
-  document.getElementById('cfg-context-file').value = cfg.contextFile;
-  document.getElementById('cfg-queue-file').value = cfg.queueFile;
-  document.getElementById('cfg-context-text').value = cfg.context;
-
-  // Load saved tasks
-  try {
-    const savedTasks = localStorage.getItem('sidebar_tasks');
-    if (savedTasks) tasks = JSON.parse(savedTasks);
-  } catch(e) {}
+// ═══ CFG ═════════════════════════════════════════════════════
+function loadCfg() {
+  try { const s = localStorage.getItem(SK); if(s) cfg = {...cfg,...JSON.parse(s)}; } catch(e){}
+  const urlEl = document.getElementById('cfg-ollama-url');
+  const modelEl = document.getElementById('cfg-ollama-model');
+  if (urlEl) urlEl.value = cfg.ollamaUrl;
+  if (modelEl) modelEl.value = cfg.ollamaModel;
+  try { updateKeyBadges(); } catch(e){}
+  // Notepad setup deferred to loadPlanData() to avoid null ref on hidden element
 }
 
-function saveCfg(field) {
-  const map = {
-    'openrouter-key': ['cfg-openrouter-key', 'openrouterKey'],
-    'ollama-url': ['cfg-ollama-url', 'ollamaUrl'],
-    'ollama-model': ['cfg-ollama-model', 'ollamaModel'],
-    'status-file': ['cfg-status-file', 'statusFile'],
-    'context-file': ['cfg-context-file', 'contextFile'],
-    'queue-file': ['cfg-queue-file', 'queueFile']
-  };
-
-  const [elId, cfgProp] = map[field];
-  const val = document.getElementById(elId).value;
-  if (val === '••••••••' && field !== 'openrouter-key') return;
-  if (!val) return;
-  cfg[cfgProp] = val;
-  persistConfig();
-  updateBackendIndicator();
-  toast('Saved');
-}
-
-function saveContext() {
-  cfg.context = document.getElementById('cfg-context-text').value;
-  persistConfig();
-  toast('Context saved');
-}
-
-function persistConfig() {
-  localStorage.setItem(CFG_KEY, JSON.stringify(cfg));
-}
-
-// ─── TABS ──────────────────────────────────────────────────────────────────
-const TABS = ['status','chat','data','assets','chars','queue','files','config'];
-function switchTab(name) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  const idx = TABS.indexOf(name);
-  document.querySelectorAll('.tab')[idx].classList.add('active');
-  document.getElementById('panel-' + name).classList.add('active');
-  if (name === 'status') loadStatus();
-  if (name === 'queue') renderTasks();
-  if (name === 'chars') initChars();
-}
-
-// ─── STATUS ────────────────────────────────────────────────────────────────
-async function loadStatus() {
-  document.getElementById('sys-status').innerHTML = '<span class="spinner"></span>Loading...';
-
-  // Try Drive first
-  if (cfg.driveToken) {
+function setupNotepad() {
+  const ta = document.getElementById('notepad-area');
+  if (!ta || ta.dataset.listenerAttached) return;
+  ta.dataset.listenerAttached = '1';
+  ta.value = localStorage.getItem('sb_notes') || '';
+  ta.addEventListener('input', () => {
     try {
-      const content = await driveReadFile(cfg.statusFile);
-      if (content) {
-        renderStatusLog(content);
-        return;
-      }
+      localStorage.setItem('sb_notes', ta.value);
+      const saved = document.getElementById('notes-saved');
+      if (saved) saved.textContent = 'Auto-saved ' + new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit'});
     } catch(e) {}
-  }
+  });
+}
 
-  // Fallback: try GitHub Pages
-  try {
-    const resp = await fetch('https://joepalek.github.io/studio/status.json');
-    if (resp.ok) {
-      const data = await resp.json();
-      renderStatusFromJson(data);
-      return;
+function saveKey(type) {
+  const map = {
+    ant: ['cfg-ant-key','antKey'],
+    or:  ['cfg-or-key','orKey'],
+    ollama: ['cfg-ollama-url','ollamaUrl'],
+    ollamaModel: ['cfg-ollama-model','ollamaModel']
+  };
+  const [elId, prop] = map[type];
+  const val = document.getElementById(elId).value.trim();
+  if (!val) return;
+  cfg[prop] = val;
+  localStorage.setItem(SK, JSON.stringify(cfg));
+  updateKeyBadges();
+  toast('Saved');
+  if (type === 'ant') document.getElementById('cfg-ant-key').value = '';
+  if (type === 'or') document.getElementById('cfg-or-key').value = '';
+}
+
+function updateKeyBadges() {
+  const antEl = document.getElementById('ant-status');
+  const orEl = document.getElementById('or-status');
+  const chatBadge = document.getElementById('chat-badge');
+  if (antEl) {
+    if (cfg.antKey && cfg.antKey.length > 10) {
+      antEl.textContent = 'SET ✓'; antEl.className = 'key-badge key-set';
+      if (chatBadge) chatBadge.style.display = 'inline-block';
+    } else {
+      antEl.textContent = 'NOT SET'; antEl.className = 'key-badge key-miss';
     }
-  } catch(e) {}
-
-  document.getElementById('sys-status').innerHTML = '<span class="status-warn">⚠ Connect Drive in CONFIG to load live status</span>';
-  document.getElementById('sys-last-activity').textContent = '—';
-}
-
-function renderStatusFromJson(data) {
-  document.getElementById('sys-status').innerHTML = '<span class="status-ok">● Online</span>';
-  document.getElementById('sys-last-activity').textContent = data.updated || data.timestamp || '—';
-  document.getElementById('sys-inbox').textContent = data.inbox_count ? data.inbox_count + ' pending decisions' : '—';
-
-  if (data.projects) {
-    const proj = Object.entries(data.projects)
-      .map(([k, v]) => `<div style="margin-bottom:4px;"><span style="color:var(--blue)">${k}</span>: ${v.status || v}</div>`)
-      .join('');
-    document.getElementById('sys-projects').innerHTML = proj;
+  }
+  if (orEl) {
+    if (cfg.orKey && cfg.orKey.length > 10) {
+      orEl.textContent = 'SET ✓'; orEl.className = 'key-badge key-set';
+    } else {
+      orEl.textContent = 'NOT SET'; orEl.className = 'key-badge key-miss';
+    }
   }
 }
 
-function renderStatusLog(content) {
-  document.getElementById('sys-status').innerHTML = '<span class="status-ok">● Live (Drive)</span>';
-  const lines = content.trim().split('\n').slice(-20).reverse();
-  const logEl = document.getElementById('sys-log');
+async function testOR() {
+  const el = document.getElementById('or-test-result');
+  el.textContent = 'Testing...';
+  if (!cfg.orKey) { el.textContent = 'No key saved'; return; }
+  try {
+    const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Authorization':'Bearer '+cfg.orKey,
+        'HTTP-Referer':'https://joepalek.github.io','X-Title':'Studio Sidebar'},
+      body: JSON.stringify({model:'google/gemma-3-4b-it:free',
+        messages:[{role:'user',content:'reply with just the word OK'}], max_tokens:5})
+    });
+    if (r.ok) { el.style.color='var(--green)'; el.textContent = '✓ Connected - free tier active'; }
+    else { const d=await r.json(); el.style.color='var(--red)'; el.textContent = '✗ ' + (d.error?.message||r.status); }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ ' + e.message.substring(0,40); }
+}
 
-  if (lines.length === 0) {
-    logEl.innerHTML = '<div class="log-entry" style="color:var(--text-dim)">No log entries yet</div>';
-    document.getElementById('sys-last-activity').textContent = '—';
+async function testAnt() {
+  const el = document.getElementById('ant-test-result');
+  el.textContent = 'Testing...';
+  if (!cfg.antKey) { el.textContent = '✗ No key saved'; return; }
+  try {
+    const r = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':cfg.antKey,'anthropic-version':'2023-06-01'},
+      body: JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:10,messages:[{role:'user',content:'hi'}]})
+    });
+    if (r.ok) { el.style.color='var(--green)'; el.textContent = '✓ Connected'; }
+    else { const d = await r.json(); el.style.color='var(--red)'; el.textContent = '✗ ' + (d.error?.message||r.status); }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ ' + e.message.substring(0,40); }
+}
+
+async function testOllama() {
+  const el = document.getElementById('ollama-result');
+  el.textContent = 'Testing...';
+  try {
+    const r = await fetch(cfg.ollamaUrl + '/api/tags', {signal:AbortSignal.timeout(4000)});
+    if (r.ok) {
+      const d = await r.json();
+      const models = (d.models||[]).map(m=>m.name).join(', ') || '(none)';
+      el.style.color='var(--green)'; el.textContent = '✓ Connected · ' + models.substring(0,60);
+    } else { el.style.color='var(--red)'; el.textContent = '✗ HTTP ' + r.status; }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ Not reachable'; }
+}
+
+async function checkRagStatus() {
+  const el = document.getElementById('rag-status');
+  el.style.cssText = 'font-size:10px;padding:4px 6px;border-radius:4px;margin-bottom:6px;';
+  el.textContent = 'Checking...';
+  try {
+    const r = await fetch(cfg.ollamaUrl + '/api/tags', {signal:AbortSignal.timeout(3000)});
+    if (r.ok) {
+      el.style.background = '#1a4a1e'; el.style.color = 'var(--green)'; el.style.border = '1px solid var(--green)';
+      el.textContent = '✓ Ollama running - Config G (Vector RAG) active';
+    } else { throw new Error('HTTP ' + r.status); }
+  } catch(e) {
+    el.style.background = '#2a2200'; el.style.color = 'var(--amber)'; el.style.border = '1px solid var(--amber)';
+    el.textContent = '⚠ Ollama offline - chat uses OpenRouter/Anthropic instead. This is fine.';
+  }
+}
+
+// ═══ TABS ════════════════════════════════════════════════════
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    t.classList.remove('active');
+    if (TABS[i] === name) t.classList.add('active');
+  });
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  const p = document.getElementById('panel-' + name);
+  if (p) p.classList.add('active');
+  if (name === 'status') loadStatus();
+  if (name === 'inbox') renderInbox();
+  if (name === 'assets') { loadResources(); loadServices(); }
+  if (name === 'plan') loadPlanData();
+  if (name === 'config') checkRagStatus();
+}
+
+// ═══ CLOCK ═══════════════════════════════════════════════════
+function startClock() {
+  function tick() {
+    const ct = new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));
+    const h = ct.getHours(), m = ct.getMinutes();
+    document.getElementById('time-clock').textContent =
+      (h%12||12) + ':' + String(m).padStart(2,'0') + ' ' + (h>=12?'PM':'AM');
+    document.getElementById('time-date').textContent =
+      ct.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'}) + ' CT';
+    document.getElementById('time-greet').textContent =
+      h<12 ? 'Good morning' : h<17 ? 'Good afternoon' : 'Good evening';
+  }
+  tick(); setInterval(tick, 15000);
+}
+
+// ═══ STATUS ══════════════════════════════════════════════════
+async function loadStatus() {
+  // Always render immediately from local data - never wait on network
+  document.getElementById('sys-status').innerHTML = '<span class="status-ok">* Local</span>';
+  loadIntelStrip();
+  loadProjects();
+  // Try network in background - update if it responds
+  try {
+    const r = await fetch('https://joepalek.github.io/studio/status.json',
+      {signal: AbortSignal.timeout(4000)});
+    if (r.ok) {
+      document.getElementById('sys-status').innerHTML = '<span class="status-ok">* Online</span>';
+    }
+  } catch(e) { /* silent - local mode is fine */ }
+}
+
+function loadProjects() {
+  const projects = [
+    {name:'CX Agent',pct:85},{name:'eBay Agent',pct:70},
+    {name:'AI Intel',pct:90},{name:'Agency',pct:75},
+    {name:'Job Match',pct:55},{name:'CTW',pct:80},
+    {name:'Ghost Book',pct:40},{name:'Sentinel',pct:20},
+    {name:'Sidebar',pct:97},
+  ];
+  document.getElementById('sys-projects').innerHTML = projects.map(p =>
+    `<div class="prog-row">
+      <span class="prog-name">${p.name}</span>
+      <div class="prog-bar"><div class="prog-fill" style="width:${p.pct}%"></div></div>
+      <span class="prog-pct">${p.pct}%</span>
+    </div>`).join('');
+}
+
+function loadIntelStrip() {
+  if (typeof INJECTED === 'undefined' || !INJECTED.intelSummary) return;
+  const lines = INJECTED.intelSummary.split('\n');
+  const items = lines.filter(l => l.trim().startsWith('*')).slice(0,3);
+  if (!items.length) return;
+  document.getElementById('intel-card').style.display = 'block';
+  document.getElementById('intel-preview').innerHTML = items.slice(0,2).map(l =>
+    `<div class="intel-item">▸ ${esc(l.replace(/^\s*\*/,'').replace(/\|score:\d+.*/,'').trim())}</div>`
+  ).join('');
+}
+
+function openIntelModal() {
+  if (typeof INJECTED === 'undefined' || !INJECTED.intelSummary) return;
+  document.getElementById('modal-title').innerHTML = 'AI Intel Today <button id="modal-close" onclick="closeModal()">✕</button>';
+  const content = INJECTED.intelSummary;
+  // Format into readable sections with clickable links
+  let html = '';
+  content.split('\n').forEach(line => {
+    if (line.startsWith('AI INTEL') || line.startsWith('Generated') || line.startsWith('Sources')) {
+      html += `<div style="font-size:9px;color:var(--text-dim);margin-bottom:4px;">${esc(line)}</div>`;
+    } else if (line.includes('HIGH PRIORITY') || line.includes('WORTH READING') || line.includes('YOUTUBE')) {
+      html += `<div style="font-size:10px;font-weight:bold;color:var(--amber);margin:8px 0 4px;">${esc(line)}</div>`;
+    } else if (line.trim().startsWith('*')) {
+      const urlM = line.match(/https?:\/\/[^\s]+/);
+      const clean = line.replace(/^\s*\*/,'').replace(/\|score:\d+/,'').replace(/https?:\/\/[^\s]+/,'').trim();
+      html += `<div style="font-size:11px;padding:3px 0;border-bottom:1px solid var(--border);">
+        ${esc(clean)}${urlM ? ` <a href="${urlM[0]}" target="_blank" style="color:var(--blue);font-size:10px;">→ link</a>` : ''}
+      </div>`;
+    } else if (line.trim()) {
+      html += `<div style="font-size:10px;color:var(--text-dim);padding:1px 0;">${esc(line)}</div>`;
+    }
+  });
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('show');
+}
+
+function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
+
+// ═══ LAUNCH BUTTONS ══════════════════════════════════════════
+function loadLaunches() {
+  let saved = [];
+  try { saved = JSON.parse(localStorage.getItem('sb_launches') || '[]'); } catch(e){}
+  if (!saved.length) { saved = DEFAULT_LAUNCHES; localStorage.setItem('sb_launches', JSON.stringify(saved)); }
+  renderLaunches(saved);
+}
+
+function renderLaunches(items) {
+  document.getElementById('launch-list').innerHTML = items.map((item,i) =>
+    `<div class="lbtn" onclick="openLaunch('${esc(item.url)}')">
+      <span class="lbtn-icon">${item.icon||'🔗'}</span>
+      <span class="lbtn-name">${esc(item.name)}</span>
+      <span class="lbtn-del" onclick="deleteLaunch(event,${i})">✕</span>
+    </div>`).join('');
+}
+
+function openLaunch(url) { window.open(url, '_blank'); }
+
+function deleteLaunch(e, idx) {
+  e.stopPropagation();
+  let saved = JSON.parse(localStorage.getItem('sb_launches') || '[]');
+  saved.splice(idx, 1);
+  localStorage.setItem('sb_launches', JSON.stringify(saved));
+  renderLaunches(saved);
+}
+
+function showAddLaunch() {
+  document.getElementById('add-launch-form').style.display = 'block';
+  document.getElementById('launch-name-in').focus();
+}
+function hideLaunchForm() {
+  document.getElementById('add-launch-form').style.display = 'none';
+  document.getElementById('launch-name-in').value = '';
+  document.getElementById('launch-url-in').value = '';
+}
+
+function saveLaunch() {
+  const name = document.getElementById('launch-name-in').value.trim();
+  const url  = document.getElementById('launch-url-in').value.trim();
+  if (!name || !url) { toast('Name and URL required'); return; }
+  let saved = JSON.parse(localStorage.getItem('sb_launches') || '[]');
+  saved.push({id: 'u-' + Date.now(), name, url, icon:'🔗'});
+  localStorage.setItem('sb_launches', JSON.stringify(saved));
+  renderLaunches(saved);
+  hideLaunchForm();
+  toast('Launch button added');
+}
+
+function queueAgent(name) {
+  // Add to notes as a reminder + toast
+  const ta = document.getElementById('notepad-area');
+  const ts = new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit'});
+  ta.value += (ta.value ? '\n' : '') + '[' + ts + '] Run agent: ' + name;
+  localStorage.setItem('sb_notes', ta.value);
+  toast('Noted: Run ' + name);
+}
+
+// ═══ INBOX ═══════════════════════════════════════════════════
+function loadInbox() {
+  inboxItems = (typeof INJECTED !== 'undefined') ? (INJECTED.inbox || []) : [];
+  updateInboxBadge();
+  renderInbox();
+}
+
+function renderInbox() {
+  const filter = document.getElementById('inbox-filter')?.value || '';
+  const sort   = document.getElementById('inbox-sort')?.value || 'urgency';
+  let items = [...inboxItems];
+  if (filter) items = items.filter(i => i.urgency === filter);
+
+  const order = {CRIT:0,WARN:1,INFO:2};
+  if (sort === 'urgency') items.sort((a,b) => (order[a.urgency]||3)-(order[b.urgency]||3));
+  else if (sort === 'newest') items.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+  else if (sort === 'oldest') items.sort((a,b) => (a.date||'').localeCompare(b.date||''));
+  else if (sort === 'source') items.sort((a,b) => (a.source||'').localeCompare(b.source||''));
+
+  const el = document.getElementById('inbox-list');
+  if (!items.length) {
+    el.innerHTML = '<div class="empty">✓ Inbox clear</div>';
     return;
   }
-
-  document.getElementById('sys-last-activity').textContent = lines[0].substring(0, 25);
-
-  logEl.innerHTML = lines.map(line => {
-    const match = line.match(/^\[(.+?)\]\s*\[(.+?)\]\s*(.+)$/);
-    if (match) {
-      return `<div class="log-entry">
-        <span class="log-ts">${match[1].substring(0,16)}</span>
-        <span class="log-agent">${match[2]}</span>
-        <span class="log-msg">${match[3]}</span>
-      </div>`;
-    }
-    return `<div class="log-entry">${line}</div>`;
+  el.innerHTML = items.map(item => {
+    const urg = item.urgency || 'INFO';
+    const src = item.source === 'mobile' ? '📱 Mobile' : '🤖 Supervisor';
+    const dt = item.date ? new Date(item.date).toLocaleDateString('en-US',
+      {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+    return `<div class="icard u-${urg}" data-id="${esc(item.id||'')}">
+      <div class="icard-title">${esc(item.title||'Untitled')}</div>
+      ${item.finding?`<div class="icard-find">${esc(item.finding.substring(0,180))}${item.finding.length>180?'…':''}</div>`:''}
+      <div class="icard-meta">${src} · ${urg} · ${dt}</div>
+      <div class="icard-acts">
+        <button class="btn btn-g" style="font-size:9px;padding:3px 5px;" onclick="resolveItem(this)">✓ Resolve</button>
+        <button class="btn btn-a" style="font-size:9px;padding:3px 5px;" onclick="escalateItem(this)">↑ Escalate</button>
+        <button class="btn" style="font-size:9px;padding:3px 5px;" onclick="snoozeItem(this)">⏱ Snooze</button>
+        <button class="btn btn-b" style="font-size:9px;padding:3px 5px;" onclick="askAboutItem(this,'${esc(item.title||'')}')">💬 Ask AI</button>
+      </div>
+    </div>`;
   }).join('');
 }
 
-// ─── CHAT ──────────────────────────────────────────────────────────────────
-function autoResize(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+function resolveItem(btn) {
+  const card = btn.closest('.icard');
+  const id = card.dataset.id;
+  inboxItems = inboxItems.filter(i => i.id !== id);
+  card.style.transition = 'opacity 0.3s';
+  card.style.opacity = '0';
+  setTimeout(() => { card.remove(); updateInboxBadge(); }, 300);
+  toast('Resolved');
+}
+function escalateItem(btn) {
+  btn.closest('.icard').style.borderColor = 'var(--red)';
+  toast('Escalated');
+}
+function snoozeItem(btn) {
+  const card = btn.closest('.icard');
+  card.style.opacity = '0.4';
+  toast('Snoozed');
+  setTimeout(() => card.style.opacity = '1', 5000);
+}
+function askAboutItem(btn, title) {
+  switchTab('chat');
+  document.getElementById('chat-in').value = 'Tell me about this inbox item: ' + title;
+  document.getElementById('chat-in').focus();
 }
 
-function handleChatKey(e) {
-  if (e.key === 'Enter' && !e.shiftKey) {
-    e.preventDefault();
-    sendChat();
+function updateInboxBadge() {
+  const n = inboxItems.length;
+  const b = document.getElementById('inbox-badge');
+  if (n > 0) { b.textContent = n > 99 ? '99+' : n; b.style.display = 'inline-block'; }
+  else { b.style.display = 'none'; }
+  document.getElementById('sys-inbox').textContent = n + ' pending decisions';
+}
+
+// ═══ PLAN ════════════════════════════════════════════════════
+function loadPlanData() {
+  setupNotepad();
+  const wb = (typeof INJECTED !== 'undefined') ? (INJECTED.whiteboard || []) : [];
+  const el = document.getElementById('plan-whiteboard');
+  if (!wb.length) { el.innerHTML = '<div class="empty" style="padding:6px 0;">No scored items</div>'; return; }
+  el.innerHTML = wb.map(i =>
+    `<div style="display:flex;gap:6px;align-items:flex-start;padding:4px 0;border-bottom:1px solid var(--border);">
+      <span style="font-size:12px;font-weight:bold;color:var(--amber);width:18px;flex-shrink:0;">${i.score}</span>
+      <div>
+        <div style="font-size:11px;color:var(--text);">${esc(i.title||'')}</div>
+        <div style="font-size:9px;color:var(--amber);">${esc(i.action||'')}</div>
+      </div>
+    </div>`).join('');
+}
+
+function toggleWB() {
+  const body = document.getElementById('plan-wb-body');
+  const tog  = document.getElementById('wb-toggle');
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  tog.textContent = open ? '▶' : '▼';
+}
+
+function saveNotes() {
+  localStorage.setItem('sb_notes', document.getElementById('notepad-area').value);
+  document.getElementById('notes-saved').textContent = 'Saved ' + new Date().toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'2-digit',minute:'2-digit'});
+  toast('Notes saved');
+}
+function clearNotes() {
+  if (confirm('Clear all notes?')) {
+    document.getElementById('notepad-area').value = '';
+    localStorage.removeItem('sb_notes');
+    document.getElementById('notes-saved').textContent = 'Cleared';
   }
 }
+
+// ═══ ASSETS TABS ═════════════════════════════════════════════
+function assetsTab(which) {
+  ['res','svc'].forEach(t => {
+    document.getElementById('ap-' + t).style.display = t === which ? 'block' : 'none';
+    document.getElementById('at-' + t).classList.toggle('active', t === which);
+  });
+}
+
+// ═══ RESOURCES ════════════════════════════════════════════════
+function loadResources() {
+  const assets = (typeof INJECTED !== 'undefined' && INJECTED.assets) ? INJECTED.assets : [];
+  const el = document.getElementById('resource-list');
+  if (!assets.length) { el.innerHTML = '<div class="empty">No asset data - run inject_sidebar_data.py</div>'; return; }
+  const now = new Date();
+  const active30 = assets.filter(a => {
+    if (!a.last_used) return false;
+    const d = new Date(a.last_used);
+    return (now - d) / (1000*60*60*24) <= 30;
+  });
+  const inactive = assets.filter(a => !active30.includes(a));
+
+  function renderAsset(a) {
+    const dot = a.status === 'active' ? 'dot-g' : 'dot-grey';
+    const tier = a.tier === 'free' ? 'tier-f' : a.tier === 'paid' ? 'tier-p' : 'tier-fp';
+    // Usage bar
+    let usagePct = 0, usageLabel = '', fillCls = 'fill-g';
+    if (a.daily_limit && a.usage_this_month?.calls) {
+      usagePct = Math.min(100, Math.round((a.usage_this_month.calls / a.daily_limit) * 100));
+      usageLabel = a.usage_this_month.calls.toLocaleString() + ' / ' + a.daily_limit.toLocaleString() + ' daily';
+    } else if (a.monthly_limit && a.usage_this_month?.storage_mb) {
+      usagePct = Math.min(100, Math.round((a.usage_this_month.storage_mb / a.monthly_limit) * 100));
+      usageLabel = a.usage_this_month.storage_mb + 'MB / ' + a.monthly_limit + 'MB';
+    }
+    if (usagePct > 75) fillCls = 'fill-y';
+    if (usagePct > 90) fillCls = 'fill-r';
+    return `<div class="res-card">
+      <div class="res-top">
+        <span class="res-dot ${dot}"></span>
+        <span class="res-name">${esc(a.name)}</span>
+        <span class="res-tier ${tier}">${a.tier}</span>
+      </div>
+      <div class="res-notes">${esc(a.notes||'')}</div>
+      ${usagePct > 0 ? `<div class="usage-bar"><div class="usage-fill ${fillCls}" style="width:${usagePct}%"></div></div>
+      <div class="res-stats"><span>${usageLabel}</span><span>${usagePct}% used</span></div>` : ''}
+      <div style="font-size:9px;color:var(--text-dim);margin-top:3px;">Last used: ${a.last_used||'-'}</div>
+    </div>`;
+  }
+  let html = '';
+  if (active30.length) { html += `<div style="font-size:9px;color:var(--text-dim);margin-bottom:5px;">ACTIVE THIS MONTH</div>`; active30.forEach(a => html += renderAsset(a)); }
+  if (inactive.length) { html += `<div style="font-size:9px;color:var(--text-dim);margin:8px 0 5px;">INACTIVE / UNUSED</div>`; inactive.forEach(a => html += renderAsset(a)); }
+  el.innerHTML = html;
+}
+
+// ═══ AI SERVICES ══════════════════════════════════════════════
+function loadServices() {
+  if (typeof INJECTED !== 'undefined' && INJECTED.services && Object.keys(INJECTED.services).length) {
+    servicesData = {categories: INJECTED.services};
+    document.getElementById('svc-date').textContent = 'Updated: ' + (INJECTED.servicesDate||'-');
+    renderServices();
+  } else {
+    document.getElementById('svc-list').innerHTML = '<div class="empty">Run inject_sidebar_data.py to embed rankings</div>';
+  }
+}
+
+function renderServices() {
+  const cat = document.getElementById('svc-cat')?.value || 'chat';
+  if (!servicesData) return;
+  const items = servicesData.categories?.[cat] || [];
+  const el = document.getElementById('svc-list');
+  if (!items.length) { el.innerHTML = '<div class="empty">No data for this category</div>'; return; }
+  const tc = t => t==='free'?'tier-f':t==='paid'?'tier-p':'tier-fp';
+  el.innerHTML = items.map(s =>
+    `<div class="svc-card">
+      <div class="svc-rank">#${s.rank}</div>
+      <div class="svc-info">
+        <div style="display:flex;align-items:center;gap:4px;">
+          <a href="${esc(s.url)}" target="_blank" class="svc-name" style="text-decoration:none;color:var(--text);"
+            onmouseover="this.style.color='var(--blue)'" onmouseout="this.style.color='var(--text)'">${esc(s.name)}</a>
+          ${s.trending?'<span class="svc-trending">🔥</span>':''}
+        </div>
+        <div class="svc-sub">${esc(s.provider)}</div>
+        <div class="svc-notes">${esc(s.notes||'')}</div>
+      </div>
+      <span class="res-tier ${tc(s.tier)}" style="font-size:8px;padding:1px 4px;">${s.tier}</span>
+    </div>`).join('');
+}
+
+// ═══ CHAT ════════════════════════════════════════════════════
+function chatKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); } }
 
 async function sendChat() {
-  const input = document.getElementById('chat-input');
+  const input = document.getElementById('chat-in');
   const msg = input.value.trim();
-  if (!msg) return;
+  if (!msg && !attachedFiles.length) return;
+  input.value = ''; autoSize(input);
+  document.getElementById('chat-send').disabled = true;
 
-  appendMsg('user', msg);
-  input.value = '';
-  input.style.height = 'auto';
+  const msgsEl = document.getElementById('chat-msgs');
+  let userContent = msg;
+  if (attachedFiles.length) userContent += '\n[Attached: ' + attachedFiles.map(f=>f.name).join(', ') + ']';
+  msgsEl.innerHTML += `<div class="msg msg-u">${esc(userContent)}</div>`;
+  const typingId = 'ty-' + Date.now();
+  const backendLabel = cfg.orKey ? 'OpenRouter' : cfg.antKey ? 'Anthropic' : 'Ollama (' + (cfg.ollamaModel||'gemma3:4b') + ')';
+  msgsEl.innerHTML += `<div class="msg msg-a" id="${typingId}"><span style="font-size:10px;color:var(--text-dim);" id="${typingId}-lbl">trying ${backendLabel}...</span> <div class="dots" style="display:inline-flex;"><span></span><span></span><span></span></div></div>`;
+  let _secs = 0; const _timer = setInterval(() => { const el = document.getElementById(typingId+'-lbl'); if(el) el.textContent = 'trying ' + backendLabel + '... ' + (++_secs) + 's'; else clearInterval(_timer); }, 1000);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
 
-  const sendBtn = document.getElementById('send-btn');
-  sendBtn.disabled = true;
-  const typingId = appendTyping();
-
-  try {
-    // Inject context into user message for model compatibility
-    const contextPrefix = cfg.context
-      ? '[STUDIO CONTEXT]\n' + cfg.context + '\n[END CONTEXT]\n\nWith the above context in mind, answer this: '
-      : '';
-
-    const messages = [
-      ...chatHistory,
-      { role: 'user', content: contextPrefix + msg }
-    ];
-
-    let reply;
-
-    if (cfg.openrouterKey) {
-      // OpenRouter free
-      const orResp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + cfg.openrouterKey
-        },
-        body: JSON.stringify({ model: 'openrouter/free', messages: messages })
-      });
-      removeTyping(typingId);
-      if (!orResp.ok) {
-        const txt = await orResp.text();
-        appendMsg('system', '⚠ OpenRouter error ' + orResp.status + ': ' + txt.substring(0, 200));
-        sendBtn.disabled = false;
-        return;
-      }
-      const orData = await orResp.json();
-      reply = orData.choices?.[0]?.message?.content || 'No response';
-    } else {
-      // Ollama fallback
-      const ollamaUrl = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
-      const model = cfg.ollamaModel || 'llama3.2';
-      const resp = await fetch(`${ollamaUrl}/api/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: model,
-          messages: messages,
-          stream: false
-        })
-      });
-
-      removeTyping(typingId);
-      if (!resp.ok) {
-        const txt = await resp.text();
-        appendMsg('system', '⚠ Ollama error ' + resp.status + ': ' + txt.substring(0, 120));
-        sendBtn.disabled = false;
-        return;
-      }
-      const data = await resp.json();
-      reply = data.message?.content || data.response || 'No response';
-    }
-
-    chatHistory.push({ role: 'user', content: msg });
-    chatHistory.push({ role: 'assistant', content: reply });
-
-    // Keep last 20 turns
-    if (chatHistory.length > 40) chatHistory = chatHistory.slice(-40);
-
-    appendMsg('ai', reply);
-
-  } catch(e) {
-    removeTyping(typingId);
-    if (e.message.includes('fetch') || e.message.includes('Failed')) {
-      appendMsg('system', '⚠ Cannot reach Ollama. Is the Ollama app running? Check CONFIG for correct URL.');
-    } else {
-      appendMsg('system', '⚠ ' + e.message);
-    }
+  // Build system context from injected studio data
+  let sysCtx = 'You are a studio AI assistant for Joe Palek\'s autonomous AI development studio based in Atwood, TN.\n';
+  sysCtx += 'Today: ' + new Date().toLocaleDateString('en-US',{timeZone:'America/Chicago'}) + ' CT.\n';
+  if (typeof INJECTED !== 'undefined') {
+    sysCtx += 'Inbox: ' + (INJECTED.inbox?.length||0) + ' pending items.\n';
+    if (INJECTED.intelSummary) sysCtx += 'AI Intel summary:\n' + INJECTED.intelSummary.substring(0,800) + '\n';
+    if (INJECTED.whiteboard?.length) sysCtx += 'Top whiteboard item: ' + INJECTED.whiteboard[0].title + ' (score:' + INJECTED.whiteboard[0].score + ').\n';
   }
+  sysCtx += 'Be concise. Answer in plain text. Avoid markdown headers unless listing multiple items.';
 
-  sendBtn.disabled = false;
+  chatHist.push({role:'user', content: msg});
+  const response = await callAI(chatHist, sysCtx);
+  chatHist.push({role:'assistant', content: response});
+
+  clearInterval(_timer);
+  document.getElementById(typingId).outerHTML = `<div class="msg msg-a">${fmtMsg(response)}</div>`;
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+  document.getElementById('chat-send').disabled = false;
+  attachedFiles = [];
+  document.getElementById('chat-attach-tray').style.display = 'none';
+  document.getElementById('chat-attach-tray').innerHTML = '';
 }
 
-function appendMsg(type, text) {
-  const el = document.createElement('div');
-  el.className = `msg msg-${type}`;
-  el.innerHTML = formatMsg(text);
-  document.getElementById('chat-messages').appendChild(el);
-  el.scrollIntoView({ behavior: 'smooth' });
-  return el.id = 'msg-' + Date.now();
-}
-
-function formatMsg(text) {
-  // Render code blocks
-  text = text.replace(/```(\w*)\n?([\s\S]*?)```/g, (_, lang, code) => {
-    return `<pre><code>${escHtml(code.trim())}</code></pre>`;
-  });
-  // Inline code
-  text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
-  // Bold
-  text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  // Line breaks
-  text = text.replace(/\n/g, '<br>');
-  return text;
-}
-
-function escHtml(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-function appendTyping() {
-  const el = document.createElement('div');
-  el.className = 'msg msg-ai typing-dots';
-  el.innerHTML = '<span></span><span></span><span></span>';
-  const id = 'typing-' + Date.now();
-  el.id = id;
-  document.getElementById('chat-messages').appendChild(el);
-  el.scrollIntoView({ behavior: 'smooth' });
-  return id;
-}
-
-function removeTyping(id) {
-  const el = document.getElementById(id);
-  if (el) el.remove();
-}
-
-// ─── DATA EXPLORER ─────────────────────────────────────────────────────────
-let dataContext = '';
-
-async function loadAndAnalyzeData() {
-  const sel = document.getElementById('data-file-select').value;
-  if (!sel) { toast('Select a file first'); return; }
-
-  const msgs = document.getElementById('data-analysis-msgs');
-  msgs.innerHTML = '<div class="msg msg-system"><span class="spinner"></span> Loading ' + sel + '...</div>';
-
-  let content = null;
-
-  // Try Drive first
-  if (cfg.driveToken) {
-    try { content = await driveReadFile(sel); } catch(e) {}
-  }
-
-  if (!content) {
-    msgs.innerHTML = '<div class="msg msg-system">⚠ Drive not connected. Use "Upload File" to load locally.</div>';
-    return;
-  }
-
-  dataContext = content;
-  await runDataAnalysis(content, sel);
-}
-
-async function uploadDataFileForAnalysis(e) {
-  const file = e.target.files[0];
+function attachFile(event) {
+  const file = event.target.files[0];
   if (!file) return;
   const reader = new FileReader();
-  reader.onload = async (ev) => {
-    dataContext = ev.target.result;
-    await runDataAnalysis(dataContext, file.name);
+  reader.onload = e => {
+    attachedFiles.push({name: file.name, content: e.target.result.substring(0, 4000)});
+    const tray = document.getElementById('chat-attach-tray');
+    tray.style.display = 'block';
+    tray.innerHTML = '📎 ' + attachedFiles.map(f => `<span style="color:var(--green);">${esc(f.name)}</span>`).join(', ');
   };
   reader.readAsText(file);
 }
 
-async function runDataAnalysis(content, filename) {
-  const msgs = document.getElementById('data-analysis-msgs');
-  const truncated = content.length > 12000 ? content.substring(0, 12000) + '\n...[truncated at 12000 chars]' : content;
-
-  const prompt = `You are a data analyst. Here is a data file named "${filename}" from my AI studio system:\n\n${truncated}\n\nTell me:\n1) What fields does this data contain?\n2) What trends or patterns do you see?\n3) What can be extrapolated or acted on from this data?\n\nBe specific and actionable.`;
-
-  msgs.innerHTML = '<div class="msg msg-system" style="font-size:11px;">📄 ' + filename + ' — ' + content.length.toLocaleString() + ' chars</div><div class="msg msg-ai" id="data-ai-resp"><span class="spinner"></span>Analyzing...</div>';
-
-  document.getElementById('data-followup-area').style.display = 'none';
-
-  if (!cfg.openrouterKey) {
-    document.getElementById('data-ai-resp').innerHTML = '⚠ OpenRouter key required. Set it in CFG tab.';
-    return;
-  }
-
-  try {
-    const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.openrouterKey },
-      body: JSON.stringify({ model: 'openrouter/free', messages: [{ role: 'user', content: prompt }] })
-    });
-    const data = await resp.json();
-    const reply = data.choices?.[0]?.message?.content || 'No response';
-    document.getElementById('data-ai-resp').innerHTML = formatMsg(reply);
-    document.getElementById('data-followup-area').style.display = 'block';
-  } catch(e) {
-    document.getElementById('data-ai-resp').innerHTML = '⚠ ' + e.message;
-  }
-}
-
-async function askDataFollowup() {
-  const input = document.getElementById('data-followup-input');
-  const question = input.value.trim();
-  if (!question || !dataContext) { toast('Load a file first'); return; }
-  input.value = '';
-
-  const msgs = document.getElementById('data-analysis-msgs');
-  const userEl = document.createElement('div');
-  userEl.className = 'msg msg-user';
-  userEl.textContent = question;
-  msgs.appendChild(userEl);
-
-  const aiEl = document.createElement('div');
-  aiEl.className = 'msg msg-ai';
-  aiEl.innerHTML = '<span class="spinner"></span>Thinking...';
-  msgs.appendChild(aiEl);
-  aiEl.scrollIntoView({ behavior: 'smooth' });
-
-  const truncated = dataContext.length > 8000 ? dataContext.substring(0, 8000) + '...[truncated]' : dataContext;
-  const fullPrompt = `You are analyzing a data file. Here is the data:\n\n${truncated}\n\nUser question: ${question}`;
-
-  try {
-    const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.openrouterKey },
-      body: JSON.stringify({ model: 'openrouter/free', messages: [{ role: 'user', content: fullPrompt }] })
-    });
-    const data = await resp.json();
-    aiEl.innerHTML = formatMsg(data.choices?.[0]?.message?.content || 'No response');
-  } catch(e) {
-    aiEl.innerHTML = '⚠ ' + e.message;
-  }
-}
-
-// ─── ASSETS ────────────────────────────────────────────────────────────────
-let assetFiles = {};
-
-function loadAssetsFromFiles(e) {
-  const files = Array.from(e.target.files);
-  files.forEach(file => {
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      assetFiles[file.name] = {
-        content: ev.target.result,
-        size: file.size,
-        modified: new Date(file.lastModified).toLocaleDateString()
-      };
-      renderAssets();
-    };
-    reader.readAsText(file);
-  });
-}
-
-async function loadAssetsFromDrive() {
-  if (!cfg.driveToken) { toast('Connect Drive in CFG first'); return; }
-  const knownFiles = [
-    'ai-intel-daily.json','ai-intel-summary.txt','whiteboard.json',
-    'supervisor-inbox.json','heartbeat-log.json','master-audit.json',
-    'nit-results.json','daily-digest.json','decision-log.json',
-    'dependency-map.json','sre-report.json','studio-context.md',
-    'MASTER-LIST.md','STRATEGY.md'
-  ];
-  document.getElementById('asset-list').innerHTML = '<div class="msg msg-system"><span class="spinner"></span> Loading from Drive...</div>';
-  let loaded = 0;
-  for (const name of knownFiles) {
+// ═══ AI BACKEND ═══════════════════════════════════════════════
+// PRIMARY: OpenRouter free (no cost) - routes to Llama/Gemini free models
+// OPTIONAL: Anthropic API (billed to your API account, ~fractions of a cent/msg)
+// FALLBACK: Ollama local (free, needs Ollama running)
+async function callAI(messages, systemPrompt) {
+  // OpenRouter FREE first - zero cost by default
+  if (cfg.orKey) {
     try {
-      const content = await driveReadFile(name);
-      if (content) {
-        assetFiles[name] = { content, size: content.length, modified: 'Drive' };
-        loaded++;
+      const orCtrl = new AbortController();
+      const orTimer = setTimeout(() => orCtrl.abort(), 5000);
+      const r = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        signal: orCtrl.signal,
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+cfg.orKey,
+          'HTTP-Referer':'https://joepalek.github.io','X-Title':'Studio Sidebar'},
+        body: JSON.stringify({
+          model:'google/gemma-3-4b-it:free',
+          messages:[{role:'system',content:systemPrompt},...messages.slice(-10)], max_tokens:1000
+        })
+      });
+      clearTimeout(orTimer);
+      if (r.ok) {
+        const d = await r.json();
+        const content = d.choices?.[0]?.message?.content || '';
+        if (content) return content;
+      }
+      // Non-OK or empty - fall through to next backend
+    } catch(e) {
+      // Network error - fall through
+    }
+  }
+  // Anthropic API (OPTIONAL - uses your API account, billed separately from Claude.ai Pro)
+  // Only used if orKey not set or OpenRouter fails AND antKey is configured
+  if (cfg.antKey) {
+    try {
+      const r = await fetch('https://api.anthropic.com/v1/messages', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','x-api-key':cfg.antKey,'anthropic-version':'2023-06-01'},
+        body: JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:1200,
+          system:systemPrompt, messages:messages.slice(-12)})
+      });
+      if (r.ok) { const d = await r.json(); return d.content?.[0]?.text || '(no response)'; }
+      const err = await r.json();
+      if (err.error?.type === 'authentication_error') {
+        cfg.antKey = ''; localStorage.setItem(SK, JSON.stringify(cfg)); updateKeyBadges();
       }
     } catch(e) {}
   }
-  renderAssets();
-  toast(loaded + ' files loaded from Drive');
-}
-
-function renderAssets() {
-  const filter = (document.getElementById('asset-filter').value || '').toLowerCase();
-  const el = document.getElementById('asset-list');
-  const names = Object.keys(assetFiles).filter(n => !filter || n.toLowerCase().includes(filter));
-  if (!names.length) { el.innerHTML = '<div class="empty-state">No files loaded</div>'; return; }
-
-  el.innerHTML = names.map(name => {
-    const f = assetFiles[name];
-    const ext = name.split('.').pop().toLowerCase();
-    const sizeStr = f.size > 1024 ? Math.round(f.size/1024) + ' KB' : f.size + ' B';
-    const extColor = ext === 'json' ? 'var(--amber)' : ext === 'md' ? 'var(--blue)' : 'var(--text-dim)';
-    const safeName = escHtml(name).replace(/'/g, "\\'");
-    return `<div class="asset-card">
-      <span style="font-size:10px;color:${extColor};width:30px;flex-shrink:0;">.${ext}</span>
-      <span class="asset-card-name">${escHtml(name)}</span>
-      <span class="asset-card-meta">${sizeStr}</span>
-      <button class="asset-card-btn" onclick="viewAsset('${safeName}')">View</button>
-      <button class="asset-card-btn" onclick="downloadAsset('${safeName}')">↓</button>
-    </div>`;
-  }).join('');
-}
-
-function filterAssets() { renderAssets(); }
-
-function viewAsset(name) {
-  const f = assetFiles[name];
-  if (!f) return;
-  const panel = document.getElementById('asset-viewer-panel');
-  document.getElementById('asset-viewer-name').textContent = name;
-  const ext = name.split('.').pop().toLowerCase();
-  let display = '';
-  if (ext === 'json') {
-    try {
-      const parsed = JSON.parse(f.content);
-      display = JSON.stringify(parsed, null, 2);
-    } catch(e) { display = f.content; }
-  } else {
-    display = f.content;
-  }
-  document.getElementById('asset-viewer-content').textContent = display;
-  panel.style.display = 'block';
-  panel.scrollIntoView({ behavior: 'smooth' });
-}
-
-function downloadAsset(name) {
-  const f = assetFiles[name];
-  if (!f) return;
-  const ext = name.split('.').pop().toLowerCase();
-  const type = ext === 'json' ? 'application/json' : 'text/plain';
-  downloadText(name, f.content, type);
-  toast(name + ' downloaded');
-}
-
-// ─── CHARACTERS ────────────────────────────────────────────────────────────
-let loadedChars = [];
-let activeCharSystem = '';
-let charChatHistory = [];
-
-function initChars() {
-  if (loadedChars.length === 0) renderChars([]);
-}
-
-function loadCharsFromFiles(e) {
-  const files = Array.from(e.target.files);
-  const newChars = [];
-  let remaining = files.length;
-  if (!remaining) return;
-  files.forEach(file => {
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const char = JSON.parse(ev.target.result);
-        if (char.identity && char.meta) newChars.push(char);
-      } catch(e) {}
-      remaining--;
-      if (remaining === 0) {
-        loadedChars = [...loadedChars.filter(c => !newChars.find(n => n.meta.id === c.meta.id)), ...newChars];
-        renderChars(loadedChars);
-        toast(newChars.length + ' character(s) loaded');
-      }
-    };
-    reader.readAsText(file);
-  });
-}
-
-async function loadCharsFromDrive() {
-  if (!cfg.driveToken) { toast('Connect Drive in CFG first'); return; }
-  const names = ['char_001_mara.json','char_002_vesper.json','char_003_josie.json','char_004_celeste_1.json'];
-  const newChars = [];
-  for (const name of names) {
-    try {
-      const content = await driveReadFile(name);
-      if (content) {
-        const char = JSON.parse(content);
-        if (char.identity && char.meta) newChars.push(char);
-      }
-    } catch(e) {}
-  }
-  if (newChars.length) {
-    loadedChars = newChars;
-    renderChars(loadedChars);
-    toast(newChars.length + ' character(s) loaded from Drive');
-  } else {
-    toast('No character files found on Drive');
-  }
-}
-
-function renderChars(chars) {
-  const el = document.getElementById('char-list');
-  if (!chars.length) {
-    el.innerHTML = '<div class="empty-state">Load character JSON files above</div>';
-    return;
-  }
-  el.innerHTML = chars.map((c, idx) => {
-    const id = c.meta.id;
-    const name = c.identity.name;
-    const age = c.identity.age;
-    const occ = c.identity.occupation;
-    const status = c.meta.deployment_status || 'draft';
-    const badgeClass = status === 'validated' ? 'badge-validated' : status === 'beta' ? 'badge-beta' : 'badge-draft';
-    const voice = (c.identity.voice_style || '').substring(0, 80);
-    const traits = (c.personality && c.personality.core_traits ? c.personality.core_traits : []).slice(0, 6);
-    const initial = name.charAt(0).toUpperCase();
-    const runs = c.meta.test_run_count || 0;
-
-    return `<div class="char-card" id="char-card-${idx}">
-      <div class="char-card-header">
-        <div class="char-avatar">${initial}</div>
-        <div class="char-info">
-          <div class="char-name">${escHtml(name)}</div>
-          <div class="char-sub">${escHtml(String(age))} · ${escHtml(occ)}</div>
-        </div>
-        <span class="char-badge ${badgeClass}">${escHtml(status)}</span>
-      </div>
-      <div class="char-voice">"${escHtml(voice)}"</div>
-      <div class="char-traits">${traits.map(t => `<span class="char-trait">${escHtml(t)}</span>`).join('')}</div>
-      <div style="font-size:10px;color:var(--text-dim);margin-bottom:8px;">${runs} test runs</div>
-      <div class="char-btns">
-        <button class="char-btn" onclick="openWorkbench('${escHtml(String(id))}')">⚙ Workbench</button>
-        <button class="char-btn" onclick="viewCharProfile(${idx})">👁 Profile</button>
-        <button class="char-btn primary-btn" onclick="startCharChat(${idx})">💬 Dialogue</button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function openWorkbench(charId) {
-  window.open('../CTW/workbench_v25.html?char=' + charId, '_blank');
-}
-
-function viewCharProfile(idx) {
-  const c = loadedChars[idx];
-  if (!c) return;
-  const json = JSON.stringify(c, null, 2);
-  const panel = document.getElementById('asset-viewer-panel');
-  document.getElementById('asset-viewer-name').textContent = c.identity.name + ' — Full Profile';
-  document.getElementById('asset-viewer-content').textContent = json;
-  panel.style.display = 'block';
-  switchTab('assets');
-}
-
-function startCharChat(idx) {
-  const c = loadedChars[idx];
-  if (!c) return;
-
-  const traits = (c.personality && c.personality.core_traits ? c.personality.core_traits : []).join(', ');
-  const microTraits = (c.micro_traits || [])
-    .filter(m => m.enabled)
-    .map(m => `- ${m.label}: ${m.description}`)
-    .join('\n');
-
-  activeCharSystem = `You are ${c.identity.name}, ${c.identity.age} years old, working as ${c.identity.occupation}. Location: ${c.identity.location || 'unknown'}.
-
-Voice style: ${c.identity.voice_style || ''}
-Core traits: ${traits}
-Communication style: ${(c.personality && c.personality.communication_style) || ''}
-Emotional baseline: ${(c.personality && c.personality.emotional_baseline) || ''}
-
-Behavioral details:
-${microTraits}
-
-Stay completely in character. Respond as ${c.identity.name} would — natural, grounded, consistent with her personality. Do not break character or acknowledge being an AI.`;
-
-  charChatHistory = [];
-  document.getElementById('char-chat-name').textContent = '💬 Talking to ' + c.identity.name;
-  document.getElementById('char-chat-msgs').innerHTML = `<div class="msg msg-system">Character loaded. Speaking to ${escHtml(c.identity.name)}.</div>`;
-  document.getElementById('char-chat-panel').style.display = 'block';
-  document.getElementById('char-chat-panel').scrollIntoView({ behavior: 'smooth' });
-}
-
-function closeCharChat() {
-  document.getElementById('char-chat-panel').style.display = 'none';
-  activeCharSystem = '';
-  charChatHistory = [];
-}
-
-async function sendCharMsg() {
-  if (!activeCharSystem) { toast('Load a character first'); return; }
-  const input = document.getElementById('char-chat-input');
-  const msg = input.value.trim();
-  if (!msg) return;
-  input.value = '';
-
-  const msgsEl = document.getElementById('char-chat-msgs');
-  const userEl = document.createElement('div');
-  userEl.className = 'msg msg-user';
-  userEl.textContent = msg;
-  msgsEl.appendChild(userEl);
-
-  const aiEl = document.createElement('div');
-  aiEl.className = 'msg msg-ai typing-dots';
-  aiEl.innerHTML = '<span></span><span></span><span></span>';
-  msgsEl.appendChild(aiEl);
-  aiEl.scrollIntoView({ behavior: 'smooth' });
-
-  if (!cfg.openrouterKey) {
-    aiEl.className = 'msg msg-ai';
-    aiEl.innerHTML = '⚠ OpenRouter key required (set in CFG tab)';
-    return;
-  }
-
-  charChatHistory.push({ role: 'user', content: msg });
-
+  // Studio Bridge (localhost:11435) - uses session-startup.py vector context
+  // Falls back to raw Ollama if bridge not running
   try {
-    const messages = [
-      { role: 'system', content: activeCharSystem },
-      ...charChatHistory
-    ];
-    const resp = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.openrouterKey },
-      body: JSON.stringify({ model: 'openrouter/free', messages })
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(), 60000);
+    const lastMsg = messages[messages.length-1]?.content || '';
+    let bridgeOk = false;
+    try { const p = await fetch('http://localhost:11435/ping',{signal:AbortSignal.timeout(800)}); bridgeOk=p.ok; } catch(e){}
+    if (bridgeOk) {
+      const r = await fetch('http://localhost:11435/chat', {
+        signal: ctrl.signal, method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({model: cfg.ollamaModel||'gemma3:4b', message: lastMsg})
+      });
+      if (r.ok) { const d = await r.json(); return d.response || '(no response)'; }
+    }
+    const r2 = await fetch(cfg.ollamaUrl + '/api/generate', {
+      signal: ctrl.signal, method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({model:cfg.ollamaModel||'gemma3:4b',
+        prompt: systemPrompt+'\n\nUser: '+lastMsg+'\nAssistant:', stream:false})
     });
-    const data = await resp.json();
-    const reply = data.choices?.[0]?.message?.content || 'No response';
-    charChatHistory.push({ role: 'assistant', content: reply });
-    if (charChatHistory.length > 30) charChatHistory = charChatHistory.slice(-30);
-    aiEl.className = 'msg msg-ai';
-    aiEl.innerHTML = formatMsg(reply);
-    aiEl.scrollIntoView({ behavior: 'smooth' });
+    if (r2.ok) { const d=await r2.json(); return (d.response||'')+'\n\n_[No studio context - run studio_bridge.py for full knowledge]_'; }
+    const et = await r2.text().catch(()=>'');
+    return 'Ollama HTTP ' + r2.status + ': ' + et.substring(0,80);
   } catch(e) {
-    aiEl.className = 'msg msg-ai';
-    aiEl.innerHTML = '⚠ ' + e.message;
+    if (e.name==='AbortError') return 'Ollama timed out (60s). Model may still be loading.';
+    return 'Error: ' + e.message.substring(0,100);
+  } catch(e) {
+    if (e.name === 'AbortError') return '⚠ Ollama timed out - model may still be loading, try again in 10s.';
+    if (e.message.includes('Failed to fetch')) return '⚠ Ollama CORS blocked. Run: setx OLLAMA_ORIGINS * then restart Ollama.';
+    return '⚠ Ollama: ' + e.message.substring(0,100);
   }
 }
 
-// ─── QUEUE ─────────────────────────────────────────────────────────────────
-function addTask() {
-  const desc = document.getElementById('task-desc').value.trim();
-  const project = document.getElementById('task-project').value.trim();
-  const priority = document.getElementById('task-priority').value;
-
-  if (!desc) { toast('Enter a task description'); return; }
-
-  const task = {
-    id: Date.now(),
-    description: desc,
-    project: project || 'general',
-    priority,
-    queued_at: new Date().toISOString(),
-    status: 'pending'
-  };
-
-  tasks.unshift(task);
-  localStorage.setItem('sidebar_tasks', JSON.stringify(tasks));
-  renderTasks();
-
-  document.getElementById('task-desc').value = '';
-  document.getElementById('task-project').value = '';
-  toast('Task queued');
-
-  // Auto-write to Drive if connected
-  if (cfg.driveToken) driveWriteTaskQueue();
-}
-
-function deleteTask(id) {
-  tasks = tasks.filter(t => t.id !== id);
-  localStorage.setItem('sidebar_tasks', JSON.stringify(tasks));
-  renderTasks();
-  if (cfg.driveToken) driveWriteTaskQueue();
-}
-
-function renderTasks() {
-  const el = document.getElementById('task-list');
-  if (!tasks.length) {
-    el.innerHTML = '<div class="empty-state">No tasks queued</div>';
-    return;
-  }
-
-  const priClass = { high: 'pri-high', med: 'pri-med', low: 'pri-low' };
-
-  el.innerHTML = tasks.map(t => `
-    <div class="queue-item">
-      <button class="queue-item-delete" onclick="deleteTask(${t.id})">✕</button>
-      <div class="queue-item-title">${escHtml(t.description)}</div>
-      <div class="queue-item-meta">
-        <span class="queue-priority ${priClass[t.priority]}">${t.priority.toUpperCase()}</span>
-        <span style="color:var(--blue)">${escHtml(t.project)}</span>
-        · ${new Date(t.queued_at).toLocaleString()}
-      </div>
-    </div>
-  `).join('');
-}
-
-function exportTasks() {
-  const json = JSON.stringify(tasks, null, 2);
-  downloadText('task-queue.json', json, 'application/json');
-  toast('task-queue.json downloaded');
-}
-
-// ─── FILES ─────────────────────────────────────────────────────────────────
-function dragOver(e) {
-  e.preventDefault();
-  document.getElementById('drop-zone').classList.add('drag-over');
-}
-
-function dragLeave(e) {
-  document.getElementById('drop-zone').classList.remove('drag-over');
-}
-
-function dropFile(e) {
-  e.preventDefault();
-  document.getElementById('drop-zone').classList.remove('drag-over');
-  const files = e.dataTransfer.files;
-  processFiles(files);
-}
-
-function handleFileSelect(e) {
-  processFiles(e.target.files);
-}
-
-function processFiles(files) {
-  Array.from(files).forEach(file => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      uploadedFiles[file.name] = e.target.result;
-      renderUploadList();
-      if (file.name.endsWith('.json') || file.name.endsWith('.md') || file.name.endsWith('.txt')) {
-        appendFileToContext(file.name, e.target.result);
-      }
-    };
-    reader.readAsText(file);
-  });
-}
-
-function renderUploadList() {
-  const ul = document.getElementById('upload-list');
-  const names = Object.keys(uploadedFiles);
-  if (!names.length) { ul.innerHTML = ''; return; }
-  ul.innerHTML = names.map(n => `
-    <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--border);">
-      <span style="flex:1;font-size:12px;color:var(--text)">${escHtml(n)}</span>
-      <button onclick="downloadUploadedFile('${escHtml(n).replace(/'/g,"\\'")}');" style="font-size:11px;background:none;border:1px solid var(--border);color:var(--text-dim);padding:2px 8px;border-radius:3px;cursor:pointer;">↓</button>
-      <button onclick="removeUploadedFile('${escHtml(n).replace(/'/g,"\\'")}');" style="font-size:11px;background:none;border:none;color:var(--red);cursor:pointer;">✕</button>
-    </div>
-  `).join('');
-}
-
-function appendFileToContext(name, content) {
-  const snippet = content.length > 2000 ? content.substring(0, 2000) + '\n...[truncated]' : content;
-  const addendum = `\n\n--- Uploaded: ${name} ---\n${snippet}`;
-  document.getElementById('cfg-context-text').value += addendum;
-  cfg.context = document.getElementById('cfg-context-text').value;
-  persistConfig();
-  toast(name + ' added to context');
-}
-
-function removeUploadedFile(name) {
-  delete uploadedFiles[name];
-  renderUploadList();
-}
-
-function downloadUploadedFile(name) {
-  downloadText(name, uploadedFiles[name]);
-}
-
-function downloadCurrentChat() {
-  const lines = chatHistory.map(m =>
-    `[${m.role.toUpperCase()}]\n${m.content}\n`
-  ).join('\n---\n\n');
-  downloadText('sidebar-chat-' + Date.now() + '.txt', lines || 'No chat history');
-  toast('Chat log downloaded');
-}
-
-function downloadTaskQueue() {
-  exportTasks();
-}
-
-async function downloadFromDrive(filename) {
-  if (!cfg.driveToken) {
-    document.getElementById('file-status').textContent = '⚠ Connect Drive in CFG first';
-    return;
-  }
-  try {
-    const content = await driveReadFile(filename);
+// ═══ DATA EXPLORER ════════════════════════════════════════════
+async function loadData() {
+  const sel = document.getElementById('data-sel').value;
+  if (!sel) { toast('Choose a file first'); return; }
+  const el = document.getElementById('data-msgs');
+  el.innerHTML = `<div class="msg msg-s"><span class="spin"></span>Loading ${sel}...</div>`;
+  // Use injected data if available
+  if (typeof INJECTED !== 'undefined') {
+    let content = '';
+    if (sel === 'supervisor-inbox.json') content = JSON.stringify({items: INJECTED.inbox}, null, 2);
+    else if (sel === 'whiteboard.json') content = JSON.stringify({items: INJECTED.whiteboard}, null, 2);
+    else if (sel === 'asset-log.json') content = JSON.stringify({assets: INJECTED.assets}, null, 2);
+    else if (sel === 'ai-services-rankings.json') content = JSON.stringify({categories: INJECTED.services}, null, 2);
     if (content) {
-      downloadText(filename, content);
-      toast(filename + ' downloaded');
-    } else {
-      document.getElementById('file-status').textContent = '⚠ File not found on Drive: ' + filename;
+      el.dataset.content = content.substring(0,8000);
+      el.innerHTML = `<div class="msg msg-a"><strong>📄 ${esc(sel)}</strong> (${(content.length/1024).toFixed(1)}KB - embedded data)<br><br><pre style="max-height:200px;overflow-y:auto;">${esc(content.substring(0,1500))}</pre></div>`;
+      document.getElementById('data-followup').style.display = 'block';
+      return;
     }
-  } catch(e) {
-    document.getElementById('file-status').textContent = '⚠ ' + e.message;
   }
+  el.innerHTML = `<div class="msg msg-s">Data only available when embedded via inject_sidebar_data.py</div>`;
 }
 
-function downloadText(filename, text, type = 'text/plain') {
-  const blob = new Blob([text], { type });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
+async function uploadData(event) {
+  const file = event.target.files[0]; if (!file) return;
+  const text = await file.text();
+  const el = document.getElementById('data-msgs');
+  el.dataset.content = text.substring(0,8000);
+  el.innerHTML = `<div class="msg msg-a"><strong>📄 ${esc(file.name)}</strong><br><pre style="max-height:200px;overflow-y:auto;">${esc(text.substring(0,1500))}</pre></div>`;
+  document.getElementById('data-followup').style.display = 'block';
 }
 
-// ─── GOOGLE DRIVE ──────────────────────────────────────────────────────────
-const DRIVE_CLIENT_ID = ''; // Set your OAuth client ID here if using popup auth
-const STUDIO_FOLDER = '_studio';
-
-function authDrive() {
-  const token = cfg.driveToken;
-  if (token && token !== '••••••••') {
-    document.getElementById('drive-status').textContent = '✓ Using saved token';
-    document.getElementById('drive-status').style.color = 'var(--green)';
-    return;
-  }
-
-  if (!DRIVE_CLIENT_ID) {
-    document.getElementById('drive-status').textContent = 'Paste your Drive OAuth token in CONFIG above, or set DRIVE_CLIENT_ID in the file';
-    document.getElementById('drive-status').style.color = 'var(--amber)';
-    return;
-  }
-
-  const params = new URLSearchParams({
-    client_id: DRIVE_CLIENT_ID,
-    redirect_uri: window.location.origin + window.location.pathname,
-    response_type: 'token',
-    scope: 'https://www.googleapis.com/auth/drive'
-  });
-
-  const popup = window.open('https://accounts.google.com/o/oauth2/auth?' + params, 'auth', 'width=500,height=600');
-
-  const check = setInterval(() => {
-    try {
-      if (popup.location.hash) {
-        const hash = new URLSearchParams(popup.location.hash.substring(1));
-        const token = hash.get('access_token');
-        if (token) {
-          cfg.driveToken = token;
-          persistConfig();
-          document.getElementById('drive-status').textContent = '✓ Connected';
-          document.getElementById('drive-status').style.color = 'var(--green)';
-          popup.close();
-          clearInterval(check);
-          loadStatus();
-          toast('Drive connected!');
-        }
-      }
-    } catch(e) {}
-  }, 500);
+async function dataQ() {
+  const q = document.getElementById('data-q').value.trim(); if (!q) return;
+  const el = document.getElementById('data-msgs');
+  const content = el.dataset.content || '';
+  el.innerHTML += `<div class="msg msg-u">${esc(q)}</div>`;
+  const typingId = 'dty-' + Date.now();
+  el.innerHTML += `<div class="msg msg-a" id="${typingId}"><div class="dots"><span></span><span></span><span></span></div></div>`;
+  const r = await callAI([{role:'user',content:`Data:\n${content}\n\nQuestion: ${q}`}],
+    'You are a data analyst. Answer concisely based on the provided data.');
+  document.getElementById(typingId).outerHTML = `<div class="msg msg-a">${fmtMsg(r)}</div>`;
+  document.getElementById('data-q').value = '';
 }
 
-async function driveReadFile(filename) {
-  const search = await fetch(
-    `https://www.googleapis.com/drive/v3/files?q=name='${filename}'&spaces=drive&fields=files(id,name)`,
-    { headers: { Authorization: 'Bearer ' + cfg.driveToken } }
-  );
-  if (!search.ok) throw new Error('Drive search failed: ' + search.status);
-  const searchData = await search.json();
-  if (!searchData.files || !searchData.files.length) return null;
-
-  const fileId = searchData.files[0].id;
-  const content = await fetch(
-    `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
-    { headers: { Authorization: 'Bearer ' + cfg.driveToken } }
-  );
-  if (!content.ok) throw new Error('Drive read failed: ' + content.status);
-  return await content.text();
+// ═══ UTILS ════════════════════════════════════════════════════
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
-
-async function driveWriteTaskQueue() {
-  try {
-    const json = JSON.stringify(tasks, null, 2);
-    const search = await fetch(
-      `https://www.googleapis.com/drive/v3/files?q=name='${cfg.queueFile}'&spaces=drive&fields=files(id)`,
-      { headers: { Authorization: 'Bearer ' + cfg.driveToken } }
-    );
-    const searchData = await search.json();
-
-    const blob = new Blob([json], { type: 'application/json' });
-    const formData = new FormData();
-    formData.append('metadata', new Blob([JSON.stringify({ name: cfg.queueFile })], { type: 'application/json' }));
-    formData.append('file', blob);
-
-    if (searchData.files && searchData.files.length) {
-      await fetch(
-        `https://www.googleapis.com/upload/drive/v3/files/${searchData.files[0].id}?uploadType=multipart`,
-        { method: 'PATCH', headers: { Authorization: 'Bearer ' + cfg.driveToken }, body: formData }
-      );
-    } else {
-      await fetch(
-        'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart',
-        { method: 'POST', headers: { Authorization: 'Bearer ' + cfg.driveToken }, body: formData }
-      );
-    }
-  } catch(e) {
-    console.warn('Drive write failed:', e);
-  }
+function fmtMsg(text) {
+  if (!text) return '';
+  return esc(text)
+    .replace(/```[\w]*\n?([\s\S]*?)```/g, (_,c)=>`<pre><code>${c.trim()}</code></pre>`)
+    .replace(/`([^`]+)`/g,'<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\n/g,'<br>');
 }
-
-// ─── OLLAMA TEST ────────────────────────────────────────────────────────────
-async function testOllama() {
-  const el = document.getElementById('ollama-status');
-  el.textContent = 'Testing...';
-  el.style.color = 'var(--text-dim)';
-  const url = (cfg.ollamaUrl || 'http://localhost:11434').replace(/\/$/, '');
-  try {
-    const resp = await fetch(url + '/api/tags');
-    if (resp.ok) {
-      const data = await resp.json();
-      const models = (data.models || []).map(m => m.name).join(', ') || 'no models found';
-      el.textContent = '✓ Connected — models: ' + models;
-      el.style.color = 'var(--green)';
-    } else {
-      el.textContent = '⚠ Ollama responded but with error: ' + resp.status;
-      el.style.color = 'var(--amber)';
-    }
-  } catch(e) {
-    el.textContent = '✗ Cannot reach Ollama. Make sure the app is open.';
-    el.style.color = 'var(--red)';
-  }
-}
-
-// ─── BACKEND INDICATOR ─────────────────────────────────────────────────────
-function updateBackendIndicator() {
-  const el = document.getElementById('chat-backend');
-  if (!el) return;
-  if (cfg.openrouterKey) {
-    el.textContent = '· openrouter';
-    el.style.color = 'var(--amber)';
-  } else {
-    el.textContent = '· ollama';
-    el.style.color = 'var(--text-dim)';
-  }
-}
-
-// ─── TOAST ─────────────────────────────────────────────────────────────────
+function autoSize(el) { el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,110)+'px'; }
 function toast(msg) {
   const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2200);
+  el.textContent = msg; el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'), 2200);
 }
+
+
+// ═══ INJECTED STUDIO DATA (auto-generated by inject_sidebar_data.py) ═══
+// Generated: 2026-03-30T22:09:17Z
+// ═══ END INJECTED DATA ═══
+
 </script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-agent-083",
+  "name": "Marcus Garcia",
+  "universe": "other",
+  "archetype": "wanderer",
+  "created_date": "2026-03-30T13:15:11.580710",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Marcus Garcia",
+    "pronouns": "she/her",
+    "age": 65,
+    "personality_traits": [
+      "delusional",
+      "patient",
+      "resilient",
+      "vindictive",
+      "spontaneous",
+      "collaborative",
+      "empathetic"
+    ],
+    "voice": "loud and confident",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:11.580733",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

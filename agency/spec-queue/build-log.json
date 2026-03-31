@@ -1,0 +1,2278 @@
+{
+  "last_run": "2026-03-30T13:15:16.987053",
+  "total_ever_built": 283,
+  "built_ids": [
+    "char-spec-agent-064",
+    "char-spec-claude-027",
+    "char-spec-agent-011",
+    "char-spec-agent-049",
+    "char-spec-agent-100",
+    "char-spec-agent-071",
+    "char-spec-claude-042",
+    "char-spec-claude-043",
+    "char-spec-claude-010",
+    "char-spec-claude-045",
+    "char-spec-gemini-013",
+    "char-spec-agent-073",
+    "char-spec-claude-013",
+    "char-spec-agent-033",
+    "char-spec-claude-063",
+    "char-spec-gemini-047",
+    "char-spec-gemini-010",
+    "char-spec-gemini-050",
+    "char-spec-gemini-040",
+    "char-spec-gemini-048",
+    "char-spec-claude-081",
+    "char-spec-gemini-090",
+    "char-spec-claude-091",
+    "char-spec-agent-089",
+    "char-spec-gemini-079",
+    "char-spec-claude-005",
+    "char-spec-gemini-055",
+    "char-spec-gemini-060",
+    "char-spec-gemini-088",
+    "char-spec-agent-050",
+    "char-spec-agent-055",
+    "char-spec-agent-020",
+    "char-spec-claude-024",
+    "char-spec-gemini-024",
+    "char-spec-gemini-064",
+    "char-spec-gemini-081",
+    "char-spec-gemini-086",
+    "char-spec-claude-008",
+    "char-spec-agent-008",
+    "char-spec-agent-066",
+    "char-spec-agent-097",
+    "char-spec-claude-017",
+    "char-spec-gemini-051",
+    "char-spec-agent-032",
+    "char-spec-claude-028",
+    "char-spec-gemini-007",
+    "char-spec-gemini-011",
+    "char-spec-agent-027",
+    "char-spec-agent-029",
+    "char-spec-claude-021",
+    "char-spec-agent-036",
+    "char-spec-claude-089",
+    "char-spec-agent-038",
+    "char-spec-claude-057",
+    "char-spec-gemini-030",
+    "char-spec-agent-004",
+    "char-spec-gemini-012",
+    "char-spec-gemini-033",
+    "char-spec-claude-076",
+    "char-spec-gemini-052",
+    "char-spec-claude-090",
+    "char-spec-agent-060",
+    "char-spec-gemini-043",
+    "char-spec-gemini-035",
+    "char-spec-gemini-045",
+    "char-spec-claude-099",
+    "char-spec-gemini-075",
+    "char-spec-claude-071",
+    "char-spec-gemini-004",
+    "char-spec-claude-019",
+    "char-spec-claude-067",
+    "char-spec-claude-059",
+    "char-spec-agent-086",
+    "char-spec-claude-032",
+    "char-spec-agent-052",
+    "char-spec-gemini-092",
+    "char-spec-agent-002",
+    "char-spec-gemini-042",
+    "char-spec-gemini-001",
+    "char-spec-agent-082",
+    "char-spec-claude-037",
+    "char-spec-agent-085",
+    "char-spec-claude-073",
+    "char-spec-gemini-074",
+    "char-spec-gemini-025",
+    "char-spec-claude-094",
+    "char-spec-gemini-095",
+    "char-spec-gemini-009",
+    "char-spec-agent-051",
+    "char-spec-gemini-091",
+    "char-spec-gemini-065",
+    "char-spec-agent-022",
+    "char-spec-agent-074",
+    "char-spec-claude-006",
+    "char-spec-claude-048",
+    "char-spec-agent-040",
+    "char-spec-gemini-087",
+    "char-spec-claude-014",
+    "char-spec-agent-044",
+    "char-spec-claude-031",
+    "char-spec-claude-058",
+    "char-spec-claude-050",
+    "char-spec-claude-012",
+    "char-spec-agent-057",
+    "char-spec-agent-058",
+    "char-spec-agent-039",
+    "char-spec-gemini-008",
+    "char-spec-gemini-094",
+    "char-spec-gemini-026",
+    "char-spec-agent-012",
+    "char-spec-agent-099",
+    "char-spec-claude-029",
+    "char-spec-gemini-038",
+    "char-spec-claude-018",
+    "char-spec-gemini-084",
+    "char-spec-gemini-100",
+    "char-spec-agent-021",
+    "char-spec-agent-043",
+    "char-spec-claude-061",
+    "char-spec-claude-003",
+    "char-spec-claude-074",
+    "char-spec-claude-033",
+    "char-spec-claude-036",
+    "char-spec-claude-044",
+    "char-spec-claude-052",
+    "char-spec-claude-062",
+    "char-spec-gemini-037",
+    "char-spec-gemini-053",
+    "char-spec-gemini-063",
+    "char-spec-gemini-070",
+    "char-spec-claude-051",
+    "char-spec-claude-004",
+    "char-spec-claude-055",
+    "char-spec-gemini-062",
+    "char-spec-gemini-069",
+    "char-spec-agent-059",
+    "char-spec-agent-069",
+    "char-spec-claude-083",
+    "char-spec-gemini-077",
+    "char-spec-gemini-003",
+    "char-spec-agent-076",
+    "char-spec-agent-003",
+    "char-spec-agent-068",
+    "char-spec-agent-062",
+    "char-spec-claude-035",
+    "char-spec-gemini-099",
+    "char-spec-agent-090",
+    "char-spec-agent-045",
+    "char-spec-claude-082",
+    "char-spec-agent-094",
+    "char-spec-agent-088",
+    "char-spec-gemini-022",
+    "char-spec-claude-077",
+    "char-spec-claude-039",
+    "char-spec-agent-017",
+    "char-spec-claude-020",
+    "char-spec-gemini-031",
+    "char-spec-agent-087",
+    "char-spec-agent-054",
+    "char-spec-claude-078",
+    "char-spec-gemini-082",
+    "char-spec-claude-084",
+    "char-spec-gemini-093",
+    "char-spec-agent-018",
+    "char-spec-claude-060",
+    "char-spec-agent-091",
+    "char-spec-agent-019",
+    "char-spec-claude-072",
+    "char-spec-gemini-041",
+    "char-spec-agent-035",
+    "char-spec-agent-048",
+    "char-spec-claude-075",
+    "char-spec-claude-009",
+    "char-spec-claude-046",
+    "char-spec-gemini-005",
+    "char-spec-agent-081",
+    "char-spec-claude-068",
+    "char-spec-agent-030",
+    "char-spec-claude-034",
+    "char-spec-agent-084",
+    "char-spec-gemini-021",
+    "char-spec-claude-098",
+    "char-spec-gemini-029",
+    "char-spec-claude-056",
+    "char-spec-gemini-034",
+    "char-spec-agent-007",
+    "char-spec-agent-013",
+    "char-spec-claude-049",
+    "char-spec-gemini-014",
+    "char-spec-gemini-072",
+    "char-spec-claude-011",
+    "char-spec-gemini-059",
+    "char-spec-agent-010",
+    "char-spec-claude-001",
+    "char-spec-agent-006",
+    "char-spec-claude-097",
+    "char-spec-gemini-097",
+    "char-spec-agent-093",
+    "char-spec-claude-023",
+    "char-spec-claude-025",
+    "char-spec-claude-040",
+    "char-spec-gemini-018",
+    "char-spec-gemini-078",
+    "char-spec-gemini-083",
+    "char-spec-agent-095",
+    "char-spec-claude-038",
+    "char-spec-claude-002",
+    "char-spec-gemini-027",
+    "char-spec-agent-031",
+    "char-spec-claude-053",
+    "char-spec-gemini-015",
+    "char-spec-gemini-080",
+    "char-spec-claude-080",
+    "char-spec-claude-088",
+    "char-spec-gemini-002",
+    "char-spec-gemini-066",
+    "char-spec-agent-063",
+    "char-spec-gemini-039",
+    "char-spec-claude-100",
+    "char-spec-gemini-044",
+    "char-spec-gemini-098",
+    "char-spec-gemini-073",
+    "char-spec-agent-056",
+    "char-spec-agent-034",
+    "char-spec-gemini-054",
+    "char-spec-agent-005",
+    "char-spec-agent-026",
+    "char-spec-agent-028",
+    "char-spec-claude-095",
+    "char-spec-agent-083",
+    "char-spec-claude-026",
+    "char-spec-claude-066",
+    "char-spec-gemini-006",
+    "char-spec-agent-096",
+    "char-spec-claude-041",
+    "char-spec-claude-047",
+    "char-spec-gemini-096",
+    "char-spec-claude-087",
+    "char-spec-gemini-058",
+    "char-spec-agent-015",
+    "char-spec-agent-024",
+    "char-spec-agent-075",
+    "char-spec-claude-064",
+    "char-spec-claude-096",
+    "char-spec-gemini-017",
+    "char-spec-agent-046",
+    "char-spec-gemini-089",
+    "char-spec-claude-070",
+    "char-spec-agent-037",
+    "char-spec-agent-016",
+    "char-spec-agent-023",
+    "char-spec-gemini-085",
+    "char-spec-claude-007",
+    "char-spec-agent-025",
+    "char-spec-agent-070",
+    "char-spec-gemini-019",
+    "char-spec-claude-054",
+    "char-spec-claude-030",
+    "char-spec-agent-061",
+    "char-spec-gemini-056",
+    "char-spec-claude-015",
+    "char-spec-agent-098",
+    "char-spec-agent-014",
+    "char-spec-agent-047",
+    "char-spec-agent-001",
+    "char-spec-agent-065",
+    "char-spec-agent-077",
+    "char-spec-claude-092",
+    "char-spec-agent-078",
+    "char-spec-gemini-057",
+    "char-spec-claude-093",
+    "char-spec-claude-079",
+    "char-spec-claude-065",
+    "char-spec-gemini-071",
+    "char-spec-agent-041",
+    "char-spec-claude-069",
+    "char-spec-claude-086",
+    "char-spec-gemini-020",
+    "char-spec-gemini-049",
+    "char-spec-agent-067",
+    "char-spec-agent-079",
+    "char-spec-agent-042",
+    "char-spec-agent-080"
+  ],
+  "last_run_stats": {
+    "attempted": 283,
+    "built": 283,
+    "failed": 0
+  },
+  "last_run_built": [
+    {
+      "id": "char-spec-claude-001",
+      "name": "Sam Torres",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Sam Torres_c001",
+      "built_at": "2026-03-30T13:13:49.913862"
+    },
+    {
+      "id": "char-spec-claude-002",
+      "name": "Casey Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey Garcia_c002",
+      "built_at": "2026-03-30T13:13:50.267476"
+    },
+    {
+      "id": "char-spec-claude-003",
+      "name": "Alex Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Alex Martinez_c003",
+      "built_at": "2026-03-30T13:13:50.530936"
+    },
+    {
+      "id": "char-spec-claude-004",
+      "name": "Morgan Williams",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Morgan Williams_c004",
+      "built_at": "2026-03-30T13:13:50.835103"
+    },
+    {
+      "id": "char-spec-claude-005",
+      "name": "Blake Rodriguez",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Blake Rodriguez_c005",
+      "built_at": "2026-03-30T13:13:51.120975"
+    },
+    {
+      "id": "char-spec-claude-006",
+      "name": "Skyler Davis",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Skyler Davis_c006",
+      "built_at": "2026-03-30T13:13:51.378283"
+    },
+    {
+      "id": "char-spec-claude-007",
+      "name": "Morgan Martinez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Martinez_c007",
+      "built_at": "2026-03-30T13:13:51.705971"
+    },
+    {
+      "id": "char-spec-claude-008",
+      "name": "Morgan Brown",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Brown_c008",
+      "built_at": "2026-03-30T13:13:52.014388"
+    },
+    {
+      "id": "char-spec-claude-009",
+      "name": "Jordan Anderson",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Jordan Anderson_c009",
+      "built_at": "2026-03-30T13:13:52.286903"
+    },
+    {
+      "id": "char-spec-claude-010",
+      "name": "Sam Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Williams_c010",
+      "built_at": "2026-03-30T13:13:52.616353"
+    },
+    {
+      "id": "char-spec-claude-011",
+      "name": "Casey Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey Anderson_c011",
+      "built_at": "2026-03-30T13:13:53.006616"
+    },
+    {
+      "id": "char-spec-claude-012",
+      "name": "Jordan Johnson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jordan Johnson_c012",
+      "built_at": "2026-03-30T13:13:53.300583"
+    },
+    {
+      "id": "char-spec-claude-013",
+      "name": "Jordan Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jordan Anderson_c013",
+      "built_at": "2026-03-30T13:13:53.633638"
+    },
+    {
+      "id": "char-spec-claude-014",
+      "name": "Casey Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Martinez_c014",
+      "built_at": "2026-03-30T13:13:53.952870"
+    },
+    {
+      "id": "char-spec-claude-015",
+      "name": "Casey Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Chen_c015",
+      "built_at": "2026-03-30T13:13:54.326338"
+    },
+    {
+      "id": "char-spec-claude-017",
+      "name": "Marcus Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Garcia_c017",
+      "built_at": "2026-03-30T13:13:54.651560"
+    },
+    {
+      "id": "char-spec-claude-018",
+      "name": "Sam Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Rodriguez_c018",
+      "built_at": "2026-03-30T13:13:54.968588"
+    },
+    {
+      "id": "char-spec-claude-019",
+      "name": "Marcus Williams",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Williams_c019",
+      "built_at": "2026-03-30T13:13:55.260323"
+    },
+    {
+      "id": "char-spec-claude-020",
+      "name": "Alex Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Anderson_c020",
+      "built_at": "2026-03-30T13:13:55.564547"
+    },
+    {
+      "id": "char-spec-claude-021",
+      "name": "Casey O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey O'Brien_c021",
+      "built_at": "2026-03-30T13:13:55.842516"
+    },
+    {
+      "id": "char-spec-claude-023",
+      "name": "Morgan O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan O'Brien_c023",
+      "built_at": "2026-03-30T13:13:56.119155"
+    },
+    {
+      "id": "char-spec-claude-024",
+      "name": "Morgan Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Torres_c024",
+      "built_at": "2026-03-30T13:13:56.461957"
+    },
+    {
+      "id": "char-spec-claude-025",
+      "name": "Morgan Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Rodriguez_c025",
+      "built_at": "2026-03-30T13:13:56.752473"
+    },
+    {
+      "id": "char-spec-claude-026",
+      "name": "Riley Johnson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Riley Johnson_c026",
+      "built_at": "2026-03-30T13:13:57.054349"
+    },
+    {
+      "id": "char-spec-claude-027",
+      "name": "Phoenix Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix Anderson_c027",
+      "built_at": "2026-03-30T13:13:57.339434"
+    },
+    {
+      "id": "char-spec-claude-028",
+      "name": "Marcus Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus Davis_c028",
+      "built_at": "2026-03-30T13:13:57.664757"
+    },
+    {
+      "id": "char-spec-claude-029",
+      "name": "Morgan Garcia",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Morgan Garcia_c029",
+      "built_at": "2026-03-30T13:13:57.966319"
+    },
+    {
+      "id": "char-spec-claude-030",
+      "name": "Skyler Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Chen_c030",
+      "built_at": "2026-03-30T13:13:58.275812"
+    },
+    {
+      "id": "char-spec-claude-031",
+      "name": "Riley Johnson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Riley Johnson_c031",
+      "built_at": "2026-03-30T13:13:58.577552"
+    },
+    {
+      "id": "char-spec-claude-032",
+      "name": "Jordan Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jordan Anderson_c032",
+      "built_at": "2026-03-30T13:13:58.853577"
+    },
+    {
+      "id": "char-spec-claude-033",
+      "name": "Blake Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Martinez_c033",
+      "built_at": "2026-03-30T13:13:59.152746"
+    },
+    {
+      "id": "char-spec-claude-034",
+      "name": "Alex Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Smith_c034",
+      "built_at": "2026-03-30T13:13:59.472929"
+    },
+    {
+      "id": "char-spec-claude-035",
+      "name": "Jordan Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jordan Torres_c035",
+      "built_at": "2026-03-30T13:13:59.766252"
+    },
+    {
+      "id": "char-spec-claude-036",
+      "name": "Blake Miller",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Miller_c036",
+      "built_at": "2026-03-30T13:14:00.044532"
+    },
+    {
+      "id": "char-spec-claude-037",
+      "name": "Jade Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jade Torres_c037",
+      "built_at": "2026-03-30T13:14:00.405686"
+    },
+    {
+      "id": "char-spec-claude-038",
+      "name": "Phoenix Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Rodriguez_c038",
+      "built_at": "2026-03-30T13:14:00.678747"
+    },
+    {
+      "id": "char-spec-claude-039",
+      "name": "Phoenix Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix Garcia_c039",
+      "built_at": "2026-03-30T13:14:00.962119"
+    },
+    {
+      "id": "char-spec-claude-040",
+      "name": "Morgan Johnson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Johnson_c040",
+      "built_at": "2026-03-30T13:14:01.259767"
+    },
+    {
+      "id": "char-spec-claude-041",
+      "name": "Marcus Torres",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Torres_c041",
+      "built_at": "2026-03-30T13:14:01.551548"
+    },
+    {
+      "id": "char-spec-claude-042",
+      "name": "Sam Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Rodriguez_c042",
+      "built_at": "2026-03-30T13:14:01.787883"
+    },
+    {
+      "id": "char-spec-claude-043",
+      "name": "Sam Rodriguez",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Sam Rodriguez_c043",
+      "built_at": "2026-03-30T13:14:02.079229"
+    },
+    {
+      "id": "char-spec-claude-044",
+      "name": "Alex Garcia",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Alex Garcia_c044",
+      "built_at": "2026-03-30T13:14:02.488612"
+    },
+    {
+      "id": "char-spec-claude-045",
+      "name": "Dakota Williams",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Dakota Williams_c045",
+      "built_at": "2026-03-30T13:14:02.774837"
+    },
+    {
+      "id": "char-spec-claude-046",
+      "name": "Skyler Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Davis_c046",
+      "built_at": "2026-03-30T13:14:03.060954"
+    },
+    {
+      "id": "char-spec-claude-047",
+      "name": "Sam Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Chen_c047",
+      "built_at": "2026-03-30T13:14:03.365468"
+    },
+    {
+      "id": "char-spec-claude-048",
+      "name": "Blake Williams",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Williams_c048",
+      "built_at": "2026-03-30T13:14:03.629459"
+    },
+    {
+      "id": "char-spec-claude-049",
+      "name": "Casey Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Rodriguez_c049",
+      "built_at": "2026-03-30T13:14:03.916342"
+    },
+    {
+      "id": "char-spec-claude-050",
+      "name": "River Brown",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\River Brown_c050",
+      "built_at": "2026-03-30T13:14:04.184865"
+    },
+    {
+      "id": "char-spec-claude-051",
+      "name": "Jade Martinez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Martinez_c051",
+      "built_at": "2026-03-30T13:14:04.467305"
+    },
+    {
+      "id": "char-spec-claude-052",
+      "name": "Marcus Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus Anderson_c052",
+      "built_at": "2026-03-30T13:14:04.757671"
+    },
+    {
+      "id": "char-spec-claude-053",
+      "name": "Dakota Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Smith_c053",
+      "built_at": "2026-03-30T13:14:05.087000"
+    },
+    {
+      "id": "char-spec-claude-054",
+      "name": "Marcus Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Anderson_c054",
+      "built_at": "2026-03-30T13:14:05.382542"
+    },
+    {
+      "id": "char-spec-claude-055",
+      "name": "Alex Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Williams_c055",
+      "built_at": "2026-03-30T13:14:05.666905"
+    },
+    {
+      "id": "char-spec-claude-056",
+      "name": "Marcus Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus Chen_c056",
+      "built_at": "2026-03-30T13:14:05.966368"
+    },
+    {
+      "id": "char-spec-claude-057",
+      "name": "Jordan Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jordan Garcia_c057",
+      "built_at": "2026-03-30T13:14:06.231739"
+    },
+    {
+      "id": "char-spec-claude-058",
+      "name": "Phoenix Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Rodriguez_c058",
+      "built_at": "2026-03-30T13:14:06.546125"
+    },
+    {
+      "id": "char-spec-claude-059",
+      "name": "Skyler Smith",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Skyler Smith_c059",
+      "built_at": "2026-03-30T13:14:06.811260"
+    },
+    {
+      "id": "char-spec-claude-060",
+      "name": "Sam Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Garcia_c060",
+      "built_at": "2026-03-30T13:14:07.100809"
+    },
+    {
+      "id": "char-spec-claude-061",
+      "name": "Casey Davis",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Casey Davis_c061",
+      "built_at": "2026-03-30T13:14:07.426687"
+    },
+    {
+      "id": "char-spec-claude-062",
+      "name": "Marcus Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus Anderson_c062",
+      "built_at": "2026-03-30T13:14:07.708953"
+    },
+    {
+      "id": "char-spec-claude-063",
+      "name": "Dakota Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Chen_c063",
+      "built_at": "2026-03-30T13:14:08.017210"
+    },
+    {
+      "id": "char-spec-claude-064",
+      "name": "Blake Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Anderson_c064",
+      "built_at": "2026-03-30T13:14:08.340318"
+    },
+    {
+      "id": "char-spec-claude-065",
+      "name": "Sam Brown",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Brown_c065",
+      "built_at": "2026-03-30T13:14:08.633371"
+    },
+    {
+      "id": "char-spec-claude-066",
+      "name": "Casey Anderson",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Casey Anderson_c066",
+      "built_at": "2026-03-30T13:14:08.891619"
+    },
+    {
+      "id": "char-spec-claude-067",
+      "name": "Alex Miller",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Alex Miller_c067",
+      "built_at": "2026-03-30T13:14:09.153472"
+    },
+    {
+      "id": "char-spec-claude-068",
+      "name": "Phoenix Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Smith_c068",
+      "built_at": "2026-03-30T13:14:09.440976"
+    },
+    {
+      "id": "char-spec-claude-069",
+      "name": "Jade Martinez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Martinez_c069",
+      "built_at": "2026-03-30T13:14:09.714513"
+    },
+    {
+      "id": "char-spec-claude-070",
+      "name": "Jordan Brown",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jordan Brown_c070",
+      "built_at": "2026-03-30T13:14:10.006286"
+    },
+    {
+      "id": "char-spec-claude-071",
+      "name": "Marcus Miller",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Marcus Miller_c071",
+      "built_at": "2026-03-30T13:14:10.307174"
+    },
+    {
+      "id": "char-spec-claude-072",
+      "name": "Sam Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Rodriguez_c072",
+      "built_at": "2026-03-30T13:14:10.590052"
+    },
+    {
+      "id": "char-spec-claude-073",
+      "name": "Skyler Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Anderson_c073",
+      "built_at": "2026-03-30T13:14:10.870459"
+    },
+    {
+      "id": "char-spec-claude-074",
+      "name": "Morgan Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Garcia_c074",
+      "built_at": "2026-03-30T13:14:11.161148"
+    },
+    {
+      "id": "char-spec-claude-075",
+      "name": "Dakota Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Smith_c075",
+      "built_at": "2026-03-30T13:14:11.434928"
+    },
+    {
+      "id": "char-spec-claude-076",
+      "name": "Alex O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Alex O'Brien_c076",
+      "built_at": "2026-03-30T13:14:11.725282"
+    },
+    {
+      "id": "char-spec-claude-077",
+      "name": "Jordan Miller",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jordan Miller_c077",
+      "built_at": "2026-03-30T13:14:12.091415"
+    },
+    {
+      "id": "char-spec-claude-078",
+      "name": "Alex Davis",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Alex Davis_c078",
+      "built_at": "2026-03-30T13:14:12.400689"
+    },
+    {
+      "id": "char-spec-claude-079",
+      "name": "Riley Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Riley Miller_c079",
+      "built_at": "2026-03-30T13:14:12.695846"
+    },
+    {
+      "id": "char-spec-claude-080",
+      "name": "Skyler Miller",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Skyler Miller_c080",
+      "built_at": "2026-03-30T13:14:12.966641"
+    },
+    {
+      "id": "char-spec-claude-081",
+      "name": "Blake Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Rodriguez_c081",
+      "built_at": "2026-03-30T13:14:13.274000"
+    },
+    {
+      "id": "char-spec-claude-082",
+      "name": "Sam Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Miller_c082",
+      "built_at": "2026-03-30T13:14:13.545564"
+    },
+    {
+      "id": "char-spec-claude-083",
+      "name": "Jade Brown",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Brown_c083",
+      "built_at": "2026-03-30T13:14:13.838754"
+    },
+    {
+      "id": "char-spec-claude-084",
+      "name": "Jordan Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jordan Smith_c084",
+      "built_at": "2026-03-30T13:14:14.162118"
+    },
+    {
+      "id": "char-spec-claude-086",
+      "name": "Morgan Miller",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Morgan Miller_c086",
+      "built_at": "2026-03-30T13:14:14.444494"
+    },
+    {
+      "id": "char-spec-claude-087",
+      "name": "Blake Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Miller_c087",
+      "built_at": "2026-03-30T13:14:14.725991"
+    },
+    {
+      "id": "char-spec-claude-088",
+      "name": "Jade Smith",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Smith_c088",
+      "built_at": "2026-03-30T13:14:15.020280"
+    },
+    {
+      "id": "char-spec-claude-089",
+      "name": "Casey Chen",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Casey Chen_c089",
+      "built_at": "2026-03-30T13:14:15.299292"
+    },
+    {
+      "id": "char-spec-claude-090",
+      "name": "Jade Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jade Martinez_c090",
+      "built_at": "2026-03-30T13:14:15.592398"
+    },
+    {
+      "id": "char-spec-claude-091",
+      "name": "Skyler Garcia",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Skyler Garcia_c091",
+      "built_at": "2026-03-30T13:14:15.883048"
+    },
+    {
+      "id": "char-spec-claude-092",
+      "name": "Sam Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Sam Martinez_c092",
+      "built_at": "2026-03-30T13:14:16.178605"
+    },
+    {
+      "id": "char-spec-claude-093",
+      "name": "River Johnson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\River Johnson_c093",
+      "built_at": "2026-03-30T13:14:16.450345"
+    },
+    {
+      "id": "char-spec-claude-094",
+      "name": "Alex Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Anderson_c094",
+      "built_at": "2026-03-30T13:14:16.768599"
+    },
+    {
+      "id": "char-spec-claude-095",
+      "name": "Riley Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Davis_c095",
+      "built_at": "2026-03-30T13:14:17.072029"
+    },
+    {
+      "id": "char-spec-claude-096",
+      "name": "Jordan Chen",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Jordan Chen_c096",
+      "built_at": "2026-03-30T13:14:17.379100"
+    },
+    {
+      "id": "char-spec-claude-097",
+      "name": "Casey Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey Anderson_c097",
+      "built_at": "2026-03-30T13:14:17.659083"
+    },
+    {
+      "id": "char-spec-claude-098",
+      "name": "Morgan Anderson",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Morgan Anderson_c098",
+      "built_at": "2026-03-30T13:14:17.983031"
+    },
+    {
+      "id": "char-spec-claude-099",
+      "name": "Blake Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Garcia_c099",
+      "built_at": "2026-03-30T13:14:18.248142"
+    },
+    {
+      "id": "char-spec-claude-100",
+      "name": "Phoenix Torres",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Phoenix Torres_c100",
+      "built_at": "2026-03-30T13:14:18.558371"
+    },
+    {
+      "id": "char-spec-gemini-001",
+      "name": "Morgan Garcia",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Morgan Garcia_g001",
+      "built_at": "2026-03-30T13:14:18.841660"
+    },
+    {
+      "id": "char-spec-gemini-002",
+      "name": "Jordan Brown",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Jordan Brown_g002",
+      "built_at": "2026-03-30T13:14:19.121331"
+    },
+    {
+      "id": "char-spec-gemini-003",
+      "name": "Alex O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex O'Brien_g003",
+      "built_at": "2026-03-30T13:14:19.413312"
+    },
+    {
+      "id": "char-spec-gemini-004",
+      "name": "Dakota Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Martinez_g004",
+      "built_at": "2026-03-30T13:14:19.720498"
+    },
+    {
+      "id": "char-spec-gemini-005",
+      "name": "Dakota Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Rodriguez_g005",
+      "built_at": "2026-03-30T13:14:20.019799"
+    },
+    {
+      "id": "char-spec-gemini-006",
+      "name": "River Brown",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Brown_g006",
+      "built_at": "2026-03-30T13:14:20.321071"
+    },
+    {
+      "id": "char-spec-gemini-007",
+      "name": "River Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Anderson_g007",
+      "built_at": "2026-03-30T13:14:20.594399"
+    },
+    {
+      "id": "char-spec-gemini-008",
+      "name": "Phoenix Johnson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Johnson_g008",
+      "built_at": "2026-03-30T13:14:20.931711"
+    },
+    {
+      "id": "char-spec-gemini-009",
+      "name": "Blake Anderson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Blake Anderson_g009",
+      "built_at": "2026-03-30T13:14:21.219050"
+    },
+    {
+      "id": "char-spec-gemini-010",
+      "name": "River Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Martinez_g010",
+      "built_at": "2026-03-30T13:14:21.496428"
+    },
+    {
+      "id": "char-spec-gemini-011",
+      "name": "Blake Miller",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Miller_g011",
+      "built_at": "2026-03-30T13:14:21.791659"
+    },
+    {
+      "id": "char-spec-gemini-012",
+      "name": "Dakota Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Dakota Rodriguez_g012",
+      "built_at": "2026-03-30T13:14:22.114275"
+    },
+    {
+      "id": "char-spec-gemini-013",
+      "name": "Morgan Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Garcia_g013",
+      "built_at": "2026-03-30T13:14:22.429039"
+    },
+    {
+      "id": "char-spec-gemini-014",
+      "name": "Morgan Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Williams_g014",
+      "built_at": "2026-03-30T13:14:22.733593"
+    },
+    {
+      "id": "char-spec-gemini-015",
+      "name": "Phoenix Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Rodriguez_g015",
+      "built_at": "2026-03-30T13:14:23.078358"
+    },
+    {
+      "id": "char-spec-gemini-017",
+      "name": "Riley Torres",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Riley Torres_g017",
+      "built_at": "2026-03-30T13:14:23.398800"
+    },
+    {
+      "id": "char-spec-gemini-018",
+      "name": "Skyler Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Martinez_g018",
+      "built_at": "2026-03-30T13:14:23.697976"
+    },
+    {
+      "id": "char-spec-gemini-019",
+      "name": "Casey Davis",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Casey Davis_g019",
+      "built_at": "2026-03-30T13:14:23.999409"
+    },
+    {
+      "id": "char-spec-gemini-020",
+      "name": "Marcus Davis",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Marcus Davis_g020",
+      "built_at": "2026-03-30T13:14:24.291058"
+    },
+    {
+      "id": "char-spec-gemini-021",
+      "name": "Skyler Anderson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Skyler Anderson_g021",
+      "built_at": "2026-03-30T13:14:24.570057"
+    },
+    {
+      "id": "char-spec-gemini-022",
+      "name": "Phoenix Davis",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix Davis_g022",
+      "built_at": "2026-03-30T13:14:24.835210"
+    },
+    {
+      "id": "char-spec-gemini-024",
+      "name": "Sam Miller",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Sam Miller_g024",
+      "built_at": "2026-03-30T13:14:25.136905"
+    },
+    {
+      "id": "char-spec-gemini-025",
+      "name": "Morgan Chen",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Morgan Chen_g025",
+      "built_at": "2026-03-30T13:14:25.423178"
+    },
+    {
+      "id": "char-spec-gemini-026",
+      "name": "Jordan O'Brien",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Jordan O'Brien_g026",
+      "built_at": "2026-03-30T13:14:25.724850"
+    },
+    {
+      "id": "char-spec-gemini-027",
+      "name": "Casey Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey Miller_g027",
+      "built_at": "2026-03-30T13:14:26.032711"
+    },
+    {
+      "id": "char-spec-gemini-029",
+      "name": "Alex Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Williams_g029",
+      "built_at": "2026-03-30T13:14:26.352505"
+    },
+    {
+      "id": "char-spec-gemini-030",
+      "name": "Morgan Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Miller_g030",
+      "built_at": "2026-03-30T13:14:26.676109"
+    },
+    {
+      "id": "char-spec-gemini-031",
+      "name": "River Torres",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\River Torres_g031",
+      "built_at": "2026-03-30T13:14:26.961216"
+    },
+    {
+      "id": "char-spec-gemini-033",
+      "name": "Sam Smith",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Smith_g033",
+      "built_at": "2026-03-30T13:14:27.258730"
+    },
+    {
+      "id": "char-spec-gemini-034",
+      "name": "Phoenix Chen",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Phoenix Chen_g034",
+      "built_at": "2026-03-30T13:14:27.525306"
+    },
+    {
+      "id": "char-spec-gemini-035",
+      "name": "Blake Smith",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Blake Smith_g035",
+      "built_at": "2026-03-30T13:14:27.844456"
+    },
+    {
+      "id": "char-spec-gemini-037",
+      "name": "Alex Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Martinez_g037",
+      "built_at": "2026-03-30T13:14:28.148168"
+    },
+    {
+      "id": "char-spec-gemini-038",
+      "name": "Marcus Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus Martinez_g038",
+      "built_at": "2026-03-30T13:14:28.502074"
+    },
+    {
+      "id": "char-spec-gemini-039",
+      "name": "River Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\River Miller_g039",
+      "built_at": "2026-03-30T13:14:28.809899"
+    },
+    {
+      "id": "char-spec-gemini-040",
+      "name": "Jade Garcia",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Jade Garcia_g040",
+      "built_at": "2026-03-30T13:14:29.142876"
+    },
+    {
+      "id": "char-spec-gemini-041",
+      "name": "Jade Williams",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Jade Williams_g041",
+      "built_at": "2026-03-30T13:14:29.413772"
+    },
+    {
+      "id": "char-spec-gemini-042",
+      "name": "Alex Miller",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Alex Miller_g042",
+      "built_at": "2026-03-30T13:14:29.705388"
+    },
+    {
+      "id": "char-spec-gemini-043",
+      "name": "Morgan Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Rodriguez_g043",
+      "built_at": "2026-03-30T13:14:29.997663"
+    },
+    {
+      "id": "char-spec-gemini-044",
+      "name": "Dakota Rodriguez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Dakota Rodriguez_g044",
+      "built_at": "2026-03-30T13:14:30.283258"
+    },
+    {
+      "id": "char-spec-gemini-045",
+      "name": "Jordan Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jordan Smith_g045",
+      "built_at": "2026-03-30T13:14:30.608475"
+    },
+    {
+      "id": "char-spec-gemini-047",
+      "name": "Riley Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Riley Miller_g047",
+      "built_at": "2026-03-30T13:14:30.899248"
+    },
+    {
+      "id": "char-spec-gemini-048",
+      "name": "Dakota Brown",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Dakota Brown_g048",
+      "built_at": "2026-03-30T13:14:31.202160"
+    },
+    {
+      "id": "char-spec-gemini-049",
+      "name": "Morgan Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Smith_g049",
+      "built_at": "2026-03-30T13:14:31.505201"
+    },
+    {
+      "id": "char-spec-gemini-050",
+      "name": "Riley Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Riley Garcia_g050",
+      "built_at": "2026-03-30T13:14:31.826976"
+    },
+    {
+      "id": "char-spec-gemini-051",
+      "name": "Phoenix Johnson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Johnson_g051",
+      "built_at": "2026-03-30T13:14:32.125771"
+    },
+    {
+      "id": "char-spec-gemini-052",
+      "name": "Riley Chen",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Riley Chen_g052",
+      "built_at": "2026-03-30T13:14:32.413270"
+    },
+    {
+      "id": "char-spec-gemini-053",
+      "name": "Riley Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Anderson_g053",
+      "built_at": "2026-03-30T13:14:32.692362"
+    },
+    {
+      "id": "char-spec-gemini-054",
+      "name": "Morgan O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan O'Brien_g054",
+      "built_at": "2026-03-30T13:14:33.018335"
+    },
+    {
+      "id": "char-spec-gemini-055",
+      "name": "Phoenix Torres",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Phoenix Torres_g055",
+      "built_at": "2026-03-30T13:14:33.330637"
+    },
+    {
+      "id": "char-spec-gemini-056",
+      "name": "Morgan Johnson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Morgan Johnson_g056",
+      "built_at": "2026-03-30T13:14:33.633176"
+    },
+    {
+      "id": "char-spec-gemini-057",
+      "name": "Phoenix O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix O'Brien_g057",
+      "built_at": "2026-03-30T13:14:33.933518"
+    },
+    {
+      "id": "char-spec-gemini-058",
+      "name": "Jordan Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jordan Garcia_g058",
+      "built_at": "2026-03-30T13:14:34.245244"
+    },
+    {
+      "id": "char-spec-gemini-059",
+      "name": "Casey Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Williams_g059",
+      "built_at": "2026-03-30T13:14:34.530589"
+    },
+    {
+      "id": "char-spec-gemini-060",
+      "name": "Dakota Chen",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Dakota Chen_g060",
+      "built_at": "2026-03-30T13:14:34.864641"
+    },
+    {
+      "id": "char-spec-gemini-062",
+      "name": "River O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\River O'Brien_g062",
+      "built_at": "2026-03-30T13:14:35.142592"
+    },
+    {
+      "id": "char-spec-gemini-063",
+      "name": "Marcus Smith",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Smith_g063",
+      "built_at": "2026-03-30T13:14:35.497123"
+    },
+    {
+      "id": "char-spec-gemini-064",
+      "name": "Jade Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Garcia_g064",
+      "built_at": "2026-03-30T13:14:35.791806"
+    },
+    {
+      "id": "char-spec-gemini-065",
+      "name": "Casey Miller",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Miller_g065",
+      "built_at": "2026-03-30T13:14:36.186406"
+    },
+    {
+      "id": "char-spec-gemini-066",
+      "name": "Marcus Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus Martinez_g066",
+      "built_at": "2026-03-30T13:14:36.499992"
+    },
+    {
+      "id": "char-spec-gemini-069",
+      "name": "River Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Martinez_g069",
+      "built_at": "2026-03-30T13:14:36.812805"
+    },
+    {
+      "id": "char-spec-gemini-070",
+      "name": "Riley Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Martinez_g070",
+      "built_at": "2026-03-30T13:14:37.164402"
+    },
+    {
+      "id": "char-spec-gemini-071",
+      "name": "Alex Garcia",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Alex Garcia_g071",
+      "built_at": "2026-03-30T13:14:37.451608"
+    },
+    {
+      "id": "char-spec-gemini-072",
+      "name": "Jade Rodriguez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Jade Rodriguez_g072",
+      "built_at": "2026-03-30T13:14:37.771206"
+    },
+    {
+      "id": "char-spec-gemini-073",
+      "name": "Riley O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley O'Brien_g073",
+      "built_at": "2026-03-30T13:14:38.069924"
+    },
+    {
+      "id": "char-spec-gemini-074",
+      "name": "Marcus Rodriguez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Marcus Rodriguez_g074",
+      "built_at": "2026-03-30T13:14:38.394535"
+    },
+    {
+      "id": "char-spec-gemini-075",
+      "name": "Blake Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Miller_g075",
+      "built_at": "2026-03-30T13:14:38.713416"
+    },
+    {
+      "id": "char-spec-gemini-077",
+      "name": "River Johnson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\River Johnson_g077",
+      "built_at": "2026-03-30T13:14:39.022808"
+    },
+    {
+      "id": "char-spec-gemini-078",
+      "name": "Alex Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Chen_g078",
+      "built_at": "2026-03-30T13:14:39.343091"
+    },
+    {
+      "id": "char-spec-gemini-079",
+      "name": "Blake Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Torres_g079",
+      "built_at": "2026-03-30T13:14:39.648980"
+    },
+    {
+      "id": "char-spec-gemini-080",
+      "name": "Morgan Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Garcia_g080",
+      "built_at": "2026-03-30T13:14:39.971365"
+    },
+    {
+      "id": "char-spec-gemini-081",
+      "name": "Casey Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Garcia_g081",
+      "built_at": "2026-03-30T13:14:40.278298"
+    },
+    {
+      "id": "char-spec-gemini-082",
+      "name": "Riley Davis",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Riley Davis_g082",
+      "built_at": "2026-03-30T13:14:40.566805"
+    },
+    {
+      "id": "char-spec-gemini-083",
+      "name": "Dakota Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Torres_g083",
+      "built_at": "2026-03-30T13:14:40.859646"
+    },
+    {
+      "id": "char-spec-gemini-084",
+      "name": "Marcus O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Marcus O'Brien_g084",
+      "built_at": "2026-03-30T13:14:41.152264"
+    },
+    {
+      "id": "char-spec-gemini-085",
+      "name": "Phoenix Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix Rodriguez_g085",
+      "built_at": "2026-03-30T13:14:41.481037"
+    },
+    {
+      "id": "char-spec-gemini-086",
+      "name": "Phoenix Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix Martinez_g086",
+      "built_at": "2026-03-30T13:14:41.770278"
+    },
+    {
+      "id": "char-spec-gemini-087",
+      "name": "Skyler Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Williams_g087",
+      "built_at": "2026-03-30T13:14:42.053547"
+    },
+    {
+      "id": "char-spec-gemini-088",
+      "name": "Sam O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam O'Brien_g088",
+      "built_at": "2026-03-30T13:14:42.358475"
+    },
+    {
+      "id": "char-spec-gemini-089",
+      "name": "Blake Chen",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Chen_g089",
+      "built_at": "2026-03-30T13:14:42.699844"
+    },
+    {
+      "id": "char-spec-gemini-090",
+      "name": "Casey Brown",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Casey Brown_g090",
+      "built_at": "2026-03-30T13:14:43.020594"
+    },
+    {
+      "id": "char-spec-gemini-091",
+      "name": "Alex Anderson",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Alex Anderson_g091",
+      "built_at": "2026-03-30T13:14:43.300617"
+    },
+    {
+      "id": "char-spec-gemini-092",
+      "name": "Blake Torres",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Torres_g092",
+      "built_at": "2026-03-30T13:14:43.604531"
+    },
+    {
+      "id": "char-spec-gemini-093",
+      "name": "Phoenix Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Phoenix Martinez_g093",
+      "built_at": "2026-03-30T13:14:43.928246"
+    },
+    {
+      "id": "char-spec-gemini-094",
+      "name": "Alex O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex O'Brien_g094",
+      "built_at": "2026-03-30T13:14:44.253127"
+    },
+    {
+      "id": "char-spec-gemini-095",
+      "name": "River O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River O'Brien_g095",
+      "built_at": "2026-03-30T13:14:44.572145"
+    },
+    {
+      "id": "char-spec-gemini-096",
+      "name": "Riley Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Riley Anderson_g096",
+      "built_at": "2026-03-30T13:14:44.905411"
+    },
+    {
+      "id": "char-spec-gemini-097",
+      "name": "Blake Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Smith_g097",
+      "built_at": "2026-03-30T13:14:45.197248"
+    },
+    {
+      "id": "char-spec-gemini-098",
+      "name": "Casey O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey O'Brien_g098",
+      "built_at": "2026-03-30T13:14:45.497757"
+    },
+    {
+      "id": "char-spec-gemini-099",
+      "name": "Riley Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Anderson_g099",
+      "built_at": "2026-03-30T13:14:45.789106"
+    },
+    {
+      "id": "char-spec-gemini-100",
+      "name": "Morgan Miller",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Miller_g100",
+      "built_at": "2026-03-30T13:14:46.105812"
+    },
+    {
+      "id": "char-spec-agent-001",
+      "name": "Morgan Miller",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Miller_a001",
+      "built_at": "2026-03-30T13:14:46.408682"
+    },
+    {
+      "id": "char-spec-agent-002",
+      "name": "Skyler Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Davis_a002",
+      "built_at": "2026-03-30T13:14:46.693125"
+    },
+    {
+      "id": "char-spec-agent-003",
+      "name": "Blake Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Garcia_a003",
+      "built_at": "2026-03-30T13:14:47.002242"
+    },
+    {
+      "id": "char-spec-agent-004",
+      "name": "Jade Brown",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Brown_a004",
+      "built_at": "2026-03-30T13:14:47.285619"
+    },
+    {
+      "id": "char-spec-agent-005",
+      "name": "Morgan Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Anderson_a005",
+      "built_at": "2026-03-30T13:14:47.585435"
+    },
+    {
+      "id": "char-spec-agent-006",
+      "name": "Morgan Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Anderson_a006",
+      "built_at": "2026-03-30T13:14:47.940185"
+    },
+    {
+      "id": "char-spec-agent-007",
+      "name": "Phoenix Smith",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix Smith_a007",
+      "built_at": "2026-03-30T13:14:48.224775"
+    },
+    {
+      "id": "char-spec-agent-008",
+      "name": "Alex Brown",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Alex Brown_a008",
+      "built_at": "2026-03-30T13:14:48.559303"
+    },
+    {
+      "id": "char-spec-agent-010",
+      "name": "Dakota Torres",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Dakota Torres_a010",
+      "built_at": "2026-03-30T13:14:48.893959"
+    },
+    {
+      "id": "char-spec-agent-011",
+      "name": "Blake Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake Garcia_a011",
+      "built_at": "2026-03-30T13:14:49.209495"
+    },
+    {
+      "id": "char-spec-agent-012",
+      "name": "Sam Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Sam Martinez_a012",
+      "built_at": "2026-03-30T13:14:49.530175"
+    },
+    {
+      "id": "char-spec-agent-013",
+      "name": "Morgan Davis",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Davis_a013",
+      "built_at": "2026-03-30T13:14:49.877700"
+    },
+    {
+      "id": "char-spec-agent-014",
+      "name": "Phoenix Brown",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Phoenix Brown_a014",
+      "built_at": "2026-03-30T13:14:50.169212"
+    },
+    {
+      "id": "char-spec-agent-015",
+      "name": "Morgan Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Rodriguez_a015",
+      "built_at": "2026-03-30T13:14:50.500104"
+    },
+    {
+      "id": "char-spec-agent-016",
+      "name": "Riley Johnson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Riley Johnson_a016",
+      "built_at": "2026-03-30T13:14:50.819981"
+    },
+    {
+      "id": "char-spec-agent-017",
+      "name": "Riley Johnson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Riley Johnson_a017",
+      "built_at": "2026-03-30T13:14:51.134737"
+    },
+    {
+      "id": "char-spec-agent-018",
+      "name": "Casey Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Garcia_a018",
+      "built_at": "2026-03-30T13:14:51.432912"
+    },
+    {
+      "id": "char-spec-agent-019",
+      "name": "River Johnson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Johnson_a019",
+      "built_at": "2026-03-30T13:14:51.741021"
+    },
+    {
+      "id": "char-spec-agent-020",
+      "name": "Morgan Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Garcia_a020",
+      "built_at": "2026-03-30T13:14:52.054067"
+    },
+    {
+      "id": "char-spec-agent-021",
+      "name": "River Anderson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Anderson_a021",
+      "built_at": "2026-03-30T13:14:52.368779"
+    },
+    {
+      "id": "char-spec-agent-022",
+      "name": "Skyler O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Skyler O'Brien_a022",
+      "built_at": "2026-03-30T13:14:52.680946"
+    },
+    {
+      "id": "char-spec-agent-023",
+      "name": "Casey Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Torres_a023",
+      "built_at": "2026-03-30T13:14:53.041609"
+    },
+    {
+      "id": "char-spec-agent-024",
+      "name": "Sam Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Garcia_a024",
+      "built_at": "2026-03-30T13:14:53.340250"
+    },
+    {
+      "id": "char-spec-agent-025",
+      "name": "Morgan Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Rodriguez_a025",
+      "built_at": "2026-03-30T13:14:53.673987"
+    },
+    {
+      "id": "char-spec-agent-026",
+      "name": "Sam Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Davis_a026",
+      "built_at": "2026-03-30T13:14:53.987005"
+    },
+    {
+      "id": "char-spec-agent-027",
+      "name": "River Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Garcia_a027",
+      "built_at": "2026-03-30T13:14:54.324103"
+    },
+    {
+      "id": "char-spec-agent-028",
+      "name": "Morgan Smith",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Morgan Smith_a028",
+      "built_at": "2026-03-30T13:14:54.648594"
+    },
+    {
+      "id": "char-spec-agent-029",
+      "name": "Sam Torres",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Torres_a029",
+      "built_at": "2026-03-30T13:14:54.942429"
+    },
+    {
+      "id": "char-spec-agent-030",
+      "name": "Riley Anderson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Riley Anderson_a030",
+      "built_at": "2026-03-30T13:14:55.257325"
+    },
+    {
+      "id": "char-spec-agent-031",
+      "name": "Sam Davis",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Davis_a031",
+      "built_at": "2026-03-30T13:14:55.572367"
+    },
+    {
+      "id": "char-spec-agent-032",
+      "name": "Jade Johnson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jade Johnson_a032",
+      "built_at": "2026-03-30T13:14:55.906843"
+    },
+    {
+      "id": "char-spec-agent-033",
+      "name": "Phoenix O'Brien",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Phoenix O'Brien_a033",
+      "built_at": "2026-03-30T13:14:56.222044"
+    },
+    {
+      "id": "char-spec-agent-034",
+      "name": "Jordan Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Jordan Rodriguez_a034",
+      "built_at": "2026-03-30T13:14:56.542528"
+    },
+    {
+      "id": "char-spec-agent-035",
+      "name": "Alex O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Alex O'Brien_a035",
+      "built_at": "2026-03-30T13:14:56.841384"
+    },
+    {
+      "id": "char-spec-agent-036",
+      "name": "Phoenix Smith",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Phoenix Smith_a036",
+      "built_at": "2026-03-30T13:14:57.139960"
+    },
+    {
+      "id": "char-spec-agent-037",
+      "name": "Blake Williams",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Williams_a037",
+      "built_at": "2026-03-30T13:14:57.438713"
+    },
+    {
+      "id": "char-spec-agent-038",
+      "name": "Casey Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Casey Martinez_a038",
+      "built_at": "2026-03-30T13:14:57.760966"
+    },
+    {
+      "id": "char-spec-agent-039",
+      "name": "Phoenix Smith",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Phoenix Smith_a039",
+      "built_at": "2026-03-30T13:14:58.078357"
+    },
+    {
+      "id": "char-spec-agent-040",
+      "name": "Blake O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake O'Brien_a040",
+      "built_at": "2026-03-30T13:14:58.412333"
+    },
+    {
+      "id": "char-spec-agent-041",
+      "name": "River Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\River Garcia_a041",
+      "built_at": "2026-03-30T13:14:58.700491"
+    },
+    {
+      "id": "char-spec-agent-042",
+      "name": "Alex Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Williams_a042",
+      "built_at": "2026-03-30T13:14:59.009811"
+    },
+    {
+      "id": "char-spec-agent-043",
+      "name": "Phoenix Brown",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix Brown_a043",
+      "built_at": "2026-03-30T13:14:59.320055"
+    },
+    {
+      "id": "char-spec-agent-044",
+      "name": "Blake Johnson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Blake Johnson_a044",
+      "built_at": "2026-03-30T13:14:59.651387"
+    },
+    {
+      "id": "char-spec-agent-045",
+      "name": "Jade Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jade Martinez_a045",
+      "built_at": "2026-03-30T13:14:59.976855"
+    },
+    {
+      "id": "char-spec-agent-046",
+      "name": "Sam Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Miller_a046",
+      "built_at": "2026-03-30T13:15:00.336739"
+    },
+    {
+      "id": "char-spec-agent-047",
+      "name": "Skyler O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Skyler O'Brien_a047",
+      "built_at": "2026-03-30T13:15:00.666533"
+    },
+    {
+      "id": "char-spec-agent-048",
+      "name": "Jade Garcia",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Jade Garcia_a048",
+      "built_at": "2026-03-30T13:15:00.993092"
+    },
+    {
+      "id": "char-spec-agent-049",
+      "name": "Alex Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Torres_a049",
+      "built_at": "2026-03-30T13:15:01.289652"
+    },
+    {
+      "id": "char-spec-agent-050",
+      "name": "Casey Chen",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey Chen_a050",
+      "built_at": "2026-03-30T13:15:01.626182"
+    },
+    {
+      "id": "char-spec-agent-051",
+      "name": "Riley Smith",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Smith_a051",
+      "built_at": "2026-03-30T13:15:01.960101"
+    },
+    {
+      "id": "char-spec-agent-052",
+      "name": "Morgan Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Morgan Miller_a052",
+      "built_at": "2026-03-30T13:15:02.269219"
+    },
+    {
+      "id": "char-spec-agent-054",
+      "name": "Blake Chen",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Blake Chen_a054",
+      "built_at": "2026-03-30T13:15:02.608766"
+    },
+    {
+      "id": "char-spec-agent-055",
+      "name": "Sam Brown",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Sam Brown_a055",
+      "built_at": "2026-03-30T13:15:02.940048"
+    },
+    {
+      "id": "char-spec-agent-056",
+      "name": "Dakota Chen",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Dakota Chen_a056",
+      "built_at": "2026-03-30T13:15:03.271384"
+    },
+    {
+      "id": "char-spec-agent-057",
+      "name": "Casey Davis",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Casey Davis_a057",
+      "built_at": "2026-03-30T13:15:03.573004"
+    },
+    {
+      "id": "char-spec-agent-058",
+      "name": "Alex Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Davis_a058",
+      "built_at": "2026-03-30T13:15:03.890372"
+    },
+    {
+      "id": "char-spec-agent-059",
+      "name": "Alex Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Alex Martinez_a059",
+      "built_at": "2026-03-30T13:15:04.204067"
+    },
+    {
+      "id": "char-spec-agent-060",
+      "name": "Blake Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Blake Martinez_a060",
+      "built_at": "2026-03-30T13:15:04.494537"
+    },
+    {
+      "id": "char-spec-agent-061",
+      "name": "Jade Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jade Davis_a061",
+      "built_at": "2026-03-30T13:15:04.830742"
+    },
+    {
+      "id": "char-spec-agent-062",
+      "name": "River Anderson",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\River Anderson_a062",
+      "built_at": "2026-03-30T13:15:05.170991"
+    },
+    {
+      "id": "char-spec-agent-063",
+      "name": "Morgan Johnson",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Johnson_a063",
+      "built_at": "2026-03-30T13:15:05.499986"
+    },
+    {
+      "id": "char-spec-agent-064",
+      "name": "Skyler Johnson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Skyler Johnson_a064",
+      "built_at": "2026-03-30T13:15:05.824675"
+    },
+    {
+      "id": "char-spec-agent-065",
+      "name": "Morgan Martinez",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Morgan Martinez_a065",
+      "built_at": "2026-03-30T13:15:06.156069"
+    },
+    {
+      "id": "char-spec-agent-066",
+      "name": "Skyler Williams",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Skyler Williams_a066",
+      "built_at": "2026-03-30T13:15:06.475301"
+    },
+    {
+      "id": "char-spec-agent-067",
+      "name": "Blake O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Blake O'Brien_a067",
+      "built_at": "2026-03-30T13:15:06.813041"
+    },
+    {
+      "id": "char-spec-agent-068",
+      "name": "Riley Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Rodriguez_a068",
+      "built_at": "2026-03-30T13:15:07.118449"
+    },
+    {
+      "id": "char-spec-agent-069",
+      "name": "Sam Torres",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Sam Torres_a069",
+      "built_at": "2026-03-30T13:15:07.444503"
+    },
+    {
+      "id": "char-spec-agent-070",
+      "name": "Blake Brown",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Blake Brown_a070",
+      "built_at": "2026-03-30T13:15:07.781508"
+    },
+    {
+      "id": "char-spec-agent-071",
+      "name": "Sam Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Sam Rodriguez_a071",
+      "built_at": "2026-03-30T13:15:08.115248"
+    },
+    {
+      "id": "char-spec-agent-073",
+      "name": "Casey Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Casey Martinez_a073",
+      "built_at": "2026-03-30T13:15:08.448093"
+    },
+    {
+      "id": "char-spec-agent-074",
+      "name": "Marcus Miller",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Miller_a074",
+      "built_at": "2026-03-30T13:15:08.737733"
+    },
+    {
+      "id": "char-spec-agent-075",
+      "name": "Jade Martinez",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Jade Martinez_a075",
+      "built_at": "2026-03-30T13:15:09.035912"
+    },
+    {
+      "id": "char-spec-agent-076",
+      "name": "Alex Williams",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Alex Williams_a076",
+      "built_at": "2026-03-30T13:15:09.398380"
+    },
+    {
+      "id": "char-spec-agent-077",
+      "name": "Phoenix O'Brien",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Phoenix O'Brien_a077",
+      "built_at": "2026-03-30T13:15:09.702999"
+    },
+    {
+      "id": "char-spec-agent-078",
+      "name": "Sam Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Rodriguez_a078",
+      "built_at": "2026-03-30T13:15:10.052542"
+    },
+    {
+      "id": "char-spec-agent-079",
+      "name": "Phoenix O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Phoenix O'Brien_a079",
+      "built_at": "2026-03-30T13:15:10.397786"
+    },
+    {
+      "id": "char-spec-agent-080",
+      "name": "Sam Rodriguez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Sam Rodriguez_a080",
+      "built_at": "2026-03-30T13:15:10.731513"
+    },
+    {
+      "id": "char-spec-agent-081",
+      "name": "Skyler Davis",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Skyler Davis_a081",
+      "built_at": "2026-03-30T13:15:11.080608"
+    },
+    {
+      "id": "char-spec-agent-082",
+      "name": "River Miller",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\River Miller_a082",
+      "built_at": "2026-03-30T13:15:11.411347"
+    },
+    {
+      "id": "char-spec-agent-083",
+      "name": "Marcus Garcia",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Marcus Garcia_a083",
+      "built_at": "2026-03-30T13:15:11.738755"
+    },
+    {
+      "id": "char-spec-agent-084",
+      "name": "Sam Williams",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Sam Williams_a084",
+      "built_at": "2026-03-30T13:15:12.050142"
+    },
+    {
+      "id": "char-spec-agent-085",
+      "name": "Dakota Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Martinez_a085",
+      "built_at": "2026-03-30T13:15:12.374759"
+    },
+    {
+      "id": "char-spec-agent-086",
+      "name": "Dakota Williams",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Dakota Williams_a086",
+      "built_at": "2026-03-30T13:15:12.662429"
+    },
+    {
+      "id": "char-spec-agent-087",
+      "name": "Jordan Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Jordan Torres_a087",
+      "built_at": "2026-03-30T13:15:13.013294"
+    },
+    {
+      "id": "char-spec-agent-088",
+      "name": "Marcus Rodriguez",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Rodriguez_a088",
+      "built_at": "2026-03-30T13:15:13.299898"
+    },
+    {
+      "id": "char-spec-agent-089",
+      "name": "Blake Johnson",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Blake Johnson_a089",
+      "built_at": "2026-03-30T13:15:13.648682"
+    },
+    {
+      "id": "char-spec-agent-090",
+      "name": "Marcus Anderson",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus Anderson_a090",
+      "built_at": "2026-03-30T13:15:13.975861"
+    },
+    {
+      "id": "char-spec-agent-091",
+      "name": "Morgan Torres",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Torres_a091",
+      "built_at": "2026-03-30T13:15:14.306634"
+    },
+    {
+      "id": "char-spec-agent-093",
+      "name": "Jordan Johnson",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\Jordan Johnson_a093",
+      "built_at": "2026-03-30T13:15:14.649270"
+    },
+    {
+      "id": "char-spec-agent-094",
+      "name": "Morgan Martinez",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Martinez_a094",
+      "built_at": "2026-03-30T13:15:14.977911"
+    },
+    {
+      "id": "char-spec-agent-095",
+      "name": "Skyler Garcia",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Skyler Garcia_a095",
+      "built_at": "2026-03-30T13:15:15.316471"
+    },
+    {
+      "id": "char-spec-agent-096",
+      "name": "River Garcia",
+      "universe": "other",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\other\\River Garcia_a096",
+      "built_at": "2026-03-30T13:15:15.621428"
+    },
+    {
+      "id": "char-spec-agent-097",
+      "name": "Marcus O'Brien",
+      "universe": "inmates_vs_guards",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\inmates-vs-guards\\Marcus O'Brien_a097",
+      "built_at": "2026-03-30T13:15:15.951440"
+    },
+    {
+      "id": "char-spec-agent-098",
+      "name": "Morgan Brown",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Morgan Brown_a098",
+      "built_at": "2026-03-30T13:15:16.267162"
+    },
+    {
+      "id": "char-spec-agent-099",
+      "name": "Riley Garcia",
+      "universe": "original_fiction",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\original-fiction\\Riley Garcia_a099",
+      "built_at": "2026-03-30T13:15:16.592125"
+    },
+    {
+      "id": "char-spec-agent-100",
+      "name": "Phoenix Williams",
+      "universe": "band_members",
+      "path": "G:\\My Drive\\Projects\\_studio\\agency\\characters\\band-members\\Phoenix Williams_a100",
+      "built_at": "2026-03-30T13:15:16.936735"
+    }
+  ],
+  "last_run_failed": []
+}

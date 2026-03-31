@@ -20,3 +20,27 @@
 [2026-03-29 20:02:35]   Indexed: watchdog/state.json (2 chunks)
 [2026-03-29 20:02:35]   Indexed: ai-services-website/state.json (3 chunks)
 [2026-03-29 20:02:54]   Index complete: 573 chunks from 573 documents
+[2026-03-30 21:32:14] Vector store index starting
+[2026-03-30 21:32:17]   Collection exists with 573 docs — skipping (use --reindex to force)
+[2026-03-30 21:32:34] Vector store index starting
+[2026-03-30 21:32:34]   Indexed: CLAUDE.md (27 chunks)
+[2026-03-30 21:32:34]   Indexed: session-handoff.md (2 chunks)
+[2026-03-30 21:32:34]   Indexed: decision-log.json (6 chunks)
+[2026-03-30 21:32:35]   Indexed: whiteboard.json (139 chunks)
+[2026-03-30 21:32:35]   Indexed: studio-context.md (262 chunks)
+[2026-03-30 21:32:35]   Indexed: acuscan-ar/state.json (13 chunks)
+[2026-03-30 21:32:35]   Indexed: squeeze-empire/state.json (13 chunks)
+[2026-03-30 21:32:35]   Indexed: hibid-analyzer/state.json (15 chunks)
+[2026-03-30 21:32:35]   Indexed: nutrimind/state.json (11 chunks)
+[2026-03-30 21:32:35]   Indexed: job-match/state.json (51 chunks)
+[2026-03-30 21:32:35]   Indexed: whatnot-apps/state.json (12 chunks)
+[2026-03-30 21:32:35]   Indexed: arbitrage-pulse/state.json (15 chunks)
+[2026-03-30 21:32:35]   Indexed: listing-optimizer/state.json (16 chunks)
+[2026-03-30 21:32:35]   Indexed: sentinel-core/state.json (1 chunks)
+[2026-03-30 21:32:35]   Indexed: sentinel-performer/state.json (1 chunks)
+[2026-03-30 21:32:35]   Indexed: sentinel-viewer/state.json (1 chunks)
+[2026-03-30 21:32:35]   Indexed: CTW/state.json (3 chunks)
+[2026-03-30 21:32:35]   Indexed: sysguard/state.json (2 chunks)
+[2026-03-30 21:32:35]   Indexed: watchdog/state.json (2 chunks)
+[2026-03-30 21:32:35]   Indexed: ai-services-website/state.json (3 chunks)
+[2026-03-30 21:32:55]   Index complete: 595 chunks from 595 documents

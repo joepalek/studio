@@ -1,0 +1,51 @@
+
+====================================================
+    GAME ARCHAEOLOGY WEEKLY DIGEST
+====================================================
+
+Date: 2026-03-31 03:03:14
+New Finds: 4 | Safe: 2 | Caution: 1 | Skip: 1
+
+----------------------------------------------------
+GREEN (Safe to Convert) - 2 games
+----------------------------------------------------
+
+1. Hellmaze
+   Risk: GREEN (Confidence: 88%)
+   Tier: TIER_1_RECORDING
+   Notes: Safe to convert. 30% visual redesign recommended.
+   [ ] Queue for conversion
+
+
+2. Zombie Towers
+   Risk: GREEN (Confidence: 85%)
+   Tier: TIER_1_PLUS_2
+   Notes: Safe to convert. Code salvage recommended (58% reuse).
+   [ ] Queue for conversion
+
+
+----------------------------------------------------
+YELLOW (Decision Needed) - 1 games
+----------------------------------------------------
+
+3. Dark Mansion
+   Risk: YELLOW (Confidence: 64%)
+   Caution: Convertible with caution. Recommend 70% visual redesign.
+   [ ] Approve & queue    [ ] Skip
+
+
+----------------------------------------------------
+RED (Skip These) - 1 games
+----------------------------------------------------
+
+X Super Mario Clone
+   Reason: Clear Nintendo IP derivative. High DMCA risk....
+
+
+====================================================
+INSTRUCTIONS:
+1. Review games above
+2. Check boxes for GREEN games you want to convert
+3. Decide on YELLOW games (approve or skip)
+4. Submit your decisions
+====================================================

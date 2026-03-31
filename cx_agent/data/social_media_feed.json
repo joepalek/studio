@@ -1,0 +1,63 @@
+{
+  "generated_at": "2026-03-30T05:12:03.055426+00:00",
+  "amplification_candidates": [
+    {
+      "asset_id": "ebay_listing_20260329_001",
+      "asset_type": "listing",
+      "quality_score": 9,
+      "metrics": {
+        "impressions": 342,
+        "views": 87,
+        "click_through_rate": "5.2%",
+        "favorites": 12,
+        "watchers": 3,
+        "questions": 0,
+        "offers": 0,
+        "sales": 0
+      },
+      "creator_agent": "eBay_Listing_Agent"
+    },
+    {
+      "asset_id": "ctw_character_mara_20260329",
+      "asset_type": "character_file",
+      "quality_score": 9,
+      "metrics": {
+        "viewer_loads": 847,
+        "viewer_load_frequency": "847 loads in 6 hours = 141 loads/hour",
+        "api_queries_mirofish": 23,
+        "narrative_appearances": 5,
+        "adoption_in_other_projects": 2,
+        "total_interactions": 875
+      },
+      "creator_agent": "CTW_Agent"
+    },
+    {
+      "asset_id": "ghost_book_script_draft_20260329_001",
+      "asset_type": "script_draft",
+      "quality_score": 8,
+      "metrics": {
+        "draft_reads": 8,
+        "consumption_by_agents": [
+          "CTW_Agent (character design)",
+          "Social_Intel_Agent (market trend check)"
+        ],
+        "revision_requests": 1,
+        "engagement_signals": "high_creative_interest"
+      },
+      "creator_agent": "Ghost_Book_Agent"
+    },
+    {
+      "asset_id": "job_posting_20260329_001",
+      "asset_type": "job_posting",
+      "quality_score": 8,
+      "metrics": {
+        "job_impressions": 42,
+        "job_clicks": 11,
+        "click_through_rate": "26.2%",
+        "applications": 3,
+        "application_quality": "strong"
+      },
+      "creator_agent": "Jobs_Agent"
+    }
+  ]
+}

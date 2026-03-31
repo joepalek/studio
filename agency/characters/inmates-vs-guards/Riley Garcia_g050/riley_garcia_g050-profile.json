@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-gemini-050",
+  "name": "Riley Garcia",
+  "universe": "inmates-vs-guards",
+  "archetype": "prison_mentor",
+  "created_date": "2026-03-30T13:14:31.695793",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Riley Garcia",
+    "pronouns": "they/them",
+    "age": 18,
+    "personality_traits": [
+      "intuitive",
+      "logical",
+      "analytical",
+      "courageous",
+      "reserved",
+      "conflicted",
+      "ambitious"
+    ],
+    "voice": "cold and analytical",
+    "archetype_description": "",
+    "backstory": "Carries deep regrets about choices made years ago."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:31.695813",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

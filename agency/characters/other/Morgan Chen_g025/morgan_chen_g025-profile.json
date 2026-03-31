@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-025",
+  "name": "Morgan Chen",
+  "universe": "other",
+  "archetype": "doctor",
+  "created_date": "2026-03-30T13:14:25.297635",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan Chen",
+    "pronouns": "they/them",
+    "age": 35,
+    "personality_traits": [
+      "loyal",
+      "collaborative",
+      "obsessive",
+      "courageous"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:25.297657",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

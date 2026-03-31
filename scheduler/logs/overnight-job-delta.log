@@ -118,3 +118,44 @@ Wayback CDX fallback (domain prefix, local filter):
 
 CDX total: 162 unique job URLs -> cc-discovered-raw.json
 [Sun 03/29/2026  3:01:00.56] Done 
+[Mon 03/30/2026  3:00:01.72] Job source daily delta starting 
+Active job boards: 60
+Company career pages: 488
+Updated daily-scraper-config.json:
+  Job boards: 60
+  Career pages: 488
+  Total targets: 548
+
+=== CDX Pass: CC-MAIN-2024-51 ===
+CC-MAIN-2026-12 prefix queries + local filter:
+  lever (jobs.lever.co/): 0 matching URLs
+  greenhouse (boards.greenhouse.io/): 0 matching URLs
+  ashby (jobs.ashbyhq.com/): 1 matching URLs
+  whatnot (careers.whatnot.com/): 0 matching URLs
+  ebay (careers.ebayinc.com/): 0 matching URLs
+  mercari (careers.mercari.com/): 0 matching URLs
+  poshmark: ERROR - HTTP Error 404: Not Found
+  remoteok (remoteok.com/): 100 matching URLs
+  wwr (weworkremotely.com/remote-jobs/): 58 matching URLs
+
+Wayback CDX fallback (domain prefix, local filter):
+  Wayback lever: ERROR - timed out
+  Wayback greenhouse: ERROR - timed out
+  Wayback ashby: ERROR - timed out
+  Wayback whatnot: 1 URLs
+  Wayback ebay: 1 URLs
+  Wayback mercari: ERROR - timed out
+
+CDX total: 161 unique job URLs -> cc-discovered-raw.json
+[Mon 03/30/2026  3:02:02.71] Done 
+[Tue 03/31/2026  3:00:02.87] Job daily harvest starting 
+[2026-03-31 03:00:04] Job daily harvest starting
+Traceback (most recent call last):
+  File "G:\My Drive\Projects\job-match\job_daily_harvest.py", line 24, in <module>
+    log("Job daily harvest starting")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Projects\job-match\job_daily_harvest.py", line 21, in log
+    with open(LOG, "a", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/scheduler/logs/overnight-job-delta.log'
+[Tue 03/31/2026  3:00:04.91] Done 

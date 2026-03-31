@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-049",
+  "name": "Morgan Smith",
+  "universe": "original-fiction",
+  "archetype": "caregiver",
+  "created_date": "2026-03-30T13:14:31.347765",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan Smith",
+    "pronouns": "they/them",
+    "age": 35,
+    "personality_traits": [
+      "energetic",
+      "resilient",
+      "conflicted",
+      "spontaneous"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:31.347786",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

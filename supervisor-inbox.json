@@ -1,50 +1,12 @@
-{
-  "items": [
-    {
-      "id": "constitutional-update-2026-03-25",
-      "source": "claude-code",
-      "type": "system",
-      "urgency": "INFO",
-      "timestamp": "2026-03-25T22:26:05.080115",
-      "status": "PENDING",
-      "title": "Constitutional Update + Agent Network Activation Complete",
-      "finding": "All 8 activation steps executed. CLAUDE.md updated with constitutional principles. 5 comms log files created. Protocol appended to 18 agents. supervisor.md and whiteboard-agent.md extended. 13 new tasks registered (23 total in Studio folder, all Ready). run-agent.py dispatcher created. Step 8 (studio.html) held pending approval.",
-      "action": "Approve studio.html supervisor panel write \u2014 say 'approved' or 'write studio.html' to proceed",
-      "tasks_registered": [
-        "Studio/SupervisorBriefing @ 8:00am daily",
-        "Studio/WorkflowIntelligence @ 8:05am daily",
-        "Studio/GitCommitNightly @ 11:00pm daily",
-        "Studio/HeartbeatCheck @ 11:30pm daily",
-        "Studio/ProductArchaeology @ 2:00am daily",
-        "Studio/Janitor @ Monday 7:00am",
-        "Studio/GitScout @ Monday 7:15am",
-        "Studio/IntelFeed @ Monday 7:30am",
-        "Studio/SkillImprover @ Saturday 11:00pm",
-        "Studio/WhiteboardAgent @ Sunday 1:00am",
-        "Studio/WhiteboardScorer @ Sunday 2:00am",
-        "Studio/PeerReview @ Sunday 3:00am",
-        "Studio/CommonCrawlTrigger @ monthly 5th 6:00am"
-      ]
-    },
-    {
-      "id": "nit-briefing-20260325230110",
-      "source": "nit-test",
-      "type": "system",
-      "urgency": "INFO",
-      "title": "[NIT] Fire drill \u2014 synthetic briefing",
-      "finding": "NIT fire drill test. Ignore. Auto-dismiss.",
-      "status": "PENDING",
-      "date": "2026-03-25T23:01:10.621322"
-    },
-    {
-      "id": "nit-summary-20260325",
-      "source": "nit-test",
-      "type": "system",
-      "urgency": "INFO",
-      "title": "NIT Fire Drill Complete \u2014 PARTIAL (8/10 PASS)",
-      "finding": "T01-T04,T07-T10 PASS. T05 PARTIAL (studio.html inbox panel not built, Step 8 HELD). T06 PARTIAL (scheduler fires, run-agent.py executes, claude CLI not found at system PATH \u2014 graceful fail works). heartbeat-log.json format repaired (was corrupt list). Network verdict: PARTIAL.",
-      "status": "PENDING",
-      "date": "2026-03-25T23:08:31.298624"
-    }
-  ]
-}
+[
+  {
+    "id": "sre-warn-20260331",
+    "source": "sre-scout",
+    "type": "health",
+    "urgency": "WARN",
+    "title": "SRE WARNING \u2014 overnight job errors + dirty repos",
+    "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.",
+    "status": "PENDING",
+    "date": "2026-03-31T03:31:58.008220"
+  }
+]

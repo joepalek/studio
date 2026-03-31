@@ -1,0 +1,140 @@
+{
+  "systems_complexity": {
+    "keywords": [
+      "complex adaptive systems",
+      "emergence",
+      "self-organization",
+      "feedback loops",
+      "nonlinear dynamics",
+      "systems theory",
+      "chaos theory",
+      "criticality"
+    ],
+    "experts": [
+      "Dr. Kauffman",
+      "Dr. Wolfram",
+      "Dr. Simon"
+    ],
+    "priority": 1
+  },
+  "information_computation": {
+    "keywords": [
+      "information theory",
+      "algorithmic information",
+      "computation",
+      "Turing",
+      "computability",
+      "complexity theory",
+      "category theory",
+      "compression"
+    ],
+    "experts": [
+      "Dr. Shannon",
+      "Dr. Chaitin",
+      "Dr. Hofstadter"
+    ],
+    "priority": 1
+  },
+  "economics_game_theory": {
+    "keywords": [
+      "game theory",
+      "Nash equilibrium",
+      "mechanism design",
+      "behavioral economics",
+      "market dynamics",
+      "auction theory",
+      "cooperative games"
+    ],
+    "experts": [
+      "Dr. von Neumann",
+      "Dr. Nash",
+      "Dr. Thaler"
+    ],
+    "priority": 2
+  },
+  "organizational_behavioral": {
+    "keywords": [
+      "organizational learning",
+      "bounded rationality",
+      "decision making",
+      "organizational structure",
+      "behavioral science",
+      "sense-making",
+      "hierarchy"
+    ],
+    "experts": [
+      "Dr. Simon",
+      "Dr. March",
+      "Dr. Weick"
+    ],
+    "priority": 2
+  },
+  "networks_emergence": {
+    "keywords": [
+      "network theory",
+      "scale-free networks",
+      "power laws",
+      "graph theory",
+      "small world",
+      "network dynamics",
+      "centrality"
+    ],
+    "experts": [
+      "Dr. Barab\u00e1si",
+      "Dr. Newman",
+      "Dr. Strogatz"
+    ],
+    "priority": 2
+  },
+  "epistemology_philosophy_science": {
+    "keywords": [
+      "philosophy of science",
+      "epistemology",
+      "paradigm shift",
+      "scientific method",
+      "falsifiability",
+      "knowledge representation",
+      "ontology"
+    ],
+    "experts": [
+      "Dr. Kuhn",
+      "Dr. Lakatos",
+      "Dr. Popper"
+    ],
+    "priority": 3
+  },
+  "cognitive_ai": {
+    "keywords": [
+      "cognitive science",
+      "artificial intelligence",
+      "embodied cognition",
+      "consciousness",
+      "neural networks",
+      "machine learning",
+      "reasoning"
+    ],
+    "experts": [
+      "Dr. Minsky",
+      "Dr. Dennett",
+      "Dr. LeCun"
+    ],
+    "priority": 2
+  },
+  "physics_thermodynamics": {
+    "keywords": [
+      "entropy",
+      "thermodynamics",
+      "statistical mechanics",
+      "dissipative structures",
+      "far-from-equilibrium",
+      "phase transitions",
+      "order from chaos"
+    ],
+    "experts": [
+      "Dr. Prigogine",
+      "Dr. Boltzmann",
+      "Dr. Gibbs"
+    ],
+    "priority": 3
+  }
+}

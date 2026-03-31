@@ -52,18 +52,5 @@
       ]
     }
   ],
-  "ready_to_build": [
-    {
-      "project": "sentinel-core",
-      "next": ""
-    },
-    {
-      "project": "sentinel-performer",
-      "next": ""
-    },
-    {
-      "project": "sentinel-viewer",
-      "next": ""
-    }
-  ]
+  "ready_to_build": []
 }

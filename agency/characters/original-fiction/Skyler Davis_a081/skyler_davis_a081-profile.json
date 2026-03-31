@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-agent-081",
+  "name": "Skyler Davis",
+  "universe": "original-fiction",
+  "archetype": "trickster",
+  "created_date": "2026-03-30T13:15:10.909702",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Skyler Davis",
+    "pronouns": "he/him",
+    "age": 42,
+    "personality_traits": [
+      "meticulous",
+      "paranoid",
+      "logical",
+      "suspicious",
+      "courageous",
+      "destructive",
+      "impulsive"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:10.909725",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

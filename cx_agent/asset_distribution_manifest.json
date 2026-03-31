@@ -1,9 +1,9 @@
 {
   "system": "Master Asset Creation & Distribution Router",
   "version": "1.0",
-  "last_updated": "2026-03-29",
+  "last_updated": "2026-03-30",
   "created_by": "Joe Palek",
-  "purpose": "Route all agent-created assets to destinations, route through CX Agent validation, track usage for social media amplification",
+  "purpose": "Route all agent-created assets to destinations, validate via CX Agent, track usage",
   
   "creator_agents": {
     "eBay_Listing_Agent": {
@@ -147,91 +147,9 @@
     "escalation": "quality_fails or_routing_errors → whiteboard for manual review"
   },
 
-  "asset_creation_log_schema": {
-    "asset_id": "uuid or agent_name-timestamp",
-    "creator_agent": "string (e.g., eBay_Listing_Agent)",
-    "asset_type": "string (e.g., listing, character_file, book)",
-    "created_at": "ISO 8601 timestamp",
-    "content_preview": "string (first 500 chars or structured metadata)",
-    
-    "validation": {
-      "cx_agent_reviewed_at": "ISO 8601 timestamp",
-      "format_check": "pass/fail",
-      "quality_score": "1-10",
-      "brand_alignment": "pass/fail",
-      "overall_status": "pass/review/reject",
-      "cx_agent_notes": "string"
-    },
-    
-    "routing": {
-      "destination_type": "string (eBay, project_folder, characters_final, etc.)",
-      "destination_path": "string (full path or API endpoint)",
-      "routed_at": "ISO 8601 timestamp",
-      "routing_status": "success/pending/failed"
-    },
-    
-    "usage_tracking": {
-      "first_usage_at": "ISO 8601 timestamp (when first consumed/viewed/loaded)",
-      "usage_count": "integer (cumulative)",
-      "performance_signals": {
-        "views_impressions": "integer",
-        "engagement": "string (e.g., click_through_rate, conversion_rate)",
-        "feedback_score": "1-5 or null",
-        "social_amplification_triggered": "boolean"
-      },
-      "last_checked_at": "ISO 8601 timestamp",
-      "status": "active/archived/underperforming"
-    },
-    
-    "social_media_feed": {
-      "amplification_candidate": "boolean",
-      "signal_strength": "high/medium/low",
-      "suggested_channel": "string (Twitter, YouTube, Instagram, Newsletter)",
-      "suggested_narrative": "string (short hook for marketing)"
-    }
-  },
-
-  "sample_log_entry": {
-    "asset_id": "ebay_listing_20260329_001",
-    "creator_agent": "eBay_Listing_Agent",
-    "asset_type": "listing",
-    "created_at": "2026-03-29T14:32:00Z",
-    "content_preview": "{\"sku\": \"vintage_bears_poster\", \"title\": \"1985 Chicago Bears Championship Poster\", \"price\": 45.00, \"condition\": \"mint\"}",
-    
-    "validation": {
-      "cx_agent_reviewed_at": "2026-03-29T14:35:00Z",
-      "format_check": "pass",
-      "quality_score": 9,
-      "brand_alignment": "pass",
-      "overall_status": "pass",
-      "cx_agent_notes": "Strong imagery, accurate historical detail, aligns with Commonwealth Picker brand"
-    },
-    
-    "routing": {
-      "destination_type": "eBay",
-      "destination_path": "https://api.ebay.com/v1/item/upload",
-      "routed_at": "2026-03-29T14:36:00Z",
-      "routing_status": "success"
-    },
-    
-    "usage_tracking": {
-      "first_usage_at": "2026-03-29T15:00:00Z",
-      "usage_count": 12,
-      "performance_signals": {
-        "views_impressions": 342,
-        "engagement": "click_through_rate_5.2%",
-        "feedback_score": 5,
-        "social_amplification_triggered": true
-      },
-      "last_checked_at": "2026-03-29T18:00:00Z",
-      "status": "active"
-    },
-    
-    "social_media_feed": {
-      "amplification_candidate": true,
-      "signal_strength": "high",
-      "suggested_channel": "Twitter",
-      "suggested_narrative": "Nostalgia drop: 1985 Bears championship poster just listed. Perfect for collectors. Link in bio."
-    }
+  "validation_thresholds": {
+    "pass": "format ✓ + quality >= 8 + brand_alignment ✓",
+    "review": "format ✓ + (quality 5-7 OR brand_alignment ✗)",
+    "reject": "format ✗ OR quality < 5"
   }
 }

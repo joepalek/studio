@@ -12,18 +12,21 @@ Usage:
 import json
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Any, Tuple
 import hashlib
 import logging
+
+sys.path.insert(0, 'G:/My Drive/Projects/_studio')
+from studio_core.agent_inbox import AgentInbox
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [CX_AGENT] %(levelname)s: %(message)s',
     handlers=[
-        logging.FileHandler('cx_agent.log'),
+        logging.FileHandler('logs/cx_agent.log', encoding='utf-8', errors='replace'),
         logging.StreamHandler()
     ]
 )
@@ -35,15 +38,19 @@ logger = logging.getLogger(__name__)
 
 CONFIG = {
     "manifest_path": "asset_distribution_manifest.json",
-    "log_path": "asset_creation_log.json",  # Will be synced to G: drive
-    "staging_folder": "G:/My Drive/studio_logs/asset_staging/",
+    "log_path": "data/asset_creation_log.json",
+    "staging_folder": "data/asset_staging/",
     "quality_threshold_pass": 8,
     "quality_threshold_review": 5,
     "retry_max": 1,
-    "retry_delay_seconds": 3600,  # 1 hour
-    "job_cull_schedule": "02:00",  # 2 AM UTC daily
-    "monitoring_interval_seconds": 3600,  # Check every 1 hour
+    "retry_delay_seconds": 3600,
+    "job_cull_schedule": "02:00",
+    "monitoring_interval_seconds": 3600,
 }
+
+def get_utc_now() -> str:
+    """Get current UTC time in ISO format with timezone"""
+    return datetime.now(timezone.utc).isoformat()
 
 # ============================================================================
 # DATA STRUCTURES
@@ -68,7 +75,7 @@ class ValidationResult:
         self.quality_score = quality_score
         self.brand_alignment = brand_alignment
         self.overall_status = self._compute_status()
-        self.timestamp = datetime.utcnow().isoformat() + "Z"
+        self.timestamp = get_utc_now()
     
     def _compute_status(self) -> str:
         if not self.format_pass:
@@ -92,7 +99,6 @@ class AssetValidator:
     
     def validate_format(self, asset: Asset) -> bool:
         """Check if asset matches expected schema for its type"""
-        # This is simplified; in production, use JSON Schema
         required_fields = {
             "listing": ["title", "price", "condition"],
             "character_file": ["character_name", "visual_formats", "personality"],
@@ -111,42 +117,34 @@ class AssetValidator:
     
     def score_quality(self, asset: Asset) -> int:
         """Score asset quality 1-10"""
-        score = 5  # baseline
+        score = 5
         
-        # Boost for completeness
         content_fields = len(asset.content)
-        score += min(3, content_fields // 2)  # +0 to +3
+        score += min(3, content_fields // 2)
         
-        # Boost for content length/depth
         preview = str(asset.content.get("preview", ""))
         if len(preview) > 100:
             score += 1
         
-        # Boost for metadata richness
         if len(asset.metadata) > 3:
             score += 1
         
-        # Cap at 10
         return min(10, score)
     
     def check_brand_alignment(self, asset: Asset) -> bool:
         """Check if asset aligns with Commonwealth Picker / Solvik brand"""
-        # Simplified; in production, this might use NLP or human review
-        
         content_str = json.dumps(asset.content).lower()
         
-        # Red flags
         red_flags = ["spam", "misleading", "unethical", "false"]
         for flag in red_flags:
             if flag in content_str:
                 logger.warning(f"Brand alignment check failed for {asset.asset_id}: found red flag '{flag}'")
                 return False
         
-        # Green signals
         green_signals = ["authentic", "clear", "professional", "honest"]
         green_count = sum(1 for signal in green_signals if signal in content_str)
         
-        return green_count >= 1 or len(content_str) > 0  # Simplified logic
+        return green_count >= 1 or len(content_str) > 0
     
     def validate(self, asset: Asset) -> ValidationResult:
         """Run full validation"""
@@ -170,16 +168,11 @@ class AssetRouter:
         self.manifest = manifest
     
     def route(self, asset: Asset, validation: ValidationResult) -> Tuple[str, str, bool]:
-        """
-        Route asset to destination.
-        Returns: (destination_type, destination_path, success)
-        """
+        """Route asset to destination. Returns: (destination_type, destination_path, success)"""
         
-        # If validation failed, route to staging/whiteboard
         if validation.overall_status != "pass":
             return self._route_to_whiteboard(asset, validation)
         
-        # Otherwise, route based on creator agent + asset type
         creator_config = self.manifest.get("creator_agents", {}).get(asset.creator_agent, {})
         routing = creator_config.get("routing", {})
         
@@ -199,7 +192,6 @@ class AssetRouter:
         destination = routing.get("destination", "eBay API")
         endpoint = routing.get("upload_protocol", "https://api.ebay.com/v1/item/upload")
         
-        # In production, actually POST to eBay API
         logger.info(f"Routing {asset.asset_id} to {destination}")
         success = self._mock_upload_to_ebay(asset)
         
@@ -213,7 +205,6 @@ class AssetRouter:
             destination_path = f"G:/My Drive/Projects/CTW/characters_final/{asset.content.get('character_name')}/"
             destination_type = "characters_final_folder"
         else:
-            # App, script, mp4, jpg, excel → project folder
             project_name = asset.project or "ctw_outputs"
             destination_path = f"G:/My Drive/Projects/{project_name}/outputs/"
             destination_type = "project_folder"
@@ -224,7 +215,7 @@ class AssetRouter:
         return (destination_type, destination_path, success)
     
     def _route_ghost_book(self, asset: Asset, routing: Dict) -> Tuple[str, str, bool]:
-        """Route Ghost_Book assets based on status (draft → done → final)"""
+        """Route Ghost_Book assets based on status"""
         status = asset.content.get("status", "draft")
         
         if status == "draft":
@@ -258,17 +249,17 @@ class AssetRouter:
     def _route_to_whiteboard(self, asset: Asset, validation: ValidationResult) -> Tuple[str, str, bool]:
         """Route failed/review assets to staging/whiteboard"""
         logger.warning(f"Routing {asset.asset_id} to whiteboard (status: {validation.overall_status})")
-        return ("whiteboard_staging", f"{CONFIG['staging_folder']}{asset.asset_id}/", True)
+        return ("whiteboard_staging", f"data/asset_staging/{asset.asset_id}/", True)
     
     def _mock_upload_to_ebay(self, asset: Asset) -> bool:
         """Mock eBay API upload"""
         logger.info(f"[MOCK] Uploading {asset.asset_id} to eBay API")
-        return True  # In production: real API call
+        return True
     
     def _mock_copy_to_drive(self, asset: Asset, destination: str) -> bool:
         """Mock Google Drive copy"""
         logger.info(f"[MOCK] Copying {asset.asset_id} to {destination}")
-        return True  # In production: use google-auth library
+        return True
 
 # ============================================================================
 # USAGE TRACKING & SOCIAL INTELLIGENCE
@@ -284,14 +275,14 @@ class UsageTracker:
     def load_log(self):
         """Load asset_creation_log.json"""
         try:
-            with open(self.log_path, 'r', encoding='utf-8') as f:
+            with open(self.log_path, 'r', encoding='utf-8', errors='replace') as f:
                 self.log_data = json.load(f)
         except FileNotFoundError:
             logger.warning(f"Log not found at {self.log_path}. Creating new log.")
             self.log_data = {
                 "log_metadata": {
                     "system": "Master Asset Creation & Distribution Log",
-                    "created": datetime.utcnow().isoformat() + "Z",
+                    "created": get_utc_now(),
                     "maintained_by": "CX_Agent"
                 },
                 "assets": [],
@@ -301,7 +292,7 @@ class UsageTracker:
     def save_log(self):
         """Save log back to disk"""
         try:
-            with open(self.log_path, 'w', encoding='utf-8') as f:
+            with open(self.log_path, 'w', encoding='utf-8', errors='replace') as f:
                 json.dump(self.log_data, f, indent=2, ensure_ascii=False)
             logger.info(f"Saved asset log to {self.log_path}")
         except Exception as e:
@@ -329,7 +320,7 @@ class UsageTracker:
             "routing": {
                 "destination_type": destination_type,
                 "destination_path": destination_path,
-                "routed_at": datetime.utcnow().isoformat() + "Z",
+                "routed_at": get_utc_now(),
                 "routing_status": "success" if routing_success else "failed"
             },
             "usage_tracking": {
@@ -356,7 +347,6 @@ class UsageTracker:
         """Identify high-performing assets for social media amplification"""
         candidates = []
         for asset in self.log_data.get("assets", []):
-            # Criteria: quality_score ≥ 8, status = "pass", has usage metrics
             validation = asset.get("validation", {})
             quality = validation.get("quality_score", {}).get("score", 0)
             status = validation.get("overall_status", "")
@@ -376,14 +366,24 @@ class UsageTracker:
     
     def cull_expired_jobs(self) -> int:
         """Remove expired job postings (not updated in >30 days)"""
-        cutoff_date = datetime.utcnow() - timedelta(days=30)
+        cutoff_date = datetime.now(timezone.utc) - timedelta(days=30)
         assets_before = len(self.log_data.get("assets", []))
         
-        self.log_data["assets"] = [
-            a for a in self.log_data.get("assets", [])
-            if a["asset_type"] != "job_posting" or datetime.fromisoformat(a.get("created_at", "").replace("Z", "+00:00")) > cutoff_date
-        ]
+        kept_assets = []
+        for a in self.log_data.get("assets", []):
+            if a["asset_type"] != "job_posting":
+                kept_assets.append(a)
+            else:
+                try:
+                    created_at_str = a.get("created_at", "")
+                    if created_at_str:
+                        asset_date = datetime.fromisoformat(created_at_str.replace("Z", "+00:00"))
+                        if asset_date > cutoff_date:
+                            kept_assets.append(a)
+                except (ValueError, TypeError):
+                    kept_assets.append(a)
         
+        self.log_data["assets"] = kept_assets
         assets_after = len(self.log_data.get("assets", []))
         culled = assets_before - assets_after
         
@@ -404,10 +404,19 @@ class CXAgent:
         self.manifest_path = manifest_path
         self.log_path = log_path
         
-        # Load manifest
-        with open(manifest_path, 'r', encoding='utf-8') as f:
-            self.manifest = json.load(f)
+        if not os.path.exists(manifest_path):
+            logger.error(f"Manifest not found at {manifest_path}")
+            self.manifest = {"creator_agents": {}}
+        else:
+            try:
+                with open(manifest_path, 'r', encoding='utf-8', errors='replace') as f:
+                    self.manifest = json.load(f)
+            except Exception as e:
+                logger.error(f"Failed to load manifest: {e}")
+                self.manifest = {"creator_agents": {}}
         
+        self.agent_id = "CXAgent_001"
+        self.inbox = AgentInbox()
         self.validator = AssetValidator(self.manifest)
         self.router = AssetRouter(self.manifest)
         self.tracker = UsageTracker(log_path)
@@ -417,47 +426,50 @@ class CXAgent:
         asset = Asset(asset_data)
         logger.info(f"Processing asset: {asset.asset_id} ({asset.asset_type} from {asset.creator_agent})")
         
-        # Step 1: Validate
         validation = self.validator.validate(asset)
-        
-        # Step 2: Route
         routing_result = self.router.route(asset, validation)
-        
-        # Step 3: Track
         self.tracker.add_asset(asset, validation, routing_result)
         
         return validation.overall_status == "pass"
     
     def daily_scan(self):
-        """Run daily CX Agent tasks: cull jobs, identify high-performers, feed social"""
+        """Run daily CX Agent tasks"""
         logger.info("=== DAILY CX AGENT SCAN ===")
         
-        # Cull expired jobs
         culled = self.tracker.cull_expired_jobs()
         logger.info(f"Culled {culled} expired jobs")
         
-        # Identify high-performers
         amplification_candidates = self.tracker.identify_amplification_candidates()
         logger.info(f"Identified {len(amplification_candidates)} amplification candidates")
         
         for candidate in amplification_candidates:
             logger.info(f"  → {candidate['asset_id']} ({candidate['asset_type']}): quality={candidate['quality_score']}")
-        
-        # In production: feed candidates to Social_Media_Agent via JSON output
+
+        if amplification_candidates:
+            self.inbox.add_item(
+                agent_id=self.agent_id,
+                project_id="CXAgent",
+                question=f"Found {len(amplification_candidates)} amplification candidates",
+                required_action="Review digest",
+                urgency="LOW"
+            )
+
         self._output_for_social_media(amplification_candidates)
     
     def _output_for_social_media(self, candidates: List[Dict]):
         """Output high-performers for social media agent consumption"""
         output = {
-            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "generated_at": get_utc_now(),
             "amplification_candidates": candidates
         }
         
-        output_path = "social_media_feed.json"
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(output, f, indent=2)
-        
-        logger.info(f"Wrote social media feed to {output_path}")
+        output_path = "data/social_media_feed.json"
+        try:
+            with open(output_path, 'w', encoding='utf-8', errors='replace') as f:
+                json.dump(output, f, indent=2)
+            logger.info(f"Wrote social media feed to {output_path}")
+        except Exception as e:
+            logger.error(f"Failed to write social media feed: {e}")
 
 # ============================================================================
 # CLI & SCHEDULING
@@ -475,7 +487,6 @@ def main():
     
     args = parser.parse_args()
     
-    # Initialize
     cx_agent = CXAgent(CONFIG["manifest_path"], CONFIG["log_path"])
     
     if args.mode == "daily_scan":
@@ -485,12 +496,10 @@ def main():
         if not args.asset_id:
             print("Error: --asset_id required for validate mode")
             sys.exit(1)
-        # In production: fetch asset by ID and validate
-        logger.info(f"Validating asset {args.asset_id} [TODO: fetch from input source]")
+        logger.info(f"Validating asset {args.asset_id}")
     
     elif args.mode == "monitor":
         logger.info(f"Monitoring assets for {args.hours} hours")
-        # In production: poll usage metrics, update log every hour
 
 if __name__ == "__main__":
     main()

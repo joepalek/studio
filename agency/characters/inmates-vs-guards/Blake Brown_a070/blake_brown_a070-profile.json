@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-070",
+  "name": "Blake Brown",
+  "universe": "inmates-vs-guards",
+  "archetype": "corrupt_guard",
+  "created_date": "2026-03-30T13:15:07.628856",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Brown",
+    "pronouns": "she/her",
+    "age": 42,
+    "personality_traits": [
+      "delusional",
+      "suspicious",
+      "destructive",
+      "thoughtful",
+      "rebellious"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Made a pivotal decision that changed the course of their life."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:07.628877",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-claude-081",
+  "name": "Blake Rodriguez",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-03-30T13:14:13.124533",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Rodriguez",
+    "pronouns": "he/him",
+    "age": 42,
+    "personality_traits": [
+      "rebellious",
+      "collaborative",
+      "patient",
+      "possessive"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Made a pivotal decision that changed the course of their life."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:13.124555",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

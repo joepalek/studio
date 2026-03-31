@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-057",
+  "name": "Casey Davis",
+  "universe": "inmates-vs-guards",
+  "archetype": "lifer",
+  "created_date": "2026-03-30T13:15:03.426588",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Casey Davis",
+    "pronouns": "he/him",
+    "age": 55,
+    "personality_traits": [
+      "diplomatic",
+      "logical",
+      "cautious",
+      "spontaneous",
+      "collaborative",
+      "jaded"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:03.426609",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

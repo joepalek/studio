@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-gemini-069",
+  "name": "River Martinez",
+  "universe": "original-fiction",
+  "archetype": "everyman",
+  "created_date": "2026-03-30T13:14:36.665283",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "River Martinez",
+    "pronouns": "he/him",
+    "age": 65,
+    "personality_traits": [
+      "intuitive",
+      "adaptable",
+      "obsessive",
+      "intelligent",
+      "conflicted"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:36.665305",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

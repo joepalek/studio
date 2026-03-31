@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-003",
+  "name": "Alex O'Brien",
+  "universe": "original-fiction",
+  "archetype": "everyman",
+  "created_date": "2026-03-30T13:14:19.275748",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Alex O'Brien",
+    "pronouns": "they/them",
+    "age": 22,
+    "personality_traits": [
+      "meticulous",
+      "insecure",
+      "conflicted",
+      "suspicious"
+    ],
+    "voice": "cold and analytical",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:19.275771",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

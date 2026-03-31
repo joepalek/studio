@@ -1,0 +1,8 @@
+[2026-03-31 02:58:01] [LOGGER] [INFO] Log file initialized for GameArchaeology_Legal_001
+[2026-03-31 02:58:01] [GameArchaeology_Legal_001] [INFO] GameArchaeology_Legal_001 initialized.
+[2026-03-31 02:58:02] [GameArchaeology_Legal_001] [INFO] Assessing batch of 3 games...
+[2026-03-31 02:58:02] [GameArchaeology_Legal_001] [DEBUG] Assessing: Hellmaze (2010-01-01)
+[2026-03-31 02:58:02] [GameArchaeology_Legal_001] [DEBUG] Assessing: Flappy Bird Clone v3 (2014-01-01)
+[2026-03-31 02:58:02] [GameArchaeology_Legal_001] [DEBUG] Assessing: Mario Remake 2023 (2023-01-01)
+[2026-03-31 02:58:02] [GameArchaeology_Legal_001] [INFO] Batch assessment complete: 3 games reviewed
+[2026-03-31 02:58:02] [GameArchaeology_Legal_001] [INFO] Exported 3 assessments to game_archaeology_legal_results.json

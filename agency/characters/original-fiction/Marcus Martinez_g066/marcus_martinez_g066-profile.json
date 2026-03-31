@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-gemini-066",
+  "name": "Marcus Martinez",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-03-30T13:14:36.367668",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Marcus Martinez",
+    "pronouns": "she/her",
+    "age": 35,
+    "personality_traits": [
+      "charismatic",
+      "artistic",
+      "courageous",
+      "patient",
+      "independent",
+      "spontaneous"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Carries deep regrets about choices made years ago."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:36.367689",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

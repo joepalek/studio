@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-agent-047",
+  "name": "Skyler O'Brien",
+  "universe": "inmates-vs-guards",
+  "archetype": "corrupt_guard",
+  "created_date": "2026-03-30T13:08:09.195782",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Skyler O'Brien",
+    "pronouns": "she/her",
+    "age": 42,
+    "personality_traits": [
+      "insightful",
+      "principled",
+      "logical",
+      "destructive",
+      "vindictive",
+      "resilient",
+      "obsessive"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:08:09.195793",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

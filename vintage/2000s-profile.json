@@ -51,7 +51,7 @@
     "music": [
       "Pop Punk (e.g., Green Day)",
       "Hip Hop (e.g., Eminem, Jay-Z)",
-      "Pop Divas (e.g., Britney Spears, Beyonc\u00e9)"
+      "Pop Divas (e.g., Britney Spears, Beyoncé)"
     ],
     "movies": [
       "The Lord of the Rings Trilogy",
@@ -90,6 +90,16 @@
       "name": "Microsoft Zune",
       "why_failed": "Attempted to compete with the dominant iPod but lacked a compelling ecosystem and late market entry, failing to capture significant market share.",
       "modern_gap": "No, the market for dedicated portable music players has largely been superseded by smartphones and streaming services."
+    },
+    {
+      "name": "Segway Personal Transporter",
+      "why_failed": "Launched in 2001 with Dean Kamen promising it would replace cars in cities, the ,000 Segway was too slow for roads and illegal on sidewalks, leaving it stranded in no-man's land. Cities banned it. Consumers mocked it. The brand became a mall-cop punchline.",
+      "modern_gap": "Electric scooters and e-bikes partially fill the urban micro-mobility gap, but a truly mainstream affordable last-mile personal vehicle has not been built."
+    },
+    {
+      "name": "HD DVD",
+      "why_failed": "Toshiba's HD DVD lost the next-generation disc format war to Sony's Blu-ray in early 2008 after Warner Bros. and major retailers backed Blu-ray exclusively. Millions of consumers who bought HD DVD players were left with obsolete hardware.",
+      "modern_gap": "None — Blu-ray won, and streaming has since made physical media secondary. The format war itself was the last major consumer format battle before streaming rendered the question moot."
     }
   ],
   "ebay_hot_now": [

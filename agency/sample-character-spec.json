@@ -1,0 +1,32 @@
+{
+  "id": "char-inmates-marcus-20260330",
+  "name": "Marcus",
+  "universe": "inmates-vs-guards",
+  "archetype": "reformed_inmate",
+  "created_by": "character-spec-generator",
+  "status": "draft",
+  "pronouns": "he/him",
+  "age": 42,
+  "personality_traits": [
+    "philosophical",
+    "reformed",
+    "mentor_figure",
+    "conflicted_about_past",
+    "quiet_strength",
+    "observant"
+  ],
+  "voice": "Deep, measured tone. Speaks carefully. Uses simple metaphors about redemption and second chances. Listens more than he talks.",
+  "archetype_description": "A long-term inmate who found redemption through education and helping younger prisoners. Serves as moral center of the story.",
+  "backstory": "Marcus spent 20 years inside for armed robbery. In year 15, he discovered reading and mentoring through a prison education program. By year 20, he was the prison's informal counselor and mediator. His journey is one of genuine transformation—not redemption given to him, but earned through daily choice.",
+  "visual_description": "Mid-40s, African American, weathered face with intelligence in his eyes. Scarred forearms (old prison tattoos and marks). Carries himself with quiet dignity despite prison grays. Facial hair neatly kept. Movements are economical and purposeful.",
+  "visual_references": [
+    "calm mentor figure with depth",
+    "weathered but hopeful",
+    "Denzel Washington in 'The Hurricane'",
+    "quiet strength, not swagger"
+  ],
+  "art_dept_notes": "Visual must convey both toughness and redemption. The scars are important—they tell his story without words. Eyes are critical: intelligent, compassionate, but with depth of hard experience. When he smiles, it should carry weight. Avoid stereotypes of reformed prisoners—Marcus is dignified, not grateful.",
+  "marketing_plan": "Position Marcus as the heart of Inmates vs Guards. Appeal to audiences interested in redemption and systemic justice narratives. Use philosophical quotes in social media. His character is suitable for merchandise, podcasts about incarceration, educational content about rehabilitation.",
+  "revenue_potential": "LARGE",
+  "notes": "Test character for Inmates vs Guards Season 1. Primary protagonist arc: prisoner → trusted mediator → symbol of redemption. Works in both dramatic scenes and comedic moments with other inmates."
+}

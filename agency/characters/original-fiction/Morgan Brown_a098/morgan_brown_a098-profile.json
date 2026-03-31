@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-agent-098",
+  "name": "Morgan Brown",
+  "universe": "original-fiction",
+  "archetype": "lover",
+  "created_date": "2026-03-30T13:15:16.117907",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan Brown",
+    "pronouns": "they/them",
+    "age": 22,
+    "personality_traits": [
+      "meticulous",
+      "paranoid",
+      "courageous",
+      "creative",
+      "technical",
+      "intelligent",
+      "collaborative"
+    ],
+    "voice": "cold and analytical",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:16.117928",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

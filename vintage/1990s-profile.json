@@ -97,11 +97,16 @@
       "name": "Virtual Boy",
       "why_failed": "Suffered from monochromatic red display, caused eye strain, lacked immersive games, and was marketed poorly.",
       "modern_gap": "No, modern VR headsets offer full color and far superior immersion, rendering the Virtual Boy's niche obsolete."
+    },
+    {
+      "name": "Circuit City DIVX Disposable DVD",
+      "why_failed": "DIVX discs (1998) cost -5 each and expired after 48 hours of first play, requiring a modem-connected player and monthly fees to reactivate. Consumers revolted publicly, retailers chose DVD, and Circuit City lost 14 million writing off the system in 1999.",
+      "modern_gap": "None. Streaming services solved disposable rental perfectly — but DIVX was the first attempt at DRM-gated consumption and got everything wrong."
     }
   ],
   "ebay_hot_now": [
     "Vintage band t-shirts (e.g., Nirvana, Pearl Jam)",
-    "Original Pok\u00e9mon trading card sets (Base Set, Jungle, Fossil)",
+    "Original Pokémon trading card sets (Base Set, Jungle, Fossil)",
     "First-generation Tamagotchi virtual pets"
   ],
   "ebay_sleepers": [

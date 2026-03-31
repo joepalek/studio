@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-claude-068",
+  "name": "Phoenix Smith",
+  "universe": "original-fiction",
+  "archetype": "trickster",
+  "created_date": "2026-03-30T13:14:09.309097",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Phoenix Smith",
+    "pronouns": "they/them",
+    "age": 28,
+    "personality_traits": [
+      "independent",
+      "possessive",
+      "ambitious",
+      "meticulous"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:09.309121",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

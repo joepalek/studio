@@ -1,0 +1,140 @@
+{
+  "_schema": "1.0",
+  "_description": "API and service resource tracker. Updated by agents as resources are used.",
+  "_last_updated": "2026-03-31",
+  "assets": [
+    {
+      "id": "anthropic-claude",
+      "name": "Anthropic Claude API",
+      "type": "llm",
+      "service_type": "chat",
+      "status": "active",
+      "tier": "paid",
+      "monthly_limit": null,
+      "daily_limit": null,
+      "usage_this_month": {
+        "calls": 0,
+        "tokens": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "Primary reasoning engine. claude-sonnet-4-6 default.",
+      "url": "https://console.anthropic.com"
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini API",
+      "type": "llm",
+      "service_type": "chat",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": null,
+      "daily_limit": 1500,
+      "usage_this_month": {
+        "calls": 0,
+        "tokens": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "Used for spec grading, batch work, Gemini Flash free tier.",
+      "url": "https://aistudio.google.com"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter API",
+      "type": "llm",
+      "service_type": "chat",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": null,
+      "daily_limit": null,
+      "usage_this_month": {
+        "calls": 0,
+        "tokens": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "Sidebar chat backend. Routes to best free model.",
+      "url": "https://openrouter.ai"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama (Local)",
+      "type": "llm",
+      "service_type": "chat",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": null,
+      "daily_limit": null,
+      "usage_this_month": {
+        "calls": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "Local LLM fallback. llama3.2 default.",
+      "url": "http://localhost:11434"
+    },
+    {
+      "id": "youtube-data-v3",
+      "name": "YouTube Data API v3",
+      "type": "api",
+      "service_type": "search",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": null,
+      "daily_limit": 10000,
+      "usage_this_month": {
+        "calls": 0,
+        "units": 10
+      },
+      "last_used": "2026-03-30",
+      "notes": "AI Intel agent. 100 units per search query. 7 queries = 700 units/day.",
+      "url": "https://console.cloud.google.com"
+    },
+    {
+      "id": "ebay-api",
+      "name": "eBay Developer API",
+      "type": "api",
+      "service_type": "ecommerce",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": null,
+      "daily_limit": null,
+      "usage_this_month": {
+        "calls": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "eBay agent. OAuth2. Listing audit, pricing comps.",
+      "url": "https://developer.ebay.com"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "type": "database",
+      "service_type": "database",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": 500,
+      "daily_limit": null,
+      "usage_this_month": {
+        "calls": 1,
+        "storage_mb": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "Job Match platform DB. Free tier 500MB.",
+      "url": "https://supabase.com"
+    },
+    {
+      "id": "adzuna",
+      "name": "Adzuna Job API",
+      "type": "api",
+      "service_type": "jobs",
+      "status": "active",
+      "tier": "free",
+      "monthly_limit": null,
+      "daily_limit": null,
+      "usage_this_month": {
+        "calls": 0
+      },
+      "last_used": "2026-03-30",
+      "notes": "Job discovery. Free tier.",
+      "url": "https://developer.adzuna.com"
+    }
+  ]
+}

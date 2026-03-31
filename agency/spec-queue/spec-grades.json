@@ -1,0 +1,3006 @@
+{
+  "last_updated": "2026-03-30T05:04:10.294679",
+  "total_graded": 300,
+  "grades": {
+    "char-spec-claude-001": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling blend of archetype, youth, and internal conflict ensures rich content potential.",
+      "graded_date": "2026-03-30T04:30:43.547695",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-002": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "The unique blend of a youthful political prisoner with a playful, vindictive voice is highly compelling.",
+      "graded_date": "2026-03-30T04:30:50.308088",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-003": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Complex, contradictory traits offer huge narrative potential and broad commercial appeal.",
+      "graded_date": "2026-03-30T04:30:55.631346",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-004": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Contradictory traits create deep internal conflict and strong narrative potential.",
+      "graded_date": "2026-03-30T04:31:03.075162",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-005": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing backstory and strong trait/archetype synergy offer immense narrative potential.",
+      "graded_date": "2026-03-30T04:31:09.719900",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-006": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A young hardened criminal with deep internal conflict offers vast story potential.",
+      "graded_date": "2026-03-30T04:31:17.696953",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-007": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong setup for a complex redemption arc in a popular genre, but traits need refinement.",
+      "graded_date": "2026-03-30T04:31:26.325677",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-008": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex, internally conflicted character with a unique voice; high narrative potential.",
+      "graded_date": "2026-03-30T04:31:31.927440",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-009": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique traits and voice create strong narrative depth, but niche appeal could limit broad commercial reach.",
+      "graded_date": "2026-03-30T04:31:38.858335",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-010": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Intriguing voice & backstory create deep narrative potential for a strong mentor.",
+      "graded_date": "2026-03-30T04:31:45.735968",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-011": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong character, unique talent hook, deep conflict, compelling story potential.",
+      "graded_date": "2026-03-30T04:31:53.238863",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-012": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Young age combined with mentor archetype, strong traits, and regret creates exceptional narrative depth.",
+      "graded_date": "2026-03-30T04:32:00.360500",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-013": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique voice and deep internal search in a high-stakes world offer rich, solo-friendly content.",
+      "graded_date": "2026-03-30T04:32:06.903027",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-014": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Analytical voice contrasts with reckless actions, offering fresh anti-hero depth and rich conflict.",
+      "graded_date": "2026-03-30T04:32:13.151375",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-015": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing juxtaposition of voice, archetype, and traits creates deep narrative potential.",
+      "graded_date": "2026-03-30T04:32:21.725275",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-016": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 6,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Solid anti-hero with good internal conflict, but lacks unique hooks for a solo studio.",
+      "graded_date": "2026-03-30T04:32:28.674039",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-017": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique voice & backstory subvert archetype effectively, offering strong distinctiveness and story depth.",
+      "graded_date": "2026-03-30T04:32:36.945009",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-018": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Compelling anti-hero, rich internal conflict, strong narrative potential in popular genre.",
+      "graded_date": "2026-03-30T04:32:43.195835",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-019": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling archetype with conflicting traits offers rich narrative potential and broad appeal.",
+      "graded_date": "2026-03-30T04:32:50.235107",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-020": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling, conflicted character offers strong narrative potential and emotional depth.",
+      "graded_date": "2026-03-30T04:32:56.295540",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-021": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Age 65 trickster with a poetic voice is uniquely distinctive, offering deep narrative and niche commercial appeal.",
+      "graded_date": "2026-03-30T04:33:03.348489",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-022": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 9,
+      "commercial_appeal": 5,
+      "narrative_potential": 6,
+      "reason": "Age 18 for a prison chaplain is a significant believability hurdle.",
+      "graded_date": "2026-03-30T04:33:13.982999",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-023": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Aged, delusional explorer with deep regrets offers unique, rich narrative and commercial appeal.",
+      "graded_date": "2026-03-30T04:33:19.302517",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-024": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex traits and deep backstory create compelling hooks for a solo studio.",
+      "graded_date": "2026-03-30T04:33:25.433214",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-025": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Unique combo of youth, hardened nature, & artistic drive offers compelling hooks.",
+      "graded_date": "2026-03-30T04:33:33.400953",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-026": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex traits create deep internal conflict, offering rich distinctiveness and vast narrative potential.",
+      "graded_date": "2026-03-30T04:33:38.361641",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-027": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling blend of reformed past, destructive potential, and artistic charisma.",
+      "graded_date": "2026-03-30T04:33:45.195103",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-028": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex anti-hero with a distinctive voice creating rich conflict and intrigue.",
+      "graded_date": "2026-03-30T04:33:50.818320",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-029": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique age and haunted trait create deep intrigue and rich narrative possibilities.",
+      "graded_date": "2026-03-30T04:33:57.485563",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-030": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing backstory and potent trait combination offer rich, flexible narrative potential.",
+      "graded_date": "2026-03-30T04:34:03.532013",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-031": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Solid archetype with deep backstory and contrasting traits, offering rich narrative depth.",
+      "graded_date": "2026-03-30T04:34:09.927830",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-032": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "The 18-year-old lifer archetype, complex traits, and unique voice offer immense potential.",
+      "graded_date": "2026-03-30T04:34:16.828704",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-033": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Solid anti-hero with intriguing trait conflicts and an engaging, open-ended quest.",
+      "graded_date": "2026-03-30T04:34:25.829711",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-034": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and regret provide excellent narrative and character depth.",
+      "graded_date": "2026-03-30T04:34:32.698767",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-035": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Poetic, philosophical older trickster with a past offers strong distinct and narrative appeal.",
+      "graded_date": "2026-03-30T04:34:38.841317",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-036": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A highly distinctive character with a unique voice, offering rich narrative depth and strong appeal.",
+      "graded_date": "2026-03-30T04:34:44.604267",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-037": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Distinct anti-hero with rich internal conflict, strong voice, and compelling backstory.",
+      "graded_date": "2026-03-30T04:34:49.773882",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-038": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong age/trait combo offers fresh perspective and deep internal conflict for character-driven stories.",
+      "graded_date": "2026-03-30T04:34:57.538187",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-039": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age and archetype create strong distinctiveness and rich narrative possibilities.",
+      "graded_date": "2026-03-30T04:35:05.690816",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-040": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Mature explorer with deep internal quest offers unique, compelling narrative scope.",
+      "graded_date": "2026-03-30T04:35:10.773212",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-041": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Highly distinctive 22-year-old prison mentor with rich potential for complex stories.",
+      "graded_date": "2026-03-30T04:35:18.309769",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-042": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Exceptional contrast: young, playful, artistic chaplain in a grim prison offers rich narrative hooks.",
+      "graded_date": "2026-03-30T04:35:24.853996",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-043": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 6,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Solid character with high commercial appeal and narrative potential; lacks uniqueness.",
+      "graded_date": "2026-03-30T04:35:30.878222",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-044": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and relatable ambition offer rich narrative in a popular genre.",
+      "graded_date": "2026-03-30T04:35:35.638485",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-045": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Well-defined archetype, sharp voice, and destructive trait offer compelling narrative depth.",
+      "graded_date": "2026-03-30T04:35:41.005050",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-046": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Unique elder explorer archetype with paranoia and privilege rejection offers rich narrative depth.",
+      "graded_date": "2026-03-30T04:35:49.376758",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-047": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling character: young mentor with relatable internal conflict and witty voice.",
+      "graded_date": "2026-03-30T04:35:54.769564",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-048": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A character with compelling internal conflict and high potential for redemption narratives.",
+      "graded_date": "2026-03-30T04:35:59.612417",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-049": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Unique age and internal conflict provide deep narrative hooks and strong distinctiveness.",
+      "graded_date": "2026-03-30T04:36:06.758439",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-050": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A compelling blend of conflicting traits offers rich narrative and character depth.",
+      "graded_date": "2026-03-30T04:36:12.433353",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-051": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age and trait combo offers deep character drama and rich, mature narrative potential.",
+      "graded_date": "2026-03-30T04:36:20.084620",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-052": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing trait conflicts provide rich narrative depth, ideal for character-driven solo content.",
+      "graded_date": "2026-03-30T04:36:30.882033",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-053": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age and intriguing internal quest offer strong narrative and distinct appeal.",
+      "graded_date": "2026-03-30T04:36:37.470735",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-054": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "A unique, empathetic leader in a harsh setting, with strong commercial and narrative hooks.",
+      "graded_date": "2026-03-30T04:36:44.071087",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-055": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A nuanced trickster with strong appeal and versatility, despite a generic name and backstory.",
+      "graded_date": "2026-03-30T04:36:50.123406",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-056": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong, distinct character with deep internal conflict and high narrative potential.",
+      "graded_date": "2026-03-30T04:36:55.667130",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-057": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong archetype with unique psychological traits offers rich narrative potential.",
+      "graded_date": "2026-03-30T04:37:02.775222",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-058": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Unique age and backstory offer deep narrative and commercial appeal for an anti-hero.",
+      "graded_date": "2026-03-30T04:37:08.909104",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-059": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling political prisoner offers deep conflict and strong narrative/commercial appeal.",
+      "graded_date": "2026-03-30T04:37:16.894811",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-060": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique sage archetype with strong narrative hooks and broad commercial appeal.",
+      "graded_date": "2026-03-30T04:37:21.839686",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-061": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "18-year-old teacher from tough past offers distinctiveness and rich narrative depth.",
+      "graded_date": "2026-03-30T04:37:27.935014",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-062": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique internal conflicts and rich backstory promise compelling, character-driven narratives.",
+      "graded_date": "2026-03-30T04:37:33.890702",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-063": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong character voice and compelling backstory create high distinctiveness and narrative potential.",
+      "graded_date": "2026-03-30T04:37:40.064405",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-064": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Solid archetype with compelling internal conflict and high universe stakes.",
+      "graded_date": "2026-03-30T04:37:45.026086",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-065": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and relatable struggles elevate a classic archetype for broad appeal.",
+      "graded_date": "2026-03-30T04:37:51.087193",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-066": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing destructive-scholar conflict offers strong narrative potential, despite generic elements.",
+      "graded_date": "2026-03-30T04:37:57.541790",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-067": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong narrative potential with a relatable, commercially appealing character voice.",
+      "graded_date": "2026-03-30T04:38:04.655765",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-068": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Meticulous trickster with a deep internal struggle offers unique depth and vast story arcs.",
+      "graded_date": "2026-03-30T04:38:10.425290",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-069": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique voice and complex traits in a grim setting offer strong appeal and depth.",
+      "graded_date": "2026-03-30T04:38:15.580279",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-070": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "\"Destructive caregiver\" offers rich conflict & unique appeal for a solo hero.",
+      "graded_date": "2026-03-30T04:38:21.366386",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-071": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "A wise, searching older vocalist offers deep narrative potential and niche appeal.",
+      "graded_date": "2026-03-30T04:38:28.661905",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-072": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Mature, empathetic, and skilled character offers rich internal and external conflict.",
+      "graded_date": "2026-03-30T04:38:35.017598",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-073": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique combination of age, archetype, voice, and backstory offers deep narrative potential.",
+      "graded_date": "2026-03-30T04:38:41.154900",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-074": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique voice and age offer deep narrative potential in a gritty universe.",
+      "graded_date": "2026-03-30T04:38:49.323949",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-075": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex anti-hero with compelling internal conflict and clear motivation. Great for ongoing stories.",
+      "graded_date": "2026-03-30T04:38:55.452766",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-076": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A captivating juxtaposition of age and archetype with rich potential for conflict and mystery.",
+      "graded_date": "2026-03-30T04:39:02.041330",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-077": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 6,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Relatable character with strong internal conflict, ideal for compelling solo content.",
+      "graded_date": "2026-03-30T04:39:07.087568",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-078": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Excellent narrative potential from age and voice, but name is too common.",
+      "graded_date": "2026-03-30T04:39:13.238135",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-079": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong blend of conflicting traits, offering deep internal and external narrative potential.",
+      "graded_date": "2026-03-30T04:39:18.984418",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-080": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex traits and age create strong narrative hooks and broad commercial appeal.",
+      "graded_date": "2026-03-30T04:39:24.155248",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-081": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex traits and pivotal backstory decision offer strong character-driven narrative potential.",
+      "graded_date": "2026-03-30T04:39:32.820768",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-082": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Complex older criminal with principled core offers strong narrative and distinct appeal.",
+      "graded_date": "2026-03-30T04:39:39.536332",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-083": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A compelling informant with strong traits and high-stakes in a popular genre.",
+      "graded_date": "2026-03-30T04:39:45.863839",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-084": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Caregiver archetype clashes with cold, analytical voice, offering compelling depth.",
+      "graded_date": "2026-03-30T04:39:53.629308",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-085": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 6,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Solid archetype and age offer fresh narrative, but backstory lacks specificity.",
+      "graded_date": "2026-03-30T04:40:03.000449",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-086": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Excellent internal conflict from contrasting voice/traits offers rich narrative potential.",
+      "graded_date": "2026-03-30T04:40:08.005058",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-087": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong, relatable archetype with high narrative potential for compelling prison drama.",
+      "graded_date": "2026-03-30T04:40:14.385055",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-088": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong archetype, traits, and universe create compelling conflict and deep narrative hooks.",
+      "graded_date": "2026-03-30T04:40:20.724113",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-089": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age/voice for a band leader offers rich narrative, strong niche appeal.",
+      "graded_date": "2026-03-30T04:40:28.334745",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-090": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Distinctive older protagonist with compelling internal conflicts and rich narrative depth.",
+      "graded_date": "2026-03-30T04:40:35.557821",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-091": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "A witty, young, suspicious doctor with a rich past offers strong appeal and endless story hooks.",
+      "graded_date": "2026-03-30T04:40:42.758764",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-092": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "The age and voice create a highly distinctive character with strong story potential.",
+      "graded_date": "2026-03-30T04:40:49.621342",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-093": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Excellent character with rich internal conflict, strong unique traits, and deep narrative hooks.",
+      "graded_date": "2026-03-30T04:40:56.901955",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-094": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Relatable everyman with rich internal life and strong narrative hook.",
+      "graded_date": "2026-03-30T04:41:06.789586",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-095": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex traits create deep internal conflict and endless narrative possibilities.",
+      "graded_date": "2026-03-30T04:41:12.937643",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-096": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Rich internal conflict and compelling backstory drive immense narrative potential.",
+      "graded_date": "2026-03-30T04:41:19.880453",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-097": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Potent blend of youth, lifer archetype, and conflicting traits creates rich story potential.",
+      "graded_date": "2026-03-30T04:41:31.154100",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-098": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "The unique trait combination and strong narrative hooks offer immense potential.",
+      "graded_date": "2026-03-30T04:41:37.507725",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-099": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong contrast in voice/traits with compelling backstory, ideal for engaging content.",
+      "graded_date": "2026-03-30T04:41:42.997712",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-claude-100": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong, contradictory traits create immediate distinctiveness & high narrative potential.",
+      "graded_date": "2026-03-30T04:41:47.577778",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-001": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A compelling late-blooming artist with rich internal conflict and broad appeal.",
+      "graded_date": "2026-03-30T04:41:54.728168",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-002": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong, unique archetype with compelling search, offers deep narrative potential.",
+      "graded_date": "2026-03-30T04:42:01.252556",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-003": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling blend of relatable insecurity and sharp analytical suspicion with a core quest.",
+      "graded_date": "2026-03-30T04:42:06.555591",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-004": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Strong explorer character with clear voice, great adventure hooks & character growth.",
+      "graded_date": "2026-03-30T04:42:13.225469",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-005": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Excellent contradictory traits and intriguing backstory create immense narrative and distinctiveness potential.",
+      "graded_date": "2026-03-30T04:42:20.771241",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-006": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex traits and voice offer rich internal conflict and extensive story potential.",
+      "graded_date": "2026-03-30T04:42:26.034603",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-007": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex character with rich internal conflict, unique voice, and mature depth.",
+      "graded_date": "2026-03-30T04:42:32.077408",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-008": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Internal contradictions (sage/vindictive, patient/impulsive) create rich narrative hooks.",
+      "graded_date": "2026-03-30T04:42:37.911552",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-009": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex, conflicting traits create deep narrative potential and broad appeal.",
+      "graded_date": "2026-03-30T04:42:43.321248",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-010": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex anti-hero with strong internal conflict, unique voice, and high narrative potential.",
+      "graded_date": "2026-03-30T04:42:50.585752",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-011": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Relatable core struggle, popular archetype, and contrasting traits create strong narrative potential.",
+      "graded_date": "2026-03-30T04:42:57.315315",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-012": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict, high narrative potential, and a marketable archetype.",
+      "graded_date": "2026-03-30T04:43:03.894829",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-013": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing backstory and internal conflict offer strong narrative and relatable appeal.",
+      "graded_date": "2026-03-30T04:43:09.573701",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-014": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique sage blend with intriguing backstory promises rich internal and external narratives.",
+      "graded_date": "2026-03-30T04:43:17.417807",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-015": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, contradictory traits create strong internal conflict and a unique, compelling voice.",
+      "graded_date": "2026-03-30T04:43:22.730777",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-016": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 6,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Solid foundation; age and archetype add depth, but lacks specific hooks to truly stand out.",
+      "graded_date": "2026-03-30T04:43:30.183618",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-017": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Internal contradictions and intriguing backstory provide strong narrative hooks and depth.",
+      "graded_date": "2026-03-30T04:43:36.232353",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-018": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong, distinctive voice for a mature, principled caregiver, with high narrative potential.",
+      "graded_date": "2026-03-30T04:43:42.194684",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-019": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique technical trait and obsessive backstory fuel strong narrative potential and appeal.",
+      "graded_date": "2026-03-30T04:43:48.210624",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-020": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Relatable, conflicted artist offers deep narrative potential and broad commercial appeal.",
+      "graded_date": "2026-03-30T04:43:55.306698",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-021": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "The 65-year-old frontman with internal conflict offers rich, distinctive narrative potential.",
+      "graded_date": "2026-03-30T04:44:02.466728",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-022": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong, distinctive voice & vindictive trait offer rich narrative for a solo studio.",
+      "graded_date": "2026-03-30T04:44:10.413393",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-023": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 7,
+      "commercial_appeal": 6,
+      "narrative_potential": 8,
+      "reason": "Good foundation with conflicting traits and age, but backstory needs more specifics.",
+      "graded_date": "2026-03-30T04:44:19.711584",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-024": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A compelling blend of youth, quiet determination, and internal conflict creates strong narrative hooks.",
+      "graded_date": "2026-03-30T04:44:25.597551",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-025": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "The 'unexpected solace' provides a strong unique selling proposition and rich story hooks.",
+      "graded_date": "2026-03-30T04:44:31.666985",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-026": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing blend of traits and a compelling backstory offer strong narrative and commercial potential.",
+      "graded_date": "2026-03-30T04:44:36.333250",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-027": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Cynical chaplain in prison offers rich internal and external conflict for drama.",
+      "graded_date": "2026-03-30T04:44:42.607607",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-028": {
+      "grade": 4,
+      "pass": false,
+      "distinctiveness": 1,
+      "commercial_appeal": 3,
+      "narrative_potential": 9,
+      "reason": "Compelling character concept overshadowed by an unoriginal, famous name.",
+      "graded_date": "2026-03-30T04:44:52.136565",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-029": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict, unique sage archetype, and distinctive voice.",
+      "graded_date": "2026-03-30T04:44:58.692774",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-030": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex, contradictory traits and a rich backstory create exceptional narrative hooks.",
+      "graded_date": "2026-03-30T04:45:05.549122",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-031": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "The 18-year-old lifer with a warm, empathetic voice creates immediate, powerful intrigue.",
+      "graded_date": "2026-03-30T04:45:12.417650",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-032": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Intriguing blend of traits and age, but backstory directly conflicts with age.",
+      "graded_date": "2026-03-30T04:45:22.331694",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-033": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique voice and traits offer deep internal conflict within a proven gritty setting.",
+      "graded_date": "2026-03-30T04:45:28.369115",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-034": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "A distinct character with rich narrative potential, particularly driven by their age and intriguing backstory.",
+      "graded_date": "2026-03-30T04:45:36.025832",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-035": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex traits and an open-ended quest provide strong narrative hooks for a solo creator.",
+      "graded_date": "2026-03-30T04:45:43.793029",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-036": {
+      "grade": 6,
+      "pass": false,
+      "distinctiveness": 5,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Strong elements, but age/archetype conflict fundamentally confuses character concept; needs rework.",
+      "graded_date": "2026-03-30T04:45:55.050460",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-037": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Age and backstory create a distinct, high-potential character with broad appeal.",
+      "graded_date": "2026-03-30T04:46:00.960562",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-038": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique trait/voice combo offers deep narrative potential, but name/backstory are generic.",
+      "graded_date": "2026-03-30T04:46:08.368062",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-039": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "The striking age/archetype contrast with a playful voice and deep regrets offers unique narrative and commercial hooks.",
+      "graded_date": "2026-03-30T04:46:14.237334",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-040": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Rich internal conflict and distinctive traits at 18 offer strong narrative potential.",
+      "graded_date": "2026-03-30T04:46:20.031605",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-041": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong trait conflicts and an intriguing backstory provide immense narrative and audience appeal.",
+      "graded_date": "2026-03-30T04:46:25.891839",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-042": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Rich blend of age, archetype, and internal conflict offers immense creative and commercial depth.",
+      "graded_date": "2026-03-30T04:46:34.569979",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-043": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Empathy & principles in a harsh world create strong unique character and rich conflict.",
+      "graded_date": "2026-03-30T04:46:42.227038",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-044": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 6,
+      "narrative_potential": 9,
+      "reason": "Complex traits and age create rich internal conflict and deep narrative possibilities.",
+      "graded_date": "2026-03-30T04:46:48.392729",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-045": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Nuanced character with excellent internal conflict and broad appeal for solo studio.",
+      "graded_date": "2026-03-30T04:46:53.747515",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-046": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 6,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Solid foundation with strong traits; generic universe/backstory needs fleshing out.",
+      "graded_date": "2026-03-30T04:47:01.525663",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-047": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique voice and internal conflict offer exceptional creative and narrative opportunities.",
+      "graded_date": "2026-03-30T04:47:07.878570",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-048": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing contrasts: 18-year-old chaplain with complex traits in a harsh world.",
+      "graded_date": "2026-03-30T04:47:14.880755",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-049": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Offers rich conflict between duty and passion, driving a relatable and engaging character journey.",
+      "graded_date": "2026-03-30T04:47:20.807557",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-050": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique age for archetype creates immense narrative potential and intrigue.",
+      "graded_date": "2026-03-30T04:47:26.078962",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-051": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling anti-hero with strong internal conflict, high narrative potential.",
+      "graded_date": "2026-03-30T04:47:33.130108",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-052": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique blend of traits with deep internal conflict offers rich narrative depth and appeal.",
+      "graded_date": "2026-03-30T04:47:38.777511",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-053": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Cold, regretful mentor offers rich narrative potential for a solo studio.",
+      "graded_date": "2026-03-30T04:47:44.285683",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-054": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 5,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Relatable traits drive strong narrative potential and broad commercial appeal.",
+      "graded_date": "2026-03-30T04:47:50.038220",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-055": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and versatile traits offer excellent narrative and commercial appeal.",
+      "graded_date": "2026-03-30T04:47:54.919509",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-056": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "The powerful internal conflict between public charisma and private darkness offers rich storytelling.",
+      "graded_date": "2026-03-30T04:48:01.131394",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-057": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Age 65 adds distinct depth to a principled anti-hero, offering compelling narrative potential.",
+      "graded_date": "2026-03-30T04:48:08.421445",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-058": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Excellent internal conflict and morally grey complexity offer rich narrative depth.",
+      "graded_date": "2026-03-30T04:48:14.211152",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-059": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict, unique twist on everyman, and compelling hook for endless stories.",
+      "graded_date": "2026-03-30T04:48:21.212106",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-060": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique trait blend with deep regret fuels strong internal/external conflict and narrative.",
+      "graded_date": "2026-03-30T04:48:27.946662",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-061": {
+      "grade": 6,
+      "pass": false,
+      "distinctiveness": 5,
+      "commercial_appeal": 6,
+      "narrative_potential": 7,
+      "reason": "Decent internal conflict & unique age for archetype, but lacks distinct hooks.",
+      "graded_date": "2026-03-30T04:48:35.698761",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-062": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Compelling internal conflict within a volatile setting offers rich narrative and appeal.",
+      "graded_date": "2026-03-30T04:48:40.776438",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-063": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique contrasts (hardened criminal, empathetic voice, privileged past) offer immense creative and commercial potential.",
+      "graded_date": "2026-03-30T04:48:47.274887",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-064": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "The blend of \"corrupt_guard\" with empathy and courage creates compelling internal conflict.",
+      "graded_date": "2026-03-30T04:48:53.543283",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-065": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Paradoxical traits and young mentor age offer rich conflict and versatile potential.",
+      "graded_date": "2026-03-30T04:48:58.860223",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-066": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Compelling anti-hero with strong internal conflict, high relatability, and versatile narrative hooks.",
+      "graded_date": "2026-03-30T04:49:05.353094",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-067": {
+      "grade": 5,
+      "pass": false,
+      "distinctiveness": 4,
+      "commercial_appeal": 5,
+      "narrative_potential": 5,
+      "reason": "Solid but generic; backstory lacks specifics to ignite distinct narrative potential.",
+      "graded_date": "2026-03-30T04:49:13.364575",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-068": {
+      "grade": 6,
+      "pass": false,
+      "distinctiveness": 5,
+      "commercial_appeal": 6,
+      "narrative_potential": 7,
+      "reason": "Strong voice & explorer archetype offer potential, but the overall concept is a bit generic.",
+      "graded_date": "2026-03-30T04:49:18.640414",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-069": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong narrative hooks, relatable yet distinctive, offers rich long-term story potential.",
+      "graded_date": "2026-03-30T04:49:25.055247",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-070": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex, intriguing mentor with compelling internal conflict and a plot-driving personal quest.",
+      "graded_date": "2026-03-30T04:49:32.326570",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-071": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex voice and traits create compelling internal conflict and high narrative potential.",
+      "graded_date": "2026-03-30T04:49:37.385962",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-072": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex traits and strong backstory provide excellent hooks for compelling narratives.",
+      "graded_date": "2026-03-30T04:49:43.829637",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-073": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 6,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A strong everyman foundation with a compelling narrative hook, offering broad appeal.",
+      "graded_date": "2026-03-30T04:49:55.802252",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-074": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex traits & relatable struggle offer strong narrative hooks and broad appeal.",
+      "graded_date": "2026-03-30T04:50:01.691696",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-075": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex traits, compelling internal conflict, and strong narrative drivers make for an excellent lead.",
+      "graded_date": "2026-03-30T04:50:08.200459",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-076": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 6,
+      "commercial_appeal": 6,
+      "narrative_potential": 8,
+      "reason": "Strong character foundation; requires significant world-building for solo studio deployment.",
+      "graded_date": "2026-03-30T04:50:24.042598",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-077": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong, relatable character with excellent narrative depth and broad appeal.",
+      "graded_date": "2026-03-30T04:50:29.983028",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-078": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex anti-hero with compelling backstory and unique age, strong for solo content.",
+      "graded_date": "2026-03-30T04:50:35.615647",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-079": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Sarcastic voice and deep regret fuel strong narrative and commercial appeal.",
+      "graded_date": "2026-03-30T04:50:41.220333",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-080": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, unique character with rich contradictions; strong potential for a compelling story.",
+      "graded_date": "2026-03-30T04:50:46.520696",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-081": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling internal conflict, unique voice, and strong narrative hooks for a solo studio.",
+      "graded_date": "2026-03-30T04:50:53.281459",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-082": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex, flawed band leader with rich internal/external conflicts, strong narrative.",
+      "graded_date": "2026-03-30T04:51:01.096367",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-083": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique 18-year-old mentor with compelling internal conflict offers rich story potential.",
+      "graded_date": "2026-03-30T04:51:06.805880",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-084": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 6,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Relatable everyman with strong internal conflict and clear narrative hooks for growth.",
+      "graded_date": "2026-03-30T04:51:13.597062",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-085": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, delusional idealist in a gritty setting offers immense narrative depth.",
+      "graded_date": "2026-03-30T04:51:20.137319",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-086": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Mature, charismatic yet reserved 'lover' with deep backstory offers rich narrative potential.",
+      "graded_date": "2026-03-30T04:51:28.740806",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-087": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique trait blend and compelling mystery hook provide rich, adaptable creative potential.",
+      "graded_date": "2026-03-30T04:51:37.006104",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-088": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Strong archetype and trait combination offer compelling conflicts, though backstory is basic.",
+      "graded_date": "2026-03-30T04:51:43.847562",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-089": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique blend of cautious trickster with obsessive purpose creates strong, relatable narrative hooks.",
+      "graded_date": "2026-03-30T04:51:51.024828",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-090": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Compelling internal conflict and unique voice offer strong narrative potential.",
+      "graded_date": "2026-03-30T04:51:56.787485",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-091": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict fuels rich narrative potential; distinctive voice and age enhance appeal.",
+      "graded_date": "2026-03-30T04:52:06.687826",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-092": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Empathetic hardened criminal with strong internal conflict provides excellent narrative depth and broad appeal.",
+      "graded_date": "2026-03-30T04:52:13.191822",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-093": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique archetype, age, and a strong backstory hook promise deep, character-driven narratives.",
+      "graded_date": "2026-03-30T04:52:19.344950",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-094": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflicts and compelling trait mix offer rich character-driven storytelling.",
+      "graded_date": "2026-03-30T04:52:25.224502",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-095": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A unique blend of paradoxes offers rich narrative conflict and broad appeal.",
+      "graded_date": "2026-03-30T04:52:32.562802",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-096": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A confident, technical informant in a high-stakes setting offers compelling conflict.",
+      "graded_date": "2026-03-30T04:52:37.591037",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-097": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Witty, searching explorer offers strong commercial appeal and versatile narrative potential.",
+      "graded_date": "2026-03-30T04:52:44.762200",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-098": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Playful voice contrasts hardened criminal, creating distinct appeal and story potential.",
+      "graded_date": "2026-03-30T04:52:51.848130",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-099": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Contrasting traits and age create a distinctive, emotionally rich character with high potential.",
+      "graded_date": "2026-03-30T04:52:58.486642",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-gemini-100": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Good commercial appeal & narrative potential; internal trait conflicts are strong.",
+      "graded_date": "2026-03-30T04:53:06.152621",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-001": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Unique age/archetype contrast and obsessive backstory provide rich creative potential.",
+      "graded_date": "2026-03-30T04:53:12.911008",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-002": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex traits and an intriguing backstory promise compelling drama and broad appeal.",
+      "graded_date": "2026-03-30T04:53:19.241344",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-003": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling internal conflict and possessive trait fuel rich narrative potential.",
+      "graded_date": "2026-03-30T04:53:25.684583",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-004": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling blend of skills, strong voice, rich narrative potential in a popular genre.",
+      "graded_date": "2026-03-30T04:53:33.926757",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-005": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Idealistic guard with witty voice and harsh universe creates compelling, conflict-rich potential.",
+      "graded_date": "2026-03-30T04:53:41.388134",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-006": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing blend of youth, wisdom, and trauma offers rich narrative and commercial appeal.",
+      "graded_date": "2026-03-30T04:53:46.429082",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-007": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique 'lifer at 18' concept with layered traits and open-ended search promises deep narrative.",
+      "graded_date": "2026-03-30T04:53:52.495285",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-008": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Charismatic yet paranoid entrepreneur offers compelling internal conflict and broad appeal.",
+      "graded_date": "2026-03-30T04:53:58.834658",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-009": {
+      "grade": 7,
+      "pass": false,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Compelling informant with great trait contradictions, but backstory needs expansion.",
+      "graded_date": "2026-03-30T04:54:08.583509",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-010": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict & unique blend of traits offer compelling narrative hooks.",
+      "graded_date": "2026-03-30T04:54:14.435130",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-011": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Distinctive, conflicted sage archetype offers deep narrative potential and broad appeal.",
+      "graded_date": "2026-03-30T04:54:22.030092",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-012": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex traits and open backstory create strong distinctiveness and story potential.",
+      "graded_date": "2026-03-30T04:54:27.902717",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-013": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age and conflicting traits create compelling internal and external potential.",
+      "graded_date": "2026-03-30T04:54:34.173078",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-014": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Rich blend of wisdom, mystery, and internal conflict with strong narrative hooks.",
+      "graded_date": "2026-03-30T04:54:40.325501",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-015": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age/trait combo provides strong distinctiveness and rich narrative potential.",
+      "graded_date": "2026-03-30T04:54:45.670243",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-016": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong archetype with compelling internal conflict and high narrative potential.",
+      "graded_date": "2026-03-30T04:54:51.895714",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-017": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A rich internal world and compelling backstory offers high narrative potential and broad appeal.",
+      "graded_date": "2026-03-30T04:54:57.713367",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-018": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique blend of quirky traits, engaging voice, and clear drive promises compelling content.",
+      "graded_date": "2026-03-30T04:55:04.910389",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-019": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling contrast between innocence and being haunted, offering deep internal conflict.",
+      "graded_date": "2026-03-30T04:55:12.325444",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-020": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and distinctive voice offer great narrative and engagement.",
+      "graded_date": "2026-03-30T04:55:17.510698",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-021": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing internal conflict, strong emotional hook, and high YA narrative potential.",
+      "graded_date": "2026-03-30T04:55:22.888626",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-022": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Unique age/archetype, technical skills, and deep backstory provide strong hooks.",
+      "graded_date": "2026-03-30T04:55:29.433091",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-023": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex, distinctive, and brimming with rich internal conflict and narrative potential.",
+      "graded_date": "2026-03-30T04:55:36.458650",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-024": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Measured voice contrasts well with trickster archetype, promising depth and engagement.",
+      "graded_date": "2026-03-30T04:55:44.373682",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-025": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Strong internal conflict and intriguing backstory offer rich narrative and appeal.",
+      "graded_date": "2026-03-30T04:55:50.104149",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-026": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 6,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "A strong core concept with rich narrative potential and broad commercial appeal.",
+      "graded_date": "2026-03-30T04:55:58.986081",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-027": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique traits create strong internal conflict and narrative hooks for compelling character-driven stories.",
+      "graded_date": "2026-03-30T04:56:05.127122",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-028": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 6,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Offers deep psychological drama and strong interpersonal conflict in a music setting.",
+      "graded_date": "2026-03-30T04:56:12.444402",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-029": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Strong archetype, internal conflict, and intriguing backstory offer high potential.",
+      "graded_date": "2026-03-30T04:56:18.083524",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-030": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and appealing voice promise rich stories and audience engagement.",
+      "graded_date": "2026-03-30T04:56:24.611179",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-031": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Complex, distinct character with deep conflict and vast narrative potential for a solo studio.",
+      "graded_date": "2026-03-30T04:56:31.673786",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-032": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong archetype/trait blend in a conflict-rich universe offers adaptable narrative potential.",
+      "graded_date": "2026-03-30T04:56:37.448009",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-033": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Age 55 for a rebellious band leader offers unique distinctiveness and rich narrative potential.",
+      "graded_date": "2026-03-30T04:56:44.254978",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-034": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Complex, contradictory traits and a unique voice make this character highly compelling.",
+      "graded_date": "2026-03-30T04:56:52.126946",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-035": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Unique voice and conflicting traits create massive narrative and commercial appeal.",
+      "graded_date": "2026-03-30T04:56:59.790652",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-036": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Intriguing traits create strong internal conflict and robust narrative hooks for a solo studio.",
+      "graded_date": "2026-03-30T04:57:05.378929",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-037": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Excellent distinctiveness and narrative potential from a compelling, contradictory character.",
+      "graded_date": "2026-03-30T04:57:10.647474",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-038": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict & a compelling backstory hook offer excellent narrative depth.",
+      "graded_date": "2026-03-30T04:57:17.317177",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-039": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and voice create excellent narrative hooks despite a common backstory.",
+      "graded_date": "2026-03-30T04:57:23.170845",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-040": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique archetype, traits, and voice offer rich internal/external conflict and strong narrative depth.",
+      "graded_date": "2026-03-30T04:57:29.672849",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-041": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex contradictions (innocent, delusional, jaded, analytical) offer rich narrative depth.",
+      "graded_date": "2026-03-30T04:57:35.650843",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-042": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and distinctive traits offer excellent narrative potential.",
+      "graded_date": "2026-03-30T04:57:42.562107",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-043": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong narrative potential with unique informant traits and age in a high-stakes setting.",
+      "graded_date": "2026-03-30T04:57:51.987184",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-044": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict from traits/voice drives compelling narrative potential within a popular universe.",
+      "graded_date": "2026-03-30T04:57:57.311049",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-045": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong combination of traits, voice, and backstory offers vast narrative potential.",
+      "graded_date": "2026-03-30T04:58:02.258859",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-046": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "High narrative potential, relatable internal conflict, and marketable voice make Sam a strong concept.",
+      "graded_date": "2026-03-30T04:58:09.806207",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-047": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Excellent complex character; strong internal conflict, high narrative and commercial appeal.",
+      "graded_date": "2026-03-30T04:58:15.657060",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-048": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Distinctive age and traits for a lead vocalist offer strong narrative depth and appeal.",
+      "graded_date": "2026-03-30T04:58:21.466854",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-049": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique mentor with rebellious, vindictive traits promises rich conflict and intriguing world-building.",
+      "graded_date": "2026-03-30T04:58:27.798041",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-050": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Strong contrast of empathetic nature in a harsh setting creates unique, compelling narratives.",
+      "graded_date": "2026-03-30T04:58:33.942448",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-051": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Rich internal conflict and strong mentor archetype offer vast narrative possibilities.",
+      "graded_date": "2026-03-30T04:58:41.384431",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-052": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Excellent internal conflict & unique voice make for rich, compelling solo content.",
+      "graded_date": "2026-03-30T04:58:48.817468",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-053": {
+      "grade": 3,
+      "pass": false,
+      "distinctiveness": 1,
+      "commercial_appeal": 1,
+      "narrative_potential": 7,
+      "reason": "Character concept strong, but using a famous actor's name is a critical flaw for original fiction.",
+      "graded_date": "2026-03-30T04:58:59.036041",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-054": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Highly distinctive anti-hero with rich internal conflict and narrative potential.",
+      "graded_date": "2026-03-30T04:59:03.692705",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-055": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Compelling blend of genius and vulnerability with strong narrative hooks for a solo creator.",
+      "graded_date": "2026-03-30T04:59:09.200001",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-056": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong blend of relatable backstory and unique elements like age and voice create compelling narrative.",
+      "graded_date": "2026-03-30T04:59:15.486014",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-057": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex traits and internal conflict offer deep stories and broad appeal.",
+      "graded_date": "2026-03-30T04:59:21.177857",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-058": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong trait combination offers deep motivation and skills for a compelling unlikely hero.",
+      "graded_date": "2026-03-30T04:59:26.411598",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-059": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Delusional sage with witty voice offers unique character, strong conflict, high narrative potential.",
+      "graded_date": "2026-03-30T04:59:31.700155",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-060": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Haunted, witty drummer with a compelling past offers strong narrative and appeal.",
+      "graded_date": "2026-03-30T04:59:36.371891",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-061": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Contrasting traits and empathetic voice create immediate depth and high story potential.",
+      "graded_date": "2026-03-30T04:59:43.108320",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-062": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Complex traits, strong voice, and a compelling past offer rich narrative possibilities.",
+      "graded_date": "2026-03-30T04:59:49.161395",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-063": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Regretful mentor offers rich narrative depth, ideal for thoughtful solo content creation.",
+      "graded_date": "2026-03-30T04:59:55.060400",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-064": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Age/archetype contradiction is a strong, distinctive hook with rich narrative potential.",
+      "graded_date": "2026-03-30T05:00:01.731171",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-065": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age and contrasting traits offer strong narrative depth and niche commercial appeal.",
+      "graded_date": "2026-03-30T05:00:07.015883",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-066": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and intriguing backstory offer vast narrative potential.",
+      "graded_date": "2026-03-30T05:00:12.011745",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-067": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong anti-hero with compelling internal conflict and a powerful narrative quest.",
+      "graded_date": "2026-03-30T05:00:17.642504",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-068": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, engaging traits and deep internal conflict create high narrative potential.",
+      "graded_date": "2026-03-30T05:00:23.420560",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-069": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling blend of traits, age, and voice offers rich narrative for solo content.",
+      "graded_date": "2026-03-30T05:00:31.561392",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-070": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Contradictory traits and voice create compelling complexity, offering deep narrative potential.",
+      "graded_date": "2026-03-30T05:00:37.033704",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-071": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex internal conflict within a popular genre offers strong narrative and commercial appeal.",
+      "graded_date": "2026-03-30T05:00:44.319996",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-072": {
+      "grade": 4,
+      "pass": false,
+      "distinctiveness": 3,
+      "commercial_appeal": 1,
+      "narrative_potential": 9,
+      "reason": "Excellent internal conflict and depth, but the chosen name creates severe commercial and IP issues.",
+      "graded_date": "2026-03-30T05:00:56.141025",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-073": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 9,
+      "narrative_potential": 9,
+      "reason": "Mature, relatable, and offers rich narrative potential for character-driven stories.",
+      "graded_date": "2026-03-30T05:01:03.479121",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-074": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, morally ambiguous lead with strong internal and external conflict potential.",
+      "graded_date": "2026-03-30T05:01:09.078520",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-075": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Unique age-archetype combo with strong quest hook & active traits creates high potential.",
+      "graded_date": "2026-03-30T05:01:14.790703",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-076": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 7,
+      "narrative_potential": 8,
+      "reason": "Diverse gigs and a compelling backstory offer rich narrative opportunities and broad appeal.",
+      "graded_date": "2026-03-30T05:01:20.939978",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-077": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Rich internal conflict and a unique voice offer excellent narrative depth and distinct appeal.",
+      "graded_date": "2026-03-30T05:01:26.504029",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-078": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Intriguing internal conflict and relatable archetype offer strong narrative and commercial hooks.",
+      "graded_date": "2026-03-30T05:01:34.030421",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-079": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong character concept with excellent internal conflict for compelling stories.",
+      "graded_date": "2026-03-30T05:01:40.612002",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-080": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling internal conflicts and a strong backstory hook create outstanding narrative potential.",
+      "graded_date": "2026-03-30T05:01:47.341598",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-081": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict, unique trait combination, and high narrative potential.",
+      "graded_date": "2026-03-30T05:01:54.936919",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-082": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, relatable genius with a compelling internal quest, perfect for diverse content.",
+      "graded_date": "2026-03-30T05:02:00.156356",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-083": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Unique blend of age, archetype, and conflicting traits offers rich, adaptable storytelling.",
+      "graded_date": "2026-03-30T05:02:07.457535",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-084": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Relatable archetype with intriguing backstory and flexible setting offers strong solo potential.",
+      "graded_date": "2026-03-30T05:02:16.014396",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-085": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 10,
+      "reason": "Unique age/trait combo provides rich conflict, deep relatability, and endless narrative hooks.",
+      "graded_date": "2026-03-30T05:02:23.658779",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-086": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Internal conflict and an engaging core mystery create strong narrative and appeal.",
+      "graded_date": "2026-03-30T05:02:29.699600",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-087": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal contradictions and a unique age provide rich ground for compelling stories.",
+      "graded_date": "2026-03-30T05:02:35.318237",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-088": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 9,
+      "narrative_potential": 10,
+      "reason": "Compelling internal conflict, unique voice, strong narrative hooks in a proven setting.",
+      "graded_date": "2026-03-30T05:02:42.048834",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-089": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Complex activist with strong internal conflict offers rich narrative potential and audience engagement.",
+      "graded_date": "2026-03-30T05:02:47.616564",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-090": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Complex, aged, technical corrupt guard with intriguing backstory offers strong narrative depth.",
+      "graded_date": "2026-03-30T05:02:54.855504",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-091": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Dynamic traits and engaging voice promise strong narrative and audience appeal.",
+      "graded_date": "2026-03-30T05:03:00.660561",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-092": {
+      "grade": 6,
+      "pass": false,
+      "distinctiveness": 3,
+      "commercial_appeal": 5,
+      "narrative_potential": 9,
+      "reason": "Strong narrative potential, but the common name severely limits distinctiveness and branding.",
+      "graded_date": "2026-03-30T05:03:09.949564",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-093": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Compelling internal conflict fuels high narrative potential; destructive trait adds unique edge.",
+      "graded_date": "2026-03-30T05:03:16.375453",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-094": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 8,
+      "reason": "Blends popular tropes with unique internal conflicts for strong commercial & narrative potential.",
+      "graded_date": "2026-03-30T05:03:25.272403",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-095": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "This keyboardist offers rich internal conflict and a witty voice, promising engaging, relatable narratives.",
+      "graded_date": "2026-03-30T05:03:32.992929",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-096": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 7,
+      "narrative_potential": 9,
+      "reason": "Strong internal quest, unique trait mix, and relatable archetype offer rich, ongoing content.",
+      "graded_date": "2026-03-30T05:03:41.787262",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-097": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "18-year-old lifer creates compelling mystery and high narrative potential.",
+      "graded_date": "2026-03-30T05:03:48.255223",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-098": {
+      "grade": 9,
+      "pass": true,
+      "distinctiveness": 9,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Highly distinctive, offering rich internal conflict and versatile genre potential.",
+      "graded_date": "2026-03-30T05:03:54.919237",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-099": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 8,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong internal conflict and clear motivation offer immense narrative potential.",
+      "graded_date": "2026-03-30T05:04:01.555217",
+      "graded_by": "gemini-2.5-flash"
+    },
+    "char-spec-agent-100": {
+      "grade": 8,
+      "pass": true,
+      "distinctiveness": 7,
+      "commercial_appeal": 8,
+      "narrative_potential": 9,
+      "reason": "Strong conflicting traits and a compelling backstory offer rich narrative potential.",
+      "graded_date": "2026-03-30T05:04:10.294638",
+      "graded_by": "gemini-2.5-flash"
+    }
+  }
+}

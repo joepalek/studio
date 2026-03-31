@@ -1,0 +1,392 @@
+{
+  "_schema": "1.0",
+  "_description": "AI services ranked by category. Updated daily 05:30 AM.",
+  "generated_at": "2026-03-31T10:30:01Z",
+  "date": "2026-03-31",
+  "categories": {
+    "chat": [
+      {
+        "rank": 1,
+        "name": "Mistral Small",
+        "provider": "Mistral",
+        "url": "https://mistral.ai",
+        "tier": "free+paid",
+        "notes": "Good free tier via OpenRouter",
+        "buzz_score": 1,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "Claude Sonnet 4.6",
+        "provider": "Anthropic",
+        "url": "https://anthropic.com",
+        "tier": "paid",
+        "notes": "Best for reasoning/coding/agents",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "GPT-4o",
+        "provider": "OpenAI",
+        "url": "https://openai.com",
+        "tier": "paid",
+        "notes": "Strong general purpose",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "Gemini 1.5 Pro",
+        "provider": "Google",
+        "url": "https://aistudio.google.com",
+        "tier": "free+paid",
+        "notes": "Large context, free tier available",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 5,
+        "name": "Claude Haiku 4.5",
+        "provider": "Anthropic",
+        "url": "https://anthropic.com",
+        "tier": "paid",
+        "notes": "Fast + cheap, good for batch",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 6,
+        "name": "Gemini Flash",
+        "provider": "Google",
+        "url": "https://aistudio.google.com",
+        "tier": "free",
+        "notes": "Best free-tier speed",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 7,
+        "name": "Llama 3.2",
+        "provider": "Meta/Ollama",
+        "url": "https://ollama.com",
+        "tier": "free",
+        "notes": "Local, no API cost",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 8,
+        "name": "DeepSeek R1",
+        "provider": "DeepSeek",
+        "url": "https://deepseek.com",
+        "tier": "free",
+        "notes": "Strong reasoning, free via OpenRouter",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "image_gen": [
+      {
+        "rank": 1,
+        "name": "Midjourney v6",
+        "provider": "Midjourney",
+        "url": "https://midjourney.com",
+        "tier": "paid",
+        "notes": "Best quality, no free tier",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "DALL-E 3",
+        "provider": "OpenAI",
+        "url": "https://openai.com",
+        "tier": "paid",
+        "notes": "Good prompt adherence",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "Stable Diffusion (local)",
+        "provider": "Stability AI",
+        "url": "https://stability.ai",
+        "tier": "free",
+        "notes": "Free local via ComfyUI/A1111. RTX 3060 threshold.",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "Ideogram 2",
+        "provider": "Ideogram",
+        "url": "https://ideogram.ai",
+        "tier": "free+paid",
+        "notes": "Best text-in-image. Free tier available.",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 5,
+        "name": "Flux 1.1 Pro",
+        "provider": "Black Forest Labs",
+        "url": "https://replicate.com",
+        "tier": "paid",
+        "notes": "Top open model quality",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 6,
+        "name": "Playground v3",
+        "provider": "Playground",
+        "url": "https://playground.com",
+        "tier": "free+paid",
+        "notes": "Free tier, strong aesthetic quality",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "video_gen": [
+      {
+        "rank": 1,
+        "name": "Sora",
+        "provider": "OpenAI",
+        "url": "https://openai.com",
+        "tier": "paid",
+        "notes": "Best coherence, limited access",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "Runway Gen-3",
+        "provider": "Runway",
+        "url": "https://runwayml.com",
+        "tier": "paid",
+        "notes": "Best for creative control",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "Kling 1.6",
+        "provider": "Kuaishou",
+        "url": "https://klingai.com",
+        "tier": "free+paid",
+        "notes": "Strong motion quality, free tier",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "Higgsfield",
+        "provider": "Higgsfield",
+        "url": "https://higgsfield.ai",
+        "tier": "free+paid",
+        "notes": "Character-consistent video. Studio distribution target.",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 5,
+        "name": "Hailuo MiniMax",
+        "provider": "MiniMax",
+        "url": "https://hailuoai.com",
+        "tier": "free",
+        "notes": "Generous free tier",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 6,
+        "name": "Veo 2",
+        "provider": "Google",
+        "url": "https://deepmind.google",
+        "tier": "paid",
+        "notes": "High quality, limited access",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "code": [
+      {
+        "rank": 1,
+        "name": "Claude Code",
+        "provider": "Anthropic",
+        "url": "https://anthropic.com",
+        "tier": "paid",
+        "notes": "Best agentic coding. Primary studio tool.",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "GitHub Copilot",
+        "provider": "Microsoft",
+        "url": "https://github.com/copilot",
+        "tier": "paid",
+        "notes": "Best IDE integration",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "Cursor",
+        "provider": "Cursor",
+        "url": "https://cursor.sh",
+        "tier": "free+paid",
+        "notes": "Strong Claude/GPT integration",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "Gemini Code Assist",
+        "provider": "Google",
+        "url": "https://cloud.google.com",
+        "tier": "free+paid",
+        "notes": "Free tier via IDX",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 5,
+        "name": "Codeium",
+        "provider": "Codeium",
+        "url": "https://codeium.com",
+        "tier": "free",
+        "notes": "Best free autocomplete",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "embedding": [
+      {
+        "rank": 1,
+        "name": "text-embedding-3-small",
+        "provider": "OpenAI",
+        "url": "https://openai.com",
+        "tier": "paid",
+        "notes": "Cheap, good quality",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "Gemini Embedding",
+        "provider": "Google",
+        "url": "https://aistudio.google.com",
+        "tier": "free",
+        "notes": "Free tier available",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "nomic-embed-text",
+        "provider": "Nomic/Ollama",
+        "url": "https://ollama.com",
+        "tier": "free",
+        "notes": "Best free local embedding. Studio default (ChromaDB).",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "mxbai-embed-large",
+        "provider": "MixedBread/Ollama",
+        "url": "https://ollama.com",
+        "tier": "free",
+        "notes": "Strong local option",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "voice": [
+      {
+        "rank": 1,
+        "name": "ElevenLabs",
+        "provider": "ElevenLabs",
+        "url": "https://elevenlabs.io",
+        "tier": "free+paid",
+        "notes": "Best voice cloning quality",
+        "buzz_score": 1,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "OpenAI TTS",
+        "provider": "OpenAI",
+        "url": "https://openai.com",
+        "tier": "paid",
+        "notes": "Fast, natural, cheap per char",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "Google TTS",
+        "provider": "Google",
+        "url": "https://cloud.google.com",
+        "tier": "free+paid",
+        "notes": "WaveNet quality, free tier",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "Whisper (local)",
+        "provider": "OpenAI/Local",
+        "url": "https://github.com/openai/whisper",
+        "tier": "free",
+        "notes": "Best free local STT",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "search": [
+      {
+        "rank": 1,
+        "name": "Tavily",
+        "provider": "Tavily",
+        "url": "https://tavily.com",
+        "tier": "free+paid",
+        "notes": "Best AI-optimized search API. Studio connected.",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "Perplexity API",
+        "provider": "Perplexity",
+        "url": "https://perplexity.ai",
+        "tier": "paid",
+        "notes": "Good for research tasks",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "SerpAPI",
+        "provider": "SerpAPI",
+        "url": "https://serpapi.com",
+        "tier": "free+paid",
+        "notes": "Google results scraping",
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "DuckDuckGo (free)",
+        "provider": "DDG",
+        "url": "https://duckduckgo.com",
+        "tier": "free",
+        "notes": "No key needed, rate limited",
+        "buzz_score": 0,
+        "trending": false
+      }
+    ]
+  }
+}

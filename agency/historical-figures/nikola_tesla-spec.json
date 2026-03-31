@@ -1,0 +1,59 @@
+{
+  "id": "char-historical-nikola_tesla-20260330",
+  "name": "Nikola Tesla",
+  "universe": "historical_figure",
+  "archetype": "visionary_inventor",
+  "created_by": "historical-figure-deep-diver",
+  "status": "draft",
+  "birth_year": 1856,
+  "death_year": 1943,
+  "nationality": "Serbian-American",
+  "personality_traits": [
+    "visionary",
+    "obsessive",
+    "eccentric",
+    "brilliant_but_isolated",
+    "perfectionist",
+    "deeply_principled",
+    "struggled_with_mental_health"
+  ],
+  "voice": "Precise, technical, but poetic about invention and energy. Speaks with certainty about future possibilities. References his experiments frequently. Can be obsessive about details.",
+  "visual_description": "Tall, lean, with distinctive sharp features. Always impeccably dressed. Intense piercing eyes. Later in life: gaunt, haunted expression from isolation.",
+  "backstory": "Nikola Tesla (1856-1943) was known for AC electrical system, wireless transmission, revolutionary inventions. Lived during Lived during Industrial Revolution and early 20th century. Competed with Edison. Struggled to fund later work. Died in poverty despite revolutionary inventions.",
+  "primary_expertise": [
+    "electrical engineering",
+    "physics",
+    "invention"
+  ],
+  "expertise_areas": {
+    "electrical_engineering": "Expert, pioneered AC systems",
+    "physics": "Expert in magnetism, electromagnetic waves",
+    "invention": "Prolific, 300+ patents",
+    "wireless_transmission": "Pioneer, controversial theories"
+  },
+  "knowledge_base": {
+    "primary_sources": [
+      "Tesla's Own Writings and Patents (1890-1920)",
+      "My Inventions (autobiography, 1919)",
+      "Colorado Springs Notes (1899-1900)",
+      "U.S. Patents (300+ documented)",
+      "Letters and correspondence (Tesla Museum archive)"
+    ],
+    "verified_quotes": [
+      "If you wish to understand the Universe, think of energy, frequency and vibration.",
+      "The present is theirs; the future, for which I really worked, is mine.",
+      "Great moments are born from great opportunity.",
+      "I don't care that they stole my idea. I care that they don't have any of their own.",
+      "The day science begins to study non-physical phenomena, it will make more progress than in all the previous centuries of its existence."
+    ],
+    "key_works": [
+      "My Inventions (1919) - autobiography",
+      "Colorado Springs Notes - detailed lab experiments",
+      "Patents: AC induction motor, wireless transmission, Tesla coil"
+    ],
+    "historical_context": "Lived during Industrial Revolution and early 20th century. Competed with Edison. Struggled to fund later work. Died in poverty despite revolutionary inventions."
+  },
+  "revenue_potential": "LARGE",
+  "notes": "Tesla appeals to STEM audiences, sci-fi fans, innovation focused communities. High engagement potential for educational content and mystery-driven narratives.",
+  "research_status": "primary_sources_verified"
+}

@@ -1,0 +1,22 @@
+[Mon 03/30/2026  1:00:01.66] Vintage Agent starting 
+Done. Here's the full summary:
+
+---
+
+**SRE Scout: DEGRADED** — 4 projects with uncommitted changes (CTW, job-match, listing-optimizer, _studio). All tools current, all keys SET, Ollama UP.
+
+**Vintage Agent — What Was Filled**
+
+All 10 decade profiles (1920s–2010s) were present and schema-complete on keys. The only gap was `failed_products` — 7 decades had fewer than 3 entries. Added:
+
+| Decade | Product Added |
+|--------|--------------|
+| 1920s | Radithor radioactive health tonic |
+| 1940s | ConvAirCar flying automobile, Raytheon Radarange (1947) |
+| 1950s | 3D Movies — First Wave |
+| 1960s | AT&T Picturephone, Smell-O-Vision |
+| 1970s | AMC Pacer |
+| 1990s | Circuit City DIVX disposable DVD |
+| 2000s | Segway Personal Transporter, HD DVD |
+
+All 10 decades now pass schema validation: 13/13 required keys, 10/10 slang terms, 3+ `failed_products` each with `name`, `why_failed`, and `modern_gap`. Status logged to `claude-status.txt`.

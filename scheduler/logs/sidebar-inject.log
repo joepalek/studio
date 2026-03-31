@@ -1,0 +1,5 @@
+asset-log.json updated with real usage counts
+Usage found: {'youtube-data-v3': 10, 'supabase': 1}
+Injected: 46 inbox, 10 whiteboard, 8 assets
+INJECTED at line 239, window.onload at line 572 - order: OK
+Done.

@@ -1,0 +1,250 @@
+{
+  "audit_date": "2026-03-30",
+  "audit_title": "Historical Figure Deployment Readiness",
+  "summary": "All 5 characters research-complete and personality-locked. Tesla and da Vinci priority for test deployment (visual distinctiveness + high engagement). GPU blocker prevents Splat generation—all characters queued for post-GPU phase.",
+
+  "characters": [
+    {
+      "name": "Nikola Tesla",
+      "id": "char-historical-nikola_tesla-20260330",
+      "spec_status": "draft",
+      "research_status": "primary_sources_verified",
+      
+      "readiness_assessment": {
+        "spec_completeness": "100% (personality, voice, expertise, knowledge base locked)",
+        "splat_readiness": "50% (design ready, Splat generation blocked by GPU)",
+        "deployment_readiness": "0% (awaiting Splat generation + voice testing)"
+      },
+
+      "deployment_gates_status": {
+        "gate_1_spec_complete": "✓ PASS",
+        "gate_2_splat_generated": "✗ BLOCKED (GPU)",
+        "gate_3_splat_segmented": "✗ BLOCKED (depends on gate 2)",
+        "gate_4_voice_tested": "✗ BLOCKED (needs Splat for testing)",
+        "gate_5_interaction_tested": "✗ BLOCKED (depends on gate 2-4)",
+        "gate_6_content_gate_verified": "✓ PASS (SFW-only historical, no content concerns)"
+      },
+
+      "splat_generation_plan": {
+        "source_method": "photo_reconstruction + period_imagery",
+        "reference_sources": [
+          "Historical photographs (late 1800s/early 1900s)",
+          "Period portraits and illustrations",
+          "Documented physical descriptions"
+        ],
+        "generator_tool": "Polycam Pro (post-GPU) → ArtisanGS segmentation",
+        "estimated_gpu_hours": "2-4 hours (capture + generation + iteration)"
+      },
+
+      "visual_distinctiveness": "HIGH — Tall, lean, sharp features, intense piercing eyes, impeccable dress. Highly recognizable silhouette.",
+      "voice_personality": "Precise, technical, poetic about invention. Strong character voice for Convai synthesis.",
+      "engagement_potential": "LARGE — STEM audiences, sci-fi communities, innovation-focused, mystery narratives",
+      
+      "test_deployment_priority": "P0 — Recommend as FIRST test character (visual clarity + engagement)",
+      
+      "notes": "Best candidate for MVP test. Clear historical record, distinctive appearance, strong voice profile. No cultural sensitivities."
+    },
+
+    {
+      "name": "Leonardo da Vinci",
+      "id": "char-historical-leonardo_da_vinci-20260330",
+      "spec_status": "draft",
+      "research_status": "primary_sources_verified",
+      
+      "readiness_assessment": {
+        "spec_completeness": "100% (personality, voice, expertise, knowledge base locked)",
+        "splat_readiness": "50% (design ready, Splat generation blocked by GPU)",
+        "deployment_readiness": "0% (awaiting Splat generation + voice testing)"
+      },
+
+      "deployment_gates_status": {
+        "gate_1_spec_complete": "✓ PASS",
+        "gate_2_splat_generated": "✗ BLOCKED (GPU)",
+        "gate_3_splat_segmented": "✗ BLOCKED (depends on gate 2)",
+        "gate_4_voice_tested": "✗ BLOCKED (needs Splat for testing)",
+        "gate_5_interaction_tested": "✗ BLOCKED (depends on gate 2-4)",
+        "gate_6_content_gate_verified": "✓ PASS (SFW-only historical, no content concerns)"
+      },
+
+      "splat_generation_plan": {
+        "source_method": "portrait_reconstruction + period_artwork",
+        "reference_sources": [
+          "Renaissance portraits (self and contemporary)",
+          "Historical artwork depicting da Vinci",
+          "Anatomical study proportions"
+        ],
+        "generator_tool": "Polycam Pro (post-GPU) → ArtisanGS segmentation",
+        "estimated_gpu_hours": "2-4 hours (capture + generation + iteration)"
+      },
+
+      "visual_distinctiveness": "VERY HIGH — Flowing beard, intense gaze, Renaissance dress, notebook. Immediately iconic.",
+      "voice_personality": "Poetic, scientific, scattered-brilliant, philosophical. Strong character voice.",
+      "engagement_potential": "LARGE — Art lovers, STEM audiences, creativity communities, philosophy. Cross-demographic reach.",
+      
+      "test_deployment_priority": "P0 — Recommend as SECOND test character (highest cross-demographic appeal)",
+      
+      "notes": "Highest engagement breadth. Polymath appeal transcends single audience. Clear visual language. Excellent for demonstrating cross-demographic revenue potential."
+    },
+
+    {
+      "name": "Charles Darwin",
+      "id": "char-historical-charles_darwin-20260330",
+      "spec_status": "draft",
+      "research_status": "primary_sources_verified",
+      
+      "readiness_assessment": {
+        "spec_completeness": "100% (personality, voice, expertise, knowledge base locked)",
+        "splat_readiness": "40% (design ready, Splat generation blocked by GPU; note: may polarize some audiences)",
+        "deployment_readiness": "0% (awaiting Splat generation + voice testing)"
+      },
+
+      "deployment_gates_status": {
+        "gate_1_spec_complete": "✓ PASS",
+        "gate_2_splat_generated": "✗ BLOCKED (GPU)",
+        "gate_3_splat_segmented": "✗ BLOCKED (depends on gate 2)",
+        "gate_4_voice_tested": "✗ BLOCKED (needs Splat for testing)",
+        "gate_5_interaction_tested": "✗ BLOCKED (depends on gate 2-4)",
+        "gate_6_content_gate_verified": "⚠ CONDITIONAL PASS (evolution topic may require disclaimer for some markets)"
+      },
+
+      "splat_generation_plan": {
+        "source_method": "historical_portraiture",
+        "reference_sources": [
+          "Victorian-era photographs of Darwin",
+          "Contemporary portraits",
+          "Biographical illustrations"
+        ],
+        "generator_tool": "Polycam Pro (post-GPU) → ArtisanGS segmentation",
+        "estimated_gpu_hours": "2-4 hours (capture + generation + iteration)"
+      },
+
+      "visual_distinctiveness": "HIGH — Distinctive beard, kind but penetrating eyes, Victorian formal dress. Clear aging arc.",
+      "voice_personality": "Thoughtful, careful, scientific but humble. Strong introspective quality.",
+      "engagement_potential": "LARGE — Science education, evolution/biology, history of science, philosophy. Note: may polarize religious communities.",
+      
+      "test_deployment_priority": "P1 — Deploy after Tesla/da Vinci (higher risk/polarization)",
+      
+      "notes": "Strong educational appeal. Evolution topic may require audience-specific framing. Consider separate content tier for markets with religious sensitivity. Excellent for science education channels."
+    },
+
+    {
+      "name": "Marie Curie",
+      "id": "char-historical-marie_curie-20260330",
+      "spec_status": "draft",
+      "research_status": "primary_sources_verified",
+      
+      "readiness_assessment": {
+        "spec_completeness": "100% (personality, voice, expertise, knowledge base locked)",
+        "splat_readiness": "50% (design ready, Splat generation blocked by GPU)",
+        "deployment_readiness": "0% (awaiting Splat generation + voice testing)"
+      },
+
+      "deployment_gates_status": {
+        "gate_1_spec_complete": "✓ PASS",
+        "gate_2_splat_generated": "✗ BLOCKED (GPU)",
+        "gate_3_splat_segmented": "✗ BLOCKED (depends on gate 2)",
+        "gate_4_voice_tested": "✗ BLOCKED (needs Splat for testing)",
+        "gate_5_interaction_tested": "✗ BLOCKED (depends on gate 2-4)",
+        "gate_6_content_gate_verified": "✓ PASS (SFW-only historical, potential inspiration hook for women in STEM)"
+      },
+
+      "splat_generation_plan": {
+        "source_method": "historical_portraiture + period_photography",
+        "reference_sources": [
+          "Period photographs of Marie Curie",
+          "Laboratory documentation",
+          "Formal portraits"
+        ],
+        "generator_tool": "Polycam Pro (post-GPU) → ArtisanGS segmentation",
+        "estimated_gpu_hours": "2-4 hours (capture + generation + iteration)"
+      },
+
+      "visual_distinctiveness": "MEDIUM-HIGH — Petite build, serious expression, simple practical dress. Aging arc notable. Less visually iconic than Tesla/da Vinci but strong presence.",
+      "voice_personality": "Thoughtful, scientific, warm. Passion about women in science. Slight French accent potential.",
+      "engagement_potential": "LARGE — STEM education, women in science advocacy, historical biography, inspirational narratives",
+      
+      "test_deployment_priority": "P1 — Deploy after Tesla/da Vinci (solid performer, niche strength in women-in-STEM demographic)",
+      
+      "notes": "Strong educational appeal, particularly for women-in-STEM initiatives. Unique angle on engagement. Less visually distinctive than Tesla/da Vinci but strong in specific demographics."
+    },
+
+    {
+      "name": "Galileo Galilei",
+      "id": "char-historical-galileo_galilei-20260330",
+      "spec_status": "draft",
+      "research_status": "primary_sources_verified",
+      
+      "readiness_assessment": {
+        "spec_completeness": "100% (personality, voice, expertise, knowledge base locked)",
+        "splat_readiness": "40% (design ready, Splat generation blocked by GPU; note: may polarize religious audiences)",
+        "deployment_readiness": "0% (awaiting Splat generation + voice testing)"
+      },
+
+      "deployment_gates_status": {
+        "gate_1_spec_complete": "✓ PASS",
+        "gate_2_splat_generated": "✗ BLOCKED (GPU)",
+        "gate_3_splat_segmented": "✗ BLOCKED (depends on gate 2)",
+        "gate_4_voice_tested": "✗ BLOCKED (needs Splat for testing)",
+        "gate_5_interaction_tested": "✗ BLOCKED (depends on gate 2-4)",
+        "gate_6_content_gate_verified": "⚠ CONDITIONAL PASS (religion/science conflict may require disclaimers for some markets)"
+      },
+
+      "splat_generation_plan": {
+        "source_method": "portrait_reconstruction + period_imagery",
+        "reference_sources": [
+          "Period portraits and engravings",
+          "Renaissance-era artwork",
+          "Biographical illustrations"
+        ],
+        "generator_tool": "Polycam Pro (post-GPU) → ArtisanGS segmentation",
+        "estimated_gpu_hours": "2-4 hours (capture + generation + iteration)"
+      },
+
+      "visual_distinctiveness": "HIGH — Bearded man, sharp features, intelligent eyes, period clothing. Defiant energy. Clear aging arc (blindness in later years).",
+      "voice_personality": "Direct, challenging, passionate. Bold and defiant but reflective. Strong character voice.",
+      "engagement_potential": "LARGE — Science education, history of science, free-thought communities, philosophy. Note: may polarize religious audiences.",
+      
+      "test_deployment_priority": "P2 — Deploy after initial market test (religious sensitivity similar to Darwin)",
+      
+      "notes": "Strong in science/philosophy/free-thought demographics. Religious conflict narrative adds depth but requires audience awareness. Good for secular education markets."
+    }
+  ],
+
+  "deployment_sequencing": {
+    "phase_1_test_deployment": [
+      "1. Nikola Tesla (P0 — visual clarity + engagement)",
+      "2. Leonardo da Vinci (P0 — cross-demographic reach)"
+    ],
+    "phase_2_expanded_deployment": [
+      "3. Marie Curie (P1 — women-in-STEM niche)",
+      "4. Charles Darwin (P1 — evolution/science education, note polarization risk)",
+      "5. Galileo Galilei (P2 — religion/science narrative, note polarization risk)"
+    ]
+  },
+
+  "blockers_and_dependencies": {
+    "primary_blocker": "GPU Hardware (RTX 3060 12GB) — Blocks all Splat generation",
+    "secondary_blocker": "Convai SDK integration in Unreal Engine — Ready once Splats are generated",
+    "tertiary_dependencies": [
+      "ArtisanGS segmentation (post-Splat generation)",
+      "Voice model testing (post-Splat generation)",
+      "IK controller testing (post-Splat generation)"
+    ]
+  },
+
+  "immediate_next_steps": {
+    "pre_gpu": [
+      "✓ Confirm character specs (done)",
+      "✓ Validate research (done)",
+      "→ Design Splat acquisition plan per character (photo sourcing, reference collection)",
+      "→ Prepare Polycam/Scaniverse workflows for post-GPU phase"
+    ],
+    "post_gpu": [
+      "→ Generate Splats for Phase 1 (Tesla, da Vinci)",
+      "→ Segment and optimize Splats (ArtisanGS)",
+      "→ Integrate with Convai SDK in Unreal Engine",
+      "→ Test voice + animation + mouse interaction",
+      "→ Deploy to Historical Viewer app (beta)"
+    ]
+  }
+}

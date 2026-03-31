@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-031",
+  "name": "Sam Davis",
+  "universe": "inmates-vs-guards",
+  "archetype": "political_prisoner",
+  "created_date": "2026-03-30T13:14:55.405664",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Davis",
+    "pronouns": "they/them",
+    "age": 22,
+    "personality_traits": [
+      "insightful",
+      "insecure",
+      "destructive",
+      "creative",
+      "cynical",
+      "energetic"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:55.405687",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

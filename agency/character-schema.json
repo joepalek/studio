@@ -1,0 +1,162 @@
+{
+  "$schema": "Character Schema v1.0",
+  "character": {
+    "id": "char-[universe]-[name]-[YYYYMMDD]",
+    "name": "Character Name",
+    "universe": "inmates-vs-guards | band-member | historical-figure | original-fiction",
+    "archetype": "reformed_inmate | vocalist | philosopher | etc",
+    "created_date": "2026-03-30T12:00:00Z",
+    "created_by": "agent-name | manual | source",
+    "status": "draft | active | archived",
+    "core_profile": {
+      "name": "Full name",
+      "pronouns": "they/them",
+      "age": 0,
+      "personality_traits": ["trait1", "trait2", "trait3"],
+      "voice": "Description of how character speaks/communicates",
+      "archetype_description": "What role does this character fill",
+      "backstory": "Core narrative of character origin"
+    },
+    "visual_specs": {
+      "status": "draft | approved | locked",
+      "locked_date": null,
+      "locked_by": null,
+      "description": "Physical appearance, style, distinguishing features for art dept",
+      "references": ["url1", "url2"],
+      "art_dept_notes": "Specific direction for consistent visual identity",
+      "approved_visual_assets": {
+        "portrait_primary": "asset-id or path",
+        "portrait_alternate": "asset-id or path",
+        "silhouette": "asset-id or path"
+      }
+    },
+    "social_presence": {
+      "accounts": [
+        {
+          "platform": "twitter | discord | instagram | tiktok | youtube",
+          "handle": "@character_name",
+          "url": "https://...",
+          "coin_balance": 100,
+          "interaction_rules": "Character personality + response style + coin usage",
+          "created_date": "2026-03-30",
+          "status": "active | paused | archived",
+          "follower_count": 0,
+          "last_post": null
+        }
+      ],
+      "interaction_history": [],
+      "marketing_plan": "How character is positioned on social media"
+    },
+    "appearances": [
+      {
+        "appearance_id": "app-[project]-[role]-001",
+        "project": "inmates-vs-guards-season-1",
+        "universe": "inmates-vs-guards",
+        "role": "main | supporting | guest | cameo",
+        "start_date": "2026-04-01",
+        "end_date": null,
+        "status": "planned | in_progress | completed",
+        "arc": {
+          "name": "prisoner → reforming → trusted",
+          "description": "Character progression through this project",
+          "key_moments": ["moment1", "moment2"],
+          "final_state": "trusted and reformed"
+        },
+        "media_produced": [
+          {
+            "type": "script",
+            "title": "Episode 1: First Day",
+            "asset_id": "asset-ep1-script",
+            "path": "scripts/inmates-s1-ep1.md",
+            "status": "completed"
+          },
+          {
+            "type": "video",
+            "title": "Episode 1 raw footage",
+            "asset_id": "asset-ep1-video",
+            "path": "video/inmates-s1-ep1.mp4",
+            "status": "completed"
+          },
+          {
+            "type": "image",
+            "title": "Episode 1 promo image",
+            "asset_id": "asset-ep1-image",
+            "path": "images/inmates-s1-ep1-promo.jpg",
+            "locked_visual": true,
+            "approved_date": "2026-04-15"
+          }
+        ],
+        "notes": "Additional context about this appearance"
+      }
+    ],
+    "media_assets": {
+      "images": [
+        {
+          "asset_id": "img-[character]-[type]-001",
+          "type": "portrait | action | environment | social",
+          "title": "Character name - description",
+          "path": "art/characters/[universe]/[character]/images/",
+          "created_date": "2026-03-30",
+          "approved": false,
+          "approved_date": null,
+          "locked_visual": false,
+          "used_in_projects": ["project1", "project2"],
+          "source": "art-dept | generated | external",
+          "resolution": "1920x1080"
+        }
+      ],
+      "video": [
+        {
+          "asset_id": "vid-[character]-[project]-001",
+          "type": "scene | music_video | interview | social_clip",
+          "title": "Description",
+          "path": "video/characters/[universe]/[character]/",
+          "duration_seconds": 120,
+          "created_date": "2026-03-30",
+          "project": "project-name",
+          "locked_visual": false,
+          "approved_date": null
+        }
+      ],
+      "voice": [
+        {
+          "asset_id": "voice-[character]-[project]-001",
+          "type": "dialogue | narration | song",
+          "title": "Description",
+          "path": "audio/characters/[universe]/[character]/",
+          "duration_seconds": 30,
+          "voice_actor": "actor-name | AI-generated",
+          "created_date": "2026-03-30",
+          "project": "project-name",
+          "locked_voice": false
+        }
+      ]
+    },
+    "interaction_log": [
+      {
+        "timestamp": "2026-03-30T15:30:00Z",
+        "platform": "twitter",
+        "interaction_type": "reply | post | dm | mention",
+        "content": "What the character said/did",
+        "coins_spent": 0,
+        "coins_earned": 5,
+        "engagement": {
+          "likes": 0,
+          "replies": 0,
+          "shares": 0
+        },
+        "character_state": "What the character is feeling/experiencing at this moment"
+      }
+    ],
+    "metadata": {
+      "version": "1.0",
+      "last_updated": "2026-03-30T12:00:00Z",
+      "updated_by": "system | agent-name | manual",
+      "total_appearances": 0,
+      "total_media_assets": 0,
+      "total_interactions": 0,
+      "revenue_potential": "LARGE | MEDIUM | SMALL | NICHE",
+      "notes": "Any additional notes about character"
+    }
+  }
+}

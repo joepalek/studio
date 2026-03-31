@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-095",
+  "name": "Skyler Garcia",
+  "universe": "band-members",
+  "archetype": "keyboardist",
+  "created_date": "2026-03-30T13:15:15.160125",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Skyler Garcia",
+    "pronouns": "he/him",
+    "age": 28,
+    "personality_traits": [
+      "meticulous",
+      "insecure",
+      "thoughtful",
+      "patient",
+      "technical"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Grew up in a small town before moving to the city looking for opportunity."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:15.160145",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

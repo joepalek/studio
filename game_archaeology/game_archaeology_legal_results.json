@@ -1,0 +1,47 @@
+[
+  {
+    "game_title": "Hellmaze",
+    "risk_level": "GREEN",
+    "confidence": 0.88,
+    "reasoning": "Hellmaze is 16 years old from unknown/inactive creator. Fair use applies if you transform visuals significantly. No active IP holder to enforce.",
+    "transformation_requirements": {
+      "visual_redesign_percent": 30,
+      "mechanic_changes_required": "Core loop can stay same, enemy behavior/AI can change",
+      "layout_flexibility": "Can keep room structure",
+      "attribution_needed": true
+    },
+    "tier_recommendation": "TIER_1_RECORDING",
+    "notes_for_user": "Safe to convert. 30% visual redesign recommended.",
+    "assessed_at": "2026-03-31T02:58:02.055998"
+  },
+  {
+    "game_title": "Flappy Bird Clone v3",
+    "risk_level": "YELLOW",
+    "confidence": 0.68,
+    "reasoning": "Flappy Bird Clone v3 is 12 years old. Creator status unclear. Fair use applies, but recommend 50%+ visual redesign to be safe.",
+    "transformation_requirements": {
+      "visual_redesign_percent": 50,
+      "mechanic_changes_required": "Core loop can stay same, enemy behavior/AI can change",
+      "layout_flexibility": "Can keep room structure",
+      "attribution_needed": true
+    },
+    "tier_recommendation": "TIER_1_PLUS_2",
+    "notes_for_user": "Convertible with caution. Recommend 50% visual redesign.",
+    "assessed_at": "2026-03-31T02:58:02.056008"
+  },
+  {
+    "game_title": "Mario Remake 2023",
+    "risk_level": "RED",
+    "confidence": 0.85,
+    "reasoning": "Original creator 'Nintendo' is known/potentially active. High risk of DMCA. Recommend skipping unless you have explicit permission.",
+    "transformation_requirements": {
+      "visual_redesign_percent": 30,
+      "mechanic_changes_required": "Cannot use without permission",
+      "layout_flexibility": "N/A",
+      "attribution_needed": false
+    },
+    "tier_recommendation": "SKIP",
+    "notes_for_user": "Too risky. Skip this game.",
+    "assessed_at": "2026-03-31T02:58:02.056011"
+  }
+]

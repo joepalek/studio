@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-048",
+  "name": "Blake Williams",
+  "universe": "inmates-vs-guards",
+  "archetype": "reformed_inmate",
+  "created_date": "2026-03-30T13:14:03.506035",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Williams",
+    "pronouns": "he/him",
+    "age": 55,
+    "personality_traits": [
+      "principled",
+      "resilient",
+      "collaborative",
+      "jaded",
+      "reckless"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:03.506056",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

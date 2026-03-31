@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-010",
+  "name": "River Martinez",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-03-30T13:14:21.354312",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "River Martinez",
+    "pronouns": "she/her",
+    "age": 28,
+    "personality_traits": [
+      "impulsive",
+      "principled",
+      "thoughtful",
+      "suspicious"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:21.354333",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

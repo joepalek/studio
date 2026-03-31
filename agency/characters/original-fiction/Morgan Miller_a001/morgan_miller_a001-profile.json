@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-agent-001",
+  "name": "Morgan Miller",
+  "universe": "original-fiction",
+  "archetype": "sage",
+  "created_date": "2026-03-30T13:14:46.272241",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan Miller",
+    "pronouns": "he/him",
+    "age": 22,
+    "personality_traits": [
+      "independent",
+      "artistic",
+      "resilient",
+      "ambitious"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:46.272265",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

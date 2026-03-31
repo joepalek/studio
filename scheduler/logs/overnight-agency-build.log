@@ -1,0 +1,53 @@
+[2026-03-30 13:07:11] Agency character batch build starting
+[2026-03-30 13:07:11] Passing specs loaded: 283
+[2026-03-30 13:07:11] No build log found -- fresh run
+[2026-03-30 13:07:11] To build this run: 283 new characters
+[2026-03-30 13:07:17]   Progress: 25/283 built
+[2026-03-30 13:07:24]   Progress: 50/283 built
+[2026-03-30 13:07:30]   Progress: 75/283 built
+[2026-03-30 13:07:36]   Progress: 100/283 built
+[2026-03-30 13:07:43]   Progress: 125/283 built
+[2026-03-30 13:07:49]   Progress: 150/283 built
+[2026-03-30 13:07:55]   Progress: 175/283 built
+[2026-03-30 13:08:01]   Progress: 200/283 built
+[2026-03-30 13:08:07]   Progress: 225/283 built
+[2026-03-30 13:08:13]   Progress: 250/283 built
+[2026-03-30 13:08:19]   Progress: 275/283 built
+[2026-03-30 13:08:21] Build complete:
+[2026-03-30 13:08:21]   Built:  283
+[2026-03-30 13:08:21]   Failed: 0
+[2026-03-30 13:08:21]   By universe: {'band_members': 49, 'inmates_vs_guards': 84, 'other': 30, 'original_fiction': 120}
+[2026-03-30 13:08:21]   Total character folders now: 224
+[2026-03-30 13:08:21] Done.
+[2026-03-30 13:13:49] Agency character batch build starting
+[2026-03-30 13:13:49] Passing specs loaded: 283
+[2026-03-30 13:13:49] No build log found -- fresh run
+[2026-03-30 13:13:49] To build this run: 283 new characters
+[2026-03-30 13:13:57]   Progress: 25/283 built
+[2026-03-30 13:14:04]   Progress: 50/283 built
+[2026-03-30 13:14:12]   Progress: 75/283 built
+[2026-03-30 13:14:19]   Progress: 100/283 built
+[2026-03-30 13:14:26]   Progress: 125/283 built
+[2026-03-30 13:14:34]   Progress: 150/283 built
+[2026-03-30 13:14:42]   Progress: 175/283 built
+[2026-03-30 13:14:50]   Progress: 200/283 built
+[2026-03-30 13:14:58]   Progress: 225/283 built
+[2026-03-30 13:15:06]   Progress: 250/283 built
+[2026-03-30 13:15:14]   Progress: 275/283 built
+[2026-03-30 13:15:17] Build complete:
+[2026-03-30 13:15:17]   Built:  283
+[2026-03-30 13:15:17]   Failed: 0
+[2026-03-30 13:15:17]   By universe: {'band_members': 49, 'inmates_vs_guards': 84, 'other': 30, 'original_fiction': 120}
+[2026-03-30 13:15:18]   Total character folders now: 507
+[2026-03-30 13:15:18] Done.
+[Tue 03/31/2026  5:30:01.25] Agency character batch build starting 
+[2026-03-31 05:30:01] Agency character batch build starting
+Traceback (most recent call last):
+  File "G:\My Drive\Projects\_studio\agency\character_batch_builder.py", line 25, in <module>
+    log("Agency character batch build starting")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Projects\_studio\agency\character_batch_builder.py", line 22, in log
+    with open(SCHED_LOG, "a", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/scheduler/logs/overnight-agency-build.log'
+[Tue 03/31/2026  5:30:01.97] Done 

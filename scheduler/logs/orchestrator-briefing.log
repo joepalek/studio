@@ -207,3 +207,163 @@ Briefing saved to `orchestrator-briefing.json`. One WATCH item to note: **orches
 You've hit your limit · resets Mar 31, 5pm (America/Chicago)
 [Sun 03/29/2026  8:00:01.55] Daily briefing starting 
 You've hit your limit · resets Mar 31, 5pm (America/Chicago)
+[Mon 03/30/2026  8:00:01.66] Daily briefing starting 
+---
+
+## SRE Scout Report — 2026-03-30
+
+```
+=== SRE SCOUT REPORT — 2026-03-30 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.7
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET / UP (gemini-flash-latest active)
+  ✓ OpenRouter key: SET / UP
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+  ✓ Supabase: SET
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): CTW
+  ! UNCOMMITTED (3 files): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (32 files): _studio
+  ✓ 9 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending
+
+VERDICT: DEGRADED (4 uncommitted repos)
+ACTION: Commit CTW, job-match, listing-optimizer, _studio
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (4):
+  [~] UNCOMMITTED (1 file): CTW
+  [~] UNCOMMITTED (3 files): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (32 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## Orchestrator Daily Briefing — 2026-03-30
+
+**TOP 3 Joe Personal Tasks**
+1. **Decision Clearing** — Review and resolve the 8 pending project decisions to unblock agent workflows
+2. **Job Search** — High-priority outreach/applications (Blackdot ends May 2026)
+3. **Sentinel Filing** — Initiate Tennessee LLC paperwork ($300) to clear the legal blocker
+
+**TOP 3 Agent-Autonomous Tasks**
+1. CTW — Execute Perchance image generation for 4 character portraits
+2. Repo Cleanup — Commit dirty files across CTW, job-match, listing-optimizer, _studio
+3. eBay — Run automated health checks on 565 active listings
+
+**Critical Blockers**
+- Sentinel blocked on LLC filing — prevents payment/legal infrastructure
+- 8 projects stalled awaiting human decisions
+
+**Defer Today**
+Ghost Book & Arbitrage until job search and CTW milestones are met
+
+---
+
+`orchestrator-briefing.json` saved. All heartbeat entries written (sre-scout: flagged, orchestrator: clean, ai-gateway: clean). Note: `gemini-1.5-flash` is deprecated — Gemini models now route through `gemini-flash-latest`.
+[Tue 03/31/2026  8:00:01.37] Daily briefing starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.12 ✓
+- Claude Code 2.1.88 ✓
+- Repomix 1.12.0 ✓
+- Ollama 0.19.0 UP (2 models — active model: `gemma3:4b`, not `llama3.2` per gateway default)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Gemini key: SET ✓ / Gemini UP ✓
+- OpenRouter: UP ✓
+- YouTube key: SET ✓
+- ⚠ Gemini generateContent returning 404/503 — `gemini-1.5-flash` deprecated. Needs model name update.
+
+**PROJECTS (13 checked)**
+- ⚠ UNCOMMITTED (77 files): `_studio`
+- ⚠ UNCOMMITTED (5 files): `job-match`
+- ⚠ UNCOMMITTED (1 file): `CTW`
+- ⚠ UNCOMMITTED (1 file): `listing-optimizer`
+- 9 projects clean
+
+**STUDIO FILES:** All critical files present ✓
+
+**MOBILE ANSWERS:** None pending ✓
+
+**VERDICT: DEGRADED (5 warnings)**
+
+---
+
+## STRESS REPORT
+
+```
+WARNING (5):
+  [~] UNCOMMITTED (77 files): _studio
+  [~] UNCOMMITTED (5 files): job-match
+  [~] UNCOMMITTED (1 file): CTW
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] Gemini generateContent 404/503 — gemini-1.5-flash deprecated
+
+WATCH (3):
+  [-] Ollama model is gemma3:4b (ai-gateway.md default references llama3.2 — may mismatch)
+  [-] 8 projects have pending human decisions blocking agent work
+  [-] CTW blocked on portrait images + comfort bar overcorrection
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## ORCHESTRATOR DAILY BRIEFING — 2026-03-31
+*(Gemini DOWN → Claude fallback)*
+
+**TOP 3 FOR JOE TODAY:**
+1. **[Job Match]** Answer 3 architecture decisions (Replit migration, auth replacement, AI model) — 5 pending decisions blocking all agent work; Blackdot ends May 2026
+2. **[Listing Optimizer]** Decide: personal tool vs productize + input format — 2 decisions blocking build; 565 live eBay listings = daily revenue at stake
+3. **[CTW]** Unblock portrait generation — at 40%, next action clear but blocked on real images
+
+**AGENT QUEUE (autonomous):**
+1. Commit dirty projects: `_studio` (77), `job-match` (5), `CTW` (1), `listing-optimizer` (1)
+2. Update Gemini model name in `orchestrator.md` — replace `gemini-1.5-flash` with `gemini-2.0-flash-001`
+3. Run janitor scan on `job-match` and `listing-optimizer` state files
+
+**CRITICAL BLOCKERS:**
+- CTW: portrait images still SVG placeholders + comfort bar overcorrects
+- Sentinel: blocked on LLC filing ($300 Tennessee) — highest long-term revenue potential, zero movement possible
+- Gemini generateContent API down — orchestrator ate Claude quota today
+
+**DEFER:** AcuScan, NutriMind, Squeeze Empire, Whatnot Apps — all intentionally paused.
+
+---
+
+Files saved: `sre-report.json`, `sre-stress-report.json`, `orchestrator-briefing.json`, `heartbeat-log.json`.
+
+**One action item to flag:** `orchestrator.md` line 169 references `gemini-1.5-flash` which is now deprecated. Want me to update it to `gemini-2.0-flash-001`?

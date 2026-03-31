@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-claude-043",
+  "name": "Sam Rodriguez",
+  "universe": "other",
+  "archetype": "scholar",
+  "created_date": "2026-03-30T13:07:21.782324",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Rodriguez",
+    "pronouns": "she/her",
+    "age": 35,
+    "personality_traits": [
+      "intelligent",
+      "diplomatic",
+      "charismatic",
+      "cautious"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Grew up in a small town before moving to the city looking for opportunity."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:07:21.782346",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

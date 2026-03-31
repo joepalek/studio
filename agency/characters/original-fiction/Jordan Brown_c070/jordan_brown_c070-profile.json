@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-claude-070",
+  "name": "Jordan Brown",
+  "universe": "original-fiction",
+  "archetype": "caregiver",
+  "created_date": "2026-03-30T13:14:09.868878",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Jordan Brown",
+    "pronouns": "she/her",
+    "age": 55,
+    "personality_traits": [
+      "destructive",
+      "reserved",
+      "independent",
+      "determined",
+      "compassionate",
+      "possessive",
+      "ambitious"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:09.868902",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

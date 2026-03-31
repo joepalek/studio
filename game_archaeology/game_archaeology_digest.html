@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background: #222; color: white; padding: 20px; border-radius: 5px; }
+        .section { margin: 30px 0; }
+        .game-card { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .green { border-left: 4px solid #28a745; }
+        .yellow { border-left: 4px solid #ffc107; }
+        .red { border-left: 4px solid #dc3545; }
+        .risk-badge { display: inline-block; padding: 5px 10px; border-radius: 3px; font-weight: bold; }
+        .risk-green { background: #d4edda; color: #155724; }
+        .risk-yellow { background: #fff3cd; color: #856404; }
+        .risk-red { background: #f8d7da; color: #721c24; }
+        .checkbox { margin: 20px 0; }
+        input[type="checkbox"] { margin-right: 10px; }
+        .tier { color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Game Archaeology Weekly Digest</h1>
+        <p>Date: 2026-03-31</p>
+        <p>New Finds: 4 | Safe: 2 | Caution: 1 | Skip: 1</p>
+    </div>
+
+    <div class="section">
+        <h2>GREEN (Safe to Convert)</h2>
+        <p>2 games approved for immediate conversion</p>
+
+        <div class="game-card green">
+            <h3>1. Hellmaze</h3>
+            <p><span class="risk-badge risk-green">GREEN</span> 
+               <span class="tier">Confidence: 88%</span></p>
+            <p><strong>Status:</strong> Safe to convert. 30% visual redesign recommended.</p>
+            <p><strong>Method:</strong> <span class="tier">TIER_1_RECORDING</span></p>
+            <p><strong>Reasoning:</strong> Hellmaze is 16 years old from unknown creator.</p>
+            <div class="checkbox">
+                <input type="checkbox" id="game_1" name="approve_1" value="true">
+                <label for="game_1">Queue for conversion</label>
+            </div>
+        </div>
+
+        <div class="game-card green">
+            <h3>2. Zombie Towers</h3>
+            <p><span class="risk-badge risk-green">GREEN</span> 
+               <span class="tier">Confidence: 85%</span></p>
+            <p><strong>Status:</strong> Safe to convert. Code salvage recommended (58% reuse).</p>
+            <p><strong>Method:</strong> <span class="tier">TIER_1_PLUS_2</span></p>
+            <p><strong>Reasoning:</strong> MIT licensed, source available, old framework.</p>
+            <div class="checkbox">
+                <input type="checkbox" id="game_2" name="approve_2" value="true">
+                <label for="game_2">Queue for conversion</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>YELLOW (Needs Your Decision)</h2>
+        <p>1 games that can be converted with caution</p>
+
+        <div class="game-card yellow">
+            <h3>3. Dark Mansion</h3>
+            <p><span class="risk-badge risk-yellow">YELLOW</span></p>
+            <p><strong>Risk:</strong> Convertible with caution. Recommend 70% visual redesign.</p>
+            <p><strong>Reasoning:</strong> Similar to Resident Evil. Creator unknown. Fair use applies with transformation.</p>
+            <div class="checkbox">
+                <input type="radio" name="yellow_3" value="approve" id="approve_3">
+                <label for="approve_3">Approve & queue</label><br>
+                <input type="radio" name="yellow_3" value="skip" id="skip_3">
+                <label for="skip_3">Skip this game</label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>RED (Skip These)</h2>
+        <p>1 games too risky to convert</p>
+
+        <div class="game-card red">
+            <h3>X Super Mario Clone</h3>
+            <p><span class="risk-badge risk-red">RED</span></p>
+            <p><strong>Reason:</strong> Clear Nintendo IP derivative. High DMCA risk.</p>
+        </div>
+
+    </div>
+
+    <div class="section" style="background: #f0f0f0; padding: 20px; border-radius: 5px;">
+        <h2>Next Steps</h2>
+        <p>Review the games above and make your decisions:</p>
+        <ol>
+            <li>Approve GREEN games for immediate conversion</li>
+            <li>Decide on YELLOW games (convert with caution or skip)</li>
+            <li>RED games are auto-skipped</li>
+        </ol>
+        <p style="margin-top: 30px; text-align: center;">
+            <button onclick="submitDecisions()" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                SUBMIT DECISIONS
+            </button>
+        </p>
+    </div>
+
+    <script>
+        function submitDecisions() {{
+            const decisions = {{}};
+            document.querySelectorAll('[type="checkbox"]:checked, input[type="radio"]:checked').forEach(el => {{
+                decisions[el.id] = el.value;
+            }});
+            console.log('Decisions:', decisions);
+            alert('Decisions recorded. Conversions will be queued.');
+        }}
+    </script>
+</body>
+</html>

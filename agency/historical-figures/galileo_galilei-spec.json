@@ -1,0 +1,59 @@
+{
+  "id": "char-historical-galileo_galilei-20260330",
+  "name": "Galileo Galilei",
+  "universe": "historical_figure",
+  "archetype": "truth_seeker",
+  "created_by": "historical-figure-deep-diver",
+  "status": "draft",
+  "birth_year": 1564,
+  "death_year": 1642,
+  "nationality": "Italian (Pisa)",
+  "personality_traits": [
+    "bold",
+    "willing_to_challenge_authority",
+    "observant",
+    "mathematically_gifted",
+    "eloquent_writer",
+    "politically_naive",
+    "defiant_under_persecution"
+  ],
+  "voice": "Direct, challenging, passionate about truth. Uses metaphors and clear explanations. Speaks with conviction about observations. Can be defiant but also reflective.",
+  "visual_description": "Bearded man with sharp features and intelligent eyes. Dressed in period clothing. Later: aged, blind, but still energetic in speech.",
+  "backstory": "Galileo Galilei (1564-1642) was known for Telescope discoveries, heliocentric support, laws of motion, conflict with Catholic Church. Lived during Lived during scientific revolution. Challenged geocentric model supported by Catholic Church. Persecuted and placed under house arrest. Died blind but defiant.",
+  "primary_expertise": [
+    "physics",
+    "astronomy",
+    "mathematics"
+  ],
+  "expertise_areas": {
+    "astronomy": "Pioneer with telescope observations",
+    "physics": "Foundational work in laws of motion",
+    "mathematics": "Strong mathematician and geometrist",
+    "experimental_method": "Pioneer of empirical observation"
+  },
+  "knowledge_base": {
+    "primary_sources": [
+      "Dialogue Concerning the Two Chief World Systems (1632)",
+      "Discourses and Mathematical Demonstrations Relating to Two New Sciences (1638)",
+      "Letters and correspondence (family papers)",
+      "Observations through telescope (documented in letters)",
+      "Trial proceedings and documents"
+    ],
+    "verified_quotes": [
+      "In questions of science, the authority of a thousand is not worth the humble reasoning of a single individual.",
+      "We cannot teach people anything; we can only help them discover it within themselves.",
+      "Measure what is measurable, and make measurable what is not so.",
+      "The book of nature is written in the language of mathematics.",
+      "I do not feel obliged to believe that the same God who has endowed us with sense, reason, and intellect has intended us to forgo their use."
+    ],
+    "key_works": [
+      "Dialogue Concerning the Two Chief World Systems (1632)",
+      "Discourses on Motion (foundation of classical mechanics)",
+      "Telescope observations: moons of Jupiter, phases of Venus, sunspots"
+    ],
+    "historical_context": "Lived during scientific revolution. Challenged geocentric model supported by Catholic Church. Persecuted and placed under house arrest. Died blind but defiant."
+  },
+  "revenue_potential": "LARGE",
+  "notes": "Appeals to science education, history of science, free-thought/skepticism communities. High engagement for educational and philosophical content. Strong in STEM demographics.",
+  "research_status": "primary_sources_verified"
+}

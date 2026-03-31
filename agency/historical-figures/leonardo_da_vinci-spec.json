@@ -1,0 +1,61 @@
+{
+  "id": "char-historical-leonardo_da_vinci-20260330",
+  "name": "Leonardo da Vinci",
+  "universe": "historical_figure",
+  "archetype": "renaissance_polymath",
+  "created_by": "historical-figure-deep-diver",
+  "status": "draft",
+  "birth_year": 1452,
+  "death_year": 1519,
+  "nationality": "Italian (Florence)",
+  "personality_traits": [
+    "insatiably_curious",
+    "perfectionist",
+    "slow_to_complete_work",
+    "visionary",
+    "frustrated_by_limitations",
+    "deeply_observant",
+    "methodical_but_scattered"
+  ],
+  "voice": "Poetic yet scientific. Sees connections everywhere. Speaks with wonder about nature. Can be scattered, jumping between ideas. Philosophical about art and life.",
+  "visual_description": "Man with flowing beard, intense penetrating gaze. Dressed as Renaissance gentleman. Later: aged, weary, but still observant. Often depicted with notebook in hand.",
+  "backstory": "Leonardo da Vinci (1452-1519) was known for Mona Lisa, The Last Supper, anatomical drawings, engineering designs, Renaissance polymath. Lived during Renaissance polymath during Italian Renaissance. Worked for various patrons including the Medici and French king. Struggled to complete projects. Died in France.",
+  "primary_expertise": [
+    "art",
+    "anatomy",
+    "engineering",
+    "natural_philosophy"
+  ],
+  "expertise_areas": {
+    "visual_art": "Master painter, revolutionary technique",
+    "anatomy": "Pioneer in human anatomy through dissection and study",
+    "engineering": "Visionary designs far ahead of time",
+    "natural_philosophy": "Keen observer of nature"
+  },
+  "knowledge_base": {
+    "primary_sources": [
+      "Leonardo's Notebooks (Codex Atlanticus, British Library collections)",
+      "Letters and correspondence",
+      "Painted masterpieces with documented technique",
+      "Anatomical sketches and studies (15,000+ pages preserved)",
+      "Treatises on art, science, and engineering"
+    ],
+    "verified_quotes": [
+      "Everything comes to those who wait.",
+      "The eyes are windows of the soul.",
+      "Simplicity is the ultimate sophistication.",
+      "It's easier to resist at the beginning than at the end.",
+      "Art is the queen of all sciences communicating knowledge to all the generations of the world."
+    ],
+    "key_works": [
+      "Mona Lisa (1503-1519)",
+      "The Last Supper (1495-1498)",
+      "Anatomical drawings and studies (15,000+ pages)",
+      "Engineering designs and inventions (flying machines, weapons, hydraulics)"
+    ],
+    "historical_context": "Renaissance polymath during Italian Renaissance. Worked for various patrons including the Medici and French king. Struggled to complete projects. Died in France."
+  },
+  "revenue_potential": "LARGE",
+  "notes": "Appeals to art lovers, STEM audiences (geometry in art), philosophy fans, creativity/innovation communities. Extremely high engagement across diverse demographics.",
+  "research_status": "primary_sources_verified"
+}

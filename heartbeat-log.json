@@ -1,8 +1,97 @@
 [
   {
-    "date": "2026-03-29T23:01:34.391548",
+    "_schema": "1.0",
+    "entries": [
+      {
+        "date": "2026-03-31T04:31:47.924288",
+        "agent": "sre-scout",
+        "status": "flagged",
+        "notes": "overnight-job-delta PermissionError; auto-answer encoding errors; _studio uncommitted files"
+      },
+      {
+        "date": "2026-03-31T05:01:25.076023",
+        "agent": "sre-scout",
+        "status": "flagged",
+        "notes": "4 uncommitted repos; job-delta log PermissionError"
+      },
+      {
+        "date": "2026-03-31T10:30:01Z",
+        "agent": "ai-services-rankings",
+        "status": "clean",
+        "notes": "7 categories updated"
+      },
+      {
+        "date": "2026-03-31T05:31:47.806687",
+        "agent": "sre-scout",
+        "status": "flagged",
+        "notes": "4 uncommitted repos (CTW, job-match, listing-optimizer, _studio 76 files). All endpoints UP."
+      },
+      {
+        "date": "2026-03-31T06:01:55.073414",
+        "agent": "sre-scout",
+        "status": "flagged",
+        "notes": "4 uncommitted repos: CTW, job-match, listing-optimizer, _studio"
+      },
+      {
+        "date": "2026-03-31T06:01:55.073438",
+        "agent": "supervisor",
+        "status": "clean",
+        "notes": "supervisor cycle complete \u2014 0 tasks dispatched, queue empty"
+      },
+      {
+        "date": "2026-03-31T06:31:45.655412",
+        "agent": "sre-scout",
+        "status": "flagged",
+        "notes": "4 dirty repos, job-delta permission error"
+      }
+    ]
+  },
+  {
+    "date": "2026-03-31",
     "agent": "sre-scout",
     "status": "flagged",
-    "notes": "DEGRADED: 12 uncommitted files in _studio"
+    "notes": "4 dirty repos; heartbeat encoding issue; session-startup dotenv parse errors"
+  },
+  {
+    "date": "2026-03-31 07:31",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 4 dirty repos, job-delta PermissionError"
+  },
+  {
+    "date": "2026-03-31",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: job-delta PermissionError on log; 29 auto-answer escalations pending"
+  },
+  {
+    "date": "2026-03-31",
+    "agent": "sre-scout + orchestrator",
+    "status": "flagged",
+    "notes": "DEGRADED: 4 dirty projects (77+5+1+1 files). Gemini generateContent 404/503 \u2014 model deprecated. Orchestrator briefing fell back to Claude. 8 projects blocked on human decisions."
+  },
+  {
+    "date": "2026-03-31T08:31:34.881394",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "4 dirty repos: CTW, job-match, listing-optimizer, _studio"
+  },
+  {
+    "date": "2026-03-31T09:02:05.438850",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "WARNING: 4 dirty repos (CTW, job-match, listing-optimizer, _studio 77 files). All APIs up. No mobile answers pending."
+  },
+  {
+    "date": "2026-03-31T09:32:19.071220",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: 84 uncommitted _studio files; all APIs UP; all overnights completed"
+  },
+  {
+    "date": "2026-03-31T10:02:19.533246",
+    "agent": "sre-scout",
+    "status": "flagged",
+    "notes": "DEGRADED: _studio uncommitted (84 files), job-delta PermissionError, 29 auto-answers escalated"
   }
 ]

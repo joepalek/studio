@@ -59,7 +59,7 @@ def match_rule(item, rules):
 
 def write_status(msg):
     ts = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
-    with open(STATUS_PATH, "a", encoding="utf-8") as f:
+    with open(STATUS_PATH, "a", encoding="utf-8", errors="replace") as f:
         f.write(f"{ts} [AUTO-ANSWER] {msg}\n")
 
 

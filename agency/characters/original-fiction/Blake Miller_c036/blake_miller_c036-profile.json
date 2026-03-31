@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-claude-036",
+  "name": "Blake Miller",
+  "universe": "original-fiction",
+  "archetype": "caregiver",
+  "created_date": "2026-03-30T13:13:59.916859",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Miller",
+    "pronouns": "he/him",
+    "age": 65,
+    "personality_traits": [
+      "insightful",
+      "suspicious",
+      "courageous",
+      "determined",
+      "independent",
+      "possessive",
+      "conflicted"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:13:59.916881",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

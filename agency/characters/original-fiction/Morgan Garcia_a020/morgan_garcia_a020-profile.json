@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-020",
+  "name": "Morgan Garcia",
+  "universe": "original-fiction",
+  "archetype": "trickster",
+  "created_date": "2026-03-30T13:14:51.890115",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan Garcia",
+    "pronouns": "he/him",
+    "age": 42,
+    "personality_traits": [
+      "delusional",
+      "practical",
+      "paranoid",
+      "thoughtful",
+      "loyal",
+      "collaborative"
+    ],
+    "voice": "playful and irreverent",
+    "archetype_description": "",
+    "backstory": "Carries deep regrets about choices made years ago."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:51.890136",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-080",
+  "name": "Skyler Miller",
+  "universe": "band-members",
+  "archetype": "frontman",
+  "created_date": "2026-03-30T13:14:12.835086",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Skyler Miller",
+    "pronouns": "they/them",
+    "age": 18,
+    "personality_traits": [
+      "meticulous",
+      "destructive",
+      "reserved",
+      "cynical",
+      "empathetic"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Has a complicated relationship with their past that shapes everything they do."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:12.835108",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

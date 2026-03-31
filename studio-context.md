@@ -1,7 +1,7 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-29 23:30 | Auto-built by generate-context.py
-Next regeneration: 2026-03-30 07:30 (approximate — runs at every session start)
-Handoff: System tightness last reviewed: 2026-03-25 — PARTIAL (NIT 8/10, T06 fixed, T05 dismissed)
+Generated: 2026-03-31 10:00 | Auto-built by generate-context.py
+Next regeneration: 2026-03-31 18:00 (approximate — runs at every session start)
+Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
 
@@ -743,7 +743,7 @@ If it does:
   _project: job-match
   _folder: job-match
   _created: 2026-03-12
-  _last_updated: 2026-03-25
+  _last_updated: 2026-03-30
   project: 
     name: Talent Insight Engine (Job Match Platform)
     description: AI-powered job matching platform. Two sides: (1) Job Seeker â€” narrative interview generates behavioral profile, matched against live job pool. (2) Employer â€” browse candidate profiles with AI alignment scoring. Scraping engine runs two-tier crawl: monthly broad discovery + daily targeted delta fetch with JIT dead-link validation.
@@ -995,8 +995,9 @@ If it does:
       size: medium
       size_estimate: 30min
       depends_on: None
-      status: in_progress
-      completed_date: None
+      status: completed
+      completed_date: 2026-03-30
+      completion_notes: Talent-Insight-Engine: Express+TypeScript server, React+Wouter client, Drizzle ORM on Postgres. Two DB tables: profiles (narrative interview data + AI summaries) and jobs. Auth: Replit OIDC via openid-client+passport — all in server/replit_integrations/auth/. AI: OpenAI client in server/routes.ts (narrative analysis, alignment scoring, employer summary). 5 pages: Landing, NarrativeInput (6-section interview + resume upload), RefineSummary, CandidateView, EmployerDashboard+Framing. What works: full seeker flow, employer alignment scoring, employer summary generation, candidate browsing. What's incomplete: no job ingestion pipeline wired to UI, no matching engine connecting internalTraits to jobs table, jobs table exists in schema but no routes populate it from external sources. Migration blockers: replitAuth.ts (OIDC using REPL_ID/ISSUER_URL), OpenAI in routes.ts, DATABASE_URL + SESSION_SECRET env vars needed for Supabase.
     - 
       id: auto_002
       task: Document Replit Auth dependency â€” identify every file that imports or uses replitAuth, map migration scope
@@ -1841,8 +1842,24 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-03-29T19:35:00
-Total items: 45
+Last updated: 2026-03-31T04:00:02.895603
+Total items: 46
+
+  [9/10] Higgsfield Original Series — Backwards Design
+    id:      higgsfield-backwards-design
+    type:    distribution+content-strategy
+    status:  WHITEBOARD
+    source:  
+    description: Monitor platform weekly for genre gaps and vote velocity. Build CTW characters specifically for underserved genres. Design story structure for 2-10 minute episode format from day one. Soul ID consistency built into character spec. Enter contests in low-competition genres. Sponsored production if contest win.
+    score_breakdown:
+      total_score: 9
+      recommended_action: BUILD
+      why_now: Data-driven niche content creation and short-form distribution are key to success for new creators today.
+      effort_estimate: months
+      revenue_estimate: MEDIUM
+      top_risk: Success is highly dependent on accurately identifying viable niches and winning contests.
+      score_breakdown: {'market_timing': 9, 'feasibility': 9, 'revenue_potential': 7, 'strategic_fit': 10}
+    added:   2026-03-29
 
   [8/10] I've played and reviewed 1.000+ horror games, here are some gems you might not h
     id:      arch-reddit-0001
@@ -1963,6 +1980,38 @@ Total items: 45
       top_risk: The effectiveness of the 'Mayor' agent in reliably detecting subtle hallucination drift introduced by the 'Liar' agent.
     tags:    testing, adversarial, hallucination, overnight, mayor
     added:   2026-03-26
+
+  [8/10] War Room Decision Protocol
+    id:      war-room-protocol
+    type:    protocol
+    status:  ACTIVE
+    source:  
+    description: Standard protocol for high-stakes decisions. Mirofish runs automated scoring. War room convenes domain-appropriate character council on top scorers. Characters selected to create genuine expertise tension. Output: scored data + adversarial reasoning + minority report + implementation orders. Proven effective on Operation Context Lock 2026-03-29.
+    score_breakdown:
+      total_score: 8
+      recommended_action: PITCH
+      why_now: Increasing complexity and AI demand robust human-centered decision protocols to cut through noise.
+      effort_estimate: weeks
+      revenue_estimate: MEDIUM
+      top_risk: Sourcing & managing genuinely diverse and adversarial 'characters' for each unique decision presents a significant challenge.
+      score_breakdown: {'market_timing': 8, 'feasibility': 6, 'revenue_potential': 8, 'strategic_fit': 9}
+    added:   2026-03-29
+
+  [8/10] Ghost Book Script Vault + Salvage Protocol
+    id:      ghost-book-script-vault
+    type:    content-management
+    status:  ACTIVE
+    source:  
+    description: Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage — scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.
+    score_breakdown:
+      total_score: 8
+      recommended_action: BUILD
+      why_now: Maximizing existing content is crucial in today's content-heavy, AI-assisted creative landscape.
+      effort_estimate: weeks
+      revenue_estimate: MEDIUM
+      top_risk: Manual salvage process can be time-consuming and divert focus from new project generation.
+      score_breakdown: {'market_timing': 8, 'feasibility': 8, 'revenue_potential': 7, 'strategic_fit': 9}
+    added:   2026-03-29
 
   [7/10] Wing Commander IV Turns 30... And Still Fascinates Me
     id:      arch-reddit-0002
@@ -2167,6 +2216,22 @@ On returning to it 30 years later, it certainly scratc
       top_risk: Achieving sufficient AI reliability and institutional trust for high-stakes decision validation, coupled with acquiring sensitive proprietary institutional data.
     added:   2026-03-26
 
+  [7/10] Creative Review Agent
+    id:      creative-review-agent
+    type:    agent+quality-control
+    status:  WHITEBOARD
+    source:  
+    description: Routes creative output to domain-appropriate reviewer panels based on content type and subgenre. Full taxonomy built covering Comedy (10 subgenres), Drama, Horror, Sci-Fi, Fantasy, Romance, Thriller, Historical, Children/YA, Non-Fiction, Marketing, Screenplay, Music, Game, Educational. Weighted panels for blended content. Dissent protocol flags reviewer disagreements as data. Quality gate: PUBLISH/REVISE/REWORK/REJECT. Reference: creative-review-taxonomy.md
+    score_breakdown:
+      total_score: 7
+      recommended_action: BUILD
+      why_now: AI advancements enable robust content classification, streamlining crucial creative quality control now.
+      effort_estimate: months
+      revenue_estimate: MEDIUM
+      top_risk: Scope creep and over-engineering for internal needs, leading to prolonged development time.
+      score_breakdown: {'market_timing': 7, 'feasibility': 6, 'revenue_potential': 6, 'strategic_fit': 8}
+    added:   2026-03-29
+
   [6/10] Google Glass
     id:      vint-0020
     type:    product_gap
@@ -2247,6 +2312,22 @@ On returning to it 30 years later, it certainly scratc
     tags:    mesh, privacy, federal-funding, infrastructure, council-needed
     added:   2026-03-26
 
+  [6/10] Vedic Math Build — Active Status
+    id:      vedic-build-status
+    type:    infrastructure
+    status:  IN_PROGRESS
+    source:  
+    description: Stack B (_studio_vedic) staged and ready. Config G vector context wired in. Scan runs tonight at 2:30 AM to produce conversion manifest. Build agent spec complete. Kernel stubs written with shadow verification and ab-report logging. A/B dispatcher wires after manifest confirms scope.
+    score_breakdown:
+      total_score: 6
+      recommended_action: BUILD
+      why_now: Project is in active development, staged for immediate technical progression and testing.
+      effort_estimate: months
+      revenue_estimate: NICHE
+      top_risk: Significant investment in complex infrastructure without confirmed market demand for the end product.
+      score_breakdown: {'market_timing': 5, 'feasibility': 8, 'revenue_potential': 3, 'strategic_fit': 6}
+    added:   2026-03-29
+
   [5/10] Tucker Torpedo
     id:      vint-0008
     type:    product_gap
@@ -2287,6 +2368,22 @@ On returning to it 30 years later, it certainly scratc
     added:   2026-03-19T15:20:25.783569
     url:     https://reddit.com/r/nostalgia/comments/1ry5aqw/remember_when_yellow_milk_jugs_were_used_to/
 
+  [5/10] Vedic Math Computational Layer
+    id:      vedic-math-layer
+    type:    infrastructure+patent
+    status:  WHITEBOARD
+    source:  
+    description: Software abstraction layer routing matrix operations, large integer multiplication, and vector similarity scoring to Vedic-optimized C extensions. Environment-aware portability wrapper with self-logging efficiency comparison. Real speedups on specific math-heavy operations. NOT a general token reducer. Genuine value in matrix ops and vector search.
+    score_breakdown:
+      total_score: 5
+      recommended_action: RESEARCH
+      why_now: AI/ML explosion drives demand for faster matrix/vector operations, creating market need.
+      effort_estimate: months
+      revenue_estimate: NICHE
+      top_risk: Vedic math optimizations might not provide significant, demonstrable speedups over existing highly optimized libraries.
+      score_breakdown: {'market_timing': 8, 'feasibility': 2, 'revenue_potential': 7, 'strategic_fit': 4}
+    added:   2026-03-29
+
   [4/10] I miss having that previous channel button on remotes
     id:      nost-0029
     type:    product_archaeology
@@ -2307,6 +2404,38 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, nostalgia, reddit
     added:   2026-03-19T15:20:25.783575
     url:     https://reddit.com/r/nostalgia/comments/1rwvjis/i_miss_having_that_previous_channel_button_on/
+
+  [3/10] Vedic AI Inference Operating System
+    id:      vedic-ai-inference-os
+    type:    infrastructure+patent+product
+    status:  WHITEBOARD
+    source:  
+    description: Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency — every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.
+    score_breakdown:
+      total_score: 3
+      recommended_action: RESEARCH
+      why_now: AI inference demand is soaring, driving critical need for efficiency and heat reduction.
+      effort_estimate: years
+      revenue_estimate: LARGE
+      top_risk: Extreme complexity of OS kernel development and unproven real-world benefits of Vedic math.
+      score_breakdown: {'market_timing': 7, 'feasibility': 1, 'revenue_potential': 8, 'strategic_fit': 1}
+    added:   2026-03-29
+
+  [3/10] Vedic AI Upgrade as a Service
+    id:      vedic-upgrade-service
+    type:    service+patent+revenue
+    status:  WHITEBOARD
+    source:  
+    description: Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison — original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.
+    score_breakdown:
+      total_score: 3
+      recommended_action: RESEARCH
+      why_now: Rising AI compute costs demand efficiency, but 'Vedic' aspect needs scientific grounding.
+      effort_estimate: years
+      revenue_estimate: NICHE
+      top_risk: Core 'Vedic CUDA' tech lacks scientific basis, making it unfeasible or incredible.
+      score_breakdown: {'market_timing': 5, 'feasibility': 2, 'revenue_potential': 3, 'strategic_fit': 2}
+    added:   2026-03-29
 
   [2/10] High-end consumer phonographs
     id:      vint-0006
@@ -2608,66 +2737,10 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, vintage, vintage-2010s
     added:   2026-03-19T15:16:03.025794
 
-  [0/10] War Room Decision Protocol
-    id:      war-room-protocol
-    type:    protocol
-    status:  ACTIVE
-    source:  
-    description: Standard protocol for high-stakes decisions. Mirofish runs automated scoring. War room convenes domain-appropriate character council on top scorers. Characters selected to create genuine expertise tension. Output: scored data + adversarial reasoning + minority report + implementation orders. Proven effective on Operation Context Lock 2026-03-29.
-    added:   2026-03-29
-
-  [0/10] Vedic Math Computational Layer
-    id:      vedic-math-layer
-    type:    infrastructure+patent
-    status:  WHITEBOARD
-    source:  
-    description: Software abstraction layer routing matrix operations, large integer multiplication, and vector similarity scoring to Vedic-optimized C extensions. Environment-aware portability wrapper with self-logging efficiency comparison. Real speedups on specific math-heavy operations. NOT a general token reducer. Genuine value in matrix ops and vector search.
-    added:   2026-03-29
-
-  [0/10] Vedic AI Inference Operating System
-    id:      vedic-ai-inference-os
-    type:    infrastructure+patent+product
-    status:  WHITEBOARD
-    source:  
-    description: Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency — every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.
-    added:   2026-03-29
-
-  [0/10] Vedic AI Upgrade as a Service
-    id:      vedic-upgrade-service
-    type:    service+patent+revenue
-    status:  WHITEBOARD
-    source:  
-    description: Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison — original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.
-    added:   2026-03-29
-
-  [0/10] Creative Review Agent
-    id:      creative-review-agent
-    type:    agent+quality-control
-    status:  WHITEBOARD
-    source:  
-    description: Routes creative output to domain-appropriate reviewer panels based on content type and subgenre. Full taxonomy built covering Comedy (10 subgenres), Drama, Horror, Sci-Fi, Fantasy, Romance, Thriller, Historical, Children/YA, Non-Fiction, Marketing, Screenplay, Music, Game, Educational. Weighted panels for blended content. Dissent protocol flags reviewer disagreements as data. Quality gate: PUBLISH/REVISE/REWORK/REJECT. Reference: creative-review-taxonomy.md
-    added:   2026-03-29
-
-  [0/10] Ghost Book Script Vault + Salvage Protocol
-    id:      ghost-book-script-vault
-    type:    content-management
-    status:  ACTIVE
-    source:  
-    description: Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage — scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.
-    added:   2026-03-29
-
-  [0/10] Higgsfield Original Series — Backwards Design
-    id:      higgsfield-backwards-design
-    type:    distribution+content-strategy
-    status:  WHITEBOARD
-    source:  
-    description: Monitor platform weekly for genre gaps and vote velocity. Build CTW characters specifically for underserved genres. Design story structure for 2-10 minute episode format from day one. Soul ID consistency built into character spec. Enter contests in low-competition genres. Sponsored production if contest win.
-    added:   2026-03-29
-
 
 ## STUDIO CURRENT STATE
 
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-29 23:30
+End of context. Generated: 2026-03-31 10:00

@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-claude-028",
+  "name": "Marcus Davis",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-03-30T13:13:57.506411",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Marcus Davis",
+    "pronouns": "they/them",
+    "age": 28,
+    "personality_traits": [
+      "delusional",
+      "cautious",
+      "rebellious",
+      "vindictive",
+      "compassionate",
+      "obsessive",
+      "collaborative"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:13:57.506435",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

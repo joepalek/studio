@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-gemini-089",
+  "name": "Blake Chen",
+  "universe": "original-fiction",
+  "archetype": "trickster",
+  "created_date": "2026-03-30T13:14:42.533622",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Chen",
+    "pronouns": "she/her",
+    "age": 28,
+    "personality_traits": [
+      "practical",
+      "suspicious",
+      "cautious",
+      "resilient",
+      "collaborative"
+    ],
+    "voice": "direct and blunt",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:42.533644",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

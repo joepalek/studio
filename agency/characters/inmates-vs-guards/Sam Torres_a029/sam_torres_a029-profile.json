@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-agent-029",
+  "name": "Sam Torres",
+  "universe": "inmates-vs-guards",
+  "archetype": "informant",
+  "created_date": "2026-03-30T13:14:54.789158",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Torres",
+    "pronouns": "she/her",
+    "age": 28,
+    "personality_traits": [
+      "determined",
+      "practical",
+      "jaded",
+      "empathetic"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:54.789178",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

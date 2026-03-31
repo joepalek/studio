@@ -1,0 +1,34 @@
+[2026-03-31 02:58:02] [LOGGER] [INFO] Log file initialized for GameArchaeology_Crawler_001
+[2026-03-31 02:58:02] [GameArchaeology_Crawler_001] [INFO] GameArchaeology_Crawler_001 initialized.
+[2026-03-31 02:58:02] [GameArchaeology_Crawler_001] [INFO] Starting full archive crawl...
+[2026-03-31 02:58:02] [GameArchaeology_Crawler_001] [INFO] Crawling Wayback Machine for games...
+[2026-03-31 02:58:12] [GameArchaeology_Crawler_001] [WARNING]   Error crawling newgrounds.com: timed out
+[2026-03-31 02:58:17] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://kongregate.com:80/ (2006)
+[2026-03-31 02:58:17] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.kongregate.com:80/ (2006)
+[2026-03-31 02:58:17] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://kongregate.com/ (2006)
+[2026-03-31 02:58:17] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.kongregate.com/ (2006)
+[2026-03-31 02:58:17] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://kongregate.com:80/ (2006)
+[2026-03-31 02:58:25] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.armor-games.com:80/ (2006)
+[2026-03-31 02:58:25] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.armor-games.com:80/ (2006)
+[2026-03-31 02:58:25] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.armor-games.com:80/ (2006)
+[2026-03-31 02:58:25] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://armor-games.com:80/ (2007)
+[2026-03-31 02:58:25] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://armor-games.com:80/ (2007)
+[2026-03-31 02:58:27] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.y8.com:80/ (2005)
+[2026-03-31 02:58:27] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://y8.com:80/ (2005)
+[2026-03-31 02:58:27] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.y8.com:80/ (2005)
+[2026-03-31 02:58:27] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://y8.com:80/ (2006)
+[2026-03-31 02:58:27] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://y8.com:80/ (2006)
+[2026-03-31 02:58:29] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://miniclip.com:80/ (2005)
+[2026-03-31 02:58:29] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.miniclip.com/ (2005)
+[2026-03-31 02:58:29] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.miniclip.com:80/ (2005)
+[2026-03-31 02:58:29] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://www.miniclip.com:80/ (2005)
+[2026-03-31 02:58:29] [GameArchaeology_Crawler_001] [DEBUG]   Found: Game from http://miniclip.com:80/ (2005)
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Wayback Machine: found 20 game snapshots
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Crawling itch.io for abandoned games...
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] itch.io: found 2 games
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Crawling Ludum Dare archives...
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Ludum Dare: found 2 games
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Crawling GitHub for archived game projects...
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] GitHub: found 2 games
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Crawl complete: 18 unique games found
+[2026-03-31 02:58:31] [GameArchaeology_Crawler_001] [INFO] Exported 18 candidates to game_candidates.json

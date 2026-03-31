@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-claude-071",
+  "name": "Marcus Miller",
+  "universe": "band-members",
+  "archetype": "lead_vocalist",
+  "created_date": "2026-03-30T13:14:10.169359",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Marcus Miller",
+    "pronouns": "they/them",
+    "age": 65,
+    "personality_traits": [
+      "meticulous",
+      "insightful",
+      "observant",
+      "creative",
+      "resilient",
+      "cynical"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:10.169382",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

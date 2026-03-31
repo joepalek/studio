@@ -4,36 +4,45 @@
     "project": "acuscan-ar",
     "question": "Use WebXR or Canvas overlay for AR rendering?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
       "WebXR",
       "Canvas overlay on video element"
     ],
     "recommendation": "Canvas overlay \u00e2\u20ac\u201d broader mobile browser support, simpler implementation for MVP",
-    "context": ""
+    "context": "",
+    "auto_answer": "WebXR is the standard and generally preferred approach for true AR rendering, offering native access to pose tracking, device capabilities, and immersive experiences compared to a canvas overlay.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:30:08.996804"
   },
   {
     "id": "state-acuscan-ar-2533adce",
     "project": "acuscan-ar",
     "question": "If hand tracking lags on older phones \u00e2\u20ac\u201d prioritize speed or visual accuracy?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate."
+    "context": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate.",
+    "auto_answer": "Prioritize speed for responsiveness. A smooth, even if slightly less accurate, real-time experience is typically preferred over a laggy but precise one.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:30:09.389874"
   },
   {
     "id": "state-acuscan-ar-d91db37c",
     "project": "acuscan-ar",
     "question": "Should point descriptions be text overlaid on screen or a separate info panel below the camera?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Affects UI layout significantly. Text on camera = cleaner but harder to read. Panel below = easier to read but splits attention."
+    "context": "Affects UI layout significantly. Text on camera = cleaner but harder to read. Panel below = easier to read but splits attention.",
+    "auto_answer": "Opt for a separate info panel below the camera.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:30:19.652043"
   },
   {
     "id": "state-acuscan-ar-1653fa6d",
@@ -66,14 +75,17 @@
     "project": "arbitrage-pulse",
     "question": "Scraping approach \u00e2\u20ac\u201d Apify Actor or direct browser automation via Chrome extension?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
       "Apify (paid, reliable, maintained)",
       "Chrome extension automation (free, may break with FB updates)"
     ],
     "recommendation": "Start with Chrome extension automation \u00e2\u20ac\u201d free, and we already have it set up",
-    "context": ""
+    "context": "",
+    "auto_answer": "Apify Actor is generally more efficient for a solo developer's AI studio, as it handles infrastructure, proxies, and scaling, allowing focus on data utilization rather than scraping operations.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:30:37.817131"
   },
   {
     "id": "state-arbitrage-pulse-35ebbf89",
@@ -102,18 +114,21 @@
     "project": "arbitrage-pulse",
     "question": "Digest delivery format \u00e2\u20ac\u201d Markdown file in Drive, email, or dashboard card?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio."
+    "context": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio.",
+    "auto_answer": "A Markdown file in Drive is recommended as the simplest option for digest delivery.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:30:53.448471"
   },
   {
     "id": "state-hibid-analyzer-58575f97",
     "project": "hibid-analyzer",
     "question": "Now that Chrome extension is available \u00e2\u20ac\u201d attempt textarea via extension first or continue investigating DOM approach?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
       "Extension first \u00e2\u20ac\u201d highest probability of success",
@@ -121,40 +136,52 @@
       "Both in parallel"
     ],
     "recommendation": "Extension first \u00e2\u20ac\u201d Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
-    "context": ""
+    "context": "",
+    "auto_answer": "Attempt the textarea interaction via the Chrome extension first. Extensions provide a more robust and privileged environment for web page interaction, often circumventing limitations faced by direct DOM manipulation.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:30:49.231718"
   },
   {
     "id": "state-hibid-analyzer-db05ea3e",
     "project": "hibid-analyzer",
     "question": "Should analysis run on all lots automatically or only when you click a button on a specific lot?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Auto-run = more convenient but costs more API calls. Manual trigger = you control what gets analyzed."
+    "context": "Auto-run = more convenient but costs more API calls. Manual trigger = you control what gets analyzed.",
+    "auto_answer": "Opt for a manual trigger initially to control API costs; automation can be added later if the value outweighs the expense.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:30:58.066811"
   },
   {
     "id": "state-hibid-analyzer-9542d880",
     "project": "hibid-analyzer",
     "question": "What format do you want the watchlist notes in? (e.g. 'Est: $45-65 | Condition: Good | Items: ceramic vase')",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Note format determines what Gemini is asked to return. Standardized format makes notes scannable during live bidding."
+    "context": "Note format determines what Gemini is asked to return. Standardized format makes notes scannable during live bidding.",
+    "auto_answer": "A good standardized format for watchlist notes is: `Lot: [NUMBER] | Item: [DESCRIPTION] | Est: [$-$$] | Condition: [TEXT] | Target: [$-AMOUNT] | Notes: [FREE TEXT]`. This format is highly scannable and covers essential information for live bidding, including a specific target bid and room for developer-specific notes.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:31:05.757987"
   },
   {
     "id": "state-hibid-analyzer-8beea3b7",
     "project": "hibid-analyzer",
     "question": "Should this work on mobile Chrome or desktop only?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Mobile adds complexity but useful if bidding from phone at estate sales."
+    "context": "Mobile adds complexity but useful if bidding from phone at estate sales.",
+    "auto_answer": "Desktop only, initially.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:31:13.810248"
   },
   {
     "id": "state-job-match-14ffdba1",
@@ -172,11 +199,14 @@
     "project": "job-match",
     "question": "Should employer portal be prioritized before or after scraping engine?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both are needed for a complete product."
+    "context": "Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both are needed for a complete product.",
+    "auto_answer": "Prioritize the scraping engine.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:31:24.479027"
   },
   {
     "id": "state-job-match-379b1402",
@@ -194,11 +224,14 @@
     "project": "job-match",
     "question": "Should job ratings be shown to users in v1 or held back until v2?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 cleaner but reduces user confidence in results."
+    "context": "Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 cleaner but reduces user confidence in results.",
+    "auto_answer": "Hold job ratings back for v2 to keep v1 cleaner and allow for calibration post-initial launch.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:31:34.679582"
   },
   {
     "id": "state-listing-optimizer-c159724f",
@@ -235,11 +268,14 @@
     "project": "listing-optimizer",
     "question": "What are your SKU prefix conventions for physical storage location tracking?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Optimizer needs to preserve or understand existing SKU format to not break your storage system."
+    "context": "Optimizer needs to preserve or understand existing SKU format to not break your storage system.",
+    "auto_answer": "As a solo developer's AI studio, there are no formal, established SKU prefix conventions for physical storage location tracking; physical inventory is managed informally.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:31:14.862951"
   },
   {
     "id": "state-listing-optimizer-9609b02c",
@@ -283,29 +319,35 @@
     "project": "nutrimind",
     "question": "Should shopping list generation be part of the MVP or post-launch?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Natural extension of meal planning. Medium complexity add."
+    "context": "Natural extension of meal planning. Medium complexity add.",
+    "auto_answer": "Post-launch.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:31:45.690491"
   },
   {
     "id": "state-nutrimind-ee9e64da",
     "project": "nutrimind",
     "question": "Should the app remember your meal history to avoid repeating recent meals?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Requires localStorage or backend. Adds significant value but adds complexity."
+    "context": "Requires localStorage or backend. Adds significant value but adds complexity.",
+    "auto_answer": "Yes, implement this via localStorage. The significant user value of avoiding repetition outweighs the complexity, especially with a localStorage-first approach.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:32:08.608243"
   },
   {
     "id": "state-squeeze-empire-0ab2f8fb",
     "project": "squeeze-empire",
     "question": "What defines late-game completion \u00e2\u20ac\u201d what is the win condition or final milestone?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
       "Reach a revenue target",
@@ -314,7 +356,10 @@
       "Story ending"
     ],
     "recommendation": "Reach a revenue target + unlock all upgrades \u00e2\u20ac\u201d gives clear progression and satisfying endpoint",
-    "context": ""
+    "context": "",
+    "auto_answer": "Late-game completion is defined by achieving the game's win condition or final milestone, which are the primary objectives or culminating events that signify the player's success and bring the main narrative or gameplay loop to a close.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-30T03:32:16.323669"
   },
   {
     "id": "state-squeeze-empire-74ccd928",
@@ -369,11 +414,14 @@
     "project": "whatnot-apps",
     "question": "Should we build a general Whatnot cover letter or three separate role-specific ones?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Separate letters are stronger but more work. General letter with swap sections is faster."
+    "context": "Separate letters are stronger but more work. General letter with swap sections is faster.",
+    "auto_answer": "Opt for a general cover letter with swap sections. This approach balances essential personalization with efficiency, allowing for quick adaptation for multiple roles without the overhead of entirely separate documents.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-03-31T03:32:07.427912"
   },
   {
     "id": "wb-top-arch-reddit-0001",
@@ -494,6 +542,39 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-27T02:01:34.190380",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-higgsfield-backwards-design",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#1 WHITEBOARD] Higgsfield Original Series \u2014 Backwards Design",
+    "context": "BUILD | Score: 9/10 | Data-driven niche content creation and short-form distribution are key to success for new creators today. | Est: months | Revenue: MEDIUM | Risk: Success is highly dependent on accurately identifying viable niches and winning contests.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-31T02:00:02.141639",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-war-room-protocol",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#8 WHITEBOARD] War Room Decision Protocol",
+    "context": "PITCH | Score: 8/10 | Increasing complexity and AI demand robust human-centered decision protocols to cut through noise. | Est: weeks | Revenue: MEDIUM | Risk: Sourcing & managing genuinely diverse and adversarial 'characters' for each unique decision presents a significant challenge.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-31T02:00:02.141654",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-ghost-book-script-vault",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#9 WHITEBOARD] Ghost Book Script Vault + Salvage Protocol",
+    "context": "BUILD | Score: 8/10 | Maximizing existing content is crucial in today's content-heavy, AI-assisted creative landscape. | Est: weeks | Revenue: MEDIUM | Risk: Manual salvage process can be time-consuming and divert focus from new project generation.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-03-31T02:00:02.141658",
     "status": "pending"
   }
 ]

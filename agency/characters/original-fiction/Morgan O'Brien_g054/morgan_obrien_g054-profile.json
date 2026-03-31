@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-gemini-054",
+  "name": "Morgan O'Brien",
+  "universe": "original-fiction",
+  "archetype": "lover",
+  "created_date": "2026-03-30T13:14:32.872992",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan O'Brien",
+    "pronouns": "they/them",
+    "age": 22,
+    "personality_traits": [
+      "independent",
+      "thoughtful",
+      "adaptable",
+      "insecure"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Grew up in a small town before moving to the city looking for opportunity."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:32.873014",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

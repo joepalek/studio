@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-claude-027",
+  "name": "Phoenix Anderson",
+  "universe": "inmates-vs-guards",
+  "archetype": "reformed_inmate",
+  "created_date": "2026-03-30T13:13:57.202888",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Phoenix Anderson",
+    "pronouns": "they/them",
+    "age": 42,
+    "personality_traits": [
+      "meticulous",
+      "charismatic",
+      "artistic",
+      "destructive",
+      "haunted",
+      "reckless"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Carries deep regrets about choices made years ago."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:13:57.202911",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

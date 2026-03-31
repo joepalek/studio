@@ -1,0 +1,32 @@
+{
+  "t_score": {
+    "label": "Theoretical Soundness",
+    "description": "Was it rigorous for its era? Does it hold logically?",
+    "weight": 1.0
+  },
+  "d_score": {
+    "label": "Temporal Drift",
+    "description": "How dated is it? What's been superseded? What holds?",
+    "weight": 0.9
+  },
+  "g_score": {
+    "label": "Data Groundability",
+    "description": "Can modern methods validate/falsify it? Empirically testable?",
+    "weight": 1.0
+  },
+  "a_score": {
+    "label": "Advancement Potential",
+    "description": "Can we synthesize new knowledge into a better version?",
+    "weight": 1.1
+  },
+  "m_score": {
+    "label": "Market Value",
+    "description": "Who needs this NOW? Academic/Industry/Creator demand?",
+    "weight": 0.8
+  },
+  "s_score": {
+    "label": "Content Saturation",
+    "description": "How flooded is the market? Unique angle or retreading?",
+    "weight": 0.7
+  }
+}

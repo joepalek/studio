@@ -25,3 +25,27 @@
 [2026-03-29 20:02:54] [VECTOR-STORE] Index complete: 573 chunks from 573 documents
 [2026-03-29 20:03:03] [SESSION-STARTUP] context loaded via vector (424 chars)
 [2026-03-29 21:00:26] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 00:30:27] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 01:04:39] [VINTAGE-AGENT] Decade profile audit complete: all 10 profiles (1920s-2010s) present and schema-valid. filled failed_products in 7 decades (1920s, 1940s, 1950s, 1960s, 1970s, 1990s, 2000s) — each now has 3+ entries with name/why_failed/modern_gap. Products added: Radithor tonic, ConvAirCar, Radarange microwave, 3D Movies first wave, AT&T Picturephone, Smell-O-Vision, AMC Pacer, DIVX DVD, Segway, HD DVD. No missing schema keys across all decades. | next: run ebay-vintage-intel extract if product gaps need refresh
+[2026-03-30 03:32:40] [AUTO-ANSWER] auto-resolved 8, escalated 42 of 42 pending
+[2026-03-30 05:00:41] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 12:00:41] [SESSION-STARTUP] context loaded via vector (424 chars)
+[AGENCY-BUILD] 2026-03-30T13:08:21.888272 -- built=283 failed=0 total_folders=224
+[AGENCY-BUILD] 2026-03-30T13:15:18.813362 -- built=283 failed=0 total_folders=507
+[AI-INTEL] 2026-03-30T20:36:46Z -- 4 HIGH / 57 WORTH -- YouTube: 6 videos -- 11/11 sources
+[AI-INTEL] 2026-03-30T20:38:45Z -- 4 HIGH / 61 WORTH -- YouTube: 8 videos -- 11/11 sources
+[2026-03-30 19:00:47] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:01:30] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:25:18] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:28:05] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:28:10] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:29:32] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:29:37] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-30 21:32:55] [VECTOR-STORE] Index complete: 595 chunks from 595 documents
+[PRODUCT-ARCHAEOLOGY] 2026-03-31T02:00:02.264758 -- Scoring pass complete.
+[2026-03-31 03:31:09] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-31 03:32:07] [AUTO-ANSWER] auto-resolved 8, escalated 29 of 37 pending
+[WHITEBOARD-SCORE] 2026-03-31T04:00:03.075527 -- Whiteboard scoring pass complete.
+[2026-03-31 06:30:28] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-31 07:00:30] [SESSION-STARTUP] context loaded via vector (424 chars)
+[2026-03-31 09:30:44] [SESSION-STARTUP] context loaded via vector (424 chars)

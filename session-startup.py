@@ -37,14 +37,19 @@ def log(msg, verbose=False):
     if verbose:
         print(line, file=sys.stderr)
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
-    with open(LOG_PATH, "a", encoding="utf-8") as f:
-        f.write(line + "\n")
+    try:
+        with open(LOG_PATH, "a", encoding="utf-8", errors="replace") as f:
+            f.write(line + "\n")
+    except PermissionError:
+        fallback = LOG_PATH.replace(".log", "-fallback.log")
+        with open(fallback, "a", encoding="utf-8", errors="replace") as f:
+            f.write(line + "\n")
 
 
 def write_status(msg):
     try:
         ts = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
-        with open(STATUS_PATH, "a", encoding="utf-8") as f:
+        with open(STATUS_PATH, "a", encoding="utf-8", errors="replace") as f:
             f.write(f"{ts} [SESSION-STARTUP] {msg}\n")
     except Exception:
         pass

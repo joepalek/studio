@@ -1,0 +1,53 @@
+{
+  "id": "char-spec-gemini-092",
+  "name": "Blake Torres",
+  "universe": "inmates-vs-guards",
+  "archetype": "hardened_criminal",
+  "created_date": "2026-03-30T13:14:43.466612",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Torres",
+    "pronouns": "she/her",
+    "age": 28,
+    "personality_traits": [
+      "empathetic",
+      "resilient",
+      "haunted"
+    ],
+    "voice": "loud and confident",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:43.466635",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

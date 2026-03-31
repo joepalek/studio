@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-007",
+  "name": "Phoenix Smith",
+  "universe": "inmates-vs-guards",
+  "archetype": "lifer",
+  "created_date": "2026-03-30T13:14:48.080441",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Phoenix Smith",
+    "pronouns": "they/them",
+    "age": 18,
+    "personality_traits": [
+      "insightful",
+      "charismatic",
+      "analytical",
+      "vindictive",
+      "spontaneous"
+    ],
+    "voice": "loud and confident",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:14:48.080465",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

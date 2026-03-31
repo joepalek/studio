@@ -94,6 +94,16 @@
       "name": "Tucker Torpedo",
       "why_failed": "Despite innovative safety features and design, the company faced legal troubles, accusations of fraud, and production challenges, leading to its collapse after only 51 cars were built.",
       "modern_gap": "No, the automotive industry continues to innovate on safety and design, but the Tucker's forward-thinking approach was ahead of its time."
+    },
+    {
+      "name": "ConvAirCar Flying Automobile",
+      "why_failed": "The 1947 prototype — a standard car fitted with a detachable airplane fuselage — crashed on its third test flight when the pilot forgot to check fuel. The project folded immediately, killing investor confidence in the flying car category.",
+      "modern_gap": "Personal air mobility for consumers remains completely unsolved — no product bridges the car-to-sky gap at an accessible price point."
+    },
+    {
+      "name": "Raytheon Radarange Home Microwave (1947)",
+      "why_failed": "The first commercial microwave oven weighed 750 pounds, stood nearly 6 feet tall, required a dedicated water-cooling line, and cost ,000 — roughly 5,000 today. No household could practically own one.",
+      "modern_gap": "Fully filled. The modern countertop microwave is one of the most successful product evolutions in home appliance history."
     }
   ],
   "ebay_hot_now": [

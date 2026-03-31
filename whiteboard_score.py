@@ -3,11 +3,11 @@ from datetime import datetime
 
 WHITEBOARD = 'G:/My Drive/Projects/_studio/whiteboard.json'
 INBOX_KEY = 'studio_inbox_items'
-CONFIG = json.load(open('G:/My Drive/Projects/_studio/studio-config.json'))
+CONFIG = json.load(open('G:/My Drive/Projects/_studio/studio-config.json', encoding='utf-8'))
 GEMINI_KEY = CONFIG.get('gemini_api_key', '')
 GEMINI_URL = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}'
 
-wb = json.load(open(WHITEBOARD))
+wb = json.load(open(WHITEBOARD, encoding='utf-8'))
 items = wb.get('items', [])
 
 unscored = [i for i in items if not i.get('gemini_score')]
@@ -63,13 +63,13 @@ for item in unscored:
         err = str(e)[:50]
         print(f'  ERROR: {title}: {err}')
         if '429' in err or 'quota' in err.lower():
-            print('  Rate limit — pausing 30s')
+            print('  Rate limit -- pausing 30s')
             time.sleep(30)
     time.sleep(4)
 
 # Save scored whiteboard
 wb['updated'] = datetime.now().isoformat()
-json.dump(wb, open(WHITEBOARD, 'w'), indent=2)
+json.dump(wb, open(WHITEBOARD, 'w', encoding='utf-8'), indent=2)
 print(f'\nScored {scored_count} items. Saved whiteboard.json')
 
 # Find top 10 by total_score
@@ -83,9 +83,9 @@ for rank, item in enumerate(top10, 1):
     print(f'  #{rank} [{sc.get("total_score",0)}/10] {item.get("title","")[:50]}')
     print(f'       {sc.get("recommended_action","?")} | {sc.get("why_now","")[:60]}')
 
-# Push top 10 to studio inbox (mobile-inbox.json — plain list format)
+# Push top 10 to studio inbox
 INBOX_PATH = 'G:/My Drive/Projects/_studio/mobile-inbox.json'
-inbox_list = json.load(open(INBOX_PATH)) if os.path.exists(INBOX_PATH) else []
+inbox_list = json.load(open(INBOX_PATH, encoding='utf-8')) if os.path.exists(INBOX_PATH) else []
 if isinstance(inbox_list, dict):
     inbox_list = inbox_list.get('questions', inbox_list.get('items', []))
 existing_ids = {q.get('id') for q in inbox_list if isinstance(q, dict)}
@@ -102,7 +102,8 @@ for rank, item in enumerate(top10, 1):
         'project': '_studio',
         'question': f'[#{rank} WHITEBOARD] {item.get("title","")}',
         'context': (f'{sc.get("recommended_action","?")} | Score: {sc.get("total_score",0)}/10 | '
-                    f'{sc.get("why_now","")} | Est: {sc.get("effort_estimate","?")} | '
+                    f'{sc.get("why_now","")}'
+                    f' | Est: {sc.get("effort_estimate","?")} | '
                     f'Revenue: {sc.get("revenue_estimate","?")} | Risk: {sc.get("top_risk","")}'),
         'decision_type': 'proactive',
         'priority': 'high' if sc.get('total_score', 0) >= 8 else 'medium',
@@ -112,6 +113,6 @@ for rank, item in enumerate(top10, 1):
     existing_ids.add(item_id)
     pushed += 1
 
-json.dump(inbox_list, open(INBOX_PATH, 'w'), indent=2)
+json.dump(inbox_list, open(INBOX_PATH, 'w', encoding='utf-8'), indent=2)
 print(f'\nPushed {pushed} top-10 items to mobile-inbox.json')
 print('Done.')

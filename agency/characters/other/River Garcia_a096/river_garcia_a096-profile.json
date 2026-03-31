@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-agent-096",
+  "name": "River Garcia",
+  "universe": "other",
+  "archetype": "teacher",
+  "created_date": "2026-03-30T13:15:15.485876",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "River Garcia",
+    "pronouns": "she/her",
+    "age": 65,
+    "personality_traits": [
+      "artistic",
+      "reserved",
+      "patient",
+      "spontaneous"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-03-30T13:15:15.485897",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}
