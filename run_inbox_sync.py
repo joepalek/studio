@@ -94,7 +94,11 @@ try:
         rows = json.loads(r.read())
         print(f'Pass 2: {len(rows)} answer sessions in Supabase')
         for row in rows:
-            answers = row.get('answers', {})
+            raw = row.get('answers', {})
+            if isinstance(raw, str):
+                try: raw = json.loads(raw)
+                except: raw = {}
+            answers = raw if isinstance(raw, dict) else {}
             submitted = row.get('submitted_at', '')[:19]
             session = row.get('session_id', '')
             print(f'  session={session} answers={len(answers)} submitted={submitted}')
@@ -119,7 +123,11 @@ if os.path.exists(INBOX_PATH):
 
 applied = 0
 for row in rows:
-    for q_id, answer in row.get('answers', {}).items():
+    raw_answers = row.get('answers', {})
+    if isinstance(raw_answers, str):
+        try: raw_answers = json.loads(raw_answers)
+        except: raw_answers = {}
+    for q_id, answer in (raw_answers.items() if isinstance(raw_answers, dict) else []):
         for item in inbox:
             if item.get('id') == q_id and item.get('status') == 'pending':
                 item['status'] = 'answered'
