@@ -12,3 +12,10 @@
 [2026-04-01 01:57:33] Janitor complete — flagged
 [Wed 04/01/2026  1:57:33.15] Done 
 [Wed 04/01/2026  8:59:20.77] Janitor starting 
+[2026-04-01 08:59:21] Janitor starting
+[2026-04-01 08:59:35] Removed 4 __pycache__ dirs
+[2026-04-01 08:59:35] Orphaned bat files (no matching XML task): orchestrator-briefing.bat
+[2026-04-01 08:59:52] Janitor report saved. Status: flagged
+[2026-04-01 08:59:52] Janitor complete — flagged
+[Wed 04/01/2026  8:59:52.47] Done 
+[Wed 04/01/2026  9:00:34.02] Janitor starting 

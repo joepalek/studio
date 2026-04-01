@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-04-01 08:59 | Auto-built by generate-context.py
-Next regeneration: 2026-04-01 16:59 (approximate — runs at every session start)
+Generated: 2026-04-01 09:00 | Auto-built by generate-context.py
+Next regeneration: 2026-04-01 17:00 (approximate — runs at every session start)
 Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
@@ -1848,7 +1848,7 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-04-01T08:59:22.973549
+Last updated: 2026-04-01T09:00:36.504064
 Total items: 46
 
   [9/10] Higgsfield Original Series — Backwards Design
@@ -2749,4 +2749,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-04-01 08:59
+End of context. Generated: 2026-04-01 09:00

@@ -1,28 +1,27 @@
 AI INTEL - 2026-04-01
-Generated: 2026-04-01T10:00:02Z
-Sources: 11/11 OK | 2 HIGH / 69 WORTH / 197 LOGGED | YouTube: 15 videos surfaced
+Generated: 2026-04-01T13:59:22Z
+Sources: 11/11 OK | 1 HIGH / 77 WORTH / 173 LOGGED | YouTube: 10 videos surfaced
 
-HIGH PRIORITY (2):
-  * Layperson, quite impressed with Claude | score:28 | https://reddit.com/r/ClaudeAI/comments/1s9ezux/layperson_quite_impressed_with_claude/
+HIGH PRIORITY (1):
   * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 
-WORTH READING (69):
-  * AI Business Tools (System Guide 2026) | score:20 | https://www.youtube.com/watch?v=-FceNU_ik58
-  * 🚀 Still using ChatGPT in 2026? There are more powerful AI tools now | score:20 | https://www.youtube.com/watch?v=B5i-mbVqvbM
-  * I PROMISE This AI Tool is 100% FREE! (Grok AI + YouTube Automation &amp; Viral 2D Animatio | score:22 | https://www.youtube.com/watch?v=yXlZGLCILuU
-  * Manus AI vs Claude: Which AI Tool Is Actually Worth It? (2026) | score:22 | https://www.youtube.com/watch?v=9iSxp7C8D9o
+WORTH READING (77):
+  * Best AI Tools for Content Creation 2026 (DeevidAi review) | score:20 | https://www.youtube.com/watch?v=7FzrS_1acCI
   * Claude Code was just leaked... (WOAH) | score:22 | https://www.youtube.com/watch?v=dYG8JxtSgmM
-  * NEW Claude Mythos and ChatGPT Updates! | score:25 | https://www.youtube.com/watch?v=cGinWSKfpo4
   * Claude Code’s source code just got leaked. #claude #anthropic #ai #artificialintelligence  | score:24 | https://www.youtube.com/watch?v=Ajavw0yqhJ4
-  * Claude Code got leaked | score:24 | https://www.youtube.com/watch?v=GdgRpiQRsis
-  * Claude Opus 4.7 &amp; Sonnet 4.8 LEAKED: Hidden Models, Undercover Mode &amp; Secret Featu | score:25 | https://www.youtube.com/watch?v=Jixon1wlEuc
-  * Claude Code Is Shipping So Fast I Almost Missed the Pattern | score:22 | https://www.youtube.com/watch?v=aWzv8kb1oLw
+  * NEW Claude Mythos and ChatGPT Updates! | score:25 | https://www.youtube.com/watch?v=cGinWSKfpo4
+  * KI-SCHOCK IN EUROPA: EU-Verbot für US-KI-Tools (ChatGPT, Gemini, Claude) | KI-News der Woc | score:22 | https://www.youtube.com/watch?v=vKwzdZ1IVn0
+  * The AI workflow that replaces your to do list! #ai #futureofwork | score:22 | https://www.youtube.com/watch?v=hFRQb2e5cJs
+  * Claude Code Source Code Just Leaked… 8 Things You Must Do | score:24 | https://www.youtube.com/watch?v=tXtCK66fPj8
+  * Wow! This New 2026 AI Automation workflow Makes Videos faster | Quit Your 9-5 Today!! | score:22 | https://www.youtube.com/watch?v=4xXlQx4fY5U
+  * AI Model News: Claude Mythos, Veo 3.1 Lite &amp; OpenAI&#39;s Next Model | score:24 | https://www.youtube.com/watch?v=T3BHY_Odsnw
+  * How to Install &amp; Run Latest Deepseek on Ollama [ 2026 Update ] Deepseek AI Model Local | score:25 | https://www.youtube.com/watch?v=UXSqzuPBxa0
 
 YOUTUBE PICKS:
-  * AI Business Tools (System Guide 2026) [Future AI] | https://www.youtube.com/watch?v=-FceNU_ik58
-  * 🚀 Still using ChatGPT in 2026? There are more powerful AI tools now [AI School Telugu] | https://www.youtube.com/watch?v=B5i-mbVqvbM
-  * I PROMISE This AI Tool is 100% FREE! (Grok AI + YouTube Automation &amp; Viral 2 [Skill With AI] | https://www.youtube.com/watch?v=yXlZGLCILuU
-  * Manus AI vs Claude: Which AI Tool Is Actually Worth It? (2026) [Tinkr] | https://www.youtube.com/watch?v=9iSxp7C8D9o
+  * Best AI Tools for Content Creation 2026 (DeevidAi review) [Future AI] | https://www.youtube.com/watch?v=7FzrS_1acCI
   * Claude Code was just leaked... (WOAH) [Matthew Berman] | https://www.youtube.com/watch?v=dYG8JxtSgmM
+  * Claude Code’s source code just got leaked. #claude #anthropic #ai #artificialint [Redpanda Data] | https://www.youtube.com/watch?v=Ajavw0yqhJ4
+  * NEW Claude Mythos and ChatGPT Updates! [Julian Goldie SEO] | https://www.youtube.com/watch?v=cGinWSKfpo4
+  * KI-SCHOCK IN EUROPA: EU-Verbot für US-KI-Tools (ChatGPT, Gemini, Claude) | KI-Ne [Digitale Profis] | https://www.youtube.com/watch?v=vKwzdZ1IVn0
 
 DEPENDENCY FLAGS: none

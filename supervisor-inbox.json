@@ -51,46 +51,14 @@
       "date": "2026-04-01T10:00:02Z"
     },
     {
-      "id": "supervisor-cycle-202604010800",
-      "source": "supervisor-cycle",
-      "type": "status",
-      "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-01 08:00",
-      "finding": "3 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
-      "dispatched": [
-        {
-          "agent": "_studio",
-          "task": "Commit dirty repos: _studio(122f)",
-          "tier": "ollama",
-          "cost": 0,
-          "source": "orchestrator-plan"
-        },
-        {
-          "agent": "whiteboard",
-          "task": "BUILD: Higgsfield Original Series — Backwards Design",
-          "tier": "ollama",
-          "cost": 0,
-          "source": "orchestrator-plan"
-        },
-        {
-          "agent": "whiteboard",
-          "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
-          "tier": "ollama",
-          "cost": 0,
-          "source": "orchestrator-plan"
-        }
-      ],
-      "status": "INFO"
-    },
-    {
-      "id": "supervisor-cycle-202604010830",
-      "source": "supervisor-cycle",
-      "type": "status",
-      "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-01 08:30",
-      "finding": "0 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
-      "dispatched": [],
-      "status": "INFO"
+      "id": "ai-intel-2026-04-01",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 1 HIGH PRIORITY - 2026-04-01",
+      "finding": "Introducing GPT-5.4 mini and nano. See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-01T13:59:22Z"
     },
     {
       "id": "supervisor-cycle-202604010859",
@@ -98,6 +66,26 @@
       "type": "status",
       "urgency": "INFO",
       "title": "Supervisor Cycle — 2026-04-01 08:59",
+      "finding": "0 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+      "dispatched": [],
+      "status": "INFO"
+    },
+    {
+      "id": "supervisor-cycle-202604010900",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-01 09:00",
+      "finding": "0 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+      "dispatched": [],
+      "status": "INFO"
+    },
+    {
+      "id": "supervisor-cycle-202604010900",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-01 09:00",
       "finding": "0 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
       "dispatched": [],
       "status": "INFO"

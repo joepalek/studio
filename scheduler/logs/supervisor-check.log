@@ -15868,3 +15868,19 @@ Last cycle ran: `2026-03-31 23:31` — 0 tasks dispatched, queue empty.
 [2026-04-01 08:59:25] Dispatched: 0 tasks
 [2026-04-01 08:59:26] Supervisor check complete
 [Wed 04/01/2026  8:59:26.20] Done 
+[Wed 04/01/2026  9:00:01.38] Supervisor check starting 
+[2026-04-01 09:00:01] Supervisor check starting
+[2026-04-01 09:00:04] Ollama: True | Gemini: False
+[2026-04-01 09:00:04] Work queue: 0 | Task queue: 0
+[2026-04-01 09:00:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 09:00:04] Dispatched: 0 tasks
+[2026-04-01 09:00:04] Supervisor check complete
+[Wed 04/01/2026  9:00:04.38] Done 
+[Wed 04/01/2026  9:00:34.07] Supervisor check starting 
+[2026-04-01 09:00:34] Supervisor check starting
+[2026-04-01 09:00:37] Ollama: True | Gemini: False
+[2026-04-01 09:00:37] Work queue: 0 | Task queue: 0
+[2026-04-01 09:00:37] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 09:00:37] Dispatched: 0 tasks
+[2026-04-01 09:00:37] Supervisor check complete
+[Wed 04/01/2026  9:00:37.82] Done 

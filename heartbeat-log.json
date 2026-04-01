@@ -10,7 +10,7 @@
       "date": "2026-04-01T01:00:02.681582",
       "agent": "nightly-rollup",
       "status": "flagged",
-      "notes": "[nightly-rollup] RED 37/100 — digest written"
+      "notes": "[nightly-rollup] RED 37/100 \u2014 digest written"
     },
     {
       "date": "2026-04-01T01:00:12.398939",
@@ -22,7 +22,7 @@
       "date": "2026-04-01T01:04:47.845522",
       "agent": "nightly-rollup",
       "status": "flagged",
-      "notes": "[nightly-rollup] YELLOW 57/100 — digest written"
+      "notes": "[nightly-rollup] YELLOW 57/100 \u2014 digest written"
     },
     {
       "date": "2026-04-01T01:30:05.137831",
@@ -197,6 +197,46 @@
       "agent": "supervisor",
       "status": "clean",
       "notes": "0 dispatched | ollama=True gemini=False"
-    }
-  ]
-}
+    },
+    {
+      "date": "2026-04-01T08:59:38.737310",
+      "agent": "vector-reindex",
+      "status": "clean",
+      "notes": "reindex complete"
+    },
+    {
+      "date": "2026-04-01T13:59:22Z",
+      "agent": "ai-intel-agent",
+      "status": "clean",
+      "notes": "1 high / 77 worth / 173 logged -- 11/11 sources -- YouTube: 10 videos"
+    },
+    {
+      "date": "2026-04-01T08:59:52.368354",
+      "agent": "janitor",
+      "status": "flagged",
+      "notes": "truncated=0 old=0 caches=4 large=0"
+    },
+    {
+      "date": "2026-04-01T09:00:04.300790",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=False"
+    },
+    {
+      "date": "2026-04-01 09:00",
+      "agent": "check-drift",
+      "status": "clean",
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
+    },
+    {
+      "date": "2026-04-01T14:00:34Z",
+      "agent": "ai-services-rankings",
+      "status": "clean",
+      "notes": "7 categories updated"
+    },
+    {
+      "date": "2026-04-01T09:00:37.643651",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=False"
+    },
