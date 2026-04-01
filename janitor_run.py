@@ -118,6 +118,7 @@ def check_orphaned_bats():
         "overnight-inbox-manager.bat",     # managed via run-agent.py
         "overnight-vector-reindex.bat",    # vector reindex task
         "start-bridge.bat",                # manual utility — SidebarBridge
+        "serve-sidebar.bat",               # SidebarServer — registered as login task
         "game_archaeology_weekly.bat",     # game archaeology manual/weekly
     }
 
@@ -145,8 +146,71 @@ def get_large_files():
             except: pass
     return large
 
+def weekly_deep_review():
+    """Run once per week (Sunday). Reads all logs from past 7 days, produces
+    workflow flaw report, efficiency suggestions, utility candidates."""
+    log("Weekly deep review starting")
+    LOG_DIR = STUDIO + "/scheduler/logs"
+    now = datetime.now()
+    cutoff = now.timestamp() - 7 * 86400
+    findings = []
+
+    # Scan each log for error patterns, slow runs, 0-result passes
+    for fname in os.listdir(LOG_DIR):
+        if not fname.endswith('.log'): continue
+        path = LOG_DIR + '/' + fname
+        if os.path.getmtime(path) < cutoff: continue
+        try:
+            lines = open(path, encoding='utf-8', errors='replace').readlines()
+        except: continue
+        agent = fname.replace('.log','').replace('overnight-','').replace('-',' ')
+
+        errors    = [l.strip() for l in lines if 'ERROR' in l or 'error' in l.lower() and 'SCORE ERROR' not in l]
+        zeros     = [l.strip() for l in lines if '0 items' in l or 'Scored 0' in l or '0 results' in l]
+        circuit   = [l.strip() for l in lines if 'CIRCUIT' in l or 'aborting' in l.lower()]
+        slow_runs = []
+
+        # Detect repeated patterns across agents
+        if len(errors) >= 3:
+            findings.append({'agent': agent, 'type': 'frequent_errors',
+                'detail': str(len(errors)) + ' errors this week',
+                'suggestion': 'Review error handling or provider fallback chain'})
+        if zeros:
+            findings.append({'agent': agent, 'type': 'zero_results',
+                'detail': '; '.join(zeros[:2])[:100],
+                'suggestion': 'Check data source availability and hour-of-day routing'})
+        if circuit:
+            findings.append({'agent': agent, 'type': 'circuit_breaker',
+                'detail': circuit[0][:80],
+                'suggestion': 'API provider failing repeatedly — check provider-health.json'})
+
+    # Check for utility candidates: same pattern in 3+ agents
+    log_files = os.listdir(LOG_DIR)
+    gemini_failures = sum(1 for f in log_files
+        if os.path.exists(LOG_DIR+'/'+f) and
+        'HTTP Error 404' in open(LOG_DIR+'/'+f, encoding='utf-8', errors='replace').read())
+    if gemini_failures >= 3:
+        findings.append({'agent': 'SYSTEM', 'type': 'utility_candidate',
+            'detail': str(gemini_failures) + ' agents hitting Gemini 404',
+            'suggestion': 'Extract gemini_call() with built-in fallback to utilities/gemini.py'})
+
+    # Write to report
+    report = load_json(REPORT, {})
+    report['weekly_review'] = {
+        'date': now.strftime('%Y-%m-%d'),
+        'findings': findings,
+        'total_issues': len(findings)
+    }
+    save_json(REPORT, report)
+    log("Weekly review: " + str(len(findings)) + " issues found")
+    for f in findings[:5]:
+        log("  [" + f['type'] + "] " + f['agent'] + ": " + f['detail'][:60])
+    return findings
+
+
 def main():
     log("Janitor starting")
+    is_sunday = datetime.now().weekday() == 6
     report = {
         "date": datetime.now().isoformat(),
         "truncated_logs": [],
@@ -201,6 +265,13 @@ def main():
     report["status"] = "flagged" if issues > 0 else "clean"
     save_json(REPORT, report)
     log("Janitor report saved. Status: " + report["status"])
+
+    # Weekly deep review on Sundays
+    if is_sunday:
+        try:
+            weekly_deep_review()
+        except Exception as e:
+            log("Weekly review error: " + str(e)[:80])
 
     # Heartbeat
     hb = load_json(HB_PATH, {"entries": []})

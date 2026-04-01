@@ -1,11 +1,10 @@
-import json, urllib.request, time, os
+import json, time, os, sys
+sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from datetime import datetime
+from ai_gateway import score as gw_score
 
 WHITEBOARD = 'G:/My Drive/Projects/_studio/whiteboard.json'
 INBOX_KEY = 'studio_inbox_items'
-CONFIG = json.load(open('G:/My Drive/Projects/_studio/studio-config.json', encoding='utf-8'))
-GEMINI_KEY = CONFIG.get('gemini_api_key', '')
-GEMINI_URL = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}'
 
 wb = json.load(open(WHITEBOARD, encoding='utf-8', errors='replace'))
 items = wb.get('items', [])
@@ -38,14 +37,11 @@ Return ONLY valid JSON:
   "revenue_estimate": "LARGE/MEDIUM/SMALL/NICHE",
   "top_risk": "biggest single risk"
 }}"""
-
-    payload = json.dumps({'contents': [{'parts': [{'text': prompt}]}]}).encode()
-    req = urllib.request.Request(GEMINI_URL, data=payload,
-                                  headers={'Content-Type': 'application/json'})
-    r = urllib.request.urlopen(req, timeout=20)
-    text = json.loads(r.read())['candidates'][0]['content']['parts'][0]['text'].strip()
-    text = text.replace('```json','').replace('```','').strip()
-    return json.loads(text)
+    r = gw_score(prompt, max_tokens=300)
+    if not r.success:
+        raise Exception(r.error or "gateway returned no response")
+    text = r.text.replace('```json', '').replace('```', '').strip()
+    return json.loads(text), r.provider
 
 print('Scoring via Gemini...\n')
 scored_count = 0
@@ -54,13 +50,14 @@ MAX_CONSECUTIVE_FAILURES = 3
 for item in unscored:
     title = item.get('title', 'Unknown')[:50]
     try:
-        score = score_item(item)
+        score, provider = score_item(item)
         item['gemini_score'] = score
         item['scored_at'] = datetime.now().isoformat()
+        item['scored_by'] = provider
         scored_count += 1
         total = score.get('total_score', 0)
         action = score.get('recommended_action', '?')
-        print(f'  {total:>2}/10 [{action:<8}] {title}')
+        print(f'  {total:>2}/10 [{action:<8}] {title} (via {provider})')
         consecutive_failures = 0  # reset on success
     except Exception as e:
         err = str(e)[:50]
@@ -122,4 +119,12 @@ for rank, item in enumerate(top10, 1):
 
 json.dump(inbox_list, open(INBOX_PATH, 'w', encoding='utf-8'), indent=2)
 print(f'\nPushed {pushed} top-10 items to mobile-inbox.json')
+
+# Heartbeat
+import sys; sys.path.insert(0, 'G:/My Drive/Projects/_studio')
+try:
+    from utilities.heartbeat import write as hb_write
+    hb_write('whiteboard-scorer', 'clean', f'scored={scored_count} top10_pushed={pushed}')
+except Exception as e: print('[heartbeat] ' + str(e)[:60])
+
 print('Done.')

@@ -1,0 +1,822 @@
+{
+  "_schema": "2.0",
+  "_description": "Comprehensive AI model and service registry. All providers, tiers, limits, and routing notes.",
+  "_purpose": "Single source of truth for model routing decisions. Use free tiers first, escalate to paid only when needed.",
+  "last_updated": "2026-04-01",
+  "next_review": "2026-05-01",
+
+  "providers": {
+
+    "anthropic": {
+      "name": "Anthropic",
+      "url": "https://console.anthropic.com",
+      "auth": "studio-config.json:anthropic_api_key",
+      "openai_compatible": false,
+      "free_tier": false,
+      "studio_connected": true,
+      "models": {
+        "claude-opus-4-6": {
+          "display": "Claude Opus 4.6",
+          "tier": "paid",
+          "context_window": 200000,
+          "status": "active",
+          "best_for": ["complex reasoning", "long documents", "agentic multi-step"],
+          "cost_tier": "high",
+          "studio_use": "executive decisions only"
+        },
+        "claude-sonnet-4-6": {
+          "display": "Claude Sonnet 4.6",
+          "tier": "paid",
+          "context_window": 200000,
+          "status": "active",
+          "best_for": ["reasoning", "coding", "agents", "writing"],
+          "cost_tier": "medium",
+          "studio_use": "primary reasoning engine"
+        },
+        "claude-haiku-4-5-20251001": {
+          "display": "Claude Haiku 4.5",
+          "tier": "paid",
+          "context_window": 200000,
+          "status": "active",
+          "best_for": ["fast batch", "classification", "summarization"],
+          "cost_tier": "low",
+          "studio_use": "batch tasks where Gemini unavailable"
+        },
+        "claude-capybara": {
+          "display": "Claude Capybara (Numbat) — UNRELEASED",
+          "tier": "paid",
+          "context_window": "unknown — larger than current",
+          "status": "leaked_codename_in_development",
+          "best_for": ["TBD"],
+          "cost_tier": "unknown",
+          "studio_use": "watch for release — update model strings when drops",
+          "notes": "Internal codename from 2026-03-31 Claude Code source leak. Capybara=4.6 variant, Fennec=Opus 4.6, Numbat=unreleased. 29-30% false claims rate in v8 — regression vs prior. Update studio-config when released."
+        }
+      }
+    },
+
+    "google": {
+      "name": "Google AI Studio / Gemini",
+      "url": "https://aistudio.google.com",
+      "auth": "studio-config.json:gemini_api_key",
+      "openai_compatible": true,
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "free_tier": true,
+      "studio_connected": true,
+      "free_tier_notes": "No credit card required. Data used for training outside EU/EEA/UK/CH.",
+      "models": {
+        "gemini-2.5-pro": {
+          "display": "Gemini 2.5 Pro",
+          "tier": "free+paid",
+          "free_limits": "5 RPM, 25 RPD, 1M tokens/day",
+          "context_window": 1000000,
+          "status": "active",
+          "best_for": ["complex reasoning", "long documents", "multimodal"],
+          "cost_tier": "free_limited",
+          "studio_use": "heavy reasoning tasks during off-peak"
+        },
+        "gemini-2.5-flash": {
+          "display": "Gemini 2.5 Flash",
+          "tier": "free+paid",
+          "free_limits": "15 RPM, 1500 RPD, 1M token context",
+          "context_window": 1000000,
+          "status": "active",
+          "best_for": ["speed", "multimodal", "PDFs", "images", "batch scoring"],
+          "cost_tier": "free_generous",
+          "studio_use": "PRIMARY free workhorse — replace all 2AM Gemini calls with this"
+        },
+        "gemini-2.0-flash-001": {
+          "display": "Gemini 2.0 Flash",
+          "tier": "free+paid",
+          "free_limits": "15 RPM, 1500 RPD",
+          "context_window": 1000000,
+          "status": "active_but_superseded",
+          "best_for": ["scoring", "batch"],
+          "cost_tier": "free_generous",
+          "studio_use": "currently used in product_archaeology_run.py — upgrade to 2.5 Flash"
+        },
+        "gemini-1.5-pro": {
+          "display": "Gemini 1.5 Pro",
+          "tier": "free+paid",
+          "free_limits": "2 RPM, 50 RPD",
+          "context_window": 2000000,
+          "status": "active_legacy",
+          "best_for": ["2M context window tasks"],
+          "cost_tier": "free_very_limited",
+          "studio_use": "only when 2M context needed — otherwise use 2.5 Flash"
+        },
+        "gemini-1.5-flash": {
+          "display": "Gemini 1.5 Flash",
+          "tier": "free+paid",
+          "free_limits": "15 RPM, 1500 RPD",
+          "context_window": 1000000,
+          "status": "active_legacy",
+          "best_for": ["batch tasks"],
+          "cost_tier": "free_generous",
+          "studio_use": "fallback only — 2.5 Flash is better and same price"
+        },
+        "gemini-flash-lite": {
+          "display": "Gemini Flash Lite",
+          "tier": "free",
+          "free_limits": "30 RPM, 1500 RPD",
+          "context_window": 1000000,
+          "status": "active",
+          "best_for": ["high volume low complexity", "classification"],
+          "cost_tier": "free_very_generous",
+          "studio_use": "janitor-style tasks, tag extraction, simple scoring"
+        }
+      }
+    },
+
+    "groq": {
+      "name": "Groq",
+      "url": "https://console.groq.com",
+      "auth": "NEEDS_KEY — sign up free at console.groq.com",
+      "openai_compatible": true,
+      "base_url": "https://api.groq.com/openai/v1",
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "No credit card. LPU hardware = fastest inference available (700+ t/s). Rate limits per org.",
+      "models": {
+        "llama-3.3-70b-versatile": {
+          "display": "Llama 3.3 70B Versatile",
+          "tier": "free",
+          "free_limits": "30 RPM, 14400 RPD, 6000 TPM",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["speed-critical tasks", "coding", "summarization", "routing"],
+          "cost_tier": "free",
+          "studio_use": "overnight batch routing — fastest free model available"
+        },
+        "llama-3.1-8b-instant": {
+          "display": "Llama 3.1 8B Instant",
+          "tier": "free",
+          "free_limits": "30 RPM, 14400 RPD, 20000 TPM",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["high volume simple tasks", "classification"],
+          "cost_tier": "free",
+          "studio_use": "bulk classification, tagging, quick yes/no decisions"
+        },
+        "llama-4-scout": {
+          "display": "Llama 4 Scout",
+          "tier": "free",
+          "free_limits": "30 RPM, 1000 RPD",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["multimodal", "vision tasks"],
+          "cost_tier": "free_limited",
+          "studio_use": "image understanding tasks — art dept quality checks"
+        },
+        "mixtral-8x7b": {
+          "display": "Mixtral 8x7B",
+          "tier": "free",
+          "free_limits": "30 RPM, 14400 RPD",
+          "context_window": 32000,
+          "status": "active",
+          "best_for": ["general tasks"],
+          "cost_tier": "free",
+          "studio_use": "fallback general purpose"
+        },
+        "gemma2-9b-it": {
+          "display": "Gemma 2 9B",
+          "tier": "free",
+          "free_limits": "30 RPM, 14400 RPD",
+          "context_window": 8192,
+          "status": "active",
+          "best_for": ["lightweight tasks"],
+          "cost_tier": "free",
+          "studio_use": "simple extraction, lightweight scoring"
+        },
+        "whisper-large-v3": {
+          "display": "Whisper Large v3 (STT)",
+          "tier": "free",
+          "free_limits": "20 RPM, 2000 RPD",
+          "context_window": "audio",
+          "status": "active",
+          "best_for": ["speech to text", "transcription"],
+          "cost_tier": "free",
+          "studio_use": "future voice pipeline"
+        }
+      }
+    },
+
+    "cerebras": {
+      "name": "Cerebras",
+      "url": "https://cloud.cerebras.ai",
+      "auth": "NEEDS_KEY — free signup",
+      "openai_compatible": true,
+      "base_url": "https://api.cerebras.ai/v1",
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "1M tokens/day free. Wafer-scale chips = 20x faster than GPU. No credit card.",
+      "models": {
+        "llama3.1-8b": {
+          "display": "Llama 3.1 8B",
+          "tier": "free",
+          "free_limits": "30 RPM, 14400 RPD, 1M tokens/day",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["speed-critical", "batch processing"],
+          "cost_tier": "free",
+          "studio_use": "Groq overflow — fast free inference",
+          "notes": "CORRECT model string is llama3.1-8b not llama-3.3-70b"
+        },
+        "qwen-3-235b-a22b-instruct-2507": {
+          "display": "Qwen3 235B",
+          "tier": "free",
+          "free_limits": "30 RPM, 14400 RPD",
+          "context_window": 32000,
+          "status": "active",
+          "best_for": ["large model quality at free price"],
+          "cost_tier": "free",
+          "studio_use": "high quality free reasoning tasks",
+          "notes": "CORRECT model string as of 2026-04-01"
+        }
+      }
+    },
+
+    "openrouter": {
+      "name": "OpenRouter",
+      "url": "https://openrouter.ai",
+      "auth": "studio-config.json:openrouter_api_key",
+      "openai_compatible": true,
+      "base_url": "https://openrouter.ai/api/v1",
+      "free_tier": true,
+      "studio_connected": true,
+      "free_tier_notes": "20 RPM, 50 RPD free. 1000 RPD with $10+ credits loaded. Free models use :free suffix.",
+      "models": {
+        "deepseek/deepseek-r1:free": {
+          "display": "DeepSeek R1 (free)",
+          "tier": "free",
+          "free_limits": "20 RPM, 50 RPD",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["reasoning", "chain of thought"],
+          "cost_tier": "free",
+          "studio_use": "reasoning tasks when Claude quota tight"
+        },
+        "meta-llama/llama-3.2-3b-instruct:free": {
+          "display": "Llama 3.2 3B (free)",
+          "tier": "free",
+          "free_limits": "20 RPM, 50 RPD",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["lightweight tasks"],
+          "cost_tier": "free",
+          "studio_use": "bulk simple tasks"
+        },
+        "mistralai/mistral-7b-instruct:free": {
+          "display": "Mistral 7B (free)",
+          "tier": "free",
+          "free_limits": "20 RPM, 50 RPD",
+          "context_window": 32000,
+          "status": "active",
+          "best_for": ["general tasks"],
+          "cost_tier": "free",
+          "studio_use": "general fallback"
+        },
+        "google/gemma-3-27b-it:free": {
+          "display": "Gemma 3 27B (free)",
+          "tier": "free",
+          "free_limits": "20 RPM, 50 RPD",
+          "context_window": 131072,
+          "status": "active",
+          "best_for": ["balanced quality/speed"],
+          "cost_tier": "free",
+          "studio_use": "mid-tier free tasks"
+        }
+      }
+    },
+
+    "mistral": {
+      "name": "Mistral AI",
+      "url": "https://console.mistral.ai",
+      "auth": "NEEDS_KEY — free signup",
+      "openai_compatible": true,
+      "base_url": "https://api.mistral.ai/v1",
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "1 req/s, 1B tokens/month permanently free. EU-based — GDPR compliant.",
+      "models": {
+        "mistral-small-latest": {
+          "display": "Mistral Small 3.1",
+          "tier": "free",
+          "free_limits": "1 req/s, 1B tok/mo",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["general tasks", "coding", "multilingual"],
+          "cost_tier": "free",
+          "studio_use": "EU-safe free option — no data training concern"
+        },
+        "mistral-large-latest": {
+          "display": "Mistral Large 3",
+          "tier": "free",
+          "free_limits": "1 req/s, 1B tok/mo",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["complex reasoning", "coding"],
+          "cost_tier": "free",
+          "studio_use": "high quality free reasoning"
+        },
+        "codestral-latest": {
+          "display": "Codestral",
+          "tier": "free",
+          "free_limits": "1 req/s, 1B tok/mo",
+          "context_window": 256000,
+          "status": "active",
+          "best_for": ["code generation", "code review"],
+          "cost_tier": "free",
+          "studio_use": "code-specific tasks"
+        },
+        "ministral-8b-latest": {
+          "display": "Ministral 8B",
+          "tier": "free",
+          "free_limits": "1 req/s, 1B tok/mo",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["fast lightweight tasks"],
+          "cost_tier": "free",
+          "studio_use": "bulk lightweight scoring"
+        }
+      }
+    },
+
+    "cohere": {
+      "name": "Cohere",
+      "url": "https://dashboard.cohere.com",
+      "auth": "NEEDS_KEY — free signup",
+      "openai_compatible": false,
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "20 RPM, 1K requests/month permanently free. Full RAG pipeline: generate + embed + rerank.",
+      "models": {
+        "command-a-03-2025": {
+          "display": "Command A",
+          "tier": "free",
+          "free_limits": "20 RPM, 1K/mo",
+          "context_window": 256000,
+          "status": "active",
+          "best_for": ["RAG", "enterprise tasks"],
+          "cost_tier": "free_limited",
+          "studio_use": "RAG generation"
+        },
+        "command-r-plus": {
+          "display": "Command R+",
+          "tier": "free",
+          "free_limits": "20 RPM, 1K/mo",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["RAG", "reasoning"],
+          "cost_tier": "free_limited",
+          "studio_use": "ChromaDB RAG alternative"
+        },
+        "embed-english-v3.0": {
+          "display": "Embed English v3",
+          "tier": "free",
+          "free_limits": "1M tokens/mo",
+          "context_window": "embedding",
+          "status": "active",
+          "best_for": ["embeddings", "semantic search"],
+          "cost_tier": "free",
+          "studio_use": "ChromaDB embedding alternative to nomic"
+        },
+        "rerank-english-v3": {
+          "display": "Rerank 3.5",
+          "tier": "free",
+          "free_limits": "1K/mo",
+          "context_window": "reranking",
+          "status": "active",
+          "best_for": ["RAG reranking", "search quality"],
+          "cost_tier": "free_limited",
+          "studio_use": "improve ChromaDB result quality"
+        }
+      }
+    },
+
+    "cloudflare": {
+      "name": "Cloudflare Workers AI",
+      "url": "https://developers.cloudflare.com/workers-ai",
+      "auth": "NEEDS_KEY — Cloudflare account",
+      "openai_compatible": true,
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "10K neurons/day free. 50+ models. Edge deployment = low global latency.",
+      "models": {
+        "llama-3.3-70b-instruct-fp8-fast": {
+          "display": "Llama 3.3 70B (edge)",
+          "tier": "free",
+          "free_limits": "10K neurons/day",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["edge tasks", "global latency"],
+          "cost_tier": "free",
+          "studio_use": "low-volume edge tasks"
+        },
+        "flux-1-schnell": {
+          "display": "FLUX.1 Schnell (image gen)",
+          "tier": "free",
+          "free_limits": "10K neurons/day",
+          "context_window": "image",
+          "status": "active",
+          "best_for": ["fast image generation"],
+          "cost_tier": "free",
+          "studio_use": "ART DEPT — free image gen quota"
+        }
+      }
+    },
+
+    "github_models": {
+      "name": "GitHub Models",
+      "url": "https://github.com/marketplace/models",
+      "auth": "GitHub account + PAT token",
+      "openai_compatible": true,
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "10-15 RPM, 50-150 RPD depending on model tier. No credit card.",
+      "models": {
+        "gpt-4o": {
+          "display": "GPT-4o (via GitHub)",
+          "tier": "free",
+          "free_limits": "10 RPM, 50 RPD",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["testing", "prototyping"],
+          "cost_tier": "free_limited",
+          "studio_use": "GPT-4o access without OpenAI bill"
+        },
+        "gpt-4.1": {
+          "display": "GPT-4.1 (via GitHub)",
+          "tier": "free",
+          "free_limits": "10 RPM, 50 RPD",
+          "context_window": 1000000,
+          "status": "active",
+          "best_for": ["1M context tasks"],
+          "cost_tier": "free_limited",
+          "studio_use": "very long context when Gemini unavailable"
+        },
+        "o3": {
+          "display": "o3 (via GitHub)",
+          "tier": "free",
+          "free_limits": "10 RPM, 50 RPD",
+          "context_window": 200000,
+          "status": "active",
+          "best_for": ["hard reasoning"],
+          "cost_tier": "free_limited",
+          "studio_use": "hard reasoning tasks — otherwise too rate-limited"
+        },
+        "deepseek-r1-github": {
+          "display": "DeepSeek R1 (via GitHub)",
+          "tier": "free",
+          "free_limits": "10 RPM, 50 RPD",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["reasoning"],
+          "cost_tier": "free_limited",
+          "studio_use": "reasoning fallback"
+        }
+      }
+    },
+
+    "huggingface": {
+      "name": "Hugging Face Inference API",
+      "url": "https://huggingface.co/inference-api",
+      "auth": "NEEDS_KEY — HF account free",
+      "openai_compatible": true,
+      "free_tier": true,
+      "studio_connected": false,
+      "free_tier_notes": "300+ models. Models under 10GB fully free. Strict rate limits on text gen.",
+      "models": {
+        "meta-llama/Llama-3.2-3B-Instruct": {
+          "display": "Llama 3.2 3B",
+          "tier": "free",
+          "free_limits": "severe — prototype only",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["experimentation"],
+          "cost_tier": "free_very_limited",
+          "studio_use": "last resort / experimentation only"
+        }
+      }
+    },
+
+    "ollama": {
+      "name": "Ollama (Local)",
+      "url": "http://localhost:11434",
+      "auth": "none — local",
+      "openai_compatible": true,
+      "base_url": "http://localhost:11434/v1",
+      "free_tier": true,
+      "studio_connected": true,
+      "free_tier_notes": "Truly free — no API cost ever. Limited by local CPU/RAM. No rate limits.",
+      "models": {
+        "gemma3:4b": {
+          "display": "Gemma 3 4B (currently loaded)",
+          "tier": "free_local",
+          "free_limits": "none",
+          "context_window": 32000,
+          "status": "active",
+          "best_for": ["local tasks", "privacy-sensitive work", "no-internet tasks"],
+          "cost_tier": "free",
+          "studio_use": "PRIMARY local fallback — no API cost ever"
+        },
+        "nomic-embed-text": {
+          "display": "Nomic Embed Text",
+          "tier": "free_local",
+          "free_limits": "none",
+          "context_window": "embedding",
+          "status": "active",
+          "best_for": ["embeddings", "ChromaDB"],
+          "cost_tier": "free",
+          "studio_use": "ChromaDB vector store — currently in use"
+        }
+      }
+    },
+
+    "openai": {
+      "name": "OpenAI",
+      "url": "https://platform.openai.com",
+      "auth": "NEEDS_KEY — paid only",
+      "openai_compatible": true,
+      "free_tier": false,
+      "studio_connected": false,
+      "models": {
+        "gpt-4o": {
+          "display": "GPT-4o",
+          "tier": "paid",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": ["general purpose", "vision"],
+          "cost_tier": "medium",
+          "studio_use": "not wired — use GitHub Models for free access"
+        },
+        "gpt-4.1": {
+          "display": "GPT-4.1",
+          "tier": "paid",
+          "context_window": 1000000,
+          "status": "active",
+          "best_for": ["1M context"],
+          "cost_tier": "medium",
+          "studio_use": "not wired — use GitHub Models for free access"
+        },
+        "gpt-5.4-mini": {
+          "display": "GPT-5.4 Mini — NEW (Apr 1 2026)",
+          "tier": "paid",
+          "context_window": "unknown",
+          "status": "just_released",
+          "best_for": ["cost-efficient tasks"],
+          "cost_tier": "low",
+          "studio_use": "watch — may be cheaper than Haiku for some tasks"
+        },
+        "gpt-5.4-nano": {
+          "display": "GPT-5.4 Nano — NEW (Apr 1 2026)",
+          "tier": "paid",
+          "context_window": "unknown",
+          "status": "just_released",
+          "best_for": ["ultra-cheap bulk tasks"],
+          "cost_tier": "very_low",
+          "studio_use": "watch — may compete with Gemini Flash Lite"
+        }
+      }
+    }
+  },
+
+  "image_generation": {
+    "_note": "Free tier strategy: rotate across all free tiers daily for art dept quota maximization",
+    "ideogram": {
+      "name": "Ideogram 2",
+      "url": "https://ideogram.ai",
+      "free_tier": true,
+      "free_limits": "10 images/day free",
+      "best_for": ["text-in-image", "logos", "typography"],
+      "studio_use": "ART DEPT daily quota — best for text overlay images",
+      "api_available": true
+    },
+    "playground_v3": {
+      "name": "Playground v3",
+      "url": "https://playground.com",
+      "free_tier": true,
+      "free_limits": "30 images/day free",
+      "best_for": ["aesthetic quality", "character art"],
+      "studio_use": "ART DEPT daily quota — best aesthetic quality free",
+      "api_available": false
+    },
+    "flux_cloudflare": {
+      "name": "FLUX.1 Schnell (Cloudflare)",
+      "url": "https://developers.cloudflare.com/workers-ai",
+      "free_tier": true,
+      "free_limits": "10K neurons/day (approx 50-100 images)",
+      "best_for": ["speed", "volume"],
+      "studio_use": "ART DEPT — highest volume free tier via API",
+      "api_available": true
+    },
+    "stable_diffusion_local": {
+      "name": "Stable Diffusion (local ComfyUI)",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "free_tier": true,
+      "free_limits": "unlimited — CPU only until RTX 3060",
+      "best_for": ["unlimited local generation"],
+      "studio_use": "BLOCKED on GPU — RTX 3060 12GB is unlock path (~$230-270)",
+      "api_available": true
+    },
+    "higgsfield": {
+      "name": "Higgsfield",
+      "url": "https://higgsfield.ai",
+      "free_tier": true,
+      "free_limits": "limited daily credits",
+      "best_for": ["character-consistent video", "agency characters"],
+      "studio_use": "Agency character video content — #1 whiteboard item (9/10)",
+      "api_available": false
+    },
+    "midjourney": {
+      "name": "Midjourney v6",
+      "url": "https://midjourney.com",
+      "free_tier": false,
+      "best_for": ["highest quality art"],
+      "studio_use": "paid only — not currently subscribed",
+      "api_available": false
+    },
+    "dall_e_3": {
+      "name": "DALL-E 3",
+      "url": "https://openai.com",
+      "free_tier": false,
+      "best_for": ["prompt adherence"],
+      "studio_use": "paid — skip until revenue warrants",
+      "api_available": true
+    }
+  },
+
+  "video_generation": {
+    "kling": {
+      "name": "Kling 1.6",
+      "url": "https://klingai.com",
+      "free_tier": true,
+      "free_limits": "daily credits",
+      "best_for": ["motion quality"],
+      "studio_use": "Agency character video"
+    },
+    "hailuo": {
+      "name": "Hailuo MiniMax",
+      "url": "https://hailuoai.com",
+      "free_tier": true,
+      "free_limits": "generous daily credits",
+      "best_for": ["volume"],
+      "studio_use": "highest volume free video gen"
+    },
+    "runway_gen3": {
+      "name": "Runway Gen-3",
+      "url": "https://runwayml.com",
+      "free_tier": false,
+      "best_for": ["creative control"],
+      "studio_use": "paid only"
+    },
+    "sora": {
+      "name": "Sora",
+      "url": "https://openai.com",
+      "free_tier": false,
+      "best_for": ["coherence"],
+      "studio_use": "paid only"
+    }
+  },
+
+  "embeddings": {
+    "nomic_local": {
+      "name": "nomic-embed-text (Ollama)",
+      "free_tier": true,
+      "status": "active — studio default in ChromaDB"
+    },
+    "gemini_embed": {
+      "name": "Gemini Embedding",
+      "url": "https://aistudio.google.com",
+      "free_tier": true,
+      "free_limits": "1500 RPD",
+      "status": "available — upgrade path if nomic insufficient"
+    },
+    "cohere_embed": {
+      "name": "Cohere Embed v3",
+      "free_tier": true,
+      "free_limits": "1M tokens/mo",
+      "status": "available — highest quality free embedding"
+    }
+  },
+
+  "routing_strategy": {
+    "_description": "Decision tree for task routing to minimize API cost",
+    "rules": [
+      {
+        "priority": 1,
+        "condition": "local task, no internet needed, privacy sensitive",
+        "route_to": "ollama:gemma3:4b",
+        "reason": "zero cost, no data exposure"
+      },
+      {
+        "priority": 2,
+        "condition": "bulk scoring, classification, simple extraction — overnight",
+        "route_to": "google:gemini-2.5-flash",
+        "reason": "1500 RPD free, 1M context, fastest free quality model"
+      },
+      {
+        "priority": 3,
+        "condition": "speed critical, many small requests",
+        "route_to": "groq:llama-3.3-70b-versatile",
+        "reason": "700+ t/s, 14400 RPD free — fastest inference on earth"
+      },
+      {
+        "priority": 4,
+        "condition": "groq rate limited, need speed",
+        "route_to": "cerebras:llama-3.3-70b",
+        "reason": "1M tokens/day free, second fastest"
+      },
+      {
+        "priority": 5,
+        "condition": "high quality reasoning needed, free",
+        "route_to": "mistral:mistral-large-latest",
+        "reason": "1B tokens/month free, EU-safe"
+      },
+      {
+        "priority": 6,
+        "condition": "model variety testing, free",
+        "route_to": "openrouter:free_models",
+        "reason": "50 RPD across dozens of models"
+      },
+      {
+        "priority": 7,
+        "condition": "GPT-4o or o3 needed, free",
+        "route_to": "github_models",
+        "reason": "50 RPD free access to OpenAI models"
+      },
+      {
+        "priority": 8,
+        "condition": "complex reasoning, coding, agents — studio primary",
+        "route_to": "anthropic:claude-sonnet-4-6",
+        "reason": "best quality — paid, conserve for high-value tasks"
+      }
+    ]
+  },
+
+  "search": {
+    "_note": "AI-powered search APIs. Studio connected to Tavily via MCP.",
+    "tavily": {
+      "name": "Tavily",
+      "url": "https://tavily.com",
+      "free_tier": true,
+      "free_limits": "1000 searches/month free",
+      "studio_connected": true,
+      "studio_use": "PRIMARY search API — connected via MCP, used by AI Intel agent",
+      "best_for": ["AI-optimized search", "research", "agent search tasks"],
+      "api_available": true
+    },
+    "perplexity": {
+      "name": "Perplexity API",
+      "url": "https://api.perplexity.ai",
+      "free_tier": false,
+      "studio_connected": false,
+      "studio_use": "not connected — good for research tasks",
+      "best_for": ["research", "cited answers"],
+      "api_available": true
+    },
+    "duckduckgo": {
+      "name": "DuckDuckGo (free)",
+      "url": "https://duckduckgo.com",
+      "free_tier": true,
+      "free_limits": "no key needed, rate limited",
+      "studio_connected": false,
+      "studio_use": "free fallback — no API key required",
+      "best_for": ["no-key search", "privacy"],
+      "api_available": true
+    },
+    "brave_search": {
+      "name": "Brave Search API",
+      "url": "https://api.search.brave.com",
+      "free_tier": true,
+      "free_limits": "2000 queries/month free",
+      "studio_connected": false,
+      "studio_use": "good free alternative to Google — independent index",
+      "best_for": ["independent index", "no Google bias"],
+      "api_available": true
+    },
+    "serpapi": {
+      "name": "SerpAPI",
+      "url": "https://serpapi.com",
+      "free_tier": true,
+      "free_limits": "100 searches/month free",
+      "studio_connected": false,
+      "studio_use": "Google results scraping — use sparingly",
+      "best_for": ["Google SERP data", "structured results"],
+      "api_available": true
+    }
+  },
+
+  "action_items": [
+    "Add Groq API key to studio-config.json — free signup at console.groq.com",
+    "Add Cerebras API key to studio-config.json — free signup at cloud.cerebras.ai",
+    "Add Mistral API key to studio-config.json — free signup at console.mistral.ai",
+    "Add GitHub PAT to studio-config.json for GitHub Models access",
+    "Update product_archaeology_run.py: upgrade gemini-2.0-flash-001 to gemini-2.5-flash",
+    "Update whiteboard_score.py: upgrade to gemini-2.5-flash",
+    "Build art_dept_daily.py: rotate Ideogram (10/day) + Playground (30/day) + Cloudflare FLUX (50-100/day)",
+    "Update ai-services-rankings.json from this registry",
+    "Watch for Claude Numbat/Capybara model release — update studio-config model strings",
+    "Watch for GPT-5.4 mini/nano pricing — may compete with Haiku for batch tasks"
+  ]
+}

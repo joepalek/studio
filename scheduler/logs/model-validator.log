@@ -1,0 +1,21 @@
+[2026-04-01 11:47:40] Model validator starting
+[2026-04-01 11:48:06] Model validator starting
+[2026-04-01 11:48:06] Fetching live model lists from all providers...
+[2026-04-01 11:48:07]   Groq: 18 models live
+[2026-04-01 11:48:07]   Cerebras: 2 models live
+[2026-04-01 11:48:08]   Mistral: 61 models live
+[2026-04-01 11:48:08]   OpenRouter: 28 free models live
+[2026-04-01 11:48:09]   Gemini gemini-2.0-flash-001: DEFUNCT (HTTP Error 404: Not Found)
+[2026-04-01 11:48:10]   Gemini gemini-flash-lite: DEFUNCT (HTTP Error 404: Not Found)
+[2026-04-01 11:48:10]   Gemini gemini-1.5-pro: DEFUNCT (HTTP Error 404: Not Found)
+[2026-04-01 11:48:10]   Gemini: 1 models responding
+[2026-04-01 11:48:10] Comparing registry against live models...
+[2026-04-01 11:48:11] Results: 11 OK | 5 DEFUNCT | 27 not checked
+[2026-04-01 11:48:11] DEFUNCT MODELS:
+[2026-04-01 11:48:11]   groq/llama-4-scout — Not found in live groq model list
+[2026-04-01 11:48:11]   groq/mixtral-8x7b — Not found in live groq model list
+[2026-04-01 11:48:11]   groq/gemma2-9b-it — Not found in live groq model list
+[2026-04-01 11:48:11]   openrouter/deepseek/deepseek-r1:free — Not found in live openrouter model list
+[2026-04-01 11:48:11]   openrouter/mistralai/mistral-7b-instruct:free — Not found in live openrouter model list
+[2026-04-01 11:48:11] Pushed 5 findings to supervisor inbox
+[2026-04-01 11:48:11] Model validator complete

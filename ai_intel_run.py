@@ -283,6 +283,8 @@ except Exception:
 cutoff_14d = (now - timedelta(days=14)).strftime("%Y-%m-%d")
 daily["runs"] = [r for r in daily.get("runs",[]) if r.get("date","") >= cutoff_14d]
 daily["runs"].append(run_entry)
+daily["generated"] = now_iso
+daily["high_priority"] = high[:5]  # top 5 for sidebar quick access
 json.dump(daily, open(DAILY_FILE,"w",encoding="utf-8"), indent=2)
 print("Written: ai-intel-daily.json")
 

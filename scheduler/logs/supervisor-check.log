@@ -15884,3 +15884,147 @@ Last cycle ran: `2026-03-31 23:31` — 0 tasks dispatched, queue empty.
 [2026-04-01 09:00:37] Dispatched: 0 tasks
 [2026-04-01 09:00:37] Supervisor check complete
 [Wed 04/01/2026  9:00:37.82] Done 
+[Wed 04/01/2026  9:30:02.20] Supervisor check starting 
+[2026-04-01 09:30:03] Supervisor check starting
+[2026-04-01 09:30:06] Ollama: True | Gemini: False
+[2026-04-01 09:30:06] Work queue: 0 | Task queue: 0
+[2026-04-01 09:30:06] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 09:30:06] Dispatched: 0 tasks
+[2026-04-01 09:30:06] Supervisor check complete
+[Wed 04/01/2026  9:30:06.81] Done 
+[Wed 04/01/2026 10:00:01.52] Supervisor check starting 
+[2026-04-01 10:00:01] Supervisor check starting
+[2026-04-01 10:00:04] Ollama: True | Gemini: False
+[2026-04-01 10:00:04] Work queue: 0 | Task queue: 0
+[2026-04-01 10:00:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 10:00:04] Dispatched: 0 tasks
+[2026-04-01 10:00:04] Supervisor check complete
+[Wed 04/01/2026 10:00:04.46] Done 
+[Wed 04/01/2026 10:30:01.59] Supervisor check starting 
+[2026-04-01 10:30:02] Supervisor check starting
+[2026-04-01 10:30:04] Ollama: True | Gemini: False
+[2026-04-01 10:30:04] Work queue: 0 | Task queue: 0
+[2026-04-01 10:30:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 10:30:04] Dispatched: 0 tasks
+[2026-04-01 10:30:04] Supervisor check complete
+[Wed 04/01/2026 10:30:04.48] Done 
+[Wed 04/01/2026 11:00:01.63] Supervisor check starting 
+[2026-04-01 11:00:02] Supervisor check starting
+[2026-04-01 11:00:04] Ollama: True | Gemini: False
+[2026-04-01 11:00:04] Work queue: 0 | Task queue: 0
+[2026-04-01 11:00:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 11:00:04] Dispatched: 0 tasks
+[2026-04-01 11:00:04] Supervisor check complete
+[Wed 04/01/2026 11:00:04.74] Done 
+[Wed 04/01/2026 11:30:01.61] Supervisor check starting 
+[2026-04-01 11:30:02] Supervisor check starting
+[2026-04-01 11:30:04] Ollama: True | Gemini: False
+[2026-04-01 11:30:04] Work queue: 0 | Task queue: 0
+[2026-04-01 11:30:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 11:30:04] Dispatched: 0 tasks
+[2026-04-01 11:30:04] Supervisor check complete
+[Wed 04/01/2026 11:30:04.77] Done 
+[Wed 04/01/2026 12:00:01.58] Supervisor check starting 
+[2026-04-01 12:00:02] Supervisor check starting
+[2026-04-01 12:00:04] Ollama: True | Gemini: False
+[2026-04-01 12:00:04] Work queue: 0 | Task queue: 0
+[2026-04-01 12:00:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 12:00:04] Dispatched: 0 tasks
+[2026-04-01 12:00:04] Supervisor check complete
+[Wed 04/01/2026 12:00:04.52] Done 
+[Wed 04/01/2026 12:30:01.64] Supervisor check starting 
+[2026-04-01 12:30:02] Supervisor check starting
+[2026-04-01 12:30:04] Ollama: True | Gemini: False
+[2026-04-01 12:30:04] Work queue: 0 | Task queue: 0
+[2026-04-01 12:30:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 12:30:04] Dispatched: 0 tasks
+[2026-04-01 12:30:04] Supervisor check complete
+[Wed 04/01/2026 12:30:04.65] Done 
+[Wed 04/01/2026 13:00:01.57] Supervisor check starting 
+[2026-04-01 13:00:01] Supervisor check starting
+[2026-04-01 13:00:04] Ollama: True | Gemini: False
+[2026-04-01 13:00:04] Work queue: 0 | Task queue: 0
+[2026-04-01 13:00:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 13:00:04] Dispatched: 0 tasks
+[2026-04-01 13:00:04] Supervisor check complete
+[Wed 04/01/2026 13:00:04.62] Done 
+[Wed 04/01/2026 13:30:01.73] Supervisor check starting 
+[2026-04-01 13:30:02] Supervisor check starting
+[2026-04-01 13:30:05] Ollama: True | Gemini: False
+[2026-04-01 13:30:05] Work queue: 0 | Task queue: 0
+[2026-04-01 13:30:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 13:30:05] Dispatched: 0 tasks
+[2026-04-01 13:30:05] Supervisor check complete
+[Wed 04/01/2026 13:30:05.45] Done 
+[Wed 04/01/2026 14:00:01.77] Supervisor check starting 
+[2026-04-01 14:00:02] Supervisor check starting
+[2026-04-01 14:00:05] Ollama: True | Gemini: False
+[2026-04-01 14:00:05] Work queue: 0 | Task queue: 0
+[2026-04-01 14:00:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 14:00:05] Dispatched: 0 tasks
+[2026-04-01 14:00:05] Supervisor check complete
+[Wed 04/01/2026 14:00:05.48] Done 
+[Wed 04/01/2026 14:30:01.72] Supervisor check starting 
+[2026-04-01 14:30:02] Supervisor check starting
+[2026-04-01 14:30:05] Ollama: True | Gemini: False
+[2026-04-01 14:30:05] Work queue: 0 | Task queue: 0
+[2026-04-01 14:30:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 14:30:05] Dispatched: 0 tasks
+[2026-04-01 14:30:05] Supervisor check complete
+[Wed 04/01/2026 14:30:05.33] Done 
+[Wed 04/01/2026 15:00:01.84] Supervisor check starting 
+[2026-04-01 15:00:02] Supervisor check starting
+[2026-04-01 15:00:05] Ollama: True | Gemini: False
+[2026-04-01 15:00:05] Work queue: 0 | Task queue: 0
+[2026-04-01 15:00:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 15:00:05] Dispatched: 0 tasks
+[2026-04-01 15:00:05] Supervisor check complete
+[Wed 04/01/2026 15:00:05.34] Done 
+[Wed 04/01/2026 15:30:01.63] Supervisor check starting 
+[2026-04-01 15:30:02] Supervisor check starting
+[2026-04-01 15:30:05] Ollama: True | Gemini: False
+[2026-04-01 15:30:05] Work queue: 0 | Task queue: 0
+[2026-04-01 15:30:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 15:30:05] Dispatched: 0 tasks
+[2026-04-01 15:30:05] Supervisor check complete
+[Wed 04/01/2026 15:30:05.33] Done 
+[Wed 04/01/2026 16:00:01.82] Supervisor check starting 
+[2026-04-01 16:00:02] Supervisor check starting
+[2026-04-01 16:00:05] Ollama: True | Gemini: False
+[2026-04-01 16:00:05] Work queue: 0 | Task queue: 0
+[2026-04-01 16:00:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 16:00:05] Dispatched: 0 tasks
+[2026-04-01 16:00:05] Supervisor check complete
+[Wed 04/01/2026 16:00:05.69] Done 
+[Wed 04/01/2026 16:30:01.91] Supervisor check starting 
+[2026-04-01 16:30:03] Supervisor check starting
+[2026-04-01 16:30:06] Ollama: True | Gemini: False
+[2026-04-01 16:30:06] Work queue: 0 | Task queue: 0
+[2026-04-01 16:30:06] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 16:30:06] Dispatched: 0 tasks
+[2026-04-01 16:30:06] Supervisor check complete
+[Wed 04/01/2026 16:30:06.43] Done 
+[Wed 04/01/2026 17:00:01.64] Supervisor check starting 
+[2026-04-01 17:00:02] Supervisor check starting
+[2026-04-01 17:00:05] Ollama: True | Gemini: False
+[2026-04-01 17:00:05] Work queue: 0 | Task queue: 0
+[2026-04-01 17:00:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 17:00:05] Dispatched: 0 tasks
+[2026-04-01 17:00:05] Supervisor check complete
+[Wed 04/01/2026 17:00:05.58] Done 
+[Wed 04/01/2026 17:30:01.81] Supervisor check starting 
+[2026-04-01 17:30:02] Supervisor check starting
+[2026-04-01 17:30:05] Ollama: True | Gemini: False
+[2026-04-01 17:30:05] Work queue: 0 | Task queue: 0
+[2026-04-01 17:30:05] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 17:30:05] Dispatched: 0 tasks
+[2026-04-01 17:30:05] Supervisor check complete
+[Wed 04/01/2026 17:30:05.33] Done 
+[Wed 04/01/2026 18:00:01.72] Supervisor check starting 
+[2026-04-01 18:00:02] Supervisor check starting
+[2026-04-01 18:00:04] Ollama: True | Gemini: False
+[2026-04-01 18:00:04] Work queue: 0 | Task queue: 0
+[2026-04-01 18:00:04] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, janitor, model-validator, nightly-rollup, supervisor, vector-reindex
+[2026-04-01 18:00:04] Dispatched: 0 tasks
+[2026-04-01 18:00:05] Supervisor check complete
+[Wed 04/01/2026 18:00:05.11] Done 

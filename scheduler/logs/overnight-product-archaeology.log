@@ -211,3 +211,19 @@ Done.
 [Wed 04/01/2026  2:00:51.40] Done 
 [Wed 04/01/2026  8:59:21.89] Product Archaeology starting 
 [Wed 04/01/2026  9:00:35.46] Product Archaeology starting 
+[2026-04-01 09:00:36] Product Archaeology starting
+[2026-04-01 09:00:37] KilledByGoogle: 0 products
+[2026-04-01 09:00:38] r/shutdownsaddened: 0 posts
+[2026-04-01 09:00:41] r/discontinued: 50 posts
+[2026-04-01 09:00:45] r/DeadApps: 0 posts
+[2026-04-01 09:00:49] Wayback Kickstarter: -1 results
+[2026-04-01 09:00:50] New items found: 0 | Total: 434
+[2026-04-01 09:00:50] Saved to product-archaeology-results.json
+[2026-04-01 09:00:50] Scoring top 20 via Gemini...
+[2026-04-01 09:00:50]   SCORE ERROR: Chromecast — HTTP Error 404: Not Found
+[2026-04-01 09:00:52]   SCORE ERROR: VPN by Google One — HTTP Error 404: Not Found
+[2026-04-01 09:00:53]   SCORE ERROR: YouTube Stories — HTTP Error 404: Not Found
+[2026-04-01 09:00:53]   CIRCUIT BREAKER: 3 consecutive failures — aborting score pass to avoid API waste
+[2026-04-01 09:00:53] Scored 0 items — saved to product-archaeology-scored.json
+[2026-04-01 09:00:53] Product Archaeology complete
+[Wed 04/01/2026  9:00:53.46] Done 

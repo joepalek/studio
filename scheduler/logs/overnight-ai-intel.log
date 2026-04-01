@@ -92,3 +92,33 @@ DONE. 1 HIGH / 77 WORTH / 173 LOGGED
 YouTube videos surfaced: 10
 [Wed 04/01/2026  8:59:41.40] Done 
 [Wed 04/01/2026  9:00:33.93] AI Intel starting 
+Fetching YouTube...
+  YouTube: OK - 72 AI videos
+Fetching Reddit...
+  r/artificial: OK (21 items)
+  r/MachineLearning: OK (8 items)
+  r/ChatGPT: OK (22 items)
+  r/ClaudeAI: OK (23 items)
+  r/LocalLLaMA: OK (24 items)
+Fetching HackerNews...
+  HackerNews: OK - 46 AI items
+Fetching Anthropic news...
+  Anthropic news: OK - 13 articles
+Fetching OpenAI RSS...
+  OpenAI RSS: OK - 30 items
+Fetching GitHub Trending...
+  GitHub Trending: OK - 6 AI repos
+Fetching arXiv...
+  arXiv: OK - 28 papers
+
+Raw: 293 items from 11/11 sources
+After dedup: 290 unique items
+Tiers: 2 HIGH / 94 WORTH / 194 LOGGED
+YouTube in digest: 28
+Written: ai-intel-daily.json
+Written: ai-intel-summary.txt
+Supervisor inbox updated.
+
+DONE. 2 HIGH / 94 WORTH / 194 LOGGED
+YouTube videos surfaced: 28
+[Wed 04/01/2026  9:00:55.78] Done 

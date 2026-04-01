@@ -48,9 +48,14 @@ mob   = load_json('mobile-inbox.json', [])
 wb    = load_json('whiteboard.json', {'items':[]})
 al    = load_json('asset-log.json', {'assets':[]})
 svc   = load_json('ai-services-rankings.json', {'categories':{}})
+reg   = load_json('model-registry.json', {})
 try:
     intel = open(STUDIO+'/ai-intel-summary.txt', encoding='utf-8', errors='replace').read()[:800]
 except: intel = ''
+
+try:
+    briefing = open(STUDIO+'/STUDIO_BRIEFING.md', encoding='utf-8', errors='replace').read()[:3000]
+except: briefing = ''
 
 digest_data = load_json('daily-digest.json', {})
 digests     = digest_data.get('digests', [])
@@ -74,16 +79,39 @@ wb_items  = wb.get('items',[])
 wb_scored = sorted([i for i in wb_items if i.get('gemini_score')], key=lambda x: x.get('gemini_score',{}).get('total_score',0), reverse=True)
 wb_top    = [sanitize({'title':i.get('title','')[:60],'description':(i.get('description','') or '')[:60],'score':i.get('gemini_score',{}).get('total_score',0),'action':i.get('gemini_score',{}).get('recommended_action','')}) for i in wb_scored[:10]]
 
+# Build compact model registry summary for sidebar
+registry_summary = {}
+for prov_key, prov in reg.get('providers', {}).items():
+    models_active = [
+        {'id': mk, 'display': mv.get('display', mk),
+         'tier': mv.get('tier','?'), 'free_limits': mv.get('free_limits',''),
+         'studio_use': mv.get('studio_use','')[:60],
+         'status': mv.get('status','active')}
+        for mk, mv in prov.get('models', {}).items()
+        if 'active' in mv.get('status','active')
+    ]
+    if models_active:
+        registry_summary[prov_key] = {
+            'name': prov.get('name', prov_key),
+            'url': prov.get('url',''),
+            'studio_connected': prov.get('studio_connected', False),
+            'free_tier': prov.get('free_tier', False),
+            'models': models_active
+        }
+
 now_iso     = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
 today       = datetime.now().strftime('%Y-%m-%d')
 intel_clean = intel.encode('ascii','replace').decode('ascii').replace('\\','\\\\').replace('`',"'")
+briefing_clean = briefing.encode('ascii','replace').decode('ascii').replace('\\','\\\\').replace('`',"'").replace('</script>','<\\/script>')
 data = json.dumps({
     'generated': now_iso, 'inbox': inbox, 'whiteboard': wb_top,
     'assets': sanitize(al.get('assets',[])),
-    'services': sanitize(svc.get('categories',{})),
-    'servicesDate': svc.get('date', today),
+    'services': sanitize(svc.get('categories',{})),    'servicesDate': svc.get('date', today),
     'intelSummary': intel_clean,
-    'lastDigest': sanitize(last_digest) if last_digest else None
+    'studioBriefing': briefing_clean,
+    'lastDigest': sanitize(last_digest) if last_digest else None,
+    'modelRegistry': sanitize(registry_summary),
+    'modelRegistryDate': reg.get('last_updated', today)
 }, ensure_ascii=True)
 
 # ── 4. Build the injected blocks ──────────────────────────────────────────

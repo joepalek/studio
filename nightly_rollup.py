@@ -21,7 +21,19 @@ STATUS_PATH    = os.path.join(STUDIO, "claude-status.txt")
 HANDOFF_PATH   = os.path.join(STUDIO, "session-handoff.md")
 LOG_PATH       = os.path.join(STUDIO, "scheduler/logs/nightly-rollup.log")
 
-EXPECTED_AGENTS = ["supervisor", "nightly-rollup"]  # Only agents that reliably check in nightly; others are weekly/manual
+EXPECTED_AGENTS = [
+    "nightly-rollup",
+    "supervisor",
+    "vector-reindex",
+    "janitor",
+    "whiteboard-scorer",
+    "ai-intel",
+    "agency-build",
+    "vintage-agent",
+    "product-archaeology",
+    "git-commit",
+    "check-drift",
+]  # All agents that write heartbeat entries nightly
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -316,6 +328,26 @@ def main():
     # Step 8 — update handoff
     update_handoff(date_str, status, score)
     log("session-handoff.md updated")
+
+    # Step 8b — update STUDIO_BRIEFING.md timestamp and health line
+    try:
+        briefing_path = os.path.join(STUDIO, "STUDIO_BRIEFING.md")
+        if os.path.exists(briefing_path):
+            import re as _re
+            content = open(briefing_path, encoding="utf-8", errors="replace").read()
+            # Update the date line at top
+            content = _re.sub(
+                r"\*Updated: [\d-]+ \|",
+                f"*Updated: {date_str} |",
+                content
+            )
+            # Update system health line if present
+            health_line = f"**System Health:** {status} {score}/100 (as of {date_str})"
+            if "**System Health:**" in content:
+                content = _re.sub(r"\*\*System Health:\*\*.*", health_line, content)
+            open(briefing_path, "w", encoding="utf-8").write(content)
+    except Exception as e:
+        log(f"WARNING: could not update STUDIO_BRIEFING.md: {e}")
 
     # Step 9 — audit log entry
     sys.path.insert(0, os.path.join(STUDIO, "utilities"))

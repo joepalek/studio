@@ -117,5 +117,12 @@ def main():
 
     log("Vintage Agent complete: " + str(filled) + " filled, " + str(skipped) + " already complete")
 
+    # Heartbeat
+    import sys as _sys; _sys.path.insert(0, STUDIO)
+    try:
+        from utilities.heartbeat import write as hb_write
+        hb_write('vintage-agent', 'clean', 'filled=' + str(filled) + ' skipped=' + str(skipped))
+    except Exception as e: log('[heartbeat] ' + str(e)[:60])
+
 if __name__ == "__main__":
     main()

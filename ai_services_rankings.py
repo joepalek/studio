@@ -1,5 +1,6 @@
 # ai_services_rankings.py
-# Scrapes and scores AI services daily by category.
+# Generates ai-services-rankings.json from model-registry.json (source of truth).
+# Falls back to static list if registry unavailable.
 # Output: ai-services-rankings.json in _studio
 # Schedule: daily 05:30 AM via Task Scheduler \Studio\AIServicesRankings
 
@@ -8,6 +9,7 @@ from datetime import datetime, timezone
 
 STUDIO = "G:/My Drive/Projects/_studio"
 OUT_FILE = STUDIO + "/ai-services-rankings.json"
+REGISTRY_FILE = STUDIO + "/model-registry.json"
 now = datetime.now(timezone.utc)
 now_iso = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 today = now.strftime("%Y-%m-%d")
@@ -17,60 +19,123 @@ def fetch(url, timeout=15):
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode("utf-8", errors="replace")
 
-# Static curated base — updated by scraper with recency/buzz signals
-SERVICES = {
-    "chat": [
-        {"name":"Claude Sonnet 4.6","provider":"Anthropic","url":"https://anthropic.com","tier":"paid","notes":"Best for reasoning/coding/agents"},
-        {"name":"GPT-4o","provider":"OpenAI","url":"https://openai.com","tier":"paid","notes":"Strong general purpose"},
-        {"name":"Gemini 1.5 Pro","provider":"Google","url":"https://aistudio.google.com","tier":"free+paid","notes":"Large context, free tier available"},
-        {"name":"Claude Haiku 4.5","provider":"Anthropic","url":"https://anthropic.com","tier":"paid","notes":"Fast + cheap, good for batch"},
-        {"name":"Gemini Flash","provider":"Google","url":"https://aistudio.google.com","tier":"free","notes":"Best free-tier speed"},
-        {"name":"Llama 3.2","provider":"Meta/Ollama","url":"https://ollama.com","tier":"free","notes":"Local, no API cost"},
-        {"name":"Mistral Small","provider":"Mistral","url":"https://mistral.ai","tier":"free+paid","notes":"Good free tier via OpenRouter"},
-        {"name":"DeepSeek R1","provider":"DeepSeek","url":"https://deepseek.com","tier":"free","notes":"Strong reasoning, free via OpenRouter"},
-    ],
-    "image_gen": [
-        {"name":"Midjourney v6","provider":"Midjourney","url":"https://midjourney.com","tier":"paid","notes":"Best quality, no free tier"},
-        {"name":"DALL-E 3","provider":"OpenAI","url":"https://openai.com","tier":"paid","notes":"Good prompt adherence"},
-        {"name":"Stable Diffusion (local)","provider":"Stability AI","url":"https://stability.ai","tier":"free","notes":"Free local via ComfyUI/A1111. RTX 3060 threshold."},
-        {"name":"Ideogram 2","provider":"Ideogram","url":"https://ideogram.ai","tier":"free+paid","notes":"Best text-in-image. Free tier available."},
-        {"name":"Flux 1.1 Pro","provider":"Black Forest Labs","url":"https://replicate.com","tier":"paid","notes":"Top open model quality"},
-        {"name":"Playground v3","provider":"Playground","url":"https://playground.com","tier":"free+paid","notes":"Free tier, strong aesthetic quality"},
-    ],
-    "video_gen": [
-        {"name":"Sora","provider":"OpenAI","url":"https://openai.com","tier":"paid","notes":"Best coherence, limited access"},
-        {"name":"Runway Gen-3","provider":"Runway","url":"https://runwayml.com","tier":"paid","notes":"Best for creative control"},
-        {"name":"Kling 1.6","provider":"Kuaishou","url":"https://klingai.com","tier":"free+paid","notes":"Strong motion quality, free tier"},
-        {"name":"Higgsfield","provider":"Higgsfield","url":"https://higgsfield.ai","tier":"free+paid","notes":"Character-consistent video. Studio distribution target."},
-        {"name":"Hailuo MiniMax","provider":"MiniMax","url":"https://hailuoai.com","tier":"free","notes":"Generous free tier"},
-        {"name":"Veo 2","provider":"Google","url":"https://deepmind.google","tier":"paid","notes":"High quality, limited access"},
-    ],
-    "code": [
-        {"name":"Claude Code","provider":"Anthropic","url":"https://anthropic.com","tier":"paid","notes":"Best agentic coding. Primary studio tool."},
-        {"name":"GitHub Copilot","provider":"Microsoft","url":"https://github.com/copilot","tier":"paid","notes":"Best IDE integration"},
-        {"name":"Cursor","provider":"Cursor","url":"https://cursor.sh","tier":"free+paid","notes":"Strong Claude/GPT integration"},
-        {"name":"Gemini Code Assist","provider":"Google","url":"https://cloud.google.com","tier":"free+paid","notes":"Free tier via IDX"},
-        {"name":"Codeium","provider":"Codeium","url":"https://codeium.com","tier":"free","notes":"Best free autocomplete"},
-    ],
-    "embedding": [
-        {"name":"text-embedding-3-small","provider":"OpenAI","url":"https://openai.com","tier":"paid","notes":"Cheap, good quality"},
-        {"name":"Gemini Embedding","provider":"Google","url":"https://aistudio.google.com","tier":"free","notes":"Free tier available"},
-        {"name":"nomic-embed-text","provider":"Nomic/Ollama","url":"https://ollama.com","tier":"free","notes":"Best free local embedding. Studio default (ChromaDB)."},
-        {"name":"mxbai-embed-large","provider":"MixedBread/Ollama","url":"https://ollama.com","tier":"free","notes":"Strong local option"},
-    ],
-    "voice": [
-        {"name":"ElevenLabs","provider":"ElevenLabs","url":"https://elevenlabs.io","tier":"free+paid","notes":"Best voice cloning quality"},
-        {"name":"OpenAI TTS","provider":"OpenAI","url":"https://openai.com","tier":"paid","notes":"Fast, natural, cheap per char"},
-        {"name":"Google TTS","provider":"Google","url":"https://cloud.google.com","tier":"free+paid","notes":"WaveNet quality, free tier"},
-        {"name":"Whisper (local)","provider":"OpenAI/Local","url":"https://github.com/openai/whisper","tier":"free","notes":"Best free local STT"},
-    ],
-    "search": [
-        {"name":"Tavily","provider":"Tavily","url":"https://tavily.com","tier":"free+paid","notes":"Best AI-optimized search API. Studio connected."},
-        {"name":"Perplexity API","provider":"Perplexity","url":"https://perplexity.ai","tier":"paid","notes":"Good for research tasks"},
-        {"name":"SerpAPI","provider":"SerpAPI","url":"https://serpapi.com","tier":"free+paid","notes":"Google results scraping"},
-        {"name":"DuckDuckGo (free)","provider":"DDG","url":"https://duckduckgo.com","tier":"free","notes":"No key needed, rate limited"},
-    ]
-}
+# ── Build categories from model-registry.json ──────────────────────────────
+def _build_search(registry):
+    search_section = registry.get("search", {})
+    result = []
+    for key, svc in search_section.items():
+        if key.startswith("_") or not isinstance(svc, dict):
+            continue
+        result.append({
+            "name": svc.get("name", key),
+            "provider": svc.get("name", key),
+            "url": svc.get("url", ""),
+            "tier": "free" if svc.get("free_tier") else "paid",
+            "free_tier": svc.get("free_tier", False),
+            "notes": svc.get("studio_use", "")[:100],
+            "free_limits": svc.get("free_limits", ""),
+            "studio_connected": svc.get("studio_connected", False),
+            "api_available": svc.get("api_available", False),
+        })
+    return result
+
+def build_from_registry():
+    registry = json.load(open(REGISTRY_FILE, encoding="utf-8", errors="replace"))
+    providers = registry.get("providers", {})
+    image_gen = registry.get("image_generation", {})
+    video_gen = registry.get("video_generation", {})
+
+    chat = []
+    code = []
+    embedding = []
+    voice = []
+
+    for prov_key, prov in providers.items():
+        prov_name = prov.get("name", prov_key)
+        prov_url  = prov.get("url", "")
+        studio_connected = prov.get("studio_connected", False)
+        for model_key, model in prov.get("models", {}).items():
+            tier = model.get("tier", "paid")
+            if "local" in tier:
+                tier = "free"
+            display = model.get("display", model_key)
+            notes = model.get("studio_use", model.get("notes", ""))
+            if model.get("status","").startswith("active"):
+                best = model.get("best_for", [])
+                entry = {
+                    "name": display,
+                    "provider": prov_name,
+                    "url": prov_url,
+                    "tier": tier,
+                    "notes": notes[:100],
+                    "model_id": model_key,
+                    "studio_connected": studio_connected,
+                    "free_limits": model.get("free_limits", ""),
+                    "context_window": str(model.get("context_window", "")),
+                }
+                # Route to correct category
+                if any(k in best for k in ["embeddings", "semantic search"]):
+                    embedding.append(entry)
+                elif any(k in best for k in ["code generation", "code review", "coding"]):
+                    code.append(entry)
+                elif "speech" in " ".join(best) or "transcription" in " ".join(best):
+                    voice.append(entry)
+                elif model.get("status") not in ["active_legacy", "active_but_superseded", "leaked_codename_in_development", "just_released"]:
+                    chat.append(entry)
+
+    # Image gen from registry
+    img = []
+    for key, svc in image_gen.items():
+        if key.startswith('_') or not isinstance(svc, dict):
+            continue
+        img.append({
+            "name": svc.get("name", key),
+            "provider": svc.get("name", key),
+            "url": svc.get("url", ""),
+            "tier": "free" if svc.get("free_tier") else "paid",
+            "notes": svc.get("studio_use", ""),
+            "free_limits": svc.get("free_limits", ""),
+            "api_available": svc.get("api_available", False),
+        })
+
+    # Video gen from registry
+    vid = []
+    for key, svc in video_gen.items():
+        if key.startswith('_') or not isinstance(svc, dict):
+            continue
+        vid.append({
+            "name": svc.get("name", key),
+            "provider": svc.get("name", key),
+            "url": svc.get("url", ""),
+            "tier": "free" if svc.get("free_tier") else "paid",
+            "notes": svc.get("studio_use", ""),
+        })
+
+    return {"chat": chat, "image_gen": img, "video_gen": vid,
+            "code": code, "embedding": embedding, "voice": voice,
+            "search": _build_search(registry)}
+
+try:
+    SERVICES = build_from_registry()
+    print("Built from model-registry.json: " +
+          str(sum(len(v) for v in SERVICES.values())) + " total models")
+except Exception as e:
+    print("Registry load failed (" + str(e)[:60] + ") — using static fallback")
+    SERVICES = {
+        "chat": [
+            {"name":"Claude Sonnet 4.6","provider":"Anthropic","url":"https://anthropic.com","tier":"paid","notes":"Primary reasoning engine"},
+            {"name":"Gemini 2.5 Flash","provider":"Google","url":"https://aistudio.google.com","tier":"free","notes":"Primary free workhorse — 1500 RPD"},
+            {"name":"Groq Llama 3.3 70B","provider":"Groq","url":"https://console.groq.com","tier":"free","notes":"Fastest free inference — 14400 RPD"},
+            {"name":"Mistral Large","provider":"Mistral","url":"https://console.mistral.ai","tier":"free","notes":"1B tokens/month free"},
+            {"name":"Cerebras Qwen3 235B","provider":"Cerebras","url":"https://cloud.cerebras.ai","tier":"free","notes":"1M tokens/day free"},
+            {"name":"gemma3:4b","provider":"Ollama/Local","url":"http://localhost:11434","tier":"free","notes":"Local — zero API cost"},
+        ],
+        "image_gen": [],
+        "video_gen": [],
+        "code": [],
+        "embedding": [],
+        "voice": [],
+    }
 
 # Try to fetch recency signals from a few public sources
 # to flag newly trending or newly released services

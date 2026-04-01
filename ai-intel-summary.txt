@@ -1,27 +1,28 @@
 AI INTEL - 2026-04-01
-Generated: 2026-04-01T13:59:22Z
-Sources: 11/11 OK | 1 HIGH / 77 WORTH / 173 LOGGED | YouTube: 10 videos surfaced
+Generated: 2026-04-01T14:00:34Z
+Sources: 11/11 OK | 2 HIGH / 94 WORTH / 194 LOGGED | YouTube: 28 videos surfaced
 
-HIGH PRIORITY (1):
+HIGH PRIORITY (2):
+  * any way to access Claude Pro for broke student? | score:28 | https://reddit.com/r/ClaudeAI/comments/1s9ldr8/any_way_to_access_claude_pro_for_broke_student/
   * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 
-WORTH READING (77):
+WORTH READING (94):
   * Best AI Tools for Content Creation 2026 (DeevidAi review) | score:20 | https://www.youtube.com/watch?v=7FzrS_1acCI
   * Claude Code was just leaked... (WOAH) | score:22 | https://www.youtube.com/watch?v=dYG8JxtSgmM
-  * Claude Code’s source code just got leaked. #claude #anthropic #ai #artificialintelligence  | score:24 | https://www.youtube.com/watch?v=Ajavw0yqhJ4
   * NEW Claude Mythos and ChatGPT Updates! | score:25 | https://www.youtube.com/watch?v=cGinWSKfpo4
+  * OpenAI COO Brad Lightcap on the Future of AI | Ep. 46 | score:21 | https://www.youtube.com/watch?v=HC0QkUNXNtg
   * KI-SCHOCK IN EUROPA: EU-Verbot für US-KI-Tools (ChatGPT, Gemini, Claude) | KI-News der Woc | score:22 | https://www.youtube.com/watch?v=vKwzdZ1IVn0
-  * The AI workflow that replaces your to do list! #ai #futureofwork | score:22 | https://www.youtube.com/watch?v=hFRQb2e5cJs
-  * Claude Code Source Code Just Leaked… 8 Things You Must Do | score:24 | https://www.youtube.com/watch?v=tXtCK66fPj8
-  * Wow! This New 2026 AI Automation workflow Makes Videos faster | Quit Your 9-5 Today!! | score:22 | https://www.youtube.com/watch?v=4xXlQx4fY5U
-  * AI Model News: Claude Mythos, Veo 3.1 Lite &amp; OpenAI&#39;s Next Model | score:24 | https://www.youtube.com/watch?v=T3BHY_Odsnw
-  * How to Install &amp; Run Latest Deepseek on Ollama [ 2026 Update ] Deepseek AI Model Local | score:25 | https://www.youtube.com/watch?v=UXSqzuPBxa0
+  * The Guy Who Built ChatGPT&#39;s Brain Left and Made a Competitor | score:21 | https://www.youtube.com/watch?v=sM_hbbND8G0
+  * OpenAI Patches Security Flaws; Customization Shift [Model Behavior] | score:23 | https://www.youtube.com/watch?v=xld92fv9Duw
+  * Is OpenAI actually worth the cost, or are you just renting intelligence? | score:22 | https://www.youtube.com/watch?v=suCeT4hlC2I
+  * OpenAI Built a Plugin for Claude Code: The Complete Breakdown | score:25 | https://www.youtube.com/watch?v=cD-Ve-Z0eDA
+  * Anthropic&#39;s Mythos Model Leaked — This Changes Everything | score:25 | https://www.youtube.com/watch?v=hUWJQyEKFDM
 
 YOUTUBE PICKS:
   * Best AI Tools for Content Creation 2026 (DeevidAi review) [Future AI] | https://www.youtube.com/watch?v=7FzrS_1acCI
   * Claude Code was just leaked... (WOAH) [Matthew Berman] | https://www.youtube.com/watch?v=dYG8JxtSgmM
-  * Claude Code’s source code just got leaked. #claude #anthropic #ai #artificialint [Redpanda Data] | https://www.youtube.com/watch?v=Ajavw0yqhJ4
   * NEW Claude Mythos and ChatGPT Updates! [Julian Goldie SEO] | https://www.youtube.com/watch?v=cGinWSKfpo4
+  * OpenAI COO Brad Lightcap on the Future of AI | Ep. 46 [Uncapped with Jack Altman] | https://www.youtube.com/watch?v=HC0QkUNXNtg
   * KI-SCHOCK IN EUROPA: EU-Verbot für US-KI-Tools (ChatGPT, Gemini, Claude) | KI-Ne [Digitale Profis] | https://www.youtube.com/watch?v=vKwzdZ1IVn0
 
 DEPENDENCY FLAGS: none

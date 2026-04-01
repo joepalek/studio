@@ -1,0 +1,80 @@
+{
+  "task_id": "LINKED_FINISH_006_SECTIONS",
+  "asset": "LINKED",
+  "status": "BLOCKED_AWAITING_API_RECOVERY",
+  "created_at": "2026-04-01T13:00:38.973468",
+  "priority": "HIGH",
+  "description": "Finish 6 missing sections (Ch 5 Sec 4, Ch 6 Sec 2/4, Ch 7 Sec 2, Ch 8 Sec 1/2)",
+  "current_state": {
+    "total_words": 25810,
+    "chapters_complete": 8,
+    "sections_complete": 26,
+    "sections_missing": 6,
+    "status_pct": 81
+  },
+  "blockers": {
+    "claude": {
+      "status": "OUT_OF_CREDITS",
+      "action": "Check billing/refill"
+    },
+    "groq": {
+      "status": "RATE_LIMITED",
+      "reset_eta": "2026-04-01T14:50:00Z"
+    },
+    "gemini": {
+      "status": "MODEL_DEPRECATED",
+      "action": "Update config to gemini-2.0-flash"
+    },
+    "mistral": {
+      "status": "TIMEOUT",
+      "action": "Retry later"
+    }
+  },
+  "retry_strategy": {
+    "primary": "Groq (retry at 2:00 PM)",
+    "fallback_1": "Gemini (after config update)",
+    "fallback_2": "OpenRouter (if available)",
+    "fallback_3": "Manual human completion"
+  },
+  "missing_sections": [
+    {
+      "ch": 5,
+      "sec": 4,
+      "title": "The Cost of Cascades"
+    },
+    {
+      "ch": 6,
+      "sec": 2,
+      "title": "Winner-Take-All Markets"
+    },
+    {
+      "ch": 6,
+      "sec": 4,
+      "title": "The Cost of Concentration"
+    },
+    {
+      "ch": 7,
+      "sec": 2,
+      "title": "Disease as Network Contagion"
+    },
+    {
+      "ch": 8,
+      "sec": 1,
+      "title": "Networks and Artificial Intelligence"
+    },
+    {
+      "ch": 8,
+      "sec": 2,
+      "title": "Quantum Networks and Future Cryptography"
+    }
+  ],
+  "next_action": {
+    "time": "2026-04-01T14:50:00Z",
+    "action": "Retry Groq API (should be rate-limit reset)",
+    "if_succeeds": "Finish all 6 sections, mark task COMPLETE",
+    "if_fails": "Escalate to Supervisor for fallback options"
+  },
+  "owner": "CX_AGENT_AUTO",
+  "escalation_contact": "Supervisor (if all retries fail)",
+  "human_checkpoint": "User inbox notification when task completes or escalates"
+}

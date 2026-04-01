@@ -43,22 +43,34 @@ def save_json(path, data):
 
 def check_ollama():
     try:
-        r = urllib.request.urlopen("http://localhost:11434/api/tags", timeout=3)
+        urllib.request.urlopen("http://localhost:11434/api/tags", timeout=3)
         return True
     except:
         return False
 
-def check_gemini(key):
-    if not key: return False
+def get_provider_status():
+    """Read provider-health.json for full multi-provider availability."""
+    health_path = STUDIO + "/provider-health.json"
+    if not os.path.exists(health_path):
+        # Fall back to manual checks
+        ollama_up = check_ollama()
+        return {}, (["ollama"] if ollama_up else []), []
     try:
-        payload = json.dumps({"contents":[{"parts":[{"text":"ping"}]}]}).encode()
-        url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key=" + key
-        r = urllib.request.urlopen(
-            urllib.request.Request(url, data=payload, headers={"Content-Type":"application/json"}),
-            timeout=5)
-        return r.status == 200
+        health = json.load(open(health_path, encoding="utf-8", errors="replace"))
+        available, degraded = [], []
+        for key, info in health.items():
+            status = info.get("status", "unknown")
+            provider = key.split("/")[0]
+            if status == "ok":
+                if provider not in available: available.append(provider)
+            elif status in ("degraded", "defunct"):
+                degraded.append(key + " (" + status + ")")
+        # Always check Ollama directly — it's local and not in health.json
+        if check_ollama() and "ollama" not in available:
+            available.append("ollama")
+        return health, available, degraded
     except:
-        return False
+        return {}, [], []
 
 def get_work_queue():
     """Read orchestrator-plan.json for agent-runnable tasks."""
@@ -195,22 +207,27 @@ def update_efficiency_ledger(dispatched):
 def main():
     log("Supervisor check starting")
     cfg = load_json(CONFIG, {})
-    gemini_key = cfg.get("gemini_api_key", "")
     rankings = load_json(RANKINGS, {})
 
-    # Status checks
-    ollama_up   = check_ollama()
-    gemini_ok   = check_gemini(gemini_key)
-    work_queue  = get_work_queue()
-    queued_tasks= get_queued_tasks()
-    active      = check_recent_agents()
+    # Provider status — full gateway health check
+    health, available_providers, degraded = get_provider_status()
+    ollama_up  = "ollama" in available_providers
+    gemini_ok  = "gemini" in available_providers
+    best_free  = available_providers[0] if available_providers else "none"
 
-    log("Ollama: " + str(ollama_up) + " | Gemini: " + str(gemini_ok))
+    log("Providers available (" + str(len(available_providers)) + "): " + ", ".join(available_providers[:6]))
+    if degraded: log("Degraded: " + ", ".join(degraded[:3]))
+
+    work_queue   = get_work_queue()
+    queued_tasks = get_queued_tasks()
+    active       = check_recent_agents()
+
     log("Work queue: " + str(len(work_queue)) + " | Task queue: " + str(len(queued_tasks)))
-    log("Active agents (25h): " + ", ".join(active) if active else "Active agents: none")
+    log("Active agents (25h): " + (", ".join(active) if active else "none"))
 
-    # Dispatch
-    dispatched, free_models = dispatch_free_tier(work_queue, queued_tasks, ollama_up, gemini_ok, rankings)
+    # Dispatch — use best available free provider
+    dispatched, free_models = dispatch_free_tier(
+        work_queue, queued_tasks, ollama_up, gemini_ok, rankings)
     log("Dispatched: " + str(len(dispatched)) + " tasks")
     for d in dispatched:
         log("  [" + d["tier"] + "] " + d["agent"] + ": " + d["task"][:60])
@@ -220,6 +237,9 @@ def main():
         "time": datetime.now().isoformat(),
         "ollama_up": ollama_up,
         "gemini_available": gemini_ok,
+        "providers_available": available_providers,
+        "providers_degraded": degraded,
+        "best_free_provider": best_free,
         "free_models": free_models,
         "agents_recently_active": active,
         "work_queue_depth": len(work_queue) + len(queued_tasks),

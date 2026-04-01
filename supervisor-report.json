@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-01T09:00:37.417753",
+  "time": "2026-04-01T18:00:04.879372",
   "ollama_up": true,
   "gemini_available": false,
   "free_models": [],
@@ -9,6 +9,7 @@
     "auto-answer-gemini",
     "check-drift",
     "janitor",
+    "model-validator",
     "nightly-rollup",
     "supervisor",
     "vector-reindex"

@@ -1,19 +1,18 @@
 """
 product_archaeology_run.py
 Extracted from product-archaeology.md spec.
-Scans graveyard sources, scores via Gemini, saves to product-archaeology-results.json.
+Scans graveyard sources, scores via AI Gateway (free tier routing).
 Does NOT push to whiteboard.json or mobile-inbox.json.
 Output: product-archaeology-results.json (raw) + product-archaeology-scored.json (scored)
 """
-import urllib.request, urllib.parse, json, re, time, os
+import urllib.request, urllib.parse, json, re, time, os, sys
+sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from datetime import datetime
+from ai_gateway import score as gw_score
 
 STUDIO  = "G:/My Drive/Projects/_studio"
 OUTPUT  = STUDIO + "/product-archaeology-results.json"
 SCORED  = STUDIO + "/product-archaeology-scored.json"
-CONFIG  = json.load(open(STUDIO + "/studio-config.json", encoding="utf-8"))
-KEY     = CONFIG.get("gemini_api_key", "")
-GEMINI  = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key=" + KEY
 
 def log(msg):
     ts = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
@@ -87,7 +86,7 @@ def gather_graveyard():
 
 def score_items(results):
     scored = []
-    log("Scoring top 20 via Gemini...")
+    log("Scoring top 20 via AI Gateway (free tier with fallback)...")
     MAX_CONSECUTIVE_FAILURES = 3
     consecutive_failures = 0
     for item in results[:20]:
@@ -101,21 +100,31 @@ def score_items(results):
             '"build_effort":5,"revenue_potential":5,"total_score":5,'
             '"whiteboard_priority":"PUSH_UP/NEUTRAL/KILL"}'
         )
-        payload = json.dumps({"contents": [{"parts": [{"text": prompt}]}]}).encode()
         try:
-            r = urllib.request.urlopen(
-                urllib.request.Request(GEMINI, data=payload,
-                                       headers={"Content-Type": "application/json"}), timeout=15)
-            text = json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"].strip()
+            r = gw_score(prompt, max_tokens=200)
+            if not r.success:
+                raise Exception(r.error or "gateway returned no response")
+            # Robust JSON extraction — handles markdown fences, leading text, special chars
+            text = r.text
             text = text.replace("```json", "").replace("```", "").strip()
+            # Find the JSON object — extract from first { to last }
+            start = text.find("{")
+            end   = text.rfind("}")
+            if start >= 0 and end > start:
+                text = text[start:end+1]
+            # Replace smart quotes and common unicode issues
+            text = (text.replace("\u201c", '"').replace("\u201d", '"')
+                        .replace("\u2018", "'").replace("\u2019", "'")
+                        .replace("\u2013", "-").replace("\u2014", "-"))
             score = json.loads(text)
             item["score"] = score
             item["scored_at"] = datetime.now().isoformat()
+            item["scored_by"] = f"{r.provider}/{r.model}"
             priority = score.get("whiteboard_priority", "NEUTRAL")
             total    = score.get("total_score", "?")
-            log("  [" + priority + "] " + item["product_name"][:45] + ": " + str(total) + "/10")
+            log("  [" + priority + "] " + item["product_name"][:45] + ": " + str(total) + "/10 via " + r.provider)
             scored.append(item)
-            consecutive_failures = 0  # reset on success
+            consecutive_failures = 0
         except Exception as e:
             consecutive_failures += 1
             log("  SCORE ERROR: " + item["product_name"][:40] + " — " + str(e)[:50])
@@ -128,6 +137,10 @@ def score_items(results):
 
 def main():
     log("Product Archaeology starting")
+
+    # Determine mode: collection (runs anytime) vs scoring (only 6AM-11PM)
+    hour = datetime.now().hour
+    run_scoring = (6 <= hour <= 23)  # skip Gemini scoring overnight — unreliable 1AM-5AM
 
     # Load existing results (append-only)
     existing = []
@@ -150,21 +163,59 @@ def main():
               open(OUTPUT, "w", encoding="utf-8"), indent=2)
     log("Saved to product-archaeology-results.json")
 
-    # Score new items (top 20 unscored) — only after 7AM to avoid Gemini 2AM quota failures
+    # Score new items — only daytime (Gemini unreliable 1AM-5AM)
     unscored = [r for r in all_results if not r.get("score")][:20]
-    current_hour = datetime.now().hour
-    if unscored and KEY and current_hour >= 7:
-        scored = score_items(unscored)
-        json.dump({"count": len(scored), "updated": datetime.now().isoformat(),
-                   "results": scored},
+    if unscored and run_scoring:
+        scored_items = score_items(unscored)
+        json.dump({"count": len(scored_items), "updated": datetime.now().isoformat(),
+                   "results": scored_items},
                   open(SCORED, "w", encoding="utf-8"), indent=2)
-        log("Scored " + str(len(scored)) + " items — saved to product-archaeology-scored.json")
-    elif unscored and current_hour < 7:
-        log("Skipping score pass — hour " + str(current_hour) + " < 7 (Gemini unreliable at 2AM; scoring runs at 8AM)")
+        log("Scored " + str(len(scored_items)) + " items — saved to product-archaeology-scored.json")
+
+        # Auto-promote: items scored 7+ with PUSH_UP → whiteboard.json
+        promote = [r for r in scored_items
+                   if r.get("score",{}).get("total_score",0) >= 7
+                   and r.get("score",{}).get("whiteboard_priority") == "PUSH_UP"]
+        if promote:
+            wb_path = STUDIO + "/whiteboard.json"
+            try:
+                wb = json.load(open(wb_path, encoding="utf-8"))
+                existing_titles = {i.get("title","").lower() for i in wb.get("items",[])}
+                added_to_wb = 0
+                for r in promote:
+                    title = r.get("product_name","")
+                    if title.lower() not in existing_titles:
+                        wb["items"].append({
+                            "id": "pa-" + str(int(time.time())) + "-" + str(added_to_wb),
+                            "title": title,
+                            "description": r.get("description","")[:200],
+                            "type": "product_archaeology",
+                            "source": r.get("source",""),
+                            "why_failed": r.get("why_failed",""),
+                            "tags": ["product_archaeology"],
+                            "added_at": datetime.now().isoformat()
+                        })
+                        existing_titles.add(title.lower())
+                        added_to_wb += 1
+                if added_to_wb:
+                    json.dump(wb, open(wb_path, "w", encoding="utf-8"), indent=2)
+                    log("Promoted " + str(added_to_wb) + " items to whiteboard.json")
+            except Exception as e:
+                log("Whiteboard promote error: " + str(e)[:60])
+    elif unscored and not run_scoring:
+        log("Skipping score pass — hour " + str(hour) + " outside 6AM-11PM window")
     else:
-        log("Skipping score pass (no API key or nothing new to score)")
+        log("Nothing new to score")
 
     log("Product Archaeology complete")
+
+    # Heartbeat
+    import sys as _sys; _sys.path.insert(0, STUDIO)
+    try:
+        from utilities.heartbeat import write as hb_write
+        hb_write('product-archaeology', 'clean',
+                 'added=' + str(len(added)) + ' total=' + str(len(all_results)))
+    except Exception as e: log('[heartbeat] ' + str(e)[:60])
 
 if __name__ == "__main__":
     main()
