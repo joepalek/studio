@@ -110,6 +110,50 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 self.send_header("Content-Type", "application/json")
                 self.cors(); self.end_headers()
                 self.wfile.write(err)
+        elif self.path == "/answer":
+            # Write sidebar answers back to mobile-inbox.json
+            length = int(self.headers.get("Content-Length", 0))
+            payload = json.loads(self.rfile.read(length))
+            item_id = payload.get("id", "")
+            answer  = payload.get("answer", "")
+            if not item_id or not answer:
+                self.send_response(400); self.cors(); self.end_headers()
+                self.wfile.write(b'{"error":"missing id or answer"}'); return
+            try:
+                mob_path = STUDIO + "/mobile-inbox.json"
+                mob = json.load(open(mob_path, encoding="utf-8"))
+                updated = False
+                for item in mob:
+                    if item.get("id") == item_id:
+                        item["status"] = "answered"
+                        item["answer"] = answer
+                        item["answered_at"] = __import__("datetime").datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+                        item["answered_via"] = "sidebar"
+                        updated = True
+                        break
+                if updated:
+                    json.dump(mob, open(mob_path, "w", encoding="utf-8"), indent=2)
+                    body = json.dumps({"ok": True, "id": item_id}).encode()
+                else:
+                    # ID not found - still save to decision-log
+                    body = json.dumps({"ok": True, "id": item_id, "note": "id not in mob, logged only"}).encode()
+                # Append to decision-log.json
+                dl_path = STUDIO + "/decision-log.json"
+                try:
+                    dl = json.load(open(dl_path, encoding="utf-8")) if __import__("os").path.exists(dl_path) else []
+                    dl.append({"id": item_id, "answer": answer, "date": __import__("datetime").datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "sidebar"})
+                    json.dump(dl, open(dl_path, "w", encoding="utf-8"), indent=2)
+                except: pass
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.cors(); self.end_headers()
+                self.wfile.write(body)
+            except Exception as e:
+                err = json.dumps({"error": str(e)}).encode()
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.cors(); self.end_headers()
+                self.wfile.write(err)
         else:
             self.send_response(404); self.end_headers()
 
