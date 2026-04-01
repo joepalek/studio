@@ -2,6 +2,26 @@
 studio-config.json
 *.env
 .env.*
+ghostbooks_eval/anthropic_key.txt
+ebay-token-cache.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Large binaries
+*.exe
+*.bin
+*.sqlite3
+
+# Temp/scratch scripts
+find_tabs.py
+full_audit.py
+count_blocks.py
+find_brace.py
+check_firewall.ps1
+add_firewall_rule.ps1
 
 # Runtime state and reports
 janitor-report.json

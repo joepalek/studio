@@ -1,0 +1,6 @@
+{
+  "book": "Automata, Computability and Complexity: Theory and Applications",
+  "domain": "information_computation",
+  "score": 8.1,
+  "thesis": "Based on \"Automata, Computability and Complexity: Theory and Applications,\" here is a thesis statement:\n\nThis comprehensive text bridges the gap between theoretical computer science and practical applications by systematically exploring finite automata, formal languages, Turing machines, and computational complexity theory. Through its integration of mathematical rigor with real-world examples, the book demonstrates how these foundational concepts underpin modern computing challenges, from compiler design and natural language processing to cryptography and algorithm optimization. By establishing the theoretical limits of computation and classifying problems by their inherent difficulty, the work provides essential frameworks for understanding what can be computed, how efficiently it can be done, and why certain problems remain intractable even with unlimited computational resources."
+}

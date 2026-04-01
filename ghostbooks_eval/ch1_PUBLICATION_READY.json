@@ -1,0 +1,17 @@
+{
+  "chapter": 1,
+  "title": "The Hidden Architecture of Everything",
+  "status": "PUBLICATION_READY",
+  "completion": {
+    "introduction": "Complete - 300-400 words",
+    "section_1": "Complete - 800-1200 words (5955 chars)",
+    "section_2": "Complete - 800-1200 words (6921 chars)",
+    "section_3": "Complete - 800-1200 words (6498 chars)",
+    "section_4": "Complete - 800-1200 words (6234 chars)",
+    "section_5": "Complete - 800-1200 words (6528 chars)",
+    "conclusion": "Complete - 250-350 words"
+  },
+  "estimated_word_count": 6500,
+  "generated_at": "2026-03-31T21:31:04.407889",
+  "next_step": "Export to DOCX for copyediting and formatting"
+}

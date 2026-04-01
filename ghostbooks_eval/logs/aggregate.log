@@ -1,0 +1,62 @@
+[2026-03-31T10:57:59.334067] Loading scored books from G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_scored.jsonl...
+[2026-03-31T10:57:59.394329] Domain summary written to G:\My Drive\Projects\_studio\ghostbooks_eval\data\domain_summary.json
+[2026-03-31T10:57:59.421242] Wrote 0 high-signal leads to G:\My Drive\Projects\_studio\ghostbooks_eval\data\high_signal_leads.jsonl
+[2026-03-31T10:57:59.428775] 
+Domain Summary:
+[2026-03-31T10:57:59.436867]   cognitive_ai: 50 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.445311]   economics_game_theory: 5 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.454861]   epistemology_philosophy_science: 29 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.460882]   information_computation: 50 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.467416]   networks_emergence: 10 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.474182]   organizational_behavioral: 8 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.480063]   physics_thermodynamics: 2 books, avg 6.02, MEDIUM
+[2026-03-31T10:57:59.485496]   systems_complexity: 31 books, avg 6.02, MEDIUM
+[2026-03-31T11:30:42.810862] Loading scored books from G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_scored.jsonl...
+[2026-03-31T11:30:42.918513] Domain summary written to G:\My Drive\Projects\_studio\ghostbooks_eval\data\domain_summary.json
+[2026-03-31T11:30:42.949262] Wrote 1 high-signal leads to G:\My Drive\Projects\_studio\ghostbooks_eval\data\high_signal_leads.jsonl
+[2026-03-31T11:30:42.957896] 
+Domain Summary:
+[2026-03-31T11:30:42.965275]   cognitive_ai: 50 books, avg 3.64, LOW
+[2026-03-31T11:30:42.973590]   economics_game_theory: 5 books, avg 3.01, LOW
+[2026-03-31T11:30:42.980541]   epistemology_philosophy_science: 29 books, avg 3.06, LOW
+[2026-03-31T11:30:42.988809]   information_computation: 50 books, avg 1.75, LOW
+[2026-03-31T11:30:42.996229]   networks_emergence: 10 books, avg 4.14, LOW
+[2026-03-31T11:30:43.003266]   organizational_behavioral: 8 books, avg 4.43, LOW
+[2026-03-31T11:30:43.010614]   physics_thermodynamics: 2 books, avg 6.33, MEDIUM
+[2026-03-31T11:30:43.017162]   systems_complexity: 31 books, avg 2.86, LOW
+[2026-03-31T12:01:18.273316] Loading scored books from G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_scored.jsonl...
+[2026-03-31T12:01:18.297396] Domain summary written to G:\My Drive\Projects\_studio\ghostbooks_eval\data\domain_summary.json
+[2026-03-31T12:01:18.320275] Wrote 0 high-signal leads to G:\My Drive\Projects\_studio\ghostbooks_eval\data\high_signal_leads.jsonl
+[2026-03-31T12:01:18.326093] 
+Domain Summary:
+[2026-03-31T12:01:18.332480]   economics_game_theory: 1 books, avg 5.0, LOW
+[2026-03-31T12:01:18.339870]   epistemology_philosophy_science: 2 books, avg 5.0, LOW
+[2026-03-31T12:01:18.346351]   information_computation: 13 books, avg 5.0, LOW
+[2026-03-31T12:01:18.354016]   networks_emergence: 2 books, avg 5.0, LOW
+[2026-03-31T12:01:18.360398]   physics_thermodynamics: 1 books, avg 5.0, LOW
+[2026-03-31T12:16:04.319543] Loading scored books from G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_scored.jsonl...
+[2026-03-31T12:16:04.356899] Domain summary written to G:\My Drive\Projects\_studio\ghostbooks_eval\data\domain_summary.json
+[2026-03-31T12:16:04.400641] Wrote 0 high-signal leads to G:\My Drive\Projects\_studio\ghostbooks_eval\data\high_signal_leads.jsonl
+[2026-03-31T12:16:04.410621] 
+Domain Summary:
+[2026-03-31T12:16:04.420737]   cognitive_ai: 50 books, avg 5.0, LOW
+[2026-03-31T12:16:04.434713]   economics_game_theory: 7 books, avg 5.1, LOW
+[2026-03-31T12:16:04.442759]   epistemology_philosophy_science: 33 books, avg 5.1, LOW
+[2026-03-31T12:16:04.452227]   information_computation: 76 books, avg 5.3, LOW
+[2026-03-31T12:16:04.463274]   networks_emergence: 14 books, avg 5.1, LOW
+[2026-03-31T12:16:04.484950]   organizational_behavioral: 8 books, avg 5.1, LOW
+[2026-03-31T12:16:04.492932]   physics_thermodynamics: 4 books, avg 5.1, LOW
+[2026-03-31T12:16:04.501854]   systems_complexity: 31 books, avg 5.3, LOW
+[2026-03-31T12:19:31.777725] Loading scored books from G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_scored.jsonl...
+[2026-03-31T12:19:31.799370] Domain summary written to G:\My Drive\Projects\_studio\ghostbooks_eval\data\domain_summary.json
+[2026-03-31T12:19:31.875309] Wrote 58 high-signal leads to G:\My Drive\Projects\_studio\ghostbooks_eval\data\high_signal_leads.jsonl
+[2026-03-31T12:19:31.883644] 
+Domain Summary:
+[2026-03-31T12:19:31.889866]   cognitive_ai: 50 books, avg 5.34, LOW
+[2026-03-31T12:19:31.896284]   economics_game_theory: 7 books, avg 5.09, LOW
+[2026-03-31T12:19:31.903737]   epistemology_philosophy_science: 33 books, avg 5.16, LOW
+[2026-03-31T12:19:31.911336]   information_computation: 76 books, avg 6.66, HIGH
+[2026-03-31T12:19:31.919609]   networks_emergence: 14 books, avg 8.13, HIGH
+[2026-03-31T12:19:31.925438]   organizational_behavioral: 8 books, avg 5.08, LOW
+[2026-03-31T12:19:31.933090]   physics_thermodynamics: 4 books, avg 5.0, LOW
+[2026-03-31T12:19:31.939190]   systems_complexity: 31 books, avg 7.67, HIGH

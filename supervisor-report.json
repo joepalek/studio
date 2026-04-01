@@ -1,8 +1,18 @@
 {
-  "time": "2026-03-31T10:02:18.238983",
+  "time": "2026-04-01T01:30:04.951882",
   "ollama_up": true,
-  "gemini_available": true,
-  "agents_recently_active": 0,
+  "gemini_available": false,
+  "free_models": [
+    "Mistral Small (chat)",
+    "Gemini 2.5 Pro (chat)",
+    "Gemini 2.5 Flash (chat)",
+    "Llama 3.2 (chat)",
+    "Stable Diffusion (local) (image_gen)"
+  ],
+  "agents_recently_active": [
+    "nightly-rollup",
+    "supervisor"
+  ],
   "work_queue_depth": 0,
   "dispatched": []
 }

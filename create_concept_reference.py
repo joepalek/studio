@@ -1,0 +1,86 @@
+﻿import json, os
+from datetime import datetime
+
+# Create a comprehensive concept reference document for focus group
+
+concept_reference = {
+    "project": "Linked: The New Science of Networks - Concept Origin & Validation",
+    "purpose": "Ensure focus group understands original vision vs. what was built. Prevent 'reassembled shoe' problem.",
+    "created": datetime.now().isoformat(),
+    
+    "ORIGINAL_VISION": {
+        "context": "Ghost Book pipeline output from Agency framework",
+        "source": "Non-fiction book scraping (archive.org, wayback machine)",
+        "selection_criteria": {
+            "domain": "networks_emergence",
+            "score": "8.7/10",
+            "reason": "High-signal theory book with outdated/incomplete premises"
+        },
+        "purpose_statement": "Find old books with outdated/wrong data that need updates and rewrites. Books worth ghostwriting because they fill a gap or correct existing misconceptions.",
+        "target_book_type": "Non-fiction theory book - NOT fiction, NOT character-driven narrative"
+    },
+    
+    "AGENCY_CONTEXT": {
+        "description": "Linked is one output of a larger synthetic talent agency that produces:",
+        "outputs": [
+            "Fiction books (character-driven stories)",
+            "Non-fiction books (theory, science, updated classics)",
+            "Scripts/shorts (video content)",
+            "Music/bands (original and remixed)",
+            "Characters (interactive, social media presence)",
+            "Social media assets"
+        ],
+        "what_linked_should_be": "A rigorous non-fiction theory book that can stand alone as publishable AND feed character/content systems",
+        "what_linked_is_NOT": "A character-driven narrative fiction book"
+    },
+    
+    "CURRENT_BUILD": {
+        "chapters_complete": 2,
+        "word_count": 10700,
+        "approach_taken": "Narrative-first, story-driven, accessible to general readers",
+        "strengths": {
+            "copyediting_score": 8.5,
+            "engagement": "High - uses vivid examples (COVID chalet, eBay, power outages)",
+            "accessibility": "Strong - explains concepts via storytelling"
+        },
+        "weaknesses": {
+            "mathematical_rigor_score": 3.5,
+            "issue": "Lacks formal definitions, proofs, mathematical precision",
+            "problem": "Reads like popular science narrative, NOT theory book"
+        }
+    },
+    
+    "THE_ALIGNMENT_QUESTION": {
+        "original_intent": "Non-fiction THEORY book with rigorous grounding",
+        "what_we_built": "Popular science NARRATIVE book with storytelling focus",
+        "is_this_a_reassembled_shoe": "POSSIBLY - we took a theory book brief and built a narrative book instead",
+        "focus_group_must_answer": "Should this be a theory book or a narrative book? And if theory, are we starting over?"
+    },
+    
+    "PEER_REVIEW_RESULTS": {
+        "narrative_quality": 8.5,
+        "mathematical_rigor": 3.5,
+        "network_theory_accuracy": 8.0,
+        "overall_average": 6.7,
+        "verdict": "CONDITIONAL - split opinion on whether narrative approach is correct"
+    },
+    
+    "FOCUS_GROUP_MUST_DETERMINE": [
+        "1. Is 'Linked' intended as a THEORY book (rigorous, mathematical) or NARRATIVE book (popular science)?",
+        "2. Does the current narrative approach match the original ghostwriting intent?",
+        "3. Are we building the right book, or building the wrong book well?",
+        "4. Should we continue with narrative approach or pivot to theory-first?",
+        "5. If this is a theory book, where should it sit: academic? business? general interest?",
+        "6. Who is the actual reader - students? executives? curious non-specialists?"
+    ]
+}
+
+with open('linked_concept_reference.json', 'w', encoding='utf-8') as f:
+    json.dump(concept_reference, f, indent=2)
+
+print('[CONCEPT REFERENCE CREATED]')
+print('File: linked_concept_reference.json')
+print('\nKey question for focus group:')
+print('  "Is this a THEORY book or a NARRATIVE book?"')
+print('  Current build = NARRATIVE')
+print('  Original brief = unclear (hence the focus group!)')

@@ -1,0 +1,148 @@
+﻿import json, os
+from datetime import datetime
+
+# Create final focus group submission package
+
+package = {
+    "project": "Linked: The New Science of Networks",
+    "submission_type": "FOCUS GROUP EVALUATION PACKAGE",
+    "date_prepared": datetime.now().isoformat(),
+    
+    "COVER_LETTER": {
+        "to": "Focus Group Reviewers",
+        "from": "Project: Linked (Ghost Book Pipeline)",
+        "subject": "Product Direction Evaluation - Chapters 1 & 2",
+        "message": """We've completed 2 chapters of 'Linked: The New Science of Networks' (14,386 words) and need expert evaluation to determine product direction before scaling to 8 chapters.
+
+CORE QUESTION: Is this a NARRATIVE book or a THEORY book?
+
+Current status:
+- Narrative quality: 8.5/10 (vivid, engaging, accessible)
+- Mathematical rigor: 3.5/10 (narrative-first, lacks formal definitions/proofs)
+- Overall peer score: 6.7/10 (CONDITIONAL)
+
+We're not sure if the narrative approach matches the original intent. Your expertise will determine:
+1. Is this the right product direction?
+2. Who should read this?
+3. What needs to change before we write 6 more chapters?
+
+Please review the materials and answer the role-specific questions in the intake form."""
+    },
+    
+    "SUBMISSION_MATERIALS": {
+        "1_MANUSCRIPT": {
+            "file": "linked_ch1_ch2_manuscript.txt",
+            "chapters": 2,
+            "word_count": 14386,
+            "status": "PUBLICATION-QUALITY PROSE",
+            "description": "Full text of Chapters 1 & 2 ready for review"
+        },
+        
+        "2_CONCEPT_REFERENCE": {
+            "file": "linked_concept_reference.json",
+            "purpose": "Shows ORIGINAL VISION vs. WHAT WAS BUILT",
+            "key_question": "Are we building the right book, or a reassembled shoe?",
+            "contains": [
+                "Original intent (non-fiction theory book from Ghost Book pipeline)",
+                "Current build (narrative-first popular science book)",
+                "The alignment question (are they the same thing?)",
+                "Peer review results (narrative strong, rigor weak)"
+            ]
+        },
+        
+        "3_FOCUS_GROUP_INTAKE": {
+            "file": "focus_group_intake.json",
+            "purpose": "Role-specific evaluation questions",
+            "participants": [
+                "Publishers (positioning, market fit)",
+                "Copyeditors (accessibility, rigor)",
+                "Comparable authors (differentiation, completeness)",
+                "Source validators (accuracy, mathematical foundation)"
+            ]
+        },
+        
+        "4_PEER_REVIEW_RESULTS": {
+            "source": "6-guide AI peer review (Network Theory, Math Rigor, Systems, Applications, Clarity, Copyediting)",
+            "overall_score": "6.7/10",
+            "breakdown": {
+                "narrative_quality": "8.5/10",
+                "mathematical_rigor": "3.5/10",
+                "network_theory_accuracy": "8.0/10"
+            },
+            "verdict": "CONDITIONAL - narrative strong but rigor weak"
+        },
+        
+        "5_FOCUS_GROUP_CONTACTS": {
+            "file": "focus_group_contacts_research.json",
+            "purpose": "Research-identified expert contacts ready to reach out",
+            "note": "Includes Barabási, Watts, Newman, Pinker, Princeton University Press, and copyeditor sourcing paths"
+        }
+    },
+    
+    "DECISION_FRAMEWORK_FOR_FOCUS_GROUP": {
+        "the_question": "Should this be a THEORY book or a NARRATIVE book?",
+        
+        "scenario_a_narrative": {
+            "approach": "Keep as-is, continue narrative-first",
+            "target_reader": "General curious readers",
+            "pros": "Already 8.5/10 quality, engaging, accessible",
+            "cons": "Won't satisfy network scientists, may lack academic credibility",
+            "verdict_if_chosen": "Proceed to Ch 3 with narrative approach"
+        },
+        
+        "scenario_b_theory": {
+            "approach": "Add mathematical rigor layer (definitions, proofs, equations)",
+            "target_reader": "Students, professionals, networked thinkers",
+            "pros": "Satisfies academic validation, rigorous foundation",
+            "cons": "Requires reworking Ch 1–2, slows output",
+            "verdict_if_chosen": "Rework Ch 1–2 for rigor, then continue"
+        },
+        
+        "scenario_c_hybrid": {
+            "approach": "Keep narrative, add math via sidebars/appendices",
+            "target_reader": "Everyone",
+            "pros": "Broadest appeal, narrative hooks with rigor option",
+            "cons": "Complex structure, must balance both",
+            "verdict_if_chosen": "Add rigor layer to Ch 1–2, then continue hybrid"
+        },
+        
+        "scenario_d_undecided": {
+            "approach": "Focus group determines direction",
+            "target_reader": "TBD based on expert feedback",
+            "pros": "Expert validation before major rework",
+            "cons": "Requires waiting 1–2 weeks for feedback",
+            "verdict_if_chosen": "This is your current path"
+        }
+    },
+    
+    "WHAT_WE_NEED_FROM_FOCUS_GROUP": [
+        "1. ALIGNMENT: Does this match the original intent (non-fiction theory book)?",
+        "2. POSITIONING: Who is the actual reader, and is the current approach right for them?",
+        "3. RIGOR VERDICT: Should we add mathematical foundation, or keep narrative-first?",
+        "4. COMPLETENESS: Are critical gaps or missing concepts for the intended audience?",
+        "5. GO/NO-GO: Should we continue writing 6 more chapters, or pause and rework?",
+        "6. COMPARABLE ANALYSIS: How does this compare to existing network science books?"
+    ],
+    
+    "TIMELINE": {
+        "submission": "Ready to send today",
+        "review_window": "1–2 weeks for expert feedback",
+        "decision_point": "Once feedback compiled, choose direction (A/B/C confirmed)",
+        "execution": "Write remaining 6 chapters with approved direction"
+    },
+    
+    "STATUS": "READY FOR FOCUS GROUP SUBMISSION"
+}
+
+with open('focus_group_submission_package.json', 'w', encoding='utf-8') as f:
+    json.dump(package, f, indent=2)
+
+print('[FOCUS GROUP SUBMISSION PACKAGE READY]')
+print('\nMaterials prepared:')
+print('  ✓ Manuscript (Ch 1–2, 14,386 words)')
+print('  ✓ Concept reference (original intent vs. current build)')
+print('  ✓ Focus group intake (expert questions)')
+print('  ✓ Peer review results (6.7/10 verdict)')
+print('  ✓ Contact research (ready to reach out)')
+print('\nAll materials in: G:\\My Drive\\Projects\\_studio\\')
+print('Ready to send to focus group when you are.')

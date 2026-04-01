@@ -1,0 +1,83 @@
+﻿import json
+from datetime import datetime
+
+focus_group_framework = {
+    "project": "Linked: The New Science of Networks",
+    "purpose": "Validate book positioning, audience fit, and source justification before scaling to full manuscript",
+    "generated_at": datetime.now().isoformat(),
+    
+    "participants": {
+        "publishers": {
+            "role": "Assess market positioning and viability",
+            "questions": [
+                "What shelf would this book sit on in a bookstore?",
+                "Who is the primary buyer?",
+                "What's the comp title (similar book selling well)?",
+                "What's the unique angle vs. existing network science books?",
+                "Is there a market for this right now?"
+            ]
+        },
+        "copyeditors": {
+            "role": "Evaluate prose quality and reader accessibility",
+            "questions": [
+                "Is the writing clear for the target audience?",
+                "Are technical concepts explained accessibly?",
+                "What's the reading level (high school, college, graduate)?",
+                "Where do transitions break or concepts get confusing?",
+                "What needs tightening or expansion?"
+            ]
+        },
+        "comparable_authors": {
+            "role": "Assess how this compares to similar works",
+            "questions": [
+                "How is this different from [similar book]?",
+                "What's missing that readers of [similar book] would expect?",
+                "What's the unique voice/angle here?",
+                "Is the depth right for the intended audience?",
+                "What would you add or remove?"
+            ]
+        },
+        "source_validators": {
+            "role": "Confirm the ghostwriting justification",
+            "questions": [
+                "What was the original source/inspiration for this project?",
+                "Why was this worth ghostwriting (vs. finding existing books)?",
+                "Is there a gap in the market this fills?",
+                "Who specifically asked for this to be written?",
+                "What problem does it solve that existing books don't?"
+            ]
+        }
+    },
+    
+    "current_status": {
+        "chapters_complete": 2,
+        "word_count": 10700,
+        "estimated_final": 48000,
+        "peer_scores": {
+            "narrative_quality": 8.5,
+            "mathematical_rigor": 3.5,
+            "network_theory_accuracy": 8.0,
+            "average_overall": 6.7
+        },
+        "decision_point": "Should we add mathematical rigor? Reposition for narrative-first audience? Determine source/intent first?"
+    },
+    
+    "next_steps": [
+        "1. Recruit focus group (publisher, 2-3 copyeditors, 2-3 comparable authors)",
+        "2. Send Chapters 1-2 + this intake form",
+        "3. Collect feedback on positioning, audience, sources",
+        "4. Use feedback to guide remaining 6 chapters",
+        "5. Validate before scaling manuscript"
+    ]
+}
+
+with open('focus_group_intake.json', 'w', encoding='utf-8') as f:
+    json.dump(focus_group_framework, f, indent=2)
+
+print('[FOCUS GROUP FRAMEWORK CREATED]')
+print('File: focus_group_intake.json')
+print('\nNow identify:')
+print('  1. Publisher contact')
+print('  2. 2-3 copyeditor contacts')
+print('  3. 2-3 comparable author contacts')
+print('  4. Source/origin of this ghostwriting project')

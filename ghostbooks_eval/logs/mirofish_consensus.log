@@ -1,0 +1,30 @@
+[2026-03-31T12:15:51.993549] === MIROFISH CHARACTER CONSENSUS SCORER ===
+[2026-03-31T12:15:52.012905] Loading books from G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_raw.jsonl...
+[2026-03-31T12:15:52.050026] Loaded 223 books
+[2026-03-31T12:15:52.059861] Scoring via character consensus...
+[2026-03-31T12:15:52.068134] [20/223] The Dual Magnetoelectric Universe An Int -> 5.3 C
+[2026-03-31T12:15:52.078349] [40/223] Harmonic Model ( 1) -> 5.3 C
+[2026-03-31T12:15:52.086510] [60/223] Logic, Set Theory, And Philosophy Of Mat -> 5.3 C
+[2026-03-31T12:15:52.095516] [80/223] Shadows of the mind : a search for the m -> 5.3 C
+[2026-03-31T12:15:52.104553] [100/223] Computability and decidability; an intro -> 5.3 C
+[2026-03-31T12:15:52.131012] [120/223] Linked : the new science of networks -> 5.1 C
+[2026-03-31T12:15:52.140582] [140/223] Machine learning : a Bayesian and optimi -> 5.0 C
+[2026-03-31T12:15:52.149149] [160/223] Bayesian artificial intelligence  -> 5.0 C
+[2026-03-31T12:15:52.160988] [180/223] Relativistic Invariance and Experimental -> 5.1 C
+[2026-03-31T12:15:52.171603] [200/223] Not even wrong : the failure of string t -> 5.1 C
+[2026-03-31T12:15:52.183370] [220/223] Application of Modern Network Theory to  -> 5.1 C
+[2026-03-31T12:15:52.193333] Writing 223 books to G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_scored.jsonl...
+[2026-03-31T12:15:52.220856] Complete!
+[2026-03-31T12:19:23.629945] === MIROFISH QUALITY SCORER ===
+[2026-03-31T12:19:23.636953] Loading G:\My Drive\Projects\_studio\ghostbooks_eval\data\books_raw.jsonl...
+[2026-03-31T12:19:23.662027] Loaded 223 books
+[2026-03-31T12:19:23.669643] Scoring via quality heuristics...
+[2026-03-31T12:19:23.678296] [30/223] The Trikaya Symmetry Ladder As Discrete  -> 7.5 B
+[2026-03-31T12:19:23.686048] [60/223] Logic, Set Theory, And Philosophy Of Mat -> 6.5 C
+[2026-03-31T12:19:23.694175] [90/223] Computability, complexity, and languages -> 7.3 B
+[2026-03-31T12:19:23.702774] [120/223] Linked : the new science of networks -> 8.7 A
+[2026-03-31T12:19:23.710943] [150/223] Reliable reasoning : induction and stati -> 5.0 C
+[2026-03-31T12:19:23.719002] [180/223] Relativistic Invariance and Experimental -> 5.0 C
+[2026-03-31T12:19:23.726006] [210/223] A Catastrophe-theory Model for Simulatin -> 6.5 C
+[2026-03-31T12:19:23.734559] Writing 223 books...
+[2026-03-31T12:19:23.755763] Complete!

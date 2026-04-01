@@ -1,0 +1,130 @@
+﻿import json, os
+from datetime import datetime
+
+# Create comprehensive focus group package manifest
+
+manifest = {
+    "project": "Linked: The New Science of Networks",
+    "phase": "FOCUS GROUP VALIDATION",
+    "date_created": datetime.now().isoformat(),
+    
+    "PACKAGE_CONTENTS": {
+        "1_concept_reference": {
+            "file": "linked_concept_reference.json",
+            "purpose": "Shows original intent (non-fiction theory book) vs. what was built (narrative book)",
+            "key_question": "Are we building the right book or a reassembled shoe?"
+        },
+        "2_focus_group_intake": {
+            "file": "focus_group_intake.json",
+            "purpose": "Expert evaluation framework with role-specific questions",
+            "sections": [
+                "Publisher questions (positioning, market fit, comp titles)",
+                "Copyeditor questions (prose quality, accessibility)",
+                "Comparable author questions (differentiation, completeness)",
+                "Source validator questions (accuracy, rigor, validation)"
+            ]
+        },
+        "3_manuscript_chapters_1_2": {
+            "file": "linked_ch1_ch2_manuscript.txt",
+            "chapters": 2,
+            "word_count": 14386,
+            "status": "READY FOR REVIEW",
+            "content": "The actual prose - what experts will evaluate"
+        },
+        "4_peer_review_results": {
+            "source": "6-guide AI peer review",
+            "overall_score": "6.7/10",
+            "narrative_quality": "8.5/10",
+            "mathematical_rigor": "3.5/10",
+            "verdict": "CONDITIONAL - narrative strong but rigor weak"
+        },
+        "5_this_manifest": {
+            "file": "focus_group_package_manifest.json",
+            "purpose": "Ties all materials together, explains what we need from experts"
+        }
+    },
+    
+    "WHAT_WE_ARE_ASKING_FOCUS_GROUP": [
+        "1. ALIGNMENT: Is this narrative approach the right direction for a non-fiction theory book?",
+        "2. POSITIONING: Who should read this book, and is the current writing style right for that audience?",
+        "3. COMPLETENESS: Are there critical gaps or missing content for the intended reader?",
+        "4. RIGOR vs. NARRATIVE: Should we add mathematical precision, or keep it accessible/narrative-driven?",
+        "5. COMP TITLES: How does this compare to existing network science books?",
+        "6. GO/NO-GO: Should we continue writing 6 more chapters, or pause and rework the foundation?"
+    ],
+    
+    "CRITICAL_CONTEXT": {
+        "original_brief": "Non-fiction theory book from Ghost Book pipeline (archive.org/wayback machine scrape)",
+        "selection_score": "8.7/10 (networks_emergence domain, high signal)",
+        "original_purpose": "Update outdated/incorrect data in existing theory book",
+        "what_we_built": "Narrative-driven popular science book with vivid examples",
+        "the_problem": "These may not be aligned. Focus group determines if we're on track."
+    },
+    
+    "TIMELINE": {
+        "focus_group_sent": "TODAY",
+        "turnaround_estimate": "1-2 weeks for feedback",
+        "decision_deadline": "Once feedback received",
+        "next_action": "Either continue Ch 3+ OR rework Ch 1-2 foundation"
+    },
+    
+    "FOCUS_GROUP_ROLES": [
+        {
+            "role": "PUBLISHER",
+            "expertise": "Market positioning, audience demographics, comp titles, sales viability",
+            "will_answer": "Is this marketable? To whom? How does it position in the market?"
+        },
+        {
+            "role": "COPYEDITOR (Trade/General)",
+            "expertise": "Prose clarity, pacing, readability for general audiences",
+            "will_answer": "Does the writing work for curious non-specialists?"
+        },
+        {
+            "role": "COPYEDITOR (Technical/Academic)",
+            "expertise": "Rigor, precision, technical clarity for educated readers",
+            "will_answer": "Does the writing satisfy someone with technical background?"
+        },
+        {
+            "role": "COMPARABLE AUTHOR #1",
+            "expertise": "Network science books (Barabási, Newman, Watts, etc.)",
+            "will_answer": "How does this compare? What's unique? What's missing?"
+        },
+        {
+            "role": "COMPARABLE AUTHOR #2",
+            "expertise": "Popular science writing (Gladwell, Turkle, etc.)",
+            "will_answer": "How does narrative style compare? Is engagement right?"
+        },
+        {
+            "role": "SOURCE VALIDATOR",
+            "expertise": "Non-fiction accuracy, data validation, mathematical rigor in science books",
+            "will_answer": "Is the factual grounding solid? What needs verification?"
+        }
+    ],
+    
+    "HOW_TO_USE_THIS_PACKAGE": [
+        "1. Send Chapters 1-2 manuscript (linked_ch1_ch2_manuscript.txt)",
+        "2. Include concept reference (shows original intent vs. current build)",
+        "3. Include focus group intake (role-specific questions)",
+        "4. Include peer review results (AI scoring for context)",
+        "5. Ask for feedback by [DATE]",
+        "6. Compile feedback, identify themes, make decision"
+    ],
+    
+    "FILES_TO_SEND_TO_FOCUS_GROUP": [
+        "linked_concept_reference.json",
+        "focus_group_intake.json",
+        "linked_ch1_ch2_manuscript.txt",
+        "this manifest (for context)"
+    ]
+}
+
+with open('focus_group_package_manifest.json', 'w', encoding='utf-8') as f:
+    json.dump(manifest, f, indent=2)
+
+print('[FOCUS GROUP PACKAGE MANIFEST READY]')
+print('\nFiles ready to send:')
+print('  ✓ linked_concept_reference.json')
+print('  ✓ focus_group_intake.json')
+print('  ✓ linked_ch1_ch2_manuscript.txt (14,386 words)')
+print('  ✓ focus_group_package_manifest.json')
+print('\nNext: Identify 6 focus group contacts and send package')

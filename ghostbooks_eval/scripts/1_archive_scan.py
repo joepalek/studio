@@ -9,9 +9,14 @@ Respects archive.org rate limits (~1 req/sec for anonymous, 30 req/min with acco
 
 import requests
 import json
+import sys
 import time
 from pathlib import Path
 from datetime import datetime
+
+# Force UTF-8 stdout on Windows to avoid cp1252 encode errors
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 BASE_DIR = Path(r"G:\My Drive\Projects\_studio\ghostbooks_eval")
 DATA_DIR = BASE_DIR / "data"
@@ -40,20 +45,13 @@ def search_archive_org(query, limit=10):
     Returns list of book metadata dicts.
     """
     url = "https://archive.org/advancedsearch.php"
+    # archive.org expects fl as a comma-separated string, not repeated params
     params = {
         "q": query,
-        "fl": [
-            "identifier",
-            "title",
-            "creator",
-            "date",
-            "description",
-            "language",
-            "subject",
-        ],
+        "fl[]": "identifier,title,creator,date,description,language,subject",
         "output": "json",
         "rows": limit,
-        "sort": "date DESC",
+        "sort": "date desc",
     }
 
     try:

@@ -14084,3 +14084,1619 @@ From overnight scheduler logs (03-31):
 1. Fix the `overnight-job-delta.log` PermissionError (likely lock file or missing write perms)
 2. Review the 29 escalated auto-answer questions — may need your input
 3. Commit `_studio` (84 dirty files)
+[Tue 03/31/2026 10:30:01.33] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.12 ✓ (newer than expected 3.13.7 — fine)
+- Repomix 1.12.0 ✓
+- Ollama 0.19.0 ✓ — UP, 2 models (gemma3:4b)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Gemini: UP ✓
+- OpenRouter: SET ✓
+- YouTube: SET ✓
+- Ollama: UP ✓
+- Supabase: UP — no pending mobile answers ✓
+
+**PROJECTS (13 checked)**
+- `!` UNCOMMITTED (1 file): job-match
+- `!` UNCOMMITTED (10 files): _studio (ghostbooks_eval changes, git_commit_studio.ps1, supervisor-check.log, studio-context.md, pycache files)
+- 11 projects clean ✓
+
+**STUDIO FILES**
+- All critical files present ✓
+- All optional files present ✓
+
+**MOBILE ANSWERS**
+- None pending ✓
+
+**VERDICT: DEGRADED (2 issues)**
+
+---
+
+## STRESS REPORT
+
+**WARNING (2):**
+- `[~]` UNCOMMITTED (1 file): job-match
+- `[~]` UNCOMMITTED (10 files): _studio
+
+**WATCH (2):**
+- `[-]` SRE heartbeat flagged 5x today — overnight errors persisting: `job_daily_harvest.py` PermissionError on log file, `auto-answer` charmap encoding errors on 8 questions (unicode arrow chars)
+- `[-]` Supervisor inbox has 1 PENDING WARN item from 03:31 this morning
+
+**STRESS VERDICT: WARNING**
+
+---
+
+## SUPERVISOR CYCLE
+
+- Last run: 2026-03-31T10:02 — 0 tasks dispatched, work queue empty
+- Task queue: 0 queued tasks
+- Inbox: 1 PENDING item from overnight
+
+**Supervisor inbox finding:** `job_daily_harvest.py` hit a PermissionError on log file; `auto-answer` script had charmap encoding errors on 8 questions (unicode arrow chars in answers). These were flagged at 03:31 AM by the overnight SRE.
+
+---
+
+**Action items:**
+1. Commit dirty repos (`job-match`, `_studio`)
+2. Fix `job_daily_harvest.py` PermissionError on log file
+3. Fix `auto-answer` charmap encoding (unicode arrows in questions)
+
+What would you like to tackle?
+[Tue 03/31/2026 11:00:01.51] Supervisor check starting 
+[Tue 03/31/2026 11:30:01.35] Supervisor check starting 
+Now I have all the data. Here is the full report:
+
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.12 ✓ (expected 3.13.7 — higher is fine)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Gemini: UP ✓
+- OpenRouter: UP ✓
+- Ollama: UP — 2 models (gemma3:4b) ✓
+- Supabase: configured ✓
+
+**PROJECTS (13 checked)**
+- All 13 folders present ✓
+- No stale state.json files ✓
+
+**STUDIO FILES**
+- All critical files present ✓
+
+**MOBILE ANSWERS**
+- No pending answers ✓
+
+**`_studio` UNCOMMITTED: 25 files** — ghostbooks eval outputs, heartbeat, logs, config
+
+---
+
+## STRESS REPORT
+
+**CRITICAL (0):** none
+
+**WARNING (2):**
+- `[~]` UNCOMMITTED: `_studio` — 25 files (ghostbooks eval run + heartbeat + logs)
+- `[~]` `studio-config.json` has **UTF-8 BOM** — `json.load()` fails without `encoding='utf-8-sig'`; SRE scripts and any other agent that opens this file without that flag will crash
+
+**WATCH (0):** none
+
+**STRESS VERDICT: WARNING**
+
+---
+
+## SUPERVISOR CYCLE
+
+**Supervisor inbox:** 1 pending item from 03:31 AM (overnight job errors + dirty repos — likely resolved now)
+
+**Task queue:** empty
+
+---
+
+## BACKGROUND TASK SUMMARY — Ghostbooks Eval
+
+A Gemini eval run completed this session (~5 min ago). Results:
+
+| Domain | Books | Avg Score | Signal |
+|---|---|---|---|
+| physics_thermodynamics | 2 | 6.33 | **MEDIUM** |
+| organizational_behavioral | 8 | 4.43 | LOW |
+| networks_emergence | 10 | 4.14 | LOW |
+| cognitive_ai | 50 | 3.64 | LOW |
+| epistemology_philosophy_science | 29 | 3.06 | LOW |
+| economics_game_theory | 5 | 3.01 | LOW |
+| systems_complexity | 31 | 2.86 | LOW |
+| information_computation | 50 | 1.75 | LOW |
+
+**1 high-signal lead found:** `physics_thermodynamics` domain, title unknown (archive metadata gap), composite score **7.11**, salvage grade **B**.
+
+Overall scores are low across the board — the eval may have a calibration issue (most domains averaging 1.75–4.43 out of 10 suggests scoring criteria may be too strict, or the archive scan is pulling weak material).
+
+---
+
+**ACTION ITEMS:**
+1. Commit `_studio` dirty files when ready
+2. Fix BOM in `studio-config.json` (re-save as UTF-8 without BOM) so scripts don't need special handling
+3. Investigate ghostbooks eval low scores — is the scoring calibration off?
+[Tue 03/31/2026 12:00:01.50] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 — current
+- Node v24.14.0 — current
+- npm 11.9.0 — current
+- Python 3.13.12 — current (expected 3.13.7, higher is fine)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini: UP
+- OpenRouter: SET
+- Ollama: UP — 2 models (gemma3:4b)
+- YouTube key: SET
+
+**PROJECTS (13 checked)**
+- `! UNCOMMITTED (1 file): job-match`
+- `! UNCOMMITTED (1 file): listing-optimizer`
+- `! UNCOMMITTED (25 files): _studio`
+- 10 projects clean
+
+**STUDIO FILES** — all critical files present
+
+**MOBILE ANSWERS** — none pending
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (25 files): _studio — ghostbooks eval artifacts
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE — BACKGROUND TASK SUMMARY
+
+**Ghostbooks Eval completed this session** (ran ~11:17–11:30 AM):
+- **185 books scored**: A: 0 / B: 72 / C: 113
+- **22 ghostwrite-ready** titles identified
+- **Top domain: `physics_thermodynamics`** — avg 6.33 (MEDIUM signal)
+- Most domains scored LOW (1.75–4.43 avg) — possible calibration issue worth investigating
+- Results written to `ghostbooks_eval/data/books_scored.jsonl`
+
+**Task queue:** empty — no background tasks queued
+
+**Supervisor inbox:** 1 pending WARN item (overnight job errors + dirty repos, carried over from earlier today)
+
+---
+
+**Action items:**
+1. Commit `_studio` (25 files — ghostbooks eval outputs)
+2. Commit `job-match` and `listing-optimizer` (1 file each)
+3. Investigate ghostbooks eval scoring calibration — are the LOW scores accurate or is the rubric too strict?
+[Tue 03/31/2026 12:30:02.09] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 (UP — 2 models: gemma3:4b)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (33 files): _studio
+  ! UNCOMMITTED (2 files): listing-optimizer
+  ! UNCOMMITTED (1 file): job-match
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Commit dirty repos — _studio is 33 files behind
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (33 files): _studio
+  [~] UNCOMMITTED (2 files): listing-optimizer
+  [~] UNCOMMITTED (1 file): job-match
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor Summary**
+
+- **Inbox:** 1 pending WARN — "overnight job errors + dirty repos" (pre-existing, matches today's findings)
+- **Task queue:** Empty — no backlogged tasks
+- **Background tasks:** No completed background tasks to report. SRE Scout has been running on schedule (5 flagged heartbeats today), all flagging the same dirty repos.
+- **Ollama model:** `gemma3:4b` (active, 2 models available)
+
+**Key action:** `_studio` has 33 uncommitted files — the largest drift. Run `/commit` when ready to clean that up.
+[Tue 03/31/2026 13:00:01.48] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Claude Code 2.1.88
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP (2 models — gemma3:4b)
+  ✓ YouTube key: SET
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (36 files): _studio
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Commit dirty repos
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (36 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR STATUS
+
+**Inbox:** 1 pending item — `SRE WARNING: overnight job errors + dirty repos` (carried from prior sessions)
+
+**Task queue:** Empty
+
+**Scheduler:** 36 Studio tasks registered — running normally
+
+**Whiteboard:** 46 items, none scored >7 — no action needed
+
+---
+
+## BACKGROUND TASKS COMPLETED (today's automated runs)
+
+The SRE Scout ran 5 automated cycles today (30-min scheduler). The `ghostbooks_eval` project was the primary active work — the dirty files tell the story:
+
+- **New files added:** `multisource_scan.py`, `eval_gemini.py`, `books_raw_multisource.jsonl`, `books_raw_archive_org.jsonl`, `domain_summary.json`, `score_mirofish.py`, `ghost_outline_synthesis.py`
+- **Logs updated:** `evaluate.log`, `multisource_scan.log`, `aggregate.log`, `mirofish_consensus.log`
+- **Data updated:** `books_raw.jsonl`, `books_scored.jsonl`, `high_signal_leads.jsonl`
+
+The ghostbooks eval appears to have expanded from a single source to multi-source (Archive.org + Mirofish consensus scoring). That's the main activity from background runs.
+
+**No critical issues.** The uncommitted _studio files (36) are the primary thing to address — likely want to commit the ghostbooks eval results when you're ready.
+[Tue 03/31/2026 13:30:01.40] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Claude Code 2.1.88
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (34 files): _studio   ← ghostbooks eval + sre reports
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  - gateway-log.txt: optional, missing
+  - janitor-report.json: optional, missing
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Commit dirty repos — _studio, job-match, listing-optimizer
+```
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (34 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Task queue:** 0 tasks waiting
+- **Last cycle:** 2026-03-31T10:02 — 0 tasks dispatched
+- **Inbox:** 1 PENDING item — "SRE WARNING — overnight job errors + dirty repos" (carried over)
+
+**Completed background tasks:** None detected. The heartbeat log shows the SRE Scout has run 5 times today already (10:31, 11:31, 12:01, 12:31, 13:03) — all flagging the same 3 dirty repos. No new background work was dispatched or completed.
+
+**Primary action needed:** Commit the 3 dirty repos. The `_studio` drift is the largest — 34 files from the ghostbooks eval run this session.
+[Tue 03/31/2026 14:00:01.43] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Claude Code 2.1.88 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET / UP
+  ✓ OpenRouter key: SET / UP
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (34 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 issues — dirty repos)
+ACTION: Commit job-match, listing-optimizer, _studio
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (34 files): _studio
+
+WATCH (3):
+  [-] sre-scout heartbeat flagged 5x today — persistent dirty state
+  [-] efficiency-ledger.json not found
+  [-] improvement-proposals.json not found
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor Cycle Summary:**
+
+- **Inbox:** 1 pending item — `[WARN] SRE WARNING — overnight job errors + dirty repos`
+- **Task Queue:** Empty (0 queued tasks)
+- **Background tasks completed:** None logged (efficiency-ledger not found — supervisor dispatch loop has not produced output files this session)
+- **Heartbeat:** SRE has been flagging since 11:31 AM today — all for the same dirty repo state
+
+**The one action item:** `_studio` has 34 uncommitted files (the ghostbooks_eval work visible in git status). Want me to commit the dirty repos now?
+[Tue 03/31/2026 14:30:01.55] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+```
+=== PASS 1 — TOOLS ===
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 (UP — 2 models, gemma3:4b)
+
+=== PASS 2 — GATEWAY ENDPOINTS ===
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP
+
+=== PASS 3 — PROJECTS ===
+  ! UNCOMMITTED (34 files): _studio
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ✓ 10 projects clean
+
+=== PASS 4 — STUDIO FILES ===
+  ✓ All critical files present
+
+=== PASS 5 — MOBILE ANSWERS ===
+  ✓ No pending mobile answers
+
+VERDICT: WARNING (3 issues)
+ACTION: Commit dirty repos
+```
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (34 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (3):
+  [-] WHITEBOARD: 46 active items pending review
+  [-] LATERAL FLAGS: 1 unreviewed
+  [-] SUPERVISOR INBOX: 1 pending WARN item (overnight job errors + dirty repos)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE SUMMARY
+
+- **Task queue:** 0 tasks queued
+- **Orchestrator plan:** 0 agent-runnable tasks
+- **Improvement proposals:** none pending
+- **Whiteboard:** 46 active items (no high-urgency escalations detected)
+- **Lateral flags:** 1 unreviewed
+- **Heartbeat:** 3 agents tracked — sre-scout last ran today; `unknown` entry has blank date (stale/orphan entry)
+
+**No completed background tasks to report** — task queue was empty.
+
+---
+
+**Priority action:** The `_studio` repo has 34 uncommitted files (including ghostbooks eval work, new scripts, logs). `job-match` and `listing-optimizer` each have 1 uncommitted file. Want me to commit these now?
+[Tue 03/31/2026 15:00:01.47] Supervisor check starting 
+---
+
+## SRE Scout Report — 2026-03-31
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Claude Code 2.1.88
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 (UP — 2 models loaded)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET / UP
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (34 files): _studio
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All 10 critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 uncommitted repos)
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (34 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+ACTION: Commit _studio, job-match, and listing-optimizer
+```
+
+---
+
+## Supervisor: Completed Background Tasks
+
+**Ghostbooks eval** completed successfully this session:
+- Scored 185 books → A:0, B:72, C:113
+- **Ghostwrite-ready: 22/185** books identified
+- Results written to `books_scored.jsonl`
+
+**Pending inbox item** (from overnight, 2026-03-31 ~3:30am):
+- `job_daily_harvest.py` hit a PermissionError on its log file
+- `auto-answer` had charmap encoding errors on 8 questions (Unicode arrow chars)
+- Both are known issue types — `unicode_safe.py` covers the encoding errors; log file permission error needs investigation
+
+**Task queue:** Empty — no queued tasks waiting.
+
+---
+
+The main action item is committing the dirty repos. Want me to commit them now?
+[Tue 03/31/2026 15:30:01.47] Supervisor check starting 
+[Tue 03/31/2026 16:00:01.60] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12 (expected 3.13.7 — higher, OK)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 (UP — 2 models: gemma3:4b)
+
+GATEWAY ENDPOINTS
+  ✓ anthropic_api_key: SET
+  ✓ gemini_api_key: SET
+  ✓ openrouter_api_key: SET
+  ✓ youtube_api_key: SET
+  ✓ Ollama: UP (2 models)
+
+PROJECTS (13 checked)
+  ~ UNCOMMITTED (1 file): job-match
+  ~ UNCOMMITTED (1 file): listing-optimizer
+  ~ UNCOMMITTED (48 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 uncommitted repos)
+ACTION: Commit job-match, listing-optimizer, and _studio
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+
+WATCH (2):
+  [-] Ollama model is gemma3:4b (config says gemma3:4b, not llama3.2 — verify routing)
+  [-] improvement-proposals.json + efficiency-ledger.json missing (not yet created)
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor cycle summary:**
+
+- **Task queue:** Empty (0 pending)
+- **Supervisor inbox:** 1 pending item — `[WARN] SRE WARNING — overnight job errors + dirty repos` (carried over from earlier today, same dirty-repo issue)
+- **Background tasks:** No completed background tasks to report. No agent ran overnight (no active dispatches, gateway log shows no agent activity).
+- **Whiteboard:** 46 items, none scored 7+
+- **Heartbeat pattern:** SRE has run 5 times today — all flagging the same 3 dirty repos. The `_studio` dirty file count has grown from 34 → 48 files since this morning.
+
+**Primary action needed:** Commit the 3 dirty repos. The `_studio` repo in particular has 48 uncommitted files including new ghostbooks eval work.
+[Tue 03/31/2026 16:30:01.47] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 — OK
+- Node v24.14.0 — OK
+- npm 11.9.0 — OK
+- Python 3.13.12 — OK (above expected 3.13.7)
+- Repomix 1.12.0 — OK
+- Ollama 0.19.0 — OK (UP, 2 models loaded: gemma3:4b)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini key: SET — UP
+- OpenRouter key: SET — UP
+- YouTube key: SET
+- Ollama: UP
+
+**PROJECTS (13 checked)**
+- `!` UNCOMMITTED (45 files): _studio
+- `!` UNCOMMITTED (1 file): job-match
+- `!` UNCOMMITTED (1 file): listing-optimizer
+- 10 projects clean
+
+**STUDIO FILES** — All critical files present. All optional files present.
+
+**MOBILE ANSWERS** — None pending.
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (45 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+**ACTION:** Commit dirty repos — `_studio` has 45 uncommitted files (been flagged across 5 consecutive heartbeat entries today), plus `job-match` and `listing-optimizer` each have 1 file.
+
+---
+
+## SUPERVISOR CYCLE
+
+**Background task summary:**
+- No tasks in the work queue or task queue
+- No agent gateway activity logged (all free-tier agents idle)
+- Supervisor inbox: 1 PENDING item — `[WARN] SRE WARNING — overnight job errors + dirty repos` (carry-over from earlier session)
+- The _studio dirty file count has been **climbing all day** (34 → 34 → 34 → 34 → 48 → 45) — this is the dominant recurring issue
+
+The uncommitted _studio files appear to include `ghostbooks_eval/` work and several modified scripts. Want me to commit these now?
+[Tue 03/31/2026 17:00:01.38] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ Python 3.13.12
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP (2 models — gemma3:4b + 1 other)
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (48 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present (all optional files present too)
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Commit dirty repos
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor — Background Task Summary**
+
+- **Task queue**: empty (0 tasks queued)
+- **Supervisor inbox**: 1 pending item — `[WARN] SRE WARNING — overnight job errors + dirty repos` (PENDING, carried from prior session)
+- **Heartbeat log**: SRE Scout has been running multiple times today (2026-03-31), all flagging the same 3 uncommitted repos — no new overnight job completions noted
+
+**No completed background tasks to report.** The dirty repo count on `_studio` has grown (34 → 48 files), consistent with ongoing work this session. The `job-match` and `listing-optimizer` each have 1 uncommitted file that's been sitting since at least the last session.
+
+Want me to commit those repos now?
+[Tue 03/31/2026 17:30:01.43] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Supabase: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (48 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present (mobile-inbox, janitor-report, gateway-log)
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Commit dirty repos — _studio (48 files) is the main one
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor State:**
+- **Task queue:** 0 pending (clear)
+- **Supervisor inbox:** 1 pending WARN — "overnight job errors + dirty repos" (pre-existing from prior run)
+- **Heartbeat:** sre-scout has been running and flagging all session today (normal — dirty repos trigger flagged status)
+- **Background tasks:** No completed background tasks to summarize
+
+**Summary:** System is healthy at the service layer — all keys set, Ollama up, Supabase connected, no mobile answers waiting. The only friction is 3 dirty repos. The `_studio` repo has 48 uncommitted files which is the main thing worth cleaning up when you're ready to commit. Want me to run a `/commit` now?
+[Tue 03/31/2026 18:00:01.41] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12 (expected 3.13.7 — higher, OK)
+  ✓ Claude Code 2.1.88 (expected 2.1.78 — higher, OK)
+  ✓ Repomix 1.12.0
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+  ✓ YouTube key: SET
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (48 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 issues)
+ACTION: Commit dirty repos before session work
+```
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+
+WATCH (3):
+  [-] 46 whiteboard items — none scored >= 7 (scoring may be stale)
+  [-] No improvement-proposals.json found
+  [-] gateway-log.txt shows no recent agent activity
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+**Agent status:** No agents active in gateway-log recently
+**Task queue:** Empty (0 pending)
+**Work queue:** Empty (no orchestrator-plan.json agent tasks)
+**Supervisor inbox:** 1 pending — `[WARN] SRE WARNING — overnight job errors + dirty repos`
+
+**Background tasks completed:** None detected (no completed background agents found in logs since last session)
+
+---
+
+**Recommended focus this session:** The 48-file _studio dirty repo is the top issue — mostly data/log files from the ghostbooks eval work visible in git status. Want to commit, or is there a specific task you're working on today?
+[Tue 03/31/2026 18:30:01.43] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 ✓ | Node v24.14.0 ✓ | npm 11.9.0 ✓
+- Python 3.13.12 ✓ | Claude Code 2.1.88 ✓ | Repomix 1.12.0 ✓
+- Ollama 0.19.0 UP (2 models: gemma3:4b + 1 other) ✓
+
+**GATEWAY ENDPOINTS**
+- Anthropic ✓ | Gemini UP ✓ | OpenRouter UP ✓ | YouTube key SET ✓ | Ollama UP ✓
+
+**PROJECTS (13 checked)**
+- `! UNCOMMITTED (1 file): job-match`
+- `! UNCOMMITTED (1 file): listing-optimizer`
+- `! UNCOMMITTED (48 files): _studio`
+
+**STUDIO FILES** — All critical files present ✓
+
+**MOBILE ANSWERS** — No pending answers ✓
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Task queue:** 0 tasks waiting — nothing pending
+- **Heartbeats:** Only sre-scout checked in today (flagged); no other agents active
+- **Supervisor inbox:** 1 pending WARN — "overnight job errors + dirty repos" (pre-existing from last session)
+- **Background tasks completed:** None to report — no background agents ran since last session
+
+**ACTION:** The main outstanding item is 48 dirty files in `_studio` + 1 each in `job-match` and `listing-optimizer`. Safe to work — no blockers.
+[Tue 03/31/2026 19:00:01.46] Supervisor check starting 
+---
+
+## SRE Scout Report — 2026-03-31
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 (2 models loaded)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ Ollama: UP
+  ✓ Supabase: SET
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (48 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ All optional files present (gateway-log, janitor-report, mobile-inbox)
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 issues)
+```
+
+---
+
+```
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (5):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+  [~] Overnight: job_daily_harvest.py PermissionError on log file
+  [~] Overnight: auto-answer charmap encoding errors on 8 questions
+
+WATCH (1):
+  [-] Only sre-scout checking heartbeat — no other agents reporting
+
+STRESS VERDICT: WARNING
+ACTION: Commit dirty repos; fix charmap errors in auto-answer; investigate log file PermissionError
+```
+
+---
+
+## Supervisor Summary
+
+**Background tasks since last session:**
+- SRE scout ran 5+ automated cycles today (03:31 through 18:31) — all flagged `DEGRADED` for same 3 dirty repos
+- **Overnight errors logged** (from supervisor-inbox):
+  - `job_daily_harvest.py` — PermissionError on log file write
+  - `auto-answer` — charmap encoding errors on 8 questions (unicode arrow characters failing on Windows cp1252 codec)
+- Task queue: **empty** — no queued work waiting
+- No other agents have checked in via heartbeat (only sre-scout running)
+
+**What needs attention:**
+1. The charmap errors in auto-answer are a known pattern — `unicode_safe.py` in utilities can fix it
+2. The log PermissionError in `job_daily_harvest.py` likely means another process holds the file open, or it's running as a different user
+3. The 48-file `_studio` backlog is the biggest commit to clear
+
+Want to tackle any of these now?
+[Tue 03/31/2026 19:30:01.44] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.12 ✓ (above expected 3.13.7)
+- Repomix 1.12.0 ✓
+- Ollama 0.19.0 ✓ (UP, 2 models loaded: gemma3:4b)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Gemini: UP ✓
+- OpenRouter: UP ✓
+- Ollama: UP ✓
+- YouTube key: SET ✓
+- Supabase: SET ✓
+
+**PROJECTS (13 checked)**
+- `!` UNCOMMITTED (48 files): `_studio`
+- `!` UNCOMMITTED (1 file): `job-match`
+- `!` UNCOMMITTED (1 file): `listing-optimizer`
+- 10 projects clean
+
+**STUDIO FILES** — All critical files present ✓
+
+**MOBILE ANSWERS** — None pending ✓
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (48 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (2):
+  [-] supervisor-inbox has 1 pending WARN item (overnight job errors + dirty repos)
+  [-] heartbeat shows sre-scout + orchestrator both flagged on last run
+
+STRESS VERDICT: WARNING
+ACTION: Commit dirty repos — _studio (48 files), job-match, listing-optimizer
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Task queue:** 0 tasks pending — nothing queued
+- **Inbox:** 1 pending WARN item — previous overnight errors + dirty repos (consistent with what SRE just found)
+- **Heartbeat:** sre-scout flagged, orchestrator flagged — both from today's prior run
+- **Background tasks completed:** No background tasks found with completed status
+
+**No completed background tasks to report.** The main outstanding action is committing the dirty repos — `_studio` has 48 uncommitted files (lots of ghostbooks_eval data + logs + modified scripts). Want me to commit these now?
+[Tue 03/31/2026 20:00:01.47] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-03-31 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 (UP — 2 models)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ! UNCOMMITTED (48 files): _studio
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 uncommitted repos)
+ACTION: Commit job-match, listing-optimizer, and _studio
+
+=== STRESS REPORT ===
+
+CRITICAL (0): none
+
+WARNING (5):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (48 files): _studio
+  [~] overnight PermissionError: job_daily_harvest.py log file
+  [~] charmap codec errors in auto-answer (8 questions w/ unicode arrows)
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor cycle:** 0 active agents, work queue empty, no dispatched tasks.
+
+**Completed background tasks (from overnight inbox item):**
+- SRE ran at 03:31 this morning and flagged 2 overnight failures:
+  1. **job_daily_harvest.py** — `PermissionError` on its log file (likely locked by another process or stale handle)
+  2. **auto-answer** — `charmap` encoding errors on 8 questions containing unicode arrow characters (`→`)
+
+**Actionable items for this session:**
+1. Fix `charmap` codec bug in auto-answer (use `utf-8` encoding or strip unicode arrows)
+2. Fix log file permission error in `job_daily_harvest.py`
+3. Commit `_studio` (48 files), `job-match`, and `listing-optimizer`
+
+Want me to tackle any of these now?
+[Tue 03/31/2026 20:30:01.41] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12
+  ✓ Claude Code 2.1.88
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini: UP
+  ✓ OpenRouter: UP
+  ✓ YouTube key: SET
+  ✓ Ollama: UP — 2 models (gemma3:4b)
+
+PROJECTS (13 checked)
+  ! UNCOMMITTED (49 files): _studio
+  ! UNCOMMITTED (1 file): job-match
+  ! UNCOMMITTED (1 file): listing-optimizer
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ None pending
+
+VERDICT: DEGRADED (3 uncommitted repos)
+```
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (4):
+  [~] UNCOMMITTED (49 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] PENDING inbox: overnight job_daily_harvest PermissionError +
+      auto-answer charmap encoding errors (8 questions)
+
+WATCH (1):
+  [-] session-startup.py: python-dotenv parse errors on startup
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE SUMMARY
+
+- **Last run:** 2026-03-31 20:01 (automated, every 30 min)
+- **Queue depth:** 0 — nothing dispatched
+- **Dispatched tasks:** 0
+- **Pending inbox item** (from overnight, early AM 2026-03-31):
+  - `job_daily_harvest.py` — PermissionError on log file
+  - `auto-answer` — charmap encoding errors on 8 questions (Unicode arrow chars)
+
+**Recurring pattern:** SRE has flagged the same 3 dirty repos every 30 min since ~18:00 today. The _studio repo alone has 49 uncommitted files — this is the primary noise source. Want to commit and clear these now?
+[Tue 03/31/2026 21:00:01.69] Supervisor check starting 
+[Tue 03/31/2026 21:30:01.51] Supervisor check starting 
+[Tue 03/31/2026 22:00:01.55] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 — OK
+- Node v24.14.0 — OK
+- npm 11.9.0 — OK
+- Python 3.13.12 — OK (above expected)
+- Repomix 1.12.0 — OK
+- Ollama 0.19.0 — UP, 2 models (gemma3:4b + 1 other)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini key: SET / Gemini: UP
+- OpenRouter key: SET
+- YouTube key: SET
+- Ollama: UP
+
+**PROJECTS (13 checked)**
+- ! UNCOMMITTED (1 file): job-match
+- ! UNCOMMITTED (1 file): listing-optimizer
+- ! UNCOMMITTED (64 files): _studio
+- 10 projects clean
+
+**STUDIO FILES** — All critical files present
+
+**MOBILE ANSWERS** — None pending
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (64 files): _studio
+
+WATCH (0): none
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- Ollama: UP | Gemini: available | Work queue: 0 | Active agents: 0 (no recent gateway log entries)
+- **Heartbeat history**: sre-scout has been running and flagging DEGRADED on this same set of uncommitted repos since at least 19:31 today — 3+ automated cycles
+- **Supervisor inbox**: 1 item — SRE WARNING about uncommitted repos (PENDING)
+- **Task queue**: empty
+
+**No completed background tasks to report.** The scheduler has been running SRE health checks automatically (every 30 min) but finding the same 3 uncommitted repos each time. No other background work completed.
+
+**Recommended action**: Commit dirty repos — particularly `_studio` (64 files) which likely has the most meaningful changes.
+[Tue 03/31/2026 22:30:01.52] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 — OK
+- Node v24.14.0 — OK
+- npm 11.9.0 — OK
+- Python 3.13.12 — OK (expected 3.13.7, higher is fine)
+- Repomix 1.12.0 — OK
+- Ollama 0.19.0 — UP (2 models: gemma3:4b)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini: UP
+- OpenRouter: SET
+- YouTube key: SET
+- Ollama: UP
+
+**PROJECTS (13 checked)**
+- ! UNCOMMITTED (1 file): job-match
+- ! UNCOMMITTED (1 file): listing-optimizer
+- ! UNCOMMITTED (65 files): _studio
+- 10 projects clean
+
+**STUDIO FILES** — all critical files present
+
+**MOBILE ANSWERS** — none pending
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (65 files): _studio
+
+STRESS VERDICT: WARNING
+ACTION: Commit dirty repos
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- **Agents recently active:** none (gateway-log.txt shows no recent dispatches)
+- **Work queue:** empty
+- **Ollama:** UP, available for dispatch
+
+**Pending inbox item:** `[WARN] SRE WARNING — overnight job errors + dirty repos` — this has been sitting since earlier today. The overnight job failures (charmap + PermissionError) were logged but no resolution action taken.
+
+---
+
+## COMPLETED BACKGROUND TASKS
+
+No background tasks completed since last session. The SRE scheduled heartbeats ran automatically (Task Scheduler) every 30 min and consistently flagged the same 3 dirty repos throughout the day. No agent dispatches fired.
+
+**Recommended action:** Commit the dirty repos (`_studio` has 65 staged/unstaged files — largest delta). Want me to do that now?
+[Tue 03/31/2026 23:00:01.50] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 — OK
+- Node v24.14.0 — OK
+- npm 11.9.0 — OK
+- Python 3.13.12 — OK (minor patch above expected 3.13.7)
+- Repomix 1.12.0 — OK
+- Ollama 0.19.0 — UP (2 models loaded)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini key: SET — UP
+- OpenRouter key: SET — UP
+- YouTube key: SET
+- Ollama: UP — 2 models
+
+**PROJECTS (13 checked)**
+- `_studio` — UNCOMMITTED (65 files)
+- `job-match` — UNCOMMITTED (1 file)
+- `listing-optimizer` — UNCOMMITTED (1 file)
+- 10 projects clean
+
+**STUDIO FILES** — All critical files present
+
+**MOBILE ANSWERS** — No pending answers
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (65 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+
+WATCH (2):
+  [-] Python 3.13.12 vs expected 3.13.7 (minor patch, no action needed)
+  [-] No agent heartbeats via gateway-log — agents may not be running
+
+STRESS VERDICT: WARNING
+ACTION: Commit dirty repos
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+- Ollama: UP | Gemini: UP | Free tier: fully available
+- Work queue depth: 0 (no orchestrator-plan.json tasks queued)
+- Agents dispatched: 0 (nothing pending)
+- Supervisor inbox: 1 pending WARN item — `SRE WARNING — overnight job errors + dirty repos` (carried over from last session)
+
+**Background tasks completed:** No background agents ran between sessions. The existing supervisor inbox item confirms the dirty repo issue was flagged overnight but not yet resolved.
+
+**Recommended action this session:** Commit the dirty repos (`_studio` has 65 uncommitted files, `job-match` and `listing-optimizer` have 1 each). Want to run `/commit` on all three?
+[Tue 03/31/2026 23:30:01.47] Supervisor check starting 
+---
+
+## SRE SCOUT REPORT — 2026-03-31
+
+**TOOLS**
+- Git 2.53.0 — OK
+- Node v24.14.0 — OK
+- npm 11.9.0 — OK
+- Python 3.13.12 — OK
+- Claude Code 2.1.88 — OK (above expected 2.1.78)
+- Repomix 1.12.0 — OK
+- Ollama 0.19.0 — UP (2 models)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET
+- Gemini: UP
+- OpenRouter: SET
+- YouTube: SET
+- Ollama: UP — 2 models
+- Supabase: UP — no pending mobile answers
+
+**PROJECTS (13 checked)**
+- `!` UNCOMMITTED (1 file): job-match
+- `!` UNCOMMITTED (1 file): listing-optimizer
+- `!` UNCOMMITTED (65 files): _studio
+- 10 projects clean
+
+**STUDIO FILES** — All critical files present
+
+**MOBILE ANSWERS** — None pending
+
+**VERDICT: DEGRADED (3 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (0): none
+
+WARNING (3):
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+  [~] UNCOMMITTED (65 files): _studio
+
+STRESS VERDICT: WARNING
+ACTION: Commit dirty repos
+```
+
+---
+
+## SUPERVISOR CYCLE
+
+**Task queue:** Empty — nothing pending
+**Work queue depth:** 0 — no orchestrator plan tasks queued
+**Dispatched:** 0 tasks
+
+**Background task summary (from heartbeat log, last ~6 hours):**
+SRE Scout has been running on schedule (every 30 min). All cycles flagged the same 3 dirty repos consistently since ~17:30. Two background errors were flagged at 19:00–20:00:
+
+- `job_daily_harvest.py` — **PermissionError** on log file (overnight run)
+- `auto-answer` script — **charmap encoding error**
+
+These are logged in supervisor-inbox as 1 PENDING `WARN` item. Both are known recoverable errors (charmap → unicode_safe.py fix; PermissionError → likely file lock during overnight run).
+
+**Ready to work.** Want me to address the inbox item (fix the encoding/permission errors), or commit the dirty repos first?
+[Wed 04/01/2026  0:00:01.61] Supervisor check starting 
+[Wed 04/01/2026  0:30:01.57] Supervisor check starting 
+---
+
+```
+=== SRE SCOUT REPORT — 2026-04-01 ===
+
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12 (above expected)
+  ✓ Claude Code 2.1.88 (above expected)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 — UP (2 models)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET
+  ✓ OpenRouter key: SET
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ~ UNCOMMITTED (70 files): _studio
+  ~ UNCOMMITTED (1 file): job-match
+  ~ UNCOMMITTED (1 file): listing-optimizer
+  ✓ 10 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+
+MOBILE ANSWERS
+  ✓ No pending answers
+
+VERDICT: DEGRADED (3 uncommitted repos)
+
+=== STRESS REPORT ===
+CRITICAL (0): none
+WARNING (3):
+  [~] UNCOMMITTED (70 files): _studio
+  [~] UNCOMMITTED (1 file): job-match
+  [~] UNCOMMITTED (1 file): listing-optimizer
+WATCH (0): none
+STRESS VERDICT: WARNING
+```
+
+---
+
+**Supervisor Summary**
+
+Last cycle ran: `2026-03-31 23:31` — 0 tasks dispatched, queue empty.
+
+**Background tasks completed (from heartbeat/supervisor log):**
+- Overnight batch ran — logged a `PermissionError` + `charmap` encoding errors (1 PENDING inbox item from supervisor about this)
+- SRE ran 4x yesterday (22:01, 22:31, 23:01, 23:31) — all flagged same 3 dirty repos
+
+**Action needed:**
+1. The `_studio` repo has 70 uncommitted files — main drift risk. Ready to commit when you are.
+2. `job-match` and `listing-optimizer` each have 1 uncommitted file.
+3. The overnight PermissionError + charmap errors in the supervisor inbox — worth a look if you ran a scraper last night.
+[2026-04-01 00:58:58] Supervisor check starting
+[2026-04-01 00:59:00] Ollama: True | Gemini: False
+[2026-04-01 00:59:00] Work queue: 0 | Task queue: 0
+[2026-04-01 00:59:00] Active agents: none
+[2026-04-01 00:59:00] Dispatched: 0 tasks
+[2026-04-01 00:59:01] Supervisor check complete
+[Wed 04/01/2026  1:00:01.60] Supervisor check starting 
+[2026-04-01 01:00:08] Supervisor check starting
+[2026-04-01 01:00:12] Ollama: True | Gemini: False
+[2026-04-01 01:00:12] Work queue: 0 | Task queue: 0
+[2026-04-01 01:00:12] Active agents (25h): nightly-rollup, supervisor
+[2026-04-01 01:00:12] Dispatched: 0 tasks
+[2026-04-01 01:00:12] Supervisor check complete
+[Wed 04/01/2026  1:00:12.48] Done 
+[Wed 04/01/2026  1:30:01.82] Supervisor check starting 
+[2026-04-01 01:30:02] Supervisor check starting
+[2026-04-01 01:30:04] Ollama: True | Gemini: False
+[2026-04-01 01:30:04] Work queue: 0 | Task queue: 0
+[2026-04-01 01:30:04] Active agents (25h): nightly-rollup, supervisor
+[2026-04-01 01:30:04] Dispatched: 0 tasks
+[2026-04-01 01:30:05] Supervisor check complete
+[Wed 04/01/2026  1:30:05.21] Done 

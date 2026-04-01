@@ -1,31 +1,27 @@
-import sys, re
+import sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-content = open('G:/My Drive/Projects/_studio/sidebar-agent.html', encoding='utf-8', errors='replace').read()
-lines = content.split('\n')
 
-# Find any line with only '} catch' that follows another '} catch' within 5 lines
-problems = []
-for i in range(1, len(lines)):
-    if re.search(r'^\s*\}\s*catch\s*\(', lines[i]):
-        # Look back up to 8 lines for another catch
-        for j in range(max(0,i-8), i):
-            if re.search(r'^\s*\}\s*catch\s*\(', lines[j]):
-                problems.append((j+1, i+1))
-                break
+c = open('G:/My Drive/Projects/_studio/auto_answer_gemini.py', encoding='utf-8', errors='replace').read()
+lines = c.split('\n')
+print('=== auto_answer_gemini.py encoding/write_status ===')
+for i, l in enumerate(lines, 1):
+    if any(x in l for x in ['encoding', 'charmap', 'write_status', 'status', 'open(', 'errors=']):
+        print(str(i) + ': ' + l.strip()[:90])
 
-if problems:
-    print('DUPLICATE CATCHES FOUND:')
-    for a, b in problems:
-        print('  Lines ' + str(a) + ' and ' + str(b))
-        for k in range(a-2, b+2):
-            if 0 <= k < len(lines):
-                print('    ' + str(k+1) + ': ' + lines[k])
-else:
-    print('No duplicate catch blocks found - syntax OK')
-
-# Also check brace balance in JS section
-js = content[content.find('<script>\n// ═══ STATE'):]
-js = js[:js.rfind('</script>')]
-ob = js.count('{')
-cb = js.count('}')
-print('JS brace balance: open=' + str(ob) + ' close=' + str(cb) + ' diff=' + str(ob-cb))
+# Also check if the scheduler logs dir exists
+import os
+log_dir = 'G:/My Drive/Projects/_studio/scheduler/logs'
+print()
+print('Scheduler logs dir exists:', os.path.exists(log_dir))
+if os.path.exists(log_dir):
+    logs = os.listdir(log_dir)
+    print('Log files:', logs[:10])
+    # Check most recent overnight-job-delta log for errors
+    for f in logs:
+        if 'job-delta' in f or 'harvest' in f:
+            fpath = log_dir + '/' + f
+            content = open(fpath, encoding='utf-8', errors='replace').read()
+            lines2 = content.strip().split('\n')
+            print()
+            print('Last 5 lines of ' + f + ':')
+            for l in lines2[-5:]: print('  ' + l)

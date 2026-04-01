@@ -1,0 +1,55 @@
+﻿{
+    "guides":  {
+                   "network_theory_expert":  {
+                                                 "domain":  "network_science",
+                                                 "name":  "Network Theory Expert",
+                                                 "evaluates_for":  "thesis rigor scale-free definitions oversimplification"
+                                             },
+                   "mathematical_rigor_reviewer":  {
+                                                       "domain":  "mathematics",
+                                                       "name":  "Mathematical Rigor Reviewer",
+                                                       "evaluates_for":  "mathematical correctness logical flow proof gaps"
+                                                   },
+                   "systems_thinking_validator":  {
+                                                      "domain":  "systems_science",
+                                                      "name":  "Systems Thinking Validator",
+                                                      "evaluates_for":  "emergence universality claims feedback loops"
+                                                  },
+                   "clarity_and_accessibility_checker":  {
+                                                             "domain":  "communication",
+                                                             "name":  "Clarity \u0026 Accessibility Checker",
+                                                             "evaluates_for":  "jargon density fluff detection logical progression"
+                                                         },
+                   "practical_application_auditor":  {
+                                                         "domain":  "real_world_applications",
+                                                         "name":  "Practical Application Auditor",
+                                                         "evaluates_for":  "examples accurate not cherry-picked counterexamples"
+                                                     },
+                   "copyeditor_and_style":  {
+                                                "domain":  "editing_and_prose",
+                                                "name":  "Copyeditor \u0026 Style Reviewer",
+                                                "scoring_rubric":  {
+                                                                       "score_6_7":  "Generally clear with minor repetition or occasional jargon that needs simplification",
+                                                                       "score_4_5":  "Some sections are dense or unclear, inconsistent terminology, choppy pacing in places",
+                                                                       "score_8_10":  "Prose flows naturally, terminology consistent, complex ideas explained accessibly, pacing builds momentum, no unnecessary verbosity",
+                                                                       "score_below_4":  "Prose is hard to follow, inconsistent voice, excessive jargon without justification"
+                                                                   },
+                                                "evaluates_for":  [
+                                                                      "prose clarity and flow",
+                                                                      "sentence-level writing quality",
+                                                                      "consistency in terminology and voice",
+                                                                      "pacing and readability",
+                                                                      "unnecessary jargon or verbosity",
+                                                                      "structural coherence of argument"
+                                                                  ],
+                                                "knowledge_test":  {
+                                                                       "q4":  "What editorial principles make dense material accessible?",
+                                                                       "q1":  "What makes a technical explanation clear vs. confusing?",
+                                                                       "q3":  "When is complexity warranted vs. when does it obscure?",
+                                                                       "q2":  "How do you maintain consistent voice across multiple chapters?"
+                                                                   }
+                                            }
+               },
+    "_description":  "Technical Peer Review Guides",
+    "_schema":  "1.0"
+}

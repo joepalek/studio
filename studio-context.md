@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-03-31 10:00 | Auto-built by generate-context.py
-Next regeneration: 2026-03-31 18:00 (approximate — runs at every session start)
+Generated: 2026-04-01 00:30 | Auto-built by generate-context.py
+Next regeneration: 2026-04-01 08:30 (approximate — runs at every session start)
 Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
@@ -964,29 +964,29 @@ If it does:
       id: proactive_001
       question: Should the platform be offered as SaaS to other job seekers or stay personal/portfolio use?
       context: Determines whether to add billing, multi-user accounts, and marketing infrastructure. Significant scope difference.
-      answer: None
-      answered_date: None
+      answer: Both — single platform, role-based login. Job seekers get seeker view, employers get employer view. SaaS model with login-gated roles.
+      answered_date: 2026-03-31T10:36:24
       unlocks: Architecture decisions around multi-tenancy and billing
     - 
       id: proactive_002
       question: Should employer portal be prioritized before or after scraping engine?
       context: Employer side is already partially built. Scraping engine is what feeds job seekers real data. Both are needed for a complete product.
-      answer: None
-      answered_date: None
+      answer: Scraping engine first. Employer portal is mocked — leave it mocked until scraping produces usable results.
+      answered_date: 2026-03-31T10:36:24
       unlocks: Build sequence for next 5 sessions
     - 
       id: proactive_003
       question: For the scam database â€” should it be private to your platform or eventually shared/open source?
       context: Shared scam database becomes a community moat. Private keeps it proprietary. Open source builds trust and contributions.
-      answer: None
-      answered_date: None
+      answer: DEFERRED. Default private. Risk of publishing = giving scammers a detection-evasion map. Will revisit once platform has enough data to evaluate whether sharing has net positive value.
+      answered_date: 2026-03-31T10:36:24
       unlocks: Scam database architecture and data sharing strategy
     - 
       id: proactive_004
       question: Should job ratings be shown to users in v1 or held back until v2?
       context: Showing ratings adds UI complexity and requires calibrating the rating system. Hiding them keeps v1 cleaner but reduces user confidence in results.
-      answer: None
-      answered_date: None
+      answer: Build dual-axis rating in v1. Axis 1 = geo proximity by zip radius: green (in range), orange (outside), red (far but matching). Axis 2 = job match score box: green/orange/red. Composite shown as color pair (green/green, green/orange, etc). Low/low combos suppressed from results.
+      answered_date: 2026-03-31T10:36:24
       unlocks: Rating display UI and calibration decisions
   autonomous_backlog: 
     - 
@@ -1207,10 +1207,10 @@ If it does:
       confidence: 90%
       confidence_reason: Building for yourself first is faster and gives you real feedback before committing to multi-user architecture.
       depends_on: None
-      status: pending
-      answer: None
-      resolved_by: None
-      resolved_date: None
+      status: resolved
+      answer: Personal first — build and validate on Joe's own 572 listings. Productize decision deferred until tool proves value on real inventory.
+      resolved_by: joe
+      resolved_date: 2026-03-31T10:39:52
       created: 2026-03-12
       expires_after_sessions: 2
       sessions_pending: 0
@@ -1225,10 +1225,10 @@ If it does:
       confidence: 95%
       confidence_reason: CSV batch processing is the highest leverage use case given existing inventory size.
       depends_on: None
-      status: pending
-      answer: None
-      resolved_by: None
-      resolved_date: None
+      status: resolved
+      answer: eBay bulk export CSV only — primary input format.
+      resolved_by: joe
+      resolved_date: 2026-03-31T10:45:51
       created: 2026-03-12
       expires_after_sessions: 2
       sessions_pending: 0
@@ -1237,22 +1237,22 @@ If it does:
       id: proactive_001
       question: What are your SKU prefix conventions for physical storage location tracking?
       context: Optimizer needs to preserve or understand existing SKU format to not break your storage system.
-      answer: None
-      answered_date: None
+      answer: Location-based codes (e.g. BOX-01, BIN-A3). Optimizer must preserve existing SKU values exactly — do not modify or reformat them.
+      answered_date: 2026-03-31T10:41:46
       unlocks: SKU handling logic
     - 
       id: proactive_002
       question: Which categories make up the majority of your 572 listings?
       context: Category-specific title rules â€” e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first.
-      answer: None
-      answered_date: None
+      answer: PARTIAL — confirmed: vintage clothing, electronics, books/media, home decor. Full category breakdown requires pulling eBay report — categories shift over time. Build optimization rules for these four first; add more after report review.
+      answered_date: 2026-03-31T10:41:46
       unlocks: Category-specific optimization rules
     - 
       id: proactive_003
       question: Should the optimizer suggest a price adjustment based on recent eBay sold data?
       context: Adds significant value but requires eBay API access. Could share that infrastructure with Arbitrage Pulse.
-      answer: None
-      answered_date: None
+      answer: Yes — include price suggestions based on eBay sold data. Share eBay API integration with Arbitrage Pulse.
+      answered_date: 2026-03-31T10:39:52
       unlocks: Pricing feature scope and eBay API integration
   autonomous_backlog: 
     - 
@@ -2743,4 +2743,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-03-31 10:00
+End of context. Generated: 2026-04-01 00:30

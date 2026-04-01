@@ -1,17 +1,12 @@
 {
-  "timestamp": "2026-03-31T10:02:04.261280",
+  "timestamp": "2026-04-01T00:32:23.300511",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (84 files): _studio \u2014 commit needed",
-    "overnight-job-delta.log: PermissionError on log file write",
-    "overnight-auto-answer: 29 of 37 questions escalated (encoding issues overnight)",
-    "Heartbeat: only 2 recent agents \u2014 most agents not writing heartbeat"
+    "UNCOMMITTED (1 files): job-match",
+    "UNCOMMITTED (1 files): listing-optimizer",
+    "UNCOMMITTED (70 files): _studio"
   ],
-  "watch": [
-    "vector-reindex ran 03-30 21:32 \u2014 may need fresh run tonight",
-    "ghost-book-rescan.log stale (03-22)",
-    "overnight-vintage-agent.log stale (03-30)"
-  ],
-  "action_required": "Commit _studio, fix job-delta PermissionError, review auto-answer escalations"
+  "watch": [],
+  "action_required": "Commit dirty repos: _studio (70 files), job-match, listing-optimizer"
 }

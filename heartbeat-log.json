@@ -23,6 +23,12 @@
       "agent": "nightly-rollup",
       "status": "flagged",
       "notes": "[nightly-rollup] YELLOW 57/100 — digest written"
+    },
+    {
+      "date": "2026-04-01T01:30:05.137831",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=False"
     }
   ]
 }

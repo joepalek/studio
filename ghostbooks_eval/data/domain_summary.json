@@ -1,0 +1,42 @@
+{
+  "physics_thermodynamics": {
+    "book_count": 4,
+    "avg_composite_score": 5.0,
+    "signal_strength": "LOW"
+  },
+  "information_computation": {
+    "book_count": 76,
+    "avg_composite_score": 6.66,
+    "signal_strength": "HIGH"
+  },
+  "economics_game_theory": {
+    "book_count": 7,
+    "avg_composite_score": 5.09,
+    "signal_strength": "LOW"
+  },
+  "epistemology_philosophy_science": {
+    "book_count": 33,
+    "avg_composite_score": 5.16,
+    "signal_strength": "LOW"
+  },
+  "networks_emergence": {
+    "book_count": 14,
+    "avg_composite_score": 8.13,
+    "signal_strength": "HIGH"
+  },
+  "systems_complexity": {
+    "book_count": 31,
+    "avg_composite_score": 7.67,
+    "signal_strength": "HIGH"
+  },
+  "organizational_behavioral": {
+    "book_count": 8,
+    "avg_composite_score": 5.08,
+    "signal_strength": "LOW"
+  },
+  "cognitive_ai": {
+    "book_count": 50,
+    "avg_composite_score": 5.34,
+    "signal_strength": "LOW"
+  }
+}

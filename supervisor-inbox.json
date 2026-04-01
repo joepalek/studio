@@ -21,6 +21,15 @@
     "status": "PENDING"
   },
   {
+    "id": "nightly-rollup-20260401",
+    "source": "nightly-rollup",
+    "type": "audit",
+    "urgency": "WARN",
+    "title": "Nightly Rollup — 2026-04-01 — YELLOW",
+    "finding": "Score: 57/100. 2 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
+    "status": "PENDING"
+  },
+  {
     "id": "supervisor-cycle-202604010100",
     "source": "supervisor-cycle",
     "type": "status",
@@ -31,12 +40,13 @@
     "status": "INFO"
   },
   {
-    "id": "nightly-rollup-20260401",
-    "source": "nightly-rollup",
-    "type": "audit",
-    "urgency": "WARN",
-    "title": "Nightly Rollup — 2026-04-01 — YELLOW",
-    "finding": "Score: 57/100. 2 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
-    "status": "PENDING"
+    "id": "supervisor-cycle-202604010130",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-01 01:30",
+    "finding": "0 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
+    "dispatched": [],
+    "status": "INFO"
   }
 ]

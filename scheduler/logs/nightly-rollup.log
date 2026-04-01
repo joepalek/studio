@@ -1,0 +1,22 @@
+[2026-04-01 01:00:02] Nightly rollup starting
+[2026-04-01 01:00:02] Audit: 0 entries, 0 gate fails
+[2026-04-01 01:00:02] Check-ins: 1 agents in, 4 missed: ['stress-tester', 'janitor', 'git-scout', 'sre-scout']
+[2026-04-01 01:00:02] Inbox: 0 pending | Flags: 1 pending
+[2026-04-01 01:00:02] Health: RED 37/100 — 1 agents in | missed: stress-tester, janitor, git-scout, sre-scout | -10 missed agent: stress-tester
+[2026-04-01 01:00:02] Digest entry written to daily-digest.json
+[2026-04-01 01:00:02] Supervisor briefing written to supervisor-inbox.json
+[2026-04-01 01:00:02] Heartbeat written
+[2026-04-01 01:00:02] session-handoff.md updated
+[2026-04-01 01:00:02] Audit entry written
+[2026-04-01 01:00:02] Nightly rollup complete: RED 37/100
+[2026-04-01 01:04:47] Nightly rollup starting
+[2026-04-01 01:04:47] Audit: 1 entries, 0 gate fails
+[2026-04-01 01:04:47] Check-ins: 2 agents in, 4 missed: ['stress-tester', 'janitor', 'git-scout', 'sre-scout']
+[2026-04-01 01:04:47] Inbox: 1 pending | Flags: 1 pending
+[2026-04-01 01:04:47] Health: YELLOW 57/100 â€” 2 agents in | missed: stress-tester, janitor, git-scout, sre-scout | -10 missed agent: stress-tester
+[2026-04-01 01:04:47] Digest entry written to daily-digest.json
+[2026-04-01 01:04:47] Supervisor briefing written to supervisor-inbox.json
+[2026-04-01 01:04:47] Heartbeat written
+[2026-04-01 01:04:47] session-handoff.md updated
+[2026-04-01 01:04:48] Audit entry written
+[2026-04-01 01:04:48] Nightly rollup complete: YELLOW 57/100

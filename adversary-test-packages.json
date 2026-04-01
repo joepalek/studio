@@ -1,0 +1,27 @@
+﻿{
+    "_schema":  "1.0",
+    "_description":  "Adversary Test Packages - Pre-configured peer review panel combos for stress-testing",
+    "packages":  {
+                     "complete_technical_stress_test":  {
+                                                            "name":  "Complete Technical Stress Test",
+                                                            "description":  "Full rigor. All 5 technical guides + adversarial lens. Most comprehensive validation before writing.",
+                                                            "guides":  [
+                                                                           "network_theory_expert",
+                                                                           "mathematical_rigor_reviewer",
+                                                                           "systems_thinking_validator",
+                                                                           "practical_application_auditor",
+                                                                           "clarity_and_accessibility_checker",
+                                                                           "copyeditor_and_style"
+                                                                       ],
+                                                            "validation_objectives":  [
+                                                                                          "Is the thesis logically sound and rigorous?",
+                                                                                          "Are claims properly supported by evidence?",
+                                                                                          "Is it novel or repackaging existing work?",
+                                                                                          "Can it be clearly explained without fluff?",
+                                                                                          "Are real-world applications grounded?"
+                                                                                      ],
+                                                            "recommendation_threshold":  7.5,
+                                                            "status":  "ready"
+                                                        }
+                 }
+}
