@@ -51,7 +51,7 @@ mob_items = mobile_inbox if isinstance(mobile_inbox, list) else mobile_inbox.get
 inbox_items = []
 for i in sup_items:
     if isinstance(i, dict) and i.get("status") not in ("RESOLVED", "resolved"):
-        inbox_items.append(sanitize({"id": i.get("id", "sup-" + str(len(inbox_items))), "title": i.get("title","Untitled"), "finding": i.get("finding","")[:150], "urgency": i.get("urgency","INFO"), "date": i.get("date",""), "source": "supervisor"}))
+        inbox_items.append(sanitize({"id": i.get("id", "sup-" + str(len(inbox_items))), "title": i.get("title","Untitled")[:80], "finding": i.get("finding","")[:80], "urgency": i.get("urgency","INFO"), "date": i.get("date",""), "source": "supervisor"}))
 RESOLVED_STATUSES = ("resolved","RESOLVED","auto-resolved","build","done","DONE")
 for i in mob_items:
     if isinstance(i, dict) and i.get("status") not in RESOLVED_STATUSES:
@@ -59,13 +59,13 @@ for i in mob_items:
         title = i.get("question", i.get("title",""))
         if "WHITEBOARD" in title or i.get("id","").startswith("wb-"):
             continue
-        inbox_items.append(sanitize({"id": i.get("id","mob-"+str(len(inbox_items))), "title": title[:100], "finding": i.get("context",i.get("description",""))[:100], "urgency": "WARN" if i.get("priority")=="high" else "INFO", "date": i.get("created_at",i.get("date","")), "source": "mobile"}))
+        inbox_items.append(sanitize({"id": i.get("id","mob-"+str(len(inbox_items))), "title": title[:80], "finding": i.get("context",i.get("description",""))[:80], "urgency": "WARN" if i.get("priority")=="high" else "INFO", "date": i.get("created_at",i.get("date","")), "source": "mobile"}))
 
 wb_items = whiteboard.get("items", [])
 wb_scored = sorted([i for i in wb_items if i.get("gemini_score")], key=lambda x: x.get("gemini_score",{}).get("total_score",0), reverse=True)
-wb_top = [sanitize({"title": i.get("title",""), "description": (i.get("description","") or "")[:80], "score": i.get("gemini_score",{}).get("total_score",0), "action": i.get("gemini_score",{}).get("recommended_action","")}) for i in wb_scored[:10]]
+wb_top = [sanitize({"title": i.get("title","")[:60], "description": (i.get("description","") or "")[:60], "score": i.get("gemini_score",{}).get("total_score",0), "action": i.get("gemini_score",{}).get("recommended_action","")}) for i in wb_scored[:10]]
 
-intel_clean = intel_summary.encode("ascii","replace").decode("ascii")[:2000].replace("\\","\\\\").replace("`","'")
+intel_clean = intel_summary.encode("ascii","replace").decode("ascii")[:800].replace("\\","\\\\").replace("`","'")
 assets_clean = sanitize(asset_log.get("assets",[]))
 services_clean = sanitize(services.get("categories",{}))
 services_date  = services.get("date", today)
