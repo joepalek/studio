@@ -30,16 +30,6 @@
     "status": "PENDING"
   },
   {
-    "id": "supervisor-cycle-202604010100",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 01:00",
-    "finding": "0 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
-    "dispatched": [],
-    "status": "INFO"
-  },
-  {
     "id": "supervisor-cycle-202604010130",
     "source": "supervisor-cycle",
     "type": "status",
@@ -47,6 +37,70 @@
     "title": "Supervisor Cycle — 2026-04-01 01:30",
     "finding": "0 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
+    "status": "INFO"
+  },
+  {
+    "id": "supervisor-cycle-202604010137",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-01 01:37",
+    "finding": "3 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
+    "dispatched": [
+      {
+        "agent": "_studio",
+        "task": "Commit dirty repos: _studio(122f)",
+        "tier": "ollama",
+        "cost": 0,
+        "source": "orchestrator-plan"
+      },
+      {
+        "agent": "whiteboard",
+        "task": "BUILD: Higgsfield Original Series — Backwards Design",
+        "tier": "ollama",
+        "cost": 0,
+        "source": "orchestrator-plan"
+      },
+      {
+        "agent": "whiteboard",
+        "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+        "tier": "ollama",
+        "cost": 0,
+        "source": "orchestrator-plan"
+      }
+    ],
+    "status": "INFO"
+  },
+  {
+    "id": "supervisor-cycle-202604010200",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-01 02:00",
+    "finding": "3 tasks dispatched | 4 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
+    "dispatched": [
+      {
+        "agent": "_studio",
+        "task": "Commit dirty repos: _studio(122f)",
+        "tier": "ollama",
+        "cost": 0,
+        "source": "orchestrator-plan"
+      },
+      {
+        "agent": "whiteboard",
+        "task": "BUILD: Higgsfield Original Series — Backwards Design",
+        "tier": "ollama",
+        "cost": 0,
+        "source": "orchestrator-plan"
+      },
+      {
+        "agent": "whiteboard",
+        "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+        "tier": "ollama",
+        "cost": 0,
+        "source": "orchestrator-plan"
+      }
+    ],
     "status": "INFO"
   }
 ]

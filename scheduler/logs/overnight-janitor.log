@@ -1,0 +1,13 @@
+[2026-04-01 01:41:15] Janitor starting
+[2026-04-01 01:41:21] Removed 4 __pycache__ dirs
+[2026-04-01 01:41:21] Removed temp scripts: find_tabs.py, full_audit.py, count_blocks.py, find_brace.py, check_scripts.py, audit_agents.py
+[2026-04-01 01:41:21] Orphaned bat files (no matching XML task): orchestrator-briefing.bat, overnight-agency-build.bat, overnight-ai-services-rankings.bat, overnight-sidebar-inject.bat, start-bridge.bat, game_archaeology_weekly.bat, overnight-ai-intel.bat, overnight-check-drift.bat, overnight-inbox-manager.bat, overnight-janitor.bat
+[2026-04-01 01:41:30] Janitor report saved. Status: flagged
+[2026-04-01 01:41:30] Janitor complete — flagged
+[Wed 04/01/2026  1:57:16.97] Janitor starting 
+[2026-04-01 01:57:17] Janitor starting
+[2026-04-01 01:57:24] Removed 1 __pycache__ dirs
+[2026-04-01 01:57:24] Orphaned bat files (no matching XML task): orchestrator-briefing.bat, overnight-agency-build.bat, overnight-ai-services-rankings.bat, overnight-sidebar-inject.bat, start-bridge.bat, game_archaeology_weekly.bat, overnight-ai-intel.bat, overnight-check-drift.bat, overnight-inbox-manager.bat, overnight-janitor.bat, overnight-vector-reindex.bat
+[2026-04-01 01:57:33] Janitor report saved. Status: flagged
+[2026-04-01 01:57:33] Janitor complete — flagged
+[Wed 04/01/2026  1:57:33.15] Done 

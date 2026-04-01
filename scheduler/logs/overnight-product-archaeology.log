@@ -176,3 +176,36 @@ Scored 0 items. Saved whiteboard.json
 Pushed 3 top-10 items to mobile-inbox.json
 Done.
 [Tue 03/31/2026  2:00:02.18] Done 
+[Wed 04/01/2026  2:00:01.27] Product Archaeology starting 
+[2026-04-01 02:00:01] Product Archaeology starting
+[2026-04-01 02:00:02] KilledByGoogle: 0 products
+[2026-04-01 02:00:02] r/shutdownsaddened: 0 posts
+[2026-04-01 02:00:07] r/discontinued: 50 posts
+[2026-04-01 02:00:19] r/DeadApps: 25 posts
+[2026-04-01 02:00:24] Wayback Kickstarter: -1 results
+[2026-04-01 02:00:25] New items found: 2 | Total: 434
+[2026-04-01 02:00:25] Saved to product-archaeology-results.json
+[2026-04-01 02:00:25] Scoring top 20 via Gemini...
+[2026-04-01 02:00:25]   SCORE ERROR: Chromecast — HTTP Error 404: Not Found
+[2026-04-01 02:00:26]   SCORE ERROR: VPN by Google One — HTTP Error 404: Not Found
+[2026-04-01 02:00:28]   SCORE ERROR: YouTube Stories — HTTP Error 404: Not Found
+[2026-04-01 02:00:29]   SCORE ERROR: Google Album Archive — HTTP Error 404: Not Found
+[2026-04-01 02:00:30]   SCORE ERROR: Google Domains — HTTP Error 404: Not Found
+[2026-04-01 02:00:32]   SCORE ERROR: Jacquard — HTTP Error 404: Not Found
+[2026-04-01 02:00:33]   SCORE ERROR: Google Surveys — HTTP Error 404: Not Found
+[2026-04-01 02:00:34]   SCORE ERROR: Google Code Competitions — HTTP Error 404: Not Found
+[2026-04-01 02:00:36]   SCORE ERROR: Google Stadia — HTTP Error 404: Not Found
+[2026-04-01 02:00:37]   SCORE ERROR: Google Duo — HTTP Error 404: Not Found
+[2026-04-01 02:00:39]   SCORE ERROR: Android Auto for phone screens — HTTP Error 404: Not Found
+[2026-04-01 02:00:40]   SCORE ERROR: Google My Business (app) — HTTP Error 404: Not Found
+[2026-04-01 02:00:41]   SCORE ERROR: Cameos on Google — HTTP Error 404: Not Found
+[2026-04-01 02:00:42]   SCORE ERROR: YouTube Go — HTTP Error 404: Not Found
+[2026-04-01 02:00:44]   SCORE ERROR: Google Contributor — HTTP Error 404: Not Found
+[2026-04-01 02:00:45]   SCORE ERROR: Google Maps Coordinate — HTTP Error 404: Not Found
+[2026-04-01 02:00:46]   SCORE ERROR: Fitbit Coach — HTTP Error 404: Not Found
+[2026-04-01 02:00:47]   SCORE ERROR: Fitstar Yoga — HTTP Error 404: Not Found
+[2026-04-01 02:00:49]   SCORE ERROR: Google OnHub — HTTP Error 404: Not Found
+[2026-04-01 02:00:50]   SCORE ERROR: Chatbase — HTTP Error 404: Not Found
+[2026-04-01 02:00:51] Scored 0 items — saved to product-archaeology-scored.json
+[2026-04-01 02:00:51] Product Archaeology complete
+[Wed 04/01/2026  2:00:51.40] Done 

@@ -1,0 +1,33 @@
+[Wed 04/01/2026  2:00:00.41] Job source monthly discovery starting 
+[2026-04-01T02:00:00.887841] Monthly job source discovery starting
+
+Pass 1: Validating 74 seed boards...
+  1/74 -- 0 active
+  11/74 -- 5 active
+  21/74 -- 11 active
+  31/74 -- 19 active
+  41/74 -- 28 active
+  51/74 -- 38 active
+  61/74 -- 48 active
+  71/74 -- 57 active
+  Active: 59  Failed: 15
+
+Pass 2: CDX discovery (no keyword filter -- all job posting URLs)...
+  greenhouse: 199 new listing URLs
+  lever: 2 new listing URLs
+  ashby: ERROR - HTTP Error 504: Gateway Time-out
+  workable: 12 new listing URLs
+  smartrecruiters: 195 new listing URLs
+  whatnot: 1 new listing URLs
+  ebay: 2 new listing URLs
+  mercari: 194 new listing URLs
+  remoteok: 0 new listing URLs
+  wwr: 0 new listing URLs
+  indeed_company: ERROR - HTTP Error 404: Not Found
+  linkedin_jobs: ERROR - HTTP Error 404: Not Found
+  CDX total new: 605
+
+Registry saved: 664 total sources
+  Boards: 59  |  CDX pages: 605
+[2026-04-01T02:00:52.520149] Monthly discovery complete.
+[Wed 04/01/2026  2:00:52.57] Done 

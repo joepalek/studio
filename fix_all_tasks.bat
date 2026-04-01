@@ -6,7 +6,7 @@
 set STUDIO=G:\My Drive\Projects\_studio
 set SCHED=%STUDIO%\scheduler
 set USER=jpalek
-set PASS=PASSWORD
+set PASS=!Vagrancy1
 
 echo ==========================================
 echo STEP 1 — Fix /RU account on existing tasks

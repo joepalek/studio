@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-26T02:54:05",
+  "last_updated": "2026-04-01T01:57:49",
   "current_task": "",
   "completed_today": [
     "SRE health check run: CRITICAL resolved → all issues fixed",
@@ -21,7 +21,8 @@
     "supervisor.md updated — quota-aware mode, task-queue.json, sidebar-log.txt, daily summary protocol",
     "nit-fire-drill -- NIT fire drill complete_task test",
     "nit-fire-drill-complete -- NIT complete: 8/10 PASS, PARTIAL verdict. T05 inbox render, T06 claude CLI path.",
-    "check-drift -- 0/12 projects drift_risk HIGH"
+    "check-drift -- 0/12 projects drift_risk HIGH",
+    "inbox-manager daily sync: 56 active, 0 answers applied"
   ],
   "pending": [
     "run company registry pass1 again to test fixed sources",
@@ -51,5 +52,5 @@
     "job_match_registry_pass1": "BLOCKED — 0 companies: all 4 sources failed (now fixed, rerun needed)",
     "cdx_c2c_analysis": "COMPLETE — 18 entries (structure: date/site/claims)"
   },
-  "v": 104
+  "v": 108
 }

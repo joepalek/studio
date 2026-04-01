@@ -87,3 +87,26 @@ You've hit your limit · resets Mar 31, 5pm (America/Chicago)
 You've hit your limit · resets Mar 31, 5pm (America/Chicago)
 [2026-04-01 01:31:16] Git commit agent starting
 [2026-04-01 01:31:19]   _studio: 97 dirty files
+[2026-04-01 01:31:31]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 01:31:31]   _studio msg: chore: nightly auto-commit [_studio]
+[2026-04-01 01:31:34]   _studio commit failed: COMMIT BLOCKED: Actual API key value detected in staged changes.
+  Check staged 
+[2026-04-01 01:31:34]   _studio_vedic: 65 dirty files
+[2026-04-01 01:32:50]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 01:32:50]   _studio_vedic msg: chore: nightly auto-commit [_studio_vedic]
+[2026-04-01 01:33:33]   _studio_vedic: committed OK
+[2026-04-01 01:33:33]   ghost-book: 1 dirty files
+[2026-04-01 01:33:34]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 01:33:34]   ghost-book msg: chore: nightly auto-commit [ghost-book]
+[2026-04-01 01:33:34]   ghost-book: committed OK
+[2026-04-01 01:33:35]   job-match: 1 dirty files
+[2026-04-01 01:33:35]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 01:33:35]   job-match msg: chore: nightly auto-commit [job-match]
+[2026-04-01 01:33:36]   job-match: committed OK
+[2026-04-01 01:33:36]   listing-optimizer: 1 dirty files
+[2026-04-01 01:33:37]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 01:33:37]   listing-optimizer msg: chore: nightly auto-commit [listing-optimizer]
+[2026-04-01 01:33:37]   listing-optimizer: committed OK
+[2026-04-01 01:33:38] Done. Committed: 4 | Clean: 11 | Errors: 1
+[2026-04-01 01:33:38] Repos committed: _studio_vedic, ghost-book, job-match, listing-optimizer
+[2026-04-01 01:33:38] Errors in: _studio

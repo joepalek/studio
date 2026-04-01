@@ -1,5 +1,87 @@
 {
-  "agent_runnable": [],
+  "generated": "2026-04-01T01:37:00.420154",
+  "agent_runnable": [
+    {
+      "id": "task-git-commit",
+      "project": "_studio",
+      "action": "Commit dirty repos: _studio(122f)",
+      "agent": "git_commit.py",
+      "tier": "gemini",
+      "priority": "high",
+      "auto": true,
+      "created": "2026-04-01T01:37:00.402493"
+    },
+    {
+      "id": "task-wb-build:_higgsfield_or",
+      "project": "whiteboard",
+      "action": "BUILD: Higgsfield Original Series — Backwards Design",
+      "agent": "human_session",
+      "tier": "claude",
+      "priority": "high",
+      "score": 9,
+      "effort": "months",
+      "auto": false,
+      "created": "2026-04-01T01:37:00.408194"
+    },
+    {
+      "id": "task-wb-publish:_i've_played",
+      "project": "whiteboard",
+      "action": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "agent": "human_session",
+      "tier": "claude",
+      "priority": "medium",
+      "score": 8,
+      "effort": "months",
+      "auto": false,
+      "created": "2026-04-01T01:37:00.408209"
+    },
+    {
+      "id": "task-wb-research:_dupont_cor",
+      "project": "whiteboard",
+      "action": "RESEARCH: DuPont Corfam",
+      "agent": "human_session",
+      "tier": "claude",
+      "priority": "medium",
+      "score": 8,
+      "effort": "months",
+      "auto": false,
+      "created": "2026-04-01T01:37:00.408214"
+    },
+    {
+      "id": "task-wb-build:_bring_back_th",
+      "project": "whiteboard",
+      "action": "BUILD: Bring back the original SoBe Elixir drink line nationwide",
+      "agent": "human_session",
+      "tier": "claude",
+      "priority": "medium",
+      "score": 8,
+      "effort": "months",
+      "auto": false,
+      "created": "2026-04-01T01:37:00.408217"
+    },
+    {
+      "id": "task-wb-build:_ebay_item_ide",
+      "project": "whiteboard",
+      "action": "BUILD: eBay Item Identifier â€” Consensus Engine",
+      "agent": "human_session",
+      "tier": "claude",
+      "priority": "medium",
+      "score": 8,
+      "effort": "months",
+      "auto": false,
+      "created": "2026-04-01T01:37:00.408220"
+    },
+    {
+      "id": "task-stale-check",
+      "project": "_studio",
+      "action": "Investigate stale agents: VintageAgent (last ran 48h ago)",
+      "agent": "supervisor_check.py",
+      "tier": "python",
+      "priority": "medium",
+      "auto": true,
+      "created": "2026-04-01T01:37:00.417212"
+    }
+  ],
   "human_required": [
     {
       "project": "acuscan-ar",
@@ -46,7 +128,7 @@
     {
       "project": "CTW",
       "blockers": [
-        "Real portrait images not yet generated \u00e2\u20ac\u201d using SVG placeholders",
+        "Real portrait images not yet generated â€” using SVG placeholders",
         "Trait activation detector needs calibration against more test runs",
         "comfort bar still overcorrects downward under pressure"
       ]

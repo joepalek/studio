@@ -15700,3 +15700,23 @@ Last cycle ran: `2026-03-31 23:31` — 0 tasks dispatched, queue empty.
 [2026-04-01 01:30:04] Dispatched: 0 tasks
 [2026-04-01 01:30:05] Supervisor check complete
 [Wed 04/01/2026  1:30:05.21] Done 
+[2026-04-01 01:37:55] Supervisor check starting
+[2026-04-01 01:37:57] Ollama: True | Gemini: False
+[2026-04-01 01:37:57] Work queue: 7 | Task queue: 0
+[2026-04-01 01:37:57] Active agents (25h): nightly-rollup, supervisor
+[2026-04-01 01:37:57] Dispatched: 3 tasks
+[2026-04-01 01:37:57]   [ollama] _studio: Commit dirty repos: _studio(122f)
+[2026-04-01 01:37:57]   [ollama] whiteboard: BUILD: Higgsfield Original Series — Backwards Design
+[2026-04-01 01:37:57]   [ollama] whiteboard: PUBLISH: I've played and reviewed 1.000+ horror games, here 
+[2026-04-01 01:37:57] Supervisor check complete
+[Wed 04/01/2026  2:00:01.27] Supervisor check starting 
+[2026-04-01 02:00:01] Supervisor check starting
+[2026-04-01 02:00:04] Ollama: True | Gemini: False
+[2026-04-01 02:00:04] Work queue: 7 | Task queue: 0
+[2026-04-01 02:00:04] Active agents (25h): check-drift, janitor, nightly-rollup, supervisor
+[2026-04-01 02:00:04] Dispatched: 3 tasks
+[2026-04-01 02:00:04]   [ollama] _studio: Commit dirty repos: _studio(122f)
+[2026-04-01 02:00:04]   [ollama] whiteboard: BUILD: Higgsfield Original Series — Backwards Design
+[2026-04-01 02:00:04]   [ollama] whiteboard: PUBLISH: I've played and reviewed 1.000+ horror games, here 
+[2026-04-01 02:00:04] Supervisor check complete
+[Wed 04/01/2026  2:00:04.55] Done 

@@ -79,6 +79,28 @@
       "findings_count": 0,
       "notes": "YELLOW score=57/100 entries=1",
       "session_id": ""
+    },
+    {
+      "id": "ACT-20260401-0141-checkdrift-007",
+      "timestamp": "2026-04-01T01:41:10.665366",
+      "agent": "check-drift",
+      "action_type": "rollup",
+      "target": "supervisor-inbox.json",
+      "result": "clean",
+      "findings_count": 0,
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260401-0157-checkdrift-008",
+      "timestamp": "2026-04-01T01:57:49.427666",
+      "agent": "check-drift",
+      "action_type": "rollup",
+      "target": "supervisor-inbox.json",
+      "result": "clean",
+      "findings_count": 0,
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH",
+      "session_id": ""
     }
   ]
 }
