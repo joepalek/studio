@@ -16028,3 +16028,10 @@ Last cycle ran: `2026-03-31 23:31` — 0 tasks dispatched, queue empty.
 [2026-04-01 18:00:04] Dispatched: 0 tasks
 [2026-04-01 18:00:05] Supervisor check complete
 [Wed 04/01/2026 18:00:05.11] Done 
+[2026-04-01 18:21:19] Supervisor check starting
+[2026-04-01 18:21:21] Providers available (6): groq, cerebras, openrouter, mistral, gemini, ollama
+[2026-04-01 18:21:21] Degraded: gemini/gemini-2.0-flash-001 (defunct), gemini/gemini-flash-lite (defunct), gemini/gemini-1.5-pro (defunct)
+[2026-04-01 18:21:21] Work queue: 0 | Task queue: 0
+[2026-04-01 18:21:21] Active agents (25h): ai-intel-agent, ai-services-rankings, auto-answer-gemini, check-drift, git-commit, janitor, model-validator, nightly-rollup, product-archaeology, supervisor, vector-reindex
+[2026-04-01 18:21:21] Dispatched: 0 tasks
+[2026-04-01 18:21:21] Supervisor check complete

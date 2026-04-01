@@ -1329,6 +1329,186 @@
           "strategic_fit": 6
         }
       }
+    },
+    {
+      "id": "gh-sponsors-explore",
+      "title": "GitHub Trending: sponsors/explore",
+      "description": "Open-Source Frontier Voice AI",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948701"
+    },
+    {
+      "id": "gh-trending-developers",
+      "title": "GitHub Trending: trending/developers",
+      "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for tim",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948714"
+    },
+    {
+      "id": "gh-microsoft-VibeVoice",
+      "title": "GitHub Trending: microsoft/VibeVoice",
+      "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that b",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948717"
+    },
+    {
+      "id": "gh-apps-github-copilot-cli",
+      "title": "GitHub Trending: apps/github-copilot-cli",
+      "description": "Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the ga",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948719"
+    },
+    {
+      "id": "gh-google-research-timesfm",
+      "title": "GitHub Trending: google-research/timesfm",
+      "description": "The agent that grows with you",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948720"
+    },
+    {
+      "id": "gh-sponsors-luongnv89",
+      "title": "GitHub Trending: sponsors/luongnv89",
+      "description": "Hunt down social media accounts by username across social networks",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948722"
+    },
+    {
+      "id": "gh-luongnv89-claude-howto",
+      "title": "GitHub Trending: luongnv89/claude-howto",
+      "description": "A unified library of SOTA model optimization techniques like quantization, pruning, distillation, speculative decoding, ",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948724"
+    },
+    {
+      "id": "gh-PaddlePaddle-PaddleOCR",
+      "title": "GitHub Trending: PaddlePaddle/PaddleOCR",
+      "description": "PyTorch building blocks for the OLMo ecosystem",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948725"
+    },
+    {
+      "id": "gh-apps-github-actions",
+      "title": "GitHub Trending: apps/github-actions",
+      "description": "\u2b50AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.\ud83c\udfaf \u544a\u522b\u4fe1\u606f\u8fc7\u8f7d\uff0c\u4f60\u7684 AI \u8206\u60c5\u76d1\u63a7",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948729"
+    },
+    {
+      "id": "gh-NousResearch-hermes-agent",
+      "title": "GitHub Trending: NousResearch/hermes-agent",
+      "description": "ChatDev 2.0: Dev All through LLM-powered Multi-Agent Collaboration",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948731"
+    },
+    {
+      "id": "gh-sherlock-project-sherlock",
+      "title": "GitHub Trending: sherlock-project/sherlock",
+      "description": "A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .N",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948733"
+    },
+    {
+      "id": "gh-NVIDIA-Model-Optimizer",
+      "title": "GitHub Trending: NVIDIA/Model-Optimizer",
+      "description": "Supercharge Your LLM with the Fastest KV Cache Layer",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948734"
+    },
+    {
+      "id": "gh-allenai-OLMo-core",
+      "title": "GitHub Trending: allenai/OLMo-core",
+      "description": "A python CAD programming library",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948736"
+    },
+    {
+      "id": "gh-sansan0-TrendRadar",
+      "title": "GitHub Trending: sansan0/TrendRadar",
+      "description": "Netflix-level subtitle cutting, translation, alignment, and even dubbing - one-click fully automated AI video subtitle t",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948738"
+    },
+    {
+      "id": "gh-OpenBMB-ChatDev",
+      "title": "GitHub Trending: OpenBMB/ChatDev",
+      "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-01T18:20:54.948740"
     }
   ]
 }

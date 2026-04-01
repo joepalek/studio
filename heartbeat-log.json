@@ -413,6 +413,24 @@
       "agent": "janitor",
       "status": "flagged",
       "notes": "truncated=0 old=0 caches=3 large=0"
+    },
+    {
+      "date": "2026-04-01T18:20:55.108232",
+      "agent": "git-commit",
+      "status": "clean",
+      "notes": "committed=2 errors=0"
+    },
+    {
+      "date": "2026-04-01T18:21:13.730931",
+      "agent": "janitor",
+      "status": "flagged",
+      "notes": "truncated=0 old=0 caches=1 large=0"
+    },
+    {
+      "date": "2026-04-01T18:21:21.353886",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
     }
   ]
 }

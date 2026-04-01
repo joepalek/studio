@@ -30,3 +30,8 @@
 [2026-04-01 18:17:27] Orphaned bat files (no matching XML task): orchestrator-briefing.bat
 [2026-04-01 18:17:35] Janitor report saved. Status: flagged
 [2026-04-01 18:17:35] Janitor complete — flagged
+[2026-04-01 18:21:00] Janitor starting
+[2026-04-01 18:21:05] Removed 1 __pycache__ dirs
+[2026-04-01 18:21:05] Orphaned bat files (no matching XML task): orchestrator-briefing.bat
+[2026-04-01 18:21:13] Janitor report saved. Status: flagged
+[2026-04-01 18:21:13] Janitor complete — flagged

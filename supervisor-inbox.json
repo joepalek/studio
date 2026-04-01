@@ -200,16 +200,6 @@
     "date": "2026-04-01T11:48:11.691577"
   },
   {
-    "id": "supervisor-cycle-202604011700",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 17:00",
-    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
-    "dispatched": [],
-    "status": "INFO"
-  },
-  {
     "id": "supervisor-cycle-202604011730",
     "source": "supervisor-cycle",
     "type": "status",
@@ -226,6 +216,16 @@
     "urgency": "INFO",
     "title": "Supervisor Cycle — 2026-04-01 18:00",
     "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "dispatched": [],
+    "status": "INFO"
+  },
+  {
+    "id": "supervisor-cycle-202604011821",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-01 18:21",
+    "finding": "0 tasks dispatched | 11 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   }
