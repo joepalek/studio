@@ -1,230 +1,389 @@
 # STUDIO SYSTEM — MASTER AGENT & TOOL LIST
-Last updated: 2026-03-16
+Last updated: 2026-04-01
 
 Legend:
-  [BUILT]    = exists and working
-  [FILE]     = .md file created, not yet deployed
-  [SETUP]    = needs setup steps, not code
-  [BUILD]    = needs to be built (code or .md file)
-  [RESEARCH] = promising, needs deeper evaluation before committing
-  [DEFER]    = valid but not needed until later milestone
-  [BLOCKED]  = waiting on external dependency
+  [RUNNING]  = live, executing on schedule, producing output
+  [BUILT]    = script exists and works, not yet scheduled
+  [UPDATE]   = running but needs spec change per latest vision
+  [BUILD]    = needs to be built
+  [PARKED]   = exists, deliberately paused
+  [DISABLED] = task exists, turned off, ready to re-enable
+  [DELETE]   = remove from system
 
 Priority:
-  P0 = do this session or next session — blocking or high daily impact
-  P1 = this week — meaningful productivity gain
-  P2 = this month — important but not urgent
-  P3 = when milestone is hit — deferred for a reason
-  P4 = future / aspirational
+  P0 = this session — blocking or high daily impact
+  P1 = this week
+  P2 = this month
+  P3 = when dependency is met
 
 ---
 
-## FOUNDATION
+## NIGHTLY SCHEDULE — CURRENT STATE
 
-| Item | Status | Priority | Notes |
-|---|---|---|---|
-| studio.html | BUILT | — | v4, Drive connected, reconciler working |
-| studio-config.json | BUILT | — | API key file, static, never changes |
-| Google Drive integration | BUILT | — | read-write scope, re-auth needed after scope change |
-| Live Server (VS Code ext) | BUILT | — | opens studio at localhost:5500 |
-| Pixel Agents - Hootbu | BUILT | — | visual agent floor view |
-| Claude Code CLI | BUILT | — | v2.1.76, working on both machines |
-
----
-
-## TIER 0 — GOVERNANCE (already built)
-
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| Stress Tester — The Asshole | BUILT | — | stress-tester.md | 5 modes, daily/weekly triggers |
-| Intel Feed | BUILT | — | intel-feed.md | web vuln/deprecation scan, weekly |
-| Stress self-review (Mode 4) | BUILT | — | part of stress-tester.md | runs weekly |
-
----
-
-## TIER 1 — BUILD NOW (Layer 1 — no dependencies)
-
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| Janitor | FILE | P0 | janitor.md ✓ | Studio inbox stubs wired. Run in Claude Code. |
-| SRE Scout (health check) | BUILD | P0 | sre-scout.md needed | Startup script: Node/Python versions, .env files, API pings, stale state.json flags. Simple bash + Claude Code mode. |
-| Git Scout | FILE | P0 | git-scout.md ✓ | Scans for Git tools, maps to gaps, generates tasks. Run once first. |
-| Context cliff guard | BUILD | P0 | Add to all CLAUDE.md files | One rule: /compact at 70% context. Prevents session loss. |
-| Market Scout (eBay-scoped) | BUILD | P1 | market-scout.md needed | eBay sold comps, category trends. Plugs into Arbitrage Pulse + Listing Optimizer. |
+| Time  | Task                    | Script                          | Status   | Output |
+|-------|-------------------------|---------------------------------|----------|--------|
+| 12:30 | VectorReindex           | vector_reindex.py               | RUNNING  | 595 chunks ChromaDB |
+| 1:00  | NightlyRollup           | nightly_rollup.py               | RUNNING  | daily-digest.json — YELLOW 57/100 |
+| 2:00  | ProductArchaeology      | product_archaeology_run.py      | RUNNING  | 434 results |
+| 2:30  | InboxManager            | run_inbox_sync.py               | RUNNING  | 56 items synced |
+| 3:00  | JobDelta                | job_daily_harvest.py            | RUNNING  | job board diffs |
+| 3:30  | AutoAnswer              | auto_answer_gemini.py           | RUNNING  | Gemini triage, 8 auto-resolved |
+| 4:00  | WhiteboardScore         | whiteboard_score.py             | RUNNING  | 46/46 scored |
+| 5:00  | AIIntel                 | ai_intel_run.py                 | RUNNING  | 3 HIGH / 194 logged |
+| 5:30  | AgencyCharacterBuild    | agency/character_batch_builder.py| RUNNING | schema only — no real chars yet |
+| 5:30  | AIServicesRankings      | ai_services_rankings.py         | RUNNING  | rankings + routing guide |
+| 6:00  | SidebarInject           | rebuild_sidebar.py              | RUNNING  | sidebar rebuilt daily |
+| 6:30  | CheckDrift              | check-drift.py                  | RUNNING  | 0/12 drift |
+| 7:00  | Janitor                 | janitor_run.py                  | RUNNING  | cleanup, weekly deep review TBD |
+| 8:00  | DailyBriefing           | orchestrator-briefing.bat       | RUNNING  | Claude briefing + plan populated |
+| 11:00 | GitCommitNightly        | git_commit.py                   | RUNNING  | Gemini commit msgs |
+| 23:30 | MonthlyJobDiscovery     | job_source_discovery_monthly.py | RUNNING  | monthly source crawl |
+| /30m  | SupervisorCheck         | supervisor_check.py             | RUNNING  | dispatches 3 tasks, work_queue=7 |
 
 ---
 
-## TIER 2 — BUILD NEXT (depend on Tier 1 being stable)
-
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| eBay agent | BUILD | P1 | ebay-agent.md needed | Listing optimizer + arbitrage logic. Needs Market Scout first. |
-| Job Search agent | BUILD | P1 | job-search-agent.md needed | Whatnot + Job Match. Needs Market Scout signals. |
-| Git commit agent | BUILD | P1 | Add to CLAUDE.md | Auto-commits at session end using state.json nextAction as message. |
-| Agent roster panel (studio) | BUILD | P1 | Add to studio.html | Lists all agents, status, last run, compatible inbox tasks. Ties Pixel Agents idle view to dispatch. |
-| Task dispatch (studio) | BUILD | P1 | Add to studio.html | Match idle agent type to inbox item. One-click prompt copy. |
-| Orchestrator | BUILD | P2 | orchestrator.md needed | Cross-project planning. Needs L1 agents stable first. |
+## AGENT UPDATES — BY NUMBER (from April 1 review)
 
 ---
 
-## TIER 3 — QUALITY CONTROL (needs projects active)
+### 1 — NIGHTLY ROLLUP + HEALTH SCORING
+**Current:** YELLOW 57/100 — score is misleading because EXPECTED_AGENTS list
+references old Claude-based agent names (stress-tester, janitor, git-scout, sre-scout)
+that no longer check in under those names.
 
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| Stress Tester | BUILT | — | — | Already deployed. Gets smarter as projects mature. |
-| Intel Feed | BUILT | — | — | Already deployed. Run weekly. |
-| Changelog agent | BUILD | P2 | changelog-agent.md needed | Reads session logs + state.json diffs. Writes CHANGELOG.md per project. |
-| Test runner agent | BUILD | P2 | Add to CLAUDE.md | Runs tests after every session. Reports failures to inbox. |
-| Dependency updater | BUILD | P2 | dependency-agent.md needed | npm audit, pip check. Intel feed partially covers this. |
+**Updates needed:**
+- [ ] Fix EXPECTED_AGENTS in nightly_rollup.py to match actual running agents
+- [ ] Score agents by AI service quality: query ai-services-rankings.json,
+      check each agent's last model used vs current best-rated model for its task type
+- [ ] Wire ALL agents to write heartbeat entries on run completion
+- [ ] Add system check: scan scheduler/logs/ to detect any agent that ran but
+      has no corresponding heartbeat — flag as "unregistered agent"
+- [ ] Health score formula update: weight by agent importance, not just count
 
----
-
-## TIER 4 — GOVERNANCE (needs active agents to govern)
-
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| Supervisor | BUILD | P2 | supervisor.md needed | Cross-agent QA + conflict resolution. Needs L1+L2 running. |
-| Audit logger | BUILD | P2 | audit-logger.md needed | What agents did and when. Governance trail. |
-| Kill switch | BUILD | P3 | kill-switch.md needed | Stops runaway agents. Low urgency until more agents are active. |
-| Cost monitor | BUILD | P2 | cost-monitor.md needed | API token spend per project. Alert on budget breach. |
+**Status:** UPDATE — P0
 
 ---
 
-## TIER 5 — REVENUE AGENTS (build when core is stable)
-
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| Talent Agency (character gen) | BUILD | P3 | talent-agency.md needed | Needs CTW Phase 3 closer to done. |
-| Story Generator | BUILD | P3 | story-gen.md needed | CTW scenario library. Needs Talent Agency first. |
-| Patent Scout | BUILD | P2 | patent-scout.md needed | PatentsView API. Directly relevant to AcuScan AR research now. |
-| Public Domain upcycler | BUILD | P3 | pd-upcycler.md needed | archive.org, 1930 works. Deferred until revenue pipeline is active. |
-| OS Arbitrageur | BUILD | P4 | — | GitHub trend monitoring for SaaS wrap opportunities. Future. |
+### 2 — OVERNIGHT AUTO ANSWER
+**Current:** Gemini auto-resolves rules-based items. Working well.
+**Updates needed:** None beyond #1 heartbeat wiring.
+**Status:** RUNNING ✅
 
 ---
 
-## TIER 6 — SENTINEL AGENTS (blocked on LLC)
+### 3 — JOB ACQUISITION STRUCTURE
+**Current:** job_daily_harvest.py crawls registered boards, diffs listings.
+MonthlyJobDiscovery adds new sources. Job-match project has 5 unanswered architecture
+decisions blocking all agent work.
 
-| Agent | Status | Priority | File | Notes |
-|---|---|---|---|---|
-| Sentinel Core dev | BLOCKED | P3 | — | LLC formation required. Tennessee LLC ~$300. |
-| Sentinel Performer dev | BLOCKED | P3 | — | Needs Core first. |
-| Sentinel Viewer dev | BLOCKED | P3 | — | Needs Performer MVP. |
-| Billing agent (Stripe MCP) | BLOCKED | P3 | — | Needs LLC + payment processor first. |
-| Compliance agent | BUILD | P1 | compliance-agent.md needed | Monitors LLC status, flags legal blockers. Already partially in stress tester. |
+**Updates needed:**
+- [ ] Review job-match state.json — answer the 5 pending decisions
+- [ ] Check current capture rate: how many new listings per day, what boards
+- [ ] Expand scope: identify gaps in current source registry
+- [ ] Consider: Whatnot-specific job feeds, remote-first boards, creator economy jobs
+- [ ] Check if LinkedIn, Indeed, remote.co, wellfound are in registry
 
----
-
-## TIER 7 — INFRASTRUCTURE (build as needed)
-
-| Item | Status | Priority | Notes |
-|---|---|---|---|
-| Drive sync (write) | BUILT | — | driveWriteStateJson + driveWriteToStudio in studio.html |
-| Notifier (Discord webhook) | BUILD | P3 | Low urgency. Nice to have for long-running sessions. |
-| Local AI fallback (Ollama) | SETUP | P3 | Install Ollama + LM Studio on HP Pavilion. Emergency offline. |
+**Status:** REVIEW SESSION NEEDED — P0 (Blackdot ends May 2026)
 
 ---
 
-## EXTERNAL TOOLS FROM ECOSYSTEM
+### 4 — PRODUCT ARCHAEOLOGY
+**Current:** 434 results from KilledByGoogle, Reddit discontinued subs, Wayback.
+Gemini scoring fails at 2AM (404). Top items not moving to whiteboard automatically.
 
-| Tool | Status | Priority | Action |
-|---|---|---|---|
-| GitHub CLI (gh) | SETUP | P0 | Run Git Scout first to check if installed. Install if not: winget install GitHub.cli |
-| GitHub Actions + @claude | SETUP | P1 | Enable on project repos. @claude in PR = auto-implement. Free. |
-| Repomix | SETUP | P1 | Packs entire repo into AI-readable file. Great for cold-start sessions. npm install -g repomix |
-| fvadicamo/dev-agent-skills | SETUP | P1 | Git + GitHub workflow skills for Claude Code. /plugin marketplace add |
-| wshobson/agents (112 agents) | RESEARCH | P2 | 112 specialized agents. Evaluate: security-scanner + code-reviewer most relevant. |
-| VoltAgent/awesome-claude-code-subagents | RESEARCH | P2 | 100+ subagents. agent-installer subagent can browse/install others. |
-| Parry (prompt injection scanner) | SETUP | P1 | Add to Claude Code hooks. Scans for injection attacks. Early dev but worth it for Sentinel. |
-| AgentSys | RESEARCH | P2 | Drift detection + multi-agent review. Borrow patterns for Janitor upgrade. |
-| Gas Town / Multiclaude | DEFER | P3 | Multi-agent orchestration. Add when 5+ agents running in parallel. |
-| Ruflo / Claude Flow | DEFER | P4 | 60+ agent swarms, shared memory. Overkill for solo dev now. |
-| GSD framework | SKIP | — | You already do Discuss→Plan→Execute→Verify via CONTEXT.md. |
-| Claude Agent Teams | SETUP | P3 | Native Claude Code. Use for Sentinel Core + Performer parallel sessions. |
-| Kiro (Amazon IDE) | RESEARCH | P3 | Spec-driven workflow IDE. Worth evaluating when Sentinel build starts. |
-| Claude Cowork | RESEARCH | P2 | Task delegation + workflow management. Evaluation pending. |
-| Shipyard | DEFER | P4 | Ephemeral environments for PR testing. Needs team workflow to justify. |
-| CLI-Anything | RESEARCH | P3 | Makes any CLI tool agent-native. Relevant for eBay CLI + HiBid if resurrected. |
-| Simone | RESEARCH | P2 | Project management workflow for Claude Code. Evaluate against current CONTEXT.md approach. |
-| Ralph for Claude Code | RESEARCH | P2 | Autonomous loop until spec fulfilled. Useful for long Sentinel sessions. |
+**Updates needed:**
+- [ ] Shift Gemini scoring to 9AM (after Gemini wakes up) — separate scoring pass
+- [ ] Auto-promote: items scored 7+ by Gemini → push to whiteboard.json automatically
+      (currently whiteboard_score.py scores whiteboard items; product_arch should FEED it)
+- [ ] Expand sources: Product Hunt graveyard, AngelList dead startups, Patent DB
+      abandoned patents, App Store removed apps, Steam delisted games
+- [ ] On Gemini 404/503: immediately query supervisor for best available free alt
+      (Ollama Gemma, if available) — fallback chain, not just silent fail
+- [ ] Use connectors/utilities: Tavily MCP available — use for live validation
+      of market voids against current landscape
+- [ ] Results review: need to know what categories are dominating the 434 results
+
+**Status:** UPDATE — P1
 
 ---
 
-## STUDIO DASHBOARD FEATURES TO ADD
+### 5 — VINTAGE AGENT / DECADE TRAINING DATA
+**Current:** 10 decade profiles built (1920s-2010s). 34 sleepers. 0 hot items, 0 gaps
+(Gemini not populating those arrays properly).
 
-| Feature | Status | Priority | Notes |
-|---|---|---|---|
-| Agent roster panel | BUILD | P1 | Shows all agents, status, last run, compatible tasks |
-| Task dispatch system | BUILD | P1 | Match agent type to inbox item, one-click prompt |
-| Cost tracker panel | BUILD | P2 | Per-project API spend, budget alerts |
-| Git status panel | BUILD | P2 | Shows which projects have git repos, last commit, dirty files |
-| Token health display | BUILD | P2 | Per-session context % (mirrors Pixel Agents token bars) |
+**Updates needed:**
+- [ ] Fix Gemini prompt to force-populate ebay_hot_now, failed_products, modern_gap arrays
+- [ ] MAJOR SCOPE EXPANSION: This is character memory training data, not just eBay intel.
+      Add to each decade profile:
+      - lexicon_and_slang: common phrases, regional variants, rural vs urban splits
+      - news_events: major events by year within decade, how they shaped thinking
+      - age_cohort_reasoning: how a 20yr old vs 60yr old in this decade thought differently
+      - ethnic_regional_variants: urban/rural/ethnic community differences in all above
+      - memory_formation_model: how memories form at different life stages
+        (early childhood = haze/fragments, teen/young adult = sharp, middle age = selective,
+        elderly = declining recall with distraction patterns — NOTE: test carefully,
+        getting distracted in conversation risks being annoying for users trying to get info)
+- [ ] CHARACTER MEMORY WIRING: When building Agency character born in 1950,
+      system should pull: 1950s (birth/infancy), 1960s (childhood), 1970s (teen),
+      1980s (young adult), 1990s (adult), 2000s (middle age), 2010s (late career/senior)
+      and weight memory sharpness by decade position in their life arc
+- [ ] BACKWARDS EXTENSION: Add 1900s, 1910s for historical figures. Going forward,
+      update 2010s and begin 2020s profile.
+- [ ] Feed this data into Agency character builder as memory_profile field
 
----
-
-## WHAT TO SET UP RIGHT NOW (P0 actions)
-
-These require no building — just setup steps:
-
-1. **Install GitHub CLI**
-   ```
-   winget install GitHub.cli
-   gh auth login
-   ```
-   Takes 5 minutes. Unlocks PR creation, issue management, @claude on PRs.
-
-2. **Run Git Scout** (git-scout.md is ready)
-   Open Claude Code in _studio, load git-scout.md, run scan.
-   Tells you exactly what's missing across all 10 projects.
-
-3. **Add context cliff guard to all CLAUDE.md files**
-   Add this line to every project's CLAUDE.md:
-   ```
-   If context usage exceeds 70%, run /compact immediately and
-   update state.json with a checkpoint note before compacting.
-   ```
-   Takes 10 minutes across all 10 projects.
-
-4. **Initialize git repos in active projects**
-   After Git Scout confirms none exist:
-   ```
-   cd G:\My Drive\Projects\job-match
-   git init
-   git add .
-   git commit -m "Initial commit — Job Match scraper in progress"
-   ```
-   Do this for: job-match, nutrimind, acuscan-ar, CTW
-
-5. **Install Repomix**
-   ```
-   npm install -g repomix
-   ```
-   Then before any session: `repomix --output repomix-output.txt`
-   Gives Claude Code full codebase context in one file.
-
-6. **Add Janitor to rotation**
-   janitor.md is ready in _studio.
-   Run it on any paused project before resuming.
-   Inbox stubs will auto-generate when projects go stale.
+**Status:** UPDATE — P1 (blocks Agency quality)
 
 ---
 
-## SUMMARY COUNTS
+### 6 — AI INTEL
+**Current:** 3 HIGH / 71 WORTH / 194 LOGGED / 13 YouTube. Generated field null in JSON.
 
-| Category | Built | File Ready | Needs Build | Deferred/Blocked |
-|---|---|---|---|---|
-| Foundation | 6 | 0 | 0 | 0 |
-| Governance agents | 3 | 0 | 2 | 0 |
-| Tier 1 (build now) | 0 | 2 | 3 | 0 |
-| Tier 2 (build next) | 0 | 0 | 6 | 0 |
-| Tier 3 (quality) | 2 | 0 | 3 | 0 |
-| Tier 4 (governance) | 0 | 0 | 4 | 0 |
-| Tier 5 (revenue) | 0 | 0 | 5 | 0 |
-| Tier 6 (Sentinel) | 0 | 0 | 1 | 3 |
-| Tier 7 (infra) | 1 | 0 | 1 | 1 |
-| External tools | 3 | 0 | 0 | 8 |
-| Studio features | 0 | 0 | 5 | 0 |
-| **TOTAL** | **15** | **2** | **30** | **12** |
+**Updates needed:**
+- [ ] Fix generated field null bug in ai_intel_run.py
+- [ ] PANEL OF CHARACTERS: Assign 3-5 Agency characters as the "AI Intel Panel"
+      Each has a different angle (tech critic, builder, business analyst, skeptic, hype detector)
+      Panel reads all scraped news and produces:
+      - Actionable ideas: "we could do X with this"
+      - System update suggestions: "our Y agent should now use Z"
+      - Whiteboard candidates: auto-submit anything scored 7+ by panel
+      - No length limit — some days a paragraph, some days a book
+- [ ] Panel output goes to: daily-digest.json + sidebar AI Intel card + whiteboard queue
+- [ ] Keyword/scope panel: characters also analyze scrape keywords,
+      suggest expanding or narrowing search terms based on what's producing signal
+- [ ] Send to whiteboard: panel explicitly votes on whiteboard submission per item
 
-**Immediate action items (P0):** 6 setup tasks above — no code required.
-**Files ready to deploy:** janitor.md, git-scout.md, stress-tester.md, intel-feed.md
-**Next build session targets:** SRE Scout, Market Scout, Agent Roster Panel
+**Status:** UPDATE — P1
+
+---
+
+### 7 — AGENCY CHARACTER BUILD
+**Current:** Running nightly but only has schema + sample spec. No real characters built.
+Tesla and da Vinci were P0 — not built. CX Agent quota not set.
+
+**Updates needed:**
+- [ ] BUILD Tesla and da Vinci immediately — these are P0, block Gaussian Splat deployment
+- [ ] Increase generation rate: make character building fully agentic
+      - Set daily quota: X characters per day based on available Gemini free tier calls
+      - Pull from whiteboard top-rated character concepts automatically
+      - Historical figures: pull from product archaeology + whiteboard
+      - Each character auto-gets: memory_profile (from decade data), voice, image gen request
+- [ ] CX AGENT QUOTA: CX Agent knows all active projects, sets daily quota for:
+      - Character images (match to how many chars produced that day)
+      - Character model renders
+      - Video clips
+      - Quota tied to free gen capacity in image/video art dept
+- [ ] COORDINATOR ROLE — new agent needed: "Studio Coordinator" / Casting Director
+      - Reads all active projects, characters, scripts
+      - Casts characters to scripts
+      - Requests projects to be assembled (asks Joe for approval first)
+      - Once approved: spins up character image gen, sends group for approval
+        with scripts and video vision
+      - Handles: bands (name + art + images + music gen requests),
+        football players, historical figures, any actionable Agency asset
+- [ ] DAILY BRAINSTORM: casting + social media + art dept + legal + supervisor
+      run a daily session, output = action plan
+      Goal: art dept free gen capacity used fully every day
+- [ ] Characters get: memory_profile, voice_profile, image_prompt, decade_weights
+
+**Status:** BUILD — P0 (Tesla/da Vinci), P1 (coordinator + quota system)
+
+---
+
+### 8 — AI SERVICES RANKINGS (sidebar display)
+**Current:** Rankings updating nightly. Sidebar doesn't show service metrics.
+
+**Updates needed:**
+- [ ] Add metrics display to sidebar SERVICES/DATA tab:
+      - Per service: daily limit, images/day, videos/day, requests/min
+      - Example: "Ideogram: 50 images/day free" "Runway: 5 videos/day"
+      - Show current usage vs quota where trackable
+      - Color code: green (plenty left), amber (50%+ used), red (near limit)
+- [ ] Wire to CX Agent quota system (#7 above)
+
+**Status:** UPDATE — P1
+
+---
+
+### 9 — SIDEBAR INJECT
+**Current:** Rebuilds sidebar daily with fresh data. Working well.
+Same feedback as #8 — metrics display needed.
+**Status:** RUNNING ✅ — metrics panel to be added with #8
+
+---
+
+### 10 — DAILY BRIEFING / ORCHESTRATOR
+**Current:** Claude produces briefing, populate_orchestrator_plan.py builds task plan.
+**Status:** RUNNING ✅
+
+---
+
+### 11 — SUPERVISOR CHECK
+**Current:** Checks Ollama + Gemini only. Dispatches from plan. Working.
+
+**Updates needed:**
+- [ ] EXPAND PROVIDER AWARENESS: Don't just check Ollama + Gemini.
+      Query ai-services-rankings.json for ALL available free-tier providers.
+      Build live availability map at each run cycle.
+- [ ] AGENT ACTIVITY PROJECTION: At each cycle, read all scheduled tasks + their
+      estimated run times, build projected activity chart for upcoming 24h
+      Output to supervisor-report.json as "projected_activity" array
+- [ ] AGENT UPDATE SUGGESTIONS: For each agent that ran since last cycle,
+      check: model used vs best available, output quality metrics, service 404/503 count.
+      Flag any agent using a degraded service → suggest switching.
+      Flag any agent whose last 3 runs produced 0 results → escalate to inbox.
+- [ ] ASSET UPDATE SUGGESTIONS: Flag assets (characters, rankings, profiles)
+      not updated in 7+ days → queue for refresh
+- [ ] AI INTEL CROSS-REFERENCE: Read latest ai-intel summary → flag any
+      newly deprecated models our agents are using → immediate update suggestion
+- [ ] Note: AIIntel does similar discovery — supervisor should consume intel
+      output rather than duplicate scraping
+
+**Status:** UPDATE — P1
+
+---
+
+### 12 — VECTOR REINDEX
+**Current:** Rebuilds ChromaDB from studio files nightly. 595 chunks.
+
+**What it is / why:** ChromaDB is the vector memory store. Every file in the studio
+gets chunked and embedded so agents can do semantic search — "what decisions were made
+about job-match?" pulls relevant context from all files. session-startup.py uses this
+to give agents a relevant context window without loading everything.
+595 chunks = all project state files, agent .md files, decision logs, CLAUDE.md files.
+
+**Status:** RUNNING ✅
+
+---
+
+### 13 — CHECK DRIFT
+**Current:** Scans 12 project state.json files for 14+ day staleness. 0/12 HIGH.
+**Status:** RUNNING ✅
+
+---
+
+### 14 — JANITOR
+**Current:** Daily cleanup. Truncates logs, removes pycache, flags orphaned bats.
+
+**Updates needed:**
+- [ ] WEEKLY DEEP REVIEW: Once per week (Sundays), Janitor reads all agent logs
+      from the past 7 days and produces:
+      - Workflow flaw report: steps that consistently fail, retry patterns
+      - Efficiency suggestions: "agent X takes 45min but produces 3 results — consider reducing scope"
+      - Utility candidates: "this same pattern appears in 3 agents — extract to utility"
+      - Suggested bat/task updates
+      Output to janitor-report.json with date + weekly flag
+
+**Status:** UPDATE — P2
+
+---
+
+### 15 — AI INTEL (expanded — see also #6)
+**Current:** Scrapes YouTube, Reddit, HN, Anthropic, OpenAI, GitHub, arXiv.
+**See #6 for full update spec.**
+**Status:** UPDATE — P1
+
+---
+
+### 16 — GIT COMMIT NIGHTLY
+**Current:** Gemini generates commit messages. Commits all dirty repos. Working.
+
+**Updates needed:**
+- [ ] Check Supervisor for best available model at commit time (not hardcoded Gemini)
+- [ ] Scan GitHub Trending for top 20 repos relevant to studio activity
+      (based on agent types, scrape keywords, active project tech stacks)
+      → push matches to whiteboard as BUILD/RESEARCH candidates
+- [ ] Cross-reference trending repos against: current utilities, agent gaps,
+      scraper tools, data connectors we don't have yet
+
+**Status:** UPDATE — P2
+
+---
+
+### 17 — MONTHLY JOB DISCOVERY
+**Current:** Monthly source crawl running. Need to verify capture quality.
+
+**Updates needed:**
+- [ ] Check and report: how many sources in registry, how many validated,
+      what categories are covered vs missing
+- [ ] Review for Whatnot-specific sources, creator economy job boards
+
+**Status:** REVIEW — P1 (see #3)
+
+---
+
+## DISABLED — INTENTIONAL
+
+| Task | Reason | Re-enable when |
+|---|---|---|
+| WhiteboardAgent | Waiting on Agency chars | Agency has 5+ real characters |
+| SkillImprover | Waiting on Agency chars | Agency has 5+ real characters |
+| PeerReview | Waiting on Agency chars | Agency has 5+ real characters |
+| GitScout | Parked — Claude-dependent | Rewrite as Python if needed |
+| HeartbeatCheck | Redundant — rollup+supervisor write heartbeats | Never re-enable |
+| WorkflowIntelligence | Parked | Rewrite as Python if needed |
+| IntelFeed | Stress tester inactive | When stress testing resumes |
+| VedicScan | NFL data not ready | When sports arbitrage activates |
+| MirofishTest | Manual use only | N/A — run manually |
+| SupervisorBriefing | Replaced by supervisor_check.py | Never |
+| SidebarBridge | Runs manually | Fix auto-start task |
+
+---
+
+## DELETE — CLEAN THESE OUT
+
+| Task / File | Action |
+|---|---|
+| GhostBookRescan | DELETE task — old pipeline dead Mar 22 |
+| OvernightGhostBookPass3 | DELETE task — old pipeline |
+| WhiteboardScorer (AgentWhiteboardScorer.xml) | DELETE — duplicate, bat version is correct |
+| CommonCrawlTrigger | REVIEW — why was C2C analysis stopped? Clarify before deleting |
+
+---
+
+## C2C ANALYSIS — OPEN QUESTION
+CommonCrawlTrigger is parked. C2C (Common Crawl) analysis was running
+(cdx-c2c-results.json has data). Reason for pause unclear.
+ACTION: Clarify intent — is this still needed? What was it feeding?
+
+---
+
+## NEW BUILDS — FROM APRIL 1 REVIEW
+
+### COORDINATOR AGENT (Casting Director) — BUILD P0
+- Reads all active projects, characters in progress, scripts
+- Casts characters to scripts, requests project assembly
+- Asks Joe for approval before any production starts
+- On approval: queues character image gen, sends group for review
+  with script + video vision document
+- Handles: bands, football rosters, historical figures, any Agency asset
+- Daily brainstorm trigger: pulls casting + social + art + legal + supervisor
+- Output: action_plan.json written to studio inbox
+
+### CX AGENT QUOTA SYSTEM — BUILD P1
+- CX Agent knows all projects and their daily character/asset output
+- Sets daily quota per service (images, video, voice)
+- Ties quota to free gen capacity from ai-services-rankings.json
+- Reports quota usage to supervisor + sidebar
+
+### SCRAPE MANAGER — REVIEW SESSION NEEDED
+After this list is reviewed: audit all scrapes, searches, crawls
+across the entire studio — map what exists, where data goes,
+whether it's being reviewed, and what's missing.
+Goal: a Scrape Manager view in the sidebar.
+
+---
+
+## KNOWN ISSUES — PRIORITY ORDER
+
+| # | Issue | Impact | Owner | Priority |
+|---|-------|--------|-------|----------|
+| 1 | NightlyRollup EXPECTED_AGENTS outdated | False RED/YELLOW score | nightly_rollup.py | P0 |
+| 2 | Vintage Agent eBay arrays empty | Missing intel | vintage_agent.py | P1 |
+| 3 | Agency has no real characters | Blocks 3 downstream agents | agency session | P0 |
+| 4 | ProductArch Gemini scoring at 2AM = 0 items | No scores | product_archaeology_run.py | P1 |
+| 5 | Janitor orphaned bat report noise | Report clutter | janitor_run.py | P2 |
+| 6 | SidebarBridge no auto-start | Manual restart needed | task scheduler | P2 |
+| 7 | AI Intel generated field null | Sidebar date missing | ai_intel_run.py | P1 |
+| 8 | Supervisor only checks Ollama+Gemini | Missing free providers | supervisor_check.py | P1 |
+| 9 | Job-match 5 pending decisions | All job agent work blocked | session | P0 |
+| 10 | Coordinator agent not built | Agency has no director | new build | P0 |
