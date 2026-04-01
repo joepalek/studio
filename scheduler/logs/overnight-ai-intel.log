@@ -1,0 +1,63 @@
+[Wed 04/01/2026  2:13:31.05] AI Intel starting 
+Fetching YouTube...
+  YouTube: OK - 62 AI videos
+Fetching Reddit...
+  r/artificial: OK (24 items)
+  r/MachineLearning: OK (5 items)
+  r/ChatGPT: OK (17 items)
+  r/ClaudeAI: OK (23 items)
+  r/LocalLLaMA: OK (23 items)
+Fetching HackerNews...
+  HackerNews: OK - 39 AI items
+Fetching Anthropic news...
+  Anthropic news: OK - 13 articles
+Fetching OpenAI RSS...
+  OpenAI RSS: OK - 30 items
+Fetching GitHub Trending...
+  GitHub Trending: OK - 7 AI repos
+Fetching arXiv...
+  arXiv: OK - 28 papers
+
+Raw: 271 items from 11/11 sources
+After dedup: 268 unique items
+Tiers: 3 HIGH / 71 WORTH / 194 LOGGED
+YouTube in digest: 13
+Written: ai-intel-daily.json
+Written: ai-intel-summary.txt
+Supervisor inbox updated.
+
+DONE. 3 HIGH / 71 WORTH / 194 LOGGED
+YouTube videos surfaced: 13
+[Wed 04/01/2026  2:13:48.29] Done 
+[Wed 04/01/2026  5:00:01.56] AI Intel starting 
+Fetching YouTube...
+  YouTube: OK - 73 AI videos
+Fetching Reddit...
+  r/artificial: OK (20 items)
+  r/MachineLearning: OK (4 items)
+  r/ChatGPT: OK (21 items)
+  r/ClaudeAI: OK (24 items)
+  r/LocalLLaMA: OK (24 items)
+Fetching HackerNews...
+  HackerNews: OK - 31 AI items
+Fetching Anthropic news...
+  Anthropic news: OK - 13 articles
+Fetching OpenAI RSS...
+  OpenAI RSS: OK - 30 items
+Fetching GitHub Trending...
+  GitHub Trending: OK - 7 AI repos
+Fetching arXiv...
+  arXiv: OK - 28 papers
+
+Raw: 275 items from 11/11 sources
+After dedup: 268 unique items
+Tiers: 2 HIGH / 69 WORTH / 197 LOGGED
+YouTube in digest: 15
+Written: ai-intel-daily.json
+Written: ai-intel-summary.txt
+Supervisor inbox updated.
+
+DONE. 2 HIGH / 69 WORTH / 197 LOGGED
+YouTube videos surfaced: 15
+[Wed 04/01/2026  5:00:28.63] Done 
+[Wed 04/01/2026  8:59:20.76] AI Intel starting 

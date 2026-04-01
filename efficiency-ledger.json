@@ -47,10 +47,298 @@
       "tier": "ollama",
       "outcome": "dispatched",
       "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T02:30:04.971298",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T02:30:04.971370",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T02:30:04.971376",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T03:00:05.008141",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T03:00:05.008165",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T03:00:05.008170",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T03:30:04.791750",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T03:30:04.791773",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T03:30:04.791778",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T04:00:04.766889",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T04:00:04.766906",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T04:00:04.766911",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T04:30:04.901012",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T04:30:04.901033",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T04:30:04.901037",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T05:00:04.680250",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T05:00:04.680267",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T05:00:04.680271",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T05:30:04.732591",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T05:30:04.732611",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T05:30:04.732616",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T06:00:05.389864",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T06:00:05.389895",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T06:00:05.389900",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T06:30:04.886658",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T06:30:04.886675",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T06:30:04.886680",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T07:00:04.728459",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T07:00:04.728478",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T07:00:04.728483",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T07:30:04.947257",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T07:30:04.947274",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T07:30:04.947279",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T08:00:05.309338",
+      "agent": "_studio",
+      "task": "Commit dirty repos: _studio(122f)",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T08:00:05.309366",
+      "agent": "whiteboard",
+      "task": "BUILD: Higgsfield Original Series — Backwards Design",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
+    },
+    {
+      "timestamp": "2026-04-01T08:00:05.309372",
+      "agent": "whiteboard",
+      "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+      "tier": "ollama",
+      "outcome": "dispatched",
+      "cost_usd": 0.0
     }
   ],
   "totals": {
-    "runs": 6,
+    "runs": 42,
     "cost": 0.0,
     "hours": 0.0
   }

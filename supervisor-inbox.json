@@ -1,106 +1,106 @@
-[
-  {
-    "id": "sre-warn-20260331",
-    "source": "sre-scout",
-    "type": "health",
-    "urgency": "WARN",
-    "title": "SRE WARNING — overnight job errors + dirty repos",
-    "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.",
-    "status": "answered",
-    "date": "2026-03-31T03:31:58.008220",
-    "answer": "Fix now",
-    "answered_at": "2026-04-01T04:59:54.205Z"
-  },
-  {
-    "id": "nightly-rollup-20260401",
-    "source": "nightly-rollup",
-    "type": "audit",
-    "urgency": "ALERT",
-    "title": "Nightly Rollup — 2026-04-01 — RED",
-    "finding": "Score: 37/100. 1 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
-    "status": "PENDING"
-  },
-  {
-    "id": "nightly-rollup-20260401",
-    "source": "nightly-rollup",
-    "type": "audit",
-    "urgency": "WARN",
-    "title": "Nightly Rollup — 2026-04-01 — YELLOW",
-    "finding": "Score: 57/100. 2 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
-    "status": "PENDING"
-  },
-  {
-    "id": "supervisor-cycle-202604010130",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 01:30",
-    "finding": "0 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
-    "dispatched": [],
-    "status": "INFO"
-  },
-  {
-    "id": "supervisor-cycle-202604010137",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 01:37",
-    "finding": "3 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
-    "dispatched": [
-      {
-        "agent": "_studio",
-        "task": "Commit dirty repos: _studio(122f)",
-        "tier": "ollama",
-        "cost": 0,
-        "source": "orchestrator-plan"
-      },
-      {
-        "agent": "whiteboard",
-        "task": "BUILD: Higgsfield Original Series — Backwards Design",
-        "tier": "ollama",
-        "cost": 0,
-        "source": "orchestrator-plan"
-      },
-      {
-        "agent": "whiteboard",
-        "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
-        "tier": "ollama",
-        "cost": 0,
-        "source": "orchestrator-plan"
-      }
-    ],
-    "status": "INFO"
-  },
-  {
-    "id": "supervisor-cycle-202604010200",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 02:00",
-    "finding": "3 tasks dispatched | 4 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
-    "dispatched": [
-      {
-        "agent": "_studio",
-        "task": "Commit dirty repos: _studio(122f)",
-        "tier": "ollama",
-        "cost": 0,
-        "source": "orchestrator-plan"
-      },
-      {
-        "agent": "whiteboard",
-        "task": "BUILD: Higgsfield Original Series — Backwards Design",
-        "tier": "ollama",
-        "cost": 0,
-        "source": "orchestrator-plan"
-      },
-      {
-        "agent": "whiteboard",
-        "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
-        "tier": "ollama",
-        "cost": 0,
-        "source": "orchestrator-plan"
-      }
-    ],
-    "status": "INFO"
-  }
-]
+{
+  "items": [
+    {
+      "id": "sre-warn-20260331",
+      "source": "sre-scout",
+      "type": "health",
+      "urgency": "WARN",
+      "title": "SRE WARNING — overnight job errors + dirty repos",
+      "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.",
+      "status": "answered",
+      "date": "2026-03-31T03:31:58.008220",
+      "answer": "Fix now",
+      "answered_at": "2026-04-01T04:59:54.205Z"
+    },
+    {
+      "id": "nightly-rollup-20260401",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "ALERT",
+      "title": "Nightly Rollup — 2026-04-01 — RED",
+      "finding": "Score: 37/100. 1 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
+      "status": "PENDING"
+    },
+    {
+      "id": "nightly-rollup-20260401",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "WARN",
+      "title": "Nightly Rollup — 2026-04-01 — YELLOW",
+      "finding": "Score: 57/100. 2 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
+      "status": "PENDING"
+    },
+    {
+      "id": "ai-intel-2026-04-01",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 3 HIGH PRIORITY - 2026-04-01",
+      "finding": "Claude Code Source Code Leaked?!? #ai #ainews #claude. See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-01T07:13:31Z"
+    },
+    {
+      "id": "ai-intel-2026-04-01",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 2 HIGH PRIORITY - 2026-04-01",
+      "finding": "Layperson, quite impressed with Claude. See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-01T10:00:02Z"
+    },
+    {
+      "id": "supervisor-cycle-202604010800",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-01 08:00",
+      "finding": "3 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+      "dispatched": [
+        {
+          "agent": "_studio",
+          "task": "Commit dirty repos: _studio(122f)",
+          "tier": "ollama",
+          "cost": 0,
+          "source": "orchestrator-plan"
+        },
+        {
+          "agent": "whiteboard",
+          "task": "BUILD: Higgsfield Original Series — Backwards Design",
+          "tier": "ollama",
+          "cost": 0,
+          "source": "orchestrator-plan"
+        },
+        {
+          "agent": "whiteboard",
+          "task": "PUBLISH: I've played and reviewed 1.000+ horror games, here are some ",
+          "tier": "ollama",
+          "cost": 0,
+          "source": "orchestrator-plan"
+        }
+      ],
+      "status": "INFO"
+    },
+    {
+      "id": "supervisor-cycle-202604010830",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-01 08:30",
+      "finding": "0 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+      "dispatched": [],
+      "status": "INFO"
+    },
+    {
+      "id": "supervisor-cycle-202604010859",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-01 08:59",
+      "finding": "0 tasks dispatched | 8 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+      "dispatched": [],
+      "status": "INFO"
+    }
+  ]
+}

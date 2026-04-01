@@ -10,7 +10,7 @@
       "WebXR",
       "Canvas overlay on video element"
     ],
-    "recommendation": "Canvas overlay â€” broader mobile browser support, simpler implementation for MVP",
+    "recommendation": "Canvas overlay \u00e2\u20ac\u201d broader mobile browser support, simpler implementation for MVP",
     "context": "",
     "auto_answer": "WebXR is the standard and generally preferred approach for true AR rendering, offering native access to pose tracking, device capabilities, and immersive experiences compared to a canvas overlay.",
     "resolved_by": "gemini-flash",
@@ -19,7 +19,7 @@
   {
     "id": "state-acuscan-ar-2533adce",
     "project": "acuscan-ar",
-    "question": "If hand tracking lags on older phones â€” prioritize speed or visual accuracy?",
+    "question": "If hand tracking lags on older phones \u00e2\u20ac\u201d prioritize speed or visual accuracy?",
     "type": "proactive",
     "status": "auto-resolved",
     "created": "2026-03-19",
@@ -61,16 +61,16 @@
   {
     "id": "state-arbitrage-pulse-efb8d39d",
     "project": "arbitrage-pulse",
-    "question": "What geographic area to monitor â€” Tennessee local, Illinois local, or both?",
+    "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
     "type": "required",
     "status": "answered",
     "created": "2026-03-19",
     "options": [
       "Tennessee (Atwood/McKenzie area)",
       "Illinois (Woodstock area)",
-      "Both â€” separate digests"
+      "Both \u00e2\u20ac\u201d separate digests"
     ],
-    "recommendation": "Both with separate digests â€” you travel between both regularly",
+    "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
     "context": "",
     "answer": "Tennessee all the time, Illinois when I tell you I am going back home",
     "answered_at": "2026-04-01T05:01:07.767Z",
@@ -79,7 +79,7 @@
   {
     "id": "state-arbitrage-pulse-ec3e8edf",
     "project": "arbitrage-pulse",
-    "question": "Scraping approach â€” Apify Actor or direct browser automation via Chrome extension?",
+    "question": "Scraping approach \u00e2\u20ac\u201d Apify Actor or direct browser automation via Chrome extension?",
     "type": "required",
     "status": "auto-resolved",
     "created": "2026-03-19",
@@ -87,7 +87,7 @@
       "Apify (paid, reliable, maintained)",
       "Chrome extension automation (free, may break with FB updates)"
     ],
-    "recommendation": "Start with Chrome extension automation â€” free, and we already have it set up",
+    "recommendation": "Start with Chrome extension automation \u00e2\u20ac\u201d free, and we already have it set up",
     "context": "",
     "auto_answer": "Apify Actor is generally more efficient for a solo developer's AI studio, as it handles infrastructure, proxies, and scaling, allowing focus on data utilization rather than scraping operations.",
     "resolved_by": "gemini-flash",
@@ -110,7 +110,7 @@
   {
     "id": "state-arbitrage-pulse-16662fe7",
     "project": "arbitrage-pulse",
-    "question": "Minimum profit margin to include in digest â€” e.g. only show items with 40%+ margin?",
+    "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
     "type": "proactive",
     "status": "answered",
     "created": "2026-03-19",
@@ -124,7 +124,7 @@
   {
     "id": "state-arbitrage-pulse-91bf5e20",
     "project": "arbitrage-pulse",
-    "question": "Digest delivery format â€” Markdown file in Drive, email, or dashboard card?",
+    "question": "Digest delivery format \u00e2\u20ac\u201d Markdown file in Drive, email, or dashboard card?",
     "type": "proactive",
     "status": "auto-resolved",
     "created": "2026-03-19",
@@ -138,16 +138,16 @@
   {
     "id": "state-hibid-analyzer-58575f97",
     "project": "hibid-analyzer",
-    "question": "Now that Chrome extension is available â€” attempt textarea via extension first or continue investigating DOM approach?",
+    "question": "Now that Chrome extension is available \u00e2\u20ac\u201d attempt textarea via extension first or continue investigating DOM approach?",
     "type": "required",
     "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
-      "Extension first â€” highest probability of success",
-      "DOM investigation â€” understand root cause first",
+      "Extension first \u00e2\u20ac\u201d highest probability of success",
+      "DOM investigation \u00e2\u20ac\u201d understand root cause first",
       "Both in parallel"
     ],
-    "recommendation": "Extension first â€” Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
+    "recommendation": "Extension first \u00e2\u20ac\u201d Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
     "context": "",
     "auto_answer": "Attempt the textarea interaction via the Chrome extension first. Extensions provide a more robust and privileged environment for web page interaction, often circumventing limitations faced by direct DOM manipulation.",
     "resolved_by": "gemini-flash",
@@ -224,7 +224,7 @@
   {
     "id": "state-job-match-379b1402",
     "project": "job-match",
-    "question": "For the scam database â€” should it be private to your platform or eventually shared/open source?",
+    "question": "For the scam database \u00e2\u20ac\u201d should it be private to your platform or eventually shared/open source?",
     "type": "proactive",
     "status": "resolved",
     "created": "2026-03-19",
@@ -255,18 +255,18 @@
     "status": "resolved",
     "created": "2026-03-19",
     "options": [
-      "Personal only â€” optimize Joe's 572 listings",
+      "Personal only \u00e2\u20ac\u201d optimize Joe's 572 listings",
       "Beta test with select sellers",
       "Full SaaS product"
     ],
-    "recommendation": "Personal first â€” prove it works on your own inventory, then decide",
+    "recommendation": "Personal first \u00e2\u20ac\u201d prove it works on your own inventory, then decide",
     "context": "",
     "resolved_date": "2026-03-31"
   },
   {
     "id": "state-listing-optimizer-0b8aae0b",
     "project": "listing-optimizer",
-    "question": "Input format â€” eBay bulk export CSV or manual entry or both?",
+    "question": "Input format \u00e2\u20ac\u201d eBay bulk export CSV or manual entry or both?",
     "type": "required",
     "status": "resolved",
     "created": "2026-03-19",
@@ -275,7 +275,7 @@
       "Manual entry only",
       "Both"
     ],
-    "recommendation": "eBay bulk export CSV â€” you already have 572 listings to process",
+    "recommendation": "eBay bulk export CSV \u00e2\u20ac\u201d you already have 572 listings to process",
     "context": "",
     "resolved_date": "2026-03-31"
   },
@@ -302,7 +302,7 @@
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Category-specific title rules â€” e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first.",
+    "context": "Category-specific title rules \u00e2\u20ac\u201d e.g. books need ISBN, electronics need model numbers. Knowing top categories lets us build the right rules first.",
     "resolved_date": "2026-03-31"
   },
   {
@@ -320,7 +320,7 @@
   {
     "id": "state-nutrimind-86664a3a",
     "project": "nutrimind",
-    "question": "What defines NutriMind as complete â€” what is the finish line?",
+    "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
     "type": "required",
     "status": "answered",
     "created": "2026-03-19",
@@ -329,7 +329,7 @@
       "Personal use ready",
       "Productize for other users"
     ],
-    "recommendation": "Define personal use ready first â€” then decide if productizing is worth the extra work",
+    "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
     "context": "",
     "answer": "All planned features working",
     "answered_at": "2026-04-01T05:04:50.301Z",
@@ -366,17 +366,17 @@
   {
     "id": "state-squeeze-empire-0ab2f8fb",
     "project": "squeeze-empire",
-    "question": "What defines late-game completion â€” what is the win condition or final milestone?",
+    "question": "What defines late-game completion \u00e2\u20ac\u201d what is the win condition or final milestone?",
     "type": "required",
     "status": "auto-resolved",
     "created": "2026-03-19",
     "options": [
       "Reach a revenue target",
       "Unlock all upgrades",
-      "No win condition â€” infinite idle",
+      "No win condition \u00e2\u20ac\u201d infinite idle",
       "Story ending"
     ],
-    "recommendation": "Reach a revenue target + unlock all upgrades â€” gives clear progression and satisfying endpoint",
+    "recommendation": "Reach a revenue target + unlock all upgrades \u00e2\u20ac\u201d gives clear progression and satisfying endpoint",
     "context": "",
     "auto_answer": "Late-game completion is defined by achieving the game's win condition or final milestone, which are the primary objectives or culminating events that signify the player's success and bring the main narrative or gameplay loop to a close.",
     "resolved_by": "gemini-flash",
@@ -399,7 +399,7 @@
   {
     "id": "state-squeeze-empire-f54344c9",
     "project": "squeeze-empire",
-    "question": "After late-game is done â€” release publicly, keep personal, or productize?",
+    "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
     "type": "proactive",
     "status": "answered",
     "created": "2026-03-19",
@@ -422,7 +422,7 @@
       "Trust & Safety Agent",
       "CX Agent Overnight"
     ],
-    "recommendation": "Trust & Safety Agent â€” best alignment with moderation background and written communication preference",
+    "recommendation": "Trust & Safety Agent \u00e2\u20ac\u201d best alignment with moderation background and written communication preference",
     "context": "",
     "resolved_date": "2026-03-31"
   },
@@ -495,7 +495,7 @@
     "id": "wb-top-ebay-identifier-app",
     "type": "whiteboard_top10",
     "project": "_studio",
-    "question": "[#4 WHITEBOARD] eBay Item Identifier â€” Consensus Engine",
+    "question": "[#4 WHITEBOARD] eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
     "context": "BUILD | Score: 8/10 | Advancements in Vision-Language Models (VLMs) and Retrieval-Augmented Generation (RAG) make this complex multi-modal identification feasible, while the reseller market remains eager for AI-driven efficiency. | Est: months | Revenue: MEDIUM | Risk: The sheer complexity and data acquisition challenge for comprehensive 'archive RAG' and fine-tuned VLM attribute extraction could make it prohibitively expensive or technically unachievable to a high standard.",
     "decision_type": "proactive",
     "priority": "high",
@@ -573,7 +573,7 @@
     "id": "wb-top-nost-0025",
     "type": "whiteboard_top10",
     "project": "_studio",
-    "question": "[#10 WHITEBOARD] Remember when you didnâ€™t have to enter your personal info online to win a soda?",
+    "question": "[#10 WHITEBOARD] Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
     "context": "PUBLISH | Score: 7/10 | In 2026, increasing AI data demands and persistent privacy concerns will amplify the nostalgia for low-stakes, data-free interactions, making this topic highly resonant. | Est: months | Revenue: NICHE | Risk: Failing to move beyond anecdotal nostalgia to provide deeper insights or a compelling narrative about the societal shift.",
     "decision_type": "proactive",
     "priority": "medium",
@@ -599,7 +599,7 @@
     "id": "wb-top-higgsfield-backwards-design",
     "type": "whiteboard_top10",
     "project": "_studio",
-    "question": "[#1 WHITEBOARD] Higgsfield Original Series — Backwards Design",
+    "question": "[#1 WHITEBOARD] Higgsfield Original Series \u2014 Backwards Design",
     "context": "BUILD | Score: 9/10 | Data-driven niche content creation and short-form distribution are key to success for new creators today. | Est: months | Revenue: MEDIUM | Risk: Success is highly dependent on accurately identifying viable niches and winning contests.",
     "decision_type": "proactive",
     "priority": "high",
@@ -638,9 +638,9 @@
     "id": "project-ebay-consensus-engine-2026-03-31",
     "project": "_studio",
     "type": "new_project_idea",
-    "title": "eBay Item Identifier — Consensus Engine (Visual Lookup)",
+    "title": "eBay Item Identifier \u2014 Consensus Engine (Visual Lookup)",
     "question": "Ready to formalize the Consensus Engine as a studio project?",
-    "context": "Fully specced Mar 27 2026 (chat: f57a73f0-8f37-4d9e-93e3-bcf80f92bcf7). Gemini-generated architecture reviewed and approved. Replaces Google Lens → manual eBay search workflow for resellers. 6-track consensus engine: (1) Pixel Matcher — Google/eBay Visual Search API baseline. (2) Attribute Analyst — VLM structured JSON {maker, pattern, material, era}. (3) Hallmark/Maker Mark OCR — PaddleOCR-VL, overrides on Lion Passant etc. (4) Archive Historian RAG — Internet Archive trade catalogs, official color names. (5) Molded Mark OCR — copyright dates, manufacturer codes, era-locks results. (6) Instruction Manual cross-ref — identifies parts from incomplete sets. KEY FEATURE: Reroll — after results come back, pick best matches, re-run search using top results as new anchors to refine further. Multi-image input: hero shot + bottom mark + molded date + scale photo, each analyzed by appropriate track. Also on whiteboard scored 8/10 as eBay Consensus Engine. IDENTIFICATION tool — complements Image Listing App (creation) and Listing Optimizer (bulk optimization). PRODUCT ARCH DECISION (2026-03-31): Combined as single personal tool for Joe's use. Split into separate products only if taken to market or beta test groups. Shared eBay OAuth infrastructure already scaffolded (ebay_oauth.py). RuName is only missing credential — add to studio-config.json to activate.",
+    "context": "Fully specced Mar 27 2026 (chat: f57a73f0-8f37-4d9e-93e3-bcf80f92bcf7). Gemini-generated architecture reviewed and approved. Replaces Google Lens \u2192 manual eBay search workflow for resellers. 6-track consensus engine: (1) Pixel Matcher \u2014 Google/eBay Visual Search API baseline. (2) Attribute Analyst \u2014 VLM structured JSON {maker, pattern, material, era}. (3) Hallmark/Maker Mark OCR \u2014 PaddleOCR-VL, overrides on Lion Passant etc. (4) Archive Historian RAG \u2014 Internet Archive trade catalogs, official color names. (5) Molded Mark OCR \u2014 copyright dates, manufacturer codes, era-locks results. (6) Instruction Manual cross-ref \u2014 identifies parts from incomplete sets. KEY FEATURE: Reroll \u2014 after results come back, pick best matches, re-run search using top results as new anchors to refine further. Multi-image input: hero shot + bottom mark + molded date + scale photo, each analyzed by appropriate track. Also on whiteboard scored 8/10 as eBay Consensus Engine. IDENTIFICATION tool \u2014 complements Image Listing App (creation) and Listing Optimizer (bulk optimization). PRODUCT ARCH DECISION (2026-03-31): Combined as single personal tool for Joe's use. Split into separate products only if taken to market or beta test groups. Shared eBay OAuth infrastructure already scaffolded (ebay_oauth.py). RuName is only missing credential \u2014 add to studio-config.json to activate.",
     "status": "resolved",
     "created": "2026-03-31",
     "tags": [
@@ -665,9 +665,9 @@
     "id": "project-ebay-image-listing-app-2026-03-31",
     "project": "_studio",
     "type": "new_project_idea",
-    "title": "eBay Image Listing App (Photo → Draft Listing)",
+    "title": "eBay Image Listing App (Photo \u2192 Draft Listing)",
     "question": "Ready to scaffold the eBay Image Listing App?",
-    "context": "Scoped Mar 13 2026 (chat: 5be8454e-aa34-4f60-8750-f4083a222b0c). Upload photo → Gemini Vision identifies all items → eBay sold price lookup → generates listing title + suggested price. Lot logic for items under $15. Exports to eBay as draft listings via Trading API. CREATION tool — distinct from Listing Optimizer (bulk CSV optimizer of existing listings). Blocked on eBay Developer Program OAuth setup. eBay API infrastructure shared with Listing Optimizer + Arbitrage Pulse. PRODUCT ARCH DECISION (2026-03-31): Combined as single personal tool for Joe's use. Split into separate products only if taken to market or beta test groups. Shared eBay OAuth infrastructure already scaffolded (ebay_oauth.py). RuName is only missing credential — add to studio-config.json to activate.",
+    "context": "Scoped Mar 13 2026 (chat: 5be8454e-aa34-4f60-8750-f4083a222b0c). Upload photo \u2192 Gemini Vision identifies all items \u2192 eBay sold price lookup \u2192 generates listing title + suggested price. Lot logic for items under $15. Exports to eBay as draft listings via Trading API. CREATION tool \u2014 distinct from Listing Optimizer (bulk CSV optimizer of existing listings). Blocked on eBay Developer Program OAuth setup. eBay API infrastructure shared with Listing Optimizer + Arbitrage Pulse. PRODUCT ARCH DECISION (2026-03-31): Combined as single personal tool for Joe's use. Split into separate products only if taken to market or beta test groups. Shared eBay OAuth infrastructure already scaffolded (ebay_oauth.py). RuName is only missing credential \u2014 add to studio-config.json to activate.",
     "status": "resolved",
     "created": "2026-03-31",
     "tags": [
@@ -687,47 +687,53 @@
   {
     "id": "state-acuscan-ar-6b886ecc",
     "project": "acuscan-ar",
-    "question": "If hand tracking lags on older phones â€” prioritize speed or visual accuracy?",
+    "question": "If hand tracking lags on older phones \u00e2\u20ac\u201d prioritize speed or visual accuracy?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-04-01",
     "options": [],
     "recommendation": "",
-    "context": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate."
+    "context": "TF.js MediaPipe runs slower on budget devices. May need to reduce landmark polling rate.",
+    "auto_answer": "Prioritize speed. For real-time interactive features, responsiveness significantly impacts user experience, even if it means a slight trade-off in visual accuracy, especially on budget devices where performance is constrained.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-04-01T03:30:07.880489"
   },
   {
     "id": "state-arbitrage-pulse-9ab4799b",
     "project": "arbitrage-pulse",
-    "question": "What geographic area to monitor â€” Tennessee local, Illinois local, or both?",
+    "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
     "type": "required",
     "status": "pending",
     "created": "2026-04-01",
     "options": [
       "Tennessee (Atwood/McKenzie area)",
       "Illinois (Woodstock area)",
-      "Both â€” separate digests"
+      "Both \u00e2\u20ac\u201d separate digests"
     ],
-    "recommendation": "Both with separate digests â€” you travel between both regularly",
+    "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
     "context": ""
   },
   {
     "id": "state-arbitrage-pulse-de47a912",
     "project": "arbitrage-pulse",
-    "question": "Scraping approach â€” Apify Actor or direct browser automation via Chrome extension?",
+    "question": "Scraping approach \u00e2\u20ac\u201d Apify Actor or direct browser automation via Chrome extension?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-04-01",
     "options": [
       "Apify (paid, reliable, maintained)",
       "Chrome extension automation (free, may break with FB updates)"
     ],
-    "recommendation": "Start with Chrome extension automation â€” free, and we already have it set up",
-    "context": ""
+    "recommendation": "Start with Chrome extension automation \u00e2\u20ac\u201d free, and we already have it set up",
+    "context": "",
+    "auto_answer": "For an AI studio requiring scalable, reliable, and maintainable data acquisition, Apify Actors are generally the superior choice due to managed infrastructure, proxy rotation, and robust features. Chrome extensions are better suited for personal, low-volume, or highly interactive, user-specific browser tasks.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-04-01T03:30:18.044374"
   },
   {
     "id": "state-arbitrage-pulse-3fe4a6ad",
     "project": "arbitrage-pulse",
-    "question": "Minimum profit margin to include in digest â€” e.g. only show items with 40%+ margin?",
+    "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-04-01",
@@ -738,33 +744,39 @@
   {
     "id": "state-arbitrage-pulse-f10b735b",
     "project": "arbitrage-pulse",
-    "question": "Digest delivery format â€” Markdown file in Drive, email, or dashboard card?",
+    "question": "Digest delivery format \u00e2\u20ac\u201d Markdown file in Drive, email, or dashboard card?",
     "type": "proactive",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-04-01",
     "options": [],
     "recommendation": "",
-    "context": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio."
+    "context": "Markdown in Drive is simplest. Email requires SMTP setup. Dashboard card integrates with studio.",
+    "auto_answer": "Markdown file in Drive.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-04-01T03:30:27.562856"
   },
   {
     "id": "state-hibid-analyzer-6baf3529",
     "project": "hibid-analyzer",
-    "question": "Now that Chrome extension is available â€” attempt textarea via extension first or continue investigating DOM approach?",
+    "question": "Now that Chrome extension is available \u00e2\u20ac\u201d attempt textarea via extension first or continue investigating DOM approach?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-04-01",
     "options": [
-      "Extension first â€” highest probability of success",
-      "DOM investigation â€” understand root cause first",
+      "Extension first \u00e2\u20ac\u201d highest probability of success",
+      "DOM investigation \u00e2\u20ac\u201d understand root cause first",
       "Both in parallel"
     ],
-    "recommendation": "Extension first â€” Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
-    "context": ""
+    "recommendation": "Extension first \u00e2\u20ac\u201d Claude in Chrome has direct page access, bypasses the DOM isolation problem entirely",
+    "context": "",
+    "auto_answer": "Prioritize the Chrome extension approach; it offers direct, robust, and reliable interaction with textareas within the browser context.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-04-01T03:30:33.152385"
   },
   {
     "id": "state-nutrimind-fc9fe357",
     "project": "nutrimind",
-    "question": "What defines NutriMind as complete â€” what is the finish line?",
+    "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
     "type": "required",
     "status": "pending",
     "created": "2026-04-01",
@@ -773,29 +785,32 @@
       "Personal use ready",
       "Productize for other users"
     ],
-    "recommendation": "Define personal use ready first â€” then decide if productizing is worth the extra work",
+    "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
     "context": ""
   },
   {
     "id": "state-squeeze-empire-8717e27a",
     "project": "squeeze-empire",
-    "question": "What defines late-game completion â€” what is the win condition or final milestone?",
+    "question": "What defines late-game completion \u00e2\u20ac\u201d what is the win condition or final milestone?",
     "type": "required",
-    "status": "pending",
+    "status": "auto-resolved",
     "created": "2026-04-01",
     "options": [
       "Reach a revenue target",
       "Unlock all upgrades",
-      "No win condition â€” infinite idle",
+      "No win condition \u00e2\u20ac\u201d infinite idle",
       "Story ending"
     ],
-    "recommendation": "Reach a revenue target + unlock all upgrades â€” gives clear progression and satisfying endpoint",
-    "context": ""
+    "recommendation": "Reach a revenue target + unlock all upgrades \u00e2\u20ac\u201d gives clear progression and satisfying endpoint",
+    "context": "",
+    "auto_answer": "Late-game completion defines reaching the ultimate objective or primary win condition of a game, which can manifest as defeating a final boss, achieving a narrative conclusion, completing all main quests, or unlocking all major content; the win condition is the specific criterion that triggers victory, and a final milestone is the last significant achievement leading to or marking that completion.",
+    "resolved_by": "gemini-flash",
+    "resolved_at": "2026-04-01T03:30:38.561140"
   },
   {
     "id": "state-squeeze-empire-ff866da5",
     "project": "squeeze-empire",
-    "question": "After late-game is done â€” release publicly, keep personal, or productize?",
+    "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
     "type": "proactive",
     "status": "pending",
     "created": "2026-04-01",

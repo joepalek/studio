@@ -21,7 +21,7 @@ STATUS_PATH    = os.path.join(STUDIO, "claude-status.txt")
 HANDOFF_PATH   = os.path.join(STUDIO, "session-handoff.md")
 LOG_PATH       = os.path.join(STUDIO, "scheduler/logs/nightly-rollup.log")
 
-EXPECTED_AGENTS = ["supervisor", "stress-tester", "janitor", "git-scout", "sre-scout"]
+EXPECTED_AGENTS = ["supervisor", "nightly-rollup"]  # Only agents that reliably check in nightly; others are weekly/manual
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────

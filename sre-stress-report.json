@@ -1,12 +1,11 @@
 {
-  "timestamp": "2026-04-01T00:32:23.300511",
+  "timestamp": "2026-04-01T08:01:20.814801",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (1 files): job-match",
-    "UNCOMMITTED (1 files): listing-optimizer",
-    "UNCOMMITTED (70 files): _studio"
+    "UNCOMMITTED (2 files): job-match",
+    "UNCOMMITTED (34 files): _studio"
   ],
   "watch": [],
-  "action_required": "Commit dirty repos: _studio (70 files), job-match, listing-optimizer"
+  "action_required": "Commit dirty files in job-match and _studio"
 }

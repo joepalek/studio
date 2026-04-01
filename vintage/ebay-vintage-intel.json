@@ -1,5 +1,5 @@
 {
-  "hot_items": [
+  "hot": [
     {
       "decade": "1920s",
       "item": "Art Deco furniture and decor"
@@ -275,246 +275,187 @@
       "item": "Pebble smartwatches (for collectors of tech history)"
     }
   ],
-  "product_gaps": [
+  "gaps": [
     {
       "decade": "1920s",
-      "product": "The 'Autodynophone'",
+      "name": "The 'Autodynophone'",
       "why_failed": "An overly complex and expensive early record player that couldn't compete with simpler, more affordable phonographs for the mass market.",
-      "modern_gap": "No, modern digital music players have made such complex, single-purpose devices obsolete.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1920s"
-      ]
+      "modern_gap": "No, modern digital music players have made such complex, single-purpose devices obsolete."
     },
     {
       "decade": "1920s",
-      "product": "Early Automatic Dishwashers (e.g., 'Sanitor' brand)",
+      "name": "Early Automatic Dishwashers (e.g., 'Sanitor' brand)",
       "why_failed": "While invented, early models were often unreliable, inefficient, very expensive, and required significant manual effort, making them unappealing to most households.",
-      "modern_gap": "No, automatic dishwashers are now highly effective, affordable, and common household appliances.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1920s"
-      ]
+      "modern_gap": "No, automatic dishwashers are now highly effective, affordable, and common household appliances."
+    },
+    {
+      "decade": "1920s",
+      "name": "Radithor Radioactive Health Tonic",
+      "why_failed": "Marketed as an energy and vitality cure-all containing radium and mesothorium, Radithor killed several high-profile users including socialite Eben Byers by 1931, prompting FDA action and ending the radioactive patent medicine craze.",
+      "modern_gap": "Premium mens performance and recovery tonics remain a weak category \u2014 no credible brand owns the active-man vitality niche without stimulants."
     },
     {
       "decade": "1930s",
-      "product": "Dymaxion Car",
+      "name": "Dymaxion Car",
       "why_failed": "Its radical design, high cost, and association with fatal accidents scared off investors and the public.",
-      "modern_gap": "Yes, there's still a market for highly fuel-efficient, aerodynamic, multi-purpose vehicles, though modern iterations differ greatly.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1930s"
-      ]
+      "modern_gap": "Yes, there's still a market for highly fuel-efficient, aerodynamic, multi-purpose vehicles, though modern iterations differ greatly."
     },
     {
       "decade": "1930s",
-      "product": "High-end consumer phonographs",
+      "name": "High-end consumer phonographs",
       "why_failed": "Expensive luxury items were largely inaccessible to the general public struggling with widespread poverty during the Depression.",
-      "modern_gap": "No, modern digital music players and streaming services have filled this gap more effectively and affordably for mass consumption.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1930s"
-      ]
+      "modern_gap": "No, modern digital music players and streaming services have filled this gap more effectively and affordably for mass consumption."
     },
     {
       "decade": "1930s",
-      "product": "Automatic dishwashers (early models)",
+      "name": "Automatic dishwashers (early models)",
       "why_failed": "They were very expensive, unreliable, and often required specialized plumbing, making them impractical for most households.",
-      "modern_gap": "No, modern dishwashers are efficient, affordable, and a common household appliance, completely filling the original need.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1930s"
-      ]
+      "modern_gap": "No, modern dishwashers are efficient, affordable, and a common household appliance, completely filling the original need."
     },
     {
       "decade": "1940s",
-      "product": "Tucker Torpedo",
+      "name": "Tucker Torpedo",
       "why_failed": "Despite innovative safety features and design, the company faced legal troubles, accusations of fraud, and production challenges, leading to its collapse after only 51 cars were built.",
-      "modern_gap": "No, the automotive industry continues to innovate on safety and design, but the Tucker's forward-thinking approach was ahead of its time.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1940s"
-      ]
+      "modern_gap": "No, the automotive industry continues to innovate on safety and design, but the Tucker's forward-thinking approach was ahead of its time."
+    },
+    {
+      "decade": "1940s",
+      "name": "ConvAirCar Flying Automobile",
+      "why_failed": "The 1947 prototype \u2014 a standard car fitted with a detachable airplane fuselage \u2014 crashed on its third test flight when the pilot forgot to check fuel. The project folded immediately, killing investor confidence in the flying car category.",
+      "modern_gap": "Personal air mobility for consumers remains completely unsolved \u2014 no product bridges the car-to-sky gap at an accessible price point."
+    },
+    {
+      "decade": "1940s",
+      "name": "Raytheon Radarange Home Microwave (1947)",
+      "why_failed": "The first commercial microwave oven weighed 750 pounds, stood nearly 6 feet tall, required a dedicated water-cooling line, and cost ,000 \u2014 roughly 5,000 today. No household could practically own one.",
+      "modern_gap": "Fully filled. The modern countertop microwave is one of the most successful product evolutions in home appliance history."
     },
     {
       "decade": "1950s",
-      "product": "Ford Edsel",
+      "name": "Ford Edsel",
       "why_failed": "Its design was polarizing (especially the 'horse-collar' grille), it was overpriced, launched during an economic recession, and suffered from quality control issues and poor marketing.",
-      "modern_gap": "No, the market for distinct mid-range family cars is well-served by numerous brands today, and consumer preferences have shifted significantly from the Edsel's concept.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1950s"
-      ]
+      "modern_gap": "No, the market for distinct mid-range family cars is well-served by numerous brands today, and consumer preferences have shifted significantly from the Edsel's concept."
     },
     {
       "decade": "1950s",
-      "product": "Nuclear-Powered Cars (concept)",
+      "name": "Nuclear-Powered Cars (concept)",
       "why_failed": "While research and prototypes existed, they failed due to immense safety concerns regarding radiation shielding, the prohibitive cost of development and fuel, and overall impracticality for consumer use.",
-      "modern_gap": "No, while electric and alternative fuel vehicles are prevalent, the fundamental safety and logistical issues of personal nuclear propulsion remain too great to ever fill this conceptual gap.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1950s"
-      ]
+      "modern_gap": "No, while electric and alternative fuel vehicles are prevalent, the fundamental safety and logistical issues of personal nuclear propulsion remain too great to ever fill this conceptual gap."
+    },
+    {
+      "decade": "1950s",
+      "name": "3D Movies \u2014 First Wave",
+      "why_failed": "After Bwana Devil (1952) sparked a brief studio 3D craze, audience fatigue set in fast: glasses were uncomfortable, projection required two synchronized reels, and headaches were common. By 1954 the wave was over.",
+      "modern_gap": "3D cinema re-emerges every decade and fails for the same reasons each time \u2014 the glasses problem and the premium ticket price still have no real solution."
     },
     {
       "decade": "1960s",
-      "product": "DuPont Corfam",
+      "name": "DuPont Corfam",
       "why_failed": "Marketed as a superior synthetic leather, it failed to gain widespread acceptance in footwear due to its poor breathability and comfort compared to natural leather.",
-      "modern_gap": "Yes, the search for a perfect synthetic leather that perfectly mimics natural properties and sustainability is still ongoing, though modern vegan leathers are significantly better.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1960s"
-      ]
+      "modern_gap": "Yes, the search for a perfect synthetic leather that perfectly mimics natural properties and sustainability is still ongoing, though modern vegan leathers are significantly better."
+    },
+    {
+      "decade": "1960s",
+      "name": "AT&T Picturephone",
+      "why_failed": "Introduced at the 1964 World's Fair and launched commercially in 1970 at 60/month, the Picturephone found virtually no subscribers. People did not want to be seen while on the phone, and the cost was prohibitive.",
+      "modern_gap": "None. Free video calling via smartphones and computers made the Picturephone concept universal and costless."
+    },
+    {
+      "decade": "1960s",
+      "name": "Smell-O-Vision",
+      "why_failed": "The 1960 theatrical scent system for the film Scent of Mystery pumped 30 odors through seats on cue. Mechanical delays made smells arrive late, the system hissed loudly, and rear-row audiences got front-row smells. Used in exactly one film.",
+      "modern_gap": "Immersive multi-sensory entertainment \u2014 synchronized scent, temperature, and haptic experiences in cinema or gaming \u2014 remains a genuinely unbuilt consumer category."
     },
     {
       "decade": "1970s",
-      "product": "Quadraphonic Sound",
+      "name": "Quadraphonic Sound",
       "why_failed": "Expensive, complex setup, lack of standardized formats, and limited content hindered widespread adoption by consumers.",
-      "modern_gap": "No, the desire for immersive audio is now filled by surround sound and object-based audio technologies like Dolby Atmos.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1970s"
-      ]
+      "modern_gap": "No, the desire for immersive audio is now filled by surround sound and object-based audio technologies like Dolby Atmos."
     },
     {
       "decade": "1970s",
-      "product": "8-Track Tapes",
+      "name": "8-Track Tapes",
       "why_failed": "Prone to jamming, inferior sound quality compared to cassettes and vinyl, and the inability to easily skip tracks led to their decline.",
-      "modern_gap": "No, convenient and portable music consumption is now filled by digital streaming services and improved physical formats.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1970s"
-      ]
+      "modern_gap": "No, convenient and portable music consumption is now filled by digital streaming services and improved physical formats."
+    },
+    {
+      "decade": "1970s",
+      "name": "AMC Pacer",
+      "why_failed": "Marketed as the first wide small car for safety and interior space, the Pacer was designed around a rotary engine that never arrived. The backup inline-6 made it heavy and fuel-thirsty \u2014 exactly wrong for the 1973 oil crisis. Sales collapsed by 1978.",
+      "modern_gap": "The compact car with a genuinely spacious interior is now served by modern subcompact crossovers, but an affordable, fun, distinctively styled city car remains elusive."
     },
     {
       "decade": "1980s",
-      "product": "New Coke",
+      "name": "New Coke",
       "why_failed": "Public backlash and strong preference for the original formula led to its quick withdrawal shortly after launch.",
-      "modern_gap": "No, the market for various cola formulations and brands is well-covered.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1980s"
-      ]
+      "modern_gap": "No, the market for various cola formulations and brands is well-covered."
     },
     {
       "decade": "1980s",
-      "product": "DeLorean DMC-12",
+      "name": "DeLorean DMC-12",
       "why_failed": "Plagued by financial difficulties, quality control issues, and limited market appeal beyond its futuristic design and 'Back to the Future' fame.",
-      "modern_gap": "No, niche luxury and unique car markets continue to thrive with various high-performance and design-focused vehicles.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1980s"
-      ]
+      "modern_gap": "No, niche luxury and unique car markets continue to thrive with various high-performance and design-focused vehicles."
     },
     {
       "decade": "1980s",
-      "product": "Betamax VCR",
+      "name": "Betamax VCR",
       "why_failed": "Lost the video format war to VHS due to restrictive licensing, shorter recording times, and higher cost, despite arguably superior technical quality.",
-      "modern_gap": "No, physical media formats have largely been superseded by digital streaming and downloads.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1980s"
-      ]
+      "modern_gap": "No, physical media formats have largely been superseded by digital streaming and downloads."
     },
     {
       "decade": "1990s",
-      "product": "Apple Newton",
+      "name": "Apple Newton",
       "why_failed": "It was ahead of its time, expensive, and suffered from clunky handwriting recognition and limited battery life.",
-      "modern_gap": "No, the concept of a personal digital assistant was vastly improved and superseded by smartphones.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1990s"
-      ]
+      "modern_gap": "No, the concept of a personal digital assistant was vastly improved and superseded by smartphones."
     },
     {
       "decade": "1990s",
-      "product": "Virtual Boy",
+      "name": "Virtual Boy",
       "why_failed": "Suffered from monochromatic red display, caused eye strain, lacked immersive games, and was marketed poorly.",
-      "modern_gap": "No, modern VR headsets offer full color and far superior immersion, rendering the Virtual Boy's niche obsolete.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-1990s"
-      ]
+      "modern_gap": "No, modern VR headsets offer full color and far superior immersion, rendering the Virtual Boy's niche obsolete."
+    },
+    {
+      "decade": "1990s",
+      "name": "Circuit City DIVX Disposable DVD",
+      "why_failed": "DIVX discs (1998) cost -5 each and expired after 48 hours of first play, requiring a modem-connected player and monthly fees to reactivate. Consumers revolted publicly, retailers chose DVD, and Circuit City lost 14 million writing off the system in 1999.",
+      "modern_gap": "None. Streaming services solved disposable rental perfectly \u2014 but DIVX was the first attempt at DRM-gated consumption and got everything wrong."
     },
     {
       "decade": "2000s",
-      "product": "Microsoft Zune",
+      "name": "Microsoft Zune",
       "why_failed": "Attempted to compete with the dominant iPod but lacked a compelling ecosystem and late market entry, failing to capture significant market share.",
-      "modern_gap": "No, the market for dedicated portable music players has largely been superseded by smartphones and streaming services.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-2000s"
-      ]
+      "modern_gap": "No, the market for dedicated portable music players has largely been superseded by smartphones and streaming services."
+    },
+    {
+      "decade": "2000s",
+      "name": "Segway Personal Transporter",
+      "why_failed": "Launched in 2001 with Dean Kamen promising it would replace cars in cities, the ,000 Segway was too slow for roads and illegal on sidewalks, leaving it stranded in no-man's land. Cities banned it. Consumers mocked it. The brand became a mall-cop punchline.",
+      "modern_gap": "Electric scooters and e-bikes partially fill the urban micro-mobility gap, but a truly mainstream affordable last-mile personal vehicle has not been built."
+    },
+    {
+      "decade": "2000s",
+      "name": "HD DVD",
+      "why_failed": "Toshiba's HD DVD lost the next-generation disc format war to Sony's Blu-ray in early 2008 after Warner Bros. and major retailers backed Blu-ray exclusively. Millions of consumers who bought HD DVD players were left with obsolete hardware.",
+      "modern_gap": "None \u2014 Blu-ray won, and streaming has since made physical media secondary. The format war itself was the last major consumer format battle before streaming rendered the question moot."
     },
     {
       "decade": "2010s",
-      "product": "Google Glass",
+      "name": "Google Glass",
       "why_failed": "High price, privacy concerns, and limited practical use case for the average consumer made them socially awkward and commercially unviable.",
-      "modern_gap": "No, while AR glasses are still being developed, mainstream adoption for general consumers remains elusive without solving the core issues.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-2010s"
-      ]
+      "modern_gap": "No, while AR glasses are still being developed, mainstream adoption for general consumers remains elusive without solving the core issues."
     },
     {
       "decade": "2010s",
-      "product": "HTC First (Facebook Phone)",
+      "name": "HTC First (Facebook Phone)",
       "why_failed": "Over-reliance on Facebook integration, mediocre hardware, and users preferring the Facebook app on their existing devices led to poor sales.",
-      "modern_gap": "No, integrated social media operating systems or dedicated social phones did not become a trend and are not a modern gap.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-2010s"
-      ]
+      "modern_gap": "No, integrated social media operating systems or dedicated social phones did not become a trend and are not a modern gap."
     },
     {
       "decade": "2010s",
-      "product": "Juicero",
+      "name": "Juicero",
       "why_failed": "Extremely high price point for a device that simply squeezed pre-packaged juice bags that could be hand-squeezed, exposing its lack of innovation and value.",
-      "modern_gap": "No, while convenience in health food is desired, this specific, overpriced, non-functional solution is not a modern gap.",
-      "type": "product_gap",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "vintage",
-        "vintage-2010s"
-      ]
+      "modern_gap": "No, while convenience in health food is desired, this specific, overpriced, non-functional solution is not a modern gap."
     }
-  ]
+  ],
+  "updated": "2026-04-01T08:59:23.291574"
 }

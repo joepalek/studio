@@ -105,8 +105,26 @@ def check_orphaned_bats():
     sched_dir = STUDIO + "/scheduler"
     bats = [f for f in os.listdir(sched_dir) if f.endswith(".bat")]
     xmls = [f.replace(".xml","").lower() for f in os.listdir(sched_dir) if f.endswith(".xml")]
+
+    # Explicit mapping: bat files that intentionally have no same-named XML
+    # (they are launched by differently-named XML tasks or used as manual utilities)
+    KNOWN_LEGIT = {
+        "overnight-ai-intel.bat",          # AgentAIIntel.xml
+        "overnight-check-drift.bat",       # AgentCheckDrift.xml
+        "overnight-janitor.bat",           # AgentJanitor.xml
+        "overnight-agency-build.bat",      # AgentAgencyBuild.xml or manual
+        "overnight-ai-services-rankings.bat",  # register_ai_services_rankings.ps1 task
+        "overnight-sidebar-inject.bat",    # register_sidebar_inject.ps1 task
+        "overnight-inbox-manager.bat",     # managed via run-agent.py
+        "overnight-vector-reindex.bat",    # vector reindex task
+        "start-bridge.bat",                # manual utility — SidebarBridge
+        "game_archaeology_weekly.bat",     # game archaeology manual/weekly
+    }
+
     orphaned = []
     for bat in bats:
+        if bat in KNOWN_LEGIT:
+            continue
         name = bat.replace(".bat","").lower().replace("-","").replace("_","")
         if not any(name in x.replace("-","").replace("_","") for x in xmls):
             orphaned.append(bat)

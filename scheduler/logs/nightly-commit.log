@@ -111,3 +111,16 @@ You've hit your limit · resets Mar 31, 5pm (America/Chicago)
 [2026-04-01 01:33:38] Repos committed: _studio_vedic, ghost-book, job-match, listing-optimizer
 [2026-04-01 01:33:38] Errors in: _studio
 [Wed 04/01/2026  2:12:06.73] Nightly commit starting 
+[2026-04-01 02:12:07] Git commit agent starting
+[2026-04-01 02:12:09]   _studio: 1 dirty files
+[2026-04-01 02:12:17]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 02:12:17]   _studio msg: chore: nightly auto-commit [_studio]
+[2026-04-01 02:12:19]   _studio: committed OK
+[2026-04-01 02:12:21]   job-match: 1 dirty files
+[2026-04-01 02:12:22]   Gemini msg failed: HTTP Error 404: Not Found — using default
+[2026-04-01 02:12:22]   job-match msg: chore: nightly auto-commit [job-match]
+[2026-04-01 02:12:22]   job-match: committed OK
+[2026-04-01 02:12:23] Done. Committed: 2 | Clean: 14 | Errors: 0
+[2026-04-01 02:12:23] Repos committed: _studio, job-match
+[Wed 04/01/2026  2:12:23.98] Done 
+[Wed 04/01/2026  8:59:20.78] Nightly commit starting 

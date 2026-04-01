@@ -159,3 +159,25 @@ Traceback (most recent call last):
          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/scheduler/logs/overnight-job-delta.log'
 [Tue 03/31/2026  3:00:04.91] Done 
+[Wed 04/01/2026  3:00:01.62] Job daily harvest starting 
+[2026-04-01 03:00:02] Job daily harvest starting
+[2026-04-01 03:00:02] Registry: 59 boards + 605 career pages
+[2026-04-01 03:00:02] No existing listings -- fresh start
+[2026-04-01 03:00:02] Harvesting 664 total sources...
+[2026-04-01 03:02:18]   100/664 sources -- 1206 jobs so far
+[2026-04-01 03:04:32]   200/664 sources -- 2230 jobs so far
+[2026-04-01 03:06:02]   300/664 sources -- 3200 jobs so far
+[2026-04-01 03:07:27]   400/664 sources -- 3200 jobs so far
+[2026-04-01 03:09:06]   500/664 sources -- 3326 jobs so far
+[2026-04-01 03:11:08]   600/664 sources -- 3628 jobs so far
+[2026-04-01 03:12:28] Harvest complete:
+[2026-04-01 03:12:28]   Total extracted: 3816
+[2026-04-01 03:12:28]   Unique active:   1383
+[2026-04-01 03:12:28]   New today:       1383
+[2026-04-01 03:12:28]   Expired:         0
+[2026-04-01 03:12:28]   Errors:          64
+[2026-04-01 03:12:28] Active listings saved: G:/My Drive/Projects/job-match/job-listings.json
+[2026-04-01 03:12:28] Archive updated: 0 expired total
+[2026-04-01 03:12:28] Done.
+[Wed 04/01/2026  3:12:28.40] Done 
+[Wed 04/01/2026  8:59:21.84] Job daily harvest starting 

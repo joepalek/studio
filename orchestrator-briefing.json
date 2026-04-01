@@ -1,7 +1,6 @@
 {
-  "generated": "2026-03-31T08:03:09.747832",
-  "model_used": "claude-sonnet-4-6 (fallback \u2014 Gemini generateContent DOWN)",
-  "briefing": "TOP 3 FOR JOE TODAY:\n1. [Job Match] Make 3 architecture decisions (Replit migration, auth replacement, AI model choice) \u2014 5 pending decisions blocking all agent work; Blackdot ends May 2026\n2. [Listing Optimizer] Decide: personal tool vs productize + input format \u2014 2 decisions blocking build; 565 live eBay listings = daily revenue at stake\n3. [CTW] Unblock portrait generation \u2014 at 40%, next action is clear but blocked on real images; near-term revenue path\n\nAGENT QUEUE (autonomous \u2014 no Joe needed):\n1. Commit dirty projects: CTW (1 file), job-match (5 files), listing-optimizer (1 file), _studio (77 files)\n2. Update Gemini model names in orchestrator.md \u2014 gemini-1.5-flash deprecated, replace with gemini-2.0-flash-001\n3. Run janitor scan on job-match and listing-optimizer state files to verify schema integrity\n\nCRITICAL BLOCKERS:\n- CTW blocked on portrait images (SVG placeholders only) + comfort bar overcorrection\n- Sentinel blocked on LLC filing (00 Tennessee) \u2014 highest long-term revenue, zero progress possible until resolved\n- Gemini generateContent API returning 404/503 \u2014 orchestrator briefing fell back to Claude (quota hit)\n\nDEFER TODAY: AcuScan, NutriMind, Squeeze Empire, Whatnot Apps \u2014 all paused intentionally, pending decisions not urgent.",
+  "generated": "2026-04-01T08:01:48.500005",
+  "briefing": "Gemini unavailable. See plan below.",
   "plan": {
     "agent_runnable": [],
     "human_required": [

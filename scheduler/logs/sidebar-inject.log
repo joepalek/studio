@@ -3,3 +3,9 @@ Usage found: {'youtube-data-v3': 10, 'supabase': 1}
 Injected: 46 inbox, 10 whiteboard, 8 assets
 INJECTED at line 239, window.onload at line 572 - order: OK
 Done.
+OK  inbox=11 wb=10 size=95664
+    boot=251 injected=267 tabbar=270 onload=603
+
+OK  inbox=11 wb=10 size=95550
+    boot=251 injected=267 tabbar=270 onload=603
+

@@ -51,3 +51,17 @@ Traceback (most recent call last):
          ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/scheduler/logs/overnight-agency-build.log'
 [Tue 03/31/2026  5:30:01.97] Done 
+[Wed 04/01/2026  5:30:02.22] Agency character batch build starting 
+[2026-04-01 05:30:02] Agency character batch build starting
+[2026-04-01 05:30:02] Passing specs loaded: 283
+[2026-04-01 05:30:02] Already built: 283 characters (will skip)
+[2026-04-01 05:30:02] To build this run: 0 new characters
+[2026-04-01 05:30:02] Nothing new to build -- all passing specs already have character folders
+[Wed 04/01/2026  5:30:02.58] Done 
+[Wed 04/01/2026  8:59:21.57] Agency character batch build starting 
+[2026-04-01 08:59:22] Agency character batch build starting
+[2026-04-01 08:59:22] Passing specs loaded: 283
+[2026-04-01 08:59:22] Already built: 283 characters (will skip)
+[2026-04-01 08:59:22] To build this run: 0 new characters
+[2026-04-01 08:59:22] Nothing new to build -- all passing specs already have character folders
+[Wed 04/01/2026  8:59:22.64] Done 

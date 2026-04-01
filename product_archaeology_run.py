@@ -88,6 +88,8 @@ def gather_graveyard():
 def score_items(results):
     scored = []
     log("Scoring top 20 via Gemini...")
+    MAX_CONSECUTIVE_FAILURES = 3
+    consecutive_failures = 0
     for item in results[:20]:
         prompt = (
             "Product archaeology analysis. Dead/failed product: " + item["product_name"] +
@@ -113,8 +115,14 @@ def score_items(results):
             total    = score.get("total_score", "?")
             log("  [" + priority + "] " + item["product_name"][:45] + ": " + str(total) + "/10")
             scored.append(item)
+            consecutive_failures = 0  # reset on success
         except Exception as e:
+            consecutive_failures += 1
             log("  SCORE ERROR: " + item["product_name"][:40] + " — " + str(e)[:50])
+            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                log("  CIRCUIT BREAKER: " + str(MAX_CONSECUTIVE_FAILURES) +
+                    " consecutive failures — aborting score pass to avoid API waste")
+                break
         time.sleep(1)
     return scored
 
@@ -142,14 +150,17 @@ def main():
               open(OUTPUT, "w", encoding="utf-8"), indent=2)
     log("Saved to product-archaeology-results.json")
 
-    # Score new items (top 20 unscored)
+    # Score new items (top 20 unscored) — only after 7AM to avoid Gemini 2AM quota failures
     unscored = [r for r in all_results if not r.get("score")][:20]
-    if unscored and KEY:
+    current_hour = datetime.now().hour
+    if unscored and KEY and current_hour >= 7:
         scored = score_items(unscored)
         json.dump({"count": len(scored), "updated": datetime.now().isoformat(),
                    "results": scored},
                   open(SCORED, "w", encoding="utf-8"), indent=2)
         log("Scored " + str(len(scored)) + " items — saved to product-archaeology-scored.json")
+    elif unscored and current_hour < 7:
+        log("Skipping score pass — hour " + str(current_hour) + " < 7 (Gemini unreliable at 2AM; scoring runs at 8AM)")
     else:
         log("Skipping score pass (no API key or nothing new to score)")
 

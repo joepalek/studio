@@ -1,30 +1,28 @@
-AI INTEL - 2026-03-30
-Generated: 2026-03-30T20:38:45Z
-Sources: 11/11 OK | 4 HIGH / 61 WORTH / 130 LOGGED | YouTube: 8 videos surfaced
+AI INTEL - 2026-04-01
+Generated: 2026-04-01T10:00:02Z
+Sources: 11/11 OK | 2 HIGH / 69 WORTH / 197 LOGGED | YouTube: 15 videos surfaced
 
-HIGH PRIORITY (4):
-  * How you should be prompting GPT 5 for Agentic Persistence | score:28 | https://reddit.com/r/ChatGPT/comments/1s812gv/how_you_should_be_prompting_gpt_5_for_agentic/
-  * Playwright, but for native iOS/Android plus Flutter/React Native | score:30 | https://reddit.com/r/ClaudeAI/comments/1s80hbs/playwright_but_for_native_iosandroid_plus/
-  * Zanat: an open-source CLI + MCP server to version, share, and install AI agent skills via  | score:28 | https://reddit.com/r/LocalLLaMA/comments/1s823ue/zanat_an_opensource_cli_mcp_server_to_version/
+HIGH PRIORITY (2):
+  * Layperson, quite impressed with Claude | score:28 | https://reddit.com/r/ClaudeAI/comments/1s9ezux/layperson_quite_impressed_with_claude/
   * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 
-WORTH READING (61):
-  * Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News 🚨 What’s Happening RIGHT NOW | score:21 | https://www.youtube.com/watch?v=mCDzH2TK71o
-  * Forget ChatGPT || This 5 AI Tools  Will BLOW Your Mind | score:20 | https://www.youtube.com/watch?v=0CD2QeAIRII
-  * ChatGPT 5.4 Features | Latest ChatGPT Features | ChatGPT 5.4 Update Explained | #Shorts #S | score:25 | https://www.youtube.com/watch?v=9kPg4uGTCm4
-  * I Built 500 AI Workflows, These 5 Actually Sell in 2026 | score:22 | https://www.youtube.com/watch?v=Y3PcRp5RFzk
-  * Turn Antigravity Into AN AI Autonomous Engineering Team! Automate Your Code with Subagents | score:20 | https://www.youtube.com/watch?v=yuaBPLNdNSU
-  * Hermes Agent KILLED $497/Month Automation Tools 🚨 (Your AI Gets Smarter Every Session) | score:20 | https://www.youtube.com/watch?v=sf25aDO9iOs
-  * I Automated My Book&#39;s Worldbuilding with n8n (Full AI Workflow) | score:22 | https://www.youtube.com/watch?v=s-abfMWOWY8
-  * The AI Model Roller Coaster | score:21 | https://www.youtube.com/watch?v=vNSudpkwqTA
-  * we open sourced a tool that auto generates your AI agent context from your actual codebase | score:24 | https://reddit.com/r/artificial/comments/1s80vw7/we_open_sourced_a_tool_that_auto_generates_your/
-  * I Accidentally Discovered a Security Vulnerability in AI Education — Then Submitted It To  | score:21 | https://reddit.com/r/artificial/comments/1s7wulg/i_accidentally_discovered_a_security/
+WORTH READING (69):
+  * AI Business Tools (System Guide 2026) | score:20 | https://www.youtube.com/watch?v=-FceNU_ik58
+  * 🚀 Still using ChatGPT in 2026? There are more powerful AI tools now | score:20 | https://www.youtube.com/watch?v=B5i-mbVqvbM
+  * I PROMISE This AI Tool is 100% FREE! (Grok AI + YouTube Automation &amp; Viral 2D Animatio | score:22 | https://www.youtube.com/watch?v=yXlZGLCILuU
+  * Manus AI vs Claude: Which AI Tool Is Actually Worth It? (2026) | score:22 | https://www.youtube.com/watch?v=9iSxp7C8D9o
+  * Claude Code was just leaked... (WOAH) | score:22 | https://www.youtube.com/watch?v=dYG8JxtSgmM
+  * NEW Claude Mythos and ChatGPT Updates! | score:25 | https://www.youtube.com/watch?v=cGinWSKfpo4
+  * Claude Code’s source code just got leaked. #claude #anthropic #ai #artificialintelligence  | score:24 | https://www.youtube.com/watch?v=Ajavw0yqhJ4
+  * Claude Code got leaked | score:24 | https://www.youtube.com/watch?v=GdgRpiQRsis
+  * Claude Opus 4.7 &amp; Sonnet 4.8 LEAKED: Hidden Models, Undercover Mode &amp; Secret Featu | score:25 | https://www.youtube.com/watch?v=Jixon1wlEuc
+  * Claude Code Is Shipping So Fast I Almost Missed the Pattern | score:22 | https://www.youtube.com/watch?v=aWzv8kb1oLw
 
 YOUTUBE PICKS:
-  * Iran War LIVE + Bitcoin, AI, Apple &amp; Celeb News 🚨 What’s Happening RIGHT NOW [1 3 3 7 p l a n s] | https://www.youtube.com/watch?v=mCDzH2TK71o
-  * Forget ChatGPT || This 5 AI Tools  Will BLOW Your Mind [CA Mohit Patidar] | https://www.youtube.com/watch?v=0CD2QeAIRII
-  * ChatGPT 5.4 Features | Latest ChatGPT Features | ChatGPT 5.4 Update Explained |  [Simplilearn] | https://www.youtube.com/watch?v=9kPg4uGTCm4
-  * I Built 500 AI Workflows, These 5 Actually Sell in 2026 [Nate Herk | AI Automation] | https://www.youtube.com/watch?v=Y3PcRp5RFzk
-  * Turn Antigravity Into AN AI Autonomous Engineering Team! Automate Your Code with [WorldofAI] | https://www.youtube.com/watch?v=yuaBPLNdNSU
+  * AI Business Tools (System Guide 2026) [Future AI] | https://www.youtube.com/watch?v=-FceNU_ik58
+  * 🚀 Still using ChatGPT in 2026? There are more powerful AI tools now [AI School Telugu] | https://www.youtube.com/watch?v=B5i-mbVqvbM
+  * I PROMISE This AI Tool is 100% FREE! (Grok AI + YouTube Automation &amp; Viral 2 [Skill With AI] | https://www.youtube.com/watch?v=yXlZGLCILuU
+  * Manus AI vs Claude: Which AI Tool Is Actually Worth It? (2026) [Tinkr] | https://www.youtube.com/watch?v=9iSxp7C8D9o
+  * Claude Code was just leaked... (WOAH) [Matthew Berman] | https://www.youtube.com/watch?v=dYG8JxtSgmM
 
 DEPENDENCY FLAGS: none

@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-04-01 00:30 | Auto-built by generate-context.py
-Next regeneration: 2026-04-01 08:30 (approximate — runs at every session start)
+Generated: 2026-04-01 08:59 | Auto-built by generate-context.py
+Next regeneration: 2026-04-01 16:59 (approximate — runs at every session start)
 Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
@@ -752,7 +752,7 @@ If it does:
     progress_pct: 55
     persona: Job seeker tired of irrelevant results, scam listings, and dead links. Wants a ranked list of real, attainable opportunities matched to their actual behavioral profile â€” not just keywords. Also: employer who wants behavioral fit data, not just credentials.
     promotion_pending: False
-    last_touched: 2026-03-25
+    last_touched: 2026-03-30
     drift_risk: LOW
   files: 
     production: Talent-Insight-Engine/server/routes.ts
@@ -1453,6 +1453,8 @@ If it does:
     DebugLevel: INFO
     UniversalLogEnabled: True
   CurrentOrchestratorBriefing: Establishing baseline state for agent synchronization.
+  last_touched: 2026-04-01
+  drift_risk: LOW
 
 ### sentinel-performer
   ProjectName: Sentinel Performer
@@ -1468,6 +1470,8 @@ If it does:
   ResourceUsage: 
     Latency: 0ms
     Model: Claude-4.6-Sonnet
+  last_touched: 2026-04-01
+  drift_risk: LOW
 
 ### sentinel-viewer
   ProjectName: Sentinel Viewer
@@ -1482,6 +1486,8 @@ If it does:
     Theme: Dark
     TailLogs: 50
   LastLogIngested: None
+  last_touched: 2026-04-01
+  drift_risk: LOW
 
 ### squeeze-empire
   _schema_version: 1.0
@@ -1842,7 +1848,7 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-03-31T04:00:02.895603
+Last updated: 2026-04-01T08:59:22.973549
 Total items: 46
 
   [9/10] Higgsfield Original Series — Backwards Design
@@ -2743,4 +2749,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-04-01 00:30
+End of context. Generated: 2026-04-01 08:59

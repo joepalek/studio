@@ -1,8 +1,8 @@
 {
-  "_schema": "2.0",
-  "_description": "AI services ranked by category with pricing and routing data. Updated daily 05:30 AM.",
-  "generated_at": "2026-03-31T10:30:01Z",
-  "date": "2026-03-31",
+  "_schema": "1.0",
+  "_description": "AI services ranked by category. Updated daily 05:30 AM.",
+  "generated_at": "2026-04-01T13:59:22Z",
+  "date": "2026-04-01",
   "categories": {
     "chat": [
       {
@@ -13,16 +13,7 @@
         "tier": "free+paid",
         "notes": "Good free tier via OpenRouter",
         "buzz_score": 1,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Via OpenRouter free tier, rate limited",
-        "price_input_per_1m": 0.1,
-        "price_output_per_1m": 0.3,
-        "price_notes": "",
-        "routing_tags": [
-          "free-offload",
-          "general"
-        ]
+        "trending": false
       },
       {
         "rank": 2,
@@ -32,145 +23,67 @@
         "tier": "paid",
         "notes": "Best for reasoning/coding/agents",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": 3.0,
-        "price_output_per_1m": 15.0,
-        "price_notes": "Claude.ai Pro $20/mo includes usage"
+        "trending": false
       },
       {
         "rank": 3,
-        "name": "GPT-5.4 mini",
-        "provider": "OpenAI",
-        "url": "https://openai.com",
-        "tier": "free+paid",
-        "notes": "2x faster than GPT-5 mini. Near-flagship coding/reasoning. 400K context. $0.75/1M in. Available free tier via ChatGPT Thinking.",
-        "buzz_score": 3,
-        "trending": true,
-        "added": "2026-03-31",
-        "source": "ai-intel-2026-03-30",
-        "free_tier": true,
-        "free_tier_limits": "Free via ChatGPT Thinking feature, rate limited",
-        "price_input_per_1m": 0.75,
-        "price_output_per_1m": 4.5,
-        "price_notes": "API pricing; free ChatGPT tier available",
-        "routing_tags": [
-          "subagent",
-          "coding",
-          "fast"
-        ]
-      },
-      {
-        "rank": 4,
         "name": "GPT-4o",
         "provider": "OpenAI",
         "url": "https://openai.com",
         "tier": "paid",
-        "notes": "Strong general purpose. GPT-5.4 family now current — check for newer model.",
+        "notes": "Strong general purpose",
         "buzz_score": 0,
-        "trending": false,
-        "check_for_newer": "GPT-5.4",
-        "free_tier": true,
-        "free_tier_limits": "Limited free via ChatGPT",
-        "price_input_per_1m": 2.5,
-        "price_output_per_1m": 10.0,
-        "price_notes": "check_for_newer: GPT-5.4"
+        "trending": false
       },
       {
-        "rank": 5,
-        "name": "Gemini 2.5 Pro",
+        "rank": 4,
+        "name": "Gemini 1.5 Pro",
         "provider": "Google",
         "url": "https://aistudio.google.com",
         "tier": "free+paid",
         "notes": "Large context, free tier available",
         "buzz_score": 0,
-        "trending": false,
-        "outdated_entry": "Gemini 1.5 Pro",
-        "outdated_since": "2026-03-31",
-        "free_tier": true,
-        "free_tier_limits": "15 req/min, 1500 req/day via AI Studio",
-        "price_input_per_1m": 1.25,
-        "price_output_per_1m": 10.0,
-        "price_notes": "Free tier generous for low-volume",
-        "routing_tags": [
-          "free-offload",
-          "long-context",
-          "analysis"
-        ]
+        "trending": false
       },
       {
-        "rank": 6,
+        "rank": 5,
         "name": "Claude Haiku 4.5",
         "provider": "Anthropic",
         "url": "https://anthropic.com",
         "tier": "paid",
         "notes": "Fast + cheap, good for batch",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": 1.0,
-        "price_output_per_1m": 5.0,
-        "price_notes": "Cheapest Claude; good for batch"
+        "trending": false
       },
       {
-        "rank": 7,
-        "name": "Gemini 2.5 Flash",
+        "rank": 6,
+        "name": "Gemini Flash",
         "provider": "Google",
         "url": "https://aistudio.google.com",
         "tier": "free",
         "notes": "Best free-tier speed",
         "buzz_score": 0,
-        "trending": false,
-        "outdated_entry": "Gemini Flash (unversioned)",
-        "outdated_since": "2026-03-31",
-        "free_tier": true,
-        "free_tier_limits": "15 req/min, 1500 req/day via AI Studio",
-        "price_input_per_1m": 0.075,
-        "price_output_per_1m": 0.3,
-        "price_notes": "Best free-tier cost ratio in class",
-        "routing_tags": [
-          "free-offload",
-          "batch",
-          "triage",
-          "classification"
-        ]
+        "trending": false
       },
       {
-        "rank": 8,
+        "rank": 7,
         "name": "Llama 3.2",
         "provider": "Meta/Ollama",
         "url": "https://ollama.com",
         "tier": "free",
         "notes": "Local, no API cost",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Unlimited local via Ollama",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Free local; hardware cost only",
-        "routing_tags": [
-          "free-offload",
-          "local",
-          "no-quota"
-        ]
+        "trending": false
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "DeepSeek R1",
         "provider": "DeepSeek",
         "url": "https://deepseek.com",
         "tier": "free",
         "notes": "Strong reasoning, free via OpenRouter",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Via OpenRouter free tier",
-        "price_input_per_1m": 0.55,
-        "price_output_per_1m": 2.19,
-        "price_notes": "Strong reasoning at low cost"
+        "trending": false
       }
     ],
     "image_gen": [
@@ -180,15 +93,9 @@
         "provider": "Midjourney",
         "url": "https://midjourney.com",
         "tier": "paid",
-        "notes": "Best quality, no free tier. v7 released — check for update.",
+        "notes": "Best quality, no free tier",
         "buzz_score": 0,
-        "trending": false,
-        "check_for_newer": "Midjourney v7",
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$10/mo basic (200 imgs), check v7"
+        "trending": false
       },
       {
         "rank": 2,
@@ -198,12 +105,7 @@
         "tier": "paid",
         "notes": "Good prompt adherence",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$0.040-0.120 per image via API"
+        "trending": false
       },
       {
         "rank": 3,
@@ -213,17 +115,7 @@
         "tier": "free",
         "notes": "Free local via ComfyUI/A1111. RTX 3060 threshold.",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Unlimited local, RTX 3060 threshold",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Free after hardware; no API needed",
-        "routing_tags": [
-          "free-offload",
-          "local",
-          "image"
-        ]
+        "trending": false
       },
       {
         "rank": 4,
@@ -233,17 +125,7 @@
         "tier": "free+paid",
         "notes": "Best text-in-image. Free tier available.",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "10 free images/day",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$8/mo for 400 imgs",
-        "routing_tags": [
-          "free-offload",
-          "image",
-          "text-in-image"
-        ]
+        "trending": false
       },
       {
         "rank": 5,
@@ -253,12 +135,7 @@
         "tier": "paid",
         "notes": "Top open model quality",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "~$0.04/image via Replicate"
+        "trending": false
       },
       {
         "rank": 6,
@@ -268,16 +145,7 @@
         "tier": "free+paid",
         "notes": "Free tier, strong aesthetic quality",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "50 free images/day",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$15/mo unlimited",
-        "routing_tags": [
-          "free-offload",
-          "image"
-        ]
+        "trending": false
       }
     ],
     "video_gen": [
@@ -289,12 +157,7 @@
         "tier": "paid",
         "notes": "Best coherence, limited access",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "ChatGPT Plus $20/mo includes limited Sora"
+        "trending": false
       },
       {
         "rank": 2,
@@ -304,12 +167,7 @@
         "tier": "paid",
         "notes": "Best for creative control",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "125 one-time credits on signup",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$12/mo standard"
+        "trending": false
       },
       {
         "rank": 3,
@@ -319,16 +177,7 @@
         "tier": "free+paid",
         "notes": "Strong motion quality, free tier",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "166 free credits/day",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Best free video tier currently",
-        "routing_tags": [
-          "free-offload",
-          "video"
-        ]
+        "trending": false
       },
       {
         "rank": 4,
@@ -338,12 +187,7 @@
         "tier": "free+paid",
         "notes": "Character-consistent video. Studio distribution target.",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Limited free generations",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Studio distribution target"
+        "trending": false
       },
       {
         "rank": 5,
@@ -353,16 +197,7 @@
         "tier": "free",
         "notes": "Generous free tier",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Generous daily free credits",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Best free video tier for volume",
-        "routing_tags": [
-          "free-offload",
-          "video"
-        ]
+        "trending": false
       },
       {
         "rank": 6,
@@ -372,12 +207,7 @@
         "tier": "paid",
         "notes": "High quality, limited access",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Limited access, waitlist"
+        "trending": false
       }
     ],
     "code": [
@@ -389,12 +219,7 @@
         "tier": "paid",
         "notes": "Best agentic coding. Primary studio tool.",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Uses Claude API quota; primary studio tool"
+        "trending": false
       },
       {
         "rank": 2,
@@ -404,16 +229,7 @@
         "tier": "paid",
         "notes": "Best IDE integration",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "2000 completions + 50 chat/mo free",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$10/mo Pro",
-        "routing_tags": [
-          "free-offload",
-          "code"
-        ]
+        "trending": false
       },
       {
         "rank": 3,
@@ -423,12 +239,7 @@
         "tier": "free+paid",
         "notes": "Strong Claude/GPT integration",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "2 week trial then $0 hobby (limited)",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$20/mo Pro"
+        "trending": false
       },
       {
         "rank": 4,
@@ -438,37 +249,17 @@
         "tier": "free+paid",
         "notes": "Free tier via IDX",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Free via Google IDX, unlimited",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Best free code assist tier",
-        "routing_tags": [
-          "free-offload",
-          "code"
-        ]
+        "trending": false
       },
       {
         "rank": 5,
-        "name": "Windsurf (fka Codeium)",
+        "name": "Codeium",
         "provider": "Codeium",
         "url": "https://codeium.com",
         "tier": "free",
-        "notes": "Rebranded to Windsurf. Strong free tier, agentic coding flows.",
+        "notes": "Best free autocomplete",
         "buzz_score": 0,
-        "trending": false,
-        "outdated_entry": "Codeium",
-        "outdated_since": "2026-03-31",
-        "free_tier": true,
-        "free_tier_limits": "Unlimited completions free",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$15/mo Pro; best free autocomplete",
-        "routing_tags": [
-          "free-offload",
-          "code"
-        ]
+        "trending": false
       }
     ],
     "embedding": [
@@ -480,12 +271,7 @@
         "tier": "paid",
         "notes": "Cheap, good quality",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": 0.02,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Cheapest quality embedding"
+        "trending": false
       },
       {
         "rank": 2,
@@ -495,17 +281,7 @@
         "tier": "free",
         "notes": "Free tier available",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "1500 req/day free",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Free tier sufficient for most uses",
-        "routing_tags": [
-          "free-offload",
-          "embedding",
-          "rag"
-        ]
+        "trending": false
       },
       {
         "rank": 3,
@@ -515,18 +291,7 @@
         "tier": "free",
         "notes": "Best free local embedding. Studio default (ChromaDB).",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Unlimited local via Ollama",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Studio default (ChromaDB). Free local.",
-        "routing_tags": [
-          "free-offload",
-          "local",
-          "embedding",
-          "rag"
-        ]
+        "trending": false
       },
       {
         "rank": 4,
@@ -536,12 +301,7 @@
         "tier": "free",
         "notes": "Strong local option",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Unlimited local via Ollama",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Strong local option"
+        "trending": false
       }
     ],
     "voice": [
@@ -553,12 +313,7 @@
         "tier": "free+paid",
         "notes": "Best voice cloning quality",
         "buzz_score": 1,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "10k chars/mo free",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$5/mo Starter (30k chars)"
+        "trending": false
       },
       {
         "rank": 2,
@@ -568,12 +323,7 @@
         "tier": "paid",
         "notes": "Fast, natural, cheap per char",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$15/1M chars (TTS-1), $30 HD"
+        "trending": false
       },
       {
         "rank": 3,
@@ -583,16 +333,7 @@
         "tier": "free+paid",
         "notes": "WaveNet quality, free tier",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "1M chars/mo free (WaveNet 100k)",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "Best free voice tier by volume",
-        "routing_tags": [
-          "free-offload",
-          "voice"
-        ]
+        "trending": false
       },
       {
         "rank": 4,
@@ -602,17 +343,7 @@
         "tier": "free",
         "notes": "Best free local STT",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Unlimited local",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Free local STT; OpenAI API $0.006/min",
-        "routing_tags": [
-          "free-offload",
-          "local",
-          "stt"
-        ]
+        "trending": false
       }
     ],
     "search": [
@@ -624,16 +355,7 @@
         "tier": "free+paid",
         "notes": "Best AI-optimized search API. Studio connected.",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "1000 searches/mo free",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$25/mo Pro (5k searches). Studio connected.",
-        "routing_tags": [
-          "search",
-          "ai-optimized"
-        ]
+        "trending": false
       },
       {
         "rank": 2,
@@ -643,12 +365,7 @@
         "tier": "paid",
         "notes": "Good for research tasks",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": false,
-        "free_tier_limits": null,
-        "price_input_per_1m": 1.0,
-        "price_output_per_1m": 1.0,
-        "price_notes": "Per-request pricing"
+        "trending": false
       },
       {
         "rank": 3,
@@ -658,12 +375,7 @@
         "tier": "free+paid",
         "notes": "Google results scraping",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "100 searches/mo free",
-        "price_input_per_1m": null,
-        "price_output_per_1m": null,
-        "price_notes": "$50/mo 5k searches"
+        "trending": false
       },
       {
         "rank": 4,
@@ -673,43 +385,8 @@
         "tier": "free",
         "notes": "No key needed, rate limited",
         "buzz_score": 0,
-        "trending": false,
-        "free_tier": true,
-        "free_tier_limits": "Unlimited, no key, rate limited",
-        "price_input_per_1m": 0.0,
-        "price_output_per_1m": 0.0,
-        "price_notes": "Free always; no official API",
-        "routing_tags": [
-          "free-offload",
-          "search"
-        ]
+        "trending": false
       }
     ]
-  },
-  "last_reviewed": "2026-03-31T13:00:39",
-  "review_notes": "Partial update 2026-03-31: GPT-5.4 mini added to chat; Gemini models versioned to 2.5; Codeium->Windsurf; Midjourney v6/v7 flagged. Outdated entries preserved with check_for_newer flags.",
-  "_rating_basis": {
-    "rank": "Composite: capability quality + free tier value + studio relevance + community buzz",
-    "buzz_score": "Reddit/HN/GitHub mentions in last 7 days via AI Intel agent",
-    "trending": "True if buzz_score increased >50% week-over-week",
-    "free_tier": "Whether service has a usable free tier (not just trial)",
-    "routing_tags": "Tags used by AI Scout to identify free-offload candidates",
-    "check_for_newer": "Agent should verify if a newer version exists before using this entry",
-    "outdated_entry": "Original name preserved when service was renamed/versioned"
-  },
-  "_routing_guide": {
-    "free_offload_priority": [
-      "Gemini 2.5 Flash (chat/triage - 1500 req/day)",
-      "Gemini 2.5 Pro (analysis/long-context - 1500 req/day)",
-      "nomic-embed-text (embedding - unlimited local)",
-      "Llama 3.2 (general - unlimited local)",
-      "Gemini Embedding (rag - 1500 req/day)",
-      "Whisper local (STT - unlimited local)",
-      "Google TTS (voice - 1M chars/mo free)",
-      "Kling 1.6 (video - 166 credits/day)",
-      "Stable Diffusion local (image - unlimited local)"
-    ],
-    "rule": "Route mechanical/batch tasks to free_offload tier first. Escalate to paid only if quality gate fails or quota exhausted."
-  },
-  "last_schema_upgrade": "2026-03-31"
+  }
 }

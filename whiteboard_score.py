@@ -7,7 +7,7 @@ CONFIG = json.load(open('G:/My Drive/Projects/_studio/studio-config.json', encod
 GEMINI_KEY = CONFIG.get('gemini_api_key', '')
 GEMINI_URL = f'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_KEY}'
 
-wb = json.load(open(WHITEBOARD, encoding='utf-8'))
+wb = json.load(open(WHITEBOARD, encoding='utf-8', errors='replace'))
 items = wb.get('items', [])
 
 unscored = [i for i in items if not i.get('gemini_score')]
@@ -49,6 +49,8 @@ Return ONLY valid JSON:
 
 print('Scoring via Gemini...\n')
 scored_count = 0
+consecutive_failures = 0
+MAX_CONSECUTIVE_FAILURES = 3
 for item in unscored:
     title = item.get('title', 'Unknown')[:50]
     try:
@@ -59,9 +61,14 @@ for item in unscored:
         total = score.get('total_score', 0)
         action = score.get('recommended_action', '?')
         print(f'  {total:>2}/10 [{action:<8}] {title}')
+        consecutive_failures = 0  # reset on success
     except Exception as e:
         err = str(e)[:50]
         print(f'  ERROR: {title}: {err}')
+        consecutive_failures += 1
+        if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+            print(f'  CIRCUIT BREAKER: {MAX_CONSECUTIVE_FAILURES} consecutive failures — aborting to avoid API waste')
+            break
         if '429' in err or 'quota' in err.lower():
             print('  Rate limit -- pausing 30s')
             time.sleep(30)
