@@ -2,5 +2,81 @@
   "_schema": "1.0",
   "_description": "Daily studio health digest — append only",
   "_note": "One entry per day. Written by nightly-rollup agent at 1:00am.",
-  "digests": []
+  "digests": [
+    {
+      "date": "2026-04-01",
+      "generated_at": "2026-04-01T01:00:02.356436",
+      "audit_summary": {
+        "total_entries": 0,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "supervisor"
+        ],
+        "missed": [
+          "stress-tester",
+          "janitor",
+          "git-scout",
+          "sre-scout"
+        ]
+      },
+      "pending_inbox_items": 0,
+      "pending_flags": 1,
+      "health_score": 37,
+      "health_status": "RED",
+      "notes": "1 agents in | missed: stress-tester, janitor, git-scout, sre-scout | -10 missed agent: stress-tester"
+    },
+    {
+      "date": "2026-04-01",
+      "generated_at": "2026-04-01T01:04:47.663096",
+      "audit_summary": {
+        "total_entries": 1,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "nightly-rollup",
+          "supervisor"
+        ],
+        "missed": [
+          "stress-tester",
+          "janitor",
+          "git-scout",
+          "sre-scout"
+        ]
+      },
+      "pending_inbox_items": 1,
+      "pending_flags": 1,
+      "health_score": 57,
+      "health_status": "YELLOW",
+      "notes": "2 agents in | missed: stress-tester, janitor, git-scout, sre-scout | -10 missed agent: stress-tester"
+    }
+  ]
 }

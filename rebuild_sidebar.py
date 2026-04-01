@@ -52,6 +52,10 @@ try:
     intel = open(STUDIO+'/ai-intel-summary.txt', encoding='utf-8', errors='replace').read()[:800]
 except: intel = ''
 
+digest_data = load_json('daily-digest.json', {})
+digests     = digest_data.get('digests', [])
+last_digest = digests[-1] if digests else None
+
 RESOLVED = ('resolved','RESOLVED','auto-resolved','build','done','DONE','answered','ANSWERED')
 sup_items = sup.get('items', sup) if isinstance(sup, dict) else sup
 mob_items = mob if isinstance(mob, list) else mob.get('items', [])
@@ -78,7 +82,8 @@ data = json.dumps({
     'assets': sanitize(al.get('assets',[])),
     'services': sanitize(svc.get('categories',{})),
     'servicesDate': svc.get('date', today),
-    'intelSummary': intel_clean
+    'intelSummary': intel_clean,
+    'lastDigest': sanitize(last_digest) if last_digest else None
 }, ensure_ascii=True)
 
 # ── 4. Build the injected blocks ──────────────────────────────────────────

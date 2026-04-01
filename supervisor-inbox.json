@@ -4,11 +4,39 @@
     "source": "sre-scout",
     "type": "health",
     "urgency": "WARN",
-    "title": "SRE WARNING \u2014 overnight job errors + dirty repos",
+    "title": "SRE WARNING — overnight job errors + dirty repos",
     "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.",
     "status": "answered",
     "date": "2026-03-31T03:31:58.008220",
     "answer": "Fix now",
     "answered_at": "2026-04-01T04:59:54.205Z"
+  },
+  {
+    "id": "nightly-rollup-20260401",
+    "source": "nightly-rollup",
+    "type": "audit",
+    "urgency": "ALERT",
+    "title": "Nightly Rollup — 2026-04-01 — RED",
+    "finding": "Score: 37/100. 1 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
+    "status": "PENDING"
+  },
+  {
+    "id": "supervisor-cycle-202604010100",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-01 01:00",
+    "finding": "0 tasks dispatched | 2 agents active | Free tier: Mistral Small (chat), Gemini 2.5 Pro (chat) | Ollama: UP | Gemini: DOWN",
+    "dispatched": [],
+    "status": "INFO"
+  },
+  {
+    "id": "nightly-rollup-20260401",
+    "source": "nightly-rollup",
+    "type": "audit",
+    "urgency": "WARN",
+    "title": "Nightly Rollup — 2026-04-01 — YELLOW",
+    "finding": "Score: 57/100. 2 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
+    "status": "PENDING"
   }
 ]
