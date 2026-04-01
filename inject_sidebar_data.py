@@ -107,8 +107,15 @@ src = remove_inline_injected(src)
 # Run again in case there were 2
 src = remove_inline_injected(src)
 
-# Insert BEFORE the tab bar (after <body>)
-insert_pos = src.find("<body>") + len("<body>") + 1
+# Insert at stable marker between boot screen and tab bar
+insert_marker = "<!-- INJECT_POINT -->\n"
+marker_pos = src.find(insert_marker)
+if marker_pos >= 0:
+    insert_pos = marker_pos + len(insert_marker)
+else:
+    # Fallback: after <body>
+    insert_pos = src.find("<body>") + len("<body>") + 1
+
 src = src[:insert_pos] + new_script_tag + src[insert_pos:]
 
 open(SIDEBAR, "w", encoding="utf-8").write(src)
