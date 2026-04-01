@@ -52,9 +52,14 @@ inbox_items = []
 for i in sup_items:
     if isinstance(i, dict) and i.get("status") not in ("RESOLVED", "resolved"):
         inbox_items.append(sanitize({"id": i.get("id", "sup-" + str(len(inbox_items))), "title": i.get("title","Untitled"), "finding": i.get("finding","")[:150], "urgency": i.get("urgency","INFO"), "date": i.get("date",""), "source": "supervisor"}))
+RESOLVED_STATUSES = ("resolved","RESOLVED","auto-resolved","build","done","DONE")
 for i in mob_items:
-    if isinstance(i, dict) and i.get("status") not in ("resolved","RESOLVED"):
-        inbox_items.append(sanitize({"id": i.get("id","mob-"+str(len(inbox_items))), "title": i.get("question",i.get("title","Pending"))[:100], "finding": i.get("context",i.get("description",""))[:100], "urgency": "WARN" if i.get("priority")=="high" else "INFO", "date": i.get("created_at",i.get("date","")), "source": "mobile"}))
+    if isinstance(i, dict) and i.get("status") not in RESOLVED_STATUSES:
+        # Skip whiteboard items - they belong in PLAN tab only
+        title = i.get("question", i.get("title",""))
+        if "WHITEBOARD" in title or i.get("id","").startswith("wb-"):
+            continue
+        inbox_items.append(sanitize({"id": i.get("id","mob-"+str(len(inbox_items))), "title": title[:100], "finding": i.get("context",i.get("description",""))[:100], "urgency": "WARN" if i.get("priority")=="high" else "INFO", "date": i.get("created_at",i.get("date","")), "source": "mobile"}))
 
 wb_items = whiteboard.get("items", [])
 wb_scored = sorted([i for i in wb_items if i.get("gemini_score")], key=lambda x: x.get("gemini_score",{}).get("total_score",0), reverse=True)

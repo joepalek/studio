@@ -1,39 +1,46 @@
-import json
+import sys, json
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 f = 'G:/My Drive/Projects/_studio/mobile-inbox.json'
 d = json.load(open(f, encoding='utf-8'))
 
-# Mark as resolved the decisions answered today in this session
-resolved_ids = {
-    # job-match - all 4 answered
-    'state-job-match-14ffdba1',  # SaaS - answered: SaaS with role-based login
-    'state-job-match-79f41ad6',  # employer portal - answered: scraping first
-    'state-job-match-379b1402',  # scam db - answered: private
-    'state-job-match-0472d4af',  # ratings - answered: dual-axis in v1
-    # listing-optimizer - all 5 answered
-    'state-listing-optimizer-c159724f',  # personal first
-    'state-listing-optimizer-0b8aae0b',  # CSV only
-    'state-listing-optimizer-2f37099d',  # SKU: location-based
-    'state-listing-optimizer-9609b02c',  # categories: vintage/electronics/books/home
-    'state-listing-optimizer-2c74ef17',  # price suggestions: yes
-    # whatnot-apps - answered/submitted
-    'state-whatnot-apps-c3ac17b9',
-    'state-whatnot-apps-26e411a4',
-    'state-whatnot-apps-8413a3f4',
-}
+before = len([i for i in d if i.get('status') not in ('resolved','RESOLVED','auto-resolved')])
 
-changed = 0
+# Mark whiteboard items as resolved - they belong in whiteboard.json, not inbox
+# Also mark build-queue items (status='build') as resolved
+wb_resolved = 0
+build_resolved = 0
 for item in d:
-    if item.get('id') in resolved_ids and item.get('status') == 'pending':
+    iid = item.get('id', '')
+    title = item.get('question', item.get('title', ''))
+    status = item.get('status', '')
+    
+    # Whiteboard items in inbox
+    if 'WHITEBOARD' in title or iid.startswith('wb-top'):
+        if status not in ('resolved', 'RESOLVED'):
+            item['status'] = 'resolved'
+            item['resolved_date'] = '2026-03-31'
+            item['resolved_note'] = 'whiteboard-not-inbox'
+            wb_resolved += 1
+    
+    # build-queue items already actioned
+    elif status == 'build':
         item['status'] = 'resolved'
         item['resolved_date'] = '2026-03-31'
-        changed += 1
+        item['resolved_note'] = 'build-queue-actioned'
+        build_resolved += 1
 
-print('Marked resolved:', changed)
+after = len([i for i in d if i.get('status') not in ('resolved','RESOLVED','auto-resolved')])
+
+print('Whiteboard items removed from inbox: ' + str(wb_resolved))
+print('Build-queue items resolved: ' + str(build_resolved))
+print('Pending before: ' + str(before) + ' -> after: ' + str(after))
+
+# Show what remains
+remaining = [i for i in d if i.get('status') not in ('resolved','RESOLVED','auto-resolved')]
+print()
+print('Remaining ' + str(len(remaining)) + ' pending:')
+for i in remaining:
+    print('  [' + str(i.get('project','?')) + '] ' + str(i.get('question', i.get('title','?')))[:70])
+
 json.dump(d, open(f, 'w', encoding='utf-8'), indent=2)
-
-# Show remaining unresolved
-unresolved = [i for i in d if i.get('status') not in ('resolved','RESOLVED','auto-resolved')]
-print('Remaining pending:', len(unresolved))
-for i in unresolved:
-    print(' -', i.get('project','?'), '|', i.get('question','?')[:70])

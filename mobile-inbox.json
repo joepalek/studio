@@ -440,7 +440,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-25T04:00:41.303716",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-vint-0011",
@@ -451,7 +453,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-25T04:00:41.303731",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-nost-0028",
@@ -462,7 +466,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-25T04:00:41.303737",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-ebay-identifier-app",
@@ -473,7 +479,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-25T04:00:41.303741",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-client-services-website",
@@ -484,7 +492,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-25T04:00:41.303744",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-arch-reddit-0002",
@@ -495,7 +505,9 @@
     "decision_type": "proactive",
     "priority": "medium",
     "created": "2026-03-25T04:00:41.303747",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-vint-0005",
@@ -506,7 +518,9 @@
     "decision_type": "proactive",
     "priority": "medium",
     "created": "2026-03-25T04:00:41.303750",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-vint-0015",
@@ -517,7 +531,9 @@
     "decision_type": "proactive",
     "priority": "medium",
     "created": "2026-03-25T04:00:41.303753",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-nost-0024",
@@ -528,7 +544,9 @@
     "decision_type": "proactive",
     "priority": "medium",
     "created": "2026-03-25T04:00:41.303755",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-nost-0025",
@@ -539,7 +557,9 @@
     "decision_type": "proactive",
     "priority": "medium",
     "created": "2026-03-25T04:00:41.303757",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-traitor-protocol",
@@ -550,7 +570,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-27T02:01:34.190380",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-higgsfield-backwards-design",
@@ -561,7 +583,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-31T02:00:02.141639",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-war-room-protocol",
@@ -572,7 +596,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-31T02:00:02.141654",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "wb-top-ghost-book-script-vault",
@@ -583,7 +609,9 @@
     "decision_type": "proactive",
     "priority": "high",
     "created": "2026-03-31T02:00:02.141658",
-    "status": "pending"
+    "status": "resolved",
+    "resolved_date": "2026-03-31",
+    "resolved_note": "whiteboard-not-inbox"
   },
   {
     "id": "project-ebay-consensus-engine-2026-03-31",
@@ -592,7 +620,7 @@
     "title": "eBay Item Identifier \u2014 Consensus Engine (Visual Lookup)",
     "question": "Ready to formalize the Consensus Engine as a studio project?",
     "context": "Fully specced Mar 27 2026 (chat: f57a73f0-8f37-4d9e-93e3-bcf80f92bcf7). Gemini-generated architecture reviewed and approved. Replaces Google Lens \u2192 manual eBay search workflow for resellers. 6-track consensus engine: (1) Pixel Matcher \u2014 Google/eBay Visual Search API baseline. (2) Attribute Analyst \u2014 VLM structured JSON {maker, pattern, material, era}. (3) Hallmark/Maker Mark OCR \u2014 PaddleOCR-VL, overrides on Lion Passant etc. (4) Archive Historian RAG \u2014 Internet Archive trade catalogs, official color names. (5) Molded Mark OCR \u2014 copyright dates, manufacturer codes, era-locks results. (6) Instruction Manual cross-ref \u2014 identifies parts from incomplete sets. KEY FEATURE: Reroll \u2014 after results come back, pick best matches, re-run search using top results as new anchors to refine further. Multi-image input: hero shot + bottom mark + molded date + scale photo, each analyzed by appropriate track. Also on whiteboard scored 8/10 as eBay Consensus Engine. IDENTIFICATION tool \u2014 complements Image Listing App (creation) and Listing Optimizer (bulk optimization). PRODUCT ARCH DECISION (2026-03-31): Combined as single personal tool for Joe's use. Split into separate products only if taken to market or beta test groups. Shared eBay OAuth infrastructure already scaffolded (ebay_oauth.py). RuName is only missing credential \u2014 add to studio-config.json to activate.",
-    "status": "build",
+    "status": "resolved",
     "created": "2026-03-31",
     "tags": [
       "ebay",
@@ -608,7 +636,9 @@
     "prior_chat": "https://claude.ai/chat/f57a73f0-8f37-4d9e-93e3-bcf80f92bcf7",
     "updated": "2026-03-31T11:49:14",
     "moved_to_build": "2026-03-31T12:34:42",
-    "build_ready": true
+    "build_ready": true,
+    "resolved_date": "2026-03-31",
+    "resolved_note": "build-queue-actioned"
   },
   {
     "id": "project-ebay-image-listing-app-2026-03-31",
@@ -617,7 +647,7 @@
     "title": "eBay Image Listing App (Photo \u2192 Draft Listing)",
     "question": "Ready to scaffold the eBay Image Listing App?",
     "context": "Scoped Mar 13 2026 (chat: 5be8454e-aa34-4f60-8750-f4083a222b0c). Upload photo \u2192 Gemini Vision identifies all items \u2192 eBay sold price lookup \u2192 generates listing title + suggested price. Lot logic for items under $15. Exports to eBay as draft listings via Trading API. CREATION tool \u2014 distinct from Listing Optimizer (bulk CSV optimizer of existing listings). Blocked on eBay Developer Program OAuth setup. eBay API infrastructure shared with Listing Optimizer + Arbitrage Pulse. PRODUCT ARCH DECISION (2026-03-31): Combined as single personal tool for Joe's use. Split into separate products only if taken to market or beta test groups. Shared eBay OAuth infrastructure already scaffolded (ebay_oauth.py). RuName is only missing credential \u2014 add to studio-config.json to activate.",
-    "status": "build",
+    "status": "resolved",
     "created": "2026-03-31",
     "tags": [
       "ebay",
@@ -629,6 +659,8 @@
     "prior_chat": "https://claude.ai/chat/5be8454e-aa34-4f60-8750-f4083a222b0c",
     "updated": "2026-03-31T11:49:14",
     "moved_to_build": "2026-03-31T12:34:42",
-    "build_ready": true
+    "build_ready": true,
+    "resolved_date": "2026-03-31",
+    "resolved_note": "build-queue-actioned"
   }
 ]
