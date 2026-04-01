@@ -30,13 +30,14 @@ def log(msg):
     ts = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
     line = f"{ts} {msg}"
     print(line)
-    try:
-        with open(LOG_PATH, "a", encoding="utf-8", errors="replace") as f:
-            f.write(line + "\n")
-    except PermissionError:
-        fallback = LOG_PATH.replace(".log", "-fallback.log")
-        with open(fallback, "a", encoding="utf-8", errors="replace") as f:
-            f.write(line + "\n")
+    # Try main log, then fallback, then silently continue
+    for path in [LOG_PATH, LOG_PATH.replace(".log", "-fallback.log")]:
+        try:
+            with open(path, "a", encoding="utf-8", errors="replace") as f:
+                f.write(line + "\n")
+            break  # wrote successfully, stop trying
+        except (PermissionError, OSError):
+            continue
 
 
 def load_json(path, default=None):
