@@ -59,12 +59,12 @@ mob_items = mob if isinstance(mob, list) else mob.get('items', [])
 inbox = []
 for i in sup_items:
     if isinstance(i,dict) and i.get('status') not in RESOLVED:
-        inbox.append(sanitize({'id':i.get('id','sup-'+str(len(inbox))),'title':i.get('title','')[:80],'finding':i.get('finding','')[:80],'urgency':i.get('urgency','INFO'),'date':i.get('date',''),'source':'supervisor'}))
+        inbox.append(sanitize({'id':i.get('id','sup-'+str(len(inbox))),'title':i.get('title','')[:80],'finding':i.get('finding','')[:120],'urgency':i.get('urgency','INFO'),'date':i.get('date',''),'source':'supervisor','project':i.get('project','studio'),'options':[],'recommendation':''}))
 for i in mob_items:
     if isinstance(i,dict) and i.get('status') not in RESOLVED:
         title = i.get('question',i.get('title',''))
         if 'WHITEBOARD' in title or i.get('id','').startswith('wb-'): continue
-        inbox.append(sanitize({'id':i.get('id','mob-'+str(len(inbox))),'title':title[:80],'finding':i.get('context',i.get('description',''))[:80],'urgency':'WARN' if i.get('priority')=='high' else 'INFO','date':i.get('created_at',i.get('date','')),'source':'mobile'}))
+        inbox.append(sanitize({'id':i.get('id','mob-'+str(len(inbox))),'title':title[:80],'finding':i.get('context',i.get('description',''))[:120],'urgency':'WARN' if i.get('priority')=='high' else 'INFO','date':i.get('created_at',i.get('date','')),'source':'mobile','project':i.get('project',''),'options':i.get('options',[])[:4],'recommendation':i.get('recommendation','')[:100]}))
 
 wb_items  = wb.get('items',[])
 wb_scored = sorted([i for i in wb_items if i.get('gemini_score')], key=lambda x: x.get('gemini_score',{}).get('total_score',0), reverse=True)
