@@ -52,7 +52,7 @@ try:
     intel = open(STUDIO+'/ai-intel-summary.txt', encoding='utf-8', errors='replace').read()[:800]
 except: intel = ''
 
-RESOLVED = ('resolved','RESOLVED','auto-resolved','build','done','DONE')
+RESOLVED = ('resolved','RESOLVED','auto-resolved','build','done','DONE','answered','ANSWERED')
 sup_items = sup.get('items', sup) if isinstance(sup, dict) else sup
 mob_items = mob if isinstance(mob, list) else mob.get('items', [])
 

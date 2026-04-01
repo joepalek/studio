@@ -1,13 +1,13 @@
 {
   "_schema": "1.0",
-  "_description": "Standing decisions log — append only. Log every architectural or process decision with reason and permanence.",
+  "_description": "Standing decisions log \u2014 append only. Log every architectural or process decision with reason and permanence.",
   "_note": "Never delete entries. Mark superseded decisions with status: superseded and point to successor.",
   "decisions": [
     {
       "id": "decision_war_room_validated",
       "date": "2026-03-29",
       "decision": "War room protocol adopted as standard for high-stakes architectural decisions",
-      "reason": "Operation Context Lock validated that war room with domain characters produces better output than standard analysis — surfaced compound token cost problem and Delta fallback architecture not in original spec",
+      "reason": "Operation Context Lock validated that war room with domain characters produces better output than standard analysis \u2014 surfaced compound token cost problem and Delta fallback architecture not in original spec",
       "permanence": "permanent",
       "status": "active",
       "superseded_by": null
@@ -41,6 +41,70 @@
       "status": "active",
       "review_after": "GPU upgrade installed",
       "superseded_by": null
+    },
+    {
+      "id": "state-acuscan-ar-1653fa6d",
+      "project": "acuscan-ar",
+      "question": "Eventually monetize this or keep it free/personal?",
+      "answer": "Yes, productize it",
+      "date": "2026-04-01T05:00:26.797Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "state-arbitrage-pulse-efb8d39d",
+      "project": "arbitrage-pulse",
+      "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
+      "answer": "Tennessee all the time, Illinois when I tell you I am going back home",
+      "date": "2026-04-01T05:01:07.767Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "state-arbitrage-pulse-35ebbf89",
+      "project": "arbitrage-pulse",
+      "question": "What categories do you want to monitor? (e.g. tools, electronics, collectibles, furniture, vintage)",
+      "answer": "dismiss till I have a list or items I am looking for. Right now is garage sale season coming... I source more there during that season.. so later when I am looking I will set some up. New project is going to gather Facebook arbitrage... so that may make this further backseat",
+      "date": "2026-04-01T05:03:02.437Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "state-arbitrage-pulse-16662fe7",
+      "project": "arbitrage-pulse",
+      "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
+      "answer": "if it is at 40% it is plus 20-25% and fees/taxes so if we invest that much in one item, it has to have a high sell through rate",
+      "date": "2026-04-01T05:04:21.211Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "state-nutrimind-86664a3a",
+      "project": "nutrimind",
+      "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
+      "answer": "All planned features working",
+      "date": "2026-04-01T05:04:50.301Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "state-squeeze-empire-74ccd928",
+      "project": "squeeze-empire",
+      "question": "Should the game save state between sessions or reset each time?",
+      "answer": "Reset each time",
+      "date": "2026-04-01T05:04:58.307Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "state-squeeze-empire-f54344c9",
+      "project": "squeeze-empire",
+      "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
+      "answer": "Need to setup miro fish to play rounds of games to play all aspects and give feedback to version 1.0 then use that feedback to keep applying logical updates. Then once social media is going, we can turn this over there to market and post and monitor statistics of game play",
+      "date": "2026-04-01T05:06:48.308Z",
+      "source": "sidebar"
+    },
+    {
+      "id": "sre-warn-20260331",
+      "project": "studio",
+      "question": "SRE WARNING \u2014 overnight job errors + dirty repos",
+      "answer": "Fix now",
+      "date": "2026-04-01T04:59:54.205Z",
+      "source": "sidebar"
     }
   ]
 }

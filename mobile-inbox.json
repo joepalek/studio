@@ -49,18 +49,21 @@
     "project": "acuscan-ar",
     "question": "Eventually monetize this or keep it free/personal?",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Affects whether we add any tracking, accounts, or premium features later."
+    "context": "Affects whether we add any tracking, accounts, or premium features later.",
+    "answer": "Yes, productize it",
+    "answered_at": "2026-04-01T05:00:26.797Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-arbitrage-pulse-efb8d39d",
     "project": "arbitrage-pulse",
     "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
     "type": "required",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [
       "Tennessee (Atwood/McKenzie area)",
@@ -68,7 +71,10 @@
       "Both \u00e2\u20ac\u201d separate digests"
     ],
     "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
-    "context": ""
+    "context": "",
+    "answer": "Tennessee all the time, Illinois when I tell you I am going back home",
+    "answered_at": "2026-04-01T05:01:07.767Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-arbitrage-pulse-ec3e8edf",
@@ -92,22 +98,28 @@
     "project": "arbitrage-pulse",
     "question": "What categories do you want to monitor? (e.g. tools, electronics, collectibles, furniture, vintage)",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Keyword list drives everything. More specific = less noise = better digest."
+    "context": "Keyword list drives everything. More specific = less noise = better digest.",
+    "answer": "dismiss till I have a list or items I am looking for. Right now is garage sale season coming... I source more there during that season.. so later when I am looking I will set some up. New project is going to gather Facebook arbitrage... so that may make this further backseat",
+    "answered_at": "2026-04-01T05:03:02.437Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-arbitrage-pulse-16662fe7",
     "project": "arbitrage-pulse",
     "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Sets the filter threshold for the margin analysis step."
+    "context": "Sets the filter threshold for the margin analysis step.",
+    "answer": "if it is at 40% it is plus 20-25% and fees/taxes so if we invest that much in one item, it has to have a high sell through rate",
+    "answered_at": "2026-04-01T05:04:21.211Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-arbitrage-pulse-91bf5e20",
@@ -310,7 +322,7 @@
     "project": "nutrimind",
     "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
     "type": "required",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [
       "All planned features working",
@@ -318,7 +330,10 @@
       "Productize for other users"
     ],
     "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
-    "context": ""
+    "context": "",
+    "answer": "All planned features working",
+    "answered_at": "2026-04-01T05:04:50.301Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-nutrimind-e3a0a527",
@@ -372,22 +387,28 @@
     "project": "squeeze-empire",
     "question": "Should the game save state between sessions or reset each time?",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "localStorage save would make it a true idle game. No save = arcade style. Significant architecture difference."
+    "context": "localStorage save would make it a true idle game. No save = arcade style. Significant architecture difference.",
+    "answer": "Reset each time",
+    "answered_at": "2026-04-01T05:04:58.307Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-squeeze-empire-f54344c9",
     "project": "squeeze-empire",
     "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-03-19",
     "options": [],
     "recommendation": "",
-    "context": "Affects whether we add analytics, sharing features, or mobile optimization pass."
+    "context": "Affects whether we add analytics, sharing features, or mobile optimization pass.",
+    "answer": "Need to setup miro fish to play rounds of games to play all aspects and give feedback to version 1.0 then use that feedback to keep applying logical updates. Then once social media is going, we can turn this over there to market and post and monitor statistics of game play",
+    "answered_at": "2026-04-01T05:06:48.308Z",
+    "answered_via": "sidebar-localStorage"
   },
   {
     "id": "state-whatnot-apps-c3ac17b9",

@@ -6,7 +6,9 @@
     "urgency": "WARN",
     "title": "SRE WARNING \u2014 overnight job errors + dirty repos",
     "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.",
-    "status": "PENDING",
-    "date": "2026-03-31T03:31:58.008220"
+    "status": "answered",
+    "date": "2026-03-31T03:31:58.008220",
+    "answer": "Fix now",
+    "answered_at": "2026-04-01T04:59:54.205Z"
   }
 ]
