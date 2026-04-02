@@ -1,0 +1,29 @@
+{
+  "queue_id": "ddtrainer-char-spec-claude-002-20260401193528",
+  "character_spec": {
+    "id": "char-spec-claude-002",
+    "name": "Casey Garcia",
+    "universe": "inmates_vs_guards",
+    "archetype": "political_prisoner",
+    "source": "claude",
+    "created_date": "2026-03-30T04:23:38.477348",
+    "personality_traits": [
+      "energetic",
+      "observant",
+      "cautious",
+      "vindictive",
+      "spontaneous",
+      "intelligent"
+    ],
+    "voice": "playful and irreverent",
+    "visual_hint": "rough around the edges",
+    "backstory": "Has a complicated relationship with their past that shapes everything they do.",
+    "age": 18,
+    "pronouns": "she/her",
+    "status": "ungraded"
+  },
+  "asset_log_id": "char-spec-claude-002",
+  "stage": "digital_double_options",
+  "created_date": "2026-04-01T19:35:28.759185",
+  "status": "awaiting_checkpoint_1"
+}

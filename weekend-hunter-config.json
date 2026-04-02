@@ -1,0 +1,102 @@
+{
+  "agent": "weekend-hunter",
+  "version": "1.0.0",
+  "description": "Weekend garage sale and eBay sourcing hunter",
+
+  "location": {
+    "city": "Atwood",
+    "state": "TN",
+    "zip": "38220",
+    "radius_miles": 50,
+    "lat": 35.9784,
+    "lng": -88.6478
+  },
+
+  "sources": {
+    "facebook_marketplace": {
+      "enabled": true,
+      "method": "selenium",
+      "search_terms": ["garage sale", "yard sale", "estate sale", "moving sale", "multi-family sale"],
+      "category": "garage-sales"
+    },
+    "facebook_groups": {
+      "enabled": true,
+      "method": "selenium",
+      "group_keywords": ["garage sale", "yard sale", "buy sell trade", "swap meet"],
+      "max_groups": 10
+    },
+    "estatesales_net": {
+      "enabled": true,
+      "method": "requests",
+      "base_url": "https://www.estatesales.net",
+      "search_radius_miles": 50
+    },
+    "craigslist": {
+      "enabled": true,
+      "method": "requests",
+      "base_url": "https://nashville.craigslist.org",
+      "section": "garage"
+    }
+  },
+
+  "scoring": {
+    "enabled": true,
+    "model": "claude",
+    "min_score_to_surface": 6,
+    "weights": {
+      "photo_quality": 0.20,
+      "item_diversity": 0.25,
+      "keywords_vintage_collectible": 0.25,
+      "description_detail": 0.15,
+      "timing_convenience": 0.15
+    },
+    "high_value_keywords": [
+      "vintage", "antique", "collectible", "estate", "collection",
+      "sports cards", "memorabilia", "records", "vinyl", "tools",
+      "jewelry", "coins", "comic", "toys", "electronics", "clothing lot",
+      "bulk", "liquidation", "everything must go"
+    ]
+  },
+
+  "ebay_sourcing": {
+    "enabled": true,
+    "score_all_listings": true,
+    "min_flip_score": 7,
+    "flip_keywords": [
+      "vintage", "antique", "lot", "collection", "rare", "htf",
+      "brand name", "nike", "levis", "carhartt", "sports card",
+      "signed", "autograph", "memorabilia", "comic", "sealed",
+      "new in box", "nib", "nwt", "new with tags"
+    ]
+  },
+
+  "watchlist": [
+    {
+      "term": "example item",
+      "category": "example",
+      "notes": "Replace with real watchlist items"
+    }
+  ],
+
+  "google_maps": {
+    "api_key": "",
+    "list_name": "Weekend Hunt {date}",
+    "route_optimize": true,
+    "travel_mode": "DRIVING",
+    "start_address": "Atwood, TN 38220"
+  },
+
+  "schedule": {
+    "full_scrape_day": "Friday",
+    "full_scrape_time": "23:00",
+    "delta_scrape_cooldown_minutes": 30
+  },
+
+  "output": {
+    "data_dir": "G:\\My Drive\\Projects\\_studio\\weekend-hunter",
+    "results_file": "hunt-results.json",
+    "delta_file": "hunt-delta.json",
+    "state_file": "hunt-state.json",
+    "route_file": "hunt-route.json"
+  }
+}

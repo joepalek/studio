@@ -154,6 +154,39 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 self.send_header("Content-Type", "application/json")
                 self.cors(); self.end_headers()
                 self.wfile.write(err)
+        elif self.path == "/run-agent":
+            # Trigger a studio agent by name and mode
+            length = int(self.headers.get("Content-Length", 0))
+            payload = json.loads(self.rfile.read(length))
+            agent = payload.get("agent", "")
+            mode  = payload.get("mode", "delta")
+            agent_map = {
+                "weekend-hunter": (
+                    sys.executable,
+                    STUDIO + "/weekend-hunter/weekend_hunter_agent.py",
+                    "--mode", mode
+                )
+            }
+            if agent not in agent_map:
+                self.send_response(404); self.cors(); self.end_headers()
+                self.wfile.write(json.dumps({"error": "unknown agent"}).encode())
+                return
+            try:
+                args = list(agent_map[agent])
+                subprocess.Popen(args, cwd=STUDIO,
+                    stdout=open(STUDIO + "/weekend-hunter/hunter.log", "a"),
+                    stderr=subprocess.STDOUT)
+                body = json.dumps({"ok": True, "agent": agent, "mode": mode}).encode()
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.cors(); self.end_headers()
+                self.wfile.write(body)
+            except Exception as e:
+                err = json.dumps({"error": str(e)}).encode()
+                self.send_response(500)
+                self.send_header("Content-Type", "application/json")
+                self.cors(); self.end_headers()
+                self.wfile.write(err)
         else:
             self.send_response(404); self.end_headers()
 

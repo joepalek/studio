@@ -1,0 +1,216 @@
+{
+  "asset_types": {
+    "character": {
+      "type_id": "character",
+      "type_name": "Character Asset",
+      "description": "Synthetic character for social media, stories, projects",
+      "quality_threshold": 8,
+      "workflow": "character_full_lifecycle",
+      "approval_gates": 2,
+      "destinations": [
+        "social_media_agent",
+        "character_media_log",
+        "project_assignment"
+      ],
+      "stages": [
+        {
+          "stage_id": 1,
+          "name": "Spec Validation",
+          "action": "Validate character meets minimum quality",
+          "approval_required": false,
+          "routes_to": "digital_double_trainer"
+        },
+        {
+          "stage_id": 2,
+          "name": "Digital Double Options",
+          "action": "Generate 5 visual + 5 voice options",
+          "approval_required": true,
+          "approval_type": "user_selection",
+          "approval_description": "Select visual option (1-5) and voice option (1-5)",
+          "routes_to": "model_training"
+        },
+        {
+          "stage_id": 3,
+          "name": "Model Training",
+          "action": "Train LoRA visual model + voice model",
+          "approval_required": false,
+          "estimated_duration": "60 minutes",
+          "routes_to": "image_generation"
+        },
+        {
+          "stage_id": 4,
+          "name": "Image Generation",
+          "action": "Generate initial batch of 50 images",
+          "approval_required": false,
+          "batch_size": 50,
+          "routes_to": "first_batch_review"
+        },
+        {
+          "stage_id": 5,
+          "name": "First Batch Review",
+          "action": "User reviews first batch before going live",
+          "approval_required": true,
+          "approval_type": "user_review",
+          "approval_description": "Review sample images, approve or request regeneration",
+          "routes_to": "social_media_distribution"
+        },
+        {
+          "stage_id": 6,
+          "name": "Social Media Distribution",
+          "action": "Post to all platforms with character voice",
+          "approval_required": false,
+          "platforms": [
+            "instagram",
+            "tiktok",
+            "twitter",
+            "discord",
+            "youtube",
+            "email"
+          ],
+          "routes_to": "engagement_tracking"
+        },
+        {
+          "stage_id": 7,
+          "name": "Engagement Tracking",
+          "action": "Monitor interactions, log performance",
+          "approval_required": false,
+          "ongoing": true,
+          "routes_to": "none"
+        }
+      ],
+      "quality_checks": [
+        {
+          "check_id": "personality_traits",
+          "name": "Personality Traits",
+          "requirement": "At least 4 defined traits",
+          "mandatory": true
+        },
+        {
+          "check_id": "voice",
+          "name": "Voice Description",
+          "requirement": "Clear voice/communication style defined",
+          "mandatory": true
+        },
+        {
+          "check_id": "visual_description",
+          "name": "Visual Description",
+          "requirement": "Clear visual appearance described",
+          "mandatory": true
+        },
+        {
+          "check_id": "backstory",
+          "name": "Backstory",
+          "requirement": "Character background and motivation",
+          "mandatory": true
+        },
+        {
+          "check_id": "universe",
+          "name": "Universe Assignment",
+          "requirement": "Project/universe character belongs to",
+          "mandatory": true
+        }
+      ],
+      "approval_checkpoints": [
+        {
+          "checkpoint_id": 1,
+          "name": "Visual + Voice Selection",
+          "stage": "Digital Double Options",
+          "user_action": "Select 1 visual option (1-5) and 1 voice option (1-5)",
+          "blocks_progression": true,
+          "expected_duration": "5-10 minutes"
+        },
+        {
+          "checkpoint_id": 2,
+          "name": "First Batch Image Review",
+          "stage": "First Batch Review",
+          "user_action": "Review 5-10 sample images, approve or request changes",
+          "blocks_progression": true,
+          "expected_duration": "10-15 minutes",
+          "failure_action": "Route back to image generation with updated prompts"
+        }
+      ],
+      "logging": {
+        "asset_log": "character-asset-log.json",
+        "interaction_log": "character-interaction-log.json",
+        "media_log": "character-media-log.json",
+        "lifecycle_tracking": true
+      },
+      "escalation": {
+        "failed_validation": "Route to manual review queue",
+        "failed_checkpoint_1": "Hold, require manual visual/voice selection",
+        "failed_checkpoint_2": "Route back to image generation with feedback",
+        "failed_posting": "Alert user, prevent distribution"
+      }
+    }
+  },
+  "workflow_definitions": {
+    "character_full_lifecycle": {
+      "workflow_id": "character_full_lifecycle",
+      "name": "Character Full Lifecycle",
+      "description": "Complete workflow from spec to live social media",
+      "entry_point": "spec_validation",
+      "exit_point": "engagement_tracking",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Load passing spec (8+)",
+          "handler": "cx_agent.load_passing_specs"
+        },
+        {
+          "step": 2,
+          "action": "Validate asset",
+          "handler": "cx_agent.validate_character_asset",
+          "on_failure": "escalate_to_manual_review"
+        },
+        {
+          "step": 3,
+          "action": "Create asset log",
+          "handler": "cx_agent.create_asset_log"
+        },
+        {
+          "step": 4,
+          "action": "Queue for Digital Double Trainer",
+          "handler": "digital_double_trainer.queue",
+          "awaits_user_input": true,
+          "input_type": "visual_voice_selection"
+        },
+        {
+          "step": 5,
+          "action": "Train models",
+          "handler": "digital_double_trainer.finalize_training",
+          "estimated_time_minutes": 60
+        },
+        {
+          "step": 6,
+          "action": "Generate images",
+          "handler": "image_generation_agent.generate_image_batch",
+          "batch_size": 50
+        },
+        {
+          "step": 7,
+          "action": "Present first batch for review",
+          "handler": "cx_agent.present_first_batch",
+          "awaits_user_input": true,
+          "input_type": "batch_approval"
+        },
+        {
+          "step": 8,
+          "action": "Route to social media",
+          "handler": "cx_agent.route_to_social_media"
+        },
+        {
+          "step": 9,
+          "action": "Daily social media posting",
+          "handler": "social_media_agent.publish_daily",
+          "ongoing": true
+        },
+        {
+          "step": 10,
+          "action": "Track engagement",
+          "handler": "cx_agent.track_engagement",
+          "ongoing": true
+        }
+      ]
+    }
+  }
+}

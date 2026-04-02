@@ -1,0 +1,29 @@
+{
+  "queue_id": "ddtrainer-char-spec-claude-001-20260401193528",
+  "character_spec": {
+    "id": "char-spec-claude-001",
+    "name": "Sam Torres",
+    "universe": "band_members",
+    "archetype": "session_musician",
+    "source": "claude",
+    "created_date": "2026-03-30T04:23:38.477304",
+    "personality_traits": [
+      "meticulous",
+      "practical",
+      "charismatic",
+      "observant",
+      "conflicted",
+      "empathetic"
+    ],
+    "voice": "direct and blunt",
+    "visual_hint": "bright and approachable",
+    "backstory": "Comes from privilege but rejects it to find authentic meaning.",
+    "age": 18,
+    "pronouns": "they/them",
+    "status": "ungraded"
+  },
+  "asset_log_id": "char-spec-claude-001",
+  "stage": "digital_double_options",
+  "created_date": "2026-04-01T19:35:28.739335",
+  "status": "awaiting_checkpoint_1"
+}

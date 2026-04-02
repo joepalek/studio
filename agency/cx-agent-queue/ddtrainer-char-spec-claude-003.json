@@ -1,0 +1,30 @@
+{
+  "queue_id": "ddtrainer-char-spec-claude-003-20260401193528",
+  "character_spec": {
+    "id": "char-spec-claude-003",
+    "name": "Alex Martinez",
+    "universe": "band_members",
+    "archetype": "band_leader",
+    "source": "claude",
+    "created_date": "2026-03-30T04:23:38.477360",
+    "personality_traits": [
+      "delusional",
+      "insightful",
+      "insecure",
+      "destructive",
+      "thoughtful",
+      "spontaneous",
+      "energetic"
+    ],
+    "voice": "measured and careful",
+    "visual_hint": "weathered but strong",
+    "backstory": "Made a pivotal decision that changed the course of their life.",
+    "age": 22,
+    "pronouns": "he/him",
+    "status": "ungraded"
+  },
+  "asset_log_id": "char-spec-claude-003",
+  "stage": "digital_double_options",
+  "created_date": "2026-04-01T19:35:28.784742",
+  "status": "awaiting_checkpoint_1"
+}

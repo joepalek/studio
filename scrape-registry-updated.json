@@ -1,0 +1,64 @@
+{
+  "last_updated": "2026-04-01T19:45:00Z",
+  "total_scrapes": 4,
+  "scrapes": [
+    {
+      "id": "wayback-c2c",
+      "agent_owner": "AI_Intel_Agent",
+      "type": "Wayback CDX query + transcript harvesting",
+      "target_description": "Coast to Coast AM - all years and episodes transcripts",
+      "frequency": "daily",
+      "status": "ACTIVE",
+      "validation": {
+        "success_criteria": "All retrievable transcripts downloaded; run stops when no new episodes found",
+        "minimum_records": 1
+      }
+    },
+    {
+      "id": "wayback-tech-forums",
+      "agent_owner": "AI_Intel_Agent",
+      "type": "Wayback CDX query + forum archive harvesting",
+      "target_description": "Dead tech forums - Slashdot, Kuro5hin, Heise, 2ch (1998-2010)",
+      "frequency": "nightly",
+      "status": "ACTIVE",
+      "validation": {
+        "success_criteria": "Forum posts retrieved with full context; scoring applied",
+        "minimum_records": 50
+      }
+    },
+    {
+      "id": "ghost-book-archive",
+      "agent_owner": "Ghost_Book_Agent",
+      "type": "Internet Archive + Wayback CDX query",
+      "target_description": "Multi-category books for ghostwriting candidates",
+      "frequency": "nightly",
+      "status": "ACTIVE",
+      "validation": {
+        "success_criteria": "Books retrieved; character extraction tags populated",
+        "minimum_records": 100
+      }
+    },
+    {
+      "id": "game-archaeology",
+      "agent_owner": "Game_Archaeology_Agent",
+      "type": "Multi-source archive crawler + legal assessment",
+      "target_description": "Old games from Wayback, itch.io, Ludum Dare, GitHub. Legal assessment for copyright/fair use. DIGEST FILTERS FOR GREEN GAMES ONLY.",
+      "frequency": "weekly",
+      "status": "ACTIVE",
+      "cost_tier": "FREE",
+      "provider": "Wayback CDX API + itch.io + Ludum Dare + GitHub",
+      "schedule": {
+        "run_time": "02:58 UTC",
+        "next_scheduled": "2026-04-07T02:58:00Z",
+        "expected_interval_hours": 168
+      },
+      "validation": {
+        "success_criteria": "Crawler finds 100-300 games; Legal Agent assesses all; Digest filters to GREEN only; Email delivers conversion-ready games",
+        "minimum_records": 100,
+        "target_discovery_rate": "100-300 games per week (across 4 sources: Wayback, itch.io, Ludum Dare, GitHub)",
+        "expected_green_rate": "40-60% of assessed games = 40-180 GREEN (conversion-ready) games per week",
+        "recency_requirement": "Weekly run; digest with GREEN games delivered by Sunday"
+      }
+    }
+  ]
+}

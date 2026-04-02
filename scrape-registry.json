@@ -1,0 +1,126 @@
+{
+  "last_updated": "2026-04-01T21:00:00Z",
+  "total_scrapes": 5,
+  "scrapes": [
+    {
+      "id": "weekend-hunter",
+      "agent_owner": "WeekendHunterAgent",
+      "type": "multi-source scrape + score + route",
+      "target_description": "Garage sales, estate sales, eBay sourcing leads — Facebook Marketplace, Facebook Groups, EstateSales.net, Craigslist",
+      "frequency": "weekly (Friday 11pm full) + manual delta",
+      "script": "weekend-hunter/weekend_hunter_agent.py",
+      "config": "weekend-hunter-config.json",
+      "outputs": ["weekend-hunter/hunt-results.json", "weekend-hunter/hunt-delta.json", "weekend-hunter/hunt-route.json", "weekend-hunter/hunt-route.kml"],
+      "status": "active",
+      "last_run": null,
+      "notes": "Watchlist flagging, EBIT flip scoring, Google Maps route optimization via Directions API"
+    },
+    {
+      "id": "wayback-c2c",
+      "agent_owner": "AI_Intel_Agent",
+      "type": "Wayback CDX query + transcript harvesting",
+      "target_description": "Coast to Coast AM - all years and episodes transcripts",
+      "frequency": "daily",
+      "status": "ACTIVE",
+      "cost_tier": "FREE",
+      "provider": "Wayback Machine CDX API",
+      "downstream_consumers": [
+        {"project": "Personal_Verification", "usage": "Joe verifies shows"},
+        {"project": "Show_Rating_Engine", "usage": "Rate show quality, guests, factualness"}
+      ]
+    },
+    {
+      "id": "wayback-tech-forums",
+      "agent_owner": "AI_Intel_Agent",
+      "type": "Wayback CDX query + forum archive harvesting",
+      "target_description": "Dead tech forums - Slashdot, Kuro5hin, Heise, 2ch (1998-2010)",
+      "frequency": "nightly",
+      "status": "ACTIVE",
+      "cost_tier": "FREE",
+      "provider": "Wayback Machine CDX API",
+      "downstream_consumers": [
+        {"project": "Whiteboard_Agent", "usage": "Submit scored ideas"},
+        {"project": "Product_Innovation_Feed", "usage": "Score ideas for market fit"}
+      ]
+    },
+    {
+      "id": "ghost-book-archive",
+      "agent_owner": "Ghost_Book_Agent",
+      "type": "Internet Archive + Wayback CDX query",
+      "target_description": "Multi-category books: theory, fiction, non-fiction, biography, drama, history, diary, personal notes",
+      "frequency": "nightly",
+      "status": "ACTIVE",
+      "cost_tier": "FREE",
+      "provider": "Internet Archive API + Wayback CDX",
+      "downstream_consumers": [
+        {"project": "Ghost_Book_Fiction", "usage": "Source material for stories"},
+        {"project": "Mirofish_Scoring_Lab", "usage": "Feed books with expert bots"}
+      ]
+    },
+    {
+      "id": "game-archaeology",
+      "agent_owner": "Game_Archaeology_Agent",
+      "type": "Multi-source archive crawler + legal assessment",
+      "target_description": "Old games from Wayback, itch.io, Ludum Dare, GitHub. Legal assessment for copyright/fair use. Digest filters for GREEN games only (safe conversions).",
+      "frequency": "weekly",
+      "status": "ACTIVE",
+      "cost_tier": "FREE",
+      "provider": "Wayback CDX API + itch.io + Ludum Dare + GitHub",
+      "validation": {
+        "success_criteria": "Crawler finds 100-300 games; Legal Agent assesses all; Digest filters to GREEN only",
+        "minimum_records": 100,
+        "target_discovery_rate": "100-300 games per week",
+        "expected_green_rate": "40-60% (40-180 GREEN games = conversion-ready per week)"
+      },
+      "downstream_consumers": [
+        {"project": "Squeeze_Empire", "usage": "GREEN games → conversion targets"},
+        {"project": "Your_Inbox", "usage": "Weekly digest email with GREEN games only"}
+      ]
+    },
+    {
+      "id": "job-source-discovery",
+      "agent_owner": "Job_Match_Agent",
+      "type": "Multi-source URL discovery (Common Crawl, sitemaps, APIs, community boards)",
+      "target_description": "Exhaustive discovery of all job posting surfaces on the internet: corporate career pages, government jobs, job boards, community boards, niche aggregators. Master registry for daily scraper.",
+      "frequency": "weekly",
+      "status": "PENDING_BUILD",
+      "cost_tier": "FREE",
+      "provider": "Common Crawl CDX + Company Sitemaps + Government APIs + Community platforms",
+      "schedule": {
+        "next_scheduled": "2026-04-02T06:00:00Z",
+        "run_time": "06:00 UTC"
+      },
+      "output": {
+        "file_location": "G:/My Drive/Projects/job-match/source-discovery/",
+        "format": "json",
+        "structure": "job-source-registry.json (master), blocking-investigation.json (blockers), coverage-benchmark-{date}.json (weekly)"
+      },
+      "discovery_targets": {
+        "common_crawl_patterns": "50,000 URLs (50+ patterns)",
+        "company_sitemaps": "20,000 URLs (5,000 companies)",
+        "government_apis": "100,000 URLs (USAJOBS + states)",
+        "community_boards": "5,000 URLs (Reddit, Discord, Telegram)",
+        "job_boards_free": "10,000 URLs (GitHub, Stack Overflow, etc.)",
+        "niche_aggregators": "5,000 URLs",
+        "total_target": "190,000+ job posting surfaces"
+      },
+      "validation": {
+        "success_criteria": "Master registry 150,000-200,000+ URLs; all blockers documented; free workarounds logged",
+        "minimum_records": 150000,
+        "blocking_investigation": "Document blockers, free solutions, escalation tiers",
+        "coverage_target": "70-90% vs LinkedIn/Indeed/ZipRecruiter"
+      },
+      "blocking_escalation_framework": {
+        "tier_1_free": "User-agent rotation, delays, cloudscraper, Puppeteer ($0)",
+        "tier_2_medium": "Residential proxies $20-100/mo, Apify $20-50/mo",
+        "tier_3_paid": "Premium proxies $100-300/mo, LinkedIn API $500+/mo",
+        "decision_gate": "(jobs_lost × revenue_per_job) > monthly_cost = escalate"
+      },
+      "downstream_consumers": [
+        {"project": "Job_Scraper_Daily", "usage": "Primary feed: 150,000-200,000 URLs to scrape daily"},
+        {"project": "Coverage_Benchmarking", "usage": "Weekly comparison vs competitors"},
+        {"project": "Blocking_Investigation", "usage": "Logs and escalation decisions"}
+      ]
+    }
+  ]
+}

@@ -200,31 +200,31 @@
     "date": "2026-04-01T11:48:11.691577"
   },
   {
-    "id": "supervisor-cycle-202604011730",
+    "id": "supervisor-cycle-202604012200",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 17:30",
-    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-01 22:00",
+    "finding": "0 tasks dispatched | 11 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604011800",
+    "id": "supervisor-cycle-202604012230",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 18:00",
-    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-01 22:30",
+    "finding": "0 tasks dispatched | 11 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604011821",
+    "id": "supervisor-cycle-202604012300",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-01 18:21",
+    "title": "Supervisor Cycle — 2026-04-01 23:00",
     "finding": "0 tasks dispatched | 11 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"

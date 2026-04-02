@@ -1,0 +1,45 @@
+G:\My Drive\Projects\_studio\job-source-discovery-launcher.py:26: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "generated": datetime.utcnow().isoformat(),
+G:\My Drive\Projects\_studio\job-source-discovery-launcher.py:207: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  print(f"Started: {datetime.utcnow().isoformat()}")
+G:\My Drive\Projects\_studio\job-source-discovery-launcher.py:74: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+============================================================
+JOB SOURCE DISCOVERY - PHASE 1
+Started: 2026-04-02T02:39:51.260818
+============================================================
+[1/5] Discovering Common Crawl job URLs...
+  */careers: ERROR — HTTP Error 404: Not Found
+  */careers/*: ERROR — HTTP Error 404: Not Found
+  */jobs: ERROR — HTTP Error 404: Not Found
+  */jobs/*: ERROR — HTTP Error 404: Not Found
+  */hiring: ERROR — HTTP Error 404: Not Found
+  */hiring/*: ERROR — HTTP Error 404: Not Found
+  */employment: ERROR — HTTP Error 404: Not Found
+  */employment/*: ERROR — HTTP Error 404: Not Found
+  */job-openings: ERROR — HTTP Error 404: Not Found
+  */apply: ERROR — HTTP Error 404: Not Found
+  */work-with-us: ERROR — HTTP Error 404: Not Found
+  */join-us: ERROR — HTTP Error 404: Not Found
+  */join-our-team: ERROR — HTTP Error 404: Not Found
+  */open-positions: ERROR — HTTP Error 404: Not Found
+  */current-openings: ERROR — HTTP Error 404: Not Found
+  */vacancies: ERROR — HTTP Error 404: Not Found
+  */job-listing: ERROR — HTTP Error 503: Service Temporarily Unavailable
+  */positions: ERROR — HTTP Error 404: Not Found
+  */recruit: ERROR — HTTP Error 404: Not Found
+  */recruitment: ERROR — HTTP Error 404: Not Found
+Traceback (most recent call last):
+  File "G:\My Drive\Projects\_studio\job-source-discovery-launcher.py", line 236, in <module>
+    discovery.run_discovery()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "G:\My Drive\Projects\_studio\job-source-discovery-launcher.py", line 210, in run_discovery
+    self.discover_common_crawl()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "G:\My Drive\Projects\_studio\job-source-discovery-launcher.py", line 84, in discover_common_crawl
+    print(f"  \u2713 Common Crawl: {len(urls_found)} URLs found")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 2: character maps to <undefined>

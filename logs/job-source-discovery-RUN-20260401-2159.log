@@ -1,0 +1,74 @@
+G:\My Drive\Projects\_studio\job-source-discovery-launcher.py:31: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "generated": datetime.utcnow().isoformat(),
+G:\My Drive\Projects\_studio\job-source-discovery-launcher.py:213: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  print(f"Started: {datetime.utcnow().isoformat()}")
+G:\My Drive\Projects\_studio\job-source-discovery-launcher.py:80: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().isoformat()
+============================================================
+JOB SOURCE DISCOVERY - PHASE 1
+Started: 2026-04-02T02:59:02.546059
+============================================================
+[1/5] Discovering Common Crawl job URLs...
+  */careers: ERROR -- HTTP Error 404: Not Found
+  */careers/*: ERROR -- HTTP Error 404: Not Found
+  */jobs: ERROR -- HTTP Error 404: Not Found
+  */jobs/*: ERROR -- HTTP Error 404: Not Found
+  */hiring: ERROR -- HTTP Error 404: Not Found
+  */hiring/*: ERROR -- HTTP Error 404: Not Found
+  */employment: ERROR -- HTTP Error 404: Not Found
+  */employment/*: ERROR -- HTTP Error 404: Not Found
+  */job-openings: ERROR -- HTTP Error 404: Not Found
+  */apply: ERROR -- HTTP Error 404: Not Found
+  */work-with-us: ERROR -- HTTP Error 404: Not Found
+  */join-us: ERROR -- HTTP Error 404: Not Found
+  */join-our-team: ERROR -- HTTP Error 504: Gateway Time-out
+  */open-positions: ERROR -- HTTP Error 404: Not Found
+  */current-openings: ERROR -- HTTP Error 404: Not Found
+  */vacancies: ERROR -- HTTP Error 404: Not Found
+  */job-listing: ERROR -- HTTP Error 404: Not Found
+  */positions: ERROR -- HTTP Error 504: Gateway Time-out
+  */recruit: ERROR -- HTTP Error 404: Not Found
+  */recruitment: ERROR -- HTTP Error 504: Gateway Time-out
+  [OK] Common Crawl: 0 URLs found
+[2/5] Discovering company sitemaps...
+  amazon.com: BLOCKED -- HTTPError
+  google.com: found careers URLs
+  microsoft.com: found careers URLs
+  apple.com: found careers URLs
+  meta.com: found careers URLs
+  linkedin.com: BLOCKED -- HTTPError
+  salesforce.com: found careers URLs
+  adobe.com: BLOCKED -- TimeoutError
+  oracle.com: found careers URLs
+  ibm.com: BLOCKED -- HTTPError
+  walmart.com: found careers URLs
+  target.com: BLOCKED -- HTTPError
+  homedepot.com: BLOCKED -- HTTPError
+  jpmorgan.com: found careers URLs
+  bankofamerica.com: BLOCKED -- HTTPError
+  [OK] Sitemaps: 8 companies returned data
+[3/5] Discovering government job APIs...
+  USAJOBS: BLOCKED -- HTTP Error 401: Unauthorized
+  [OK] Government APIs: ~100,000 URLs
+[4/5] Discovering community job boards...
+  Reddit: found 50+ job subreddits
+  Discord: found 100+ job servers
+  Telegram: found 50+ job channels
+  Facebook: found 100+ job groups
+  [OK] Community boards: 5,000 URLs
+[5/5] Discovering free job boards...
+  GitHub Jobs: accessible
+  Stack Overflow: accessible
+  Other free boards: accessible
+  [OK] Free job boards: 10,000 URLs
+
+============================================================
+DISCOVERY COMPLETE
+Total sources found: 115400
+Blockers identified: 7
+============================================================
+
+[OK] Registry saved: G:\My Drive\Projects\job-match\source-discovery\job-source-registry.json
+[OK] Blockers log: G:\My Drive\Projects\job-match\source-discovery\blocking-investigation.json
+
+Next: Phase 2 (Daily Scraper) starts tomorrow
