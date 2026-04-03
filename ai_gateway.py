@@ -129,27 +129,30 @@ COST_TIERS = {
 
 # ── Provider call implementations ─────────────────────────────────────────────
 
-def _post(url, headers, body, timeout=20):
-    data = json.dumps(body).encode()
+def _post(url, headers, body, timeout=60):
+    # ensure_ascii=True converts all non-ASCII to \uXXXX escapes —
+    # prevents Windows Errno 22 / socket errors with Unicode prompt content
+    data = json.dumps(body, ensure_ascii=True).encode("ascii")
     req = urllib.request.Request(url, data=data, headers=headers)
     r = urllib.request.urlopen(req, timeout=timeout)
-    return json.loads(r.read())
+    # Read full response in chunks — handles Transfer-Encoding: chunked
+    chunks = []
+    while True:
+        chunk = r.read(65536)
+        if not chunk:
+            break
+        chunks.append(chunk)
+    return json.loads(b"".join(chunks))
 
 
 def _call_gemini(cfg, model, prompt, max_tokens):
     key = cfg["gemini_api_key"]
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
            f"{model}:generateContent?key={key}")
-    # Detect JSON-only prompts and enforce JSON output mode to prevent truncation/malformed responses
-    prompt_lower = prompt.lower()
-    wants_json = ("return only" in prompt_lower and "json" in prompt_lower) or \
-                 ("return only valid json" in prompt_lower) or \
-                 ("respond only with" in prompt_lower and "json" in prompt_lower) or \
-                 ("return only json" in prompt_lower) or \
-                 ("only valid json" in prompt_lower)
     gen_cfg = {"maxOutputTokens": max_tokens}
-    if wants_json:
-        gen_cfg["response_mime_type"] = "application/json"
+    # NOTE: response_mime_type="application/json" disabled — Gemini streams chunks
+    # that urllib reads partially, causing truncated JSON. Plain text + markdown
+    # stripping is more reliable across all models.
     r = _post(url, {"Content-Type": "application/json"}, {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": gen_cfg

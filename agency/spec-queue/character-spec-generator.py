@@ -129,9 +129,10 @@ def generate_random_spec(source_agent, spec_number):
     ]
     backstory = random.choice(backstory_templates)
     
-    # Assemble spec
+    # Assemble spec — ID includes datestamp so each daily batch has unique IDs
+    date_tag = datetime.now().strftime("%Y%m%d")
     spec = {
-        "id": f"char-spec-{source_agent}-{spec_number:03d}",
+        "id": f"char-spec-{source_agent}-{date_tag}-{spec_number:03d}",
         "name": name,
         "universe": universe,
         "archetype": archetype,

@@ -178,6 +178,28 @@
       "findings_count": 0,
       "notes": "[check-drift] 0/12 projects drift_risk HIGH",
       "session_id": ""
+    },
+    {
+      "id": "ACT-20260403-1027-aiintelagent-016",
+      "timestamp": "2026-04-03T10:27:04.900501",
+      "agent": "ai-intel-agent",
+      "action_type": "rollup",
+      "target": "ai-intel-daily.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "61 high / 25 worth / 4/5 sources OK",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260403-1037-aiintelagent-017",
+      "timestamp": "2026-04-03T10:37:33.575258",
+      "agent": "ai-intel-agent",
+      "action_type": "rollup",
+      "target": "ai-intel-daily.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "37 high / 12 worth / 4/5 sources",
+      "session_id": ""
     }
   ]
 }

@@ -1,179 +1,32 @@
 {
-  "gemini/gemini-2.0-flash-001": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:09.853751",
-    "last_error": "HTTP Error 404: Not Found",
-    "consecutive_failures": 1,
-    "total_calls": 1,
+  "cerebras/llama3.1-8b": {
+    "status": "ok",
+    "last_success": "2026-04-03T12:39:45.555320",
+    "consecutive_failures": 0,
+    "total_calls": 45,
+    "last_failure": "2026-04-03T12:38:58.836561",
+    "last_error": "[WinError 32] The process cannot access the file because it is being used by another process: 'G:/My Drive/Projects/_stu",
     "total_failures": 1,
     "failure_reasons": {
-      "HTTP Error 404: Not Found": 1
-    }
-  },
-  "gemini/gemini-flash-lite": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:10.132295",
-    "last_error": "HTTP Error 404: Not Found",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
-    "failure_reasons": {
-      "HTTP Error 404: Not Found": 1
-    }
-  },
-  "gemini/gemini-1.5-pro": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:10.575466",
-    "last_error": "HTTP Error 404: Not Found",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
-    "failure_reasons": {
-      "HTTP Error 404: Not Found": 1
+      "[WinError 32] The process cannot access the file b": 1
     }
   },
   "groq/llama-3.3-70b-versatile": {
-    "status": "ok",
-    "last_success": "2026-04-03T00:44:46.289720",
-    "consecutive_failures": 0,
-    "total_calls": 30
-  },
-  "groq/llama-3.1-8b-instant": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:10.700671",
-    "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "groq/llama-4-scout": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:10.761495",
-    "last_error": "Not found in live model list — likely deprecated",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
+    "status": "degraded",
+    "last_success": "2026-04-03T13:03:56.222079",
+    "consecutive_failures": 17,
+    "total_calls": 199,
+    "last_failure": "2026-04-03T13:07:15.144019",
+    "last_error": "HTTP Error 429: Too Many Requests",
+    "total_failures": 130,
     "failure_reasons": {
-      "Not found in live model list — likely deprecated": 1
+      "HTTP Error 429: Too Many Requests": 130
     }
-  },
-  "groq/mixtral-8x7b": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:10.819075",
-    "last_error": "Not found in live model list — likely deprecated",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
-    "failure_reasons": {
-      "Not found in live model list — likely deprecated": 1
-    }
-  },
-  "groq/gemma2-9b-it": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:10.868439",
-    "last_error": "Not found in live model list — likely deprecated",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
-    "failure_reasons": {
-      "Not found in live model list — likely deprecated": 1
-    }
-  },
-  "groq/whisper-large-v3": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:10.936636",
-    "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "cerebras/llama3.1-8b": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:10.989596",
-    "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "cerebras/qwen-3-235b-a22b-instruct-2507": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:11.044102",
-    "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "openrouter/deepseek/deepseek-r1:free": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:11.100980",
-    "last_error": "Not found in live model list — likely deprecated",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
-    "failure_reasons": {
-      "Not found in live model list — likely deprecated": 1
-    }
-  },
-  "openrouter/meta-llama/llama-3.2-3b-instruct:free": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:11.159220",
-    "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "openrouter/mistralai/mistral-7b-instruct:free": {
-    "status": "defunct",
-    "last_failure": "2026-04-01T11:48:11.219028",
-    "last_error": "Not found in live model list — likely deprecated",
-    "consecutive_failures": 1,
-    "total_calls": 1,
-    "total_failures": 1,
-    "failure_reasons": {
-      "Not found in live model list — likely deprecated": 1
-    }
-  },
-  "openrouter/google/gemma-3-27b-it:free": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:11.275366",
-    "consecutive_failures": 0,
-    "total_calls": 1
   },
   "mistral/mistral-small-latest": {
     "status": "ok",
-    "last_success": "2026-04-01T11:48:11.323035",
+    "last_success": "2026-04-03T13:07:26.043718",
     "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "mistral/mistral-large-latest": {
-    "status": "ok",
-    "last_success": "2026-04-03T00:48:10.229837",
-    "consecutive_failures": 0,
-    "total_calls": 20
-  },
-  "mistral/codestral-latest": {
-    "status": "ok",
-    "last_success": "2026-04-01T12:40:27.396380",
-    "consecutive_failures": 0,
-    "total_calls": 2
-  },
-  "mistral/ministral-8b-latest": {
-    "status": "ok",
-    "last_success": "2026-04-01T11:48:11.482405",
-    "consecutive_failures": 0,
-    "total_calls": 1
-  },
-  "gemini/gemini-2.5-flash": {
-    "status": "ok",
-    "last_success": "2026-04-03T09:48:50.033311",
-    "consecutive_failures": 0,
-    "total_calls": 22
-  },
-  "ollama/gemma3:4b": {
-    "status": "ok",
-    "last_success": "2026-04-02T23:36:50.919790",
-    "consecutive_failures": 0,
-    "total_calls": 23
-  },
-  "anthropic/claude-sonnet-4-6": {
-    "status": "degraded",
-    "last_failure": "2026-04-02T19:21:23.260986",
-    "last_error": "HTTP Error 400: Bad Request",
-    "consecutive_failures": 3,
-    "total_calls": 3,
-    "total_failures": 3,
-    "failure_reasons": {
-      "HTTP Error 400: Bad Request": 3
-    }
+    "total_calls": 133
   }
 }

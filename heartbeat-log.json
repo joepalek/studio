@@ -1,1018 +1,124 @@
 {
   "entries": [
     {
-      "date": "2026-04-01T00:59:01.053584",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T01:00:02.681582",
-      "agent": "nightly-rollup",
-      "status": "flagged",
-      "notes": "[nightly-rollup] RED 37/100 â€” digest written"
-    },
-    {
-      "date": "2026-04-01T01:00:12.398939",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T01:04:47.845522",
-      "agent": "nightly-rollup",
-      "status": "flagged",
-      "notes": "[nightly-rollup] YELLOW 57/100 â€” digest written"
-    },
-    {
-      "date": "2026-04-01T01:30:05.137831",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T01:37:57.866413",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01 01:41",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-04-01T01:41:30.856025",
+      "date": "2026-04-03T10:45:05.604345",
       "agent": "janitor",
       "status": "flagged",
-      "notes": "truncated=0 old=0 caches=4 large=0"
+      "notes": "truncated=1 old=0 caches=6 large=0"
     },
     {
-      "date": "2026-04-01T01:57:33.046474",
-      "agent": "janitor",
-      "status": "flagged",
-      "notes": "truncated=0 old=0 caches=1 large=0"
-    },
-    {
-      "date": "2026-04-01 01:57",
-      "agent": "check-drift",
+      "date": "2026-04-03T10:45:06.273429",
+      "agent": "vintage-agent",
       "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
+      "notes": "filled=0 skipped=10"
     },
     {
-      "date": "2026-04-01T02:00:04.442693",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T02:12:21.176559",
-      "agent": "vector-reindex",
-      "status": "clean",
-      "notes": "reindex complete"
-    },
-    {
-      "date": "2026-04-01T07:13:31Z",
+      "date": "2026-04-03T15:45:08Z",
       "agent": "ai-intel-agent",
       "status": "clean",
-      "notes": "3 high / 71 worth / 194 logged -- 11/11 sources -- YouTube: 13 videos"
+      "notes": "5 high / 71 worth / 156 logged -- 11/11 sources -- YouTube: 15 videos"
     },
     {
-      "date": "2026-04-01T02:30:05.027114",
+      "date": "2026-04-03T10:49:27.752844",
+      "agent": "agency-build",
+      "status": "clean",
+      "notes": "idle — 283 chars already built, 0 new specs"
+    },
+    {
+      "date": "2026-04-03T10:56:02.722447",
+      "agent": "agency-spec-grader",
+      "status": "clean",
+      "notes": "idle — all 300 specs already graded"
+    },
+    {
+      "date": "2026-04-03T11:00:04.266022",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
+      "notes": "0 dispatched | ollama=True gemini=True"
     },
     {
-      "date": "2026-04-01T03:00:05.058466",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T03:30:04.846912",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T03:30:42.397868",
-      "agent": "auto-answer-gemini",
-      "status": "clean",
-      "notes": "[auto-answer] auto-resolved 5, escalated 4 of 9 pending"
-    },
-    {
-      "date": "2026-04-01T04:00:04.819794",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T04:30:04.949635",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T05:00:04.728408",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T10:00:02Z",
-      "agent": "ai-intel-agent",
-      "status": "clean",
-      "notes": "2 high / 69 worth / 197 logged -- 11/11 sources -- YouTube: 15 videos"
-    },
-    {
-      "date": "2026-04-01T10:30:02Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-01T05:30:04.785713",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01 06:00",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-04-01T06:00:05.445967",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T06:30:04.936868",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T07:00:04.788244",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T07:30:04.999738",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T08:00:05.381367",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "3 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T08:30:05.326356",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01 08:59",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-04-01T13:59:22Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-01T08:59:26.049381",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T08:59:38.737310",
-      "agent": "vector-reindex",
-      "status": "clean",
-      "notes": "reindex complete"
-    },
-    {
-      "date": "2026-04-01T13:59:22Z",
-      "agent": "ai-intel-agent",
-      "status": "clean",
-      "notes": "1 high / 77 worth / 173 logged -- 11/11 sources -- YouTube: 10 videos"
-    },
-    {
-      "date": "2026-04-01T08:59:52.368354",
-      "agent": "janitor",
+      "date": "2026-04-03T11:08:07.105839",
+      "agent": "agency-spec-grader",
       "status": "flagged",
-      "notes": "truncated=0 old=0 caches=4 large=0"
+      "notes": "graded=0 failed=300 passing=0 pass_rate=0% elapsed=551s"
     },
     {
-      "date": "2026-04-01T09:00:04.300790",
+      "date": "2026-04-03T11:30:05.125447",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
+      "notes": "0 dispatched | ollama=True gemini=True"
     },
     {
-      "date": "2026-04-01 09:00",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-04-01T14:00:34Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-01T09:00:37.643651",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T09:00:48.516479",
-      "agent": "auto-answer-gemini",
-      "status": "clean",
-      "notes": "[auto-answer] auto-resolved 0, escalated 4 of 4 pending"
-    },
-    {
-      "date": "2026-04-01T09:00:53.909645",
-      "agent": "vector-reindex",
-      "status": "clean",
-      "notes": "reindex complete"
-    },
-    {
-      "date": "2026-04-01T14:00:34Z",
-      "agent": "ai-intel-agent",
-      "status": "clean",
-      "notes": "2 high / 94 worth / 194 logged -- 11/11 sources -- YouTube: 28 videos"
-    },
-    {
-      "date": "2026-04-01T09:01:07.041567",
-      "agent": "janitor",
+      "date": "2026-04-03T11:57:07.730079",
+      "agent": "agency-spec-grader",
       "status": "flagged",
-      "notes": "truncated=0 old=0 caches=4 large=0"
+      "notes": "graded=3 failed=297 passing=1 pass_rate=0% elapsed=556s"
     },
     {
-      "date": "2026-04-01T09:30:06.603148",
+      "date": "2026-04-03T12:00:04.540270",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
+      "notes": "0 dispatched | ollama=True gemini=True"
     },
     {
-      "date": "2026-04-01T10:00:04.367710",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T15:04:30Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "6 categories updated"
-    },
-    {
-      "date": "2026-04-01T15:07:00Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "6 categories updated"
-    },
-    {
-      "date": "2026-04-01T15:13:19Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-01T15:17:48Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-01T10:30:04.401280",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T11:00:04.563412",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T11:30:04.547161",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T11:48:11.724893",
-      "agent": "model-validator",
+      "date": "2026-04-03T12:01:50.137517",
+      "agent": "agency-spec-grader",
       "status": "flagged",
-      "notes": "ok=11 defunct=5 skipped=27"
+      "notes": "graded=5 failed=295 passing=0 pass_rate=0% elapsed=592s"
     },
     {
-      "date": "2026-04-01T12:00:04.431248",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T12:30:04.491479",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T13:00:04.541977",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T13:30:05.279569",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T14:00:05.199221",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T14:30:05.188810",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T15:00:05.194339",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T15:30:05.219848",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T16:00:05.596274",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T16:30:06.207731",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T17:00:05.416662",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T17:30:05.199715",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T18:00:05.021219",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=False"
-    },
-    {
-      "date": "2026-04-01T18:11:37.172315",
-      "agent": "product-archaeology",
-      "status": "clean",
-      "notes": "added=0 total=434"
-    },
-    {
-      "date": "2026-04-01T18:17:35.067852",
-      "agent": "janitor",
+      "date": "2026-04-03T12:29:57.900824",
+      "agent": "agency-spec-grader",
       "status": "flagged",
-      "notes": "truncated=0 old=0 caches=3 large=0"
+      "notes": "graded=25 failed=269 passing=16 pass_rate=5% elapsed=1097s"
     },
     {
-      "date": "2026-04-01T18:20:55.108232",
-      "agent": "git-commit",
+      "date": "2026-04-03T12:30:04.370029",
+      "agent": "supervisor",
       "status": "clean",
-      "notes": "committed=2 errors=0"
+      "notes": "0 dispatched | ollama=True gemini=False"
     },
     {
-      "date": "2026-04-01T18:21:13.730931",
-      "agent": "janitor",
+      "date": "2026-04-03T12:33:32.964424",
+      "agent": "agency-spec-grader",
       "status": "flagged",
-      "notes": "truncated=0 old=0 caches=1 large=0"
+      "notes": "graded=32 failed=262 passing=15 pass_rate=5% elapsed=1125s"
     },
     {
-      "date": "2026-04-01T18:21:21.353886",
+      "date": "2026-04-03T13:00:05.026755",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
+      "notes": "0 dispatched | ollama=True gemini=False"
     },
     {
-      "date": "2026-04-01T18:30:04.672185",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T19:00:05.664980",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T19:30:04.493674",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T20:00:04.685504",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T20:30:04.724798",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T21:00:05.428840",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T21:30:04.456476",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T22:00:04.166739",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T22:30:05.044161",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T23:00:05.018589",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-01T23:00:31.619557",
-      "agent": "git-commit",
-      "status": "clean",
-      "notes": "committed=2 errors=0"
-    },
-    {
-      "date": "2026-04-01T23:30:05.626688",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T00:00:09.794980",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T00:30:04.748562",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T01:00:04.425058",
-      "agent": "nightly-rollup",
-      "status": "flagged",
-      "notes": "[nightly-rollup] YELLOW 57/100 â€” digest written"
-    },
-    {
-      "date": "2026-04-02T01:00:17.267565",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T01:15:14.550865",
-      "agent": "vector-reindex",
-      "status": "clean",
-      "notes": "reindex complete"
-    },
-    {
-      "date": "2026-04-02T01:30:05.678364",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T02:00:05.368543",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T02:00:25.924904",
-      "agent": "product-archaeology",
-      "status": "clean",
-      "notes": "added=0 total=434"
-    },
-    {
-      "date": "2026-04-02T02:30:05.201179",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T03:00:05.303812",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T03:30:17.256617",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T03:30:29.044603",
-      "agent": "auto-answer-gemini",
-      "status": "clean",
-      "notes": "[auto-answer] auto-resolved 0, escalated 4 of 4 pending"
-    },
-    {
-      "date": "2026-04-02T04:00:05.405155",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T04:00:18.959450",
-      "agent": "whiteboard-scorer",
-      "status": "clean",
-      "notes": "scored=0 top10_pushed=0"
-    },
-    {
-      "date": "2026-04-02T04:30:06.905636",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T05:00:05.286950",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T10:00:02Z",
-      "agent": "ai-intel-agent",
-      "status": "clean",
-      "notes": "3 high / 71 worth / 153 logged -- 11/11 sources -- YouTube: 8 videos"
-    },
-    {
-      "date": "2026-04-02T10:30:03Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-02T05:30:05.696120",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02 06:00",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-04-02T06:00:06.346830",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T06:30:05.420254",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T07:00:05.328969",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T07:30:05.864584",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T08:00:05.180523",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T08:00:28.989707",
-      "agent": "product-archaeology",
-      "status": "clean",
-      "notes": "added=0 total=434"
-    },
-    {
-      "date": "2026-04-02",
-      "agent": "sre-scout",
-      "status": "flagged",
-      "notes": "WARNING: 2 uncommitted repos (_studio 56, job-match 6); Gemini API DOWN"
-    },
-    {
-      "date": "2026-04-02",
-      "agent": "orchestrator",
-      "status": "flagged",
-      "notes": "Briefing via Claude fallback. job-match 5 decisions blocking."
-    },
-    {
-      "date": "2026-04-02T08:30:05.423046",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T09:00:05.754260",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T09:30:07.014702",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T10:00:05.325315",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T10:30:06.200348",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T11:00:06.329341",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T11:30:05.948360",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T12:00:06.961810",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T12:30:10.161670",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T13:00:05.471209",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T13:30:05.187025",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T14:00:04.710162",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T14:30:05.164346",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T15:00:04.636456",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T15:30:04.751198",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T16:00:05.079179",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T16:30:05.523230",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T17:00:05.978439",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T17:30:05.022906",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T18:00:04.842455",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T18:30:05.709098",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T19:00:05.389463",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T19:30:04.713829",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T20:00:05.672763",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T20:30:05.438369",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T21:00:05.435800",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T21:30:05.685369",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T22:00:05.501568",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T22:30:05.477430",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T23:00:04.913873",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-02T23:00:37.949221",
-      "agent": "git-commit",
-      "status": "clean",
-      "notes": "committed=2 errors=0"
-    },
-    {
-      "date": "2026-04-02T23:30:04.872043",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T00:00:08.995205",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T00:30:04.982173",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T01:00:04.353929",
-      "agent": "nightly-rollup",
-      "status": "flagged",
-      "notes": "[nightly-rollup] YELLOW 57/100 — digest written"
-    },
-    {
-      "date": "2026-04-03T01:00:40.994365",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T01:15:10.338779",
-      "agent": "vector-reindex",
-      "status": "clean",
-      "notes": "reindex complete"
-    },
-    {
-      "date": "2026-04-03T01:30:04.799966",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T02:00:05.272959",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T02:00:33.862189",
-      "agent": "product-archaeology",
-      "status": "clean",
-      "notes": "added=1 total=435"
-    },
-    {
-      "date": "2026-04-03T02:30:06.567778",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T03:00:05.229388",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T03:30:03.188054",
-      "agent": "auto-answer-gemini",
-      "status": "clean",
-      "notes": "[auto-answer] auto-resolved 0, escalated 0 of 0 pending"
-    },
-    {
-      "date": "2026-04-03T03:30:05.600020",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T04:00:05.893772",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T04:00:20.352760",
-      "agent": "whiteboard-scorer",
-      "status": "clean",
-      "notes": "scored=0 top10_pushed=0"
-    },
-    {
-      "date": "2026-04-03T04:30:05.326140",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T05:00:04.842617",
-      "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T10:00:02Z",
-      "agent": "ai-intel-agent",
-      "status": "clean",
-      "notes": "4 high / 72 worth / 161 logged -- 11/11 sources -- YouTube: 17 videos"
-    },
-    {
-      "date": "2026-04-03T10:30:02Z",
-      "agent": "ai-services-rankings",
-      "status": "clean",
-      "notes": "7 categories updated"
-    },
-    {
-      "date": "2026-04-03T05:30:04.996426",
-      "agent": "supervisor",
+      "date": "2026-04-03T13:07:27.170869",
+      "agent": "agency-spec-grader",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
+      "notes": "graded=262 failed=0 passing=218 pass_rate=73% elapsed=2017s"
     },
     {
-      "date": "2026-04-03 06:00",
-      "agent": "check-drift",
-      "status": "clean",
-      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
-    },
-    {
-      "date": "2026-04-03T06:00:05.905756",
+      "date": "2026-04-03T13:30:05.129686",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
+      "notes": "0 dispatched | ollama=True gemini=False"
     },
     {
-      "date": "2026-04-03T06:30:04.685280",
+      "date": "2026-04-03T14:00:05.319204",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
+      "notes": "0 dispatched | ollama=True gemini=False"
     },
     {
-      "date": "2026-04-03T09:48:23.179883",
+      "date": "2026-04-03T14:30:04.608753",
       "agent": "supervisor",
-      "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
-    },
-    {
-      "date": "2026-04-03T09:48:50.182041",
-      "agent": "product-archaeology",
       "status": "clean",
-      "notes": "added=0 total=435"
+      "notes": "0 dispatched | ollama=True gemini=False"
     },
     {
-      "date": "2026-04-03T10:00:04.564769",
+      "date": "2026-04-03T15:00:04.919532",
       "agent": "supervisor",
       "status": "clean",
-      "notes": "0 dispatched | ollama=True gemini=True"
+      "notes": "0 dispatched | ollama=True gemini=False"
     }
   ]
 }

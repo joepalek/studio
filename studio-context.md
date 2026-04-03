@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-04-03 10:05 | Auto-built by generate-context.py
-Next regeneration: 2026-04-03 18:05 (approximate — runs at every session start)
+Generated: 2026-04-03 10:24 | Auto-built by generate-context.py
+Next regeneration: 2026-04-03 18:24 (approximate — runs at every session start)
 Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
@@ -2943,4 +2943,4 @@ On returning to it 30 years later, it certainly scratc
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-04-03 10:05
+End of context. Generated: 2026-04-03 10:24

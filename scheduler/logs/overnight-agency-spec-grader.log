@@ -1,0 +1,1298 @@
+[12:05:18] === spec-auto-grader START ===
+[12:05:18] Queue loaded: 300 specs
+[12:05:18] Existing grades: 305
+[12:05:18] Ungraded: 295 specs to grade
+[12:05:20] JSON parse failed for char-spec-claude-20260403-001: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:05:21] JSON parse failed for char-spec-claude-20260403-002: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[12:05:23] JSON parse failed for char-spec-claude-20260403-003: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:05:25] JSON parse failed for char-spec-claude-20260403-004: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:05:27] JSON parse failed for char-spec-claude-20260403-005: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "
+[12:05:29] JSON parse failed for char-spec-claude-20260403-006: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 8
+[12:05:31] JSON parse failed for char-spec-claude-20260403-007: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:05:33] JSON parse failed for char-spec-claude-20260403-008: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 8
+[12:05:35] JSON parse failed for char-spec-claude-20260403-009: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[12:05:37] JSON parse failed for char-spec-claude-20260403-010: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[12:05:37]   Progress: 10/295 graded
+[12:05:39] JSON parse failed for char-spec-claude-20260403-011: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 8
+[12:05:41] JSON parse failed for char-spec-claude-20260403-012: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 8
+[12:05:42] JSON parse failed for char-spec-claude-20260403-013: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[12:05:44] JSON parse failed for char-spec-claude-20260403-014: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[12:05:46] JSON parse failed for char-spec-claude-20260403-015: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:05:48] JSON parse failed for char-spec-claude-20260403-016: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[12:05:50] JSON parse failed for char-spec-claude-20260403-017: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 6
+[12:05:52] JSON parse failed for char-spec-claude-20260403-018: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:05:54] JSON parse failed for char-spec-claude-20260403-019: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[12:05:56] JSON parse failed for char-spec-claude-20260403-020: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[12:05:56]   Progress: 20/295 graded
+[12:05:58] JSON parse failed for char-spec-claude-20260403-021: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[12:06:00] JSON parse failed for char-spec-claude-20260403-022: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 7
+[12:06:02] JSON parse failed for char-spec-claude-20260403-023: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 8
+[12:06:04] JSON parse failed for char-spec-claude-20260403-024: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[12:06:06] JSON parse failed for char-spec-claude-20260403-025: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:06] Grades saved: 305 total
+[12:06:07] JSON parse failed for char-spec-claude-20260403-026: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 7
+[12:06:09] JSON parse failed for char-spec-claude-20260403-027: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[12:06:11] JSON parse failed for char-spec-claude-20260403-028: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:13] JSON parse failed for char-spec-claude-20260403-029: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[12:06:15] JSON parse failed for char-spec-claude-20260403-030: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 7
+[12:06:15]   Progress: 30/295 graded
+[12:06:17] JSON parse failed for char-spec-claude-20260403-031: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[12:06:18] JSON parse failed for char-spec-claude-20260403-032: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[12:06:20] JSON parse failed for char-spec-claude-20260403-033: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 7
+[12:06:22] JSON parse failed for char-spec-claude-20260403-034: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[12:06:25] JSON parse failed for char-spec-claude-20260403-036: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 9,
+[12:06:27] JSON parse failed for char-spec-claude-20260403-037: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 8
+[12:06:29] JSON parse failed for char-spec-claude-20260403-038: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:31] JSON parse failed for char-spec-claude-20260403-039: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[12:06:33] JSON parse failed for char-spec-claude-20260403-040: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:06:33]   Progress: 40/295 graded
+[12:06:35] JSON parse failed for char-spec-claude-20260403-041: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[12:06:37] JSON parse failed for char-spec-claude-20260403-042: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:39] JSON parse failed for char-spec-claude-20260403-043: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:40] JSON parse failed for char-spec-claude-20260403-044: Expecting ',' delimiter: line 1 column 12 (char 11) raw: {"grade": 6
+[12:06:42] JSON parse failed for char-spec-claude-20260403-045: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[12:06:44] JSON parse failed for char-spec-claude-20260403-046: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:46] JSON parse failed for char-spec-claude-20260403-047: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[12:06:48] JSON parse failed for char-spec-claude-20260403-048: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[12:06:50] JSON parse failed for char-spec-claude-20260403-049: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+spec-claude-20260403-046: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:06:46] JSON parse failed for char-spec-claude-20260403-047: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:06:48] JSON parse failed for char-spec-claude-20260403-048: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[2026-04-03 12:06:50] JSON parse failed for char-spec-claude-20260403-049: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:08:36] === spec-auto-grader START ===
+[2026-04-03 12:08:36] Queue loaded: 300 specs
+[2026-04-03 12:08:36] Existing grades: 305
+[2026-04-03 12:08:36] Ungraded: 295 specs to grade
+[2026-04-03 12:08:40] JSON parse failed for char-spec-claude-20260403-002: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:08:43] JSON parse failed for char-spec-claude-20260403-003: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinctiveness
+[2026-04-03 12:08:47] JSON parse failed for char-spec-claude-20260403-004: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:08:50] JSON parse failed for char-spec-claude-20260403-005: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:08:53] JSON parse failed for char-spec-claude-20260403-006: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:08:55] JSON parse failed for char-spec-claude-20260403-007: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:08:58] JSON parse failed for char-spec-claude-20260403-008: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:09:00] JSON parse failed for char-spec-claude-20260403-009: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:09:03] JSON parse failed for char-spec-claude-20260403-010: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:09:03]   Progress: 10/295 graded
+[2026-04-03 12:09:05] JSON parse failed for char-spec-claude-20260403-011: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 9, "pass": true,
+[2026-04-03 12:09:08] JSON parse failed for char-spec-claude-20260403-012: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:09:10] JSON parse failed for char-spec-claude-20260403-013: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:09:13] JSON parse failed for char-spec-claude-20260403-014: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:09:15] JSON parse failed for char-spec-claude-20260403-015: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:09:18] JSON parse failed for char-spec-claude-20260403-016: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:09:20] JSON parse failed for char-spec-claude-20260403-017: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:09:23] JSON parse failed for char-spec-claude-20260403-018: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:09:26] JSON parse failed for char-spec-claude-20260403-019: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:09:28] JSON parse failed for char-spec-claude-20260403-020: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:09:28]   Progress: 20/295 graded
+[2026-04-03 12:09:31] JSON parse failed for char-spec-claude-20260403-021: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:09:33] JSON parse failed for char-spec-claude-20260403-022: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:09:36] JSON parse failed for char-spec-claude-20260403-023: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:09:38] JSON parse failed for char-spec-claude-20260403-024: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:09:41] JSON parse failed for char-spec-claude-20260403-025: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:09:41] Grades saved: 306 total
+[2026-04-03 12:09:44] JSON parse failed for char-spec-claude-20260403-026: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:09:46] JSON parse failed for char-spec-claude-20260403-027: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 9, "pass": true,
+[2026-04-03 12:09:49] JSON parse failed for char-spec-claude-20260403-028: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:09:51] JSON parse failed for char-spec-claude-20260403-029: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:09:54] JSON parse failed for char-spec-claude-20260403-030: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:09:54]   Progress: 30/295 graded
+[2026-04-03 12:09:56] JSON parse failed for char-spec-claude-20260403-031: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:09:59] JSON parse failed for char-spec-claude-20260403-032: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:10:01] JSON parse failed for char-spec-claude-20260403-033: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:10:04] JSON parse failed for char-spec-claude-20260403-034: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinct
+[2026-04-03 12:10:06] JSON parse failed for char-spec-claude-20260403-035: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:10:09] JSON parse failed for char-spec-claude-20260403-036: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:10:12] JSON parse failed for char-spec-claude-20260403-037: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:10:15] JSON parse failed for char-spec-claude-20260403-038: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:10:17] JSON parse failed for char-spec-claude-20260403-039: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:10:20] JSON parse failed for char-spec-claude-20260403-040: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:10:20]   Progress: 40/295 graded
+[2026-04-03 12:10:23] JSON parse failed for char-spec-claude-20260403-041: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:10:26] JSON parse failed for char-spec-claude-20260403-042: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:10:28] JSON parse failed for char-spec-claude-20260403-043: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:10:31] JSON parse failed for char-spec-claude-20260403-044: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:10:33] JSON parse failed for char-spec-claude-20260403-045: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:10:36] JSON parse failed for char-spec-claude-20260403-046: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:10:38] JSON parse failed for char-spec-claude-20260403-047: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:10:40] JSON parse failed for char-spec-claude-20260403-048: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:10:43] JSON parse failed for char-spec-claude-20260403-049: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:10:46] JSON parse failed for char-spec-claude-20260403-050: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:10:46]   Progress: 50/295 graded
+[2026-04-03 12:10:46] Grades saved: 306 total
+[2026-04-03 12:10:48] JSON parse failed for char-spec-claude-20260403-051: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:10:51] JSON parse failed for char-spec-claude-20260403-052: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:10:53] JSON parse failed for char-spec-claude-20260403-053: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:10:56] JSON parse failed for char-spec-claude-20260403-054: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:10:58] JSON parse failed for char-spec-claude-20260403-055: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:11:00] JSON parse failed for char-spec-claude-20260403-056: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:11:03] JSON parse failed for char-spec-claude-20260403-057: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:11:06] JSON parse failed for char-spec-claude-20260403-058: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:11:08] JSON parse failed for char-spec-claude-20260403-059: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:11:11] JSON parse failed for char-spec-claude-20260403-060: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:11:11]   Progress: 60/295 graded
+[2026-04-03 12:11:13] JSON parse failed for char-spec-claude-20260403-061: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:11:18] JSON parse failed for char-spec-claude-20260403-063: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:11:21] JSON parse failed for char-spec-claude-20260403-064: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:11:23] JSON parse failed for char-spec-claude-20260403-065: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "
+[2026-04-03 12:11:26] JSON parse failed for char-spec-claude-20260403-066: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:11:29] JSON parse failed for char-spec-claude-20260403-067: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:11:31] JSON parse failed for char-spec-claude-20260403-068: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:11:35] JSON parse failed for char-spec-claude-20260403-070: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:11:35]   Progress: 70/295 graded
+[2026-04-03 12:11:38] JSON parse failed for char-spec-claude-20260403-071: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:11:40] === spec-auto-grader START ===
+[2026-04-03 12:11:40] Queue loaded: 300 specs
+[2026-04-03 12:11:40] Existing grades: 306
+[2026-04-03 12:11:40] Ungraded: 294 specs to grade
+[2026-04-03 12:11:40] JSON parse failed for char-spec-claude-20260403-072: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:11:42] JSON parse failed for char-spec-claude-20260403-073: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:11:43] JSON parse failed for char-spec-claude-20260403-002: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:11:45] JSON parse failed for char-spec-claude-20260403-074: Unterminated string starting at: line 1 column 24 (char 23) raw: {"grade":8,"pass":true,"distinctiveness
+[2026-04-03 12:11:46] JSON parse failed for char-spec-claude-20260403-003: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:11:47] JSON parse failed for char-spec-claude-20260403-075: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 5, "pass": false, "
+[2026-04-03 12:11:47] Grades saved: 308 total
+[2026-04-03 12:11:49] JSON parse failed for char-spec-claude-20260403-004: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:11:50] JSON parse failed for char-spec-claude-20260403-076: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "
+[2026-04-03 12:11:52] JSON parse failed for char-spec-claude-20260403-077: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:11:53] JSON parse failed for char-spec-claude-20260403-005: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[2026-04-03 12:11:54] JSON parse failed for char-spec-claude-20260403-078: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:11:56] JSON parse failed for char-spec-claude-20260403-006: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:11:57] JSON parse failed for char-spec-claude-20260403-079: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:11:59] JSON parse failed for char-spec-claude-20260403-080: Expecting value: line 1 column 43 (char 42) raw: {"grade":7,"pass":false,"distinctiveness":
+[2026-04-03 12:11:59]   Progress: 80/295 graded
+[2026-04-03 12:12:00] JSON parse failed for char-spec-claude-20260403-007: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:12:02] JSON parse failed for char-spec-claude-20260403-081: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:12:03] JSON parse failed for char-spec-claude-20260403-008: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:12:04] JSON parse failed for char-spec-claude-20260403-082: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:12:07] JSON parse failed for char-spec-claude-20260403-009: Expecting ',' delimiter: line 1 column 26 (char 25) raw: {"grade": 8, "pass": true
+[2026-04-03 12:12:07] JSON parse failed for char-spec-claude-20260403-083: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:12:09] JSON parse failed for char-spec-claude-20260403-084: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:12:10] JSON parse failed for char-spec-claude-20260403-010: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:12:12] JSON parse failed for char-spec-claude-20260403-085: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:12:14] JSON parse failed for char-spec-claude-20260403-011: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:12:14]   Progress: 10/294 graded
+[2026-04-03 12:12:14] JSON parse failed for char-spec-claude-20260403-086: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 4, "pass": false, "distinctiveness
+[2026-04-03 12:12:17] JSON parse failed for char-spec-claude-20260403-087: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:12:17] JSON parse failed for char-spec-claude-20260403-012: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:12:19] JSON parse failed for char-spec-claude-20260403-088: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:12:21] JSON parse failed for char-spec-claude-20260403-013: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:12:22] JSON parse failed for char-spec-claude-20260403-089: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:12:24] JSON parse failed for char-spec-claude-20260403-014: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:12:24] JSON parse failed for char-spec-claude-20260403-090: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:12:24]   Progress: 90/295 graded
+[2026-04-03 12:12:27] JSON parse failed for char-spec-claude-20260403-091: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:12:27] JSON parse failed for char-spec-claude-20260403-015: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:12:30] JSON parse failed for char-spec-claude-20260403-092: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:12:31] JSON parse failed for char-spec-claude-20260403-016: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:12:33] JSON parse failed for char-spec-claude-20260403-093: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:12:34] JSON parse failed for char-spec-claude-20260403-017: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:12:35] JSON parse failed for char-spec-claude-20260403-094: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:12:38] JSON parse failed for char-spec-claude-20260403-095: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "
+[2026-04-03 12:12:38] JSON parse failed for char-spec-claude-20260403-018: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:12:40] JSON parse failed for char-spec-claude-20260403-096: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinct
+[2026-04-03 12:12:41] JSON parse failed for char-spec-claude-20260403-019: Unterminated string starting at: line 3 column 1 (char 14) raw: {
+"grade": 5,
+"
+[2026-04-03 12:12:42] JSON parse failed for char-spec-claude-20260403-097: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:12:45] JSON parse failed for char-spec-claude-20260403-020: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:12:45] JSON parse failed for char-spec-claude-20260403-098: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:12:47] JSON parse failed for char-spec-claude-20260403-099: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:12:48] JSON parse failed for char-spec-claude-20260403-021: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:12:48]   Progress: 20/294 graded
+[2026-04-03 12:12:50] JSON parse failed for char-spec-claude-20260403-100: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:12:50]   Progress: 100/295 graded
+[2026-04-03 12:12:50] Grades saved: 308 total
+[2026-04-03 12:12:51] JSON parse failed for char-spec-claude-20260403-022: Expecting ',' delimiter: line 2 column 15 (char 16) raw: {
+    "grade": 8
+[2026-04-03 12:12:53] JSON parse failed for char-spec-gemini-20260403-001: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:12:55] JSON parse failed for char-spec-claude-20260403-023: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "
+[2026-04-03 12:12:55] JSON parse failed for char-spec-gemini-20260403-002: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:12:58] JSON parse failed for char-spec-gemini-20260403-003: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 9, "pass": true,
+[2026-04-03 12:12:58] JSON parse failed for char-spec-claude-20260403-024: Expecting value: line 1 column 19 (char 18) raw: {"grade":6,"pass":
+[2026-04-03 12:13:00] JSON parse failed for char-spec-gemini-20260403-004: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 6, "pass": false,
+[2026-04-03 12:13:01] JSON parse failed for char-spec-claude-20260403-025: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 9,
+[2026-04-03 12:13:02] JSON parse failed for char-spec-gemini-20260403-005: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:13:04] JSON parse failed for char-spec-claude-20260403-026: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:13:04] Grades saved: 306 total
+[2026-04-03 12:13:05] JSON parse failed for char-spec-gemini-20260403-006: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:13:07] JSON parse failed for char-spec-gemini-20260403-007: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:13:08] JSON parse failed for char-spec-claude-20260403-027: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:13:10] JSON parse failed for char-spec-gemini-20260403-008: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:13:11] JSON parse failed for char-spec-claude-20260403-028: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:13:12] JSON parse failed for char-spec-gemini-20260403-009: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:13:15] JSON parse failed for char-spec-gemini-20260403-010: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:13:15]   Progress: 110/295 graded
+[2026-04-03 12:13:15] JSON parse failed for char-spec-claude-20260403-029: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:13:17] JSON parse failed for char-spec-gemini-20260403-011: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:13:18] JSON parse failed for char-spec-claude-20260403-030: Expecting ',' delimiter: line 1 column 26 (char 25) raw: {"grade": 9, "pass": true
+[2026-04-03 12:13:20] JSON parse failed for char-spec-gemini-20260403-012: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 6, "pass": false,
+[2026-04-03 12:13:22] JSON parse failed for char-spec-claude-20260403-031: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:13:22]   Progress: 30/294 graded
+[2026-04-03 12:13:22] JSON parse failed for char-spec-gemini-20260403-013: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 4, "pass": false, "distinctiveness
+[2026-04-03 12:13:25] JSON parse failed for char-spec-claude-20260403-032: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:13:25] JSON parse failed for char-spec-gemini-20260403-014: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:13:28] JSON parse failed for char-spec-gemini-20260403-015: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:13:29] JSON parse failed for char-spec-claude-20260403-033: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:13:30] JSON parse failed for char-spec-gemini-20260403-016: Unterminated string starting at: line 1 column 44 (char 43) raw: {"grade":8,"pass":true,"distinctiveness":9,"
+[2026-04-03 12:13:32] JSON parse failed for char-spec-claude-20260403-034: Expecting property name enclosed in double quotes: line 2 column 16 (char 17) raw: {
+    "grade": 8,
+[2026-04-03 12:13:32] JSON parse failed for char-spec-gemini-20260403-017: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:13:35] JSON parse failed for char-spec-gemini-20260403-018: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:13:35] JSON parse failed for char-spec-claude-20260403-035: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:13:38] JSON parse failed for char-spec-gemini-20260403-019: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:13:39] JSON parse failed for char-spec-claude-20260403-036: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:13:40] JSON parse failed for char-spec-gemini-20260403-020: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:13:40]   Progress: 120/295 graded
+[2026-04-03 12:13:42] JSON parse failed for char-spec-claude-20260403-037: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:13:43] JSON parse failed for char-spec-gemini-20260403-021: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:13:45] JSON parse failed for char-spec-gemini-20260403-022: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:13:46] JSON parse failed for char-spec-claude-20260403-038: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:13:48] JSON parse failed for char-spec-gemini-20260403-023: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:13:49] JSON parse failed for char-spec-claude-20260403-039: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:13:50] JSON parse failed for char-spec-gemini-20260403-024: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinctiveness
+[2026-04-03 12:13:52] JSON parse failed for char-spec-claude-20260403-040: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:13:53] JSON parse failed for char-spec-gemini-20260403-025: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:13:53] Grades saved: 308 total
+[2026-04-03 12:13:55] JSON parse failed for char-spec-gemini-20260403-026: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:13:56] JSON parse failed for char-spec-claude-20260403-041: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:13:56]   Progress: 40/294 graded
+[2026-04-03 12:13:58] JSON parse failed for char-spec-gemini-20260403-027: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:13:59] JSON parse failed for char-spec-claude-20260403-042: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "
+[2026-04-03 12:14:00] JSON parse failed for char-spec-gemini-20260403-028: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:14:02] JSON parse failed for char-spec-claude-20260403-043: Expecting property name enclosed in double quotes: line 1 column 25 (char 24) raw: {"grade":8, "pass":true,
+[2026-04-03 12:14:02] JSON parse failed for char-spec-gemini-20260403-029: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:14:05] JSON parse failed for char-spec-gemini-20260403-030: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:14:05]   Progress: 130/295 graded
+[2026-04-03 12:14:06] JSON parse failed for char-spec-claude-20260403-044: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:14:07] JSON parse failed for char-spec-gemini-20260403-031: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:14:09] JSON parse failed for char-spec-claude-20260403-045: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:14:10] JSON parse failed for char-spec-gemini-20260403-032: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:14:12] JSON parse failed for char-spec-gemini-20260403-033: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:14:13] JSON parse failed for char-spec-claude-20260403-046: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:14:15] JSON parse failed for char-spec-gemini-20260403-034: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:14:16] JSON parse failed for char-spec-claude-20260403-047: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:14:17] JSON parse failed for char-spec-gemini-20260403-035: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:14:19] JSON parse failed for char-spec-claude-20260403-048: Unterminated string starting at: line 2 column 5 (char 6) raw: {
+    "grade
+[2026-04-03 12:14:20] JSON parse failed for char-spec-gemini-20260403-036: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:14:22] JSON parse failed for char-spec-gemini-20260403-037: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:14:23] JSON parse failed for char-spec-claude-20260403-049: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:14:25] JSON parse failed for char-spec-gemini-20260403-038: Unterminated string starting at: line 1 column 24 (char 23) raw: {"grade":8,"pass":true,"distinctiveness
+[2026-04-03 12:14:26] JSON parse failed for char-spec-claude-20260403-050: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:14:27] JSON parse failed for char-spec-gemini-20260403-039: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "
+[2026-04-03 12:14:29] JSON parse failed for char-spec-claude-20260403-051: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:14:29]   Progress: 50/294 graded
+[2026-04-03 12:14:29] Grades saved: 306 total
+[2026-04-03 12:14:29] JSON parse failed for char-spec-gemini-20260403-040: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "
+[2026-04-03 12:14:29]   Progress: 140/295 graded
+[2026-04-03 12:14:32] JSON parse failed for char-spec-gemini-20260403-041: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:14:33] JSON parse failed for char-spec-claude-20260403-052: Expecting value: line 1 column 21 (char 20) raw: {"grade": 6, "pass":
+[2026-04-03 12:14:34] JSON parse failed for char-spec-gemini-20260403-042: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:14:36] JSON parse failed for char-spec-claude-20260403-053: Expecting value: line 1 column 20 (char 19) raw: {"grade":8, "pass":
+[2026-04-03 12:14:37] JSON parse failed for char-spec-gemini-20260403-043: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:14:39] JSON parse failed for char-spec-gemini-20260403-044: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:14:44] JSON parse failed for char-spec-gemini-20260403-045: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:14:46] JSON parse failed for char-spec-gemini-20260403-046: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "
+[2026-04-03 12:14:47] === spec-auto-grader START ===
+[2026-04-03 12:14:47] Queue loaded: 300 specs
+[2026-04-03 12:14:47] Existing grades: 306
+[2026-04-03 12:14:47] Ungraded: 294 specs to grade
+[2026-04-03 12:14:49] JSON parse failed for char-spec-gemini-20260403-047: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:14:50] JSON parse failed for char-spec-claude-20260403-002: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:14:51] JSON parse failed for char-spec-gemini-20260403-048: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:14:53] JSON parse failed for char-spec-gemini-20260403-049: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:14:54] JSON parse failed for char-spec-claude-20260403-003: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:14:56] JSON parse failed for char-spec-gemini-20260403-050: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:14:56]   Progress: 150/295 graded
+[2026-04-03 12:14:56] Grades saved: 308 total
+[2026-04-03 12:14:57] JSON parse failed for char-spec-claude-20260403-004: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 8, "
+[2026-04-03 12:14:58] JSON parse failed for char-spec-gemini-20260403-051: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:15:01] JSON parse failed for char-spec-gemini-20260403-052: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinct
+[2026-04-03 12:15:03] JSON parse failed for char-spec-gemini-20260403-053: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:15:06] JSON parse failed for char-spec-gemini-20260403-054: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:15:07] JSON parse failed for char-spec-claude-20260403-007: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:15:08] JSON parse failed for char-spec-claude-20260403-055: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[2026-04-03 12:15:09] JSON parse failed for char-spec-gemini-20260403-056: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:15:11] JSON parse failed for char-spec-claude-20260403-056: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 5,
+[2026-04-03 12:15:11] JSON parse failed for char-spec-claude-20260403-008: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:15:12] JSON parse failed for char-spec-gemini-20260403-057: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:15:14] JSON parse failed for char-spec-gemini-20260403-058: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:15:14] JSON parse failed for char-spec-claude-20260403-057: Expecting ',' delimiter: line 2 column 15 (char 16) raw: {
+    "grade": 9
+[2026-04-03 12:15:15] JSON parse failed for char-spec-claude-20260403-009: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:15:17] JSON parse failed for char-spec-gemini-20260403-059: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinct
+[2026-04-03 12:15:18] JSON parse failed for char-spec-claude-20260403-058: Unterminated string starting at: line 3 column 1 (char 14) raw: {
+"grade": 8,
+"
+[2026-04-03 12:15:18] JSON parse failed for char-spec-claude-20260403-010: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:15:19] JSON parse failed for char-spec-gemini-20260403-060: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:15:19]   Progress: 160/295 graded
+[2026-04-03 12:15:21] JSON parse failed for char-spec-claude-20260403-011: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 10,
+[2026-04-03 12:15:21]   Progress: 10/294 graded
+[2026-04-03 12:15:22] JSON parse failed for char-spec-gemini-20260403-061: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:15:24] JSON parse failed for char-spec-gemini-20260403-062: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:15:25] JSON parse failed for char-spec-claude-20260403-012: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:15:27] JSON parse failed for char-spec-gemini-20260403-063: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinct
+[2026-04-03 12:15:28] JSON parse failed for char-spec-claude-20260403-013: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 6, "pass": false, "distinctiveness": 6
+[2026-04-03 12:15:29] JSON parse failed for char-spec-gemini-20260403-064: Expecting property name enclosed in double quotes: line 1 column 28 (char 27) raw: {"grade": 7, "pass": false,
+[2026-04-03 12:15:31] JSON parse failed for char-spec-claude-20260403-060: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:15:32] JSON parse failed for char-spec-gemini-20260403-065: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:15:34] JSON parse failed for char-spec-claude-20260403-061: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:15:34]   Progress: 60/294 graded
+[2026-04-03 12:15:34] JSON parse failed for char-spec-claude-20260403-015: Unterminated string starting at: line 1 column 66 (char 65) raw: {"grade":8,"pass":true,"distinctiveness":8,"commercial_appeal":8,"
+[2026-04-03 12:15:34] JSON parse failed for char-spec-gemini-20260403-066: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:15:37] JSON parse failed for char-spec-gemini-20260403-067: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:15:37] JSON parse failed for char-spec-claude-20260403-062: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:15:38] JSON parse failed for char-spec-claude-20260403-016: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:15:39] JSON parse failed for char-spec-gemini-20260403-068: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:15:41] JSON parse failed for char-spec-claude-20260403-063: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:15:42] JSON parse failed for char-spec-gemini-20260403-069: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:15:42] JSON parse failed for char-spec-claude-20260403-018: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:15:43]   Progress: 170/295 graded
+[2026-04-03 12:15:44] JSON parse failed for char-spec-claude-20260403-064: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:15:46] JSON parse failed for char-spec-gemini-20260403-071: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:15:46] JSON parse failed for char-spec-claude-20260403-019: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:15:47] JSON parse failed for char-spec-claude-20260403-065: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:15:48] JSON parse failed for char-spec-gemini-20260403-072: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:15:50] JSON parse failed for char-spec-claude-20260403-020: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 4, "commercial
+[2026-04-03 12:15:51] JSON parse failed for char-spec-gemini-20260403-073: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:15:51] JSON parse failed for char-spec-claude-20260403-066: Expecting ',' delimiter: line 2 column 15 (char 16) raw: {
+    "grade": 9
+[2026-04-03 12:15:53] JSON parse failed for char-spec-gemini-20260403-074: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinct
+[2026-04-03 12:15:53] JSON parse failed for char-spec-claude-20260403-021: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:15:53]   Progress: 20/294 graded
+[2026-04-03 12:15:54] JSON parse failed for char-spec-claude-20260403-067: Unterminated string starting at: line 3 column 1 (char 14) raw: {
+"grade": 6,
+"
+[2026-04-03 12:15:55] JSON parse failed for char-spec-gemini-20260403-075: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:15:56] Grades saved: 310 total
+[2026-04-03 12:15:57] JSON parse failed for char-spec-claude-20260403-022: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:15:57] JSON parse failed for char-spec-claude-20260403-068: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:15:58] JSON parse failed for char-spec-gemini-20260403-076: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinct
+[2026-04-03 12:16:00] JSON parse failed for char-spec-claude-20260403-023: Expecting value: line 1 column 64 (char 63) raw: {"grade":8,"pass":true,"distinctiveness":9,"commercial_appeal":
+[2026-04-03 12:16:00] JSON parse failed for char-spec-claude-20260403-069: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:16:00] JSON parse failed for char-spec-gemini-20260403-077: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:16:03] JSON parse failed for char-spec-gemini-20260403-078: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:16:03] JSON parse failed for char-spec-claude-20260403-024: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:16:04] JSON parse failed for char-spec-claude-20260403-070: Expecting ',' delimiter: line 2 column 11 (char 12) raw: {
+"grade": 9
+[2026-04-03 12:16:05] JSON parse failed for char-spec-gemini-20260403-079: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:16:07] JSON parse failed for char-spec-claude-20260403-025: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:16:08] JSON parse failed for char-spec-gemini-20260403-080: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:16:08]   Progress: 180/295 graded
+[2026-04-03 12:16:08] JSON parse failed for char-spec-claude-20260403-071: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:16:08]   Progress: 70/294 graded
+[2026-04-03 12:16:08] Grades saved: 311 total
+[2026-04-03 12:16:10] JSON parse failed for char-spec-gemini-20260403-081: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinct
+[2026-04-03 12:16:11] JSON parse failed for char-spec-claude-20260403-072: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:16:12] JSON parse failed for char-spec-gemini-20260403-082: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:16:13] JSON parse failed for char-spec-claude-20260403-028: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:16:15] JSON parse failed for char-spec-claude-20260403-073: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:16:15] JSON parse failed for char-spec-gemini-20260403-083: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:16:17] JSON parse failed for char-spec-claude-20260403-029: Expecting value: line 4 column 19 (char 46) raw: {
+"grade": 9,
+"pass": true,
+"distinctiveness":
+[2026-04-03 12:16:17] JSON parse failed for char-spec-gemini-20260403-084: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "
+[2026-04-03 12:16:18] JSON parse failed for char-spec-claude-20260403-074: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 9,
+[2026-04-03 12:16:20] JSON parse failed for char-spec-gemini-20260403-085: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:16:21] JSON parse failed for char-spec-claude-20260403-030: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:16:22] JSON parse failed for char-spec-gemini-20260403-086: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:16:23] JSON parse failed for char-spec-claude-20260403-076: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:16:23] Grades saved: 309 total
+[2026-04-03 12:16:25] JSON parse failed for char-spec-claude-20260403-031: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:16:25]   Progress: 30/294 graded
+[2026-04-03 12:16:26] JSON parse failed for char-spec-gemini-20260403-088: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "
+[2026-04-03 12:16:29] JSON parse failed for char-spec-gemini-20260403-089: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 8, "pass": true, "distinctiveness
+[2026-04-03 12:16:29] JSON parse failed for char-spec-claude-20260403-032: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 8,
+[2026-04-03 12:16:31] JSON parse failed for char-spec-gemini-20260403-090: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "distinctiveness
+[2026-04-03 12:16:31]   Progress: 190/295 graded
+[2026-04-03 12:16:33] JSON parse failed for char-spec-claude-20260403-033: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:16:34] JSON parse failed for char-spec-claude-20260403-080: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:16:37] JSON parse failed for char-spec-claude-20260403-034: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:16:38] JSON parse failed for char-spec-claude-20260403-081: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:16:38]   Progress: 80/294 graded
+[2026-04-03 12:16:40] JSON parse failed for char-spec-claude-20260403-035: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:16:41] JSON parse failed for char-spec-claude-20260403-082: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:16:44] JSON parse failed for char-spec-claude-20260403-036: Unterminated string starting at: line 1 column 47 (char 46) raw: {"grade":8, "pass":true, "distinctiveness":9, "
+[2026-04-03 12:16:45] JSON parse failed for char-spec-claude-20260403-083: Expecting ',' delimiter: line 2 column 15 (char 16) raw: {
+    "grade": 8
+[2026-04-03 12:16:47] JSON parse failed for char-spec-claude-20260403-037: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:16:48] JSON parse failed for char-spec-claude-20260403-084: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[2026-04-03 12:16:52] JSON parse failed for char-spec-claude-20260403-085: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 8
+[2026-04-03 12:16:55] JSON parse failed for char-spec-gemini-20260403-092: Expecting property name enclosed in double quotes: line 1 column 27 (char 26) raw: {"grade": 8, "pass": true,
+[2026-04-03 12:16:55] JSON parse failed for char-spec-claude-20260403-086: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[2026-04-03 12:16:57] JSON parse failed for char-spec-gemini-20260403-093: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 7, "pass": false, "distinctiveness
+[2026-04-03 12:16:59] JSON parse failed for char-spec-claude-20260403-087: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:17:00] JSON parse failed for char-spec-gemini-20260403-094: Unterminated string starting at: line 1 column 28 (char 27) raw: {"grade": 9, "pass": true, "distinct
+[2026-04-03 12:17:02] JSON parse failed for char-spec-claude-20260403-088: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:17:05] JSON parse failed for char-spec-claude-20260403-089: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:17:09] JSON parse failed for char-spec-claude-20260403-090: Expecting property name enclosed in double quotes: line 2 column 12 (char 13) raw: {
+"grade": 7,
+[2026-04-03 12:17:12] JSON parse failed for char-spec-claude-20260403-091: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:17:12]   Progress: 90/294 graded
+[2026-04-03 12:17:20] JSON parse failed for char-spec-claude-20260403-094: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:17:26] JSON parse failed for char-spec-claude-20260403-096: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:17:29] JSON parse failed for char-spec-claude-20260403-097: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:17:30] JSON parse failed for char-spec-gemini-20260403-099: Unterminated string starting at: line 1 column 29 (char 28) raw: {"grade": 6, "pass": false, "
+[2026-04-03 12:17:33] JSON parse failed for char-spec-claude-20260403-098: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:17:52] JSON parse failed for char-spec-claude-20260403-039: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:17:56] JSON parse failed for char-spec-claude-20260403-040: Expecting value: line 1 column 64 (char 63) raw: {"grade":8,"pass":true,"distinctiveness":8,"commercial_appeal":
+[2026-04-03 12:17:59]   Progress: 40/294 graded
+[2026-04-03 12:18:40] JSON parse failed for char-spec-gemini-20260403-001: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:18:40]   Progress: 100/294 graded
+[2026-04-03 12:18:40] Grades saved: 317 total
+[2026-04-03 12:18:43] JSON parse failed for char-spec-gemini-20260403-002: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:18:46] JSON parse failed for char-spec-gemini-20260403-003: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:18:50] JSON parse failed for char-spec-gemini-20260403-004: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:18:53] JSON parse failed for char-spec-gemini-20260403-005: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:18:57] === spec-auto-grader START ===
+[2026-04-03 12:18:57] Queue loaded: 300 specs
+[2026-04-03 12:18:57] JSON parse failed for char-spec-gemini-20260403-006: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:18:57] Existing grades: 317
+[2026-04-03 12:18:57] Ungraded: 283 specs to grade
+[2026-04-03 12:18:59] JSON parse failed for char-spec-claude-20260403-002: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 8, "commercial
+[2026-04-03 12:19:00] JSON parse failed for char-spec-gemini-20260403-007: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:19:03] JSON parse failed for char-spec-claude-20260403-003: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:19:03] JSON parse failed for char-spec-gemini-20260403-008: Unterminated string starting at: line 1 column 13 (char 12) raw: {"grade":8, "pass
+[2026-04-03 12:19:04] JSON parse failed for char-spec-claude-20260403-043: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 8
+[2026-04-03 12:19:06] JSON parse failed for char-spec-claude-20260403-004: Unterminated string starting at: line 1 column 47 (char 46) raw: {"grade":8, "pass":true, "distinctiveness":8, "
+[2026-04-03 12:19:07] JSON parse failed for char-spec-gemini-20260403-009: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:19:07] JSON parse failed for char-spec-claude-20260403-044: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:19:10] JSON parse failed for char-spec-gemini-20260403-010: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:19:11] JSON parse failed for char-spec-claude-20260403-045: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:19:11] JSON parse failed for char-spec-claude-20260403-006: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:19:14] JSON parse failed for char-spec-gemini-20260403-011: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:19:14]   Progress: 110/294 graded
+[2026-04-03 12:19:14] JSON parse failed for char-spec-claude-20260403-046: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:19:18] JSON parse failed for char-spec-gemini-20260403-012: Expecting value: line 2 column 13 (char 14) raw: {
+    "grade":
+[2026-04-03 12:19:20] JSON parse failed for char-spec-claude-20260403-047: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:19:20] JSON parse failed for char-spec-claude-20260403-008: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:19:23] JSON parse failed for char-spec-claude-20260403-048: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 8, "commercial
+[2026-04-03 12:19:25] JSON parse failed for char-spec-gemini-20260403-014: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:19:30] JSON parse failed for char-spec-gemini-20260403-016: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:19:30]   Progress: 50/294 graded
+[2026-04-03 12:19:30] Grades saved: 318 total
+[2026-04-03 12:19:34] JSON parse failed for char-spec-claude-20260403-052: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:19:35] JSON parse failed for char-spec-gemini-20260403-018: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:19:41]   Progress: 120/294 graded
+[2026-04-03 12:19:46] JSON parse failed for char-spec-gemini-20260403-023: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:19:48] JSON parse failed for char-spec-claude-20260403-058: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:19:50] JSON parse failed for char-spec-gemini-20260403-024: Expecting ',' delimiter: line 1 column 26 (char 25) raw: {"grade": 9, "pass": true
+[2026-04-03 12:19:51] JSON parse failed for char-spec-claude-20260403-059: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:19:53] JSON parse failed for char-spec-gemini-20260403-025: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:19:55] JSON parse failed for char-spec-claude-20260403-060: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:19:57] JSON parse failed for char-spec-gemini-20260403-026: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:19:57] Grades saved: 324 total
+[2026-04-03 12:19:58] JSON parse failed for char-spec-claude-20260403-061: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:19:58]   Progress: 60/294 graded
+[2026-04-03 12:20:00] JSON parse failed for char-spec-gemini-20260403-027: Expecting ',' delimiter: line 1 column 23 (char 22) raw: {"grade":8,"pass":true
+[2026-04-03 12:20:01] JSON parse failed for char-spec-claude-20260403-062: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:20:04] JSON parse failed for char-spec-gemini-20260403-028: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:20:05] JSON parse failed for char-spec-claude-20260403-063: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:20:07] JSON parse failed for char-spec-gemini-20260403-029: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:20:11] JSON parse failed for char-spec-gemini-20260403-030: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:20:15]   Progress: 130/294 graded
+[2026-04-03 12:20:20] JSON parse failed for char-spec-gemini-20260403-033: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "pass
+[2026-04-03 12:20:24] JSON parse failed for char-spec-gemini-20260403-034: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:20:29] JSON parse failed for char-spec-claude-20260403-064: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:20:32] JSON parse failed for char-spec-gemini-20260403-037: Expecting ',' delimiter: line 1 column 24 (char 23) raw: {"grade":7,"pass":false
+[2026-04-03 12:20:36] JSON parse failed for char-spec-gemini-20260403-038: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "
+[2026-04-03 12:20:36] JSON parse failed for char-spec-claude-20260403-066: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:20:39] JSON parse failed for char-spec-gemini-20260403-039: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:20:40] JSON parse failed for char-spec-claude-20260403-067: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:20:43] JSON parse failed for char-spec-gemini-20260403-040: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:20:43] JSON parse failed for char-spec-claude-20260403-068: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:20:46] JSON parse failed for char-spec-gemini-20260403-041: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "
+[2026-04-03 12:20:46]   Progress: 140/294 graded
+[2026-04-03 12:20:46] JSON parse failed for char-spec-claude-20260403-069: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:20:50] JSON parse failed for char-spec-gemini-20260403-042: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:20:50] JSON parse failed for char-spec-claude-20260403-070: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:20:53] JSON parse failed for char-spec-gemini-20260403-043: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:20:53] JSON parse failed for char-spec-claude-20260403-071: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:20:53]   Progress: 70/294 graded
+[2026-04-03 12:20:56] JSON parse failed for char-spec-gemini-20260403-044: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:20:57] JSON parse failed for char-spec-claude-20260403-072: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 8
+[2026-04-03 12:21:00] JSON parse failed for char-spec-gemini-20260403-045: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 8
+[2026-04-03 12:21:01] JSON parse failed for char-spec-claude-20260403-073: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:21:04] JSON parse failed for char-spec-gemini-20260403-046: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:21:07] JSON parse failed for char-spec-gemini-20260403-047: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:21:19] JSON parse failed for char-spec-claude-20260403-075: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 6, "pass": false, "distinctiveness": 4
+[2026-04-03 12:21:20] JSON parse failed for char-spec-gemini-20260403-049: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:21:23] JSON parse failed for char-spec-claude-20260403-076: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 9, "pass": true, "distinctiveness": 10, "
+[2026-04-03 12:21:23] Grades saved: 325 total
+[2026-04-03 12:21:23] JSON parse failed for char-spec-gemini-20260403-050: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:21:26] JSON parse failed for char-spec-claude-20260403-077: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:21:27] JSON parse failed for char-spec-gemini-20260403-051: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 8
+[2026-04-03 12:21:27]   Progress: 150/294 graded
+[2026-04-03 12:21:27] Grades saved: 329 total
+[2026-04-03 12:21:30] JSON parse failed for char-spec-claude-20260403-078: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 7, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:21:30] JSON parse failed for char-spec-gemini-20260403-052: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:21:34] JSON parse failed for char-spec-gemini-20260403-053: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:21:34] JSON parse failed for char-spec-claude-20260403-079: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:21:37] JSON parse failed for char-spec-gemini-20260403-054: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:21:38] JSON parse failed for char-spec-claude-20260403-080: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:21:40] JSON parse failed for char-spec-gemini-20260403-055: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "
+[2026-04-03 12:21:42] JSON parse failed for char-spec-claude-20260403-081: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:21:42]   Progress: 80/294 graded
+[2026-04-03 12:21:44] JSON parse failed for char-spec-gemini-20260403-056: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:21:45] JSON parse failed for char-spec-claude-20260403-082: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:21:47] JSON parse failed for char-spec-gemini-20260403-057: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:21:49] JSON parse failed for char-spec-claude-20260403-083: Expecting ',' delimiter: line 1 column 66 (char 65) raw: {"grade":7,"pass":false,"distinctiveness":6,"commercial_appeal":8
+[2026-04-03 12:21:50] JSON parse failed for char-spec-gemini-20260403-058: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:21:52] JSON parse failed for char-spec-claude-20260403-084: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 10
+[2026-04-03 12:21:54] JSON parse failed for char-spec-gemini-20260403-059: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:21:56] JSON parse failed for char-spec-claude-20260403-085: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:21:57] JSON parse failed for char-spec-gemini-20260403-060: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[2026-04-03 12:22:00] JSON parse failed for char-spec-claude-20260403-086: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 5, "pass": false, "distinctiveness": 3,
+[2026-04-03 12:22:01] JSON parse failed for char-spec-gemini-20260403-061: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:22:01]   Progress: 160/294 graded
+[2026-04-03 12:22:03] JSON parse failed for char-spec-claude-20260403-087: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:22:04] JSON parse failed for char-spec-gemini-20260403-062: Expecting property name enclosed in double quotes: line 2 column 16 (char 17) raw: {
+    "grade": 7,
+[2026-04-03 12:22:06] JSON parse failed for char-spec-claude-20260403-088: Unterminated string starting at: line 1 column 47 (char 46) raw: {"grade":8, "pass":true, "distinctiveness":9, "commercial_appeal
+[2026-04-03 12:22:08] JSON parse failed for char-spec-gemini-20260403-063: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:22:10] JSON parse failed for char-spec-claude-20260403-089: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:22:11] JSON parse failed for char-spec-gemini-20260403-064: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:22:13] JSON parse failed for char-spec-claude-20260403-090: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:22:15] JSON parse failed for char-spec-gemini-20260403-065: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:22:16] JSON parse failed for char-spec-claude-20260403-091: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:22:16]   Progress: 90/294 graded
+[2026-04-03 12:22:18] JSON parse failed for char-spec-gemini-20260403-066: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:22:19] JSON parse failed for char-spec-claude-20260403-092: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:22:21] JSON parse failed for char-spec-gemini-20260403-067: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:22:23] JSON parse failed for char-spec-claude-20260403-093: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:22:25] JSON parse failed for char-spec-gemini-20260403-068: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:22:26] JSON parse failed for char-spec-claude-20260403-094: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:22:28] JSON parse failed for char-spec-gemini-20260403-069: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:22:30] JSON parse failed for char-spec-claude-20260403-095: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:22:32] JSON parse failed for char-spec-gemini-20260403-070: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:22:33] JSON parse failed for char-spec-claude-20260403-096: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:22:35] JSON parse failed for char-spec-gemini-20260403-071: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:22:35]   Progress: 170/294 graded
+[2026-04-03 12:22:37] JSON parse failed for char-spec-claude-20260403-097: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 8, "commercial
+[2026-04-03 12:22:39] JSON parse failed for char-spec-gemini-20260403-072: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:22:40] JSON parse failed for char-spec-claude-20260403-098: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 8
+[2026-04-03 12:22:43] JSON parse failed for char-spec-gemini-20260403-073: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:22:43] JSON parse failed for char-spec-claude-20260403-099: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:22:46] JSON parse failed for char-spec-gemini-20260403-074: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:22:47] JSON parse failed for char-spec-claude-20260403-100: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:22:48]   Progress: 100/294 graded
+[2026-04-03 12:22:48] Grades saved: 326 total
+[2026-04-03 12:22:50] JSON parse failed for char-spec-gemini-20260403-075: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:22:52] JSON parse failed for char-spec-gemini-20260403-002: Expecting ',' delimiter: line 1 column 65 (char 64) raw: {"grade":8,"pass":true,"distinctiveness":8,"commercial_appeal":8
+[2026-04-03 12:22:53] JSON parse failed for char-spec-gemini-20260403-076: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:22:53] Grades saved: 329 total
+[2026-04-03 12:22:55] JSON parse failed for char-spec-gemini-20260403-003: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:22:56] JSON parse failed for char-spec-gemini-20260403-077: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:22:59] JSON parse failed for char-spec-gemini-20260403-004: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:23:00] JSON parse failed for char-spec-gemini-20260403-078: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:23:02] JSON parse failed for char-spec-gemini-20260403-005: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:23:03] JSON parse failed for char-spec-gemini-20260403-079: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 9
+[2026-04-03 12:23:05] JSON parse failed for char-spec-gemini-20260403-006: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:23:06] JSON parse failed for char-spec-gemini-20260403-080: Expecting ',' delimiter: line 1 column 26 (char 25) raw: {"grade": 8, "pass": true
+[2026-04-03 12:23:09] JSON parse failed for char-spec-gemini-20260403-007: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:23:09] JSON parse failed for char-spec-gemini-20260403-081: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:23:09]   Progress: 180/294 graded
+[2026-04-03 12:23:12] JSON parse failed for char-spec-gemini-20260403-008: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:23:13] JSON parse failed for char-spec-gemini-20260403-082: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:23:15] JSON parse failed for char-spec-gemini-20260403-009: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:23:16] JSON parse failed for char-spec-gemini-20260403-083: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:23:19] JSON parse failed for char-spec-gemini-20260403-010: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:23:19] JSON parse failed for char-spec-gemini-20260403-084: Expecting value: line 1 column 19 (char 18) raw: {"grade":8,"pass":
+[2026-04-03 12:23:23] JSON parse failed for char-spec-gemini-20260403-011: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:23:23]   Progress: 110/294 graded
+[2026-04-03 12:23:23] JSON parse failed for char-spec-gemini-20260403-085: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:23:26] JSON parse failed for char-spec-gemini-20260403-012: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:23:26] JSON parse failed for char-spec-gemini-20260403-086: Expecting property name enclosed in double quotes: line 2 column 16 (char 17) raw: {
+    "grade": 9,
+[2026-04-03 12:23:29] JSON parse failed for char-spec-gemini-20260403-013: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 4, "pass": false, "distinctiveness": 3,
+[2026-04-03 12:23:30] JSON parse failed for char-spec-gemini-20260403-087: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:23:32] JSON parse failed for char-spec-gemini-20260403-014: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:23:33] JSON parse failed for char-spec-gemini-20260403-088: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:23:36] JSON parse failed for char-spec-gemini-20260403-015: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:23:36] JSON parse failed for char-spec-gemini-20260403-089: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:23:39] JSON parse failed for char-spec-gemini-20260403-016: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:23:40] JSON parse failed for char-spec-gemini-20260403-090: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:23:43] JSON parse failed for char-spec-gemini-20260403-017: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:23:43] JSON parse failed for char-spec-gemini-20260403-091: Expecting value: line 1 column 21 (char 20) raw: {"grade": 6, "pass":
+[2026-04-03 12:23:43]   Progress: 190/294 graded
+[2026-04-03 12:23:46] JSON parse failed for char-spec-gemini-20260403-018: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 9, "pass": true, "distinctiveness": 10, "
+[2026-04-03 12:23:47] JSON parse failed for char-spec-gemini-20260403-092: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:23:49] JSON parse failed for char-spec-gemini-20260403-019: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:23:51] JSON parse failed for char-spec-gemini-20260403-093: Expecting value: line 2 column 13 (char 14) raw: {
+    "grade":
+[2026-04-03 12:23:53] JSON parse failed for char-spec-gemini-20260403-020: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:23:56] JSON parse failed for char-spec-gemini-20260403-021: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 9, "pass": true, "distinctiveness": 10, "
+[2026-04-03 12:23:56]   Progress: 120/294 graded
+[2026-04-03 12:23:59] JSON parse failed for char-spec-gemini-20260403-022: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 7
+[2026-04-03 12:24:02] JSON parse failed for char-spec-gemini-20260403-023: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:24:04] JSON parse failed for char-spec-gemini-20260403-095: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:24:06] JSON parse failed for char-spec-gemini-20260403-024: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:24:08] JSON parse failed for char-spec-gemini-20260403-096: Unterminated string starting at: line 1 column 24 (char 23) raw: {"grade":8,"pass":true,"
+[2026-04-03 12:24:09] JSON parse failed for char-spec-gemini-20260403-025: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:24:11] JSON parse failed for char-spec-gemini-20260403-097: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:24:13] JSON parse failed for char-spec-gemini-20260403-026: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:24:13] Grades saved: 326 total
+[2026-04-03 12:24:15] JSON parse failed for char-spec-gemini-20260403-098: Expecting value: line 1 column 21 (char 20) raw: {"grade": 6, "pass":
+[2026-04-03 12:24:17] JSON parse failed for char-spec-gemini-20260403-027: Unterminated string starting at: line 1 column 47 (char 46) raw: {"grade":9, "pass":true, "distinctiveness":9, "commercial_appeal
+[2026-04-03 12:24:18] JSON parse failed for char-spec-gemini-20260403-099: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:24:20] JSON parse failed for char-spec-gemini-20260403-028: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:24:22] JSON parse failed for char-spec-gemini-20260403-100: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:24:24] JSON parse failed for char-spec-gemini-20260403-029: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 6, "pass": false, "distinctiveness": 4
+[2026-04-03 12:24:25] JSON parse failed for char-spec-agent-20260403-001: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:24:25]   Progress: 200/294 graded
+[2026-04-03 12:24:25] Grades saved: 330 total
+[2026-04-03 12:24:27] JSON parse failed for char-spec-gemini-20260403-030: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:24:29] JSON parse failed for char-spec-agent-20260403-003: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:24:30] JSON parse failed for char-spec-gemini-20260403-031: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 7, "pass": true, "distinctiveness": 6, "commercial
+[2026-04-03 12:24:30]   Progress: 130/294 graded
+[2026-04-03 12:24:34] JSON parse failed for char-spec-gemini-20260403-032: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:24:36] JSON parse failed for char-spec-agent-20260403-005: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:24:38] JSON parse failed for char-spec-gemini-20260403-033: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:24:40] JSON parse failed for char-spec-agent-20260403-006: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:24:41] JSON parse failed for char-spec-gemini-20260403-034: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 9
+[2026-04-03 12:24:43] JSON parse failed for char-spec-agent-20260403-007: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:24:45] JSON parse failed for char-spec-gemini-20260403-035: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 9,
+[2026-04-03 12:24:47] JSON parse failed for char-spec-agent-20260403-008: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:24:48] JSON parse failed for char-spec-gemini-20260403-036: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:24:50] JSON parse failed for char-spec-agent-20260403-009: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:24:52] JSON parse failed for char-spec-gemini-20260403-037: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:24:54] JSON parse failed for char-spec-agent-20260403-010: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:24:55] JSON parse failed for char-spec-gemini-20260403-038: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:24:57] JSON parse failed for char-spec-agent-20260403-011: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:24:59] JSON parse failed for char-spec-gemini-20260403-039: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:25:01] JSON parse failed for char-spec-agent-20260403-013: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:25:01]   Progress: 210/294 graded
+[2026-04-03 12:25:02] JSON parse failed for char-spec-gemini-20260403-040: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:25:04] JSON parse failed for char-spec-agent-20260403-014: Expecting ',' delimiter: line 1 column 26 (char 25) raw: {"grade": 9, "pass": true
+[2026-04-03 12:25:06] JSON parse failed for char-spec-gemini-20260403-041: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:25:06]   Progress: 140/294 graded
+[2026-04-03 12:25:08] JSON parse failed for char-spec-agent-20260403-015: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:25:09] JSON parse failed for char-spec-gemini-20260403-042: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:25:12] JSON parse failed for char-spec-gemini-20260403-043: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:25:12] JSON parse failed for char-spec-agent-20260403-016: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:25:16] JSON parse failed for char-spec-gemini-20260403-044: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:25:16] JSON parse failed for char-spec-agent-20260403-017: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:25:19] JSON parse failed for char-spec-gemini-20260403-045: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:25:20] JSON parse failed for char-spec-agent-20260403-018: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:25:23] JSON parse failed for char-spec-gemini-20260403-046: Unterminated string starting at: line 1 column 66 (char 65) raw: {"grade":8,"pass":true,"distinctiveness":9,"commercial_appeal":8,"
+[2026-04-03 12:25:23] JSON parse failed for char-spec-agent-20260403-019: Expecting value: line 1 column 21 (char 20) raw: {"grade": 6, "pass":
+[2026-04-03 12:25:27] JSON parse failed for char-spec-agent-20260403-020: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:25:27] JSON parse failed for char-spec-gemini-20260403-047: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:25:30] JSON parse failed for char-spec-agent-20260403-021: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:25:34] JSON parse failed for char-spec-agent-20260403-022: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:25:35] JSON parse failed for char-spec-gemini-20260403-049: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 4,
+[2026-04-03 12:25:38] JSON parse failed for char-spec-agent-20260403-023: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "
+[2026-04-03 12:25:38]   Progress: 220/294 graded
+[2026-04-03 12:25:38] JSON parse failed for char-spec-gemini-20260403-050: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:25:41] JSON parse failed for char-spec-agent-20260403-024: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:25:42] JSON parse failed for char-spec-gemini-20260403-051: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:25:42]   Progress: 150/294 graded
+[2026-04-03 12:25:42] Grades saved: 327 total
+[2026-04-03 12:25:44] JSON parse failed for char-spec-agent-20260403-025: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 6,
+[2026-04-03 12:25:46] JSON parse failed for char-spec-gemini-20260403-052: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 6
+[2026-04-03 12:25:48] JSON parse failed for char-spec-agent-20260403-026: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:25:49] JSON parse failed for char-spec-gemini-20260403-053: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:25:51] JSON parse failed for char-spec-agent-20260403-027: Expecting property name enclosed in double quotes: line 2 column 12 (char 13) raw: {
+"grade": 9,
+[2026-04-03 12:25:53] JSON parse failed for char-spec-gemini-20260403-054: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:25:55] JSON parse failed for char-spec-agent-20260403-028: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 5, "pass
+[2026-04-03 12:25:55] Grades saved: 331 total
+[2026-04-03 12:25:56] JSON parse failed for char-spec-gemini-20260403-055: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:25:58] JSON parse failed for char-spec-agent-20260403-029: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "
+[2026-04-03 12:25:59] JSON parse failed for char-spec-gemini-20260403-056: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:26:01] JSON parse failed for char-spec-agent-20260403-030: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:26:03] JSON parse failed for char-spec-gemini-20260403-057: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:26:06] JSON parse failed for char-spec-agent-20260403-032: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:26:06] JSON parse failed for char-spec-gemini-20260403-058: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:26:09] JSON parse failed for char-spec-gemini-20260403-059: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:26:09] JSON parse failed for char-spec-agent-20260403-033: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:26:12] JSON parse failed for char-spec-gemini-20260403-060: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:26:13] JSON parse failed for char-spec-agent-20260403-034: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:26:13]   Progress: 230/294 graded
+[2026-04-03 12:26:16] JSON parse failed for char-spec-gemini-20260403-061: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:26:16]   Progress: 160/294 graded
+[2026-04-03 12:26:16] JSON parse failed for char-spec-agent-20260403-035: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:26:19] JSON parse failed for char-spec-agent-20260403-036: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:26:21] JSON parse failed for char-spec-gemini-20260403-062: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:26:23] JSON parse failed for char-spec-agent-20260403-037: Unterminated string starting at: line 1 column 24 (char 23) raw: {"grade":9,"pass":true,"
+[2026-04-03 12:26:25] JSON parse failed for char-spec-gemini-20260403-063: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:26:27] JSON parse failed for char-spec-agent-20260403-038: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:26:29] JSON parse failed for char-spec-gemini-20260403-064: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:26:30] JSON parse failed for char-spec-agent-20260403-039: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:26:32] JSON parse failed for char-spec-gemini-20260403-065: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:26:34] JSON parse failed for char-spec-agent-20260403-040: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "pass
+[2026-04-03 12:26:36] JSON parse failed for char-spec-gemini-20260403-066: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:26:37] JSON parse failed for char-spec-agent-20260403-041: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:26:39] JSON parse failed for char-spec-gemini-20260403-067: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:26:41] JSON parse failed for char-spec-agent-20260403-042: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:26:43] JSON parse failed for char-spec-gemini-20260403-068: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:26:44] JSON parse failed for char-spec-agent-20260403-043: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:26:46] JSON parse failed for char-spec-gemini-20260403-069: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:26:47] JSON parse failed for char-spec-agent-20260403-044: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 6
+[2026-04-03 12:26:47]   Progress: 240/294 graded
+[2026-04-03 12:26:49] JSON parse failed for char-spec-gemini-20260403-070: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:26:51] JSON parse failed for char-spec-agent-20260403-045: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:26:53] JSON parse failed for char-spec-gemini-20260403-071: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:26:53]   Progress: 170/294 graded
+[2026-04-03 12:26:55] JSON parse failed for char-spec-agent-20260403-046: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:26:56] JSON parse failed for char-spec-gemini-20260403-072: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 6
+[2026-04-03 12:26:58] JSON parse failed for char-spec-agent-20260403-047: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 9
+[2026-04-03 12:27:01] JSON parse failed for char-spec-agent-20260403-048: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:27:02] JSON parse failed for char-spec-gemini-20260403-074: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:27:05] JSON parse failed for char-spec-agent-20260403-049: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:27:05] JSON parse failed for char-spec-gemini-20260403-075: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:27:08] JSON parse failed for char-spec-gemini-20260403-076: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:27:08] JSON parse failed for char-spec-agent-20260403-050: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:27:08] Grades saved: 328 total
+[2026-04-03 12:27:12] JSON parse failed for char-spec-gemini-20260403-077: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:27:13] JSON parse failed for char-spec-agent-20260403-051: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:27:15] JSON parse failed for char-spec-gemini-20260403-078: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:27:16] JSON parse failed for char-spec-agent-20260403-052: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:27:19] JSON parse failed for char-spec-gemini-20260403-079: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 10,
+[2026-04-03 12:27:20] JSON parse failed for char-spec-agent-20260403-053: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:27:23] JSON parse failed for char-spec-gemini-20260403-080: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:27:24] JSON parse failed for char-spec-agent-20260403-054: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:27:24]   Progress: 250/294 graded
+[2026-04-03 12:27:24] Grades saved: 331 total
+[2026-04-03 12:27:26] JSON parse failed for char-spec-gemini-20260403-081: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:27:26]   Progress: 180/294 graded
+[2026-04-03 12:27:27] JSON parse failed for char-spec-agent-20260403-055: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:27:29] JSON parse failed for char-spec-gemini-20260403-082: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:27:31] JSON parse failed for char-spec-agent-20260403-056: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:27:33] JSON parse failed for char-spec-gemini-20260403-083: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:27:34] JSON parse failed for char-spec-agent-20260403-057: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 7
+[2026-04-03 12:27:36] JSON parse failed for char-spec-gemini-20260403-084: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:27:38] JSON parse failed for char-spec-agent-20260403-058: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "
+[2026-04-03 12:27:39] JSON parse failed for char-spec-gemini-20260403-085: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "
+[2026-04-03 12:27:41] JSON parse failed for char-spec-agent-20260403-059: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:27:42] JSON parse failed for char-spec-gemini-20260403-086: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 8
+[2026-04-03 12:27:44] JSON parse failed for char-spec-agent-20260403-061: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:27:46] JSON parse failed for char-spec-gemini-20260403-087: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:27:48] JSON parse failed for char-spec-agent-20260403-062: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:27:49] JSON parse failed for char-spec-gemini-20260403-088: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:27:51] JSON parse failed for char-spec-agent-20260403-063: Expecting value: line 1 column 21 (char 20) raw: {"grade": 9, "pass":
+[2026-04-03 12:27:52] JSON parse failed for char-spec-gemini-20260403-089: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 8, "commercial
+[2026-04-03 12:27:54] JSON parse failed for char-spec-agent-20260403-064: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:27:56] JSON parse failed for char-spec-gemini-20260403-090: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:27:57] JSON parse failed for char-spec-agent-20260403-065: Expecting value: line 1 column 21 (char 20) raw: {"grade": 6, "pass":
+[2026-04-03 12:27:57]   Progress: 260/294 graded
+[2026-04-03 12:27:59] JSON parse failed for char-spec-gemini-20260403-091: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:27:59]   Progress: 190/294 graded
+[2026-04-03 12:28:01] JSON parse failed for char-spec-agent-20260403-067: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:28:02] JSON parse failed for char-spec-gemini-20260403-092: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:28:04] JSON parse failed for char-spec-agent-20260403-068: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:28:05] JSON parse failed for char-spec-gemini-20260403-093: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:28:07] JSON parse failed for char-spec-agent-20260403-069: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:28:09] JSON parse failed for char-spec-gemini-20260403-094: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:28:11] JSON parse failed for char-spec-agent-20260403-070: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:28:12] JSON parse failed for char-spec-gemini-20260403-095: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:28:14] JSON parse failed for char-spec-agent-20260403-071: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:28:15] JSON parse failed for char-spec-gemini-20260403-096: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:28:18] JSON parse failed for char-spec-agent-20260403-072: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:28:20] JSON parse failed for char-spec-gemini-20260403-097: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:28:21] JSON parse failed for char-spec-agent-20260403-073: Expecting value: line 1 column 21 (char 20) raw: {"grade": 6, "pass":
+[2026-04-03 12:28:25] JSON parse failed for char-spec-gemini-20260403-098: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 8,
+[2026-04-03 12:28:25] JSON parse failed for char-spec-agent-20260403-074: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:28:28] JSON parse failed for char-spec-agent-20260403-075: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:28:28] JSON parse failed for char-spec-gemini-20260403-099: Unterminated string starting at: line 1 column 67 (char 66) raw: {"grade":7,"pass":false,"distinctiveness":7,"commercial_appeal":8,"
+[2026-04-03 12:28:31] JSON parse failed for char-spec-agent-20260403-076: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:28:31]   Progress: 270/294 graded
+[2026-04-03 12:28:32] JSON parse failed for char-spec-gemini-20260403-100: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:28:35] JSON parse failed for char-spec-agent-20260403-077: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:28:35] JSON parse failed for char-spec-agent-20260403-001: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:28:35]   Progress: 200/294 graded
+[2026-04-03 12:28:35] Grades saved: 328 total
+[2026-04-03 12:28:38] JSON parse failed for char-spec-agent-20260403-078: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:28:40] JSON parse failed for char-spec-agent-20260403-003: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:28:42] JSON parse failed for char-spec-agent-20260403-079: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:28:43] JSON parse failed for char-spec-agent-20260403-004: Unterminated string starting at: line 1 column 66 (char 65) raw: {"grade":9,"pass":true,"distinctiveness":9,"commercial_appeal":9,"
+[2026-04-03 12:28:45] JSON parse failed for char-spec-agent-20260403-080: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:28:46] JSON parse failed for char-spec-agent-20260403-005: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:28:49] JSON parse failed for char-spec-agent-20260403-081: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:28:49] Grades saved: 331 total
+[2026-04-03 12:28:50] JSON parse failed for char-spec-agent-20260403-006: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:28:53] JSON parse failed for char-spec-agent-20260403-007: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:28:53] JSON parse failed for char-spec-agent-20260403-082: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:28:56] JSON parse failed for char-spec-agent-20260403-008: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 9, "pass": true, "distinctiveness": 10, "
+[2026-04-03 12:28:57] JSON parse failed for char-spec-agent-20260403-083: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:29:00] JSON parse failed for char-spec-agent-20260403-084: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:29:00] JSON parse failed for char-spec-agent-20260403-009: Unterminated string starting at: line 1 column 47 (char 46) raw: {"grade":8, "pass":true, "distinctiveness":8, "
+[2026-04-03 12:29:03] JSON parse failed for char-spec-agent-20260403-085: Expecting value: line 2 column 11 (char 12) raw: {
+  "grade":
+[2026-04-03 12:29:04] JSON parse failed for char-spec-agent-20260403-010: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:29:07] JSON parse failed for char-spec-agent-20260403-086: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 7, "
+[2026-04-03 12:29:07]   Progress: 280/294 graded
+[2026-04-03 12:29:08] JSON parse failed for char-spec-agent-20260403-013: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:29:08]   Progress: 210/294 graded
+[2026-04-03 12:29:10] JSON parse failed for char-spec-agent-20260403-087: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 8, "pass
+[2026-04-03 12:29:12] JSON parse failed for char-spec-agent-20260403-014: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:29:14] JSON parse failed for char-spec-agent-20260403-088: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 9, "pass
+[2026-04-03 12:29:15] JSON parse failed for char-spec-agent-20260403-015: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:29:17] JSON parse failed for char-spec-agent-20260403-089: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:29:19] JSON parse failed for char-spec-agent-20260403-017: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:29:21] JSON parse failed for char-spec-agent-20260403-090: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:29:23] JSON parse failed for char-spec-agent-20260403-018: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:29:26] JSON parse failed for char-spec-agent-20260403-019: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:29:27] JSON parse failed for char-spec-agent-20260403-091: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:29:30] JSON parse failed for char-spec-agent-20260403-020: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:29:30] JSON parse failed for char-spec-agent-20260403-092: Unterminated string starting at: line 1 column 14 (char 13) raw: {"grade": 6, "
+[2026-04-03 12:29:33] JSON parse failed for char-spec-agent-20260403-021: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:29:34] JSON parse failed for char-spec-agent-20260403-093: Expecting ',' delimiter: line 2 column 13 (char 14) raw: {
+  "grade": 8
+[2026-04-03 12:29:36] JSON parse failed for char-spec-agent-20260403-022: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:29:37] JSON parse failed for char-spec-agent-20260403-094: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 8,
+[2026-04-03 12:29:38] === spec-auto-grader START ===
+[2026-04-03 12:29:38] Queue loaded: 300 specs
+[2026-04-03 12:29:38] Existing grades: 331
+[2026-04-03 12:29:38] Ungraded: 269 specs to grade
+[2026-04-03 12:29:40] JSON parse failed for char-spec-agent-20260403-023: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 8
+[2026-04-03 12:29:40]   Progress: 220/294 graded
+[2026-04-03 12:29:40] JSON parse failed for char-spec-agent-20260403-095: Expecting ',' delimiter: line 1 column 27 (char 26) raw: {"grade": 7, "pass": false
+[2026-04-03 12:29:43] JSON parse failed for char-spec-agent-20260403-024: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:29:44] JSON parse failed for char-spec-agent-20260403-096: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 7,
+[2026-04-03 12:29:44]   Progress: 290/294 graded
+[2026-04-03 12:29:46]   Progress: 10/269 graded
+[2026-04-03 12:29:46] JSON parse failed for char-spec-agent-20260403-025: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:29:47] JSON parse failed for char-spec-agent-20260403-097: Expecting value: line 1 column 21 (char 20) raw: {"grade": 8, "pass":
+[2026-04-03 12:29:50] JSON parse failed for char-spec-agent-20260403-026: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 10
+[2026-04-03 12:29:51] JSON parse failed for char-spec-agent-20260403-098: Expecting value: line 1 column 21 (char 20) raw: {"grade": 7, "pass":
+[2026-04-03 12:29:53] JSON parse failed for char-spec-agent-20260403-027: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:29:54] JSON parse failed for char-spec-agent-20260403-099: Expecting property name enclosed in double quotes: line 2 column 14 (char 15) raw: {
+  "grade": 8,
+[2026-04-03 12:29:55]   Progress: 20/269 graded
+[2026-04-03 12:29:57] JSON parse failed for char-spec-agent-20260403-028: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 4, "pass": false, "distinctiveness": 3, "commercial
+[2026-04-03 12:29:57] Grades saved: 330 total
+[2026-04-03 12:29:57] JSON parse failed for char-spec-agent-20260403-100: Expecting property name enclosed in double quotes: line 1 column 13 (char 12) raw: {"grade": 7,
+[2026-04-03 12:29:57] Grades saved: 331 total
+[2026-04-03 12:29:57] passing-specs.json: 16 passing / 300 total
+[2026-04-03 12:29:57] === COMPLETE === graded=25 failed=269 passing=16 pass_rate=5% elapsed=1097s
+[2026-04-03 12:29:59] Grades saved: 356 total
+[2026-04-03 12:30:00] JSON parse failed for char-spec-agent-20260403-029: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:30:05] JSON parse failed for char-spec-agent-20260403-032: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:30:05] Grade call failed for char-spec-claude-20260403-031: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:05]   Progress: 30/269 graded
+[2026-04-03 12:30:08] JSON parse failed for char-spec-agent-20260403-033: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:30:09] Grade call failed for char-spec-claude-20260403-033: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:12] Grade call failed for char-spec-claude-20260403-035: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:12] JSON parse failed for char-spec-agent-20260403-034: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:30:12]   Progress: 230/294 graded
+[2026-04-03 12:30:15] JSON parse failed for char-spec-agent-20260403-035: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:30:15] Grade call failed for char-spec-claude-20260403-037: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:19] Grade call failed for char-spec-claude-20260403-039: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:19] JSON parse failed for char-spec-agent-20260403-036: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:30:22] Grade call failed for char-spec-claude-20260403-041: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:22]   Progress: 40/269 graded
+[2026-04-03 12:30:24] JSON parse failed for char-spec-agent-20260403-038: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:30:25] Grade call failed for char-spec-claude-20260403-043: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:27] JSON parse failed for char-spec-agent-20260403-039: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:30:29] Grade call failed for char-spec-claude-20260403-045: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:31] JSON parse failed for char-spec-agent-20260403-040: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:30:33] Grade call failed for char-spec-claude-20260403-047: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:34] JSON parse failed for char-spec-agent-20260403-041: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 6
+[2026-04-03 12:30:36] Grade call failed for char-spec-claude-20260403-049: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:37] JSON parse failed for char-spec-agent-20260403-042: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:30:39] Grade call failed for char-spec-claude-20260403-051: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:39]   Progress: 50/269 graded
+[2026-04-03 12:30:39] Grades saved: 370 total
+[2026-04-03 12:30:41] JSON parse failed for char-spec-agent-20260403-044: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:30:41]   Progress: 240/294 graded
+[2026-04-03 12:30:43] Grade call failed for char-spec-claude-20260403-053: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:44] JSON parse failed for char-spec-agent-20260403-045: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:30:46] Grade call failed for char-spec-claude-20260403-056: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:48] JSON parse failed for char-spec-agent-20260403-046: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:30:49] Grade call failed for char-spec-claude-20260403-058: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:51] JSON parse failed for char-spec-agent-20260403-047: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:30:52] Grade call failed for char-spec-claude-20260403-061: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:54] JSON parse failed for char-spec-agent-20260403-048: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:30:55] Grade call failed for char-spec-claude-20260403-063: HTTP Error 429: Too Many Requests
+[2026-04-03 12:30:55]   Progress: 60/269 graded
+[2026-04-03 12:30:59] Grade call failed for char-spec-claude-20260403-065: HTTP Error 429: Too Many Requests
+[2026-04-03 12:31:01] JSON parse failed for char-spec-agent-20260403-051: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:31:02] Grade call failed for char-spec-claude-20260403-067: HTTP Error 429: Too Many Requests
+[2026-04-03 12:31:04] JSON parse failed for char-spec-agent-20260403-052: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "commercial
+[2026-04-03 12:31:06] Grade call failed for char-spec-claude-20260403-069: HTTP Error 429: Too Many Requests
+[2026-04-03 12:31:07] JSON parse failed for char-spec-agent-20260403-053: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:31:11] JSON parse failed for char-spec-agent-20260403-054: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:31:11]   Progress: 250/294 graded
+[2026-04-03 12:31:11] Grades saved: 335 total
+[2026-04-03 12:31:14] JSON parse failed for char-spec-agent-20260403-055: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:31:18] JSON parse failed for char-spec-agent-20260403-056: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:31:21] JSON parse failed for char-spec-agent-20260403-057: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:31:25] JSON parse failed for char-spec-agent-20260403-059: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:31:28] JSON parse failed for char-spec-agent-20260403-061: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:31:32] JSON parse failed for char-spec-agent-20260403-062: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 9, "pass": true, "distinctiveness": 10, "
+[2026-04-03 12:31:35] JSON parse failed for char-spec-agent-20260403-063: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:31:39] JSON parse failed for char-spec-agent-20260403-064: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:31:42] === spec-auto-grader START ===
+[2026-04-03 12:31:42] Queue loaded: 300 specs
+[2026-04-03 12:31:42] Existing grades: 335
+[2026-04-03 12:31:42] Ungraded: 265 specs to grade
+[2026-04-03 12:31:43] JSON parse failed for char-spec-agent-20260403-065: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:31:43]   Progress: 260/294 graded
+[2026-04-03 12:31:43] Grade call failed for char-spec-claude-20260403-002: [Errno 22] Invalid argument
+[2026-04-03 12:31:46] JSON parse failed for char-spec-agent-20260403-067: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 8, "pass": true, "distinctiveness": 7,
+[2026-04-03 12:31:49] JSON parse failed for char-spec-agent-20260403-068: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:31:52] JSON parse failed for char-spec-agent-20260403-069: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:31:55] JSON parse failed for char-spec-agent-20260403-070: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:31:58]   Progress: 10/265 graded
+[2026-04-03 12:31:58] JSON parse failed for char-spec-agent-20260403-071: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:32:02] JSON parse failed for char-spec-agent-20260403-072: Unterminated string starting at: line 1 column 66 (char 65) raw: {"grade":8,"pass":true,"distinctiveness":9,"commercial_appeal":8,"
+[2026-04-03 12:32:05] JSON parse failed for char-spec-agent-20260403-073: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 7, "pass": true, "distinctiveness": 9
+[2026-04-03 12:32:06] 429 on groq for char-spec-claude-20260403-019 — trying fallback
+[2026-04-03 12:32:08] JSON parse failed for char-spec-agent-20260403-074: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:32:10] JSON parse failed for char-spec-claude-20260403-019: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:32:14] JSON parse failed for char-spec-agent-20260403-075: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:32:17] JSON parse failed for char-spec-agent-20260403-076: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:32:17]   Progress: 270/294 graded
+[2026-04-03 12:32:20] JSON parse failed for char-spec-agent-20260403-077: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:32:22] 429 on groq for char-spec-claude-20260403-025 — trying fallback
+[2026-04-03 12:32:24] JSON parse failed for char-spec-agent-20260403-078: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:32:27] JSON parse failed for char-spec-agent-20260403-079: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 8,
+[2026-04-03 12:32:27] JSON parse failed for char-spec-claude-20260403-025: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 4, "pass": false, "distinctiveness": 4, "commercial
+[2026-04-03 12:32:27]   Progress: 20/265 graded
+[2026-04-03 12:32:30] JSON parse failed for char-spec-agent-20260403-080: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 7, "pass": false, "distinctiveness": 7,
+[2026-04-03 12:32:30] Grade call failed for char-spec-claude-20260403-029: [Errno 22] Invalid argument
+[2026-04-03 12:32:33] JSON parse failed for char-spec-agent-20260403-081: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 8, "
+[2026-04-03 12:32:33] Grades saved: 336 total
+[2026-04-03 12:32:36] 429 on groq for char-spec-claude-20260403-032 — trying fallback
+[2026-04-03 12:32:37] JSON parse failed for char-spec-agent-20260403-082: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:32:41] JSON parse failed for char-spec-claude-20260403-032: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:32:41] Grades saved: 355 total
+[2026-04-03 12:32:41] JSON parse failed for char-spec-agent-20260403-084: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:32:45] JSON parse failed for char-spec-agent-20260403-085: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 6, "pass": false, "distinctiveness": 7
+[2026-04-03 12:32:48] JSON parse failed for char-spec-agent-20260403-086: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:32:48]   Progress: 280/294 graded
+[2026-04-03 12:32:50] 429 on groq for char-spec-claude-20260403-037 — trying fallback
+[2026-04-03 12:32:52] JSON parse failed for char-spec-agent-20260403-087: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:32:55] JSON parse failed for char-spec-agent-20260403-088: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 8
+[2026-04-03 12:32:55] JSON parse failed for char-spec-claude-20260403-037: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:32:55]   Progress: 30/265 graded
+[2026-04-03 12:32:58] JSON parse failed for char-spec-agent-20260403-089: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:33:01] JSON parse failed for char-spec-agent-20260403-090: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:33:04] JSON parse failed for char-spec-agent-20260403-091: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "
+[2026-04-03 12:33:05] 429 on groq for char-spec-claude-20260403-045 — trying fallback
+[2026-04-03 12:33:08] JSON parse failed for char-spec-agent-20260403-092: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 9,
+[2026-04-03 12:33:10] JSON parse failed for char-spec-claude-20260403-045: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:33:11] JSON parse failed for char-spec-agent-20260403-093: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:33:14] JSON parse failed for char-spec-agent-20260403-094: Expecting ',' delimiter: line 1 column 49 (char 48) raw: {"grade": 7, "pass": false, "distinctiveness": 7
+[2026-04-03 12:33:18] JSON parse failed for char-spec-agent-20260403-095: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 8, "commercial
+[2026-04-03 12:33:19] 429 on groq for char-spec-claude-20260403-058 — trying fallback
+[2026-04-03 12:33:21] JSON parse failed for char-spec-agent-20260403-096: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:33:21]   Progress: 290/294 graded
+[2026-04-03 12:33:24] JSON parse failed for char-spec-claude-20260403-058: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:33:24]   Progress: 40/265 graded
+[2026-04-03 12:33:24] JSON parse failed for char-spec-agent-20260403-097: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 8
+[2026-04-03 12:33:28] JSON parse failed for char-spec-agent-20260403-098: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:33:32] JSON parse failed for char-spec-agent-20260403-100: Expecting property name enclosed in double quotes: line 1 column 50 (char 49) raw: {"grade": 6, "pass": false, "distinctiveness": 6,
+[2026-04-03 12:33:32] Grades saved: 338 total
+[2026-04-03 12:33:32] passing-specs.json: 15 passing / 300 total
+[2026-04-03 12:33:32] === COMPLETE === graded=32 failed=262 passing=15 pass_rate=5% elapsed=1125s
+[2026-04-03 12:33:33] 429 on groq for char-spec-claude-20260403-063 — trying fallback
+[2026-04-03 12:33:38] JSON parse failed for char-spec-claude-20260403-063: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:33:48] 429 on groq for char-spec-claude-20260403-069 — trying fallback
+[2026-04-03 12:33:49] === spec-auto-grader START ===
+[2026-04-03 12:33:49] Queue loaded: 300 specs
+[2026-04-03 12:33:49] Existing grades: 338
+[2026-04-03 12:33:49] Ungraded: 262 specs to grade
+[2026-04-03 12:33:53] Grade call failed for char-spec-claude-20260403-069: [WinError 32] The process cannot access the file because it is being used by another process: 'G:/My Drive/Projects/_stu
+[2026-04-03 12:33:53]   Progress: 50/265 graded
+[2026-04-03 12:33:53] Grades saved: 375 total
+[2026-04-03 12:33:55] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:33:57] 429 on groq for char-spec-claude-20260403-071 — trying fallback
+[2026-04-03 12:34:02] JSON parse failed for char-spec-claude-20260403-071: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 8, "pass": true, "distinctiveness": 7
+[2026-04-03 12:34:04] Grade call failed for char-spec-claude-20260403-004: [Errno 22] Invalid argument
+[2026-04-03 12:34:09] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:34:10] 429 on groq for char-spec-claude-20260403-076 — trying fallback
+[2026-04-03 12:34:15] JSON parse failed for char-spec-claude-20260403-076: Expecting ',' delimiter: line 1 column 48 (char 47) raw: {"grade": 9, "pass": true, "distinctiveness": 9
+[2026-04-03 12:34:23] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:34:23] 429 on groq for char-spec-claude-20260403-080 — trying fallback
+[2026-04-03 12:34:26]   Progress: 60/265 graded
+[2026-04-03 12:34:34] 429 on groq for char-spec-claude-20260403-084 — trying fallback
+[2026-04-03 12:34:37] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:34:39] JSON parse failed for char-spec-claude-20260403-084: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 7, "commercial
+[2026-04-03 12:34:47] 429 on groq for char-spec-claude-20260403-088 — trying fallback
+[2026-04-03 12:34:47]   Progress: 10/262 graded
+[2026-04-03 12:34:50] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:34:52] JSON parse failed for char-spec-claude-20260403-088: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 7, "
+[2026-04-03 12:34:55]   Progress: 70/265 graded
+[2026-04-03 12:35:00] 429 on groq for char-spec-claude-20260403-092 — trying fallback
+[2026-04-03 12:35:05] JSON parse failed for char-spec-claude-20260403-092: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 9, "pass": true, "distinctiveness": 9, "
+[2026-04-03 12:35:06] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:35:10] 429 on groq for char-spec-claude-20260403-094 — trying fallback
+[2026-04-03 12:35:15] JSON parse failed for char-spec-claude-20260403-094: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 7, "pass": false, "distinctiveness": 6, "commercial
+[2026-04-03 12:35:16] Grades saved: 394 total
+[2026-04-03 12:35:18] Grade call failed for char-spec-claude-20260403-096: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/provider-health.json.tmp'
+[2026-04-03 12:35:21] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:35:21] 429 on groq for char-spec-claude-20260403-097 — trying fallback
+[2026-04-03 12:35:26] JSON parse failed for char-spec-claude-20260403-097: Unterminated string starting at: line 1 column 50 (char 49) raw: {"grade": 8, "pass": true, "distinctiveness": 8, "
+[2026-04-03 12:35:26] Rate limit backoff — sleeping 5s
+[2026-04-03 12:35:35]   Progress: 20/262 graded
+[2026-04-03 12:35:36]   Progress: 80/265 graded
+[2026-04-03 12:35:38] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:35:39] 429 on groq for char-spec-gemini-20260403-002 — trying fallback
+[2026-04-03 12:35:44] JSON parse failed for char-spec-gemini-20260403-002: Unterminated string starting at: line 1 column 51 (char 50) raw: {"grade": 6, "pass": false, "distinctiveness": 7, "commercial
+[2026-04-03 12:35:48] Grade call failed for char-spec-gemini-20260403-005: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/provider-health.json.tmp'
+[2026-04-03 12:35:51] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:35:51] 429 on groq for char-spec-gemini-20260403-006 — trying fallback
+[2026-04-03 12:35:56] JSON parse failed for char-spec-gemini-20260403-006: Expecting property name enclosed in double quotes: line 1 column 49 (char 48) raw: {"grade": 9, "pass": true, "distinctiveness": 8,
+[2026-04-03 12:35:56] Rate limit backoff — sleeping 5s
+[2026-04-03 12:36:04] Grade call failed for char-spec-claude-20260403-032: [WinError 32] The process cannot access the file because it is being used by another process: 'G:/My Drive/Projects/_stu
+[2026-04-03 12:36:05] Grades saved: 363 total
+[2026-04-03 12:36:08] === spec-auto-grader START ===
+[2026-04-03 12:36:08] Queue loaded: 300 specs
+[2026-04-03 12:36:08] Existing grades: 363
+[2026-04-03 12:36:08] Ungraded: 237 specs to grade
+[2026-04-03 12:36:10] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:36:10] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:36:23]   Progress: 30/262 graded
+[2026-04-03 12:36:26] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:36:27] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:36:43] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:36:44] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:36:54]   Progress: 10/237 graded
+[2026-04-03 12:37:00] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:01] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:11]   Progress: 40/262 graded
+[2026-04-03 12:37:17] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:17] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:28] Grade call failed for char-spec-claude-20260403-061: [WinError 32] The process cannot access the file because it is being used by another process: 'G:/My Drive/Projects/_stu
+[2026-04-03 12:37:34] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:34] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:43]   Progress: 20/237 graded
+[2026-04-03 12:37:47]   Progress: 50/262 graded
+[2026-04-03 12:37:47] Grades saved: 388 total
+[2026-04-03 12:37:51] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:51] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:37:59] === spec-auto-grader START ===
+[2026-04-03 12:37:59] Queue loaded: 300 specs
+[2026-04-03 12:37:59] Existing grades: 388
+[2026-04-03 12:37:59] Ungraded: 212 specs to grade
+[2026-04-03 12:38:01] Grade call failed for char-spec-claude-20260403-069: [Errno 22] Invalid argument
+[2026-04-03 12:38:02] Grades saved: 388 total
+[2026-04-03 12:38:04] Grade call failed for char-spec-claude-20260403-075: [Errno 22] Invalid argument
+[2026-04-03 12:38:07] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:38:09] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:38:11]   Progress: 10/212 graded
+[2026-04-03 12:38:20] Grade call failed for char-spec-claude-20260403-087: [Errno 22] Invalid argument
+[2026-04-03 12:38:21]   Progress: 30/237 graded
+[2026-04-03 12:38:21] Grade call failed for char-spec-claude-20260403-078: [Errno 22] Invalid argument
+[2026-04-03 12:38:24]   Progress: 20/212 graded
+[2026-04-03 12:38:26] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:38:26] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:38:30] Grades saved: 413 total
+[2026-04-03 12:38:36]   Progress: 30/212 graded
+[2026-04-03 12:38:36]   Progress: 60/262 graded
+[2026-04-03 12:38:45] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:38:47]   Progress: 40/212 graded
+[2026-04-03 12:38:58] Grade call failed for char-spec-gemini-20260403-021: [WinError 32] The process cannot access the file because it is being used by another process: 'G:/My Drive/Projects/_stu
+[2026-04-03 12:38:59]   Progress: 50/212 graded
+[2026-04-03 12:38:59] Grades saved: 438 total
+[2026-04-03 12:39:03]   Progress: 70/262 graded
+[2026-04-03 12:39:06] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:39:10]   Progress: 60/212 graded
+[2026-04-03 12:39:20] 429 on cerebras — sleeping 8s before fallback
+[2026-04-03 12:39:21] Grades saved: 413 total
+[2026-04-03 12:39:28] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:39:33]   Progress: 70/212 graded
+[2026-04-03 12:39:38] JSON parse failed for char-spec-gemini-20260403-046 via cerebras: Invalid control character at: line 7 column 138 (char 247) raw: {
+  "grade": 6,
+  "pass": true,
+  "distinctiveness": 4,
+  "c
+[2026-04-03 12:39:39] Grades saved: 463 total
+[2026-04-03 12:39:40]   Progress: 80/262 graded
+[2026-04-03 12:39:45]   Progress: 80/212 graded
+[2026-04-03 12:39:49] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:40:08]   Progress: 90/262 graded
+[2026-04-03 12:40:14] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:40:36] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:40:45]   Progress: 100/262 graded
+[2026-04-03 12:40:45] Grades saved: 438 total
+[2026-04-03 12:40:57] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:41:10]   Progress: 110/262 graded
+[2026-04-03 12:41:18] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:41:36]   Progress: 120/262 graded
+[2026-04-03 12:41:39] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:41:55] Grades saved: 463 total
+[2026-04-03 12:42:04] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:42:14]   Progress: 130/262 graded
+[2026-04-03 12:42:25] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:42:39] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:42:51] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:43:03] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:43:12]   Progress: 140/262 graded
+[2026-04-03 12:43:17] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:43:29] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:43:41] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:43:53] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:44:06] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:44:18] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:44:31] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:44:43] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:44:56] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:45:05]   Progress: 150/262 graded
+[2026-04-03 12:45:05] Grades saved: 488 total
+[2026-04-03 12:45:08] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:45:20] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:45:34] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:45:47] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:45:59] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:46:11] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:46:23] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:46:36] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:46:48] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:47:01] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:47:10]   Progress: 160/262 graded
+[2026-04-03 12:47:13] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:47:27] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:47:39] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:47:53] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:48:05] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:48:18] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:48:30] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:48:42] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:48:54] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:49:05]   Progress: 170/262 graded
+[2026-04-03 12:49:08] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:49:21] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:49:33] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:49:45] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:49:58] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:50:07] Grades saved: 513 total
+[2026-04-03 12:50:10] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:50:22] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:50:35] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:50:47] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:50:59] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:51:09]   Progress: 180/262 graded
+[2026-04-03 12:51:12] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:51:26] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:51:38] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:51:51] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:52:03] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:52:15] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:52:28] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:52:42] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:52:54] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:53:03]   Progress: 190/262 graded
+[2026-04-03 12:53:06] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:53:19] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:53:31] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:53:44] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:53:56] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:54:08] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:54:20] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:54:33] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:54:46] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:54:59] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:55:08]   Progress: 200/262 graded
+[2026-04-03 12:55:08] Grades saved: 538 total
+[2026-04-03 12:55:11] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:55:23] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:55:37] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:55:49] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:56:01] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:56:14] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:56:26] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:56:38] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:56:50] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:56:59]   Progress: 210/262 graded
+[2026-04-03 12:57:03] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:57:15] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:57:27] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:57:41] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:57:53] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:58:05] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:58:18] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:58:30] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:58:43] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:58:55] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:59:04]   Progress: 220/262 graded
+[2026-04-03 12:59:07] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:59:21] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:59:36] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:59:49] 429 on groq — sleeping 8s before fallback
+[2026-04-03 12:59:58] Grades saved: 563 total
+[2026-04-03 13:00:01] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:00:13] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:00:25] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:00:39] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:00:51] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:01:00]   Progress: 230/262 graded
+[2026-04-03 13:01:03] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:01:15] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:01:28] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:01:40] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:01:52] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:02:04] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:02:19] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:02:31] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:02:43] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:02:56] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:03:05]   Progress: 240/262 graded
+[2026-04-03 13:03:08] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:03:20] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:03:33] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:03:45] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:03:59] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:04:11] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:04:24] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:04:36] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:04:48] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:04:57]   Progress: 250/262 graded
+[2026-04-03 13:04:57] Grades saved: 588 total
+[2026-04-03 13:05:01] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:05:13] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:05:25] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:05:37] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:05:50] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:06:02] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:06:15] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:06:27] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:06:40] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:06:52] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:07:01]   Progress: 260/262 graded
+[2026-04-03 13:07:04] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:07:17] 429 on groq — sleeping 8s before fallback
+[2026-04-03 13:07:27] Grades saved: 600 total
+[2026-04-03 13:07:27] passing-specs.json: 218 passing / 300 total
+[2026-04-03 13:07:27] === COMPLETE === graded=262 failed=0 passing=218 pass_rate=73% elapsed=2017s

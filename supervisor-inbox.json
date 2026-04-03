@@ -1,412 +1,72 @@
-{
-  "items": [
-    {
-      "id": "sre-warn-20260331",
-      "source": "sre-scout",
-      "type": "health",
-      "urgency": "WARN",
-      "title": "SRE WARNING — overnight job errors + dirty repos",
-      "finding": "job_daily_harvest.py: PermissionError on log file. auto-answer: charmap encoding errors on 8 questions (unicode arrow chars). 4 repos uncommitted.",
-      "status": "answered",
-      "date": "2026-03-31T03:31:58.008220",
-      "answer": "Fix now",
-      "answered_at": "2026-04-01T04:59:54.205Z"
-    },
-    {
-      "id": "nightly-rollup-20260401",
-      "source": "nightly-rollup",
-      "type": "audit",
-      "urgency": "ALERT",
-      "title": "Nightly Rollup — 2026-04-01 — RED",
-      "finding": "Score: 37/100. 1 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
-      "status": "answered",
-      "answer": "Acknowledged. System was in active dev session. Schedule manual catch-up run for missed agents next session.",
-      "answered_at": "2026-04-02T19:00:00Z"
-    },
-    {
-      "id": "nightly-rollup-20260401",
-      "source": "nightly-rollup",
-      "type": "audit",
-      "urgency": "WARN",
-      "title": "Nightly Rollup — 2026-04-01 — YELLOW",
-      "finding": "Score: 57/100. 2 agents checked in; missed: stress-tester, janitor, git-scout, sre-scout. Gate: 0 pass / 0 fail.",
-      "status": "answered",
-      "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
-      "answered_at": "2026-04-02T16:00:04.943142",
-      "answered_by": "supervisor-auto"
-    },
-    {
-      "id": "ai-intel-2026-04-01",
-      "source": "ai-intel-agent",
-      "type": "intel",
-      "urgency": "WARN",
-      "title": "AI Intel - 3 HIGH PRIORITY - 2026-04-01",
-      "finding": "Claude Code Source Code Leaked?!? #ai #ainews #claude. See ai-intel-summary.txt.",
-      "status": "PENDING",
-      "date": "2026-04-01T07:13:31Z"
-    },
-    {
-      "id": "test-supervisor-flow",
-      "title": "TEST: Does the answer flow work?",
-      "finding": "Please answer YES or NO to confirm the system is working end-to-end.",
-      "urgency": "INFO",
-      "source": "supervisor",
-      "type": "test",
-      "project": "studio",
-      "timestamp": "2026-04-02T14:00:00Z",
-      "status": "answered",
-      "answer": "YES — bridge is up, inject running clean, flow confirmed working.",
-      "answered_at": "2026-04-02T19:00:00Z"
-    },
-    {
-      "id": "ai-intel-2026-04-01",
-      "source": "ai-intel-agent",
-      "type": "intel",
-      "urgency": "WARN",
-      "title": "AI Intel - 2 HIGH PRIORITY - 2026-04-01",
-      "finding": "Layperson, quite impressed with Claude. See ai-intel-summary.txt.",
-      "status": "PENDING",
-      "date": "2026-04-01T10:00:02Z"
-    },
-    {
-      "id": "ai-intel-2026-04-01",
-      "source": "ai-intel-agent",
-      "type": "intel",
-      "urgency": "WARN",
-      "title": "AI Intel - 1 HIGH PRIORITY - 2026-04-01",
-      "finding": "Introducing GPT-5.4 mini and nano. See ai-intel-summary.txt.",
-      "status": "PENDING",
-      "date": "2026-04-01T13:59:22Z"
-    },
-    {
-      "id": "ai-intel-2026-04-01",
-      "source": "ai-intel-agent",
-      "type": "intel",
-      "urgency": "WARN",
-      "title": "AI Intel - 2 HIGH PRIORITY - 2026-04-01",
-      "finding": "any way to access Claude Pro for broke student?. See ai-intel-summary.txt.",
-      "status": "PENDING",
-      "date": "2026-04-01T14:00:34Z"
-    },
-    {
-      "id": "defunct-groq_llama-4-scout-2026-04-01",
-      "source": "model-validator",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: Llama 4 Scout (groq/llama-4-scout)",
-      "finding": "Not found in live groq model list. Action: remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "status": "answered",
-      "answer": "Approved. Remove groq/llama-4-scout from TASK_ROUTING in ai_gateway.py and mark deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T19:00:00Z",
-      "date": "2026-04-01T11:48:11.623472"
-    },
-    {
-      "id": "defunct-groq_mixtral-8x7b-2026-04-01",
-      "source": "model-validator",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: Mixtral 8x7B (groq/mixtral-8x7b)",
-      "finding": "Not found in live groq model list. Action: remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.623481",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-groq_gemma2-9b-it-2026-04-01",
-      "source": "model-validator",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: Gemma 2 9B (groq/gemma2-9b-it)",
-      "finding": "Not found in live groq model list. Action: remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.623484",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-openrouter_deepseek_deepseek-r1:free-2026-04-01",
-      "source": "model-validator",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: DeepSeek R1 (free) (openrouter/deepseek/deepseek-r1:free)",
-      "finding": "Not found in live openrouter model list. Action: remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.623486",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-openrouter_mistralai_mistral-7b-instruct:free-2026-04-01",
-      "source": "model-validator",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: Mistral 7B (free) (openrouter/mistralai/mistral-7b-instruct:free)",
-      "finding": "Not found in live openrouter model list. Action: remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.623488",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-gemini_gemini-2.0-flash-001",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: gemini/gemini-2.0-flash-001",
-      "finding": "Model gemini/gemini-2.0-flash-001 appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691552",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-gemini_gemini-flash-lite",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: gemini/gemini-flash-lite",
-      "finding": "Model gemini/gemini-flash-lite appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691564",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-gemini_gemini-1.5-pro",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: gemini/gemini-1.5-pro",
-      "finding": "Model gemini/gemini-1.5-pro appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691567",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-groq_llama-4-scout",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: groq/llama-4-scout",
-      "finding": "Model groq/llama-4-scout appears deprecated/removed. Last error: Not found in live model list — likely deprecated. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691569",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-groq_mixtral-8x7b",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: groq/mixtral-8x7b",
-      "finding": "Model groq/mixtral-8x7b appears deprecated/removed. Last error: Not found in live model list — likely deprecated. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691571",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-groq_gemma2-9b-it",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: groq/gemma2-9b-it",
-      "finding": "Model groq/gemma2-9b-it appears deprecated/removed. Last error: Not found in live model list — likely deprecated. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691572",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-openrouter_deepseek_deepseek-r1:free",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: openrouter/deepseek/deepseek-r1:free",
-      "finding": "Model openrouter/deepseek/deepseek-r1:free appears deprecated/removed. Last error: Not found in live model list — likely deprecated. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691575",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "defunct-model-openrouter_mistralai_mistral-7b-instruct:free",
-      "source": "provider-health",
-      "type": "model_defunct",
-      "urgency": "WARN",
-      "title": "DEFUNCT MODEL: openrouter/mistralai/mistral-7b-instruct:free",
-      "finding": "Model openrouter/mistralai/mistral-7b-instruct:free appears deprecated/removed. Last error: Not found in live model list — likely deprecated. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-      "status": "answered",
-      "date": "2026-04-01T11:48:11.691577",
-      "answer": "Approved. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json.",
-      "answered_at": "2026-04-02T15:39:57.914724"
-    },
-    {
-      "id": "nightly-rollup-20260402",
-      "source": "nightly-rollup",
-      "type": "audit",
-      "urgency": "WARN",
-      "title": "Nightly Rollup — 2026-04-02 — YELLOW",
-      "finding": "Score: 57/100. 11 agents checked in; missed: whiteboard-scorer, ai-intel, agency-build, vintage-agent. Gate: 0 pass / 0 fail.",
-      "status": "answered",
-      "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
-      "answered_at": "2026-04-02T16:00:04.943142",
-      "answered_by": "supervisor-auto"
-    },
-    {
-      "id": "ai-intel-2026-04-02",
-      "source": "ai-intel-agent",
-      "type": "intel",
-      "urgency": "WARN",
-      "title": "AI Intel - 3 HIGH PRIORITY - 2026-04-02",
-      "finding": "How to Build Workflows Faster with n8n AI Builder (2026 Updated). See ai-intel-summary.txt.",
-      "status": "PENDING",
-      "date": "2026-04-02T10:00:02Z"
-    },
-    {
-      "id": "wasde-parser-error-202604021953",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "PDF too small (369 bytes) — likely not released yet",
-      "status": "PENDING",
-      "date": "2026-04-02T19:53:36.851876"
-    },
-    {
-      "id": "wasde-parser-error-202604022015",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "Expecting ',' delimiter: line 11 column 5 (char 671)",
-      "status": "PENDING",
-      "date": "2026-04-02T20:15:25.275708"
-    },
-    {
-      "id": "wasde-parser-error-202604022016",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "Expecting ',' delimiter: line 11 column 5 (char 671)",
-      "status": "PENDING",
-      "date": "2026-04-02T20:16:02.172369"
-    },
-    {
-      "id": "wasde-parser-error-202604022018",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "'Commodity'",
-      "status": "PENDING",
-      "date": "2026-04-02T20:18:18.069934"
-    },
-    {
-      "id": "wasde-parser-error-202604022019",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "'Commodity'",
-      "status": "PENDING",
-      "date": "2026-04-02T20:19:17.391166"
-    },
-    {
-      "id": "wasde-parser-error-202604022020",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "'Commodity'",
-      "status": "PENDING",
-      "date": "2026-04-02T20:20:43.963785"
-    },
-    {
-      "id": "wasde-parser-error-202604022021",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "'Commodity'",
-      "status": "PENDING",
-      "date": "2026-04-02T20:21:15.560092"
-    },
-    {
-      "id": "wasde-parser-error-202604022022",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "'Commodity'",
-      "status": "PENDING",
-      "date": "2026-04-02T20:22:25.644322"
-    },
-    {
-      "id": "wasde-error-202604030005",
-      "source": "wasde-parser",
-      "type": "agent_error",
-      "urgency": "WARN",
-      "title": "ERROR: wasde-parser",
-      "finding": "PDF too small (369b) — not released yet",
-      "status": "PENDING",
-      "date": "2026-04-03T00:05:57.482832"
-    },
-    {
-      "id": "nightly-rollup-20260403",
-      "source": "nightly-rollup",
-      "type": "audit",
-      "urgency": "WARN",
-      "title": "Nightly Rollup — 2026-04-03 — YELLOW",
-      "finding": "Score: 57/100. 12 agents checked in; missed: janitor, ai-intel, agency-build, vintage-agent. Gate: 0 pass / 0 fail.",
-      "status": "answered",
-      "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
-      "answered_at": "2026-04-03T01:00:40.790231",
-      "answered_by": "supervisor-auto"
-    },
-    {
-      "id": "ai-intel-2026-04-03",
-      "source": "ai-intel-agent",
-      "type": "intel",
-      "urgency": "WARN",
-      "title": "AI Intel - 4 HIGH PRIORITY - 2026-04-03",
-      "finding": "BREAKING: Google’s Gemma 4 Surfaces Online Ahead of Official Release. See ai-intel-summary.txt.",
-      "status": "PENDING",
-      "date": "2026-04-03T10:00:02Z"
-    },
-    {
-      "id": "supervisor-cycle-202604030630",
-      "source": "supervisor-cycle",
-      "type": "status",
-      "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-03 06:30",
-      "finding": "0 tasks dispatched | 12 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-      "dispatched": [],
-      "status": "INFO"
-    },
-    {
-      "id": "supervisor-cycle-202604030948",
-      "source": "supervisor-cycle",
-      "type": "status",
-      "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-03 09:48",
-      "finding": "0 tasks dispatched | 12 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-      "dispatched": [],
-      "status": "INFO"
-    },
-    {
-      "id": "supervisor-cycle-202604031000",
-      "source": "supervisor-cycle",
-      "type": "status",
-      "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-03 10:00",
-      "finding": "0 tasks dispatched | 12 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-      "dispatched": [],
-      "status": "INFO"
-    }
-  ]
-}
+[
+  {
+    "id": "ai-intel-2026-04-03",
+    "source": "ai-intel-agent",
+    "type": "intel",
+    "urgency": "WARN",
+    "title": "AI Intel -- 61 HIGH PRIORITY items -- 2026-04-03",
+    "finding": "SLOP – A protocol for local LLMs to observe and interact with application state.  Dependency flags: squeeze-empire, hibid-analyzer, _studio.See ai-intel-summary.txt.",
+    "status": "PENDING",
+    "date": "2026-04-03T15:26:52.851746+00:00"
+  },
+  {
+    "id": "ai-intel-20260403",
+    "source": "ai-intel-agent",
+    "type": "intel",
+    "urgency": "WARN",
+    "title": "AI Intel -- 37 HIGH PRIORITY items -- 2026-04-03",
+    "finding": "[P] Gemma 4 running on NVIDIA B200 and AMD MI355X from the same inference stack, 15% throughput gain. DEPENDENCY FLAG: _studio, hibid-analyzer, listing-optimizer, squeeze-empire. See ai-intel-summary.txt.",
+    "status": "PENDING",
+    "date": "2026-04-03T15:37:25.335170+00:00"
+  },
+  {
+    "id": "ai-intel-2026-04-03",
+    "source": "ai-intel-agent",
+    "type": "intel",
+    "urgency": "WARN",
+    "title": "AI Intel - 5 HIGH PRIORITY - 2026-04-03",
+    "finding": "The Gemma evolution nobody expected #ai #google #gemini. See ai-intel-summary.txt.",
+    "status": "PENDING",
+    "date": "2026-04-03T15:45:08Z"
+  },
+  {
+    "id": "spec-grader-warn-20260403",
+    "source": "agency-spec-grader",
+    "type": "agent_error",
+    "urgency": "WARN",
+    "title": "Spec grader: 300 grade failures",
+    "finding": "graded=0 failed=300 passing=0 pass_rate=0% elapsed=551s",
+    "status": "PENDING",
+    "date": "2026-04-03T11:08:07.132646"
+  },
+  {
+    "id": "supervisor-cycle-202604031400",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-03 14:00",
+    "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "dispatched": [],
+    "status": "INFO"
+  },
+  {
+    "id": "supervisor-cycle-202604031430",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-03 14:30",
+    "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "dispatched": [],
+    "status": "INFO"
+  },
+  {
+    "id": "supervisor-cycle-202604031500",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-03 15:00",
+    "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "dispatched": [],
+    "status": "INFO"
+  }
+]

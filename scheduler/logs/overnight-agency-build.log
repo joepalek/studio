@@ -86,3 +86,15 @@ PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/sch
 [2026-04-03 05:30:02] To build this run: 0 new characters
 [2026-04-03 05:30:02] Nothing new to build -- all passing specs already have character folders
 [Fri 04/03/2026  5:30:02.36] Done 
+[Fri 04/03/2026 10:45:06.87] Agency character batch build starting 
+[2026-04-03 10:45:07] Agency character batch build starting
+[2026-04-03 10:45:07] Passing specs loaded: 283
+[2026-04-03 10:45:07] Already built: 283 characters (will skip)
+[2026-04-03 10:45:07] To build this run: 0 new characters
+[2026-04-03 10:45:07] Nothing new to build -- all passing specs already have character folders
+[Fri 04/03/2026 10:45:07.20] Done 
+[2026-04-03 10:49:27] Agency character batch build starting
+[2026-04-03 10:49:27] Passing specs loaded: 283
+[2026-04-03 10:49:27] Already built: 283 characters (will skip)
+[2026-04-03 10:49:27] To build this run: 0 new characters
+[2026-04-03 10:49:27] Nothing new to build -- all passing specs already have character folders

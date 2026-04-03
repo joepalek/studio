@@ -35,3 +35,11 @@
 [2026-04-01 18:21:05] Orphaned bat files (no matching XML task): orchestrator-briefing.bat
 [2026-04-01 18:21:13] Janitor report saved. Status: flagged
 [2026-04-01 18:21:13] Janitor complete — flagged
+[Fri 04/03/2026 10:44:53.70] Janitor starting 
+[2026-04-03 10:44:53] Janitor starting
+[2026-04-03 10:44:54] Truncated 1 large logs:
+[2026-04-03 10:44:54]   supervisor-check.log (534KB → kept last 1000 lines)
+[2026-04-03 10:44:59] Removed 6 __pycache__ dirs
+[2026-04-03 10:45:05] Janitor report saved. Status: flagged
+[2026-04-03 10:45:05] Janitor complete — flagged
+[Fri 04/03/2026 10:45:05.64] Done 

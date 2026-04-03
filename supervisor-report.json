@@ -1,41 +1,24 @@
 {
-  "time": "2026-04-03T10:00:04.502587",
+  "time": "2026-04-03T15:00:04.819285",
   "ollama_up": true,
-  "gemini_available": true,
+  "gemini_available": false,
   "providers_available": [
-    "groq",
     "cerebras",
-    "openrouter",
     "mistral",
-    "gemini",
     "ollama"
   ],
   "providers_degraded": [
-    "gemini/gemini-2.0-flash-001 (defunct)",
-    "gemini/gemini-flash-lite (defunct)",
-    "gemini/gemini-1.5-pro (defunct)",
-    "groq/llama-4-scout (defunct)",
-    "groq/mixtral-8x7b (defunct)",
-    "groq/gemma2-9b-it (defunct)",
-    "openrouter/deepseek/deepseek-r1:free (defunct)",
-    "openrouter/mistralai/mistral-7b-instruct:free (defunct)",
-    "anthropic/claude-sonnet-4-6 (degraded)"
+    "groq/llama-3.3-70b-versatile (degraded)"
   ],
-  "best_free_provider": "groq",
+  "best_free_provider": "cerebras",
   "free_models": [],
   "agents_recently_active": [
+    "agency-build",
+    "agency-spec-grader",
     "ai-intel-agent",
-    "ai-services-rankings",
-    "auto-answer-gemini",
-    "check-drift",
-    "git-commit",
-    "nightly-rollup",
-    "orchestrator",
-    "product-archaeology",
-    "sre-scout",
+    "janitor",
     "supervisor",
-    "vector-reindex",
-    "whiteboard-scorer"
+    "vintage-agent"
   ],
   "work_queue_depth": 0,
   "dispatched": []

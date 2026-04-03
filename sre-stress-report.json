@@ -1,14 +1,10 @@
 {
-  "timestamp": "2026-04-03T10:10:35.366596",
+  "timestamp": "2026-04-03T10:25:21.702183",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (6 files): job-match",
-    "UNCOMMITTED (82 files): _studio"
+    "UNCOMMITTED (9 files): _studio"
   ],
-  "watch": [
-    "Python 3.13.12 (expected 3.13.7 \u2014 higher, OK)",
-    "Claude Code 2.1.91 (expected 2.1.78 \u2014 higher, OK)"
-  ],
-  "action_required": "Commit dirty changes in job-match and _studio"
+  "watch": [],
+  "action_required": "Commit pending changes in _studio repo"
 }
