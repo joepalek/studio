@@ -227,11 +227,15 @@ def scrape_facebook(cfg, seen_ids, mode="full"):
         import random
 
         opts = Options()
-        # Use your real Chrome profile so you're already logged in
-        opts.add_argument("--user-data-dir=C:/Users/Joe/AppData/Local/Google/Chrome/User Data")
+        # Opera uses Chromium under the hood — point to Opera's profile
+        # Opera profile is usually at: C:\Users\<you>\AppData\Roaming\Opera Software\Opera Stable
+        opera_profile = "C:/Users/Joe/AppData/Roaming/Opera Software/Opera Stable"
+        opts.add_argument(f"--user-data-dir={opera_profile}")
         opts.add_argument("--profile-directory=Default")
         opts.add_argument("--disable-notifications")
         opts.add_argument("--disable-popup-blocking")
+        # Opera binary path — update this if Opera is installed elsewhere
+        opts.binary_location = "C:/Users/Joe/AppData/Local/Programs/Opera/opera.exe"
         # Uncomment below to run headless once stable:
         # opts.add_argument("--headless=new")
 

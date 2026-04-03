@@ -140,9 +140,19 @@ def _call_gemini(cfg, model, prompt, max_tokens):
     key = cfg["gemini_api_key"]
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
            f"{model}:generateContent?key={key}")
+    # Detect JSON-only prompts and enforce JSON output mode to prevent truncation/malformed responses
+    prompt_lower = prompt.lower()
+    wants_json = ("return only" in prompt_lower and "json" in prompt_lower) or \
+                 ("return only valid json" in prompt_lower) or \
+                 ("respond only with" in prompt_lower and "json" in prompt_lower) or \
+                 ("return only json" in prompt_lower) or \
+                 ("only valid json" in prompt_lower)
+    gen_cfg = {"maxOutputTokens": max_tokens}
+    if wants_json:
+        gen_cfg["response_mime_type"] = "application/json"
     r = _post(url, {"Content-Type": "application/json"}, {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": max_tokens}
+        "generationConfig": gen_cfg
     })
     return r["candidates"][0]["content"]["parts"][0]["text"].strip()
 
@@ -194,13 +204,23 @@ def _call_github(cfg, model, prompt, max_tokens):
 
 
 def _call_anthropic(cfg, model, prompt, max_tokens):
-    r = _post("https://api.anthropic.com/v1/messages", {
-        "x-api-key": cfg["anthropic_api_key"],
-        "anthropic-version": "2023-06-01",
-        "Content-Type": "application/json"
-    }, {"model": model, "max_tokens": max_tokens,
-        "messages": [{"role": "user", "content": prompt}]})
-    return r["content"][0]["text"].strip()
+    import urllib.error as _ue
+    try:
+        r = _post("https://api.anthropic.com/v1/messages", {
+            "x-api-key": cfg["anthropic_api_key"],
+            "anthropic-version": "2023-06-01",
+            "Content-Type": "application/json"
+        }, {"model": model, "max_tokens": max_tokens,
+            "messages": [{"role": "user", "content": prompt}]})
+        return r["content"][0]["text"].strip()
+    except _ue.HTTPError as e:
+        # Read the response body so billing errors surface with real message
+        try:
+            body = json.loads(e.read().decode("utf-8", errors="replace"))
+            msg  = body.get("error", {}).get("message", str(e))
+        except Exception:
+            msg = str(e)
+        raise Exception(msg)
 
 
 def _call_ollama(cfg, model, prompt, max_tokens):
@@ -298,6 +318,14 @@ def call(prompt: str,
         except Exception as e:
             latency_ms = int((time.time() - t0) * 1000)
             last_error = str(e)[:120]
+            # Billing gate — credit depleted: skip remaining providers, don't mark defunct
+            if "credit balance is too low" in last_error or "credit balance" in last_error:
+                _log(provider, model, task_type, False, latency_ms,
+                     "BILLING: credits depleted — skipping provider")
+                last_error = f"BILLING:{provider} credits depleted"
+                if not fallback:
+                    break
+                continue  # try next provider without recording a health failure
             _log(provider, model, task_type, False, latency_ms, last_error)
             new_status = ph.record_failure(provider, model, last_error)
             if new_status == "defunct":

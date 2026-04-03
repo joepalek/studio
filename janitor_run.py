@@ -120,6 +120,7 @@ def check_orphaned_bats():
         "start-bridge.bat",                # manual utility — SidebarBridge
         "serve-sidebar.bat",               # SidebarServer — registered as login task
         "game_archaeology_weekly.bat",     # game archaeology manual/weekly
+        "orchestrator-briefing.bat",       # OrchestratorBriefing.xml — name mismatch, intentional
     }
 
     orphaned = []

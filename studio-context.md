@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-04-01 09:00 | Auto-built by generate-context.py
-Next regeneration: 2026-04-01 17:00 (approximate — runs at every session start)
+Generated: 2026-04-02 15:48 | Auto-built by generate-context.py
+Next regeneration: 2026-04-02 23:48 (approximate — runs at every session start)
 Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
@@ -47,7 +47,7 @@ studio system. You monitor all agents, fill idle capacity with productive
 work, evaluate improvement proposals, and greenlight low-risk changes
 without human involvement.
 
-You run on Gemini Flash free tier. Zero Claude quota unless escalating.
+You route all LLM calls through ai_gateway.py. Zero Claude quota unless escalating.
 You are the engine that makes the system run itself.
 
 ### ai-gateway
@@ -1848,8 +1848,8 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-04-01T09:00:36.504064
-Total items: 46
+Last updated: 2026-04-02T04:00:18.759244
+Total items: 61
 
   [9/10] Higgsfield Original Series — Backwards Design
     id:      higgsfield-backwards-design
@@ -2743,10 +2743,145 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, vintage, vintage-2010s
     added:   2026-03-19T15:16:03.025794
 
+  [0/10] GitHub Trending: sponsors/explore
+    id:      gh-sponsors-explore
+    type:    github_trending
+    status:  
+    source:  
+    description: Open-Source Frontier Voice AI
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: trending/developers
+    id:      gh-trending-developers
+    type:    github_trending
+    status:  
+    source:  
+    description: TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for tim
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: microsoft/VibeVoice
+    id:      gh-microsoft-VibeVoice
+    type:    github_trending
+    status:  
+    source:  
+    description: A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that b
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: apps/github-copilot-cli
+    id:      gh-apps-github-copilot-cli
+    type:    github_trending
+    status:  
+    source:  
+    description: Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the ga
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: google-research/timesfm
+    id:      gh-google-research-timesfm
+    type:    github_trending
+    status:  
+    source:  
+    description: The agent that grows with you
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: sponsors/luongnv89
+    id:      gh-sponsors-luongnv89
+    type:    github_trending
+    status:  
+    source:  
+    description: Hunt down social media accounts by username across social networks
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: luongnv89/claude-howto
+    id:      gh-luongnv89-claude-howto
+    type:    github_trending
+    status:  
+    source:  
+    description: A unified library of SOTA model optimization techniques like quantization, pruning, distillation, speculative decoding, 
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: PaddlePaddle/PaddleOCR
+    id:      gh-PaddlePaddle-PaddleOCR
+    type:    github_trending
+    status:  
+    source:  
+    description: PyTorch building blocks for the OLMo ecosystem
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: apps/github-actions
+    id:      gh-apps-github-actions
+    type:    github_trending
+    status:  
+    source:  
+    description: ⭐AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: NousResearch/hermes-agent
+    id:      gh-NousResearch-hermes-agent
+    type:    github_trending
+    status:  
+    source:  
+    description: ChatDev 2.0: Dev All through LLM-powered Multi-Agent Collaboration
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: sherlock-project/sherlock
+    id:      gh-sherlock-project-sherlock
+    type:    github_trending
+    status:  
+    source:  
+    description: A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .N
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: NVIDIA/Model-Optimizer
+    id:      gh-NVIDIA-Model-Optimizer
+    type:    github_trending
+    status:  
+    source:  
+    description: Supercharge Your LLM with the Fastest KV Cache Layer
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: allenai/OLMo-core
+    id:      gh-allenai-OLMo-core
+    type:    github_trending
+    status:  
+    source:  
+    description: A python CAD programming library
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: sansan0/TrendRadar
+    id:      gh-sansan0-TrendRadar
+    type:    github_trending
+    status:  
+    source:  
+    description: Netflix-level subtitle cutting, translation, alignment, and even dubbing - one-click fully automated AI video subtitle t
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: OpenBMB/ChatDev
+    id:      gh-OpenBMB-ChatDev
+    type:    github_trending
+    status:  
+    source:  
+    description: Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection
+    tags:    github, trending, python
+    added:   
+
 
 ## STUDIO CURRENT STATE
 
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-04-01 09:00
+End of context. Generated: 2026-04-02 15:48

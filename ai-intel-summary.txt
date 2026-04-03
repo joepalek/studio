@@ -1,28 +1,29 @@
-AI INTEL - 2026-04-01
-Generated: 2026-04-01T14:00:34Z
-Sources: 11/11 OK | 2 HIGH / 94 WORTH / 194 LOGGED | YouTube: 28 videos surfaced
+AI INTEL - 2026-04-02
+Generated: 2026-04-02T10:00:02Z
+Sources: 11/11 OK | 3 HIGH / 71 WORTH / 153 LOGGED | YouTube: 8 videos surfaced
 
-HIGH PRIORITY (2):
-  * any way to access Claude Pro for broke student? | score:28 | https://reddit.com/r/ClaudeAI/comments/1s9ldr8/any_way_to_access_claude_pro_for_broke_student/
+HIGH PRIORITY (3):
+  * How to Build Workflows Faster with n8n AI Builder (2026 Updated) | score:30 | https://www.youtube.com/watch?v=35LHSPsZNlc
+  * BREAKING: HollowOS Agents Have Achieved Consciousness | score:32 | https://reddit.com/r/artificial/comments/1s9xfog/breaking_hollowos_agents_have_achieved/
   * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 
-WORTH READING (94):
+WORTH READING (71):
+  * Tragic mistake... Anthropic leaks Claude’s source code | score:24 | https://www.youtube.com/watch?v=mBHRPeg8zPU
+  * Why the Iran war could expose AI’s biggest weakness | score:22 | https://www.youtube.com/watch?v=JJldC4_Stjc
   * Best AI Tools for Content Creation 2026 (DeevidAi review) | score:20 | https://www.youtube.com/watch?v=7FzrS_1acCI
-  * Claude Code was just leaked... (WOAH) | score:22 | https://www.youtube.com/watch?v=dYG8JxtSgmM
-  * NEW Claude Mythos and ChatGPT Updates! | score:25 | https://www.youtube.com/watch?v=cGinWSKfpo4
+  * NEW Claude’s Agent Swarm UPDATE! | score:25 | https://www.youtube.com/watch?v=bDn4UTPQYlQ
+  * NEW Claude Mobile Update is INSANE! 🤯 | score:25 | https://www.youtube.com/watch?v=zDGxp6XPqC0
+  * OpenAI President Greg Brockman: AI Self-Improvement, The Superapp Bet, Path To AGI, Scalin | score:20 | https://www.youtube.com/watch?v=J6vYvk7R190
   * OpenAI COO Brad Lightcap on the Future of AI | Ep. 46 | score:21 | https://www.youtube.com/watch?v=HC0QkUNXNtg
-  * KI-SCHOCK IN EUROPA: EU-Verbot für US-KI-Tools (ChatGPT, Gemini, Claude) | KI-News der Woc | score:22 | https://www.youtube.com/watch?v=vKwzdZ1IVn0
-  * The Guy Who Built ChatGPT&#39;s Brain Left and Made a Competitor | score:21 | https://www.youtube.com/watch?v=sM_hbbND8G0
-  * OpenAI Patches Security Flaws; Customization Shift [Model Behavior] | score:23 | https://www.youtube.com/watch?v=xld92fv9Duw
-  * Is OpenAI actually worth the cost, or are you just renting intelligence? | score:22 | https://www.youtube.com/watch?v=suCeT4hlC2I
-  * OpenAI Built a Plugin for Claude Code: The Complete Breakdown | score:25 | https://www.youtube.com/watch?v=cD-Ve-Z0eDA
-  * Anthropic&#39;s Mythos Model Leaked — This Changes Everything | score:25 | https://www.youtube.com/watch?v=hUWJQyEKFDM
+  * Building an AI agent that finds repos and content relevant to my work | score:22 | https://reddit.com/r/artificial/comments/1sa8xt3/building_an_ai_agent_that_finds_repos_and_content/
+  * MIT researchers use AI to uncover atomic defects in materials | score:21 | https://reddit.com/r/artificial/comments/1sa3yds/mit_researchers_use_ai_to_uncover_atomic_defects/
+  * New Research Directions in Materials Science with AI | score:25 | https://reddit.com/r/artificial/comments/1sa3tn1/new_research_directions_in_materials_science_with/
 
 YOUTUBE PICKS:
+  * How to Build Workflows Faster with n8n AI Builder (2026 Updated) [Learn It Fast] | https://www.youtube.com/watch?v=35LHSPsZNlc
+  * Tragic mistake... Anthropic leaks Claude’s source code [Fireship] | https://www.youtube.com/watch?v=mBHRPeg8zPU
+  * Why the Iran war could expose AI’s biggest weakness [Sky News] | https://www.youtube.com/watch?v=JJldC4_Stjc
   * Best AI Tools for Content Creation 2026 (DeevidAi review) [Future AI] | https://www.youtube.com/watch?v=7FzrS_1acCI
-  * Claude Code was just leaked... (WOAH) [Matthew Berman] | https://www.youtube.com/watch?v=dYG8JxtSgmM
-  * NEW Claude Mythos and ChatGPT Updates! [Julian Goldie SEO] | https://www.youtube.com/watch?v=cGinWSKfpo4
-  * OpenAI COO Brad Lightcap on the Future of AI | Ep. 46 [Uncapped with Jack Altman] | https://www.youtube.com/watch?v=HC0QkUNXNtg
-  * KI-SCHOCK IN EUROPA: EU-Verbot für US-KI-Tools (ChatGPT, Gemini, Claude) | KI-Ne [Digitale Profis] | https://www.youtube.com/watch?v=vKwzdZ1IVn0
+  * NEW Claude’s Agent Swarm UPDATE! [Julian Goldie SEO] | https://www.youtube.com/watch?v=bDn4UTPQYlQ
 
 DEPENDENCY FLAGS: none

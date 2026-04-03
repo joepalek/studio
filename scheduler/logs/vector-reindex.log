@@ -119,3 +119,28 @@
 [2026-04-01 09:00:53] STDERR: python-dotenv could not parse statement starting at line 4
 [2026-04-01 09:00:53] VectorReindex complete — exit code 0
 [Wed 04/01/2026  9:00:54.13] Done 
+[Thu 04/02/2026  1:15:01.91] VectorReindex starting 
+[2026-04-02 01:15:02] VectorReindex starting
+[2026-04-02 01:15:14] [studio-context.md]
+[2026-04-02 01:15:14] blockers: []
+[2026-04-02 01:15:14]       next_action: Resume late-game progression implementation
+[2026-04-02 01:15:14]   strategy_notes: []
+[2026-04-02 01:15:14] 
+[2026-04-02 01:15:14] ### whatnot-apps
+[2026-04-02 01:15:14]   _schema_version: 1.0
+[2026-04-02 01:15:14]   _project: whatnot-apps
+[2026-04-02 01:15:14]   _folder: whatnot-apps
+[2026-04-02 01:15:14]   _created: 2026-03-12
+[2026-04-02 01:15:14]   _last_updated: 2026-03-25
+[2026-04-02 01:15:14]   project: 
+[2026-04-02 01:15:14]     name: Whatnot Applications
+[2026-04-02 01:15:14]     description: Job application materials for Whatnot remote roles: Fraud Agent, Trust & Safety Agent, CX Agent Overnight.
+[2026-04-02 01:15:14] 
+[2026-04-02 01:15:14] [session-startup: path=vector, 424 chars / ~106 tokens]
+[2026-04-02 01:15:14] STDERR: G:/My Drive/Projects/_studio\context-vector-store.py:11: SyntaxWarning: invalid escape sequence '\V'
+[2026-04-02 01:15:14] STDERR:   Nightly reindex: Studio\VectorReindex at 01:15 AM
+[2026-04-02 01:15:14] STDERR: python-dotenv could not parse statement starting at line 2
+[2026-04-02 01:15:14] STDERR: python-dotenv could not parse statement starting at line 3
+[2026-04-02 01:15:14] STDERR: python-dotenv could not parse statement starting at line 4
+[2026-04-02 01:15:14] VectorReindex complete — exit code 0
+[Thu 04/02/2026  1:15:14.84] Done 

@@ -1,12 +1,32 @@
 {
   "_schema": "1.0",
   "_description": "AI services ranked by category. Updated daily 05:30 AM.",
-  "generated_at": "2026-04-01T15:17:48Z",
-  "date": "2026-04-01",
+  "generated_at": "2026-04-02T10:30:03Z",
+  "date": "2026-04-02",
   "categories": {
     "chat": [
       {
         "rank": 1,
+        "name": "Claude Opus 4.6",
+        "provider": "Anthropic",
+        "url": "https://console.anthropic.com",
+        "tier": "paid",
+        "notes": "executive decisions only",
+        "buzz_score": 1,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "Claude Haiku 4.5",
+        "provider": "Anthropic",
+        "url": "https://console.anthropic.com",
+        "tier": "paid",
+        "notes": "batch tasks where Gemini unavailable",
+        "buzz_score": 1,
+        "trending": false
+      },
+      {
+        "rank": 3,
         "name": "Mistral 7B (free)",
         "provider": "OpenRouter",
         "url": "https://openrouter.ai",
@@ -16,33 +36,13 @@
         "trending": false
       },
       {
-        "rank": 2,
+        "rank": 4,
         "name": "Ministral 8B",
         "provider": "Mistral AI",
         "url": "https://console.mistral.ai",
         "tier": "free",
         "notes": "bulk lightweight scoring",
         "buzz_score": 1,
-        "trending": false
-      },
-      {
-        "rank": 3,
-        "name": "Claude Opus 4.6",
-        "provider": "Anthropic",
-        "url": "https://console.anthropic.com",
-        "tier": "paid",
-        "notes": "executive decisions only",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 4,
-        "name": "Claude Haiku 4.5",
-        "provider": "Anthropic",
-        "url": "https://console.anthropic.com",
-        "tier": "paid",
-        "notes": "batch tasks where Gemini unavailable",
-        "buzz_score": 0,
         "trending": false
       },
       {
@@ -413,6 +413,16 @@
     "code": [
       {
         "rank": 1,
+        "name": "Claude Sonnet 4.6",
+        "provider": "Anthropic",
+        "url": "https://console.anthropic.com",
+        "tier": "paid",
+        "notes": "primary reasoning engine",
+        "buzz_score": 1,
+        "trending": false
+      },
+      {
+        "rank": 2,
         "name": "Mistral Small 3.1",
         "provider": "Mistral AI",
         "url": "https://console.mistral.ai",
@@ -422,7 +432,7 @@
         "trending": false
       },
       {
-        "rank": 2,
+        "rank": 3,
         "name": "Mistral Large 3",
         "provider": "Mistral AI",
         "url": "https://console.mistral.ai",
@@ -432,23 +442,13 @@
         "trending": false
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "Codestral",
         "provider": "Mistral AI",
         "url": "https://console.mistral.ai",
         "tier": "free",
         "notes": "code-specific tasks",
         "buzz_score": 1,
-        "trending": false
-      },
-      {
-        "rank": 4,
-        "name": "Claude Sonnet 4.6",
-        "provider": "Anthropic",
-        "url": "https://console.anthropic.com",
-        "tier": "paid",
-        "notes": "primary reasoning engine",
-        "buzz_score": 0,
         "trending": false
       },
       {

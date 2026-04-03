@@ -1,0 +1,87 @@
+[2026-04-02 17:42:46] INFO === sanctions-ingestor START === pool #73 | dry=True
+[2026-04-02 17:42:46] INFO Step 1: Fetching all sanctions sources...
+[2026-04-02 17:43:09] INFO Sources OK: ['UN', 'OFAC_SDN', 'OFAC_CONS'] | Failed: ['EU', 'UK_OFSI']
+[2026-04-02 17:43:09] INFO HOPPER: pull logged, checksum=3aa639126cc1
+[2026-04-02 17:43:09] INFO Step 2: Parsing all sources...
+[2026-04-02 17:43:10] INFO Total records parsed: 20146
+[2026-04-02 17:43:10] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 17:43:17] INFO Normalized via groq/llama-3.3-70b-versatile (6539ms)
+[2026-04-02 17:43:17] INFO Step 4: Classifying with Ollama...
+[2026-04-02 17:43:32] INFO Classified: ROUTINE via ollama/gemma3:4b
+[2026-04-02 17:43:32] INFO Step 5: Synthesizing with Claude...
+[2026-04-02 17:43:32] WARNING Claude synthesis failed: HTTP Error 400: Bad Request
+[2026-04-02 17:43:32] INFO Step 6: Delivering outputs...
+[2026-04-02 17:43:32] INFO [DRY RUN] Delivery skipped
+[2026-04-02 17:43:32] INFO   Total records: 20146
+[2026-04-02 17:43:32] INFO   Per source: {'UN': 1005, 'OFAC_SDN': 18699, 'OFAC_CONS': 442}
+[2026-04-02 17:43:32] INFO   Classification: ROUTINE
+[2026-04-02 17:43:32] INFO   Synthesis: Synthesis unavailable — HTTP Error 400: Bad Request
+[2026-04-02 17:43:32] INFO state.json saved — run #1
+[2026-04-02 17:43:32] INFO === COMPLETE === 46.3s | 20146 records | ROUTINE
+[2026-04-02 19:16:11] INFO === sanctions-ingestor START === pool #73 | dry=True
+[2026-04-02 19:16:11] INFO Step 1: Fetching all sanctions sources...
+[2026-04-02 19:17:06] INFO Sources OK: ['UN', 'EU', 'OFAC_SDN', 'OFAC_CONS'] | Failed: ['UK_OFSI']
+[2026-04-02 19:17:06] INFO HOPPER: pull logged, checksum=cf52fa36483d
+[2026-04-02 19:17:06] INFO Step 2: Parsing all sources...
+[2026-04-02 19:17:08] INFO Total records parsed: 20146
+[2026-04-02 19:17:08] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 19:17:14] INFO Normalized via groq/llama-3.3-70b-versatile (6652ms)
+[2026-04-02 19:17:15] INFO Step 4: Classifying with Ollama...
+[2026-04-02 19:17:28] INFO Classified: ROUTINE via ollama/gemma3:4b
+[2026-04-02 19:17:28] INFO Step 5: Synthesizing with Claude...
+[2026-04-02 19:17:28] WARNING Claude synthesis failed: HTTP Error 400: Bad Request
+[2026-04-02 19:17:28] INFO Step 6: Delivering outputs...
+[2026-04-02 19:17:28] INFO [DRY RUN] Delivery skipped
+[2026-04-02 19:17:28] INFO   Total records: 20146
+[2026-04-02 19:17:28] INFO   Per source: {'UN': 1005, 'OFAC_SDN': 18699, 'OFAC_CONS': 442}
+[2026-04-02 19:17:28] INFO   Classification: ROUTINE
+[2026-04-02 19:17:28] INFO   Synthesis: Synthesis unavailable — HTTP Error 400: Bad Request
+[2026-04-02 19:17:28] INFO state.json saved — run #1
+[2026-04-02 19:17:28] INFO === COMPLETE === 77.7s | 20146 records | ROUTINE
+[2026-04-02 19:19:39] INFO === sanctions-ingestor START === pool #73 | dry=True
+[2026-04-02 19:19:39] INFO Step 1: Fetching all sanctions sources...
+[2026-04-02 19:21:06] INFO Sources OK: ['UN', 'EU', 'OFAC_SDN', 'OFAC_CONS'] | Failed: ['UK_OFSI']
+[2026-04-02 19:21:06] INFO HOPPER: pull logged, checksum=cf52fa36483d
+[2026-04-02 19:21:06] INFO Step 2: Parsing all sources...
+[2026-04-02 19:21:08] INFO Total records parsed: 20146
+[2026-04-02 19:21:08] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 19:21:15] INFO Normalized via groq/llama-3.3-70b-versatile (6350ms)
+[2026-04-02 19:21:15] INFO Step 4: Classifying with Ollama...
+[2026-04-02 19:21:23] INFO Classified: ROUTINE via ollama/gemma3:4b
+[2026-04-02 19:21:23] INFO Step 5: Synthesizing with Claude...
+[2026-04-02 19:21:23] WARNING Claude synthesis failed: HTTP Error 400: Bad Request
+[2026-04-02 19:21:23] INFO Step 6: Delivering outputs...
+[2026-04-02 19:21:23] INFO [DRY RUN] Delivery skipped
+[2026-04-02 19:21:23] INFO   Total records: 20146
+[2026-04-02 19:21:23] INFO   Per source: {'UN': 1005, 'OFAC_SDN': 18699, 'OFAC_CONS': 442}
+[2026-04-02 19:21:23] INFO   Classification: ROUTINE
+[2026-04-02 19:21:23] INFO   Synthesis: Synthesis unavailable — HTTP Error 400: Bad Request
+[2026-04-02 19:21:23] INFO state.json saved — run #1
+[2026-04-02 19:21:23] INFO === COMPLETE === 103.5s | 20146 records | ROUTINE
+[2026-04-02 19:26:26] INFO === sanctions-ingestor START === pool #73 | dry=True
+[2026-04-02 19:26:26] INFO Step 1: Fetching all sanctions sources...
+[2026-04-02 19:27:18] INFO Sources OK: ['UN', 'EU', 'OFAC_SDN', 'OFAC_CONS'] | Failed: ['UK_OFSI']
+[2026-04-02 19:27:18] INFO HOPPER: pull logged, checksum=cf52fa36483d
+[2026-04-02 19:27:18] INFO Step 2: Parsing all sources...
+[2026-04-02 19:27:19] INFO Total records parsed: 20146
+[2026-04-02 19:27:19] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 19:27:26] INFO Normalized via groq/llama-3.3-70b-versatile (6638ms)
+[2026-04-02 19:27:26] INFO Step 4: Classifying with Ollama...
+[2026-04-02 19:27:39] INFO Classified: ROUTINE via ollama/gemma3:4b
+[2026-04-02 19:27:39] INFO Step 5: Synthesizing with Claude...
+[2026-04-02 19:27:45] INFO Synthesized via mistral/mistral-large-latest (5023ms)
+[2026-04-02 19:27:45] INFO Step 6: Delivering outputs...
+[2026-04-02 19:27:45] INFO [DRY RUN] Delivery skipped
+[2026-04-02 19:27:45] INFO   Total records: 20146
+[2026-04-02 19:27:45] INFO   Per source: {'UN': 1005, 'OFAC_SDN': 18699, 'OFAC_CONS': 442}
+[2026-04-02 19:27:45] INFO   Classification: ROUTINE
+[2026-04-02 19:27:45] INFO   Synthesis: 1) The updated jurisdictions include the UN (1,005 entities), OFAC’s SDN list (18,699 entities), OFAC’s Consolidated list (442 entities), and the EU (count not specified in the summary), with a total of 20,146 entities across all lists.
+
+2) Notable new individual designations visible in the sample i
+[2026-04-02 19:27:45] INFO state.json saved — run #1
+[2026-04-02 19:27:45] INFO === COMPLETE === 78.8s | 20146 records | ROUTINE
+[2026-04-02 19:29:00] INFO === sanctions-ingestor START === pool #73 | dry=False
+[2026-04-02 19:29:00] INFO Step 1: Fetching all sanctions sources...
+[2026-04-02 19:32:07] INFO Sources OK: ['UN', 'EU', 'OFAC_SDN', 'OFAC_CONS'] | Failed: ['UK_OFSI']
+[2026-04-02 19:32:07] INFO HOPPER: no change since last run — skipping
+[2026-04-02 19:32:07] INFO state.json saved — run #1

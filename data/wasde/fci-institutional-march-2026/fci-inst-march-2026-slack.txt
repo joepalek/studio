@@ -1,0 +1,11 @@
+*FCI WASDE Alert — March 2026* | → NEUTRAL — No Significant Change
+
+:white_circle: Wheat: Global supplies rise slightly due to higher output in Ukraine and Kazakhstan, offset by Australia’s production cut -- NEUTRAL for prices.
+:large_green_circle: Corn: Global coarse grain production and ending stocks increase -- BEARISH for prices.
+:white_circle: Soybeans: Imports and crush rise with unchanged ending stocks -- NEUTRAL for prices.
+:large_green_circle: Cotton: Global production rises while consumption falls, increasing ending stocks -- BEARISH for prices.
+:red_circle: Rice: The outlook for 2025/26 U.S. rice this month is for lower supplies -- BULLISH for prices
+
+_Overall: MIXED -- Monitor corn and cotton for potential price declines while wheat, soybeans, and rice remain stable; adjust procurement timing accordingly._
+
+Next release: *April 9, 2026*  |  Source: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf

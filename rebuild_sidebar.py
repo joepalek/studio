@@ -16,7 +16,7 @@ src = open(path, encoding='utf-8', errors='replace').read()
 
 # ── 2. Strip everything between <body> and the first permanent landmark ────
 # Permanent landmark = <!-- TAB BAR: (never changes, always present)
-TABBAR_MARKER = '<!-- TAB BAR: STATUS | INBOX | CHAT | PLAN | ASSETS | DATA | CFG -->'
+TABBAR_MARKER = '<!-- TAB BAR: INBOX ONLY -->'
 body_pos   = src.find('<body>')
 tabbar_pos = src.find(TABBAR_MARKER)
 

@@ -1,0 +1,240 @@
+[2026-04-02 19:53:15] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 19:53:15] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0426.pdf
+[2026-04-02 19:53:15] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 19:53:16] WARNING Fetch attempt 1 failed: PDF too small (369 bytes) — likely not released yet
+[2026-04-02 19:53:26] WARNING Fetch attempt 2 failed: PDF too small (369 bytes) — likely not released yet
+[2026-04-02 19:53:36] WARNING Fetch attempt 3 failed: PDF too small (369 bytes) — likely not released yet
+[2026-04-02 19:53:36] ERROR CIRCUIT BREAKER: 3 consecutive failures
+[2026-04-02 19:53:36] ERROR PIPELINE FAILED: PDF too small (369 bytes) — likely not released yet
+[2026-04-02 19:53:36] INFO state.json saved — run #0
+[2026-04-02 20:15:18] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:15:18] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:15:18] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:15:25] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:15:25] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:15:25] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:15:25] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:15:25] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:15:25] ERROR PIPELINE FAILED: Expecting ',' delimiter: line 11 column 5 (char 671)
+[2026-04-02 20:15:25] INFO state.json saved — run #0
+[2026-04-02 20:15:55] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:15:55] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:15:55] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:16:02] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:16:02] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:16:02] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:16:02] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:16:02] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:16:02] ERROR PIPELINE FAILED: Expecting ',' delimiter: line 11 column 5 (char 671)
+[2026-04-02 20:16:02] INFO state.json saved — run #0
+[2026-04-02 20:16:24] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:16:24] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:16:24] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:16:30] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:16:30] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:16:30] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:16:30] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:16:30] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:16:30] ERROR PIPELINE FAILED: Expecting ',' delimiter: line 11 column 5 (char 671)
+[2026-04-02 20:16:30] INFO state.json saved — run #0
+[2026-04-02 20:17:53] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:17:53] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:17:53] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:18:00] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:18:00] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:18:00] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:18:00] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:18:00] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:18:02] INFO Normalized via groq/llama-3.3-70b-versatile (1180ms)
+[2026-04-02 20:18:02] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:18:18] INFO Classified: BEARISH via ollama/gemma3:4b
+[2026-04-02 20:18:18] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:18:18] ERROR PIPELINE FAILED: 'Commodity'
+[2026-04-02 20:18:18] INFO state.json saved — run #0
+[2026-04-02 20:18:57] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:18:57] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:18:57] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:19:05] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:19:05] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:19:05] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:19:05] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:19:05] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:19:06] INFO Normalized via groq/llama-3.3-70b-versatile (1250ms)
+[2026-04-02 20:19:06] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:19:17] INFO Classified: BEARISH via ollama/gemma3:4b
+[2026-04-02 20:19:17] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:19:17] ERROR PIPELINE FAILED: 'Commodity'
+[2026-04-02 20:19:17] INFO state.json saved — run #0
+[2026-04-02 20:20:30] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:20:30] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:20:30] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:20:38] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:20:38] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:20:38] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:20:38] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:20:38] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:20:39] INFO Normalized via groq/llama-3.3-70b-versatile (918ms)
+[2026-04-02 20:20:39] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:20:43] INFO Classified: BEARISH via ollama/gemma3:4b
+[2026-04-02 20:20:43] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:20:43] ERROR PIPELINE FAILED: 'Commodity'
+[2026-04-02 20:20:43] INFO state.json saved — run #0
+[2026-04-02 20:21:00] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:21:00] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:21:00] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:21:06] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:21:06] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:21:06] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:21:06] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:21:06] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:21:07] INFO Normalized via groq/llama-3.3-70b-versatile (970ms)
+[2026-04-02 20:21:07] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:21:15] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 20:21:15] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:21:15] ERROR PIPELINE FAILED: 'Commodity'
+[2026-04-02 20:21:15] INFO state.json saved — run #0
+[2026-04-02 20:22:11] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:22:11] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:22:11] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:22:19] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:22:19] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:22:19] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:22:19] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:22:19] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:22:20] INFO Normalized via groq/llama-3.3-70b-versatile (974ms)
+[2026-04-02 20:22:20] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:22:25] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 20:22:25] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:22:25] ERROR PIPELINE FAILED: 'Commodity'
+[2026-04-02 20:22:25] INFO state.json saved — run #0
+[2026-04-02 20:23:12] INFO Normalized via groq/llama-3.3-70b-versatile (1110ms)
+[2026-04-02 20:24:04] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:24:04] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:24:04] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:24:11] INFO Fetched 99,013 chars on attempt 1
+[2026-04-02 20:24:11] INFO HOPPER: 99,013 bytes, checksum=8fffd94fe05c
+[2026-04-02 20:24:11] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:24:11] INFO Parsed 5 commodities | 4 high-confidence
+[2026-04-02 20:24:11] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:24:12] INFO Normalized via groq/llama-3.3-70b-versatile (912ms)
+[2026-04-02 20:24:12] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:24:21] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 20:24:21] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:24:25] INFO Synthesized via mistral/mistral-large-latest (4572ms)
+[2026-04-02 20:24:25] INFO Step 6: Delivering outputs...
+[2026-04-02 20:24:25] INFO [DRY RUN] Delivery skipped — synthesis preview:
+[2026-04-02 20:24:25] INFO Wheat: Production revised down sharply to 0.5 million bushels -- BULLISH for prices
+Corn: Ending stocks projected at 0.2 million bushels with no prior comparison -- NEUTRAL for prices
+Soybeans: Confidence medium with incomplete data -- NEUTRAL for prices
+Cotton: Production unchanged at 242,825 units
+[2026-04-02 20:24:25] INFO [DRY RUN] HTML preview written: G:\My Drive\Projects\_studio\data\wasde\wasde-parser-dryrun.html
+[2026-04-02 20:24:25] INFO state.json saved — run #1
+[2026-04-02 20:24:25] INFO === wasde-parser COMPLETE === 21.4s | 5 commodities | NEUTRAL
+[2026-04-02 20:53:12] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:53:12] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:53:12] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:53:18] INFO Fetched 104,123 chars on attempt 1
+[2026-04-02 20:53:18] INFO HOPPER: 104,123 bytes, checksum=aa117945e48c
+[2026-04-02 20:53:18] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:53:18] INFO Parsed 5 commodities | 0 high-confidence
+[2026-04-02 20:53:18] WARNING No high-confidence records — possible parser failure or pre-release PDF
+[2026-04-02 20:53:18] INFO state.json saved — run #1
+[2026-04-02 20:54:38] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 20:54:38] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 20:54:38] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 20:54:45] INFO Fetched 104,123 chars on attempt 1
+[2026-04-02 20:54:45] INFO HOPPER: 104,123 bytes, checksum=aa117945e48c
+[2026-04-02 20:54:45] INFO Step 2: Parsing commodity tables...
+[2026-04-02 20:54:45] INFO Parsed 5 commodities | 0 high-confidence | 5 narrative-only
+[2026-04-02 20:54:45] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 20:54:47] INFO Normalized via groq/llama-3.3-70b-versatile (2074ms)
+[2026-04-02 20:54:47] INFO Step 4: Classifying with Ollama...
+[2026-04-02 20:55:05] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 20:55:05] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 20:55:09] INFO Synthesized via mistral/mistral-large-latest (3835ms)
+[2026-04-02 20:55:09] INFO Step 6: Delivering outputs...
+[2026-04-02 20:55:09] INFO [DRY RUN] Delivery skipped — synthesis preview:
+[2026-04-02 20:55:09] INFO Wheat: No changes in supply and use categories -- NEUTRAL.
+Corn: Global coarse grain production forecast higher -- BEARISH for prices.
+Soybeans: No clear supply or demand changes identified -- NEUTRAL. Note: Prior month comparison unavailable — directional confidence low.
+Cotton: Global production f
+[2026-04-02 20:55:09] INFO [DRY RUN] HTML preview written: G:\My Drive\Projects\_studio\data\wasde\wasde-parser-dryrun.html
+[2026-04-02 20:55:09] INFO state.json saved — run #2
+[2026-04-02 20:55:09] INFO === wasde-parser COMPLETE === 30.5s | 5 commodities | NEUTRAL
+[2026-04-02 21:08:19] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 21:08:19] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 21:08:19] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 21:08:26] INFO Fetched 104,123 chars on attempt 1
+[2026-04-02 21:08:26] INFO HOPPER: source unchanged since last run — skipping processing
+[2026-04-02 21:08:26] INFO state.json saved — run #2
+[2026-04-02 21:08:48] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 21:08:48] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 21:08:48] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 21:08:56] INFO Fetched 104,123 chars on attempt 1
+[2026-04-02 21:08:56] INFO HOPPER: 104,123 bytes, checksum=aa117945e48c
+[2026-04-02 21:08:56] INFO Step 2: Parsing commodity tables...
+[2026-04-02 21:08:56] INFO Parsed 5 commodities | 0 high-confidence | 5 narrative-only
+[2026-04-02 21:08:56] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 21:08:58] WARNING Gemini returned malformed JSON — falling back to raw records
+[2026-04-02 21:08:58] INFO Step 4: Classifying with Ollama...
+[2026-04-02 21:09:13] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:09:13] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 21:09:19] INFO Synthesized via mistral/mistral-large-latest (5275ms)
+[2026-04-02 21:09:19] INFO Step 6: Delivering outputs...
+[2026-04-02 21:09:19] INFO [DRY RUN] Delivery skipped — synthesis preview:
+[2026-04-02 21:09:19] INFO Wheat: Global supplies rise slightly due to higher output in Ukraine and Kazakhstan, offset by a 1M ton production cut in Australia -- NEUTRAL (Note: Prior month comparison unavailable — directional confidence low.)
+Corn: Global coarse grain production forecast up 2.7M tons with higher trade and end
+[2026-04-02 21:09:19] INFO [DRY RUN] HTML preview written: G:\My Drive\Projects\_studio\data\wasde\wasde-parser-dryrun.html
+[2026-04-02 21:09:19] INFO state.json saved — run #3
+[2026-04-02 21:09:19] INFO === wasde-parser COMPLETE === 30.3s | 5 commodities | NEUTRAL
+[2026-04-02 21:09:59] INFO Normalized via groq/llama-3.3-70b-versatile (1860ms)
+[2026-04-02 21:10:04] INFO Synthesized via mistral/mistral-large-latest (5051ms)
+[2026-04-02 21:10:08] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:11:59] INFO Normalized via groq/llama-3.3-70b-versatile (1201ms)
+[2026-04-02 21:12:02] INFO Synthesized via mistral/mistral-large-latest (3550ms)
+[2026-04-02 21:12:07] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:17:06] INFO Normalized via groq/llama-3.3-70b-versatile (1348ms)
+[2026-04-02 21:17:12] INFO Synthesized via mistral/mistral-large-latest (5649ms)
+[2026-04-02 21:17:30] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:17:41] INFO Normalized via groq/llama-3.3-70b-versatile (1218ms)
+[2026-04-02 21:17:45] INFO Synthesized via mistral/mistral-large-latest (4145ms)
+[2026-04-02 21:17:51] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:18:26] INFO Normalized via groq/llama-3.3-70b-versatile (1192ms)
+[2026-04-02 21:19:19] INFO Normalized via groq/llama-3.3-70b-versatile (1134ms)
+[2026-04-02 21:19:24] INFO Synthesized via mistral/mistral-large-latest (4975ms)
+[2026-04-02 21:19:24] INFO Signal override: Rice LLM=NEUTRAL → BULLISH
+[2026-04-02 21:19:28] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:20:46] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-02 21:20:46] INFO Source URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-02 21:20:46] INFO Step 1: Fetching WASDE PDF...
+[2026-04-02 21:20:53] INFO Fetched 104,123 chars on attempt 1
+[2026-04-02 21:20:53] INFO HOPPER: 104,123 bytes, checksum=aa117945e48c
+[2026-04-02 21:20:53] INFO Step 2: Parsing commodity tables...
+[2026-04-02 21:20:53] INFO Parsed 5 commodities | 0 high-confidence | 5 narrative-only
+[2026-04-02 21:20:53] INFO Step 3: Normalizing with Gemini...
+[2026-04-02 21:20:55] INFO Normalized via groq/llama-3.3-70b-versatile (1326ms)
+[2026-04-02 21:20:55] INFO Step 4: Classifying with Ollama...
+[2026-04-02 21:20:59] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:20:59] INFO Step 5: Synthesizing with Mistral (reasoning task_type)...
+[2026-04-02 21:21:03] INFO Synthesized via mistral/mistral-large-latest (3778ms)
+[2026-04-02 21:21:03] INFO Signal override: Rice LLM=NEUTRAL -> BULLISH
+[2026-04-02 21:21:03] INFO Step 6: Delivering outputs...
+[2026-04-02 21:21:03] INFO [DRY RUN] Delivery skipped — synthesis preview:
+[2026-04-02 21:21:03] INFO Wheat: No changes in U.S. supply, but global production shifts (lower Australia, higher Ukraine/Kazakhstan) -- NEUTRAL for prices.
+Corn: Global coarse grain production and ending stocks rise -- BEARISH for prices.
+Soybeans: Increased imports and crush, but ending stocks unchanged -- NEUTRAL for pric
+[2026-04-02 21:21:03] INFO [DRY RUN] HTML preview written: G:\My Drive\Projects\_studio\data\wasde\wasde-parser-dryrun.html
+[2026-04-02 21:21:03] INFO state.json saved — run #4
+[2026-04-02 21:21:03] INFO === wasde-parser COMPLETE === 16.6s | 5 commodities | NEUTRAL
+[2026-04-02 21:21:49] INFO Normalized via groq/llama-3.3-70b-versatile (1542ms)
+[2026-04-02 21:21:53] INFO Synthesized via mistral/mistral-large-latest (3781ms)
+[2026-04-02 21:21:53] INFO Signal override: Rice LLM=NEUTRAL -> BULLISH
+[2026-04-02 21:21:59] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:23:34] INFO Normalized via groq/llama-3.3-70b-versatile (1512ms)
+[2026-04-02 21:23:39] INFO Synthesized via mistral/mistral-large-latest (4516ms)
+[2026-04-02 21:23:39] INFO Signal override: Rice LLM=NEUTRAL -> BULLISH
+[2026-04-02 21:23:44] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-02 21:37:06] INFO Normalized via groq/llama-3.3-70b-versatile (1320ms)
+[2026-04-02 21:37:11] INFO Synthesized via mistral/mistral-large-latest (4646ms)
+[2026-04-02 21:37:11] INFO Signal override: Rice LLM=NEUTRAL -> BULLISH
+[2026-04-02 21:37:29] INFO Classified: NEUTRAL via ollama/gemma3:4b

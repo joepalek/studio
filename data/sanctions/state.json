@@ -1,0 +1,36 @@
+{
+  "last_run": "2026-04-02T19:32:07.861435",
+  "last_checksum": "cf52fa36483d",
+  "last_record_count": 20146,
+  "last_classification": "ROUTINE",
+  "run_count": 1,
+  "error_count": 0,
+  "last_per_source": {
+    "UN": 1005,
+    "OFAC_SDN": 18699,
+    "OFAC_CONS": 442
+  },
+  "sources_ok": [
+    "UN",
+    "EU",
+    "OFAC_SDN",
+    "OFAC_CONS"
+  ],
+  "sources_failed": [
+    "UK_OFSI"
+  ],
+  "pull_meta": {
+    "pull_timestamp": "2026-04-02T19:27:18.171317",
+    "sources_ok": [
+      "UN",
+      "EU",
+      "OFAC_SDN",
+      "OFAC_CONS"
+    ],
+    "sources_failed": [
+      "UK_OFSI"
+    ],
+    "checksum": "cf52fa36483d"
+  },
+  "handoff_note": "No change. Last: 2026-04-02"
+}

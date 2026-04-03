@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Task: \Studio\SanctionsIngestor
+  Agent: sanctions_ingestor.py | Pool #73
+  Expected runtime: ~120s | Hamilton TTL in script: 480s
+  Hard kill (ExecutionTimeLimit): PT16M (960s = 2x TTL)
+
+  REGISTER:
+    schtasks /Create /XML "G:\My Drive\Projects\_studio\scheduler\SanctionsIngestor.xml" /TN "\Studio\SanctionsIngestor" /F
+
+  TEST NOW:
+    schtasks /Run /TN "\Studio\SanctionsIngestor"
+
+  CHECK LOG:
+    type "G:\My Drive\Projects\_studio\logs\sanctions-ingestor.log"
+-->
+<Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>Sanctions Ingestor | Pool #73 | 5 sources: UN, EU, OFAC SDN, OFAC CONS, UK OFSI | Daily 02:00 | Expected 120s | TTL 480s</Description>
+    <Author>Studio</Author>
+  </RegistrationInfo>
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>2026-04-04T02:00:00</StartBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByDay>
+        <DaysInterval>1</DaysInterval>
+      </ScheduleByDay>
+    </CalendarTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <IdleSettings>
+      <StopOnIdleEnd>false</StopOnIdleEnd>
+      <RestartOnIdle>false</RestartOnIdle>
+    </IdleSettings>
+    <ExecutionTimeLimit>PT16M</ExecutionTimeLimit>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <RunOnlyIfIdle>false</RunOnlyIfIdle>
+    <WakeToRun>false</WakeToRun>
+    <Priority>7</Priority>
+    <RestartOnFailure>
+      <Interval>PT5M</Interval>
+      <Count>1</Count>
+    </RestartOnFailure>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>python</Command>
+      <Arguments>"G:\My Drive\Projects\_studio\sanctions_ingestor.py"</Arguments>
+      <WorkingDirectory>G:\My Drive\Projects\_studio</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>

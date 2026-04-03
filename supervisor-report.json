@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-01T23:00:04.869912",
+  "time": "2026-04-02T23:00:04.754606",
   "ollama_up": true,
   "gemini_available": true,
   "providers_available": [
@@ -18,7 +18,8 @@
     "groq/mixtral-8x7b (defunct)",
     "groq/gemma2-9b-it (defunct)",
     "openrouter/deepseek/deepseek-r1:free (defunct)",
-    "openrouter/mistralai/mistral-7b-instruct:free (defunct)"
+    "openrouter/mistralai/mistral-7b-instruct:free (defunct)",
+    "anthropic/claude-sonnet-4-6 (degraded)"
   ],
   "best_free_provider": "groq",
   "free_models": [],
@@ -31,9 +32,12 @@
     "janitor",
     "model-validator",
     "nightly-rollup",
+    "orchestrator",
     "product-archaeology",
+    "sre-scout",
     "supervisor",
-    "vector-reindex"
+    "vector-reindex",
+    "whiteboard-scorer"
   ],
   "work_queue_depth": 0,
   "dispatched": []

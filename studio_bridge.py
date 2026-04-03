@@ -1,196 +1,339 @@
 """
-studio_bridge.py — Local HTTP bridge for sidebar chat
-Port 11435. Endpoints: GET /ping  GET /context  POST /chat
+Studio Bridge - REST API for sidebar to Inbox Log + Supervisor Integration
+Location: G:/My Drive/Projects/_studio/studio_bridge.py
+Execute: VS Code terminal - python studio_bridge.py
 """
-import http.server, json, subprocess, sys, os, urllib.request
 
-PORT = 11435
-STUDIO = "G:/My Drive/Projects/_studio"
-OLLAMA = "http://localhost:11434"
+from flask import Flask, request, jsonify, make_response, send_file, abort
+from datetime import datetime
+import json
+import os
+from pathlib import Path
 
-def get_context(query=None, budget=2000):
-    """Get studio context with larger budget for targeted queries."""
-    try:
-        sys.path.insert(0, STUDIO)
-        import importlib.util
-        spec = importlib.util.spec_from_file_location(
-            "cvs", STUDIO + "/context-vector-store.py")
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
+app = Flask(__name__)
 
-        import chromadb
-        client = chromadb.PersistentClient(path=STUDIO + "/vector-memory")
-        collection = client.get_or_create_collection(
-            name="studio_context",
-            metadata={"hnsw:space": "cosine"}
-        )
+@app.after_request
+def add_cors_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    return response
 
-        q = query or "current state active projects recent decisions priorities"
-        results = collection.query(query_texts=[q], n_results=10)
+@app.route('/', methods=['OPTIONS'])
+@app.route('/<path:path>', methods=['OPTIONS'])
+def handle_options(path=None):
+    return '', 204
 
-        chunks = results["documents"][0] if results["documents"] else []
-        sources = [m.get("source","?") for m in (results["metadatas"][0] if results["metadatas"] else [])]
+STUDIO_DIR = Path(r"G:\My Drive\Projects\_studio")
+INBOX_LOG_FILE = STUDIO_DIR / "inbox-log.jsonl"
+SUPERVISOR_LOG_FILE = STUDIO_DIR / "supervisor-inbox-log.jsonl"
 
-        output_lines = []
-        used = 0
-        for chunk, source in zip(chunks, sources):
-            entry = f"[{source}]\n{chunk}"
-            if used + len(entry) > budget:
-                break
-            output_lines.append(entry)
-            used += len(entry)
+if not INBOX_LOG_FILE.exists():
+    INBOX_LOG_FILE.touch()
+if not SUPERVISOR_LOG_FILE.exists():
+    SUPERVISOR_LOG_FILE.touch()
 
-        return "\n\n".join(output_lines) if output_lines else "[no relevant context found]"
+# Track supervisor messages for status updates
+supervisor_messages = {}
 
-    except Exception as e:
+@app.route('/inbox-log', methods=['GET'])
+def get_inbox_log():
+    if INBOX_LOG_FILE.exists():
         try:
-            result = subprocess.run(
-                [sys.executable, STUDIO + "/session-startup.py"],
-                capture_output=True, text=True, timeout=10, cwd=STUDIO)
-            return result.stdout.strip()
-        except Exception as e2:
-            return "[context unavailable: " + str(e2)[:80] + "]"
+            with open(INBOX_LOG_FILE, 'r', encoding='utf-8') as f:
+                lines = [json.loads(line) for line in f if line.strip()]
+            return jsonify(lines)
+        except Exception as e:
+            return jsonify({'error': str(e)}), 500
+    return jsonify([])
 
-def ollama_generate(model, prompt):
-    data = json.dumps({"model": model, "prompt": prompt, "stream": False}).encode()
-    req = urllib.request.Request(OLLAMA + "/api/generate", data=data,
-        headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        return json.loads(resp.read()).get("response", "")
-
-class Handler(http.server.BaseHTTPRequestHandler):
-    def log_message(self, fmt, *args): pass
-
-    def cors(self):
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
-
-    def do_OPTIONS(self):
-        self.send_response(200); self.cors(); self.end_headers()
-
-    def do_GET(self):
-        if self.path.startswith("/context"):
-            ctx = get_context()
-            body = json.dumps({"context": ctx}).encode()
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.cors(); self.end_headers()
-            self.wfile.write(body)
-        elif self.path == "/ping":
-            self.send_response(200); self.cors()
-            self.end_headers(); self.wfile.write(b"ok")
-        else:
-            self.send_response(404); self.end_headers()
-
-    def do_POST(self):
-        if self.path == "/chat":
-            length = int(self.headers.get("Content-Length", 0))
-            payload = json.loads(self.rfile.read(length))
-            model   = payload.get("model", "gemma3:4b")
-            message = payload.get("message", "")
-            ctx     = get_context(message, budget=2500)
-            prompt = (
-                "You are the Studio AI for Joe Palek's autonomous AI studio.\n"
-                "Answer ONLY from the context below. Be concise and direct.\n"
-                "If the context does not contain the answer, say so clearly.\n\n"
-                "STUDIO CONTEXT:\n" + ctx + "\n\n"
-                "User: " + message + "\nAssistant:"
-            )
-            try:
-                response = ollama_generate(model, prompt)
-                body = json.dumps({"response": response, "ctx_len": len(ctx)}).encode()
-                self.send_response(200)
-                self.send_header("Content-Type", "application/json")
-                self.cors(); self.end_headers()
-                self.wfile.write(body)
-            except Exception as e:
-                err = json.dumps({"error": str(e)}).encode()
-                self.send_response(500)
-                self.send_header("Content-Type", "application/json")
-                self.cors(); self.end_headers()
-                self.wfile.write(err)
-        elif self.path == "/answer":
-            # Write sidebar answers back to mobile-inbox.json
-            length = int(self.headers.get("Content-Length", 0))
-            payload = json.loads(self.rfile.read(length))
-            item_id = payload.get("id", "")
-            answer  = payload.get("answer", "")
-            if not item_id or not answer:
-                self.send_response(400); self.cors(); self.end_headers()
-                self.wfile.write(b'{"error":"missing id or answer"}'); return
-            try:
-                mob_path = STUDIO + "/mobile-inbox.json"
-                mob = json.load(open(mob_path, encoding="utf-8"))
-                updated = False
-                for item in mob:
-                    if item.get("id") == item_id:
-                        item["status"] = "answered"
-                        item["answer"] = answer
-                        item["answered_at"] = __import__("datetime").datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
-                        item["answered_via"] = "sidebar"
-                        updated = True
-                        break
-                if updated:
-                    json.dump(mob, open(mob_path, "w", encoding="utf-8"), indent=2)
-                    body = json.dumps({"ok": True, "id": item_id}).encode()
-                else:
-                    # ID not found - still save to decision-log
-                    body = json.dumps({"ok": True, "id": item_id, "note": "id not in mob, logged only"}).encode()
-                # Append to decision-log.json
-                dl_path = STUDIO + "/decision-log.json"
-                try:
-                    dl = json.load(open(dl_path, encoding="utf-8")) if __import__("os").path.exists(dl_path) else []
-                    dl.append({"id": item_id, "answer": answer, "date": __import__("datetime").datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "sidebar"})
-                    json.dump(dl, open(dl_path, "w", encoding="utf-8"), indent=2)
-                except: pass
-                self.send_response(200)
-                self.send_header("Content-Type", "application/json")
-                self.cors(); self.end_headers()
-                self.wfile.write(body)
-            except Exception as e:
-                err = json.dumps({"error": str(e)}).encode()
-                self.send_response(500)
-                self.send_header("Content-Type", "application/json")
-                self.cors(); self.end_headers()
-                self.wfile.write(err)
-        elif self.path == "/run-agent":
-            # Trigger a studio agent by name and mode
-            length = int(self.headers.get("Content-Length", 0))
-            payload = json.loads(self.rfile.read(length))
-            agent = payload.get("agent", "")
-            mode  = payload.get("mode", "delta")
-            agent_map = {
-                "weekend-hunter": (
-                    sys.executable,
-                    STUDIO + "/weekend-hunter/weekend_hunter_agent.py",
-                    "--mode", mode
-                )
+@app.route('/inbox-log', methods=['POST'])
+def append_inbox_log():
+    """
+    POST answer from sidebar.
+    Filter: if acknowledge-only, just log.
+    Filter: if actionable, log + send to supervisor.
+    """
+    try:
+        entry = request.json
+        entry['timestamp'] = entry.get('timestamp', datetime.now().isoformat())
+        
+        # Write to inbox log
+        with open(INBOX_LOG_FILE, 'a', encoding='utf-8', errors='replace') as f:
+            f.write(json.dumps(entry) + '\n')
+        
+        # Determine if actionable
+        is_acknowledge_only = (
+            entry.get('answer', '').lower().strip() in ['ok', 'yes', 'noted', 'acknowledged'] and
+            entry.get('source') == 'supervisor' and
+            entry.get('urgency') == 'INFO'
+        )
+        
+        supervisor_msg = None
+        
+        if not is_acknowledge_only:
+            # This is actionable — send to supervisor
+            supervisor_msg = {
+                'id': f"sup-{entry.get('id')}-{datetime.now().timestamp()}",
+                'inbox_id': entry.get('id'),
+                'question': entry.get('question'),
+                'answer': entry.get('answer'),
+                'project': entry.get('project'),
+                'type': entry.get('type'),
+                'sent_at': datetime.now().isoformat(),
+                'read_at': None,
+                'completed_at': None,
+                'error': None,
+                'status': 'sent'
             }
-            if agent not in agent_map:
-                self.send_response(404); self.cors(); self.end_headers()
-                self.wfile.write(json.dumps({"error": "unknown agent"}).encode())
-                return
-            try:
-                args = list(agent_map[agent])
-                subprocess.Popen(args, cwd=STUDIO,
-                    stdout=open(STUDIO + "/weekend-hunter/hunter.log", "a"),
-                    stderr=subprocess.STDOUT)
-                body = json.dumps({"ok": True, "agent": agent, "mode": mode}).encode()
-                self.send_response(200)
-                self.send_header("Content-Type", "application/json")
-                self.cors(); self.end_headers()
-                self.wfile.write(body)
-            except Exception as e:
-                err = json.dumps({"error": str(e)}).encode()
-                self.send_response(500)
-                self.send_header("Content-Type", "application/json")
-                self.cors(); self.end_headers()
-                self.wfile.write(err)
-        else:
-            self.send_response(404); self.end_headers()
+            
+            # Write to supervisor log
+            with open(SUPERVISOR_LOG_FILE, 'a', encoding='utf-8', errors='replace') as f:
+                f.write(json.dumps(supervisor_msg) + '\n')
+            
+            # Write to supervisor-inbox.json so supervisor sees it as an inbox item
+            supervisor_inbox_path = STUDIO_DIR / "supervisor-inbox.json"
+            sup_inbox = []
+            if supervisor_inbox_path.exists():
+                try:
+                    with open(supervisor_inbox_path, 'r', encoding='utf-8') as f:
+                        sup_inbox = json.load(f)
+                except:
+                    sup_inbox = []
+            
+            # Add as inbox item for supervisor
+            sup_inbox.append({
+                'id': supervisor_msg['id'],
+                'title': f"Human Decision: {entry.get('answer', 'No answer')[:60]}",
+                'finding': f"From: {entry.get('source', 'mobile')} | Project: {entry.get('project', 'studio')}",
+                'urgency': 'WARN',
+                'source': 'human',
+                'type': 'human_decision',
+                'project': entry.get('project'),
+                'original_answer': entry.get('answer'),
+                'timestamp': datetime.now().isoformat(),
+                'status': 'new'
+            })
+            
+            with open(supervisor_inbox_path, 'w', encoding='utf-8', errors='replace') as f:
+                json.dump(sup_inbox, f, indent=2)
+            
+            supervisor_messages[supervisor_msg['id']] = supervisor_msg
+        
+        return jsonify({
+            'ok': True,
+            'logged': True,
+            'actionable': not is_acknowledge_only,
+            'supervisor_msg_id': supervisor_msg['id'] if supervisor_msg else None
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
-if __name__ == "__main__":
-    server = http.server.HTTPServer(("localhost", PORT), Handler)
-    print("Studio bridge on http://localhost:" + str(PORT))
-    server.serve_forever()
+@app.route('/answer', methods=['POST'])
+def answer_from_sidebar():
+    """
+    Simplified endpoint from sidebar: {id, answer}
+    """
+    try:
+        data = request.json
+        answer_id = data.get('id')
+        answer_text = data.get('answer')
+        
+        if not answer_id or not answer_text:
+            return jsonify({'error': 'Missing id or answer'}), 400
+        
+        # Build full log entry
+        full_entry = {
+            'id': answer_id,
+            'answer': answer_text,
+            'timestamp': datetime.now().isoformat(),
+            'question': 'Unknown',
+            'source': 'mobile',
+            'urgency': 'INFO',
+            'project': 'studio',
+            'type': 'decision'
+        }
+        
+        # Write to inbox log — MUST succeed
+        with open(INBOX_LOG_FILE, 'a', encoding='utf-8', errors='replace') as f:
+            f.write(json.dumps(full_entry) + '\n')
+        
+        return jsonify({'ok': True, 'logged': True})
+    except Exception as e:
+        import traceback
+        print(f"[BRIDGE ERROR] /answer failed: {str(e)}")
+        print(traceback.format_exc())
+        return jsonify({'error': str(e)}), 500
+        
+        # Try to find the original question in inbox-log
+        question_data = {}
+        if INBOX_LOG_FILE.exists():
+            try:
+                with open(INBOX_LOG_FILE, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        entry = json.loads(line)
+                        if entry.get('id') == answer_id:
+                            question_data = entry
+                            break
+            except:
+                pass
+        
+        # Build full log entry
+        full_entry = {
+            'id': answer_id,
+            'answer': answer_text,
+            'timestamp': datetime.now().isoformat(),
+            'question': question_data.get('question', 'Unknown'),
+            'source': question_data.get('source', 'mobile'),
+            'urgency': question_data.get('urgency', 'INFO'),
+            'project': question_data.get('project', 'studio'),
+            'type': question_data.get('type', 'decision')
+        }
+        
+        print(f"[BRIDGE] Writing to inbox-log: {INBOX_LOG_FILE}")
+        # Write to inbox log
+        with open(INBOX_LOG_FILE, 'a', encoding='utf-8', errors='replace') as f:
+            f.write(json.dumps(full_entry) + '\n')
+        print(f"[BRIDGE] ✓ Written to inbox-log")
+        
+        # Determine if actionable
+        is_acknowledge_only = (
+            full_entry.get('answer', '').lower().strip() in ['ok', 'yes', 'noted', 'acknowledged'] and
+            full_entry.get('source') == 'supervisor' and
+            full_entry.get('urgency') == 'INFO'
+        )
+        
+        supervisor_msg = None
+        
+        if not is_acknowledge_only:
+            # This is actionable — send to supervisor
+            supervisor_msg = {
+                'id': f"sup-{answer_id}-{datetime.now().timestamp()}",
+                'inbox_id': answer_id,
+                'question': full_entry.get('question'),
+                'answer': answer_text,
+                'project': full_entry.get('project'),
+                'type': full_entry.get('type'),
+                'sent_at': datetime.now().isoformat(),
+                'read_at': None,
+                'completed_at': None,
+                'error': None,
+                'status': 'sent'
+            }
+            
+            # Write to supervisor log
+            with open(SUPERVISOR_LOG_FILE, 'a', encoding='utf-8', errors='replace') as f:
+                f.write(json.dumps(supervisor_msg) + '\n')
+            
+            # Write to supervisor-inbox.json so supervisor sees it
+            supervisor_inbox_path = STUDIO_DIR / "supervisor-inbox.json"
+            sup_inbox = []
+            if supervisor_inbox_path.exists():
+                try:
+                    with open(supervisor_inbox_path, 'r', encoding='utf-8') as f:
+                        sup_inbox = json.load(f)
+                except:
+                    sup_inbox = []
+            
+            sup_inbox.append({
+                'id': supervisor_msg['id'],
+                'title': f"Human Decision: {answer_text[:60]}",
+                'finding': f"From: {full_entry.get('source')} | Project: {full_entry.get('project')}",
+                'urgency': 'WARN',
+                'source': 'human',
+                'type': 'human_decision',
+                'project': full_entry.get('project'),
+                'original_answer': answer_text,
+                'timestamp': datetime.now().isoformat(),
+                'status': 'new'
+            })
+            
+            with open(supervisor_inbox_path, 'w', encoding='utf-8', errors='replace') as f:
+                json.dump(sup_inbox, f, indent=2)
+            
+            supervisor_messages[supervisor_msg['id']] = supervisor_msg
+        
+        return jsonify({
+            'ok': True,
+            'logged': True,
+            'actionable': not is_acknowledge_only,
+            'supervisor_msg_id': supervisor_msg['id'] if supervisor_msg else None
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/supervisor-inbox-log', methods=['GET'])
+def get_supervisor_inbox_log():
+    """Sidebar polls this to get supervisor message status updates"""
+    if SUPERVISOR_LOG_FILE.exists():
+        try:
+            with open(SUPERVISOR_LOG_FILE, 'r', encoding='utf-8') as f:
+                lines = [json.loads(line) for line in f if line.strip()]
+            return jsonify(lines)
+        except Exception as e:
+            return jsonify({'error': str(e)}), 500
+    return jsonify([])
+
+@app.route('/supervisor-status', methods=['POST'])
+def update_supervisor_status():
+    """
+    Supervisor reports back on message status.
+    Body: {supervisor_msg_id, status: 'read' | 'completed' | 'error', error: optional}
+    """
+    try:
+        data = request.json
+        msg_id = data.get('supervisor_msg_id')
+        status = data.get('status')  # 'read', 'completed', 'error'
+        error = data.get('error')
+        
+        # Read current log, find message, update it
+        messages = []
+        if SUPERVISOR_LOG_FILE.exists():
+            with open(SUPERVISOR_LOG_FILE, 'r', encoding='utf-8') as f:
+                messages = [json.loads(line) for line in f if line.strip()]
+        
+        # Find and update
+        for msg in messages:
+            if msg['id'] == msg_id:
+                if status == 'read':
+                    msg['read_at'] = datetime.now().isoformat()
+                    msg['status'] = 'read'
+                elif status == 'completed':
+                    msg['completed_at'] = datetime.now().isoformat()
+                    msg['status'] = 'completed'
+                elif status == 'error':
+                    msg['error'] = error
+                    msg['status'] = 'error'
+                break
+        
+        # Rewrite log
+        with open(SUPERVISOR_LOG_FILE, 'w', encoding='utf-8', errors='replace') as f:
+            for msg in messages:
+                f.write(json.dumps(msg) + '\n')
+        
+        return jsonify({'ok': True, 'updated': msg_id})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({'status': 'ok'})
+
+@app.route('/docs/<path:filename>')
+def serve_doc(filename):
+    """Serve any HTML/MD file from _studio folder. Called by sidebar launch button."""
+    import os
+    safe = os.path.basename(filename)          # strip any path traversal
+    full = STUDIO_DIR / safe
+    if not full.exists():
+        abort(404)
+    return send_file(str(full))
+
+if __name__ == '__main__':
+    print(f"Studio Bridge running on port 11435")
+    print(f"Inbox log: {INBOX_LOG_FILE}")
+    print(f"Supervisor log: {SUPERVISOR_LOG_FILE}")
+    print(f"Listening for POST /answer requests from sidebar...")
+    print(f"Listening for POST /inbox-log requests...")
+    app.run(host='localhost', port=11435, debug=True)
+

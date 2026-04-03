@@ -227,3 +227,32 @@ Done.
 [2026-04-01 09:00:53] Scored 0 items — saved to product-archaeology-scored.json
 [2026-04-01 09:00:53] Product Archaeology complete
 [Wed 04/01/2026  9:00:53.46] Done 
+[Thu 04/02/2026  2:00:01.82] Product Archaeology starting 
+[2026-04-02 02:00:03] Product Archaeology starting
+[2026-04-02 02:00:03] KilledByGoogle: 0 products
+[2026-04-02 02:00:04] r/shutdownsaddened: 0 posts
+[2026-04-02 02:00:11] r/discontinued: 50 posts
+[2026-04-02 02:00:18] r/DeadApps: 25 posts
+[2026-04-02 02:00:25] Wayback ERROR: HTTP Error 503: Service Unavailable
+[2026-04-02 02:00:25] New items found: 0 | Total: 434
+[2026-04-02 02:00:25] Saved to product-archaeology-results.json
+[2026-04-02 02:00:25] Skipping score pass — hour 2 outside 6AM-11PM window
+[2026-04-02 02:00:25] Product Archaeology complete
+[Thu 04/02/2026  2:00:26.09] Done 
+[Thu 04/02/2026  8:00:01.61] Product Archaeology starting 
+[2026-04-02 08:00:02] Product Archaeology starting
+[2026-04-02 08:00:03] KilledByGoogle: 0 products
+[2026-04-02 08:00:03] r/shutdownsaddened: 0 posts
+[2026-04-02 08:00:08] r/discontinued: 50 posts
+[2026-04-02 08:00:11] r/DeadApps: 25 posts
+[2026-04-02 08:00:20] Wayback Kickstarter: -1 results
+[2026-04-02 08:00:21] New items found: 0 | Total: 434
+[2026-04-02 08:00:21] Saved to product-archaeology-results.json
+[2026-04-02 08:00:21] Scoring top 20 via AI Gateway (free tier with fallback)...
+[2026-04-02 08:00:23]   SCORE ERROR: Chromecast — Unterminated string starting at: line 2 column 3 (
+[2026-04-02 08:00:26]   SCORE ERROR: VPN by Google One — Unterminated string starting at: line 2 column 3 (
+[2026-04-02 08:00:28]   SCORE ERROR: YouTube Stories — Expecting property name enclosed in double quotes:
+[2026-04-02 08:00:28]   CIRCUIT BREAKER: 3 consecutive failures — aborting score pass to avoid API waste
+[2026-04-02 08:00:28] Scored 0 items — saved to product-archaeology-scored.json
+[2026-04-02 08:00:28] Product Archaeology complete
+[Thu 04/02/2026  8:00:29.19] Done 

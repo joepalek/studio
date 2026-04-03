@@ -72,14 +72,39 @@
 
   "watchlist": [
     {
-      "term": "example item",
-      "category": "example",
-      "notes": "Replace with real watchlist items"
+      "term": "blender",
+      "category": "software/tools",
+      "notes": "Son's interest - 3D software or blender appliance"
+    },
+    {
+      "term": "roblox",
+      "category": "gaming",
+      "notes": "Son's interest - games, merch, accessories"
+    },
+    {
+      "term": "sports cards",
+      "category": "collectibles",
+      "notes": "Always flag bulk lots"
+    },
+    {
+      "term": "vinyl records",
+      "category": "music",
+      "notes": "Vintage records for resale"
+    },
+    {
+      "term": "vintage clothing",
+      "category": "apparel",
+      "notes": "Nike, Levis, Carhartt, band tees"
+    },
+    {
+      "term": "bass guitar",
+      "category": "instruments",
+      "notes": "Personal interest + resale"
     }
   ],
 
   "google_maps": {
-    "api_key": "",
+    "api_key": "2605574618-pa4ks21uh08d2uea92ua5qioo13kfbpq.apps.googleusercontent.com",
     "list_name": "Weekend Hunt {date}",
     "route_optimize": true,
     "travel_mode": "DRIVING",

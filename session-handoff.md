@@ -5,7 +5,7 @@ It provides a reliable ground-truth status line for session-to-session continuit
 
 ## Last Known State
 
-System tightness last reviewed: 2026-04-01 — YELLOW (57/100)
+System tightness last reviewed: 2026-04-02 — YELLOW (57/100)
 Last nightly rollup: not yet run (digest starts 2026-03-26)
 Last NIT fire drill: 2026-03-25 — PARTIAL (T05 dismissed, T06 fixed)
 

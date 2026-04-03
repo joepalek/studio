@@ -1,11 +1,12 @@
 {
-  "timestamp": "2026-04-01T08:01:20.814801",
+  "timestamp": "2026-04-02T08:02:57.597038",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (2 files): job-match",
-    "UNCOMMITTED (34 files): _studio"
+    "UNCOMMITTED (56 files): _studio",
+    "UNCOMMITTED (6 files): job-match",
+    "Gemini API DOWN (404/503 on all flash models)"
   ],
   "watch": [],
-  "action_required": "Commit dirty files in job-match and _studio"
+  "action_required": "Commit _studio and job-match dirty files; investigate Gemini API availability"
 }

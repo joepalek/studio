@@ -1,6 +1,7 @@
 {
-  "generated": "2026-04-01T08:01:48.500005",
-  "briefing": "Gemini unavailable. See plan below.",
+  "generated": "2026-04-02T08:02:49.390941",
+  "model_used": "claude-sonnet-4-6 (Gemini fallback \u2014 503/404)",
+  "briefing": "=== ORCHESTRATOR DAILY BRIEFING \u2014 2026-04-02 ===\n\nTODAY'S FOCUS (Joe \u2014 highest revenue impact):\n1. [job-match] Resolve 5 pending decisions \u2014 Blackdot ends May 2026, this is the income replacement clock\n2. [listing-optimizer] Resolve 2 pending decisions \u2014 565 active eBay listings, direct daily revenue at stake\n3. [CTW] Generate portrait images for all 4 characters \u2014 only active build project, unblock the 40% \u2192 next milestone\n\nAGENT QUEUE (autonomous \u2014 no Joe needed):\n1. git commit _studio \u2014 56 dirty files, needed before nightly rollup is reliable\n2. git commit job-match \u2014 6 dirty files\n3. Run janitor scan on CTW \u2014 active project, keep state clean\n\nCRITICAL BLOCKERS:\n- job-match: 5 unresolved decisions blocking all agent progress \u2014 needs Joe today\n- Sentinel Core/Performer/Viewer: still blocked on LLC filing (00 Tennessee) \u2014 no agent can unblock this\n\nDEFER TODAY:\nIgnore AcuScan, NutriMind, Squeeze Empire, Whatnot-Apps \u2014 all intentionally paused; Janitor alerts on these are noise.",
   "plan": {
     "agent_runnable": [],
     "human_required": [
@@ -56,5 +57,11 @@
       }
     ],
     "ready_to_build": []
-  }
+  },
+  "sre_verdict": "DEGRADED",
+  "sre_issues": [
+    "UNCOMMITTED (6 files): job-match",
+    "UNCOMMITTED (56 files): _studio"
+  ],
+  "gemini_status": "DOWN \u2014 404/503 on all flash variants"
 }

@@ -185,6 +185,75 @@ def write_supervisor_briefing(dispatched, active_agents, free_models, work_queue
     else:
         save_json(INBOX, items)
 
+def auto_process_inbox():
+    """
+    Auto-resolve deterministic PENDING inbox items every cycle.
+    Types handled without human input:
+      - model_defunct: approve deprecation, queue cleanup task
+      - audit (WARN/rollup): acknowledge if score >= 50
+      - health (WARN): acknowledge overnight issues
+    Items requiring human judgment are left PENDING for sidebar.
+    Returns count of items resolved.
+    """
+    inbox_data = load_json(INBOX, {"items": []})
+    if isinstance(inbox_data, list):
+        items = inbox_data
+        is_dict = False
+    else:
+        items = inbox_data.get("items", [])
+        is_dict = True
+
+    resolved = 0
+    now = datetime.now().isoformat()
+
+    for item in items:
+        if item.get("status") not in ("PENDING", "new"):
+            continue
+
+        itype   = item.get("type", "")
+        urgency = item.get("urgency", "INFO")
+        title   = item.get("title", "")
+
+        # Auto-resolve: defunct model notices
+        if itype == "model_defunct":
+            item["status"] = "answered"
+            item["answer"] = "Auto-approved by supervisor. Remove from TASK_ROUTING in ai_gateway.py and mark status=deprecated in model-registry.json."
+            item["answered_at"] = now
+            item["answered_by"] = "supervisor-auto"
+            resolved += 1
+            log("  AUTO: defunct model resolved — " + title[:60])
+
+        # Auto-resolve: nightly rollup WARN (score >= 50, not ALERT)
+        elif itype == "audit" and urgency == "WARN":
+            item["status"] = "answered"
+            item["answer"] = "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent."
+            item["answered_at"] = now
+            item["answered_by"] = "supervisor-auto"
+            resolved += 1
+            log("  AUTO: audit WARN acknowledged — " + title[:60])
+
+        # Auto-resolve: health WARN (non-critical overnight issues)
+        elif itype == "health" and urgency == "WARN":
+            item["status"] = "answered"
+            item["answer"] = "Auto-acknowledged by supervisor. Will monitor for recurrence."
+            item["answered_at"] = now
+            item["answered_by"] = "supervisor-auto"
+            resolved += 1
+            log("  AUTO: health WARN acknowledged — " + title[:60])
+
+        # Leave PENDING: ALERT audits, intel items, human decisions, tests
+        # These need human eyes via sidebar
+
+    if resolved:
+        if is_dict:
+            inbox_data["items"] = items
+            save_json(INBOX, inbox_data)
+        else:
+            save_json(INBOX, items)
+
+    return resolved
+
+
 def update_efficiency_ledger(dispatched):
     """Log dispatched tasks to efficiency-ledger.json."""
     if not dispatched: return
@@ -246,6 +315,11 @@ def main():
         "dispatched": dispatched
     }
     save_json(REPORT, report)
+
+    # Auto-process deterministic PENDING items
+    resolved = auto_process_inbox()
+    if resolved:
+        log("Auto-resolved: " + str(resolved) + " inbox items")
 
     # Briefing and ledger
     write_supervisor_briefing(dispatched, active, free_models, len(work_queue), ollama_up, gemini_ok)

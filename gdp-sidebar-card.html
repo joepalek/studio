@@ -1,0 +1,148 @@
+<!-- ═══════════════════════════════════════════════════════════
+     GLOBAL DATA PRODUCTS — sidebar STATUS card snippet
+     Paste this block into sidebar-agent.html STATUS tab section
+     Bridge must be running on port 11435 for the launch button to work
+     ═══════════════════════════════════════════════════════════ -->
+<style>
+.gdp-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;margin:10px 0;overflow:hidden;}
+.gdp-card-top{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.gdp-icon{width:34px;height:34px;border-radius:8px;background:#1a4a1e;display:flex;
+  align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.gdp-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.2;}
+.gdp-sub{font-size:10px;color:var(--text-dim);margin-top:1px;}
+.gdp-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px;}
+.gdp-metric{background:var(--bg);border-radius:6px;padding:6px 8px;text-align:center;}
+.gdp-metric-n{font-size:14px;font-weight:700;color:var(--green);}
+.gdp-metric-l{font-size:9px;color:var(--text-dim);margin-top:1px;}
+.gdp-projects{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;}
+.gdp-proj-row{display:flex;align-items:center;gap:7px;padding:4px 0;
+  border-bottom:0.5px solid var(--border);}
+.gdp-proj-row:last-child{border:none;}
+.gdp-p-badge{font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px;flex-shrink:0;}
+.b-p0{background:#1a4a1e;color:var(--green);border:1px solid var(--green);}
+.b-p1{background:#0c2a4a;color:var(--blue);border:1px solid var(--blue);}
+.gdp-p-name{font-size:11px;font-weight:600;color:var(--text);flex:1;}
+.gdp-p-meta{font-size:10px;color:var(--text-dim);}
+.gdp-p-ceiling{font-size:10px;font-weight:600;color:var(--green);}
+</style>
+
+<style>
+.gdp-sim-row{display:flex;gap:5px;margin-bottom:10px;flex-wrap:wrap;}
+.gdp-sim-chip{font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;}
+.chip-pass{background:#1a4a1e;color:var(--green);}
+.chip-warn{background:#2a2200;color:var(--amber);}
+.chip-cap{background:#1a1a3a;color:var(--blue);}
+.gdp-checklist-mini{margin-bottom:10px;}
+.gdp-check-row{display:flex;align-items:center;gap:6px;padding:3px 0;}
+.gdp-check-dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--text-dim);
+  flex-shrink:0;cursor:pointer;transition:all 0.15s;}
+.gdp-check-dot.done{background:var(--green);border-color:var(--green);}
+.gdp-check-text{font-size:10px;color:var(--text-dim);flex:1;line-height:1.4;}
+.gdp-check-tag{font-size:9px;padding:1px 5px;border-radius:3px;font-weight:600;}
+.gdp-t-block{background:#3a0a0a;color:var(--red);border:1px solid var(--red);}
+.gdp-t-s0{background:#2a2200;color:var(--amber);border:1px solid var(--amber);}
+.gdp-t-today{background:var(--red);color:#fff;}
+.gdp-launch-btn{display:flex;align-items:center;gap:8px;background:var(--green-dim);
+  border:1px solid var(--green);color:var(--green);border-radius:8px;padding:9px 14px;
+  width:100%;cursor:pointer;font-size:12px;font-weight:600;transition:background 0.15s;
+  font-family:var(--font);}
+.gdp-launch-btn:hover{background:var(--green);color:var(--bg);}
+.gdp-launch-btn span{flex:1;text-align:left;}
+.gdp-launch-arrow{font-size:14px;opacity:0.7;}
+</style>
+
+<div class="gdp-card">
+  <!-- header -->
+  <div class="gdp-card-top">
+    <div class="gdp-icon">📊</div>
+    <div>
+      <div class="gdp-title">Global Data Products</div>
+      <div class="gdp-sub">Strategy · 8 passes · 101 pools · 7 projects</div>
+    </div>
+  </div>
+
+  <!-- key metrics -->
+  <div class="gdp-metrics">
+    <div class="gdp-metric"><div class="gdp-metric-n">$40K</div><div class="gdp-metric-l">M6 MRR target</div></div>
+    <div class="gdp-metric"><div class="gdp-metric-n">3</div><div class="gdp-metric-l">P0 projects</div></div>
+    <div class="gdp-metric"><div class="gdp-metric-n">31</div><div class="gdp-metric-l">Agentic pools</div></div>
+    <div class="gdp-metric"><div class="gdp-metric-n">6wk</div><div class="gdp-metric-l">First revenue</div></div>
+  </div>
+
+  <!-- project list -->
+  <div class="gdp-projects">
+    <div class="gdp-proj-row">
+      <span class="gdp-p-badge b-p0">P0·1</span>
+      <span class="gdp-p-name">Entity Screening API</span>
+      <span class="gdp-p-meta">5wk ·</span>
+      <span class="gdp-p-ceiling">$3–15M/yr</span>
+    </div>
+    <div class="gdp-proj-row">
+      <span class="gdp-p-badge b-p0">P0·2</span>
+      <span class="gdp-p-name">EUDR Compliance Engine</span>
+      <span class="gdp-p-meta">8wk ·</span>
+      <span class="gdp-p-ceiling">$5–20M/yr</span>
+    </div>
+    <div class="gdp-proj-row">
+      <span class="gdp-p-badge b-p0">P0·3</span>
+      <span class="gdp-p-name">WASDE Food Cost Alert</span>
+      <span class="gdp-p-meta">6wk ·</span>
+      <span class="gdp-p-ceiling">$1–5M/yr</span>
+    </div>
+    <div class="gdp-proj-row">
+      <span class="gdp-p-badge b-p1">P1·6</span>
+      <span class="gdp-p-name">Sentinel Compliance</span>
+      <span class="gdp-p-meta">10wk ·</span>
+      <span class="gdp-p-ceiling">$10–50M/yr</span>
+    </div>
+  </div>
+
+  <!-- sim chips -->
+  <div class="gdp-sim-row">
+    <span class="gdp-sim-chip chip-warn">WASDE: calibrate before launch</span>
+    <span class="gdp-sim-chip chip-pass">AML beta: 2wk — advocates right</span>
+    <span class="gdp-sim-chip chip-cap">Capybara: −2wk on all P0s</span>
+  </div>
+
+  <!-- pre-build checklist -->
+  <div class="gdp-checklist-mini">
+    <div style="font-size:9px;font-weight:700;color:var(--text-dim);letter-spacing:0.05em;margin-bottom:5px;">PRE-BUILD CHECKLIST</div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc1" onclick="gdpToggle('gc1')"></div><span class="gdp-check-text">state.json — WASDE project</span><span class="gdp-check-tag gdp-t-block">BLOCKER</span></div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc2" onclick="gdpToggle('gc2')"></div><span class="gdp-check-text">state.json — Entity Screening project</span><span class="gdp-check-tag gdp-t-block">BLOCKER</span></div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc3" onclick="gdpToggle('gc3')"></div><span class="gdp-check-text">Stripe account + key in studio-config.json</span><span class="gdp-check-tag gdp-t-block">BLOCKER</span></div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc4" onclick="gdpToggle('gc4')"></div><span class="gdp-check-text">3 new CLAUDE.md rules (Hopper + Delta + Codd)</span><span class="gdp-check-tag gdp-t-s0">SESSION 0</span></div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc5" onclick="gdpToggle('gc5')"></div><span class="gdp-check-text">Beehiiv API key in studio-config.json</span><span class="gdp-check-tag gdp-t-s0">SESSION 0</span></div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc6" onclick="gdpToggle('gc6')"></div><span class="gdp-check-text">Capybara routing stub in ai_gateway.py</span><span class="gdp-check-tag gdp-t-s0">SESSION 0</span></div>
+    <div class="gdp-check-row"><div class="gdp-check-dot" id="gc7" onclick="gdpToggle('gc7')"></div><span class="gdp-check-text">WDPA license email → protectedplanet.net</span><span class="gdp-check-tag gdp-t-today">TODAY</span></div>
+  </div>
+
+  <!-- launch button -->
+  <button class="gdp-launch-btn" onclick="window.open('http://localhost:11435/docs/data-products-launcher.html','_blank','width=1100,height=900,scrollbars=yes,resizable=yes')">
+    <span>Open Full Strategy Document</span>
+    <span class="gdp-launch-arrow">↗</span>
+  </button>
+</div>
+
+<script>
+(function(){
+  function gdpToggle(id){
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.classList.toggle('done');
+    const state={};
+    ['gc1','gc2','gc3','gc4','gc5','gc6','gc7'].forEach(function(k){
+      const e=document.getElementById(k);
+      if(e) state[k]=e.classList.contains('done');
+    });
+    try{localStorage.setItem('gdp-dots',JSON.stringify(state));}catch(e){}
+  }
+  window.gdpToggle=gdpToggle;
+  try{
+    const s=JSON.parse(localStorage.getItem('gdp-dots')||'{}');
+    Object.keys(s).forEach(function(id){
+      if(s[id]){const e=document.getElementById(id);if(e)e.classList.add('done');}
+    });
+  }catch(e){}
+})();
+</script>

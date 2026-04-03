@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Global Data Products — Strategy</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f3;color:#1a1a18;font-size:14px;line-height:1.6}
+
+/* ── top bar ── */
+.topbar{background:#1a1a18;color:#f5f5f3;padding:10px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
+.topbar-title{font-size:13px;font-weight:500;flex:1}
+.topbar-badge{font-size:10px;padding:2px 8px;border-radius:4px;background:#3B6D11;color:#C0DD97}
+.topbar-date{font-size:11px;color:#888}
+
+/* ── layout ── */
+.container{max-width:960px;margin:0 auto;padding:20px 16px}
+
+/* ── section headers ── */
+h2{font-size:13px;font-weight:600;color:#1a1a18;margin:20px 0 8px;padding-bottom:5px;border-bottom:1px solid #e0deda;letter-spacing:0.03em}
+h3{font-size:12px;font-weight:600;color:#444;margin:14px 0 6px}
+
+/* ── cards ── */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.card{background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:10px 12px}
+.card.p0{border-top:3px solid #639922}
+.card.p1{border-top:3px solid #378ADD}
+.card.warn{border-top:3px solid #BA7517}
+.card-label{font-size:9px;font-weight:600;color:#888;letter-spacing:0.06em;margin-bottom:3px}
+.card-name{font-size:12px;font-weight:600;color:#1a1a18;margin-bottom:2px}
+.card-meta{font-size:10px;color:#666;line-height:1.5}
+.card-ceiling{font-size:11px;font-weight:600;color:#3B6D11;margin-top:4px}
+
+/* ── tables ── */
+table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:12px;background:#fff;border-radius:6px;overflow:hidden;border:0.5px solid #ddd}
+th{background:#f0ede8;text-align:left;padding:6px 10px;font-weight:600;font-size:10px;color:#555;letter-spacing:0.03em}
+td{padding:6px 10px;border-top:0.5px solid #eee;vertical-align:top}
+tr:hover td{background:#fafaf8}
+
+/* ── badges ── */
+.badge{display:inline-block;font-size:9px;padding:2px 6px;border-radius:3px;font-weight:600;white-space:nowrap}
+.b-now{background:#FCEBEB;color:#791F1F}
+.b-rising{background:#EAF3DE;color:#27500A}
+.b-watch{background:#FAEEDA;color:#633806}
+.b-pass{background:#EAF3DE;color:#27500A}
+.b-warn{background:#FAEEDA;color:#633806}
+.b-new{background:#EEEDFE;color:#3C3489}
+.b-go{background:#EAF3DE;color:#27500A}
+.b-block{background:#FCEBEB;color:#791F1F}
+
+/* ── checklist ── */
+.checklist{background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:10px 12px;margin-bottom:10px}
+.check-item{display:flex;gap:8px;align-items:flex-start;padding:5px 0;border-bottom:0.5px solid #f0ede8}
+.check-item:last-child{border:none}
+.check-box{width:16px;height:16px;border:1.5px solid #ccc;border-radius:3px;flex-shrink:0;margin-top:1px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;color:#639922;font-weight:700}
+.check-box.done{background:#639922;border-color:#639922;color:#fff}
+.check-text{font-size:11px;line-height:1.5;flex:1}
+.check-tag{font-size:9px;padding:1px 5px;border-radius:3px;font-weight:600;margin-left:6px}
+
+/* ── sim verdict ── */
+.sim-box{background:#fff;border:0.5px solid #ddd;border-radius:8px;padding:10px 14px;margin-bottom:8px;border-left:4px solid}
+.sim-pass{border-left-color:#639922}
+.sim-warn{border-left-color:#BA7517}
+.sim-label{font-size:9px;font-weight:600;letter-spacing:0.06em;margin-bottom:3px;color:#888}
+.sim-title{font-size:12px;font-weight:600;color:#1a1a18;margin-bottom:3px}
+.sim-text{font-size:11px;color:#555;line-height:1.5}
+
+/* ── revenue table highlight ── */
+.rev-highlight{font-weight:600;color:#3B6D11}
+
+/* ── footer ── */
+.footer{text-align:center;font-size:10px;color:#aaa;margin-top:24px;padding:12px;border-top:0.5px solid #e0deda}
+
+/* ── print ── */
+@media print{.topbar{position:static}.card-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-title">Global Data Products — Strategy Reference</span>
+  <span class="topbar-badge">8 passes complete</span>
+  <span class="topbar-date">Generated: 2026-04-02</span>
+</div>
+
+<div class="container">
+
+<!-- ── HIT LIST ── -->
+<h2>PRIMARY HIT LIST</h2>
+<div class="card-grid">
+  <div class="card p0">
+    <div class="card-label">P0 · #1 · 5wk build</div>
+    <div class="card-name">Global Entity Screening API</div>
+    <div class="card-meta">SME AML/KYC · $99–1,990/mo · EU 6AMLD mandate</div>
+    <div class="card-ceiling">$3–15M/yr ceiling</div>
+  </div>
+  <div class="card p0">
+    <div class="card-label">P0 · #2 · 8wk build</div>
+    <div class="card-name">EUDR Compliance Engine</div>
+    <div class="card-meta">Deforestation compliance · $499–custom/mo · EU mandate</div>
+    <div class="card-ceiling">$5–20M/yr ceiling</div>
+  </div>
+  <div class="card p0">
+    <div class="card-label">P0 · #3 · 6wk build</div>
+    <div class="card-name">WASDE Food Cost Alert</div>
+    <div class="card-meta">Newsletter→API · $0/$49/$249/mo · No mandate — economic value</div>
+    <div class="card-ceiling">$1–5M/yr ceiling</div>
+  </div>
+  <div class="card p1">
+    <div class="card-label">P1 · #4 · 5wk</div>
+    <div class="card-name">Food Safety Alert Digest</div>
+    <div class="card-meta">EU RASFF + WOAH · recall liability demand</div>
+    <div class="card-ceiling">$1–4M/yr</div>
+  </div>
+  <div class="card p1">
+    <div class="card-label">P1 · #5 · 6wk</div>
+    <div class="card-name">Global Procurement API</div>
+    <div class="card-meta">EU TED + MDB unified tenders + sanctions screen</div>
+    <div class="card-ceiling">$2–8M/yr</div>
+  </div>
+  <div class="card p1">
+    <div class="card-label">P1 · #6 · 10wk</div>
+    <div class="card-name">Sentinel Compliance</div>
+    <div class="card-meta">Full entity risk · enterprise · builds on P0-1</div>
+    <div class="card-ceiling">$10–50M/yr</div>
+  </div>
+</div>
+
+<!-- ── REVENUE ── -->
+<h2>REVENUE TARGETS</h2>
+<table>
+<tr><th>Month</th><th>WASDE MRR</th><th>Entity MRR</th><th>EUDR MRR</th><th>Total MRR</th><th>Capybara total</th></tr>
+<tr><td>M2</td><td>$245</td><td>—</td><td>—</td><td>$245</td><td>$245</td></tr>
+<tr><td>M3</td><td>$1,200</td><td>$990</td><td>$1,497</td><td>$3,687</td><td class="rev-highlight">$6,200</td></tr>
+<tr><td>M4</td><td>$3,000</td><td>$5,000</td><td>$3,000</td><td>$11,000</td><td class="rev-highlight">$16,500</td></tr>
+<tr><td>M6 (May 26)</td><td>$8,000</td><td>$20,000</td><td>$12,000</td><td class="rev-highlight">$40,000</td><td class="rev-highlight">$55,000</td></tr>
+<tr><td>M9</td><td>—</td><td>—</td><td>—</td><td>$85,000</td><td class="rev-highlight">$130,000</td></tr>
+<tr><td>M12</td><td>—</td><td>—</td><td>—</td><td>$150,000</td><td class="rev-highlight">$240,000</td></tr>
+</table>
+
+<!-- ── STUDIO PRE-BUILD CHECKLIST ── -->
+<h2>STUDIO PRE-BUILD CHECKLIST</h2>
+<div class="checklist">
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Create state.json for WASDE project <span class="check-tag b-block">BLOCKER</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">30 min</span></div>
+  </div>
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Create state.json for Entity Screening project <span class="check-tag b-block">BLOCKER</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">30 min</span></div>
+  </div>
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Create Stripe account + add key to studio-config.json <span class="check-tag b-block">BLOCKER</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">20 min</span></div>
+  </div>
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Add 3 new CLAUDE.md rules: Hopper + Delta Fallback + Codd Synthesis <span class="check-tag b-warn">SESSION ZERO</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">30 min</span></div>
+  </div>
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Add Beehiiv API key to studio-config.json <span class="check-tag b-warn">SESSION ZERO</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">15 min</span></div>
+  </div>
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Add Capybara routing stub to ai_gateway.py <span class="check-tag b-warn">SESSION ZERO</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">45 min</span></div>
+  </div>
+  <div class="check-item">
+    <div class="check-box" onclick="toggle(this)"></div>
+    <div class="check-text">Email WDPA commercial license to protectedplanet.net <span class="check-tag b-now">DO TODAY</span><span class="check-tag" style="background:#EAF3DE;color:#27500A">10 min</span></div>
+  </div>
+</div>
+
+<!-- ── SIMULATION FINDINGS ── -->
+<h2>SIMULATION FINDINGS</h2>
+<div class="sim-box sim-warn">
+  <div class="sim-label">SIM 1 — WASDE SYNTHESIS QUALITY</div>
+  <div class="sim-title">CONDITIONAL PASS — 80% accuracy, 4 dangerous wrong calls/24 months</div>
+  <div class="sim-text">Fix 4 prompt failure modes before launch: (1) seasonal reversal — early harvest = more supply = bearish, (2) La Niña causal chain — dry = supply cut = bullish, (3) production vs demand confusion, (4) add neutral/mixed output for ambiguous signals. Adds 2 weeks. Build synthesis_validator first.</div>
+</div>
+<div class="sim-box sim-pass">
+  <div class="sim-label">SIM 2 — AML TRUST DEFICIT</div>
+  <div class="sim-title">ADVOCATES RIGHT — Median 2.0 weeks to 5 beta users (5,000 Monte Carlo runs)</div>
+  <div class="sim-text">Trust deficit is manageable via free trial + price wedge. Warm intro channel (creator network) yields 2.16 qualified/week at trust=1.0. Fintech Slack yields 1.85/week. Skeptics' 8-week threshold: 0% probability. Start Entity Screening build Week 1 in parallel — don't wait for beta completion.</div>
+</div>
+<div class="sim-box sim-pass">
+  <div class="sim-label">SIM 3 — STUDIO UPGRADE SCOPE</div>
+  <div class="sim-title">19 new agents — 9 reused. One tech risk mitigated.</div>
+  <div class="sim-text">SQLite+NetworkX replaces Neo4j for entity graph MVP (pure Python, zero new infra). Migrate to graph DB only at >500K entities or query time >2s. Biggest quick win: sanctions_ingestor (2 days). WASDE: 9 new agents. Entity Screening: 10 new agents.</div>
+</div>
+
+<!-- ── EXPERT PANEL ── -->
+<h2>EXPERT PANEL VOTES (11 experts)</h2>
+<table>
+<tr><th>Project</th><th>1st choice</th><th>2nd choice</th><th>Total pts</th><th>Key dissent</th></tr>
+<tr><td><strong>EUDR Compliance Engine</strong></td><td>4 votes</td><td>6 votes</td><td><strong>14pts</strong></td><td>Behavioral Econ: demand backloaded to enforcement events</td></tr>
+<tr><td><strong>Entity Screening API</strong></td><td>5 votes</td><td>2 votes</td><td><strong>12pts</strong></td><td>SC Expert: too competitive for unknown vendor</td></tr>
+<tr><td><strong>WASDE Food Cost Alert</strong></td><td>2 votes</td><td>3 votes</td><td><strong>7pts</strong></td><td>GR Analyst: no moat — Bloomberg replicates in one afternoon</td></tr>
+</table>
+<p style="font-size:11px;color:#666;margin-bottom:12px">Hidden unanimous view: every expert agreed WASDE should be built first regardless of primary vote.</p>
+
+<!-- ── AGENTIC TIERS ── -->
+<h2>AGENTIC WORKFLOW TIERS (101 pools)</h2>
+<table>
+<tr><th>Tier</th><th>Count</th><th>Description</th><th>P0 projects</th></tr>
+<tr><td><span class="badge b-go">Tier 1</span> Full agentic</td><td><strong>31</strong></td><td>Zero human touch — overnight pipeline</td><td>Sanctions lists, GFW alerts, RASFF, ACLED</td></tr>
+<tr><td><span class="badge b-watch">Tier 2</span> Hybrid</td><td><strong>38</strong></td><td>Auto-ingest + human reviews synthesis output</td><td>WASDE, Entity Screening (clear cases)</td></tr>
+<tr><td><span class="badge b-warn">Tier 3</span> Human-in-loop</td><td><strong>22</strong></td><td>Agent preps brief, human decides</td><td>EUDR borderline, entity disambiguation 60–90%</td></tr>
+<tr><td><span class="badge" style="background:#F1EFE8;color:#5F5E5A">Tier 4</span> Not agentic</td><td><strong>10</strong></td><td>Relationship-sold or legally constrained</td><td>—</td></tr>
+</table>
+
+<!-- ── CAPYBARA ── -->
+<h2>CAPYBARA / MYTHOS STATUS</h2>
+<table>
+<tr><th>Project</th><th>Opus 4.6</th><th>With Capybara</th><th>Delta</th></tr>
+<tr><td>WASDE</td><td>6wk, 80% accuracy</td><td>4wk, ~92% accuracy</td><td class="rev-highlight">-2wk, validation penalty gone</td></tr>
+<tr><td>Entity Screening</td><td>5wk build</td><td>3wk build</td><td class="rev-highlight">-2wk, disambiguation via reasoning</td></tr>
+<tr><td>EUDR</td><td>8wk, manual borderline</td><td>6wk, 3min review</td><td class="rev-highlight">-2wk</td></tr>
+<tr><td>Cyber Vuln Feed</td><td>Not viable</td><td>P1 viable (6wk)</td><td><span class="badge b-new">UNLOCKED</span></td></tr>
+<tr><td>TNFD Biodiversity</td><td>P2</td><td>P1</td><td><span class="badge b-new">PROMOTED</span></td></tr>
+</table>
+<p style="font-size:11px;color:#666;margin-bottom:8px">Status: Early access testing. v8 iteration. 29–30% false claims rate. Expensive to serve. Estimated general release: 2–6 months. Studio upgrade: add routing stub to ai_gateway.py now — plug key in when it arrives.</p>
+
+<!-- ── DEMAND SIGNALS ── -->
+<h2>DEMAND SIGNAL MONITOR (key signals)</h2>
+<table>
+<tr><th>Signal</th><th>Status</th><th>Threshold to act</th></tr>
+<tr><td>EUDR enforcement + WDPA license</td><td><span class="badge b-now">ACT NOW</span></td><td>Apply WDPA this week — 2–4wk processing</td></tr>
+<tr><td>WASDE monthly release</td><td><span class="badge b-now">ACT NOW</span></td><td>Apr 9, May 12, Jun 11, Jul 11...</td></tr>
+<tr><td>EU 6AMLD AML pressure</td><td><span class="badge b-now">ACT NOW</span></td><td>Build Entity Screening now</td></tr>
+<tr><td>EU CSDDD supply chain (2026)</td><td><span class="badge b-rising">RISING</span></td><td>Build when Entity Screening hits $10K MRR</td></tr>
+<tr><td>TNFD voluntary→mandatory</td><td><span class="badge b-rising">RISING</span></td><td>Any G20 jurisdiction mandates TNFD</td></tr>
+<tr><td>NIS2 + CIRCIA cyber reporting</td><td><span class="badge b-rising">RISING</span></td><td>Add to hit list on Capybara release</td></tr>
+<tr><td>Critical minerals demand</td><td><span class="badge b-rising">RISING</span></td><td>Lithium/cobalt >15% spot price spike</td></tr>
+<tr><td>VCM carbon market recovery</td><td><span class="badge b-watch">WATCH</span></td><td>VCM volume returns to 2022 levels</td></tr>
+<tr><td>OpenSky coverage expansion</td><td><span class="badge" style="background:#F1EFE8;color:#5F5E5A">WAIT</span></td><td>>65% global flight coverage</td></tr>
+</table>
+
+<div class="footer">Global Data Products Strategy · Generated 2026-04-02 · 8 analysis passes · 101 pools · 20 combinations · 7 projects · 11 experts · 3 simulations · data-products-strategy.md</div>
+
+</div>
+
+<script>
+function toggle(el){
+  el.classList.toggle('done');
+  el.textContent = el.classList.contains('done') ? '✓' : '';
+  // persist to localStorage
+  const items = document.querySelectorAll('.check-box');
+  const state = Array.from(items).map(i=>i.classList.contains('done'));
+  try{localStorage.setItem('gdp-checklist', JSON.stringify(state));}catch(e){}
+}
+// restore on load
+try{
+  const saved = JSON.parse(localStorage.getItem('gdp-checklist')||'[]');
+  document.querySelectorAll('.check-box').forEach((el,i)=>{
+    if(saved[i]){el.classList.add('done');el.textContent='✓';}
+  });
+}catch(e){}
+</script>
+</body>
+</html>

@@ -370,3 +370,74 @@ Files saved: `sre-report.json`, `sre-stress-report.json`, `orchestrator-briefing
 [Wed 04/01/2026  8:00:01.55] Daily briefing starting 
 [Wed 04/01/2026  8:59:21.69] Daily briefing starting 
 [Wed 04/01/2026  9:00:35.56] Daily briefing starting 
+[Thu 04/02/2026  8:00:01.61] Daily briefing starting 
+---
+
+## SRE SCOUT REPORT — 2026-04-02
+
+```
+TOOLS
+  ✓ Git 2.53.0
+  ✓ Node v24.14.0
+  ✓ npm 11.9.0
+  ✓ Python 3.13.12 (above expected 3.13.7)
+  ✓ Claude Code 2.1.90 (above expected 2.1.78)
+  ✓ Repomix 1.12.0
+  ✓ Ollama 0.19.0 — UP, 2 models (gemma3:4b)
+
+GATEWAY ENDPOINTS
+  ✓ Anthropic key: SET
+  ✓ Gemini key: SET — but API returning 404/503 on all flash models
+  ✓ OpenRouter: UP
+  ✓ YouTube key: SET
+  ✓ Ollama: UP
+
+PROJECTS (13 checked)
+  ~ UNCOMMITTED (56 files): _studio
+  ~ UNCOMMITTED (6 files): job-match
+  ✓ 11 projects clean
+
+STUDIO FILES
+  ✓ All critical files present
+  ✓ No optional files missing
+
+MOBILE ANSWERS
+  ✓ No pending mobile answers
+
+VERDICT: DEGRADED (2 uncommitted repos + Gemini endpoint issues)
+```
+
+```
+=== STRESS REPORT ===
+CRITICAL (0): none
+WARNING (3):
+  [~] UNCOMMITTED (56 files): _studio
+  [~] UNCOMMITTED (6 files): job-match
+  [~] Gemini API DOWN — 404/503 on gemini-2.0-flash-001, gemini-2.0-flash, gemini-2.5-flash
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## ORCHESTRATOR DAILY BRIEFING — 2026-04-02
+
+**TODAY'S FOCUS (Joe — highest revenue impact):**
+1. **[job-match]** Resolve 5 pending decisions — Blackdot ends May 2026, this is the income replacement clock
+2. **[listing-optimizer]** Resolve 2 pending decisions — 565 active eBay listings, direct daily revenue
+3. **[CTW]** Generate portrait images for all 4 characters — only active build project, unblock 40% milestone
+
+**AGENT QUEUE (autonomous):**
+1. Commit `_studio` — 56 dirty files blocking reliable nightly rollup
+2. Commit `job-match` — 6 dirty files
+3. Janitor scan on CTW — active project, keep state current
+
+**CRITICAL BLOCKERS:**
+- `job-match`: 5 unresolved decisions, no agent can proceed without Joe
+- Sentinel Core/Performer/Viewer: LLC filing still pending ($300 Tennessee)
+
+**DEFER TODAY:** AcuScan, NutriMind, Squeeze Empire, Whatnot-Apps — all intentionally paused, Janitor alerts are noise.
+
+---
+
+Briefing saved to `orchestrator-briefing.json`. **Note:** Gemini Flash was unreachable (404/503 across all model variants) — briefing generated via Claude fallback. You may want to verify your Gemini API key hasn't hit quota limits.

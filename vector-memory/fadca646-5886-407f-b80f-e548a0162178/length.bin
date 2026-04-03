@@ -1,1 +1,13 @@
-invalid type: string "\"status\": \"not started\",\n    \"prep_doc\": \"G:/My Drive/Projects/_studio/meta-app-review-prep.md\",\n    \"privacy_url\": \"https://joepalek.github.io/jlp-studio-website/privacy.html\",\n    \"terms_url\": \"https://joepalek.github.io/jlp-studio-website/terms.html\"\n  }\n}", expected f64ooleand_date\": null,\n      \"unlocks\": \"SKU handling logic\"\n    },\n    {\n,r
+{
+  "project": "LightworkAI Website",
+  "brand": "LightworkAI",
+  "tagline": "Heavy problems. Lightwork.",
+  "status": "live",
+  "version": "1.1.0",
+  "last_updated": "2026-03-25",
+  "repo": "https://github.com/joepalek/jlp-studio-website",
+  "live_url": "https://joepalek.github.io/jlp-studio-website/",
+  "domain_target": "lightworkai.com",
+  "accent_color": "#1D9E75",
+  "pages": [
+    "index.html

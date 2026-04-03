@@ -77,6 +77,53 @@
       "health_score": 57,
       "health_status": "YELLOW",
       "notes": "2 agents in | missed: stress-tester, janitor, git-scout, sre-scout | -10 missed agent: stress-tester"
+    },
+    {
+      "date": "2026-04-02",
+      "generated_at": "2026-04-02T01:00:03.376757",
+      "audit_summary": {
+        "total_entries": 6,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "ai-intel-agent",
+          "ai-services-rankings",
+          "auto-answer-gemini",
+          "check-drift",
+          "git-commit",
+          "janitor",
+          "model-validator",
+          "nightly-rollup",
+          "product-archaeology",
+          "supervisor",
+          "vector-reindex"
+        ],
+        "missed": [
+          "whiteboard-scorer",
+          "ai-intel",
+          "agency-build",
+          "vintage-agent"
+        ]
+      },
+      "pending_inbox_items": 19,
+      "pending_flags": 1,
+      "health_score": 57,
+      "health_status": "YELLOW",
+      "notes": "11 agents in | missed: whiteboard-scorer, ai-intel, agency-build, vintage-agent | -10 missed agent: whiteboard-scorer"
     }
   ]
 }

@@ -703,7 +703,7 @@
     "project": "arbitrage-pulse",
     "question": "What geographic area to monitor \u00e2\u20ac\u201d Tennessee local, Illinois local, or both?",
     "type": "required",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-04-01",
     "options": [
       "Tennessee (Atwood/McKenzie area)",
@@ -711,7 +711,10 @@
       "Both \u00e2\u20ac\u201d separate digests"
     ],
     "recommendation": "Both with separate digests \u00e2\u20ac\u201d you travel between both regularly",
-    "context": ""
+    "context": "",
+    "answer": "Tennessee (Atwood/McKenzie area)",
+    "answered_at": "2026-04-02T18:28:44Z",
+    "answered_via": "sidebar"
   },
   {
     "id": "state-arbitrage-pulse-de47a912",
@@ -735,11 +738,14 @@
     "project": "arbitrage-pulse",
     "question": "Minimum profit margin to include in digest \u00e2\u20ac\u201d e.g. only show items with 40%+ margin?",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-04-01",
     "options": [],
     "recommendation": "",
-    "context": "Sets the filter threshold for the margin analysis step."
+    "context": "Sets the filter threshold for the margin analysis step.",
+    "answer": "40% is min, as fees and taxes also add in to that.  If it is that high of a perscent 30-40% the sell through rate has to be very high",
+    "answered_at": "2026-04-02T18:28:21Z",
+    "answered_via": "sidebar"
   },
   {
     "id": "state-arbitrage-pulse-f10b735b",
@@ -778,7 +784,7 @@
     "project": "nutrimind",
     "question": "What defines NutriMind as complete \u00e2\u20ac\u201d what is the finish line?",
     "type": "required",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-04-01",
     "options": [
       "All planned features working",
@@ -786,7 +792,10 @@
       "Productize for other users"
     ],
     "recommendation": "Define personal use ready first \u00e2\u20ac\u201d then decide if productizing is worth the extra work",
-    "context": ""
+    "context": "",
+    "answer": "personal, then we can review and analyze",
+    "answered_at": "2026-04-02T19:04:20Z",
+    "answered_via": "sidebar"
   },
   {
     "id": "state-squeeze-empire-8717e27a",
@@ -812,10 +821,13 @@
     "project": "squeeze-empire",
     "question": "After late-game is done \u00e2\u20ac\u201d release publicly, keep personal, or productize?",
     "type": "proactive",
-    "status": "pending",
+    "status": "answered",
     "created": "2026-04-01",
     "options": [],
     "recommendation": "",
-    "context": "Affects whether we add analytics, sharing features, or mobile optimization pass."
+    "context": "Affects whether we add analytics, sharing features, or mobile optimization pass.",
+    "answer": "it needs to go to testing for version 1.0, then analyze feedback",
+    "answered_at": "2026-04-02T19:30:45Z",
+    "answered_via": "sidebar"
   }
 ]

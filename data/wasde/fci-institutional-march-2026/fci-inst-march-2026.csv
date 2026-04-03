@@ -1,0 +1,6 @@
+commodity,signal,confidence,source_tag,production,prior_production,domestic_use,exports,ending_stocks,prior_ending_stocks,unit
+Wheat,NEUTRAL,low,[narrative],,,,,,,million_bushels
+Corn,BEARISH,low,[override],,,,,,,million_bushels
+Soybeans,NEUTRAL,low,[narrative],,,,,,,
+Cotton,BEARISH,low,[override],,,,,,,thousand_bales
+Rice,BULLISH,low,[override],,,,,,,million_bushels
