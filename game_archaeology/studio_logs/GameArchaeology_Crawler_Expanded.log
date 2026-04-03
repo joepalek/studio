@@ -1,0 +1,58 @@
+[2026-04-03 01:22:12] [LOGGER] [INFO] Log file initialized for GameArchaeology_Crawler_Expanded
+[2026-04-03 01:22:12] [GameArchaeology_Crawler_Expanded] [INFO] GameArchaeology_Crawler_Expanded initialized (expanded sources).
+[2026-04-03 01:22:12] [GameArchaeology_Crawler_Expanded] [INFO] ============================================================
+[2026-04-03 01:22:12] [GameArchaeology_Crawler_Expanded] [INFO] STARTING EXPANDED GAME ARCHAEOLOGY CRAWL
+[2026-04-03 01:22:12] [GameArchaeology_Crawler_Expanded] [INFO] ============================================================
+[2026-04-03 01:22:12] [GameArchaeology_Crawler_Expanded] [INFO] Crawling demoscene.org for games...
+[2026-04-03 01:22:13] [GameArchaeology_Crawler_Expanded] [WARNING]   Error crawling demoscene.org: HTTP Error 404: Not Found
+[2026-04-03 01:22:13] [GameArchaeology_Crawler_Expanded] [INFO] Demoscene.org: found 0 games
+[2026-04-03 01:22:13] [GameArchaeology_Crawler_Expanded] [INFO] Crawling pouet.net for games...
+[2026-04-03 01:22:15] [GameArchaeology_Crawler_Expanded] [WARNING]   Error crawling pouet.net: HTTP Error 404: Not Found
+[2026-04-03 01:22:15] [GameArchaeology_Crawler_Expanded] [INFO] Pouet.net: found 0 games
+[2026-04-03 01:22:15] [GameArchaeology_Crawler_Expanded] [INFO] Crawling GitHub for archived game projects (expanded)...
+[2026-04-03 01:22:15] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: pomelo (NetEase)
+[2026-04-03 01:22:15] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: BrowserQuest (mozilla)
+[2026-04-03 01:22:15] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: phaser-ce-examples (phaserjs)
+[2026-04-03 01:22:16] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: clumsy-bird (ellisonleao)
+[2026-04-03 01:22:17] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: CDDA-Game-Launcher (remyroy)
+[2026-04-03 01:22:17] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: 2048-python (yangshun)
+[2026-04-03 01:22:17] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: allianceauth (allianceauth)
+[2026-04-03 01:22:17] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: Simple-Game-Server (Ganapati)
+[2026-04-03 01:22:19] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: games (leereilly)
+[2026-04-03 01:22:19] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: Whisky (Whisky-App)
+[2026-04-03 01:22:19] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: pomelo (NetEase)
+[2026-04-03 01:22:19] [GameArchaeology_Crawler_Expanded] [DEBUG]   Found: OpenDiablo2 (OpenDiablo2)
+[2026-04-03 01:22:22] [GameArchaeology_Crawler_Expanded] [INFO] GitHub: found 12 games
+[2026-04-03 01:22:22] [GameArchaeology_Crawler_Expanded] [INFO] Crawling itch.io for abandoned/old games (expanded)...
+[2026-04-03 01:22:24] [GameArchaeology_Crawler_Expanded] [INFO] itch.io: found 8 games
+[2026-04-03 01:22:24] [GameArchaeology_Crawler_Expanded] [INFO] Crawling Ludum Dare archives (expanded)...
+[2026-04-03 01:22:25] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#20: Expecting value: line 1 column 1 (char 0)
+[2026-04-03 01:22:25] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#22: Expecting value: line 1 column 1 (char 0)
+[2026-04-03 01:22:25] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#24: IncompleteRead(1844 bytes read, 1 more expected)
+[2026-04-03 01:22:25] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#26: Expecting value: line 1 column 1 (char 0)
+[2026-04-03 01:22:26] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#28: Expecting value: line 1 column 1 (char 0)
+[2026-04-03 01:22:26] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#30: IncompleteRead(1844 bytes read, 1 more expected)
+[2026-04-03 01:22:26] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying LD#32: IncompleteRead(1844 bytes read, 1 more expected)
+[2026-04-03 01:22:26] [GameArchaeology_Crawler_Expanded] [INFO] Ludum Dare: found 0 games
+[2026-04-03 01:22:26] [GameArchaeology_Crawler_Expanded] [INFO] Crawling Wayback Machine (parallel) for games...
+[2026-04-03 01:22:28] [GameArchaeology_Crawler_Expanded] [DEBUG]   kongregate.com: found 4 snapshots
+[2026-04-03 01:22:35] [GameArchaeology_Crawler_Expanded] [DEBUG]   miniclip.com: found 4 snapshots
+[2026-04-03 01:22:36] [GameArchaeology_Crawler_Expanded] [DEBUG]   armor-games.com: found 4 snapshots
+[2026-04-03 01:22:36] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying newgrounds.com: timed out
+[2026-04-03 01:22:36] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying y8.com: timed out
+[2026-04-03 01:22:37] [GameArchaeology_Crawler_Expanded] [DEBUG]   newgrounds.com: found 0 snapshots
+[2026-04-03 01:22:38] [GameArchaeology_Crawler_Expanded] [DEBUG]   y8.com: found 0 snapshots
+[2026-04-03 01:22:39] [GameArchaeology_Crawler_Expanded] [DEBUG]   playtu.be: found 3 snapshots
+[2026-04-03 01:22:45] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying mousebreaker.com: timed out
+[2026-04-03 01:22:45] [GameArchaeology_Crawler_Expanded] [DEBUG]   mousebreaker.com: found 0 snapshots
+[2026-04-03 01:22:47] [GameArchaeology_Crawler_Expanded] [DEBUG]   Error querying actionscript-gaming.com: timed out
+[2026-04-03 01:22:47] [GameArchaeology_Crawler_Expanded] [DEBUG]   actionscript-gaming.com: found 0 snapshots
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO] Wayback Machine: found 15 game snapshots (parallel)
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO] ============================================================
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO] CRAWL COMPLETE: 30 unique games found
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO] Duration: 35.5s
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO] Source breakdown:
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO]   github: 11 games
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO]   wayback_machine: 11 games
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO]   itch_io: 8 games
+[2026-04-03 01:22:48] [GameArchaeology_Crawler_Expanded] [INFO] ============================================================

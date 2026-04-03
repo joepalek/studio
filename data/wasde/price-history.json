@@ -1,0 +1,619 @@
+{
+  "generated_at": "2026-04-02T23:39:51.472491",
+  "sources": [
+    "IMF Primary Commodity Prices",
+    "World Bank Pink Sheet"
+  ],
+  "commodities": {
+    "Wheat": [
+      {
+        "date": "2024-01",
+        "price_usd": 283.91,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-02",
+        "price_usd": 278.5,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-03",
+        "price_usd": 274.83,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-04",
+        "price_usd": 272.3,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-05",
+        "price_usd": 289.42,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-06",
+        "price_usd": 265.55,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-07",
+        "price_usd": 260.26,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-08",
+        "price_usd": 250.85,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-09",
+        "price_usd": 269.69,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-10",
+        "price_usd": 272.85,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-11",
+        "price_usd": 253.75,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-12",
+        "price_usd": 252.17,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-01",
+        "price_usd": 254.09,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-02",
+        "price_usd": 264.61,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-03",
+        "price_usd": 255.37,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-04",
+        "price_usd": 249.58,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-05",
+        "price_usd": 237.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-06",
+        "price_usd": 240.05,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-07",
+        "price_usd": 234.96,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-08",
+        "price_usd": 231.14,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-09",
+        "price_usd": 233.76,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-10",
+        "price_usd": 230.78,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-11",
+        "price_usd": 245.85,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-12",
+        "price_usd": 242.8,
+        "source": "WorldBank"
+      }
+    ],
+    "Corn": [
+      {
+        "date": "2024-01",
+        "price_usd": 198.6248,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-02",
+        "price_usd": 189.1288,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-03",
+        "price_usd": 190.567,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-04",
+        "price_usd": 191.6511,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-05",
+        "price_usd": 197.7934,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-06",
+        "price_usd": 192.5067,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-07",
+        "price_usd": 177.4292,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-08",
+        "price_usd": 170.3248,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-09",
+        "price_usd": 184.9672,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-10",
+        "price_usd": 190.3357,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-11",
+        "price_usd": 201.3311,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-12",
+        "price_usd": 202.5976,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-01",
+        "price_usd": 214.437,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-02",
+        "price_usd": 220.8752,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-03",
+        "price_usd": 207.4131,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-04",
+        "price_usd": 215.0006,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-05",
+        "price_usd": 203.8729,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-06",
+        "price_usd": 196.072,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-07",
+        "price_usd": 191.9943,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-08",
+        "price_usd": 185.4868,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-09",
+        "price_usd": 197.3753,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-10",
+        "price_usd": 198.1304,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-11",
+        "price_usd": 202.0164,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-12",
+        "price_usd": 205.6962,
+        "source": "WorldBank"
+      }
+    ],
+    "Soybeans": [
+      {
+        "date": "2024-01",
+        "price_usd": 547.38,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-02",
+        "price_usd": 519.75,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-03",
+        "price_usd": 487.49,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-04",
+        "price_usd": 477.3,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-05",
+        "price_usd": 490.22,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-06",
+        "price_usd": 479.72,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-07",
+        "price_usd": 469.63,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-08",
+        "price_usd": 400.13,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-09",
+        "price_usd": 391.31,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-10",
+        "price_usd": 442.1,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-11",
+        "price_usd": 435.6408,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-12",
+        "price_usd": 409.2672,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-01",
+        "price_usd": 410.8296,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-02",
+        "price_usd": 412.15,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-03",
+        "price_usd": 401.11,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-04",
+        "price_usd": 407.6,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-05",
+        "price_usd": 414.1136,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-06",
+        "price_usd": 415.6573,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-07",
+        "price_usd": 410.13,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-08",
+        "price_usd": 407.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-09",
+        "price_usd": 403.96,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-10",
+        "price_usd": 403.75,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-11",
+        "price_usd": 445.8333,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-12",
+        "price_usd": 440.0,
+        "source": "WorldBank"
+      }
+    ],
+    "Cotton": [
+      {
+        "date": "2024-01",
+        "price_usd": 2.03,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-02",
+        "price_usd": 2.196,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-03",
+        "price_usd": 2.1989,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-04",
+        "price_usd": 1.9886,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-05",
+        "price_usd": 1.907,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-06",
+        "price_usd": 1.8338,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-07",
+        "price_usd": 1.7928,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-08",
+        "price_usd": 1.7613,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-09",
+        "price_usd": 1.8184,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-10",
+        "price_usd": 1.8437,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-11",
+        "price_usd": 1.7972,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-12",
+        "price_usd": 1.7624,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-01",
+        "price_usd": 1.7236,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-02",
+        "price_usd": 1.7211,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-03",
+        "price_usd": 1.7125,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-04",
+        "price_usd": 1.7275,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-05",
+        "price_usd": 1.7198,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-06",
+        "price_usd": 1.7258,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-07",
+        "price_usd": 1.7375,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-08",
+        "price_usd": 1.7328,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-09",
+        "price_usd": 1.7183,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-10",
+        "price_usd": 1.6751,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-11",
+        "price_usd": 1.657,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-12",
+        "price_usd": 1.6325,
+        "source": "WorldBank"
+      }
+    ],
+    "Rice": [
+      {
+        "date": "2024-01",
+        "price_usd": 660.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-02",
+        "price_usd": 624.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-03",
+        "price_usd": 613.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-04",
+        "price_usd": 592.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-05",
+        "price_usd": 628.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-06",
+        "price_usd": 632.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-07",
+        "price_usd": 590.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-08",
+        "price_usd": 589.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-09",
+        "price_usd": 580.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-10",
+        "price_usd": 515.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-11",
+        "price_usd": 511.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2024-12",
+        "price_usd": 527.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-01",
+        "price_usd": 478.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-02",
+        "price_usd": 437.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-03",
+        "price_usd": 425.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-04",
+        "price_usd": 415.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-05",
+        "price_usd": 431.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-06",
+        "price_usd": 419.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-07",
+        "price_usd": 392.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-08",
+        "price_usd": 375.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-09",
+        "price_usd": 374.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-10",
+        "price_usd": 356.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-11",
+        "price_usd": 368.0,
+        "source": "WorldBank"
+      },
+      {
+        "date": "2025-12",
+        "price_usd": 424.0,
+        "source": "WorldBank"
+      }
+    ]
+  }
+}

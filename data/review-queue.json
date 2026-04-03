@@ -1,0 +1,249 @@
+{
+  "entries": [
+    {
+      "pool_id": "wasde-parser",
+      "pool_number": 56,
+      "pool_name": "USDA WASDE Food Cost Alert",
+      "status": "AWAITING_REVIEW",
+      "overall": "PASS",
+      "sellability_score": 6.7,
+      "recommended_tier": "Pro",
+      "queued_at": "2026-04-03T00:13:51.349164",
+      "test_results": {
+        "T1_fetch": "PASS",
+        "T2_parse": "PASS",
+        "T3_plausibility": "PASS",
+        "T4_consistency": "PASS",
+        "T5_dual_ai": "WARN",
+        "T6_trend": "PASS",
+        "T7_sellability": "PASS",
+        "T8_schema": "PASS"
+      },
+      "test_detail": {
+        "T1_fetch": {
+          "result": "PASS",
+          "bytes": 104123,
+          "seconds": 11.3
+        },
+        "T2_parse": {
+          "result": "PASS",
+          "records": 5,
+          "coverage": 0.0,
+          "narrative_coverage": 100.0,
+          "mode": "narrative"
+        },
+        "T3_plausibility": {
+          "result": "PASS",
+          "checked": 26
+        },
+        "T4_consistency": {
+          "result": "PASS",
+          "checksum": "aa117945e48c",
+          "note": "Monthly cadence — single-run check"
+        },
+        "T5_dual_ai": {
+          "result": "WARN",
+          "confidence": "divergent",
+          "model_a": "NEUTRAL",
+          "model_b": "UNKNOWN",
+          "note": "Divergent signals — human review needed but not a hard fail"
+        },
+        "T6_trend": {
+          "result": "PASS",
+          "trend_score": "MEDIUM",
+          "directions": [
+            "NEUTRAL",
+            "BEARISH"
+          ]
+        },
+        "T7_sellability": {
+          "result": "PASS",
+          "score": 6.7,
+          "breakdown": {
+            "freshness": 6,
+            "signal_clarity": 6,
+            "trend": 7,
+            "reliability": 9.2,
+            "uniqueness": 5
+          },
+          "recommended_tier": "Pro"
+        },
+        "T8_schema": {
+          "result": "PASS",
+          "run_status": "skipped"
+        }
+      },
+      "sample_synthesis": "NEUTRAL",
+      "hard_fails": [],
+      "warnings": [
+        "T5_dual_ai"
+      ],
+      "human_decision": null,
+      "rejection_reason": null,
+      "approved_at": null
+    },
+    {
+      "pool_id": "wb-commodity-prices",
+      "pool_number": 58,
+      "pool_name": "World Bank Pink Sheet Commodity Prices",
+      "status": "AWAITING_REVIEW",
+      "overall": "LOW_SIGNAL",
+      "sellability_score": 5.8,
+      "recommended_tier": "Free",
+      "queued_at": "2026-04-03T00:45:02.207277",
+      "test_results": {
+        "T1_fetch": "PASS",
+        "T2_parse": "PASS",
+        "T3_plausibility": "WARN",
+        "T4_consistency": "PASS",
+        "T5_dual_ai": "WARN",
+        "T6_trend": "WARN",
+        "T7_sellability": "PASS",
+        "T8_schema": "PASS"
+      },
+      "test_detail": {
+        "T1_fetch": {
+          "result": "PASS",
+          "bytes": 1484027,
+          "seconds": 1.9
+        },
+        "T2_parse": {
+          "result": "PASS",
+          "records": 3725,
+          "coverage": 100.0,
+          "narrative_coverage": 0.0,
+          "mode": "table"
+        },
+        "T3_plausibility": {
+          "result": "WARN",
+          "implausible_pct": 11.7,
+          "flags": [
+            "date=1960M01 year out of range",
+            "date=1960M02 year out of range",
+            "date=1960M03 year out of range",
+            "date=1960M04 year out of range",
+            "date=1960M05 year out of range"
+          ]
+        },
+        "T4_consistency": {
+          "result": "PASS",
+          "checksum": "bb685254f3b7",
+          "note": "Monthly cadence — single-run check"
+        },
+        "T5_dual_ai": {
+          "result": "WARN",
+          "confidence": "divergent",
+          "model_a": "BEARISH",
+          "model_b": "NEUTRAL",
+          "note": "Divergent signals — human review needed but not a hard fail"
+        },
+        "T6_trend": {
+          "result": "WARN",
+          "trend_score": "LOW",
+          "directions": [
+            "UNKNOWN",
+            "UNKNOWN",
+            "UNKNOWN"
+          ]
+        },
+        "T7_sellability": {
+          "result": "PASS",
+          "score": 5.8,
+          "breakdown": {
+            "freshness": 6,
+            "signal_clarity": 6,
+            "trend": 4,
+            "reliability": 7.6,
+            "uniqueness": 5
+          },
+          "recommended_tier": "Free"
+        },
+        "T8_schema": {
+          "result": "PASS",
+          "run_status": "ok"
+        }
+      },
+      "sample_synthesis": "BEARISH",
+      "hard_fails": [],
+      "warnings": [
+        "T3_plausibility",
+        "T5_dual_ai",
+        "T6_trend"
+      ],
+      "human_decision": null,
+      "rejection_reason": null,
+      "approved_at": null
+    },
+    {
+      "pool_id": "gdelt-agri-sentiment",
+      "pool_number": 40,
+      "pool_name": "GDELT News Sentiment — Agriculture & Food",
+      "status": "AWAITING_REVIEW",
+      "overall": "PASS",
+      "sellability_score": 7.5,
+      "recommended_tier": "Pro",
+      "queued_at": "2026-04-03T00:48:39.169436",
+      "test_results": {
+        "T1_fetch": "PASS",
+        "T2_parse": "SKIP",
+        "T3_plausibility": "SKIP",
+        "T4_consistency": "PASS",
+        "T5_dual_ai": "PASS",
+        "T6_trend": "PASS",
+        "T7_sellability": "PASS",
+        "T8_schema": "PASS"
+      },
+      "test_detail": {
+        "T1_fetch": {
+          "result": "PASS",
+          "bytes": 10550,
+          "seconds": 58.8
+        },
+        "T2_parse": {
+          "result": "SKIP",
+          "reason": "T1 failed or no agent"
+        },
+        "T3_plausibility": {
+          "result": "SKIP",
+          "reason": "No records from T2"
+        },
+        "T4_consistency": {
+          "result": "PASS",
+          "checksum": "7d9e6a331a60"
+        },
+        "T5_dual_ai": {
+          "result": "PASS",
+          "confidence": "consensus",
+          "model_a": "NEUTRAL",
+          "model_b": "NEUTRAL"
+        },
+        "T6_trend": {
+          "result": "PASS",
+          "note": "Non-monthly cadence — trend check on live data"
+        },
+        "T7_sellability": {
+          "result": "PASS",
+          "score": 7.5,
+          "breakdown": {
+            "freshness": 10,
+            "signal_clarity": 10,
+            "trend": 4,
+            "reliability": 6.0,
+            "uniqueness": 5
+          },
+          "recommended_tier": "Pro"
+        },
+        "T8_schema": {
+          "result": "PASS",
+          "run_status": "ok"
+        }
+      },
+      "sample_synthesis": "NEUTRAL",
+      "hard_fails": [],
+      "warnings": [],
+      "human_decision": null,
+      "rejection_reason": null,
+      "approved_at": null
+    }
+  ]
+}

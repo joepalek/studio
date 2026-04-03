@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-04-02T23:39:51.496097",
+  "latest": {
+    "Wheat": {
+      "date": "2025-12",
+      "price_usd": 242.8,
+      "source": "WorldBank"
+    },
+    "Corn": {
+      "date": "2025-12",
+      "price_usd": 205.6962,
+      "source": "WorldBank"
+    },
+    "Soybeans": {
+      "date": "2025-12",
+      "price_usd": 440.0,
+      "source": "WorldBank"
+    },
+    "Cotton": {
+      "date": "2025-12",
+      "price_usd": 1.6325,
+      "source": "WorldBank"
+    },
+    "Rice": {
+      "date": "2025-12",
+      "price_usd": 424.0,
+      "source": "WorldBank"
+    }
+  }
+}

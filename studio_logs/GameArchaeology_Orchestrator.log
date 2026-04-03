@@ -1,0 +1,37 @@
+[2026-04-03 00:58:50] [LOGGER] [INFO] Log file initialized for GameArchaeology_Orchestrator
+[2026-04-03 00:58:50] [GameArchaeology_Orchestrator] [INFO] Orchestrator initialized
+[2026-04-03 00:58:50] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 00:58:50] [GameArchaeology_Orchestrator] [INFO] DAILY GAME ARCHAEOLOGY CYCLE
+[2026-04-03 00:58:50] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 00:58:50] [GameArchaeology_Orchestrator] [INFO] STEP 1: System Health Check
+[2026-04-03 00:58:51] [GameArchaeology_Orchestrator] [INFO]   CPU: 19.5%
+[2026-04-03 00:58:51] [GameArchaeology_Orchestrator] [INFO]   Memory: 96.4%
+[2026-04-03 00:58:51] [GameArchaeology_Orchestrator] [INFO] STEP 2: Archive Crawl (Expanded Sources)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [INFO]   ✓ Found 31 new games
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [INFO] STEP 3: Legal Assessment (GREEN + YELLOW only)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [INFO]   ✓ Assessed 31 games: 12 GREEN/YELLOW
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://www.newgrounds.com:80/ (2005)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://newgrounds.com:80/ (2005)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://miniclip.com:80/ (2005)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://www.miniclip.com/ (2005)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://www.miniclip.com:80/ (2005)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://www.mousebreaker.com:80/ (2005)
+[2026-04-03 00:59:22] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://playtu.be:80/ (2010)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://playtu.be:80/ (2015)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://kongregate.com:80/ (2006)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://www.kongregate.com:80/ (2006)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://kongregate.com/ (2006)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [WARNING]   ✗ Assessment insert failed: Game from http://www.kongregate.com/ (2006)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] CYCLE COMPLETE
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO]   Games found: 31
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO]   Games inserted: 31
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO]   Games assessed: 31
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO]   Duration: 33.0s
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [WARNING]   Errors: 12
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] WEEKLY DIGEST GENERATION (Friday 5PM UTC)
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [ERROR]   ✗ Error generating digest: 'MockSupabaseClient' object has no attribute 'gte'
+[2026-04-03 00:59:23] [GameArchaeology_Orchestrator] [INFO] ======================================================================

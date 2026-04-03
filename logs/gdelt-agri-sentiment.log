@@ -1,0 +1,3 @@
+[00:48:12] === gdelt-agri-sentiment START === pool #40 | dry=True
+[00:48:39] Parsed 25 articles | avg_tone=0.0 | dominant=NEUTRAL
+[00:48:39] === COMPLETE === 26.6s | 25 articles | NEUTRAL

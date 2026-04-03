@@ -1,0 +1,8 @@
+[00:32:07] === wb-commodity-prices START === pool #58 | dry=True
+[00:32:08] Parsed 0 price records across 0 commodities
+[00:40:14] === wb-commodity-prices START === pool #58 | dry=True
+[00:40:14] Parsed 3725 price records across 5 commodities
+[00:40:14] === COMPLETE === 0.6s | 3725 records
+[00:45:01] === wb-commodity-prices START === pool #58 | dry=True
+[00:45:02] Parsed 3725 price records across 5 commodities
+[00:45:02] === COMPLETE === 0.8s | 3725 records

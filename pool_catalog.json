@@ -1,0 +1,659 @@
+{
+  "meta": {
+    "version": "1.0",
+    "created": "2026-04-03",
+    "description": "Master catalog of all 100 data pools. Pool Job Creator reads this to build and test agents.",
+    "status_states": [
+      "queued",
+      "building",
+      "testing",
+      "review",
+      "approved",
+      "live",
+      "hold",
+      "killed",
+      "failed"
+    ],
+    "total_pools": 20,
+    "live": 1,
+    "queued": 19
+  },
+  "pools": [
+    {
+      "pool_id": "wasde-parser",
+      "pool_number": 56,
+      "pool_name": "USDA WASDE Food Cost Alert",
+      "status": "review",
+      "priority": 1,
+      "data_category": "commodity",
+      "source_url": "https://www.usda.gov/oce/commodity/wasde/wasde{MM}{YY}.pdf",
+      "source_format": "pdf",
+      "cadence": "monthly",
+      "agent_file": "wasde_parser.py",
+      "expected_fields": [
+        "production",
+        "domestic_use",
+        "exports",
+        "ending_stocks"
+      ],
+      "commodities": [
+        "Wheat",
+        "Corn",
+        "Soybeans",
+        "Cotton",
+        "Rice"
+      ],
+      "sellability_score": 6.7,
+      "recommended_tier": "Pro",
+      "notes": "Production. Dual AI wired. Price feed live. Beehiiv draft delivery. April 9 next release.",
+      "approved_at": "2026-04-02",
+      "test_results": {
+        "T1_fetch": {
+          "result": "PASS",
+          "bytes": 104123,
+          "seconds": 11.3
+        },
+        "T2_parse": {
+          "result": "PASS",
+          "records": 5,
+          "coverage": 0.0,
+          "narrative_coverage": 100.0,
+          "mode": "narrative"
+        },
+        "T3_plausibility": {
+          "result": "PASS",
+          "checked": 26
+        },
+        "T4_consistency": {
+          "result": "PASS",
+          "checksum": "aa117945e48c",
+          "note": "Monthly cadence — single-run check"
+        },
+        "T5_dual_ai": {
+          "result": "WARN",
+          "confidence": "divergent",
+          "model_a": "NEUTRAL",
+          "model_b": "UNKNOWN",
+          "note": "Divergent signals — human review needed but not a hard fail"
+        },
+        "T6_trend": {
+          "result": "PASS",
+          "trend_score": "MEDIUM",
+          "directions": [
+            "NEUTRAL",
+            "BEARISH"
+          ]
+        },
+        "T7_sellability": {
+          "result": "PASS",
+          "score": 6.7,
+          "breakdown": {
+            "freshness": 6,
+            "signal_clarity": 6,
+            "trend": 7,
+            "reliability": 9.2,
+            "uniqueness": 5
+          },
+          "recommended_tier": "Pro"
+        },
+        "T8_schema": {
+          "result": "PASS",
+          "run_status": "skipped"
+        }
+      }
+    },
+    {
+      "pool_id": "sanctions-ingestor",
+      "pool_number": 73,
+      "pool_name": "UN/OFAC Sanctions Lists",
+      "status": "live",
+      "priority": 1,
+      "data_category": "geopolitical",
+      "source_url": "https://scsanctions.un.org/resources/xml/en/consolidated.xml",
+      "source_format": "xml",
+      "cadence": "daily",
+      "agent_file": "agents/sanctions_ingestor.py",
+      "expected_fields": [
+        "name",
+        "entity_type",
+        "list",
+        "date_listed",
+        "nationality"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Production. Running nightly 02:00. Cross-validates WASDE cotton country supply risk.",
+      "approved_at": "2026-03-28",
+      "test_results": {}
+    },
+    {
+      "pool_id": "usda-psd-historical",
+      "pool_number": 57,
+      "pool_name": "USDA PSD 5-Year Historical Baseline",
+      "status": "queued",
+      "priority": 1,
+      "data_category": "commodity",
+      "source_url": "https://apps.fas.usda.gov/OpenData/api/psd/commodity/{code}/country/2840000/year/{year}",
+      "source_format": "api",
+      "cadence": "monthly",
+      "agent_file": null,
+      "expected_fields": [
+        "production",
+        "domestic_use",
+        "exports",
+        "ending_stocks",
+        "marketing_year"
+      ],
+      "commodities": [
+        "Wheat",
+        "Corn",
+        "Soybeans",
+        "Cotton",
+        "Rice"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Waiting on USDA FAS API domain approval. Key registered. Code ready. Unblocks backtest accuracy calc.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "wb-commodity-prices",
+      "pool_number": 58,
+      "pool_name": "World Bank Pink Sheet Commodity Prices",
+      "status": "review",
+      "priority": 1,
+      "data_category": "commodity",
+      "source_url": "https://thedocs.worldbank.org/en/doc/18675f1d1639c7a34d463f59263ba0a2-0050012025/related/CMO-Historical-Data-Monthly.xlsx",
+      "source_format": "xlsx",
+      "cadence": "monthly",
+      "agent_file": "agents/wb-commodity-prices.py",
+      "expected_fields": [
+        "commodity",
+        "date",
+        "price_usd",
+        "source"
+      ],
+      "commodities": [
+        "Wheat",
+        "Corn",
+        "Soybeans",
+        "Cotton",
+        "Rice"
+      ],
+      "sellability_score": 5.8,
+      "recommended_tier": "Free",
+      "notes": "Price feed already built in wasde_price_feed.py. Wrap as Tier 1 pool agent. 24mo data confirmed.",
+      "approved_at": null,
+      "test_results": {
+        "T1_fetch": {
+          "result": "PASS",
+          "bytes": 1484027,
+          "seconds": 1.9
+        },
+        "T2_parse": {
+          "result": "PASS",
+          "records": 3725,
+          "coverage": 100.0,
+          "narrative_coverage": 0.0,
+          "mode": "table"
+        },
+        "T3_plausibility": {
+          "result": "WARN",
+          "implausible_pct": 11.7,
+          "flags": [
+            "date=1960M01 year out of range",
+            "date=1960M02 year out of range",
+            "date=1960M03 year out of range",
+            "date=1960M04 year out of range",
+            "date=1960M05 year out of range"
+          ]
+        },
+        "T4_consistency": {
+          "result": "PASS",
+          "checksum": "bb685254f3b7",
+          "note": "Monthly cadence — single-run check"
+        },
+        "T5_dual_ai": {
+          "result": "WARN",
+          "confidence": "divergent",
+          "model_a": "BEARISH",
+          "model_b": "NEUTRAL",
+          "note": "Divergent signals — human review needed but not a hard fail"
+        },
+        "T6_trend": {
+          "result": "WARN",
+          "trend_score": "LOW",
+          "directions": [
+            "UNKNOWN",
+            "UNKNOWN",
+            "UNKNOWN"
+          ]
+        },
+        "T7_sellability": {
+          "result": "PASS",
+          "score": 5.8,
+          "breakdown": {
+            "freshness": 6,
+            "signal_clarity": 6,
+            "trend": 4,
+            "reliability": 7.6,
+            "uniqueness": 5
+          },
+          "recommended_tier": "Free"
+        },
+        "T8_schema": {
+          "result": "PASS",
+          "run_status": "ok"
+        }
+      }
+    },
+    {
+      "pool_id": "acled-conflict",
+      "pool_number": 47,
+      "pool_name": "ACLED Armed Conflict Event Data",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "geopolitical",
+      "source_url": "https://api.acleddata.com/acled/read?key={key}&email={email}&country=Ukraine&country=Russia&limit=500",
+      "source_format": "api",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "event_date",
+        "event_type",
+        "country",
+        "region",
+        "fatalities",
+        "notes"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Cross-validates WASDE wheat signal for Black Sea supply risk. Free academic API key needed.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "noaa-crop-conditions",
+      "pool_number": 59,
+      "pool_name": "NOAA US Crop Condition & Weather",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "climate",
+      "source_url": "https://www.cpc.ncep.noaa.gov/products/drought/briefing/drought_monitor.xml",
+      "source_format": "xml",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "region",
+        "drought_level",
+        "date",
+        "percent_area_affected"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Leading indicator for WASDE supply shocks. Free, no key. US Corn Belt focus.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "rasff-food-alerts",
+      "pool_number": 3,
+      "pool_name": "EU RASFF Food Safety Alerts",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "food-safety",
+      "source_url": "https://webgate.ec.europa.eu/rasff-window/backend/public/feed/",
+      "source_format": "rss",
+      "cadence": "daily",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "product",
+        "hazard",
+        "country_origin",
+        "country_notified",
+        "action"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Food safety recall/alert signal. Complements WASDE for food manufacturer subscribers. Free RSS.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "gfw-deforestation",
+      "pool_number": 30,
+      "pool_name": "Global Forest Watch Deforestation Alerts",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "climate",
+      "source_url": "https://data-api.globalforestwatch.org/dataset/gfw_integrated_alerts/latest/query",
+      "source_format": "api",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "country",
+        "area_ha",
+        "alert_type",
+        "confidence"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Soy/palm oil supply chain deforestation risk. ESG procurement signal. Free API.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "eia-energy-prices",
+      "pool_number": 60,
+      "pool_name": "EIA Energy Prices (Oil, Gas, Fertilizer proxy)",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "financial",
+      "source_url": "https://api.eia.gov/v2/petroleum/pri/spt/data/?api_key={key}&frequency=weekly",
+      "source_format": "api",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "product",
+        "price",
+        "unit"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Global constants multiplier pool. Energy costs = fertilizer/transport costs = commodity prices. Free API key.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "bis-fx-rates",
+      "pool_number": 61,
+      "pool_name": "BIS FX Exchange Rates (USD vs BRL/UAH/CNY)",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "financial",
+      "source_url": "https://data.bis.org/api/data/WS_XRU/D.USD.BRL+UAH+CNY+ARS.SP00.A?format=jsondata",
+      "source_format": "api",
+      "cadence": "daily",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "currency_pair",
+        "rate"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "FX multiplier pool. BRL/USD weakening = Brazilian soy cheaper = bearish for prices. Free BIS API.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "fao-food-price-index",
+      "pool_number": 62,
+      "pool_name": "FAO Food Price Index",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "commodity",
+      "source_url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
+      "source_format": "api",
+      "cadence": "monthly",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "index",
+        "cereals",
+        "oils",
+        "dairy",
+        "meat",
+        "sugar"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Global macro food price validation. Cross-validates WASDE directional calls at global level.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "usda-export-inspections",
+      "pool_number": 63,
+      "pool_name": "USDA Weekly Grain Export Inspections",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "commodity",
+      "source_url": "https://fgisonline.ams.usda.gov/ExportGrainReport/",
+      "source_format": "api",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "week_ending",
+        "commodity",
+        "inspections_mb",
+        "cumulative_mb",
+        "year_ago"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Weekly leading indicator for WASDE export figures. Published every Thursday. Free.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "wasde-expectations",
+      "pool_number": 64,
+      "pool_name": "WASDE Pre-Report Analyst Expectations",
+      "status": "queued",
+      "priority": 1,
+      "data_category": "commodity",
+      "source_url": "https://www.reuters.com/markets/commodities/",
+      "source_format": "rss",
+      "cadence": "monthly",
+      "agent_file": null,
+      "expected_fields": [
+        "commodity",
+        "analyst_consensus",
+        "range_low",
+        "range_high",
+        "source",
+        "date"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Expectation gap analysis — actual vs consensus is what moves markets. Scrape Reuters/Bloomberg pre-report surveys. Highest trader value.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "opencorporates-agri",
+      "pool_number": 45,
+      "pool_name": "OpenCorporates Agribusiness Entity Monitor",
+      "status": "queued",
+      "priority": 3,
+      "data_category": "geopolitical",
+      "source_url": "https://api.opencorporates.com/v0.4/companies/search?q=agriculture&jurisdiction_code=us",
+      "source_format": "api",
+      "cadence": "monthly",
+      "agent_file": null,
+      "expected_fields": [
+        "company_name",
+        "jurisdiction",
+        "status",
+        "incorporation_date",
+        "dissolution_date"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Corporate entity changes in agribusiness. M&A signal, supply chain consolidation detection.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "gdelt-agri-sentiment",
+      "pool_number": 40,
+      "pool_name": "GDELT News Sentiment — Agriculture & Food",
+      "status": "review",
+      "priority": 3,
+      "data_category": "sentiment",
+      "source_url": "https://api.gdeltproject.org/api/v2/doc/doc?query=agriculture+food+supply&mode=artlist&maxrecords=25&format=json",
+      "source_format": "api",
+      "cadence": "daily",
+      "agent_file": "agents/gdelt-agri-sentiment.py",
+      "expected_fields": [
+        "date",
+        "title",
+        "url",
+        "tone",
+        "themes",
+        "country"
+      ],
+      "sellability_score": 7.5,
+      "recommended_tier": "Pro",
+      "notes": "Media sentiment leading indicator. Negative tone spike precedes supply disruption news. Free API.",
+      "approved_at": null,
+      "test_results": {
+        "T1_fetch": {
+          "result": "PASS",
+          "bytes": 10550,
+          "seconds": 58.8
+        },
+        "T2_parse": {
+          "result": "SKIP",
+          "reason": "T1 failed or no agent"
+        },
+        "T3_plausibility": {
+          "result": "SKIP",
+          "reason": "No records from T2"
+        },
+        "T4_consistency": {
+          "result": "PASS",
+          "checksum": "7d9e6a331a60"
+        },
+        "T5_dual_ai": {
+          "result": "PASS",
+          "confidence": "consensus",
+          "model_a": "NEUTRAL",
+          "model_b": "NEUTRAL"
+        },
+        "T6_trend": {
+          "result": "PASS",
+          "note": "Non-monthly cadence — trend check on live data"
+        },
+        "T7_sellability": {
+          "result": "PASS",
+          "score": 7.5,
+          "breakdown": {
+            "freshness": 10,
+            "signal_clarity": 10,
+            "trend": 4,
+            "reliability": 6.0,
+            "uniqueness": 5
+          },
+          "recommended_tier": "Pro"
+        },
+        "T8_schema": {
+          "result": "PASS",
+          "run_status": "ok"
+        }
+      }
+    },
+    {
+      "pool_id": "usda-crop-progress",
+      "pool_number": 65,
+      "pool_name": "USDA NASS Weekly Crop Progress",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "commodity",
+      "source_url": "https://usda.library.cornell.edu/concern/publications/8336h188j?locale=en",
+      "source_format": "rss",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "week",
+        "commodity",
+        "stage",
+        "pct_good_excellent",
+        "pct_poor_very_poor",
+        "state"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Crop condition leading indicator. Published every Monday during growing season. Free.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "imf-commodity-prices",
+      "pool_number": 66,
+      "pool_name": "IMF Primary Commodity Prices",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "commodity",
+      "source_url": "https://www.imf.org/external/datamapper/api/v1/{code}/PWORLD",
+      "source_format": "api",
+      "cadence": "monthly",
+      "agent_file": null,
+      "expected_fields": [
+        "commodity",
+        "date",
+        "price_usd",
+        "source"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Alternative price feed to World Bank. Free JSON API. Partially wired in wasde_price_feed.py. Needs date format fix.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "usda-grain-crushings",
+      "pool_number": 67,
+      "pool_name": "USDA Monthly Oilseed Crushings",
+      "status": "queued",
+      "priority": 2,
+      "data_category": "commodity",
+      "source_url": "https://usda.library.cornell.edu/concern/publications/m039k491c?locale=en",
+      "source_format": "rss",
+      "cadence": "monthly",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "commodity",
+        "crushings_mb",
+        "oil_production",
+        "meal_production"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Soybean crush margin signal for biofuel/food manufacturers. Rachel Kim (expert panel) flagged as critical.",
+      "approved_at": null,
+      "test_results": {}
+    },
+    {
+      "pool_id": "wto-trade-disputes",
+      "pool_number": 68,
+      "pool_name": "WTO Agricultural Trade Disputes",
+      "status": "queued",
+      "priority": 3,
+      "data_category": "geopolitical",
+      "source_url": "https://www.wto.org/english/tratop_e/dispu_e/dispu_status_e.htm",
+      "source_format": "rss",
+      "cadence": "weekly",
+      "agent_file": null,
+      "expected_fields": [
+        "date",
+        "case_number",
+        "complainant",
+        "respondent",
+        "commodity",
+        "status"
+      ],
+      "sellability_score": null,
+      "recommended_tier": null,
+      "notes": "Trade policy risk signal. New dispute involving major exporter = supply disruption risk. Free.",
+      "approved_at": null,
+      "test_results": {}
+    }
+  ]
+}
