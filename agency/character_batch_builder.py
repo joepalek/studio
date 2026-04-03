@@ -8,6 +8,20 @@ import json, os, sys, time
 from datetime import datetime
 from pathlib import Path
 
+HEARTBEAT_FILE = "G:/My Drive/Projects/_studio/heartbeat-log.json"
+
+def write_heartbeat(status, notes=""):
+    entry = {"date": datetime.now().isoformat(), "agent": "agency-build",
+             "status": status, "notes": notes}
+    try:
+        with open(HEARTBEAT_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except:
+        data = {"_schema": "1.0", "entries": []}
+    data["entries"].append(entry)
+    with open(HEARTBEAT_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
+
 STUDIO = "G:/My Drive/Projects/_studio"
 AGENCY = STUDIO + "/agency"
 PASSING = AGENCY + "/spec-queue/passing-specs.json"
@@ -60,6 +74,7 @@ if not to_build:
     log("Nothing new to build -- all passing specs already have character folders")
     with open(STATUS, "a", encoding="utf-8") as f:
         f.write("[AGENCY-BUILD] " + datetime.now().isoformat() + " -- No new characters to build.\n")
+    write_heartbeat("clean", f"idle — {len(built_ids)} chars already built, 0 new specs")
     sys.exit(0)
 
 # Build each character
@@ -130,5 +145,10 @@ with open(STATUS, "a", encoding="utf-8") as f:
             + " -- built=" + str(len(results["built"]))
             + " failed=" + str(len(results["failed"]))
             + " total_folders=" + str(total_folders) + "\n")
+
+write_heartbeat(
+    "clean" if not results["failed"] else "flagged",
+    f"built={len(results['built'])} failed={len(results['failed'])} total_folders={total_folders}"
+)
 
 log("Done.")

@@ -3,18 +3,15 @@
   <RegistrationInfo>
     <Date>2026-03-25T00:00:00</Date>
     <Author>BDCL991\jpalek</Author>
-    <Description>Vintage Agent: fill missing decade profiles — every Monday at 01:00</Description>
+    <Description>Vintage Agent daily — 06:15 AM</Description>
   </RegistrationInfo>
   <Triggers>
     <CalendarTrigger>
-      <StartBoundary>2026-03-30T01:00:00</StartBoundary>
+      <StartBoundary>2026-04-04T06:15:00</StartBoundary>
       <Enabled>true</Enabled>
-      <ScheduleByWeek>
-        <WeeksInterval>1</WeeksInterval>
-        <DaysOfWeek>
-          <Monday/>
-        </DaysOfWeek>
-      </ScheduleByWeek>
+      <ScheduleByDay>
+        <DaysInterval>1</DaysInterval>
+      </ScheduleByDay>
     </CalendarTrigger>
   </Triggers>
   <Principals>
