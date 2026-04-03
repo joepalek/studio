@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-02T04:00:18.759244",
+  "updated": "2026-04-03T04:00:20.197280",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -1509,6 +1509,90 @@
         "python"
       ],
       "added_at": "2026-04-01T18:20:54.948740"
+    },
+    {
+      "id": "gh-MervinPraison-PraisonAI",
+      "title": "GitHub Trending: MervinPraison/PraisonAI",
+      "description": "GLM-OCR: Accurate \u00d7 Fast \u00d7 Comprehensive",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799210"
+    },
+    {
+      "id": "gh-apps-claude",
+      "title": "GitHub Trending: apps/claude",
+      "description": "We write your reusable computer vision tools. \ud83d\udc9c",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799233"
+    },
+    {
+      "id": "gh-yusufkaraaslan-Skill_Seekers",
+      "title": "GitHub Trending: yusufkaraaslan/Skill_Seekers",
+      "description": "Use claude-code for free in the terminal, VSCode extension or via discord like openclaw",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799239"
+    },
+    {
+      "id": "gh-zai-org-GLM-OCR",
+      "title": "GitHub Trending: zai-org/GLM-OCR",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799242"
+    },
+    {
+      "id": "gh-roboflow-supervision",
+      "title": "GitHub Trending: roboflow/supervision",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799247"
+    },
+    {
+      "id": "gh-apps-pre-commit-ci",
+      "title": "GitHub Trending: apps/pre-commit-ci",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799250"
+    },
+    {
+      "id": "gh-Alishahryar1-free-claude-code",
+      "title": "GitHub Trending: Alishahryar1/free-claude-code",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-02T23:00:37.799253"
     }
   ]
 }

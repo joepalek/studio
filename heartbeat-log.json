@@ -851,6 +851,168 @@
       "agent": "supervisor",
       "status": "clean",
       "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-02T23:00:37.949221",
+      "agent": "git-commit",
+      "status": "clean",
+      "notes": "committed=2 errors=0"
+    },
+    {
+      "date": "2026-04-02T23:30:04.872043",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T00:00:08.995205",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T00:30:04.982173",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T01:00:04.353929",
+      "agent": "nightly-rollup",
+      "status": "flagged",
+      "notes": "[nightly-rollup] YELLOW 57/100 — digest written"
+    },
+    {
+      "date": "2026-04-03T01:00:40.994365",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T01:15:10.338779",
+      "agent": "vector-reindex",
+      "status": "clean",
+      "notes": "reindex complete"
+    },
+    {
+      "date": "2026-04-03T01:30:04.799966",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T02:00:05.272959",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T02:00:33.862189",
+      "agent": "product-archaeology",
+      "status": "clean",
+      "notes": "added=1 total=435"
+    },
+    {
+      "date": "2026-04-03T02:30:06.567778",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T03:00:05.229388",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T03:30:03.188054",
+      "agent": "auto-answer-gemini",
+      "status": "clean",
+      "notes": "[auto-answer] auto-resolved 0, escalated 0 of 0 pending"
+    },
+    {
+      "date": "2026-04-03T03:30:05.600020",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T04:00:05.893772",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T04:00:20.352760",
+      "agent": "whiteboard-scorer",
+      "status": "clean",
+      "notes": "scored=0 top10_pushed=0"
+    },
+    {
+      "date": "2026-04-03T04:30:05.326140",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T05:00:04.842617",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T10:00:02Z",
+      "agent": "ai-intel-agent",
+      "status": "clean",
+      "notes": "4 high / 72 worth / 161 logged -- 11/11 sources -- YouTube: 17 videos"
+    },
+    {
+      "date": "2026-04-03T10:30:02Z",
+      "agent": "ai-services-rankings",
+      "status": "clean",
+      "notes": "7 categories updated"
+    },
+    {
+      "date": "2026-04-03T05:30:04.996426",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03 06:00",
+      "agent": "check-drift",
+      "status": "clean",
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH"
+    },
+    {
+      "date": "2026-04-03T06:00:05.905756",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T06:30:04.685280",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T09:48:23.179883",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-03T09:48:50.182041",
+      "agent": "product-archaeology",
+      "status": "clean",
+      "notes": "added=0 total=435"
+    },
+    {
+      "date": "2026-04-03T10:00:04.564769",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
     }
   ]
 }

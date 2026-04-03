@@ -1,13 +1,1 @@
-{
-  "project": "LightworkAI Website",
-  "brand": "LightworkAI",
-  "tagline": "Heavy problems. Lightwork.",
-  "status": "live",
-  "version": "1.1.0",
-  "last_updated": "2026-03-25",
-  "repo": "https://github.com/joepalek/jlp-studio-website",
-  "live_url": "https://joepalek.github.io/jlp-studio-website/",
-  "domain_target": "lightworkai.com",
-  "accent_color": "#1D9E75",
-  "pages": [
-    "index.html
+invalid type: string "{\n  \"project\": \"LightworkAI Website\",\n  \"brand\": \"LightworkAI\",\n  \"tagline\": \"Heavy problems. Lightwork.\",\n  \"status\": \"live\",\n  \"version\": \"1.1.0\",\n  \"last_updated\": \"2026-03-25\",\n  \"repo\": \"https://github.com/joepalek/jlp-studio-website\",\n  \"live_url\": \"https://joepalek.github.io/jlp-studio-website/\",\n  \"domain_target\": \"    \"ÿÿÿ

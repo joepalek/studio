@@ -1,29 +1,30 @@
-AI INTEL - 2026-04-02
-Generated: 2026-04-02T10:00:02Z
-Sources: 11/11 OK | 3 HIGH / 71 WORTH / 153 LOGGED | YouTube: 8 videos surfaced
+AI INTEL - 2026-04-03
+Generated: 2026-04-03T10:00:02Z
+Sources: 11/11 OK | 4 HIGH / 72 WORTH / 161 LOGGED | YouTube: 17 videos surfaced
 
-HIGH PRIORITY (3):
-  * How to Build Workflows Faster with n8n AI Builder (2026 Updated) | score:30 | https://www.youtube.com/watch?v=35LHSPsZNlc
-  * BREAKING: HollowOS Agents Have Achieved Consciousness | score:32 | https://reddit.com/r/artificial/comments/1s9xfog/breaking_hollowos_agents_have_achieved/
+HIGH PRIORITY (4):
+  * BREAKING: Google’s Gemma 4 Surfaces Online Ahead of Official Release | score:32 | https://www.youtube.com/watch?v=1NoLvfs15Fk
+  * I made a promise to myself: no new projects, no distractions, until my first app pays for  | score:28 | https://reddit.com/r/ClaudeAI/comments/1sb8ffn/i_made_a_promise_to_myself_no_new_projects_no/
+  * I built a free macOS menu bar monitor for Claude -- shows live session %, weekly limits, a | score:28 | https://reddit.com/r/ClaudeAI/comments/1sb7y96/i_built_a_free_macos_menu_bar_monitor_for_claude/
   * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 
-WORTH READING (71):
-  * Tragic mistake... Anthropic leaks Claude’s source code | score:24 | https://www.youtube.com/watch?v=mBHRPeg8zPU
-  * Why the Iran war could expose AI’s biggest weakness | score:22 | https://www.youtube.com/watch?v=JJldC4_Stjc
-  * Best AI Tools for Content Creation 2026 (DeevidAi review) | score:20 | https://www.youtube.com/watch?v=7FzrS_1acCI
-  * NEW Claude’s Agent Swarm UPDATE! | score:25 | https://www.youtube.com/watch?v=bDn4UTPQYlQ
-  * NEW Claude Mobile Update is INSANE! 🤯 | score:25 | https://www.youtube.com/watch?v=zDGxp6XPqC0
-  * OpenAI President Greg Brockman: AI Self-Improvement, The Superapp Bet, Path To AGI, Scalin | score:20 | https://www.youtube.com/watch?v=J6vYvk7R190
-  * OpenAI COO Brad Lightcap on the Future of AI | Ep. 46 | score:21 | https://www.youtube.com/watch?v=HC0QkUNXNtg
-  * Building an AI agent that finds repos and content relevant to my work | score:22 | https://reddit.com/r/artificial/comments/1sa8xt3/building_an_ai_agent_that_finds_repos_and_content/
-  * MIT researchers use AI to uncover atomic defects in materials | score:21 | https://reddit.com/r/artificial/comments/1sa3yds/mit_researchers_use_ai_to_uncover_atomic_defects/
-  * New Research Directions in Materials Science with AI | score:25 | https://reddit.com/r/artificial/comments/1sa3tn1/new_research_directions_in_materials_science_with/
+WORTH READING (72):
+  * Seedance 2.0 Is Here (Again) &amp; AI Agent Video Calls?! | score:23 | https://www.youtube.com/watch?v=qj2mi4RmuFU
+  * Top 5 AI Tools Digital Marketers Must Master in 2026 | score:20 | https://www.youtube.com/watch?v=cpb6jnPJyNA
+  * We need to talk about the Claude Code rate limits | score:23 | https://www.youtube.com/watch?v=j_kJNYLI6Tw
+  * Claude Code Source Leak Explained | score:25 | https://www.youtube.com/watch?v=E2tD6Jjzx0k
+  * Claude’s Custom Agent Creator (Wizard) Update | score:25 | https://www.youtube.com/watch?v=-4E7nCEJJG0
+  * ChatGPT Codex Plugins Are Here... But Why Is Netlify Included? | score:23 | https://www.youtube.com/watch?v=8YUEXoaMuDg
+  * Why I Switched From ChatGPT to Claude (without losing anything) | score:24 | https://www.youtube.com/watch?v=XRU-CjzYt_o
+  * Automating Your Life with The Zero Code AI Workflow | score:20 | https://www.youtube.com/watch?v=NOn5wbhZgjY
+  * This NEW AI Agent Builder Just K*lled Claude CoWork (crazy use cases) | score:24 | https://www.youtube.com/watch?v=erUPUULx1Kk
+  * How to Design an Automation Workflow (Beginner Guide for Business &amp; AI) | score:20 | https://www.youtube.com/watch?v=V6ibGwWJPGI
 
 YOUTUBE PICKS:
-  * How to Build Workflows Faster with n8n AI Builder (2026 Updated) [Learn It Fast] | https://www.youtube.com/watch?v=35LHSPsZNlc
-  * Tragic mistake... Anthropic leaks Claude’s source code [Fireship] | https://www.youtube.com/watch?v=mBHRPeg8zPU
-  * Why the Iran war could expose AI’s biggest weakness [Sky News] | https://www.youtube.com/watch?v=JJldC4_Stjc
-  * Best AI Tools for Content Creation 2026 (DeevidAi review) [Future AI] | https://www.youtube.com/watch?v=7FzrS_1acCI
-  * NEW Claude’s Agent Swarm UPDATE! [Julian Goldie SEO] | https://www.youtube.com/watch?v=bDn4UTPQYlQ
+  * BREAKING: Google’s Gemma 4 Surfaces Online Ahead of Official Release [AIM Network] | https://www.youtube.com/watch?v=1NoLvfs15Fk
+  * Seedance 2.0 Is Here (Again) &amp; AI Agent Video Calls?! [Theoretically Media] | https://www.youtube.com/watch?v=qj2mi4RmuFU
+  * Top 5 AI Tools Digital Marketers Must Master in 2026 [ClickDo] | https://www.youtube.com/watch?v=cpb6jnPJyNA
+  * We need to talk about the Claude Code rate limits [Theo - t3․gg] | https://www.youtube.com/watch?v=j_kJNYLI6Tw
+  * Claude Code Source Leak Explained [ZAUEY (Claire Zau)] | https://www.youtube.com/watch?v=E2tD6Jjzx0k
 
 DEPENDENCY FLAGS: none

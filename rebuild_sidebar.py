@@ -61,6 +61,9 @@ digest_data = load_json('daily-digest.json', {})
 digests     = digest_data.get('digests', [])
 last_digest = digests[-1] if digests else None
 
+rq_data    = load_json('data/review-queue.json', {'entries': []})
+rq_entries = rq_data.get('entries', [])
+
 RESOLVED = ('resolved','RESOLVED','auto-resolved','build','done','DONE','answered','ANSWERED')
 sup_items = sup.get('items', sup) if isinstance(sup, dict) else sup
 mob_items = mob if isinstance(mob, list) else mob.get('items', [])
@@ -111,7 +114,8 @@ data = json.dumps({
     'studioBriefing': briefing_clean,
     'lastDigest': sanitize(last_digest) if last_digest else None,
     'modelRegistry': sanitize(registry_summary),
-    'modelRegistryDate': reg.get('last_updated', today)
+    'modelRegistryDate': reg.get('last_updated', today),
+    'reviewQueue': sanitize(rq_entries),
 }, ensure_ascii=True)
 
 # ── 4. Build the injected blocks ──────────────────────────────────────────

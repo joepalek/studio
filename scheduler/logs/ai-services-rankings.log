@@ -54,3 +54,15 @@ Categories: chat, image_gen, video_gen, code, embedding, voice, search
   voice: 1 services
   search: 5 services
 Done.
+Built from model-registry.json: 53 total models
+HN recency signals: 2 services mentioned
+Written: ai-services-rankings.json
+Categories: chat, image_gen, video_gen, code, embedding, voice, search
+  chat: 29 services
+  image_gen: 7 services
+  video_gen: 4 services
+  code: 5 services
+  embedding: 2 services
+  voice: 1 services
+  search: 5 services
+Done.

@@ -16,7 +16,7 @@ class Logger:
         if self.log_to_file:
             os.makedirs(self.LOG_DIR, exist_ok=True)
             self.log_filepath = os.path.join(self.LOG_DIR, f"{self.agent_id}.log")
-            with open(self.log_filepath, 'w') as f:
+            with open(self.log_filepath, 'w', encoding='utf-8') as f:
                 f.write(
                     f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] "
                     f"[LOGGER] [INFO] Log file initialized for {self.agent_id}\n"
@@ -33,7 +33,7 @@ class Logger:
         print(formatted_message)
         if self.log_to_file and self.log_filepath:
             try:
-                with open(self.log_filepath, 'a') as f:
+                with open(self.log_filepath, 'a', encoding='utf-8') as f:
                     f.write(formatted_message + "\n")
             except Exception as e:
                 print(

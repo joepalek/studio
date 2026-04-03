@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-02T23:00:04.754606",
+  "time": "2026-04-03T10:00:04.502587",
   "ollama_up": true,
   "gemini_available": true,
   "providers_available": [
@@ -29,8 +29,6 @@
     "auto-answer-gemini",
     "check-drift",
     "git-commit",
-    "janitor",
-    "model-validator",
     "nightly-rollup",
     "orchestrator",
     "product-archaeology",

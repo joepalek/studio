@@ -1,14 +1,19 @@
-[2026-03-31 02:58:39] [LOGGER] [INFO] Log file initialized for GameArchaeology_Orchestrator
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] ============================================================
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] GAME ARCHAEOLOGY WEEKLY CYCLE STARTED
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] ============================================================
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] STEP 1: Archive Crawl...
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] STEP 2: Legal Assessment...
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] STEP 3: Digest Generation...
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] STEP 4: Supabase Sync...
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] STEP 5: Email Dispatch...
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] ============================================================
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] CYCLE COMPLETE
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] Duration: 0.1s
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] Cost: ~$0.60 (batch processing)
-[2026-03-31 02:58:39] [GameArchaeology_Orchestrator] [INFO] ============================================================
+[2026-04-03 01:34:09] [LOGGER] [INFO] Log file initialized for GameArchaeology_Orchestrator
+[2026-04-03 01:34:09] [GameArchaeology_Orchestrator] [INFO] Orchestrator initialized
+[2026-04-03 01:34:09] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 01:34:09] [GameArchaeology_Orchestrator] [INFO] DAILY GAME ARCHAEOLOGY CYCLE
+[2026-04-03 01:34:09] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 01:34:09] [GameArchaeology_Orchestrator] [INFO] STEP 1: System Health Check
+[2026-04-03 01:34:10] [GameArchaeology_Orchestrator] [INFO]   CPU: 27.5%
+[2026-04-03 01:34:10] [GameArchaeology_Orchestrator] [INFO]   Memory: 95.0%
+[2026-04-03 01:34:10] [GameArchaeology_Orchestrator] [INFO] STEP 2: Archive Crawl (Expanded Sources)
+[2026-04-03 01:37:22] [GameArchaeology_Orchestrator] [INFO]   ✓ Found 84 new games
+[2026-04-03 01:37:37] [GameArchaeology_Orchestrator] [INFO] STEP 3: Legal Assessment (GREEN + YELLOW only)
+[2026-04-03 01:37:38] [GameArchaeology_Orchestrator] [INFO]   ✓ Assessed 84 games: 19 GREEN/YELLOW
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO] ======================================================================
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO] CYCLE COMPLETE
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO]   Games found: 84
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO]   Games inserted: 84
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO]   Games assessed: 84
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO]   Duration: 215.4s
+[2026-04-03 01:37:44] [GameArchaeology_Orchestrator] [INFO] ======================================================================

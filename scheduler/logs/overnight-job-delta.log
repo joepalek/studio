@@ -203,3 +203,24 @@ PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/sch
 [2026-04-02 03:09:31] Archive updated: 548 expired total
 [2026-04-02 03:09:31] Done.
 [Thu 04/02/2026  3:09:31.77] Done 
+[Fri 04/03/2026  3:00:01.71] Job daily harvest starting 
+[2026-04-03 03:00:02] Job daily harvest starting
+[2026-04-03 03:00:02] Registry: 58 boards + 605 career pages
+[2026-04-03 03:00:02] Yesterday: 1087 active listings
+[2026-04-03 03:00:02] Harvesting 663 total sources...
+[2026-04-03 03:01:39]   100/663 sources -- 915 jobs so far
+[2026-04-03 03:02:29]   200/663 sources -- 956 jobs so far
+[2026-04-03 03:03:32]   300/663 sources -- 978 jobs so far
+[2026-04-03 03:04:49]   400/663 sources -- 978 jobs so far
+[2026-04-03 03:06:19]   500/663 sources -- 1106 jobs so far
+[2026-04-03 03:07:48]   600/663 sources -- 1400 jobs so far
+[2026-04-03 03:08:50] Harvest complete:
+[2026-04-03 03:08:50]   Total extracted: 1585
+[2026-04-03 03:08:50]   Unique active:   1083
+[2026-04-03 03:08:50]   New today:       124
+[2026-04-03 03:08:50]   Expired:         128
+[2026-04-03 03:08:50]   Errors:          33
+[2026-04-03 03:08:50] Active listings saved: G:/My Drive/Projects/job-match/job-listings.json
+[2026-04-03 03:08:50] Archive updated: 676 expired total
+[2026-04-03 03:08:50] Done.
+[Fri 04/03/2026  3:08:51.16] Done 

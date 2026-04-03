@@ -256,3 +256,32 @@ Done.
 [2026-04-02 08:00:28] Scored 0 items — saved to product-archaeology-scored.json
 [2026-04-02 08:00:28] Product Archaeology complete
 [Thu 04/02/2026  8:00:29.19] Done 
+[Fri 04/03/2026  2:00:01.57] Product Archaeology starting 
+[2026-04-03 02:00:03] Product Archaeology starting
+[2026-04-03 02:00:03] KilledByGoogle: 0 products
+[2026-04-03 02:00:04] r/shutdownsaddened: 0 posts
+[2026-04-03 02:00:10] r/discontinued: 50 posts
+[2026-04-03 02:00:16] r/DeadApps: 25 posts
+[2026-04-03 02:00:33] Wayback ERROR: timed out
+[2026-04-03 02:00:33] New items found: 1 | Total: 435
+[2026-04-03 02:00:33] Saved to product-archaeology-results.json
+[2026-04-03 02:00:33] Skipping score pass — hour 2 outside 6AM-11PM window
+[2026-04-03 02:00:33] Product Archaeology complete
+[Fri 04/03/2026  2:00:34.01] Done 
+[Fri 04/03/2026  9:48:13.02] Product Archaeology starting 
+[2026-04-03 09:48:18] Product Archaeology starting
+[2026-04-03 09:48:19] KilledByGoogle: 0 products
+[2026-04-03 09:48:19] r/shutdownsaddened: 0 posts
+[2026-04-03 09:48:22] r/discontinued: 50 posts
+[2026-04-03 09:48:25] r/DeadApps: 25 posts
+[2026-04-03 09:48:42] Wayback ERROR: timed out
+[2026-04-03 09:48:42] New items found: 0 | Total: 435
+[2026-04-03 09:48:43] Saved to product-archaeology-results.json
+[2026-04-03 09:48:43] Scoring top 20 via AI Gateway (free tier with fallback)...
+[2026-04-03 09:48:44]   SCORE ERROR: Chromecast — Expecting value: line 1 column 1 (char 0)
+[2026-04-03 09:48:47]   SCORE ERROR: VPN by Google One — Expecting value: line 1 column 1 (char 0)
+[2026-04-03 09:48:50]   SCORE ERROR: YouTube Stories — Expecting value: line 1 column 1 (char 0)
+[2026-04-03 09:48:50]   CIRCUIT BREAKER: 3 consecutive failures — aborting score pass to avoid API waste
+[2026-04-03 09:48:50] Scored 0 items — saved to product-archaeology-scored.json
+[2026-04-03 09:48:50] Product Archaeology complete
+[Fri 04/03/2026  9:48:50.26] Done 

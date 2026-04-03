@@ -34,9 +34,9 @@
   },
   "groq/llama-3.3-70b-versatile": {
     "status": "ok",
-    "last_success": "2026-04-02T21:37:06.824491",
+    "last_success": "2026-04-03T00:44:46.289720",
     "consecutive_failures": 0,
-    "total_calls": 26
+    "total_calls": 30
   },
   "groq/llama-3.1-8b-instant": {
     "status": "ok",
@@ -137,9 +137,9 @@
   },
   "mistral/mistral-large-latest": {
     "status": "ok",
-    "last_success": "2026-04-02T21:37:11.571783",
+    "last_success": "2026-04-03T00:48:10.229837",
     "consecutive_failures": 0,
-    "total_calls": 15
+    "total_calls": 20
   },
   "mistral/codestral-latest": {
     "status": "ok",
@@ -155,15 +155,15 @@
   },
   "gemini/gemini-2.5-flash": {
     "status": "ok",
-    "last_success": "2026-04-02T08:00:28.809157",
+    "last_success": "2026-04-03T09:48:50.033311",
     "consecutive_failures": 0,
-    "total_calls": 11
+    "total_calls": 22
   },
   "ollama/gemma3:4b": {
     "status": "ok",
-    "last_success": "2026-04-02T21:37:29.317403",
+    "last_success": "2026-04-02T23:36:50.919790",
     "consecutive_failures": 0,
-    "total_calls": 22
+    "total_calls": 23
   },
   "anthropic/claude-sonnet-4-6": {
     "status": "degraded",

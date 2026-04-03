@@ -20,3 +20,14 @@
 [2026-04-02 01:00:04] session-handoff.md updated
 [2026-04-02 01:00:05] Audit entry written
 [2026-04-02 01:00:05] Nightly rollup complete: YELLOW 57/100
+[2026-04-03 01:00:03] Nightly rollup starting
+[2026-04-03 01:00:04] Audit: 2 entries, 0 gate fails
+[2026-04-03 01:00:04] Check-ins: 12 agents in, 4 missed: ['janitor', 'ai-intel', 'agency-build', 'vintage-agent']
+[2026-04-03 01:00:04] Inbox: 14 pending | Flags: 1 pending
+[2026-04-03 01:00:04] Health: YELLOW 57/100 — 12 agents in | missed: janitor, ai-intel, agency-build, vintage-agent | -10 missed agent: janitor
+[2026-04-03 01:00:04] Digest entry written to daily-digest.json
+[2026-04-03 01:00:04] Supervisor briefing written to supervisor-inbox.json
+[2026-04-03 01:00:04] Heartbeat written
+[2026-04-03 01:00:04] session-handoff.md updated
+[2026-04-03 01:00:04] Audit entry written
+[2026-04-03 01:00:05] Nightly rollup complete: YELLOW 57/100

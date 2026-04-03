@@ -15,3 +15,6 @@ OK  inbox=12 wb=10 size=95842
 OK  inbox=28 wb=10 size=119224
     boot=251 injected=267 tabbar=270 onload=610
 
+OK  inbox=18 wb=10 size=139699
+    boot=251 injected=267 tabbar=270 onload=712
+

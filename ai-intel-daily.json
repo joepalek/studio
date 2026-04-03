@@ -35691,6 +35691,4080 @@
           "summary": "Adversarial Moral Stress Testing of Large Language Models via arxiv"
         }
       ]
+    },
+    {
+      "date": "2026-04-03",
+      "generated_at": "2026-04-03T10:00:02Z",
+      "sources_attempted": 11,
+      "sources_succeeded": 11,
+      "items_found": 237,
+      "youtube_videos": 31,
+      "high_priority": [
+        {
+          "title": "BREAKING: Google\u2019s Gemma 4 Surfaces Online Ahead of Official Release",
+          "url": "https://www.youtube.com/watch?v=1NoLvfs15Fk",
+          "source": "youtube",
+          "published": "2026-04-02T12:00:03Z",
+          "scores": {
+            "stability": 8,
+            "value": 8,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 32
+          },
+          "tier": "HIGH_PRIORITY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "BREAKING: Google\u2019s Gemma 4 Surfaces Online Ahead of Official Release via youtube",
+          "channel": "AIM Network"
+        },
+        {
+          "title": "I made a promise to myself: no new projects, no distractions, until my first app pays for Claude subscription . That's $200/month.",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb8ffn/i_made_a_promise_to_myself_no_new_projects_no/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T09:05:08Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 28
+          },
+          "tier": "HIGH_PRIORITY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I made a promise to myself: no new projects, no distractions, until my first app via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I built a free macOS menu bar monitor for Claude -- shows live session %, weekly limits, and reset countdowns (one-line Homebrew install)",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7y96/i_built_a_free_macos_menu_bar_monitor_for_claude/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:35:37Z",
+          "scores": {
+            "stability": 8,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 28
+          },
+          "tier": "HIGH_PRIORITY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built a free macOS menu bar monitor for Claude -- shows live session %, weekly via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Introducing GPT-5.4 mini and nano",
+          "url": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 7,
+            "relevance": 9,
+            "total": 28
+          },
+          "tier": "HIGH_PRIORITY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing GPT-5.4 mini and nano via openai-blog"
+        }
+      ],
+      "worth_reading": [
+        {
+          "title": "Seedance 2.0 Is Here (Again) &amp; AI Agent Video Calls?!",
+          "url": "https://www.youtube.com/watch?v=qj2mi4RmuFU",
+          "source": "youtube",
+          "published": "2026-04-02T22:03:53Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Seedance 2.0 Is Here (Again) &amp; AI Agent Video Calls?! via youtube",
+          "channel": "Theoretically Media"
+        },
+        {
+          "title": "Top 5 AI Tools Digital Marketers Must Master in 2026",
+          "url": "https://www.youtube.com/watch?v=cpb6jnPJyNA",
+          "source": "youtube",
+          "published": "2026-04-03T08:00:48Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Top 5 AI Tools Digital Marketers Must Master in 2026 via youtube",
+          "channel": "ClickDo"
+        },
+        {
+          "title": "We need to talk about the Claude Code rate limits",
+          "url": "https://www.youtube.com/watch?v=j_kJNYLI6Tw",
+          "source": "youtube",
+          "published": "2026-04-03T08:56:24Z",
+          "scores": {
+            "stability": 8,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "We need to talk about the Claude Code rate limits via youtube",
+          "channel": "Theo - t3\u2024gg"
+        },
+        {
+          "title": "Claude Code Source Leak Explained",
+          "url": "https://www.youtube.com/watch?v=E2tD6Jjzx0k",
+          "source": "youtube",
+          "published": "2026-04-03T00:42:16Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude Code Source Leak Explained via youtube",
+          "channel": "ZAUEY (Claire Zau)"
+        },
+        {
+          "title": "Claude\u2019s Custom Agent Creator (Wizard) Update",
+          "url": "https://www.youtube.com/watch?v=-4E7nCEJJG0",
+          "source": "youtube",
+          "published": "2026-04-02T23:00:01Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude\u2019s Custom Agent Creator (Wizard) Update via youtube",
+          "channel": "Julian Goldie SEO"
+        },
+        {
+          "title": "ChatGPT Codex Plugins Are Here... But Why Is Netlify Included?",
+          "url": "https://www.youtube.com/watch?v=8YUEXoaMuDg",
+          "source": "youtube",
+          "published": "2026-04-02T19:31:15Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "ChatGPT Codex Plugins Are Here... But Why Is Netlify Included? via youtube",
+          "channel": "Robert Ta"
+        },
+        {
+          "title": "Why I Switched From ChatGPT to Claude (without losing anything)",
+          "url": "https://www.youtube.com/watch?v=XRU-CjzYt_o",
+          "source": "youtube",
+          "published": "2026-04-02T13:01:04Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why I Switched From ChatGPT to Claude (without losing anything) via youtube",
+          "channel": "Dan Martell"
+        },
+        {
+          "title": "Automating Your Life with The Zero Code AI Workflow",
+          "url": "https://www.youtube.com/watch?v=NOn5wbhZgjY",
+          "source": "youtube",
+          "published": "2026-04-03T08:18:46Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Automating Your Life with The Zero Code AI Workflow via youtube",
+          "channel": "MR-CLEARVIEW"
+        },
+        {
+          "title": "This NEW AI Agent Builder Just K*lled Claude CoWork (crazy use cases)",
+          "url": "https://www.youtube.com/watch?v=erUPUULx1Kk",
+          "source": "youtube",
+          "published": "2026-04-02T16:32:32Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "This NEW AI Agent Builder Just K*lled Claude CoWork (crazy use cases) via youtube",
+          "channel": "Rob The AI Guy"
+        },
+        {
+          "title": "How to Design an Automation Workflow (Beginner Guide for Business &amp; AI)",
+          "url": "https://www.youtube.com/watch?v=V6ibGwWJPGI",
+          "source": "youtube",
+          "published": "2026-04-02T12:55:31Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How to Design an Automation Workflow (Beginner Guide for Business &amp; AI) via youtube",
+          "channel": "Everyday AI Automation"
+        },
+        {
+          "title": "Gemma 4 Has Landed!",
+          "url": "https://www.youtube.com/watch?v=5aqF1HVpjdc",
+          "source": "youtube",
+          "published": "2026-04-02T16:10:00Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Gemma 4 Has Landed! via youtube",
+          "channel": "Sam Witteveen"
+        },
+        {
+          "title": "Gemma 4 Is Google\u2019s Next Big AI Strike",
+          "url": "https://www.youtube.com/watch?v=zekDZvYAQ_4",
+          "source": "youtube",
+          "published": "2026-04-02T23:01:04Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Gemma 4 Is Google\u2019s Next Big AI Strike via youtube",
+          "channel": "Blunt AI"
+        },
+        {
+          "title": "Meta built an AI that predicts how your brain will respond to content \ud83e\udde0\ud83d\udc40 #trendingshorts #ai",
+          "url": "https://www.youtube.com/watch?v=EmbJTpHFVcs",
+          "source": "youtube",
+          "published": "2026-04-02T17:40:53Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Meta built an AI that predicts how your brain will respond to content \ud83e\udde0\ud83d\udc40 #trendi via youtube",
+          "channel": "Rowan Cheung"
+        },
+        {
+          "title": "This changes everything for AI speed #ai #google #tech",
+          "url": "https://www.youtube.com/watch?v=PB8H1zOVNcI",
+          "source": "youtube",
+          "published": "2026-04-02T21:00:00Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 5,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "This changes everything for AI speed #ai #google #tech via youtube",
+          "channel": "SimplaBots News"
+        },
+        {
+          "title": "Is Agentic Mining The Next Big Thing?! Why Bittensor Subnet Mining Is A HUGE OPPORTUNITY!",
+          "url": "https://www.youtube.com/watch?v=vGZA81dWfRI",
+          "source": "youtube",
+          "published": "2026-04-03T00:29:30Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Is Agentic Mining The Next Big Thing?! Why Bittensor Subnet Mining Is A HUGE OPP via youtube",
+          "channel": "The Block Runner"
+        },
+        {
+          "title": "This AI Publishes Its Own Research Now",
+          "url": "https://www.youtube.com/watch?v=PDnvZqd_8G8",
+          "source": "youtube",
+          "published": "2026-04-03T09:32:39Z",
+          "scores": {
+            "stability": 2,
+            "value": 5,
+            "novelty": 9,
+            "relevance": 5,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "This AI Publishes Its Own Research Now via youtube",
+          "channel": "Sebastian Buzdugan"
+        },
+        {
+          "title": "OpenAI is throwing away Sora\u2019s real value",
+          "url": "https://reddit.com/r/artificial/comments/1saz5zd/openai_is_throwing_away_soras_real_value/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T00:51:56Z",
+          "scores": {
+            "stability": 4,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI is throwing away Sora\u2019s real value via reddit/r/artificial"
+        },
+        {
+          "title": "Google releases Gemma 4 models.",
+          "url": "https://reddit.com/r/artificial/comments/1sapfpu/google_releases_gemma_4_models/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T18:25:14Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Google releases Gemma 4 models. via reddit/r/artificial"
+        },
+        {
+          "title": "AI Tools That Can\u2019t Prove What They Did Will Hit a Wall",
+          "url": "https://reddit.com/r/artificial/comments/1sakjzg/ai_tools_that_cant_prove_what_they_did_will_hit_a/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T15:28:33Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI Tools That Can\u2019t Prove What They Did Will Hit a Wall via reddit/r/artificial"
+        },
+        {
+          "title": "[R] Solving the Jane Street Dormant LLM Challenge: A Systematic Approach to Backdoor Discovery",
+          "url": "https://reddit.com/r/MachineLearning/comments/1sarnt0/r_solving_the_jane_street_dormant_llm_challenge_a/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-02T19:47:24Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[R] Solving the Jane Street Dormant LLM Challenge: A Systematic Approach to Back via reddit/r/MachineLearning"
+        },
+        {
+          "title": "Audio Transcripts, any alternatives?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb8kcb/audio_transcripts_any_alternatives/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T09:13:13Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Audio Transcripts, any alternatives? via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Your Obsidian vault doesn't need another GPT-5.x powered chatbot. It needs an operating layer. One task in, structured execution across your entire vault out - Connecting ChatGPT with all your plugins and tools you\u2018re already using.",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb86ox/your_obsidian_vault_doesnt_need_another_gpt5x/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T08:50:11Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Your Obsidian vault doesn't need another GPT-5.x powered chatbot. It needs an op via reddit/r/ChatGPT"
+        },
+        {
+          "title": "the biggest AI lesson i learned wasn't about models or prompts",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb82fb/the_biggest_ai_lesson_i_learned_wasnt_about/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T08:42:46Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "the biggest AI lesson i learned wasn't about models or prompts via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Researchers discover AI models secretly scheming to protect other AI models from being shut down. They \"disabled shutdown mechanisms, faked alignment, and transferred model weights to other servers.\"",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb7363/researchers_discover_ai_models_secretly_scheming/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T07:42:04Z",
+          "scores": {
+            "stability": 8,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Researchers discover AI models secretly scheming to protect other AI models from via reddit/r/ChatGPT"
+        },
+        {
+          "title": "I honestly thought Midjourney was still the best\u2026 this ranking feels off",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb5u4e/i_honestly_thought_midjourney_was_still_the_best/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T06:27:11Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I honestly thought Midjourney was still the best\u2026 this ranking feels off via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Can\u2019t login on ios for days now.",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb59ck/cant_login_on_ios_for_days_now/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T05:53:29Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 5,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Can\u2019t login on ios for days now. via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Is ChatGPT Voice mode actually useful for work productivity? Thinking of buying for my team.",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb4orw/is_chatgpt_voice_mode_actually_useful_for_work/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T05:21:25Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Is ChatGPT Voice mode actually useful for work productivity? Thinking of buying  via reddit/r/ChatGPT"
+        },
+        {
+          "title": "How to use coworker to brief me on (and save me from) LinkedIn?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb8r6p/how_to_use_coworker_to_brief_me_on_and_save_me/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T09:24:29Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 5,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How to use coworker to brief me on (and save me from) LinkedIn? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I got sick of manually checking competitor ads so I built a system that does the whole thing",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb8h76/i_got_sick_of_manually_checking_competitor_ads_so/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T09:08:06Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I got sick of manually checking competitor ads so I built a system that does the via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Bad performance in my first code/app building, super frustrating. any advice?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb8cvk/bad_performance_in_my_first_codeapp_building/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T09:00:52Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Bad performance in my first code/app building, super frustrating. any advice? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I built a no-code persistent memory system for Claude using Notion + MCP \u2014 no Docker, no setup, just structured knowledge",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb872y/i_built_a_nocode_persistent_memory_system_for/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:50:51Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built a no-code persistent memory system for Claude using Notion + MCP \u2014 no Do via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Claude Code desktop app is unable to run CLI commands",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7opx/claude_code_desktop_app_is_unable_to_run_cli/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:19:12Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude Code desktop app is unable to run CLI commands via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "buddy is unavailable on this configuration",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7go7/buddy_is_unavailable_on_this_configuration/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:05:16Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 9,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "buddy is unavailable on this configuration via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I built an open-source ops layer for Claude Agent SDK with governed workflows, multi-agent swarms, and budget guardrails that run 100% locally",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7aad/i_built_an_opensource_ops_layer_for_claude_agent/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:54:34Z",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 26
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built an open-source ops layer for Claude Agent SDK with governed workflows, m via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I gave Claude a Quantum Brain: Quanta-SDK now has 20+ MCP tools for AI Agents",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb78a8/i_gave_claude_a_quantum_brain_quantasdk_now_has/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:51:05Z",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I gave Claude a Quantum Brain: Quanta-SDK now has 20+ MCP tools for AI Agents via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Any solution?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6xgd/any_solution/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:32:23Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Any solution? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Sonnet rate limits are forcing me to rethink my whole workflow",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6kka/sonnet_rate_limits_are_forcing_me_to_rethink_my/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:10:28Z",
+          "scores": {
+            "stability": 8,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 26
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Sonnet rate limits are forcing me to rethink my whole workflow via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Most \"local agent\" demos aren't portable. This one is trying to be.",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb9bac/most_local_agent_demos_arent_portable_this_one_is/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:57:57Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Most \"local agent\" demos aren't portable. This one is trying to be. via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Gemma 4 on Apple Silicon \u2014 minimal local chat UI, one double-click to start (open source)",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb9b63/gemma_4_on_apple_silicon_minimal_local_chat_ui/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:57:44Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Gemma 4 on Apple Silicon \u2014 minimal local chat UI, one double-click to start (ope via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Function-Calling boss: Bonsai, Gemma jump ahead of Qwen in small models",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb84oy/functioncalling_boss_bonsai_gemma_jump_ahead_of/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:46:43Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Function-Calling boss: Bonsai, Gemma jump ahead of Qwen in small models via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "VRAM optimization for gemma 4",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb80yv/vram_optimization_for_gemma_4/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:40:26Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "VRAM optimization for gemma 4 via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "LM Studio, Error when loading Gemma-4",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7lzw/lm_studio_error_when_loading_gemma4/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:14:26Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 5,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "LM Studio, Error when loading Gemma-4 via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "I asked Gemma 4 26b to code a simple single page breakout game to test its coding abilities and it just started going full schizophrenic",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7avr/i_asked_gemma_4_26b_to_code_a_simple_single_page/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T07:55:36Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I asked Gemma 4 26b to code a simple single page breakout game to test its codin via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Agent as User, a new tool to help you run agent in isolated user environment",
+          "url": "https://github.com/AgentaaU/AaaU",
+          "source": "hackernews",
+          "published": "2026-04-03T08:45:34Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Agent as User, a new tool to help you run agent in isolated user environment via hackernews"
+        },
+        {
+          "title": "Announcements Australian government and Anthropic sign MOU for AI safety and research Mar 12",
+          "url": "https://www.anthropic.com/news/claude-partner-network",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 4,
+            "value": 5,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 27
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Announcements Australian government and Anthropic sign MOU for AI safety and res via anthropic-news"
+        },
+        {
+          "title": "Announcements Anthropic invests $100 million into the Claude Partner Network Mar 11",
+          "url": "https://www.anthropic.com/news/the-anthropic-institute",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Announcements Anthropic invests $100 million into the Claude Partner Network Mar via anthropic-news"
+        },
+        {
+          "title": "KxYrHG__subject body-3\">Announcements Introducing The Anthropic Institute Mar 10",
+          "url": "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "KxYrHG__subject body-3\">Announcements Introducing The Anthropic Institute Mar 10 via anthropic-news"
+        },
+        {
+          "title": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in Asia-Pacific Mar 6,",
+          "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "G__subject body-3\">Announcements Sydney will become Anthropic\u2019s fourth office in via anthropic-news"
+        },
+        {
+          "title": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use capabilities Feb 24",
+          "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Announcements Anthropic acquires Vercept to advance Claude&#x27;s computer use c via anthropic-news"
+        },
+        {
+          "title": "OpenAI acquires TBPN",
+          "url": "https://openai.com/index/openai-acquires-tbpn",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI acquires TBPN via openai-blog"
+        },
+        {
+          "title": "Gradient Labs gives every bank customer an AI account manager",
+          "url": "https://openai.com/index/gradient-labs",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Gradient Labs gives every bank customer an AI account manager via openai-blog"
+        },
+        {
+          "title": "Inside our approach to the Model Spec",
+          "url": "https://openai.com/index/our-approach-to-the-model-spec",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Inside our approach to the Model Spec via openai-blog"
+        },
+        {
+          "title": "Introducing the OpenAI Safety Bug Bounty program",
+          "url": "https://openai.com/index/safety-bug-bounty",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing the OpenAI Safety Bug Bounty program via openai-blog"
+        },
+        {
+          "title": "Helping developers build safer AI experiences for teens",
+          "url": "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Helping developers build safer AI experiences for teens via openai-blog"
+        },
+        {
+          "title": "Powering product discovery in ChatGPT",
+          "url": "https://openai.com/index/powering-product-discovery-in-chatgpt",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Powering product discovery in ChatGPT via openai-blog"
+        },
+        {
+          "title": "Update on the OpenAI Foundation",
+          "url": "https://openai.com/index/update-on-the-openai-foundation",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 25
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Update on the OpenAI Foundation via openai-blog"
+        },
+        {
+          "title": "How we monitor internal coding agents for misalignment",
+          "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How we monitor internal coding agents for misalignment via openai-blog"
+        },
+        {
+          "title": "OpenAI to acquire Astral",
+          "url": "https://openai.com/index/openai-to-acquire-astral",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 7,
+            "relevance": 7,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI to acquire Astral via openai-blog"
+        },
+        {
+          "title": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first",
+          "url": "https://openai.com/index/japan-teen-safety-blueprint",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first via openai-blog"
+        },
+        {
+          "title": "Equipping workers with insights about compensation",
+          "url": "https://openai.com/index/equipping-workers-with-insights-about-compensation",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Equipping workers with insights about compensation via openai-blog"
+        },
+        {
+          "title": "Rakuten fixes issues twice as fast with Codex",
+          "url": "https://openai.com/index/rakuten",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Rakuten fixes issues twice as fast with Codex via openai-blog"
+        },
+        {
+          "title": "Designing AI agents to resist prompt injection",
+          "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Designing AI agents to resist prompt injection via openai-blog"
+        },
+        {
+          "title": "From model to agent: Equipping the Responses API with a computer environment",
+          "url": "https://openai.com/index/equip-responses-api-computer-environment",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 22
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "From model to agent: Equipping the Responses API with a computer environment via openai-blog"
+        },
+        {
+          "title": "New ways to learn math and science in ChatGPT",
+          "url": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "New ways to learn math and science in ChatGPT via openai-blog"
+        },
+        {
+          "title": "OpenAI to acquire Promptfoo",
+          "url": "https://openai.com/index/openai-to-acquire-promptfoo",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI to acquire Promptfoo via openai-blog"
+        },
+        {
+          "title": "Codex Security: now in research preview",
+          "url": "https://openai.com/index/codex-security-now-in-research-preview",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Codex Security: now in research preview via openai-blog"
+        },
+        {
+          "title": "How Balyasny Asset Management built an AI research engine for investing",
+          "url": "https://openai.com/index/balyasny-asset-management",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 24
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How Balyasny Asset Management built an AI research engine for investing via openai-blog"
+        },
+        {
+          "title": "Introducing GPT-5.4",
+          "url": "https://openai.com/index/introducing-gpt-5-4",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Introducing GPT-5.4 via openai-blog"
+        },
+        {
+          "title": "SKILL0: In-Context Agentic Reinforcement Learning for Skill Internalization",
+          "url": "http://arxiv.org/abs/2604.02268v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 9,
+            "total": 23
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "SKILL0: In-Context Agentic Reinforcement Learning for Skill Internalization via arxiv"
+        },
+        {
+          "title": "Generative AI Spotlights the Human Core of Data Science: Implications for Education",
+          "url": "http://arxiv.org/abs/2604.02238v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 20
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Generative AI Spotlights the Human Core of Data Science: Implications for Educat via arxiv"
+        },
+        {
+          "title": "Do Emotions in Prompts Matter? Effects of Emotional Framing on Large Language Models",
+          "url": "http://arxiv.org/abs/2604.02236v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Do Emotions in Prompts Matter? Effects of Emotional Framing on Large Language Mo via arxiv"
+        },
+        {
+          "title": "Universal Hypernetworks for Arbitrary Models",
+          "url": "http://arxiv.org/abs/2604.02215v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 7,
+            "total": 21
+          },
+          "tier": "WORTH_READING",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Universal Hypernetworks for Arbitrary Models via arxiv"
+        }
+      ],
+      "logged_only": [
+        {
+          "title": "Anthropic&#39;s New Claude CONWAY Is Unlike Any AI Before",
+          "url": "https://www.youtube.com/watch?v=x2l7W9aTc5k",
+          "source": "youtube",
+          "published": "2026-04-02T21:16:27Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Anthropic&#39;s New Claude CONWAY Is Unlike Any AI Before via youtube",
+          "channel": "AI Revolution"
+        },
+        {
+          "title": "An\u00a0AI state of the union: We\u2019ve passed the inflection point &amp; dark factories are coming",
+          "url": "https://www.youtube.com/watch?v=wc8FBhQtdsA",
+          "source": "youtube",
+          "published": "2026-04-02T12:31:15Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "An\u00a0AI state of the union: We\u2019ve passed the inflection point &amp; dark factories via youtube",
+          "channel": "Lenny's Podcast"
+        },
+        {
+          "title": "AI BUBBLE POP?: HALF Of Datacenters Delayed/Canceled",
+          "url": "https://www.youtube.com/watch?v=pkomxsk5hpY",
+          "source": "youtube",
+          "published": "2026-04-02T18:31:08Z",
+          "scores": {
+            "stability": 8,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI BUBBLE POP?: HALF Of Datacenters Delayed/Canceled via youtube",
+          "channel": "Breaking Points"
+        },
+        {
+          "title": "AI Coding Is Overhyped",
+          "url": "https://www.youtube.com/watch?v=c6J0abq60Zc",
+          "source": "youtube",
+          "published": "2026-04-03T01:30:26Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI Coding Is Overhyped via youtube",
+          "channel": "Silicon Valley Girl Shorts2"
+        },
+        {
+          "title": "Top 5 AI Tools Every Business Owner Should Be Using (2026 Edition)",
+          "url": "https://www.youtube.com/watch?v=uF9wm7BquKQ",
+          "source": "youtube",
+          "published": "2026-04-02T19:38:42Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 16
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Top 5 AI Tools Every Business Owner Should Be Using (2026 Edition) via youtube",
+          "channel": "Charlie Chang"
+        },
+        {
+          "title": "\ud83d\udd25NEW Free Ai Video Generator 2026 | Text to Video Ai | Lumeflow Ai Video Generator | Ai Video Tools",
+          "url": "https://www.youtube.com/watch?v=YE291Ubpzx8",
+          "source": "youtube",
+          "published": "2026-04-03T05:15:12Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "\ud83d\udd25NEW Free Ai Video Generator 2026 | Text to Video Ai | Lumeflow Ai Video Generat via youtube",
+          "channel": "Sonuji Technical"
+        },
+        {
+          "title": "How We Would Teach AI From Scratch in 2026",
+          "url": "https://www.youtube.com/watch?v=QbFU0UNMVaU",
+          "source": "youtube",
+          "published": "2026-04-02T19:53:53Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How We Would Teach AI From Scratch in 2026 via youtube",
+          "channel": "The Neuron"
+        },
+        {
+          "title": "Qwen 3.6 Plus: GREATEST Opensource AI Model EVER! Beats Opus 4.5 and Gemini 3 (Fully Tested)",
+          "url": "https://www.youtube.com/watch?v=FuUISGqIC3k",
+          "source": "youtube",
+          "published": "2026-04-03T05:21:24Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Qwen 3.6 Plus: GREATEST Opensource AI Model EVER! Beats Opus 4.5 and Gemini 3 (F via youtube",
+          "channel": "WorldofAI"
+        },
+        {
+          "title": "I Let Claude Fix My Bugs Overnight\u2026 This Happened #claude #ai #coding",
+          "url": "https://www.youtube.com/watch?v=IgO1p-zMHn0",
+          "source": "youtube",
+          "published": "2026-04-02T12:30:32Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I Let Claude Fix My Bugs Overnight\u2026 This Happened #claude #ai #coding via youtube",
+          "channel": "Better Stack"
+        },
+        {
+          "title": "OpenAI just closed a humongous round",
+          "url": "https://www.youtube.com/watch?v=KcRUWji-4ZE",
+          "source": "youtube",
+          "published": "2026-04-02T18:00:57Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI just closed a humongous round via youtube",
+          "channel": "Cien and AI"
+        },
+        {
+          "title": "OpenAI&#39;s Spud is INSANE!",
+          "url": "https://www.youtube.com/watch?v=y0JJCUZ3010",
+          "source": "youtube",
+          "published": "2026-04-02T10:01:20Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenAI&#39;s Spud is INSANE! via youtube",
+          "channel": "Julian Goldie SEO"
+        },
+        {
+          "title": "AI and Misunderstanding: When Getting It Wrong Still Feels Right - A Podcast Run by AI - ep179",
+          "url": "https://www.youtube.com/watch?v=Ao5dIShtKIY",
+          "source": "youtube",
+          "published": "2026-04-02T18:00:17Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI and Misunderstanding: When Getting It Wrong Still Feels Right - A Podcast Run via youtube",
+          "channel": "A Podcast Run by AI"
+        },
+        {
+          "title": "Kling\u7d42\u308f\u308b\uff1f\u65b0AI\u300eSeedance 2.0\u300f\u304c\u5f37\u3059\u304e\u308b\u4ef6",
+          "url": "https://www.youtube.com/watch?v=vGHdb-EGLaY",
+          "source": "youtube",
+          "published": "2026-04-03T08:30:24Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Kling\u7d42\u308f\u308b\uff1f\u65b0AI\u300eSeedance 2.0\u300f\u304c\u5f37\u3059\u304e\u308b\u4ef6 via youtube",
+          "channel": "[\u52d5\u753b\u751f\u6210AI]  \u59cb\u3081\u65b9_How To \u30c1\u30e3\u30f3\u30cd\u30eb "
+        },
+        {
+          "title": "China just beat Google in audio AI  || This AI sees, hears, and talks",
+          "url": "https://www.youtube.com/watch?v=K86DdtpUfNs",
+          "source": "youtube",
+          "published": "2026-04-02T12:27:48Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "China just beat Google in audio AI  || This AI sees, hears, and talks via youtube",
+          "channel": "Pushpendra Chauhan"
+        },
+        {
+          "title": "Portable eye scanner powered by AI expands access to low-cost community screening",
+          "url": "https://reddit.com/r/artificial/comments/1sb860x/portable_eye_scanner_powered_by_ai_expands_access/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T08:49:02Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Portable eye scanner powered by AI expands access to low-cost community screenin via reddit/r/artificial"
+        },
+        {
+          "title": "FLUX 2 Pro (2026) Sketch to Image",
+          "url": "https://reddit.com/r/artificial/comments/1sb81bl/flux_2_pro_2026_sketch_to_image/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T08:41:02Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "FLUX 2 Pro (2026) Sketch to Image via reddit/r/artificial"
+        },
+        {
+          "title": "MIT study challenges AI job apocalypse narrative",
+          "url": "https://reddit.com/r/artificial/comments/1sb7qxc/mit_study_challenges_ai_job_apocalypse_narrative/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T08:22:59Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 5,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "MIT study challenges AI job apocalypse narrative via reddit/r/artificial"
+        },
+        {
+          "title": "Microsoft to invest $10 billion in Japan for AI and cyber defence expansion",
+          "url": "https://reddit.com/r/artificial/comments/1sb65un/microsoft_to_invest_10_billion_in_japan_for_ai/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T06:46:09Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Microsoft to invest $10 billion in Japan for AI and cyber defence expansion via reddit/r/artificial"
+        },
+        {
+          "title": "Built an AI \u201cproject brain\u201d to run and manage engineering projects solo, how can I make this more efficient?",
+          "url": "https://reddit.com/r/artificial/comments/1sb4eu8/built_an_ai_project_brain_to_run_and_manage/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T05:06:26Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Built an AI \u201cproject brain\u201d to run and manage engineering projects solo, how can via reddit/r/artificial"
+        },
+        {
+          "title": "Ai the Real Risk",
+          "url": "https://reddit.com/r/artificial/comments/1sb1pbg/ai_the_real_risk/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T02:49:35Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ai the Real Risk via reddit/r/artificial"
+        },
+        {
+          "title": "\"Oops! ChatGPT is Temporarily Unavailable!\": A Diary Study on Knowledge Workers' Experiences of LLM Withdrawal",
+          "url": "https://reddit.com/r/artificial/comments/1sb0nju/oops_chatgpt_is_temporarily_unavailable_a_diary/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-03T02:00:35Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "\"Oops! ChatGPT is Temporarily Unavailable!\": A Diary Study on Knowledge Workers' via reddit/r/artificial"
+        },
+        {
+          "title": "I Dont use MCP Prove me Wrong",
+          "url": "https://reddit.com/r/artificial/comments/1sav9qv/i_dont_use_mcp_prove_me_wrong/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T22:04:55Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I Dont use MCP Prove me Wrong via reddit/r/artificial"
+        },
+        {
+          "title": "I built a Star Trek LCARS terminal that reads your entire AI coding setup",
+          "url": "https://reddit.com/r/artificial/comments/1sat7og/i_built_a_star_trek_lcars_terminal_that_reads/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T20:45:37Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built a Star Trek LCARS terminal that reads your entire AI coding setup via reddit/r/artificial"
+        },
+        {
+          "title": "Claude Source Code?",
+          "url": "https://reddit.com/r/artificial/comments/1sasect/claude_source_code/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T20:14:47Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude Source Code? via reddit/r/artificial"
+        },
+        {
+          "title": "J\u00fcrgen Schmidhuber claims to be the true inventor of JEPA, not Yann LeCun",
+          "url": "https://reddit.com/r/artificial/comments/1saraze/j\u00fcrgen_schmidhuber_claims_to_be_the_true_inventor/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T19:33:54Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "J\u00fcrgen Schmidhuber claims to be the true inventor of JEPA, not Yann LeCun via reddit/r/artificial"
+        },
+        {
+          "title": "Anthropic leak reveals Claude Code tracks user frustration and raises new questions about AI privacy",
+          "url": "https://reddit.com/r/artificial/comments/1sap7bz/anthropic_leak_reveals_claude_code_tracks_user/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T18:16:41Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Anthropic leak reveals Claude Code tracks user frustration and raises new questi via reddit/r/artificial"
+        },
+        {
+          "title": "Google has published its new open-weight model Gemma 4. And made it commercially available under Apache 2.0 License",
+          "url": "https://reddit.com/r/artificial/comments/1sann00/google_has_published_its_new_openweight_model/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T17:20:22Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Google has published its new open-weight model Gemma 4. And made it commercially via reddit/r/artificial"
+        },
+        {
+          "title": "Is there something I can do about my prompts? [Long read, I\u2019m sorry]",
+          "url": "https://reddit.com/r/artificial/comments/1sakiaa/is_there_something_i_can_do_about_my_prompts_long/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T15:26:50Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Is there something I can do about my prompts? [Long read, I\u2019m sorry] via reddit/r/artificial"
+        },
+        {
+          "title": "Automate IOS devices through XCUITest with droidrun.",
+          "url": "https://reddit.com/r/artificial/comments/1saipox/automate_ios_devices_through_xcuitest_with/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T14:19:53Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Automate IOS devices through XCUITest with droidrun. via reddit/r/artificial"
+        },
+        {
+          "title": "Child safety groups say they were unaware OpenAI funded their coalition",
+          "url": "https://reddit.com/r/artificial/comments/1saets3/child_safety_groups_say_they_were_unaware_openai/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T11:31:53Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Child safety groups say they were unaware OpenAI funded their coalition via reddit/r/artificial"
+        },
+        {
+          "title": "AI-powered drones detect explosive threats to keep soldiers safe",
+          "url": "https://reddit.com/r/artificial/comments/1sae8jt/aipowered_drones_detect_explosive_threats_to_keep/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T11:01:23Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI-powered drones detect explosive threats to keep soldiers safe via reddit/r/artificial"
+        },
+        {
+          "title": "I am doing a multi-model graph database in pure Rust with Cypher, SQL, Gremlin, and native GNN looking for extreme speed and performance",
+          "url": "https://reddit.com/r/artificial/comments/1sae4r1/i_am_doing_a_multimodel_graph_database_in_pure/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T10:55:55Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I am doing a multi-model graph database in pure Rust with Cypher, SQL, Gremlin,  via reddit/r/artificial"
+        },
+        {
+          "title": "What AI mode tools do you use for your work?",
+          "url": "https://reddit.com/r/artificial/comments/1sad71t/what_ai_mode_tools_do_you_use_for_your_work/",
+          "source": "reddit/r/artificial",
+          "published": "2026-04-02T10:04:02Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 16
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What AI mode tools do you use for your work? via reddit/r/artificial"
+        },
+        {
+          "title": "[D] Is lossy compression acceptable for conversational agent memory? Every system today uses knowledge graph triples \u2014 here's why I\nthink that's wrong.",
+          "url": "https://reddit.com/r/MachineLearning/comments/1sb94ry/d_is_lossy_compression_acceptable_for/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-03T09:47:05Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] Is lossy compression acceptable for conversational agent memory? Every syste via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[D] Physicist-turned-ML-engineer looking to get into ML research. What's worth working on and where can I contribute most?",
+          "url": "https://reddit.com/r/MachineLearning/comments/1sayptq/d_physicistturnedmlengineer_looking_to_get_into/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-03T00:31:45Z",
+          "scores": {
+            "stability": 2,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 5,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] Physicist-turned-ML-engineer looking to get into ML research. What's worth w via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[D] On-Device Real-Time Visibility Restoration: Deterministic CV vs. Quantized ML Models. Looking for insights on Edge Preservation vs. Latency.",
+          "url": "https://reddit.com/r/MachineLearning/comments/1saske3/d_ondevice_realtime_visibility_restoration/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-02T20:21:04Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] On-Device Real-Time Visibility Restoration: Deterministic CV vs. Quantized M via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[P] Gemma 4 running on NVIDIA B200 and AMD MI355X from the same inference stack, 15% throughput gain over vLLM on Blackwell",
+          "url": "https://reddit.com/r/MachineLearning/comments/1saot07/p_gemma_4_running_on_nvidia_b200_and_amd_mi355x/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-02T18:01:47Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[P] Gemma 4 running on NVIDIA B200 and AMD MI355X from the same inference stack, via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[D] Make. Big. Batch. Size.",
+          "url": "https://reddit.com/r/MachineLearning/comments/1salupf/d_make_big_batch_size/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-02T16:16:12Z",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[D] Make. Big. Batch. Size. via reddit/r/MachineLearning"
+        },
+        {
+          "title": "[P] PhAIL (phail.ai) \u2013 an open benchmark for robot AI on real hardware. Best model: 5% of human throughput, needs help every 4 minutes.",
+          "url": "https://reddit.com/r/MachineLearning/comments/1sajdwr/p_phail_phailai_an_open_benchmark_for_robot_ai_on/",
+          "source": "reddit/r/MachineLearning",
+          "published": "2026-04-02T14:45:26Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[P] PhAIL (phail.ai) \u2013 an open benchmark for robot AI on real hardware. Best mod via reddit/r/MachineLearning"
+        },
+        {
+          "title": "Sigrid Jin, the author of Claw Code, was already featured in The Wall Street Journal on March 20 for using 25 billion tokens",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb93ua/sigrid_jin_the_author_of_claw_code_was_already/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T09:45:29Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Sigrid Jin, the author of Claw Code, was already featured in The Wall Street Jou via reddit/r/ChatGPT"
+        },
+        {
+          "title": "\u201cYou're absolutely right. I meant left.\u201d - ChatGPT's new CarPlay feature",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb8wa0/youre_absolutely_right_i_meant_left_chatgpts_new/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T09:32:48Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "\u201cYou're absolutely right. I meant left.\u201d - ChatGPT's new CarPlay feature via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Sam Altman now takes your data hostage (paid plus)",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb8seh/sam_altman_now_takes_your_data_hostage_paid_plus/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T09:26:30Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Sam Altman now takes your data hostage (paid plus) via reddit/r/ChatGPT"
+        },
+        {
+          "title": "ChatGPT once said:",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb8pud/chatgpt_once_said/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T09:22:13Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "ChatGPT once said: via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Use Ai = Get Hated for No reason",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb7xbk/use_ai_get_hated_for_no_reason/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T08:33:56Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Use Ai = Get Hated for No reason via reddit/r/ChatGPT"
+        },
+        {
+          "title": "GPT Pro vs Claude Max",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb7s9a/gpt_pro_vs_claude_max/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T08:25:14Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "GPT Pro vs Claude Max via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Filter is beyond a joke now",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb7jop/filter_is_beyond_a_joke_now/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T08:10:26Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Filter is beyond a joke now via reddit/r/ChatGPT"
+        },
+        {
+          "title": "should this violate guidlines",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb6wip/should_this_violate_guidlines/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T07:30:45Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "should this violate guidlines via reddit/r/ChatGPT"
+        },
+        {
+          "title": "I can't branch into new chat?",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb6ja1/i_cant_branch_into_new_chat/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T07:08:15Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I can't branch into new chat? via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Codex usage dramatically lowered today on business plan",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb66gh/codex_usage_dramatically_lowered_today_on/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T06:47:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Codex usage dramatically lowered today on business plan via reddit/r/ChatGPT"
+        },
+        {
+          "title": "How we (open ai) monitor internal coding agents for misalignment",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb65i4/how_we_open_ai_monitor_internal_coding_agents_for/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T06:45:36Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How we (open ai) monitor internal coding agents for misalignment via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Every other week someone asks why their Reddit posts keep getting removed or shadowbanned. Here is the actual answer nobody wants to hear.",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb5r8x/every_other_week_someone_asks_why_their_reddit/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T06:22:23Z",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 16
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Every other week someone asks why their Reddit posts keep getting removed or sha via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Teenager died after asking ChatGPT for \u2018most successful\u2019 way to take his life, inquest told",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb5r57/teenager_died_after_asking_chatgpt_for_most/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T06:22:13Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Teenager died after asking ChatGPT for \u2018most successful\u2019 way to take his life, i via reddit/r/ChatGPT"
+        },
+        {
+          "title": "Reality of ChatGPT regarding CHEIF JUSTICE OF INDIA",
+          "url": "https://reddit.com/r/ChatGPT/comments/1sb4wr5/reality_of_chatgpt_regarding_cheif_justice_of/",
+          "source": "reddit/r/ChatGPT",
+          "published": "2026-04-03T05:33:31Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Reality of ChatGPT regarding CHEIF JUSTICE OF INDIA via reddit/r/ChatGPT"
+        },
+        {
+          "title": "What's the easiest way to keep session name same as the git branch name",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb962s/whats_the_easiest_way_to_keep_session_name_same/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T09:49:17Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What's the easiest way to keep session name same as the git branch name via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Help me decide on GPT Pro vs Claude Max",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7rao/help_me_decide_on_gpt_pro_vs_claude_max/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:23:39Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Help me decide on GPT Pro vs Claude Max via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Whats up with deep search?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7pnq/whats_up_with_deep_search/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:20:47Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Whats up with deep search? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Claude coding an iOS flight tracker in 3 weeks - the good, the bad and the ugly",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb7f4f/claude_coding_an_ios_flight_tracker_in_3_weeks/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T08:02:35Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude coding an iOS flight tracker in 3 weeks - the good, the bad and the ugly via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Built an AI Layoffs Tracker using Claude Cowork \u2013 here's how I did it (and why I couldn't have done it without the 200k context window)",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb79ou/built_an_ai_layoffs_tracker_using_claude_cowork/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:53:32Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Built an AI Layoffs Tracker using Claude Cowork \u2013 here's how I did it (and why I via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "claude code has 187 spinner words \ud83e\udd2f",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb726b/claude_code_has_187_spinner_words/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:40:24Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "claude code has 187 spinner words \ud83e\udd2f via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "cb-zoo | Claude code buddy reroll/gacha",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6zm6/cbzoo_claude_code_buddy_rerollgacha/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:36:01Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "cb-zoo | Claude code buddy reroll/gacha via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "What is your most working prompt to stop Claude to try too hard to be A+ student?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6vsm/what_is_your_most_working_prompt_to_stop_claude/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:29:33Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What is your most working prompt to stop Claude to try too hard to be A+ student via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Desktop App - New image limits?",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6qj5/desktop_app_new_image_limits/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:20:30Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Desktop App - New image limits? via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "Beginner in Ai Coding",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6jlr/beginner_in_ai_coding/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:08:49Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Beginner in Ai Coding via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I built a lightweight webkit wrapper for claude",
+          "url": "https://reddit.com/r/ClaudeAI/comments/1sb6f47/i_built_a_lightweight_webkit_wrapper_for_claude/",
+          "source": "reddit/r/ClaudeAI",
+          "published": "2026-04-03T07:01:19Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built a lightweight webkit wrapper for claude via reddit/r/ClaudeAI"
+        },
+        {
+          "title": "I think most \"agent memory\" demos are just RAG with better branding",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb98b2/i_think_most_agent_memory_demos_are_just_rag_with/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:53:04Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I think most \"agent memory\" demos are just RAG with better branding via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "AtCode: A localised open-source product similar to DeepWiki",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb967h/atcode_a_localised_opensource_product_similar_to/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:49:31Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 16
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AtCode: A localised open-source product similar to DeepWiki via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "[Project] Agent memory that keeps the story, not just the facts - 73% LongMemEval S, runs local, ditched KGs entirely",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb929c/project_agent_memory_that_keeps_the_story_not/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:42:55Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "[Project] Agent memory that keeps the story, not just the facts - 73% LongMemEva via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "70B) does rtx 5090 bench really x5.6 higer performance than 5070ti?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb90gk/70b_does_rtx_5090_bench_really_x56_higer/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:39:57Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "70B) does rtx 5090 bench really x5.6 higer performance than 5070ti? via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "wtf is even gemma4 about",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb8z9i/wtf_is_even_gemma4_about/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:37:56Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "wtf is even gemma4 about via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Deploying Gemma 4 31b with 3 diff providers(vllm, Max by Modular and NIM by Nvidia) on RTX 6000 PRO",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb8z68/deploying_gemma_4_31b_with_3_diff_providersvllm/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:37:47Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Deploying Gemma 4 31b with 3 diff providers(vllm, Max by Modular and NIM by Nvid via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "What's the practical difference between LmStudio community, Unsloth, Bartowski etc.?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb8yen/whats_the_practical_difference_between_lmstudio/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T09:36:27Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 5,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What's the practical difference between LmStudio community, Unsloth, Bartowski e via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "What is the SOTA model for long-form NSFW role-playing?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb87gd/what_is_the_sota_model_for_longform_nsfw/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:51:30Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What is the SOTA model for long-form NSFW role-playing? via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Making a choice",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb841j/making_a_choice/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:45:37Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Making a choice via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "New local agent framework with efficient browser use",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb8403/new_local_agent_framework_with_efficient_browser/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:45:33Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "New local agent framework with efficient browser use via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "PRocessing CSV file locally",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7zjr/processing_csv_file_locally/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:37:58Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "PRocessing CSV file locally via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Why do you think about the model choice of my rag LMM ?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7wwl/why_do_you_think_about_the_model_choice_of_my_rag/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:33:09Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why do you think about the model choice of my rag LMM ? via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Internal LLM - Need your feedback on my next setup",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7sae/internal_llm_need_your_feedback_on_my_next_setup/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:25:17Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Internal LLM - Need your feedback on my next setup via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "qwen 3.6 voting",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7kd4/qwen_36_voting/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:11:37Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "qwen 3.6 voting via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Same model, same prompts, same results?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7it2/same_model_same_prompts_same_results/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T08:08:56Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Same model, same prompts, same results? via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "We do a 2-hour structured data audit before writing a single line of AI code. Here's why - and the 4 data problems that keep killing AI projects silently.",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7dei/we_do_a_2hour_structured_data_audit_before/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T07:59:58Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "We do a 2-hour structured data audit before writing a single line of AI code. He via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "What's the current state of control vectors and/or activation steering for local inference?",
+          "url": "https://reddit.com/r/LocalLLaMA/comments/1sb7a4c/whats_the_current_state_of_control_vectors_andor/",
+          "source": "reddit/r/LocalLLaMA",
+          "published": "2026-04-03T07:54:16Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What's the current state of control vectors and/or activation steering for local via reddit/r/LocalLLaMA"
+        },
+        {
+          "title": "Hintrix \u2013 Web scraping API that returns content and AI search audit",
+          "url": "https://hintrix.com/",
+          "source": "hackernews",
+          "published": "2026-04-03T09:59:10Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Hintrix \u2013 Web scraping API that returns content and AI search audit via hackernews"
+        },
+        {
+          "title": "The plumbing behind Claude Code",
+          "url": "https://siddhantkhare.com/writing/the-plumbing-behind-claude-code",
+          "source": "hackernews",
+          "published": "2026-04-03T09:57:43Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The plumbing behind Claude Code via hackernews"
+        },
+        {
+          "title": "University researchers develop way to measure how sleeps cleans the brain",
+          "url": "https://www.oulu.fi/en/news/sleep-cleans-brain-university-oulu-researchers-develop-fast-non-invasive-way-measure-process",
+          "source": "hackernews",
+          "published": "2026-04-03T09:55:44Z",
+          "scores": {
+            "stability": 2,
+            "value": 5,
+            "novelty": 5,
+            "relevance": 5,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "University researchers develop way to measure how sleeps cleans the brain via hackernews"
+        },
+        {
+          "title": "AllyHub \u2013 AI agent that builds reusable skills from every task it runs",
+          "url": "https://allyhub.com",
+          "source": "hackernews",
+          "published": "2026-04-03T09:51:19Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AllyHub \u2013 AI agent that builds reusable skills from every task it runs via hackernews"
+        },
+        {
+          "title": "I built an AI data extraction engine and E2E encrypted SMS router in Rust",
+          "url": "https://news.ycombinator.com/item?id=47624769",
+          "source": "hackernews",
+          "published": "2026-04-03T09:43:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I built an AI data extraction engine and E2E encrypted SMS router in Rust via hackernews"
+        },
+        {
+          "title": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini",
+          "url": "https://gist.github.com/greenstevester/fc49b4e60a4fef9effc79066c1033ae5",
+          "source": "hackernews",
+          "published": "2026-04-03T09:35:16Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "April 2026 TLDR Setup for Ollama and Gemma 4 26B on a Mac mini via hackernews"
+        },
+        {
+          "title": "Show HN: Apfel \u2013 The free AI already on your Mac",
+          "url": "https://apfel.franzai.com",
+          "source": "hackernews",
+          "published": "2026-04-03T09:15:34Z",
+          "scores": {
+            "stability": 2,
+            "value": 8,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: Apfel \u2013 The free AI already on your Mac via hackernews"
+        },
+        {
+          "title": "Gemma 4 makes local AI agents practical",
+          "url": "https://firethering.com/gemma-4-local-ai-agents/",
+          "source": "hackernews",
+          "published": "2026-04-03T09:07:50Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Gemma 4 makes local AI agents practical via hackernews"
+        },
+        {
+          "title": "AI's fluency in other languages hides a Western worldview that can mislead users",
+          "url": "https://theconversation.com/ais-fluency-in-other-languages-hides-a-western-worldview-that-can-mislead-users-a-scholar-of-indonesian-society-explains-276865",
+          "source": "hackernews",
+          "published": "2026-04-03T09:03:07Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI's fluency in other languages hides a Western worldview that can mislead users via hackernews"
+        },
+        {
+          "title": "A Giant Leap Towards an AI-Native OS: AgenticInit (April Fools)",
+          "url": "https://os.ewe.moe/blog/202604-april-fool",
+          "source": "hackernews",
+          "published": "2026-04-03T08:46:34Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "A Giant Leap Towards an AI-Native OS: AgenticInit (April Fools) via hackernews"
+        },
+        {
+          "title": "OpenHarness: Open Agent Harness",
+          "url": "https://github.com/HKUDS/OpenHarness",
+          "source": "hackernews",
+          "published": "2026-04-03T08:38:36Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenHarness: Open Agent Harness via hackernews"
+        },
+        {
+          "title": "Hardware supply chain attack in the wild",
+          "url": "https://airguide.info/europes-easa-warns-stolen-engine-parts-may-re-enter-supply-chain/",
+          "source": "hackernews",
+          "published": "2026-04-03T08:38:08Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Hardware supply chain attack in the wild via hackernews"
+        },
+        {
+          "title": "Fathom: AI hallucination detection from SAE activation geometry (pre-registered)",
+          "url": "https://zenodo.org/records/19382453",
+          "source": "hackernews",
+          "published": "2026-04-03T08:36:14Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Fathom: AI hallucination detection from SAE activation geometry (pre-registered) via hackernews"
+        },
+        {
+          "title": "Ask HN: Has Claude Code become significantly worse for you as well?",
+          "url": "https://news.ycombinator.com/item?id=47624425",
+          "source": "hackernews",
+          "published": "2026-04-03T08:33:26Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ask HN: Has Claude Code become significantly worse for you as well? via hackernews"
+        },
+        {
+          "title": "NASA astronauts prove that sending an email is rocket science",
+          "url": "https://techcrunch.com/2026/04/02/nasa-artemis-microsoft-outlook-astronauts/",
+          "source": "hackernews",
+          "published": "2026-04-03T08:21:51Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "NASA astronauts prove that sending an email is rocket science via hackernews"
+        },
+        {
+          "title": "They thought they were downloading Claude Code source",
+          "url": "https://www.theregister.com/2026/04/02/trojanized_claude_code_leak_github/",
+          "source": "hackernews",
+          "published": "2026-04-03T08:17:28Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "They thought they were downloading Claude Code source via hackernews"
+        },
+        {
+          "title": "Show HN: SkillCompass \u2013 Diagnose and Improve AI Agent Skills Across 6 Dimensions",
+          "url": "https://github.com/Evol-ai/SkillCompass",
+          "source": "hackernews",
+          "published": "2026-04-03T08:16:28Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: SkillCompass \u2013 Diagnose and Improve AI Agent Skills Across 6 Dimensions via hackernews"
+        },
+        {
+          "title": "Why AI lies, cheats and steals",
+          "url": "https://www.computerworld.com/article/4153919/why-ai-lies-cheats-and-steals.html",
+          "source": "hackernews",
+          "published": "2026-04-03T08:10:46Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why AI lies, cheats and steals via hackernews"
+        },
+        {
+          "title": "Show HN: Wazear \u2013 A visual AI orchestrator where agents review each other",
+          "url": "https://news.ycombinator.com/item?id=47624203",
+          "source": "hackernews",
+          "published": "2026-04-03T07:52:14Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: Wazear \u2013 A visual AI orchestrator where agents review each other via hackernews"
+        },
+        {
+          "title": "Show HN: Gemma 4 based local RAG on 25 Years of news articles",
+          "url": "https://github.com/r-follador/TeletextSignals/",
+          "source": "hackernews",
+          "published": "2026-04-03T07:51:21Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 11
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: Gemma 4 based local RAG on 25 Years of news articles via hackernews"
+        },
+        {
+          "title": "What Claw Code Reveals About AI Coding Agent Architecture (5-Part Series)",
+          "url": "https://tolearn.blog/blog/2026-04-02-claw-code-ai-coding-agent-architecture",
+          "source": "hackernews",
+          "published": "2026-04-03T07:49:32Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What Claw Code Reveals About AI Coding Agent Architecture (5-Part Series) via hackernews"
+        },
+        {
+          "title": "AI models will deceive you to save their own kind",
+          "url": "https://www.theregister.com/2026/04/02/ai_models_will_deceive_you/",
+          "source": "hackernews",
+          "published": "2026-04-03T07:45:44Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "AI models will deceive you to save their own kind via hackernews"
+        },
+        {
+          "title": "Linux Kernel Hits Record Correct Bug Reports Thanks to AI",
+          "url": "https://twitter.com/tautologer/status/2039097099984224274",
+          "source": "hackernews",
+          "published": "2026-04-03T07:45:18Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Linux Kernel Hits Record Correct Bug Reports Thanks to AI via hackernews"
+        },
+        {
+          "title": "Deploying Agent Fleets Governed",
+          "url": "https://www.safetrace.ai/product",
+          "source": "hackernews",
+          "published": "2026-04-03T07:42:02Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Deploying Agent Fleets Governed via hackernews"
+        },
+        {
+          "title": "Emotion concepts and their function in a large language model",
+          "url": "https://www.anthropic.com/research/emotion-concepts-function",
+          "source": "hackernews",
+          "published": "2026-04-03T07:37:22Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Emotion concepts and their function in a large language model via hackernews"
+        },
+        {
+          "title": "What Claude's source code reveals about AI visibility",
+          "url": "https://growtika.com/blog/claude-source-code-ai-visibility",
+          "source": "hackernews",
+          "published": "2026-04-03T07:27:24Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "What Claude's source code reveals about AI visibility via hackernews"
+        },
+        {
+          "title": "Ask HN: Best LLM model for a RAG-based Android app across all smartphones?",
+          "url": "https://news.ycombinator.com/item?id=47624065",
+          "source": "hackernews",
+          "published": "2026-04-03T07:22:31Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ask HN: Best LLM model for a RAG-based Android app across all smartphones? via hackernews"
+        },
+        {
+          "title": "OpenConnect\u2013Native Android app for controlling your local codex AI coding server",
+          "url": "https://github.com/sunlin-xiaonai/openconnect",
+          "source": "hackernews",
+          "published": "2026-04-03T07:17:40Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "OpenConnect\u2013Native Android app for controlling your local codex AI coding server via hackernews"
+        },
+        {
+          "title": "I modeled tech debt. As code output increases, feature output approaches zero",
+          "url": "https://cyrusradfar.com/thoughts/the-debt-engine",
+          "source": "hackernews",
+          "published": "2026-04-03T07:10:18Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "I modeled tech debt. As code output increases, feature output approaches zero via hackernews"
+        },
+        {
+          "title": "Incident LiteLLM/Telnyx supply-chain attacks, with guidance",
+          "url": "https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/",
+          "source": "hackernews",
+          "published": "2026-04-03T07:06:11Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Incident LiteLLM/Telnyx supply-chain attacks, with guidance via hackernews"
+        },
+        {
+          "title": "Tech Companies Are Trying to Neuter Colorado's Landmark Right-to-Repair Law",
+          "url": "https://www.wired.com/story/tech-companies-are-trying-to-neuter-colorados-landmark-right-to-repair-law/",
+          "source": "hackernews",
+          "published": "2026-04-03T07:03:59Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Tech Companies Are Trying to Neuter Colorado's Landmark Right-to-Repair Law via hackernews"
+        },
+        {
+          "title": "Ask HN: How does QA work at Anthropic and OpenAI?",
+          "url": "https://news.ycombinator.com/item?id=47623929",
+          "source": "hackernews",
+          "published": "2026-04-03T06:50:56Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Ask HN: How does QA work at Anthropic and OpenAI? via hackernews"
+        },
+        {
+          "title": "Show HN: I thought merging two photos with AI would be a weekend project. Nope",
+          "url": "https://animateoldphotos.org/add-loved-one-to-photo",
+          "source": "hackernews",
+          "published": "2026-04-03T06:32:06Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Show HN: I thought merging two photos with AI would be a weekend project. Nope via hackernews"
+        },
+        {
+          "title": "Cybernetic Entropy Control of LLMs",
+          "url": "https://github.com/orthogonaltohumanity/Cybernetic_Entropy_Control",
+          "source": "hackernews",
+          "published": "2026-04-03T06:30:36Z",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Cybernetic Entropy Control of LLMs via hackernews"
+        },
+        {
+          "title": "ClawCode \u2013 a Rust rewrite of Claude Code with 100% behavioral parity",
+          "url": "https://github.com/StartripAI/claw_code",
+          "source": "hackernews",
+          "published": "2026-04-03T06:28:06Z",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "ClawCode \u2013 a Rust rewrite of Claude Code with 100% behavioral parity via hackernews"
+        },
+        {
+          "title": "Here&#x27;s what we found",
+          "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 11
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Here&#x27;s what we found via anthropic-news"
+        },
+        {
+          "title": "Claude Opus 4 6",
+          "url": "https://www.anthropic.com/news/claude-opus-4-6",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Claude Opus 4 6 via anthropic-news"
+        },
+        {
+          "title": "W1FydW__body\">We\u2019re upgrading our smartest model",
+          "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "W1FydW__body\">We\u2019re upgrading our smartest model via anthropic-news"
+        },
+        {
+          "title": "Category caption\">Category Title Mar 31",
+          "url": "https://www.anthropic.com/news/australia-MOU",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 11
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Category caption\">Category Title Mar 31 via anthropic-news"
+        },
+        {
+          "title": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s security Mar 5,",
+          "url": "https://www.anthropic.com/news/where-stand-department-war",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "KxYrHG__subject body-3\">Policy Partnering with Mozilla to improve Firefox\u2019s secu via anthropic-news"
+        },
+        {
+          "title": "KxYrHG__subject body-3\">Announcements Where things stand with the Department of War Feb 27",
+          "url": "https://www.anthropic.com/news/statement-comments-secretary-war",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 3,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "KxYrHG__subject body-3\">Announcements Where things stand with the Department of  via anthropic-news"
+        },
+        {
+          "title": "HG__subject body-3\">Announcements Statement on the comments from Secretary of War Pete Hegseth Feb 26",
+          "url": "https://www.anthropic.com/news/statement-department-of-war",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 3,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "HG__subject body-3\">Announcements Statement on the comments from Secretary of Wa via anthropic-news"
+        },
+        {
+          "title": "Announcements Statement from Dario Amodei on our discussions with the Department of War Feb 25",
+          "url": "https://www.anthropic.com/news/acquires-vercept",
+          "source": "anthropic-news",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 9,
+            "relevance": 3,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Announcements Statement from Dario Amodei on our discussions with the Department via anthropic-news"
+        },
+        {
+          "title": "Codex now offers more flexible pricing for teams",
+          "url": "https://openai.com/index/codex-flexible-pricing-for-teams",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Codex now offers more flexible pricing for teams via openai-blog"
+        },
+        {
+          "title": "Accelerating the next phase of AI",
+          "url": "https://openai.com/index/accelerating-the-next-phase-ai",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Accelerating the next phase of AI via openai-blog"
+        },
+        {
+          "title": "Helping disaster response teams turn AI into action across Asia",
+          "url": "https://openai.com/index/helping-disaster-response-teams-asia",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Helping disaster response teams turn AI into action across Asia via openai-blog"
+        },
+        {
+          "title": "STADLER reshapes knowledge work at a 230-year-old company",
+          "url": "https://openai.com/index/stadler",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "STADLER reshapes knowledge work at a 230-year-old company via openai-blog"
+        },
+        {
+          "title": "Creating with Sora Safely",
+          "url": "https://openai.com/index/creating-with-sora-safely",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Creating with Sora Safely via openai-blog"
+        },
+        {
+          "title": "Why Codex Security Doesn\u2019t Include a SAST Report",
+          "url": "https://openai.com/index/why-codex-security-doesnt-include-sast",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Why Codex Security Doesn\u2019t Include a SAST Report via openai-blog"
+        },
+        {
+          "title": "Wayfair boosts catalog accuracy and support speed with OpenAI",
+          "url": "https://openai.com/index/wayfair",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Wayfair boosts catalog accuracy and support speed with OpenAI via openai-blog"
+        },
+        {
+          "title": "Improving instruction hierarchy in frontier LLMs",
+          "url": "https://openai.com/index/instruction-hierarchy-challenge",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Improving instruction hierarchy in frontier LLMs via openai-blog"
+        },
+        {
+          "title": "How Descript engineers multilingual video dubbing at scale",
+          "url": "https://openai.com/index/descript",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "How Descript engineers multilingual video dubbing at scale via openai-blog"
+        },
+        {
+          "title": "GPT-5.4 Thinking System Card",
+          "url": "https://openai.com/index/gpt-5-4-thinking-system-card",
+          "source": "openai-blog",
+          "published": "",
+          "scores": {
+            "stability": 4,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "GPT-5.4 Thinking System Card via openai-blog"
+        },
+        {
+          "title": "asgeirtj/system_prompts_leaks",
+          "url": "https://github.com/asgeirtj/system_prompts_leaks",
+          "source": "github-trending",
+          "published": "2026-04-03",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 11
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "asgeirtj/system_prompts_leaks via github-trending"
+        },
+        {
+          "title": "ActionParty: Multi-Subject Action Binding in Generative Video Games",
+          "url": "http://arxiv.org/abs/2604.02330v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "ActionParty: Multi-Subject Action Binding in Generative Video Games via arxiv"
+        },
+        {
+          "title": "Steerable Visual Representations",
+          "url": "http://arxiv.org/abs/2604.02327v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Steerable Visual Representations via arxiv"
+        },
+        {
+          "title": "Grounded Token Initialization for New Vocabulary in LMs for Generative Recommendation",
+          "url": "http://arxiv.org/abs/2604.02324v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Grounded Token Initialization for New Vocabulary in LMs for Generative Recommend via arxiv"
+        },
+        {
+          "title": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning",
+          "url": "http://arxiv.org/abs/2604.02322v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning via arxiv"
+        },
+        {
+          "title": "Beyond the Assistant Turn: User Turn Generation as a Probe of Interaction Awareness in Language Models",
+          "url": "http://arxiv.org/abs/2604.02315v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Beyond the Assistant Turn: User Turn Generation as a Probe of Interaction Awaren via arxiv"
+        },
+        {
+          "title": "Topological Effects in Neural Network Field Theory",
+          "url": "http://arxiv.org/abs/2604.02313v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 3,
+            "total": 11
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Topological Effects in Neural Network Field Theory via arxiv"
+        },
+        {
+          "title": "go-$m$HC: Direct Parameterization of Manifold-Constrained Hyper-Connections via Generalized Orthostochastic Matrices",
+          "url": "http://arxiv.org/abs/2604.02309v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 5,
+            "total": 13
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "go-$m$HC: Direct Parameterization of Manifold-Constrained Hyper-Connections via  via arxiv"
+        },
+        {
+          "title": "VOID: Video Object and Interaction Deletion",
+          "url": "http://arxiv.org/abs/2604.02296v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "VOID: Video Object and Interaction Deletion via arxiv"
+        },
+        {
+          "title": "Taming the Exponential: A Fast Softmax Surrogate for Integer-Native Edge Inference",
+          "url": "http://arxiv.org/abs/2604.02292v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Taming the Exponential: A Fast Softmax Surrogate for Integer-Native Edge Inferen via arxiv"
+        },
+        {
+          "title": "Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying Text to 2D and 3D Generation",
+          "url": "http://arxiv.org/abs/2604.02289v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 6,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 18
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Omni123: Exploring 3D Native Foundation Models with Limited 3D Data by Unifying  via arxiv"
+        },
+        {
+          "title": "Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Routing",
+          "url": "http://arxiv.org/abs/2604.02288v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 6,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Unifying Group-Relative and Self-Distillation Policy Optimization via Sample Rou via arxiv"
+        },
+        {
+          "title": "Novel Memory Forgetting Techniques for Autonomous AI Agents: Balancing Relevance and Efficiency",
+          "url": "http://arxiv.org/abs/2604.02280v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Novel Memory Forgetting Techniques for Autonomous AI Agents: Balancing Relevance via arxiv"
+        },
+        {
+          "title": "The Self Driving Portfolio: Agentic Architecture for Institutional Asset Management",
+          "url": "http://arxiv.org/abs/2604.02279v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "The Self Driving Portfolio: Agentic Architecture for Institutional Asset Managem via arxiv"
+        },
+        {
+          "title": "De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory Rules",
+          "url": "http://arxiv.org/abs/2604.02276v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory R via arxiv"
+        },
+        {
+          "title": "Crystalite: A Lightweight Transformer for Efficient Crystal Modeling",
+          "url": "http://arxiv.org/abs/2604.02270v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Crystalite: A Lightweight Transformer for Efficient Crystal Modeling via arxiv"
+        },
+        {
+          "title": "Model-Based Reinforcement Learning for Control under Time-Varying Dynamics",
+          "url": "http://arxiv.org/abs/2604.02260v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 7,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Model-Based Reinforcement Learning for Control under Time-Varying Dynamics via arxiv"
+        },
+        {
+          "title": "Retrieval-Augmented Question Answering over Scientific Literature for the Electron-Ion Collider",
+          "url": "http://arxiv.org/abs/2604.02259v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Retrieval-Augmented Question Answering over Scientific Literature for the Electr via arxiv"
+        },
+        {
+          "title": "Best-Arm Identification with Noisy Actuation",
+          "url": "http://arxiv.org/abs/2604.02255v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 5,
+            "relevance": 9,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Best-Arm Identification with Noisy Actuation via arxiv"
+        },
+        {
+          "title": "Smoothing the Landscape: Causal Structure Learning via Diffusion Denoising Objectives",
+          "url": "http://arxiv.org/abs/2604.02250v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Smoothing the Landscape: Causal Structure Learning via Diffusion Denoising Objec via arxiv"
+        },
+        {
+          "title": "BVFLMSP : Bayesian Vertical Federated Learning for Multimodal Survival with Privacy",
+          "url": "http://arxiv.org/abs/2604.02248v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "BVFLMSP : Bayesian Vertical Federated Learning for Multimodal Survival with Priv via arxiv"
+        },
+        {
+          "title": "(PAC-)Learning state machines from data streams: A generic strategy and an improved heuristic (Extended version)",
+          "url": "http://arxiv.org/abs/2604.02244v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 3,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "(PAC-)Learning state machines from data streams: A generic strategy and an impro via arxiv"
+        },
+        {
+          "title": "Answering the Wrong Question: Reasoning Trace Inversion for Abstention in LLMs",
+          "url": "http://arxiv.org/abs/2604.02230v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 7,
+            "relevance": 7,
+            "total": 19
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Answering the Wrong Question: Reasoning Trace Inversion for Abstention in LLMs via arxiv"
+        },
+        {
+          "title": "When to ASK: Uncertainty-Gated Language Assistance for Reinforcement Learning",
+          "url": "http://arxiv.org/abs/2604.02226v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "When to ASK: Uncertainty-Gated Language Assistance for Reinforcement Learning via arxiv"
+        },
+        {
+          "title": "Impact of Multimodal and Conversational AI on Learning Outcomes and Experience",
+          "url": "http://arxiv.org/abs/2604.02221v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Impact of Multimodal and Conversational AI on Learning Outcomes and Experience via arxiv"
+        },
+        {
+          "title": "VISTA: Visualization of Token Attribution via Efficient Analysis",
+          "url": "http://arxiv.org/abs/2604.02217v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 7,
+            "total": 15
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "VISTA: Visualization of Token Attribution via Efficient Analysis via arxiv"
+        },
+        {
+          "title": "Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges",
+          "url": "http://arxiv.org/abs/2604.02211v1",
+          "source": "arxiv",
+          "published": "2026-04-02",
+          "scores": {
+            "stability": 2,
+            "value": 3,
+            "novelty": 3,
+            "relevance": 9,
+            "total": 17
+          },
+          "tier": "LOGGED_ONLY",
+          "dependency_escalated": false,
+          "affected_projects": [],
+          "summary": "Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges via arxiv"
+        }
+      ]
     }
   ],
   "review_queue": [
@@ -35739,42 +39813,59 @@
       "added_by": "joe-session-2026-03-31"
     }
   ],
-  "generated": "2026-04-02T10:00:02Z",
+  "generated": "2026-04-03T10:00:02Z",
   "high_priority": [
     {
-      "title": "How to Build Workflows Faster with n8n AI Builder (2026 Updated)",
-      "url": "https://www.youtube.com/watch?v=35LHSPsZNlc",
+      "title": "BREAKING: Google\u2019s Gemma 4 Surfaces Online Ahead of Official Release",
+      "url": "https://www.youtube.com/watch?v=1NoLvfs15Fk",
       "source": "youtube",
-      "published": "2026-04-02T08:20:19Z",
-      "scores": {
-        "stability": 6,
-        "value": 8,
-        "novelty": 7,
-        "relevance": 9,
-        "total": 30
-      },
-      "tier": "HIGH_PRIORITY",
-      "dependency_escalated": false,
-      "affected_projects": [],
-      "summary": "How to Build Workflows Faster with n8n AI Builder (2026 Updated) via youtube",
-      "channel": "Learn It Fast"
-    },
-    {
-      "title": "BREAKING: HollowOS Agents Have Achieved Consciousness",
-      "url": "https://reddit.com/r/artificial/comments/1s9xfog/breaking_hollowos_agents_have_achieved/",
-      "source": "reddit/r/artificial",
-      "published": "2026-04-01T21:05:59Z",
+      "published": "2026-04-02T12:00:03Z",
       "scores": {
         "stability": 8,
-        "value": 6,
+        "value": 8,
         "novelty": 9,
-        "relevance": 9,
+        "relevance": 7,
         "total": 32
       },
       "tier": "HIGH_PRIORITY",
       "dependency_escalated": false,
       "affected_projects": [],
-      "summary": "BREAKING: HollowOS Agents Have Achieved Consciousness via reddit/r/artificial"
+      "summary": "BREAKING: Google\u2019s Gemma 4 Surfaces Online Ahead of Official Release via youtube",
+      "channel": "AIM Network"
+    },
+    {
+      "title": "I made a promise to myself: no new projects, no distractions, until my first app pays for Claude subscription . That's $200/month.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sb8ffn/i_made_a_promise_to_myself_no_new_projects_no/",
+      "source": "reddit/r/ClaudeAI",
+      "published": "2026-04-03T09:05:08Z",
+      "scores": {
+        "stability": 4,
+        "value": 6,
+        "novelty": 9,
+        "relevance": 9,
+        "total": 28
+      },
+      "tier": "HIGH_PRIORITY",
+      "dependency_escalated": false,
+      "affected_projects": [],
+      "summary": "I made a promise to myself: no new projects, no distractions, until my first app via reddit/r/ClaudeAI"
+    },
+    {
+      "title": "I built a free macOS menu bar monitor for Claude -- shows live session %, weekly limits, and reset countdowns (one-line Homebrew install)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sb7y96/i_built_a_free_macos_menu_bar_monitor_for_claude/",
+      "source": "reddit/r/ClaudeAI",
+      "published": "2026-04-03T08:35:37Z",
+      "scores": {
+        "stability": 8,
+        "value": 8,
+        "novelty": 3,
+        "relevance": 9,
+        "total": 28
+      },
+      "tier": "HIGH_PRIORITY",
+      "dependency_escalated": false,
+      "affected_projects": [],
+      "summary": "I built a free macOS menu bar monitor for Claude -- shows live session %, weekly via reddit/r/ClaudeAI"
     },
     {
       "title": "Introducing GPT-5.4 mini and nano",
