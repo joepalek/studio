@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-20260403-078",
+  "name": "Skyler Smith",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-04-04T05:30:51.930378",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Skyler Smith",
+    "pronouns": "they/them",
+    "age": 35,
+    "personality_traits": [
+      "destructive",
+      "independent",
+      "observant",
+      "meticulous",
+      "possessive",
+      "empathetic"
+    ],
+    "voice": "passionate and intense",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:51.930392",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

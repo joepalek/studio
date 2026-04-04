@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-claude-20260403-007",
+  "name": "Casey Rodriguez",
+  "universe": "inmates-vs-guards",
+  "archetype": "hardened_criminal",
+  "created_date": "2026-04-04T05:30:03.339657",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Casey Rodriguez",
+    "pronouns": "he/him",
+    "age": 22,
+    "personality_traits": [
+      "compassionate",
+      "destructive",
+      "cautious",
+      "haunted",
+      "impulsive",
+      "observant"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:03.339670",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

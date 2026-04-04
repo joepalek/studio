@@ -15,6 +15,11 @@ sys.path.insert(0, 'G:/My Drive/Projects/_studio')
 from studio_core.logger import Logger
 from studio_core.agent_inbox import AgentInbox
 
+# Constraint gates — Turing + Codd enforcement
+sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from turing_gate import turing_check, turing_annotate
+from constraint_gates import codd_check, log_violation
+
 
 @dataclass
 class GameCandidate:
@@ -91,9 +96,11 @@ class GameArchaeologyLegalAgent:
             risk_level = "GREEN"
             confidence = 0.88
             reasoning = (
-                f"{game.title} is {age} years old from unknown/inactive creator. "
-                "Fair use applies if you transform visuals significantly. "
-                "No active IP holder to enforce."
+                f"{game.title} is {age} years old from unknown/inactive creator "
+                f"[source:release_date_field][source:creator_field]. "
+                "Fair use applies if you transform visuals significantly "
+                "[source:17_usc_107_fair_use]. "
+                "No active IP holder to enforce [source:creator_field]."
             )
             visual_redesign_pct = 30
             tier = "TIER_1_RECORDING"
@@ -103,8 +110,10 @@ class GameArchaeologyLegalAgent:
             risk_level = "YELLOW"
             confidence = 0.68
             reasoning = (
-                f"{game.title} is {age} years old. Creator status unclear. "
-                "Fair use applies, but recommend 50%+ visual redesign to be safe."
+                f"{game.title} is {age} years old [source:release_date_field]. "
+                "Creator status unclear [source:creator_field]. "
+                "Fair use applies, but recommend 50%+ visual redesign to be safe "
+                "[source:17_usc_107_fair_use]."
             )
             visual_redesign_pct = 50
             tier = "TIER_1_RECORDING"
@@ -114,8 +123,10 @@ class GameArchaeologyLegalAgent:
             risk_level = "RED"
             confidence = 0.85
             reasoning = (
-                f"Original creator '{game.original_creator}' is known/potentially active. "
-                "High risk of DMCA. Recommend skipping unless you have explicit permission."
+                f"Original creator '{game.original_creator}' is known/potentially active "
+                f"[source:creator_field]. "
+                "High risk of DMCA [source:17_usc_512_dmca]. "
+                "Recommend skipping unless you have explicit permission."
             )
             tier = "SKIP"
 
@@ -125,8 +136,10 @@ class GameArchaeologyLegalAgent:
                 risk_level = "RED"
                 confidence = 0.80
                 reasoning = (
-                    "Game is a clear derivative work (contains 'clone', 'mod', etc.). "
-                    "High legal risk unless original property owner has abandoned it."
+                    "Game is a clear derivative work (contains 'clone', 'mod', etc.) "
+                    "[source:title_field]. "
+                    "High legal risk unless original property owner has abandoned it "
+                    "[source:17_usc_107_fair_use]."
                 )
                 tier = "SKIP"
             else:
@@ -166,6 +179,35 @@ class GameArchaeologyLegalAgent:
             ),
         )
 
+        # Codd gate — block if confidence below threshold
+        codd_passed = codd_check(
+            "legal_assessment",
+            assessment,
+            confidence=confidence,
+            source="rule_engine",
+            evidence=f"age={age}y, abandoned={is_abandoned}, creator={game.original_creator}"
+        )
+        if codd_passed is None:
+            self._log(
+                f"CODD BLOCK: {game.title} confidence={confidence:.2f} < 0.95 — "
+                f"assessment held in pending, not shipped",
+                level="WARN"
+            )
+            # Return assessment with codd_blocked flag — caller must check
+            assessment.notes_for_user += " [CODD: confidence below threshold — human review required]"
+
+        # Turing gate — verify reasoning contains source citations
+        turing_result = turing_check(
+            assessment.reasoning,
+            agent_name=f"legal_agent:{game.title}"
+        )
+        if not turing_result["compliant"]:
+            self._log(
+                f"TURING: {game.title} reasoning has {turing_result['citations_found']} "
+                f"citations ({turing_result['issues']})",
+                level="WARN"
+            )
+
         return assessment
 
     def assess_batch(self, games: List[GameCandidate]) -> List[LegalAssessment]:
@@ -202,6 +244,11 @@ class GameArchaeologyLegalAgent:
                 "tier_recommendation": assessment.tier_recommendation,
                 "notes_for_user": assessment.notes_for_user,
                 "assessed_at": datetime.datetime.now().isoformat(),
+                "turing_citations": turing_check(
+                    assessment.reasoning,
+                    agent_name=f"export:{assessment.game_title}"
+                )["citations_found"],
+                "codd_compliant": assessment.confidence >= 0.95,
             })
 
         with open(output_path, 'w') as f:

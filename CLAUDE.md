@@ -323,6 +323,24 @@ A variant declared better without a recorded baseline_ref is a Lovelace violatio
 
 ---
 
+## TURING RULE [ENFORCED]
+
+**Behavioral intent:** Agent output must cite information sources inline using [source_id]
+notation. Outputs are verifiable, not just plausible. Named after Alan Turing.
+**Structural enforcement:** All assessment and extraction outputs MUST pass turing_check()
+before being written to disk or sent to inbox.
+
+Implementation:
+    from utilities.turing_gate import turing_check, turing_wrap, turing_annotate
+    result = turing_check(output_text, agent_name='legal-agent')
+    title = turing_annotate('Hellmaze', source_id='ia:web20100601', confidence=0.88)
+
+Accepted: [source_id], [source:name], Source: name, Evidence: field, [confidence:N]
+Applies to: legal agents, archaeology agents, intel agents, any text assessment output.
+Does NOT apply to: internal state writes, log entries, config files.
+
+---
+
 ## VECTOR CONTEXT RULE
 
 On session start run:
@@ -550,6 +568,7 @@ Applied to: product_archaeology_run.py, whiteboard_score.py — extend to all fu
 | Lovelace | ENFORCED | baseline_ref required before any variant test | Block test + require snapshot |
 | Bezos | ENFORCED | Circuit breaker in all API loop scripts | Abort after 3 consecutive failures |
 | Compounding Failure | ENFORCED | 3-attempt cap without new information | Block + escalate |
+| Turing | ENFORCED | turing_check on all assessment/extraction outputs | Flag + log, warn agent |
 
 All violations write to: G:/My Drive/Projects/_studio/error-log.json
 SRE-scout audits constraint compliance weekly.

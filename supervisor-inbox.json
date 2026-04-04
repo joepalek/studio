@@ -1240,32 +1240,54 @@
     "date": "2026-04-04T03:08:49.325350"
   },
   {
-    "id": "supervisor-cycle-202604040230",
+    "id": "nightly-rollup-20260404",
+    "source": "nightly-rollup",
+    "type": "audit",
+    "urgency": "WARN",
+    "title": "Nightly Rollup — 2026-04-04 — YELLOW",
+    "finding": "Score: 77/100. 13 agents checked in; missed: nightly-rollup, ai-intel. Gate: 0 pass / 0 fail.",
+    "status": "answered",
+    "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
+    "answered_at": "2026-04-04T07:30:04.581375",
+    "answered_by": "supervisor-auto"
+  },
+  {
+    "id": "AUDIT-TURING-legal_advisory_agent-20260404102757",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "TURING missing: legal_advisory_agent.py",
+    "finding": "Assessment/extraction agent missing turing_check | Fix: Import turing_check from utilities/turing_gate.py and check output",
+    "status": "pending",
+    "date": "2026-04-04T10:27:57.058042"
+  },
+  {
+    "id": "supervisor-cycle-202604040930",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 02:30",
-    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-04 09:30",
+    "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604040300",
+    "id": "supervisor-cycle-202604041000",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 03:00",
-    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-04 10:00",
+    "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604040330",
+    "id": "supervisor-cycle-202604041030",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 03:30",
-    "finding": "0 tasks dispatched | 10 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-04 10:30",
+    "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   }

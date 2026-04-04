@@ -297,3 +297,20 @@ Done.
 [2026-04-04 02:00:27] Skipping score pass — hour 2 outside 6AM-11PM window
 [2026-04-04 02:00:27] Product Archaeology complete
 [Sat 04/04/2026  2:00:27.21] Done 
+[Sat 04/04/2026  8:00:01.84] Product Archaeology starting 
+[2026-04-04 08:00:02] Product Archaeology starting
+[2026-04-04 08:00:02] KilledByGoogle: 0 products
+[2026-04-04 08:00:04] r/shutdownsaddened: 0 posts
+[2026-04-04 08:00:09] r/discontinued: 50 posts
+[2026-04-04 08:00:16] r/DeadApps: 25 posts
+[2026-04-04 08:00:21] Wayback Kickstarter: -1 results
+[2026-04-04 08:00:22] New items found: 0 | Total: 435
+[2026-04-04 08:00:22] Saved to product-archaeology-results.json
+[2026-04-04 08:00:22] Scoring top 20 via AI Gateway (free tier with fallback)...
+[2026-04-04 08:00:24]   SCORE ERROR: Chromecast — Unterminated string starting at: line 2 column 3 (
+[2026-04-04 08:00:26]   SCORE ERROR: VPN by Google One — Unterminated string starting at: line 2 column 3 (
+[2026-04-04 08:00:29]   SCORE ERROR: YouTube Stories — Unterminated string starting at: line 2 column 3 (
+[2026-04-04 08:00:29]   CIRCUIT BREAKER: 3 consecutive failures — aborting score pass to avoid API waste
+[2026-04-04 08:00:29] Scored 0 items — saved to product-archaeology-scored.json
+[2026-04-04 08:00:29] Product Archaeology complete
+[Sat 04/04/2026  8:00:30.10] Done 

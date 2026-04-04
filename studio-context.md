@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-04-03 10:24 | Auto-built by generate-context.py
-Next regeneration: 2026-04-03 18:24 (approximate — runs at every session start)
+Generated: 2026-04-04 08:00 | Auto-built by generate-context.py
+Next regeneration: 2026-04-04 16:00 (approximate — runs at every session start)
 Handoff: Also calls update_asset_usage.py for real usage counts before injecting
 
 ## WHO IS JOE
@@ -1848,8 +1848,8 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-04-03T04:00:20.197280
-Total items: 68
+Last updated: 2026-04-04T04:00:17.670218
+Total items: 76
 
   [9/10] Higgsfield Original Series — Backwards Design
     id:      higgsfield-backwards-design
@@ -2937,10 +2937,82 @@ On returning to it 30 years later, it certainly scratc
     tags:    github, trending, python
     added:   
 
+  [0/10] GitHub Trending: onyx-dot-app/onyx
+    id:      gh-onyx-dot-app-onyx
+    type:    github_trending
+    status:  
+    source:  
+    description: Hunt down social media accounts by username across social networks
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: apps/github-merge-queue
+    id:      gh-apps-github-merge-queue
+    type:    github_trending
+    status:  
+    source:  
+    description: 基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: hsliuping/TradingAgents-CN
+    id:      gh-hsliuping-TradingAgents-CN
+    type:    github_trending
+    status:  
+    source:  
+    description: Hindsight: Agent Memory That Learns
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: microsoft/apm
+    id:      gh-microsoft-apm
+    type:    github_trending
+    status:  
+    source:  
+    description: Use claude-code for free in the terminal, VSCode extension or via discord like openclaw
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: apps/copilot-swe-agent
+    id:      gh-apps-copilot-swe-agent
+    type:    github_trending
+    status:  
+    source:  
+    description: MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: apps/copilot-pull-request-reviewer
+    id:      gh-apps-copilot-pull-request-reviewer
+    type:    github_trending
+    status:  
+    source:  
+    description: PraisonAI 🦞 - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans,
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: vectorize-io/hindsight
+    id:      gh-vectorize-io-hindsight
+    type:    github_trending
+    status:  
+    source:  
+    description: Local Deep Research achieves ~95% on SimpleQA benchmark (tested with GPT-4.1-mini). Supports local and cloud LLMs (Ollam
+    tags:    github, trending, python
+    added:   
+
+  [0/10] GitHub Trending: PostHog/posthog
+    id:      gh-PostHog-posthog
+    type:    github_trending
+    status:  
+    source:  
+    description: Easily fine-tune, evaluate and deploy gpt-oss, Qwen3, DeepSeek-R1, or any open source LLM / VLM!
+    tags:    github, trending, python
+    added:   
+
 
 ## STUDIO CURRENT STATE
 
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-04-03 10:24
+End of context. Generated: 2026-04-04 08:00

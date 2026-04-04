@@ -1,0 +1,14 @@
+[
+  {
+    "decision_id": "test-decision-20260404",
+    "constraint_version": "v1.2.0+5566246f",
+    "agent": "constraint_version_test",
+    "decision_summary": "Initial version snapshot saved",
+    "outcome": null,
+    "quality_signals": {
+      "codd_passed": true,
+      "turing_citations": 3
+    },
+    "ts": "2026-04-04T10:30:38.358422"
+  }
+]

@@ -1,0 +1,466 @@
+{
+  "generated_at": "2026-04-04T10:14:26.544177",
+  "phase": "Phase 2 Ground Truth Validation",
+  "sim_predictions": {
+    "codd_delta": "+22.9%",
+    "shannon_delta": "+18.1%",
+    "avg_all_constraints": "+14.3%"
+  },
+  "game_archaeology": {
+    "source": "game_archaeology",
+    "legal_assessments": [
+      {
+        "game": "Hellmaze",
+        "risk_level": "GREEN",
+        "confidence": 0.88,
+        "codd_status": "FAIL",
+        "issues": [
+          "confidence_0.88_below_0.95",
+          "no_source_quote",
+          "no_source_label"
+        ],
+        "would_be_blocked": true
+      },
+      {
+        "game": "Flappy Bird Clone v3",
+        "risk_level": "YELLOW",
+        "confidence": 0.68,
+        "codd_status": "FAIL",
+        "issues": [
+          "confidence_0.68_below_0.95",
+          "no_source_quote",
+          "no_source_label"
+        ],
+        "would_be_blocked": true
+      },
+      {
+        "game": "Mario Remake 2023",
+        "risk_level": "RED",
+        "confidence": 0.85,
+        "codd_status": "FAIL",
+        "issues": [
+          "confidence_0.85_below_0.95",
+          "no_source_quote",
+          "no_source_label"
+        ],
+        "would_be_blocked": true
+      }
+    ],
+    "candidates": [
+      {
+        "title": "Game from http://kongregate.com:80/ (2006)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://www.kongregate.com:80/ (2006)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://kongregate.com/ (2006)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://www.kongregate.com/ (2006)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://www.armor-games.com:80/ (2006)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://armor-games.com:80/ (2007)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://www.y8.com:80/ (2005)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://y8.com:80/ (2005)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://y8.com:80/ (2006)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://miniclip.com:80/ (2005)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://www.miniclip.com/ (2005)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Game from http://www.miniclip.com:80/ (2005)",
+        "has_confidence": false,
+        "title_grounded": false,
+        "issues": [
+          "title_inferred_not_extracted",
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Old Platformer Prototype",
+        "has_confidence": false,
+        "title_grounded": true,
+        "issues": [
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Abandoned Puzzle Game",
+        "has_confidence": false,
+        "title_grounded": true,
+        "issues": [
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Minimalist Dungeon Crawler (LD #42)",
+        "has_confidence": false,
+        "title_grounded": true,
+        "issues": [
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Atmospheric Walking Sim (LD #48)",
+        "has_confidence": false,
+        "title_grounded": true,
+        "issues": [
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Classic Tower Defense (archived)",
+        "has_confidence": false,
+        "title_grounded": true,
+        "issues": [
+          "confidence_missing"
+        ]
+      },
+      {
+        "title": "Roguelike Experiment (GPL)",
+        "has_confidence": false,
+        "title_grounded": true,
+        "issues": [
+          "confidence_missing"
+        ]
+      }
+    ],
+    "summary": {
+      "legal_total": 3,
+      "legal_would_be_blocked": 3,
+      "legal_blocked_pct": 100.0,
+      "candidates_total": 18,
+      "candidates_ungrounded_titles": 12,
+      "candidates_missing_confidence": 18,
+      "codd_gate_would_catch": 15,
+      "pre_enforcement_shipped_unvalidated": 3
+    }
+  },
+  "job_discovery": {
+    "source": "job_discovery",
+    "registry_sample": [],
+    "listings_sample": [
+      {
+        "title": "Engineering",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Business Development",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Finance",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Administrative Assistant",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Retail Associate",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Customer Service",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Operations",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Information Technology",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Marketing",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Human Resources",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Healthcare Service",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Program and Project Management",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Accounting",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Arts and Design",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Community and Social Services",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Consulting",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Education",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Entrepreneurship",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Media and Communications",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      },
+      {
+        "title": "Military and Protective Services",
+        "has_confidence": false,
+        "has_source": true,
+        "has_evidence": false,
+        "issues": [
+          "confidence_missing",
+          "no_evidence"
+        ]
+      }
+    ],
+    "summary": {
+      "registry_sampled": 0,
+      "registry_missing_confidence": 0,
+      "registry_missing_evidence": 0,
+      "listings_sampled": 20,
+      "listings_missing_confidence": 20,
+      "listings_missing_source": 0,
+      "listings_missing_evidence": 20
+    }
+  },
+  "shannon": {
+    "source": "shannon",
+    "current": {
+      "chars": 2012,
+      "words": 274,
+      "tokens_estimated": 356,
+      "compliant": false,
+      "preview": "# STUDIO SESSION HANDOFF  This file is maintained by the nightly-rollup agent and the System Tightness Review protocol. It provides a reliable ground-truth status line for session-to-session continuit"
+    },
+    "summary": {
+      "current_tokens": 356,
+      "limit": 200,
+      "compliant": false,
+      "overage": 156,
+      "status": "FAIL — would be truncated by Shannon gate"
+    }
+  },
+  "validation_delta": {
+    "codd_validation": {
+      "ga_legal_blocked_pct": 100.0,
+      "ga_candidates_ungrounded_pct": 66.7,
+      "jd_listings_missing_confidence_pct": 100.0,
+      "verdict": "VALIDATES simulation",
+      "sim_predicted_delta": "+22.9%",
+      "note": "3/3 GA legal assessments would be blocked. 12/18 candidate titles are inferred not extracted. 20/20 job listings missing confidence field."
+    },
+    "shannon_validation": {
+      "current_tokens": 356,
+      "compliant": false,
+      "sim_predicted_delta": "+18.1%",
+      "verdict": "NON-COMPLIANT — 356 tokens, would be auto-truncated"
+    }
+  }
+}

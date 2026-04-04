@@ -1,0 +1,32 @@
+# Dakota O'Brien
+
+**ID:** char-spec-agent-20260403-006
+**Universe:** band-members
+**Archetype:** frontman
+**Status:** ungraded
+**Created:** 2026-04-04T05:30:37.357204
+
+## Quick Reference
+
+- **Profile:** dakota_obrien_a006-profile.json
+- **Backstory:** dakota_obrien_a006-backstory.md
+- **Media Log:** logs/dakota_obrien_a006-media-log.json
+- **Interaction Log:** logs/dakota_obrien_a006-interaction-log.json
+- **Appearances:** logs/dakota_obrien_a006-appearances.json
+
+## Folders
+
+- **images/** -- All character images (portraits, action shots, etc.)
+- **video/** -- All video clips featuring character
+- **audio/** -- Voice recordings, dialogue, song clips
+- **scripts/** -- Scripts for projects this character appears in
+- **logs/** -- All tracking logs (media, interactions, appearances)
+
+## Status
+
+- Visual specs: draft
+- Locked visual: No
+
+---
+
+*Managed by: Agency Character Creator*

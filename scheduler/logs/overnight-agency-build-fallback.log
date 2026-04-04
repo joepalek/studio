@@ -28,3 +28,21 @@
 [2026-04-03 10:45:07] Already built: 283 characters (will skip)
 [2026-04-03 10:45:07] To build this run: 0 new characters
 [2026-04-03 10:45:07] Nothing new to build -- all passing specs already have character folders
+[2026-04-04 05:30:02] Agency character batch build starting
+[2026-04-04 05:30:02] Passing specs loaded: 218
+[2026-04-04 05:30:02] Already built: 283 characters (will skip)
+[2026-04-04 05:30:02] To build this run: 218 new characters
+[2026-04-04 05:30:08]   Progress: 25/218 built
+[2026-04-04 05:30:14]   Progress: 50/218 built
+[2026-04-04 05:30:20]   Progress: 75/218 built
+[2026-04-04 05:30:26]   Progress: 100/218 built
+[2026-04-04 05:30:33]   Progress: 125/218 built
+[2026-04-04 05:30:39]   Progress: 150/218 built
+[2026-04-04 05:30:45]   Progress: 175/218 built
+[2026-04-04 05:30:52]   Progress: 200/218 built
+[2026-04-04 05:30:56] Build complete:
+[2026-04-04 05:30:56]   Built:  218
+[2026-04-04 05:30:56]   Failed: 0
+[2026-04-04 05:30:56]   By universe: {'original_fiction': 90, 'inmates_vs_guards': 73, 'other': 20, 'band_members': 35}
+[2026-04-04 05:30:58]   Total character folders now: 725
+[2026-04-04 05:30:58] Done.

@@ -61,6 +61,8 @@ def scan_file(path: Path) -> dict:
             r'hopper_append|hopper_validate|from constraint_gates', text, re.I)),
         "has_hamilton":   bool(re.search(
             r'hamilton_watchdog|EXPECTED_RUNTIME_SECONDS', text, re.I)),
+        "has_turing":     bool(re.search(
+            r'turing_check|turing_wrap|from turing_gate', text, re.I)),
         "writes_inbox_raw": bool(re.search(
             r'json\.dump.*inbox|open.*inbox.*["\']w["\']', text, re.I)),
         "loops_api_calls":  bool(re.search(
@@ -121,6 +123,17 @@ def audit_all() -> dict:
                         "fix": "Wrap extraction functions with @codd_gate from constraint_gates"
                     })
                     break
+
+            # Turing: legal/assessment agents missing citation checks
+            if (re.search(r'legal|assess|reasoning|extract', path.stem, re.I)
+                    and not result.get("has_turing")
+                    and path.name not in BEZOS_EXEMPT):
+                violations.append({
+                    "file": result["path"],
+                    "rule": "TURING",
+                    "issue": "Assessment/extraction agent missing turing_check",
+                    "fix": "Import turing_check from utilities/turing_gate.py and check output"
+                })
 
     return {"scanned": scanned, "violations": violations, "ts": datetime.now().isoformat()}
 

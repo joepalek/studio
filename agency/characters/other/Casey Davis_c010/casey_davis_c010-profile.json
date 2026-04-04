@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-claude-20260403-010",
+  "name": "Casey Davis",
+  "universe": "other",
+  "archetype": "entrepreneur",
+  "created_date": "2026-04-04T05:30:03.847475",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Casey Davis",
+    "pronouns": "they/them",
+    "age": 42,
+    "personality_traits": [
+      "paranoid",
+      "technical",
+      "intuitive",
+      "independent"
+    ],
+    "voice": "passionate and intense",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:03.847488",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

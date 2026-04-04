@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-20260403-079",
+  "name": "Marcus Anderson",
+  "universe": "inmates-vs-guards",
+  "archetype": "idealistic_guard",
+  "created_date": "2026-04-04T05:30:52.171358",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Marcus Anderson",
+    "pronouns": "he/him",
+    "age": 55,
+    "personality_traits": [
+      "compassionate",
+      "reserved",
+      "obsessive",
+      "courageous",
+      "thoughtful"
+    ],
+    "voice": "quiet and introspective",
+    "archetype_description": "",
+    "backstory": "Discovered a hidden talent late in life and has been pursuing it obsessively."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:52.171378",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

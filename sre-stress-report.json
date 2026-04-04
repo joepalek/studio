@@ -1,10 +1,12 @@
 {
-  "timestamp": "2026-04-03T10:25:21.702183",
+  "timestamp": "2026-04-04T08:02:49.996799",
   "verdict": "WARNING",
   "critical": [],
   "warning": [
-    "UNCOMMITTED (9 files): _studio"
+    "UNCOMMITTED (2 files): job-match"
   ],
-  "watch": [],
-  "action_required": "Commit pending changes in _studio repo"
+  "watch": [
+    "gemini-2.0-flash-001 endpoint 404 \u2014 active model is gemini-2.5-flash"
+  ],
+  "action_required": "Commit job-match dirty files"
 }

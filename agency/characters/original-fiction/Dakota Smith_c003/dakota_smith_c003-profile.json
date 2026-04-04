@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-20260403-003",
+  "name": "Dakota Smith",
+  "universe": "original-fiction",
+  "archetype": "lover",
+  "created_date": "2026-04-04T05:30:02.909637",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Dakota Smith",
+    "pronouns": "he/him",
+    "age": 18,
+    "personality_traits": [
+      "spontaneous",
+      "reckless",
+      "creative",
+      "possessive",
+      "empathetic"
+    ],
+    "voice": "passionate and intense",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:02.909652",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

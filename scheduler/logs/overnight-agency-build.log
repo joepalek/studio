@@ -98,3 +98,1113 @@ PermissionError: [Errno 13] Permission denied: 'G:/My Drive/Projects/_studio/sch
 [2026-04-03 10:49:27] Already built: 283 characters (will skip)
 [2026-04-03 10:49:27] To build this run: 0 new characters
 [2026-04-03 10:49:27] Nothing new to build -- all passing specs already have character folders
+[Sat 04/04/2026  5:30:02.04] Agency character batch build starting 
+[2026-04-04 05:30:02] Agency character batch build starting
+[2026-04-04 05:30:02] Passing specs loaded: 218
+[2026-04-04 05:30:02] Already built: 283 characters (will skip)
+[2026-04-04 05:30:02] To build this run: 218 new characters
+Character created: Morgan Smith (c001)
+  ID: char-spec-claude-20260403-001
+  Folder: Morgan Smith_c001
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Smith_c001
+Character created: Morgan Martinez (c002)
+  ID: char-spec-claude-20260403-002
+  Folder: Morgan Martinez_c002
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Martinez_c002
+Character created: Dakota Smith (c003)
+  ID: char-spec-claude-20260403-003
+  Folder: Dakota Smith_c003
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Dakota Smith_c003
+Character created: Morgan O'Brien (c006)
+  ID: char-spec-claude-20260403-006
+  Folder: Morgan O'Brien_c006
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan O'Brien_c006
+Character created: Casey Rodriguez (c007)
+  ID: char-spec-claude-20260403-007
+  Folder: Casey Rodriguez_c007
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Casey Rodriguez_c007
+Character created: Alex Martinez (c008)
+  ID: char-spec-claude-20260403-008
+  Folder: Alex Martinez_c008
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Martinez_c008
+Character created: Casey Davis (c010)
+  ID: char-spec-claude-20260403-010
+  Folder: Casey Davis_c010
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Casey Davis_c010
+Character created: Jordan Chen (c012)
+  ID: char-spec-claude-20260403-012
+  Folder: Jordan Chen_c012
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Jordan Chen_c012
+Character created: Jordan Williams (c014)
+  ID: char-spec-claude-20260403-014
+  Folder: Jordan Williams_c014
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Jordan Williams_c014
+Character created: Riley Smith (c015)
+  ID: char-spec-claude-20260403-015
+  Folder: Riley Smith_c015
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Smith_c015
+Character created: Jade Chen (c016)
+  ID: char-spec-claude-20260403-016
+  Folder: Jade Chen_c016
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Chen_c016
+Character created: Sam Johnson (c019)
+  ID: char-spec-claude-20260403-019
+  Folder: Sam Johnson_c019
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Johnson_c019
+Character created: Alex Garcia (c020)
+  ID: char-spec-claude-20260403-020
+  Folder: Alex Garcia_c020
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Alex Garcia_c020
+Character created: Morgan Williams (c021)
+  ID: char-spec-claude-20260403-021
+  Folder: Morgan Williams_c021
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Williams_c021
+Character created: River Miller (c022)
+  ID: char-spec-claude-20260403-022
+  Folder: River Miller_c022
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\River Miller_c022
+Character created: Alex Torres (c023)
+  ID: char-spec-claude-20260403-023
+  Folder: Alex Torres_c023
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Alex Torres_c023
+Character created: Marcus Brown (c024)
+  ID: char-spec-claude-20260403-024
+  Folder: Marcus Brown_c024
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Brown_c024
+Character created: Jordan Davis (c025)
+  ID: char-spec-claude-20260403-025
+  Folder: Jordan Davis_c025
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Davis_c025
+Character created: Sam Rodriguez (c029)
+  ID: char-spec-claude-20260403-029
+  Folder: Sam Rodriguez_c029
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Sam Rodriguez_c029
+Character created: Marcus Garcia (c030)
+  ID: char-spec-claude-20260403-030
+  Folder: Marcus Garcia_c030
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Garcia_c030
+Character created: Marcus Williams (c031)
+  ID: char-spec-claude-20260403-031
+  Folder: Marcus Williams_c031
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Williams_c031
+Character created: Jade Rodriguez (c032)
+  ID: char-spec-claude-20260403-032
+  Folder: Jade Rodriguez_c032
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Jade Rodriguez_c032
+Character created: Skyler Miller (c033)
+  ID: char-spec-claude-20260403-033
+  Folder: Skyler Miller_c033
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Skyler Miller_c033
+Character created: Sam Torres (c034)
+  ID: char-spec-claude-20260403-034
+  Folder: Sam Torres_c034
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Sam Torres_c034
+Character created: Skyler Brown (c035)
+  ID: char-spec-claude-20260403-035
+  Folder: Skyler Brown_c035
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Skyler Brown_c035
+[2026-04-04 05:30:08]   Progress: 25/218 built
+Character created: Casey Martinez (c037)
+  ID: char-spec-claude-20260403-037
+  Folder: Casey Martinez_c037
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Casey Martinez_c037
+Character created: River Martinez (c039)
+  ID: char-spec-claude-20260403-039
+  Folder: River Martinez_c039
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Martinez_c039
+Character created: Phoenix O'Brien (c041)
+  ID: char-spec-claude-20260403-041
+  Folder: Phoenix O'Brien_c041
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Phoenix O'Brien_c041
+Character created: Blake Smith (c042)
+  ID: char-spec-claude-20260403-042
+  Folder: Blake Smith_c042
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Blake Smith_c042
+Character created: River Davis (c043)
+  ID: char-spec-claude-20260403-043
+  Folder: River Davis_c043
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\River Davis_c043
+Character created: Jordan Miller (c045)
+  ID: char-spec-claude-20260403-045
+  Folder: Jordan Miller_c045
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Miller_c045
+Character created: Jade Martinez (c047)
+  ID: char-spec-claude-20260403-047
+  Folder: Jade Martinez_c047
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Martinez_c047
+Character created: River Martinez (c048)
+  ID: char-spec-claude-20260403-048
+  Folder: River Martinez_c048
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Martinez_c048
+Character created: Morgan Miller (c049)
+  ID: char-spec-claude-20260403-049
+  Folder: Morgan Miller_c049
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Miller_c049
+Character created: River Smith (c052)
+  ID: char-spec-claude-20260403-052
+  Folder: River Smith_c052
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Smith_c052
+Character created: Alex Torres (c053)
+  ID: char-spec-claude-20260403-053
+  Folder: Alex Torres_c053
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Torres_c053
+Character created: Jordan Miller (c054)
+  ID: char-spec-claude-20260403-054
+  Folder: Jordan Miller_c054
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Jordan Miller_c054
+Character created: Phoenix Smith (c055)
+  ID: char-spec-claude-20260403-055
+  Folder: Phoenix Smith_c055
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Phoenix Smith_c055
+Character created: Morgan Garcia (c056)
+  ID: char-spec-claude-20260403-056
+  Folder: Morgan Garcia_c056
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Garcia_c056
+Character created: Blake Smith (c058)
+  ID: char-spec-claude-20260403-058
+  Folder: Blake Smith_c058
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Blake Smith_c058
+Character created: Alex Johnson (c059)
+  ID: char-spec-claude-20260403-059
+  Folder: Alex Johnson_c059
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Alex Johnson_c059
+Character created: Alex O'Brien (c061)
+  ID: char-spec-claude-20260403-061
+  Folder: Alex O'Brien_c061
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex O'Brien_c061
+Character created: Riley Smith (c063)
+  ID: char-spec-claude-20260403-063
+  Folder: Riley Smith_c063
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Smith_c063
+Character created: Jade Chen (c064)
+  ID: char-spec-claude-20260403-064
+  Folder: Jade Chen_c064
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Chen_c064
+Character created: Riley Rodriguez (c065)
+  ID: char-spec-claude-20260403-065
+  Folder: Riley Rodriguez_c065
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Rodriguez_c065
+Character created: River Chen (c066)
+  ID: char-spec-claude-20260403-066
+  Folder: River Chen_c066
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\River Chen_c066
+Character created: Casey Williams (c070)
+  ID: char-spec-claude-20260403-070
+  Folder: Casey Williams_c070
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Casey Williams_c070
+Character created: Riley Davis (c073)
+  ID: char-spec-claude-20260403-073
+  Folder: Riley Davis_c073
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Davis_c073
+Character created: Jordan Brown (c074)
+  ID: char-spec-claude-20260403-074
+  Folder: Jordan Brown_c074
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Brown_c074
+Character created: Jordan Anderson (c075)
+  ID: char-spec-claude-20260403-075
+  Folder: Jordan Anderson_c075
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Jordan Anderson_c075
+[2026-04-04 05:30:14]   Progress: 50/218 built
+Character created: Sam O'Brien (c076)
+  ID: char-spec-claude-20260403-076
+  Folder: Sam O'Brien_c076
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Sam O'Brien_c076
+Character created: Phoenix Garcia (c077)
+  ID: char-spec-claude-20260403-077
+  Folder: Phoenix Garcia_c077
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Phoenix Garcia_c077
+Character created: Morgan Miller (c078)
+  ID: char-spec-claude-20260403-078
+  Folder: Morgan Miller_c078
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Miller_c078
+Character created: Phoenix Brown (c079)
+  ID: char-spec-claude-20260403-079
+  Folder: Phoenix Brown_c079
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Phoenix Brown_c079
+Character created: River O'Brien (c080)
+  ID: char-spec-claude-20260403-080
+  Folder: River O'Brien_c080
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\River O'Brien_c080
+Character created: Jade Johnson (c081)
+  ID: char-spec-claude-20260403-081
+  Folder: Jade Johnson_c081
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Jade Johnson_c081
+Character created: River Miller (c082)
+  ID: char-spec-claude-20260403-082
+  Folder: River Miller_c082
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\River Miller_c082
+Character created: Morgan O'Brien (c083)
+  ID: char-spec-claude-20260403-083
+  Folder: Morgan O'Brien_c083
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Morgan O'Brien_c083
+Character created: Jordan Brown (c084)
+  ID: char-spec-claude-20260403-084
+  Folder: Jordan Brown_c084
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Jordan Brown_c084
+Character created: Dakota Williams (c085)
+  ID: char-spec-claude-20260403-085
+  Folder: Dakota Williams_c085
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Dakota Williams_c085
+Character created: Sam Johnson (c091)
+  ID: char-spec-claude-20260403-091
+  Folder: Sam Johnson_c091
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Johnson_c091
+Character created: Marcus Anderson (c093)
+  ID: char-spec-claude-20260403-093
+  Folder: Marcus Anderson_c093
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Marcus Anderson_c093
+Character created: Jordan Anderson (c094)
+  ID: char-spec-claude-20260403-094
+  Folder: Jordan Anderson_c094
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Anderson_c094
+Character created: Morgan Chen (c095)
+  ID: char-spec-claude-20260403-095
+  Folder: Morgan Chen_c095
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Chen_c095
+Character created: Morgan Williams (c096)
+  ID: char-spec-claude-20260403-096
+  Folder: Morgan Williams_c096
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Morgan Williams_c096
+Character created: River Johnson (c098)
+  ID: char-spec-claude-20260403-098
+  Folder: River Johnson_c098
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Johnson_c098
+Character created: Phoenix Rodriguez (g002)
+  ID: char-spec-gemini-20260403-002
+  Folder: Phoenix Rodriguez_g002
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Phoenix Rodriguez_g002
+Character created: Skyler Anderson (g003)
+  ID: char-spec-gemini-20260403-003
+  Folder: Skyler Anderson_g003
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Skyler Anderson_g003
+Character created: Jade Rodriguez (g004)
+  ID: char-spec-gemini-20260403-004
+  Folder: Jade Rodriguez_g004
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Rodriguez_g004
+Character created: Jade Miller (g005)
+  ID: char-spec-gemini-20260403-005
+  Folder: Jade Miller_g005
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Jade Miller_g005
+Character created: Phoenix Williams (g006)
+  ID: char-spec-gemini-20260403-006
+  Folder: Phoenix Williams_g006
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Phoenix Williams_g006
+Character created: River Rodriguez (g010)
+  ID: char-spec-gemini-20260403-010
+  Folder: River Rodriguez_g010
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\River Rodriguez_g010
+Character created: Skyler Garcia (g012)
+  ID: char-spec-gemini-20260403-012
+  Folder: Skyler Garcia_g012
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Skyler Garcia_g012
+Character created: Sam Brown (g014)
+  ID: char-spec-gemini-20260403-014
+  Folder: Sam Brown_g014
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Sam Brown_g014
+Character created: River Davis (g019)
+  ID: char-spec-gemini-20260403-019
+  Folder: River Davis_g019
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\River Davis_g019
+[2026-04-04 05:30:20]   Progress: 75/218 built
+Character created: Dakota Martinez (g020)
+  ID: char-spec-gemini-20260403-020
+  Folder: Dakota Martinez_g020
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Dakota Martinez_g020
+Character created: Sam Brown (g021)
+  ID: char-spec-gemini-20260403-021
+  Folder: Sam Brown_g021
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Brown_g021
+Character created: Jade Rodriguez (g022)
+  ID: char-spec-gemini-20260403-022
+  Folder: Jade Rodriguez_g022
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Rodriguez_g022
+Character created: Blake Anderson (g023)
+  ID: char-spec-gemini-20260403-023
+  Folder: Blake Anderson_g023
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Blake Anderson_g023
+Character created: Casey Anderson (g024)
+  ID: char-spec-gemini-20260403-024
+  Folder: Casey Anderson_g024
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Casey Anderson_g024
+Character created: Morgan Smith (g025)
+  ID: char-spec-gemini-20260403-025
+  Folder: Morgan Smith_g025
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Morgan Smith_g025
+Character created: Skyler Rodriguez (g026)
+  ID: char-spec-gemini-20260403-026
+  Folder: Skyler Rodriguez_g026
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Skyler Rodriguez_g026
+Character created: Skyler Rodriguez (g027)
+  ID: char-spec-gemini-20260403-027
+  Folder: Skyler Rodriguez_g027
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Skyler Rodriguez_g027
+Character created: Phoenix O'Brien (g028)
+  ID: char-spec-gemini-20260403-028
+  Folder: Phoenix O'Brien_g028
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Phoenix O'Brien_g028
+Character created: Jade Garcia (g029)
+  ID: char-spec-gemini-20260403-029
+  Folder: Jade Garcia_g029
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Jade Garcia_g029
+Character created: River Martinez (g030)
+  ID: char-spec-gemini-20260403-030
+  Folder: River Martinez_g030
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Martinez_g030
+Character created: Morgan Brown (g031)
+  ID: char-spec-gemini-20260403-031
+  Folder: Morgan Brown_g031
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Brown_g031
+Character created: Blake Davis (g032)
+  ID: char-spec-gemini-20260403-032
+  Folder: Blake Davis_g032
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Blake Davis_g032
+Character created: Marcus Garcia (g035)
+  ID: char-spec-gemini-20260403-035
+  Folder: Marcus Garcia_g035
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Garcia_g035
+Character created: Sam Davis (g036)
+  ID: char-spec-gemini-20260403-036
+  Folder: Sam Davis_g036
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Sam Davis_g036
+Character created: Phoenix Martinez (g040)
+  ID: char-spec-gemini-20260403-040
+  Folder: Phoenix Martinez_g040
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Phoenix Martinez_g040
+Character created: Sam Torres (g041)
+  ID: char-spec-gemini-20260403-041
+  Folder: Sam Torres_g041
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Sam Torres_g041
+Character created: Jordan Martinez (g042)
+  ID: char-spec-gemini-20260403-042
+  Folder: Jordan Martinez_g042
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Jordan Martinez_g042
+Character created: Jordan O'Brien (g046)
+  ID: char-spec-gemini-20260403-046
+  Folder: Jordan O'Brien_g046
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan O'Brien_g046
+Character created: Morgan Garcia (g048)
+  ID: char-spec-gemini-20260403-048
+  Folder: Morgan Garcia_g048
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Garcia_g048
+Character created: River O'Brien (g051)
+  ID: char-spec-gemini-20260403-051
+  Folder: River O'Brien_g051
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River O'Brien_g051
+Character created: Riley Davis (g052)
+  ID: char-spec-gemini-20260403-052
+  Folder: Riley Davis_g052
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley Davis_g052
+Character created: Blake Miller (g054)
+  ID: char-spec-gemini-20260403-054
+  Folder: Blake Miller_g054
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Blake Miller_g054
+Character created: Marcus Brown (g058)
+  ID: char-spec-gemini-20260403-058
+  Folder: Marcus Brown_g058
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Marcus Brown_g058
+Character created: Jade Brown (g060)
+  ID: char-spec-gemini-20260403-060
+  Folder: Jade Brown_g060
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Jade Brown_g060
+[2026-04-04 05:30:26]   Progress: 100/218 built
+Character created: Alex Anderson (g061)
+  ID: char-spec-gemini-20260403-061
+  Folder: Alex Anderson_g061
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Alex Anderson_g061
+Character created: Riley Brown (g062)
+  ID: char-spec-gemini-20260403-062
+  Folder: Riley Brown_g062
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Riley Brown_g062
+Character created: Morgan Garcia (g064)
+  ID: char-spec-gemini-20260403-064
+  Folder: Morgan Garcia_g064
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Morgan Garcia_g064
+Character created: Sam Brown (g065)
+  ID: char-spec-gemini-20260403-065
+  Folder: Sam Brown_g065
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Brown_g065
+Character created: Jordan Anderson (g066)
+  ID: char-spec-gemini-20260403-066
+  Folder: Jordan Anderson_g066
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Anderson_g066
+Character created: Morgan Davis (g067)
+  ID: char-spec-gemini-20260403-067
+  Folder: Morgan Davis_g067
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Davis_g067
+Character created: Jordan Chen (g068)
+  ID: char-spec-gemini-20260403-068
+  Folder: Jordan Chen_g068
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Jordan Chen_g068
+Character created: Riley Martinez (g069)
+  ID: char-spec-gemini-20260403-069
+  Folder: Riley Martinez_g069
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley Martinez_g069
+Character created: Riley Brown (g070)
+  ID: char-spec-gemini-20260403-070
+  Folder: Riley Brown_g070
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Riley Brown_g070
+Character created: Morgan Torres (g071)
+  ID: char-spec-gemini-20260403-071
+  Folder: Morgan Torres_g071
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Morgan Torres_g071
+Character created: Jordan Williams (g072)
+  ID: char-spec-gemini-20260403-072
+  Folder: Jordan Williams_g072
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Williams_g072
+Character created: Skyler Martinez (g074)
+  ID: char-spec-gemini-20260403-074
+  Folder: Skyler Martinez_g074
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Skyler Martinez_g074
+Character created: Blake Rodriguez (g075)
+  ID: char-spec-gemini-20260403-075
+  Folder: Blake Rodriguez_g075
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Blake Rodriguez_g075
+Character created: Casey O'Brien (g077)
+  ID: char-spec-gemini-20260403-077
+  Folder: Casey O'Brien_g077
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Casey O'Brien_g077
+Character created: Jordan Smith (g078)
+  ID: char-spec-gemini-20260403-078
+  Folder: Jordan Smith_g078
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Smith_g078
+Character created: Sam O'Brien (g079)
+  ID: char-spec-gemini-20260403-079
+  Folder: Sam O'Brien_g079
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Sam O'Brien_g079
+Character created: Sam Smith (g080)
+  ID: char-spec-gemini-20260403-080
+  Folder: Sam Smith_g080
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Smith_g080
+Character created: Phoenix Rodriguez (g081)
+  ID: char-spec-gemini-20260403-081
+  Folder: Phoenix Rodriguez_g081
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Phoenix Rodriguez_g081
+Character created: Marcus Williams (g082)
+  ID: char-spec-gemini-20260403-082
+  Folder: Marcus Williams_g082
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Williams_g082
+Character created: Skyler O'Brien (g083)
+  ID: char-spec-gemini-20260403-083
+  Folder: Skyler O'Brien_g083
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Skyler O'Brien_g083
+Character created: Phoenix Anderson (g084)
+  ID: char-spec-gemini-20260403-084
+  Folder: Phoenix Anderson_g084
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Phoenix Anderson_g084
+Character created: Sam O'Brien (g086)
+  ID: char-spec-gemini-20260403-086
+  Folder: Sam O'Brien_g086
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Sam O'Brien_g086
+Character created: Phoenix Garcia (g087)
+  ID: char-spec-gemini-20260403-087
+  Folder: Phoenix Garcia_g087
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Phoenix Garcia_g087
+Character created: Skyler Chen (g088)
+  ID: char-spec-gemini-20260403-088
+  Folder: Skyler Chen_g088
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Skyler Chen_g088
+Character created: Alex Johnson (g090)
+  ID: char-spec-gemini-20260403-090
+  Folder: Alex Johnson_g090
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Alex Johnson_g090
+[2026-04-04 05:30:33]   Progress: 125/218 built
+Character created: Sam Johnson (g091)
+  ID: char-spec-gemini-20260403-091
+  Folder: Sam Johnson_g091
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Sam Johnson_g091
+Character created: Morgan Martinez (g092)
+  ID: char-spec-gemini-20260403-092
+  Folder: Morgan Martinez_g092
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Morgan Martinez_g092
+Character created: Marcus Martinez (g093)
+  ID: char-spec-gemini-20260403-093
+  Folder: Marcus Martinez_g093
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Martinez_g093
+Character created: Blake Garcia (g094)
+  ID: char-spec-gemini-20260403-094
+  Folder: Blake Garcia_g094
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Blake Garcia_g094
+Character created: Alex O'Brien (g095)
+  ID: char-spec-gemini-20260403-095
+  Folder: Alex O'Brien_g095
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex O'Brien_g095
+Character created: Jade Smith (g096)
+  ID: char-spec-gemini-20260403-096
+  Folder: Jade Smith_g096
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Smith_g096
+Character created: Skyler Smith (g097)
+  ID: char-spec-gemini-20260403-097
+  Folder: Skyler Smith_g097
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Skyler Smith_g097
+Character created: Dakota O'Brien (g098)
+  ID: char-spec-gemini-20260403-098
+  Folder: Dakota O'Brien_g098
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Dakota O'Brien_g098
+Character created: Jordan Chen (g099)
+  ID: char-spec-gemini-20260403-099
+  Folder: Jordan Chen_g099
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Jordan Chen_g099
+Character created: Alex Johnson (g100)
+  ID: char-spec-gemini-20260403-100
+  Folder: Alex Johnson_g100
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Johnson_g100
+Character created: Casey Brown (a001)
+  ID: char-spec-agent-20260403-001
+  Folder: Casey Brown_a001
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Casey Brown_a001
+Character created: Jordan Anderson (a003)
+  ID: char-spec-agent-20260403-003
+  Folder: Jordan Anderson_a003
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jordan Anderson_a003
+Character created: Morgan Anderson (a004)
+  ID: char-spec-agent-20260403-004
+  Folder: Morgan Anderson_a004
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Anderson_a004
+Character created: Riley Williams (a005)
+  ID: char-spec-agent-20260403-005
+  Folder: Riley Williams_a005
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Williams_a005
+Character created: Dakota O'Brien (a006)
+  ID: char-spec-agent-20260403-006
+  Folder: Dakota O'Brien_a006
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Dakota O'Brien_a006
+Character created: Blake Smith (a007)
+  ID: char-spec-agent-20260403-007
+  Folder: Blake Smith_a007
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Blake Smith_a007
+Character created: Dakota Chen (a008)
+  ID: char-spec-agent-20260403-008
+  Folder: Dakota Chen_a008
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Dakota Chen_a008
+Character created: Dakota Garcia (a009)
+  ID: char-spec-agent-20260403-009
+  Folder: Dakota Garcia_a009
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Dakota Garcia_a009
+Character created: Riley Chen (a010)
+  ID: char-spec-agent-20260403-010
+  Folder: Riley Chen_a010
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Riley Chen_a010
+Character created: River Davis (a011)
+  ID: char-spec-agent-20260403-011
+  Folder: River Davis_a011
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\River Davis_a011
+Character created: Blake Martinez (a013)
+  ID: char-spec-agent-20260403-013
+  Folder: Blake Martinez_a013
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Blake Martinez_a013
+Character created: Morgan Chen (a014)
+  ID: char-spec-agent-20260403-014
+  Folder: Morgan Chen_a014
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Chen_a014
+Character created: Morgan Miller (a015)
+  ID: char-spec-agent-20260403-015
+  Folder: Morgan Miller_a015
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Miller_a015
+Character created: Dakota Anderson (a017)
+  ID: char-spec-agent-20260403-017
+  Folder: Dakota Anderson_a017
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Dakota Anderson_a017
+Character created: Alex Torres (a018)
+  ID: char-spec-agent-20260403-018
+  Folder: Alex Torres_a018
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Torres_a018
+[2026-04-04 05:30:39]   Progress: 150/218 built
+Character created: Blake Johnson (a019)
+  ID: char-spec-agent-20260403-019
+  Folder: Blake Johnson_a019
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Blake Johnson_a019
+Character created: Alex O'Brien (a020)
+  ID: char-spec-agent-20260403-020
+  Folder: Alex O'Brien_a020
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Alex O'Brien_a020
+Character created: Marcus Martinez (a021)
+  ID: char-spec-agent-20260403-021
+  Folder: Marcus Martinez_a021
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Marcus Martinez_a021
+Character created: River Torres (a022)
+  ID: char-spec-agent-20260403-022
+  Folder: River Torres_a022
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\River Torres_a022
+Character created: River Chen (a023)
+  ID: char-spec-agent-20260403-023
+  Folder: River Chen_a023
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\River Chen_a023
+Character created: Marcus Torres (a024)
+  ID: char-spec-agent-20260403-024
+  Folder: Marcus Torres_a024
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Marcus Torres_a024
+Character created: Alex Rodriguez (a025)
+  ID: char-spec-agent-20260403-025
+  Folder: Alex Rodriguez_a025
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Rodriguez_a025
+Character created: Skyler Smith (a026)
+  ID: char-spec-agent-20260403-026
+  Folder: Skyler Smith_a026
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Skyler Smith_a026
+Character created: Blake Smith (a027)
+  ID: char-spec-agent-20260403-027
+  Folder: Blake Smith_a027
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Blake Smith_a027
+Character created: Blake Torres (a028)
+  ID: char-spec-agent-20260403-028
+  Folder: Blake Torres_a028
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Blake Torres_a028
+Character created: Morgan Rodriguez (a029)
+  ID: char-spec-agent-20260403-029
+  Folder: Morgan Rodriguez_a029
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Morgan Rodriguez_a029
+Character created: Morgan Miller (a033)
+  ID: char-spec-agent-20260403-033
+  Folder: Morgan Miller_a033
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Miller_a033
+Character created: Dakota Garcia (a034)
+  ID: char-spec-agent-20260403-034
+  Folder: Dakota Garcia_a034
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Dakota Garcia_a034
+Character created: Riley O'Brien (a035)
+  ID: char-spec-agent-20260403-035
+  Folder: Riley O'Brien_a035
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley O'Brien_a035
+Character created: Riley Rodriguez (a036)
+  ID: char-spec-agent-20260403-036
+  Folder: Riley Rodriguez_a036
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley Rodriguez_a036
+Character created: Alex Miller (a038)
+  ID: char-spec-agent-20260403-038
+  Folder: Alex Miller_a038
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Alex Miller_a038
+Character created: Riley Torres (a039)
+  ID: char-spec-agent-20260403-039
+  Folder: Riley Torres_a039
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Torres_a039
+Character created: Blake Miller (a040)
+  ID: char-spec-agent-20260403-040
+  Folder: Blake Miller_a040
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Blake Miller_a040
+Character created: Dakota Rodriguez (a041)
+  ID: char-spec-agent-20260403-041
+  Folder: Dakota Rodriguez_a041
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Dakota Rodriguez_a041
+Character created: Blake Miller (a042)
+  ID: char-spec-agent-20260403-042
+  Folder: Blake Miller_a042
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Blake Miller_a042
+Character created: Jade Smith (a044)
+  ID: char-spec-agent-20260403-044
+  Folder: Jade Smith_a044
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Jade Smith_a044
+Character created: River Rodriguez (a045)
+  ID: char-spec-agent-20260403-045
+  Folder: River Rodriguez_a045
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Rodriguez_a045
+Character created: Phoenix Chen (a046)
+  ID: char-spec-agent-20260403-046
+  Folder: Phoenix Chen_a046
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Phoenix Chen_a046
+Character created: Jordan Torres (a047)
+  ID: char-spec-agent-20260403-047
+  Folder: Jordan Torres_a047
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Jordan Torres_a047
+Character created: Blake Miller (a048)
+  ID: char-spec-agent-20260403-048
+  Folder: Blake Miller_a048
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Blake Miller_a048
+[2026-04-04 05:30:45]   Progress: 175/218 built
+Character created: Skyler Smith (a051)
+  ID: char-spec-agent-20260403-051
+  Folder: Skyler Smith_a051
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Skyler Smith_a051
+Character created: Sam Brown (a052)
+  ID: char-spec-agent-20260403-052
+  Folder: Sam Brown_a052
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Brown_a052
+Character created: Morgan Martinez (a053)
+  ID: char-spec-agent-20260403-053
+  Folder: Morgan Martinez_a053
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Morgan Martinez_a053
+Character created: Jade Williams (a054)
+  ID: char-spec-agent-20260403-054
+  Folder: Jade Williams_a054
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Williams_a054
+Character created: Skyler Johnson (a056)
+  ID: char-spec-agent-20260403-056
+  Folder: Skyler Johnson_a056
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Skyler Johnson_a056
+Character created: Skyler Brown (a057)
+  ID: char-spec-agent-20260403-057
+  Folder: Skyler Brown_a057
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Skyler Brown_a057
+Character created: River Davis (a059)
+  ID: char-spec-agent-20260403-059
+  Folder: River Davis_a059
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Davis_a059
+Character created: Alex Williams (a061)
+  ID: char-spec-agent-20260403-061
+  Folder: Alex Williams_a061
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Williams_a061
+Character created: Jordan Martinez (a062)
+  ID: char-spec-agent-20260403-062
+  Folder: Jordan Martinez_a062
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Jordan Martinez_a062
+Character created: River Martinez (a063)
+  ID: char-spec-agent-20260403-063
+  Folder: River Martinez_a063
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\River Martinez_a063
+Character created: Riley Torres (a064)
+  ID: char-spec-agent-20260403-064
+  Folder: Riley Torres_a064
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley Torres_a064
+Character created: Marcus Martinez (a065)
+  ID: char-spec-agent-20260403-065
+  Folder: Marcus Martinez_a065
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Marcus Martinez_a065
+Character created: Riley O'Brien (a067)
+  ID: char-spec-agent-20260403-067
+  Folder: Riley O'Brien_a067
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley O'Brien_a067
+Character created: Skyler Williams (a068)
+  ID: char-spec-agent-20260403-068
+  Folder: Skyler Williams_a068
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Skyler Williams_a068
+Character created: Riley Johnson (a069)
+  ID: char-spec-agent-20260403-069
+  Folder: Riley Johnson_a069
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley Johnson_a069
+Character created: River Chen (a070)
+  ID: char-spec-agent-20260403-070
+  Folder: River Chen_a070
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\River Chen_a070
+Character created: Blake Torres (a071)
+  ID: char-spec-agent-20260403-071
+  Folder: Blake Torres_a071
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Blake Torres_a071
+Character created: Dakota Torres (a072)
+  ID: char-spec-agent-20260403-072
+  Folder: Dakota Torres_a072
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Dakota Torres_a072
+Character created: Riley Williams (a073)
+  ID: char-spec-agent-20260403-073
+  Folder: Riley Williams_a073
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley Williams_a073
+Character created: Marcus Williams (a074)
+  ID: char-spec-agent-20260403-074
+  Folder: Marcus Williams_a074
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Marcus Williams_a074
+Character created: Phoenix Anderson (a075)
+  ID: char-spec-agent-20260403-075
+  Folder: Phoenix Anderson_a075
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Phoenix Anderson_a075
+Character created: Riley O'Brien (a076)
+  ID: char-spec-agent-20260403-076
+  Folder: Riley O'Brien_a076
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Riley O'Brien_a076
+Character created: Sam Torres (a077)
+  ID: char-spec-agent-20260403-077
+  Folder: Sam Torres_a077
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Torres_a077
+Character created: Skyler Smith (a078)
+  ID: char-spec-agent-20260403-078
+  Folder: Skyler Smith_a078
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Skyler Smith_a078
+Character created: Marcus Anderson (a079)
+  ID: char-spec-agent-20260403-079
+  Folder: Marcus Anderson_a079
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Marcus Anderson_a079
+[2026-04-04 05:30:52]   Progress: 200/218 built
+Character created: Casey Rodriguez (a080)
+  ID: char-spec-agent-20260403-080
+  Folder: Casey Rodriguez_a080
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Casey Rodriguez_a080
+Character created: Riley Brown (a081)
+  ID: char-spec-agent-20260403-081
+  Folder: Riley Brown_a081
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Riley Brown_a081
+Character created: Morgan Garcia (a082)
+  ID: char-spec-agent-20260403-082
+  Folder: Morgan Garcia_a082
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Morgan Garcia_a082
+Character created: Morgan Brown (a083)
+  ID: char-spec-agent-20260403-083
+  Folder: Morgan Brown_a083
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Morgan Brown_a083
+Character created: Casey O'Brien (a085)
+  ID: char-spec-agent-20260403-085
+  Folder: Casey O'Brien_a085
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Casey O'Brien_a085
+Character created: Phoenix Williams (a086)
+  ID: char-spec-agent-20260403-086
+  Folder: Phoenix Williams_a086
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Phoenix Williams_a086
+Character created: Dakota Anderson (a087)
+  ID: char-spec-agent-20260403-087
+  Folder: Dakota Anderson_a087
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Dakota Anderson_a087
+Character created: Alex Smith (a088)
+  ID: char-spec-agent-20260403-088
+  Folder: Alex Smith_a088
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Alex Smith_a088
+Character created: Dakota Rodriguez (a090)
+  ID: char-spec-agent-20260403-090
+  Folder: Dakota Rodriguez_a090
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Dakota Rodriguez_a090
+Character created: Alex Johnson (a091)
+  ID: char-spec-agent-20260403-091
+  Folder: Alex Johnson_a091
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Johnson_a091
+Character created: Casey Miller (a092)
+  ID: char-spec-agent-20260403-092
+  Folder: Casey Miller_a092
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Casey Miller_a092
+Character created: Alex Miller (a093)
+  ID: char-spec-agent-20260403-093
+  Folder: Alex Miller_a093
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Alex Miller_a093
+Character created: Sam Davis (a094)
+  ID: char-spec-agent-20260403-094
+  Folder: Sam Davis_a094
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Sam Davis_a094
+Character created: Jade Torres (a095)
+  ID: char-spec-agent-20260403-095
+  Folder: Jade Torres_a095
+  Universe: other
+  Path: G:\My Drive\Projects\_studio\agency\characters\other\Jade Torres_a095
+Character created: Jade Brown (a096)
+  ID: char-spec-agent-20260403-096
+  Folder: Jade Brown_a096
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Jade Brown_a096
+Character created: Morgan Martinez (a097)
+  ID: char-spec-agent-20260403-097
+  Folder: Morgan Martinez_a097
+  Universe: band-members
+  Path: G:\My Drive\Projects\_studio\agency\characters\band-members\Morgan Martinez_a097
+Character created: Skyler Brown (a098)
+  ID: char-spec-agent-20260403-098
+  Folder: Skyler Brown_a098
+  Universe: original-fiction
+  Path: G:\My Drive\Projects\_studio\agency\characters\original-fiction\Skyler Brown_a098
+Character created: Blake Miller (a100)
+  ID: char-spec-agent-20260403-100
+  Folder: Blake Miller_a100
+  Universe: inmates-vs-guards
+  Path: G:\My Drive\Projects\_studio\agency\characters\inmates-vs-guards\Blake Miller_a100
+[2026-04-04 05:30:56] Build complete:
+[2026-04-04 05:30:56]   Built:  218
+[2026-04-04 05:30:56]   Failed: 0
+[2026-04-04 05:30:56]   By universe: {'original_fiction': 90, 'inmates_vs_guards': 73, 'other': 20, 'band_members': 35}
+[2026-04-04 05:30:58]   Total character folders now: 725
+[2026-04-04 05:30:58] Done.
+[Sat 04/04/2026  5:30:58.45] Done 

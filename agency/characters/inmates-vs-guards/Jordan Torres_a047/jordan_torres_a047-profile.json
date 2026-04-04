@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-agent-20260403-047",
+  "name": "Jordan Torres",
+  "universe": "inmates-vs-guards",
+  "archetype": "idealistic_guard",
+  "created_date": "2026-04-04T05:30:44.876590",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Jordan Torres",
+    "pronouns": "they/them",
+    "age": 18,
+    "personality_traits": [
+      "adaptable",
+      "reserved",
+      "spontaneous",
+      "reckless",
+      "ambitious",
+      "intelligent",
+      "observant"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:44.876606",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

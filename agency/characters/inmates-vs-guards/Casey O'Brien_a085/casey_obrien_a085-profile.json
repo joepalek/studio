@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-agent-20260403-085",
+  "name": "Casey O'Brien",
+  "universe": "inmates-vs-guards",
+  "archetype": "prison_mentor",
+  "created_date": "2026-04-04T05:30:53.455748",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Casey O'Brien",
+    "pronouns": "she/her",
+    "age": 18,
+    "personality_traits": [
+      "haunted",
+      "independent",
+      "reckless",
+      "diplomatic",
+      "energetic",
+      "resilient",
+      "charismatic"
+    ],
+    "voice": "playful and irreverent",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:53.455769",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

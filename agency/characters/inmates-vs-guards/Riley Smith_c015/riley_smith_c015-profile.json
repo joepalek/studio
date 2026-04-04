@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-20260403-015",
+  "name": "Riley Smith",
+  "universe": "inmates-vs-guards",
+  "archetype": "informant",
+  "created_date": "2026-04-04T05:30:04.557678",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Riley Smith",
+    "pronouns": "she/her",
+    "age": 65,
+    "personality_traits": [
+      "spontaneous",
+      "artistic",
+      "empathetic",
+      "charismatic",
+      "conflicted"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Found solace in an unexpected place and built their life around it."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:04.557691",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

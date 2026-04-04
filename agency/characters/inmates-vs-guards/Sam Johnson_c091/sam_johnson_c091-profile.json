@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-claude-20260403-091",
+  "name": "Sam Johnson",
+  "universe": "inmates-vs-guards",
+  "archetype": "lifer",
+  "created_date": "2026-04-04T05:30:17.144113",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Johnson",
+    "pronouns": "he/him",
+    "age": 28,
+    "personality_traits": [
+      "vindictive",
+      "destructive",
+      "observant",
+      "thoughtful"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Rose from difficult circumstances through sheer determination."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:17.144126",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

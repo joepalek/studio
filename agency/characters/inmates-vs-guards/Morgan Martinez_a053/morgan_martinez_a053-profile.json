@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-20260403-053",
+  "name": "Morgan Martinez",
+  "universe": "inmates-vs-guards",
+  "archetype": "corrupt_guard",
+  "created_date": "2026-04-04T05:30:45.867233",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Morgan Martinez",
+    "pronouns": "they/them",
+    "age": 42,
+    "personality_traits": [
+      "practical",
+      "diplomatic",
+      "meticulous",
+      "insightful",
+      "principled",
+      "charismatic"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Grew up in a small town before moving to the city looking for opportunity."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:45.867252",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

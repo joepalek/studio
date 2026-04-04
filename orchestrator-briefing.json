@@ -1,6 +1,7 @@
 {
-  "generated": "2026-04-03T09:50:07.203071",
-  "briefing": "Gemini unavailable \u2014 see plan below",
+  "generated": "2026-04-04T08:02:42.065758",
+  "model_used": "models/gemini-2.5-flash",
+  "briefing": "**DAILY BRIEFING: 2026-04-04**\n\n**1. TOP 3 Joe Tasks:**\n*   **Job Match:** Address the 5 pending decisions to directly impact income replacement (P1).\n*   **Listing Optimizer:** Resolve the 2 pending decisions for immediate daily revenue (P2).\n*   **CTW:** Generate portrait images for all 4 characters using Perchance, per the existing `nextAction` (P4 blocker).\n\n**2. TOP 3 Agent Tasks:**\n*   No agent-runnable tasks identified today.\n\n**3. Critical Blockers:**\n*   **CTW:** Real portrait images are not yet generated, currently blocking progress to Phase 3 build and causing SVG placeholders.\n\n**4. Deferral:**\n*   Defer all other projects with pending decisions until top revenue priorities are addressed.",
   "plan": {
     "agent_runnable": [],
     "human_required": [
@@ -56,5 +57,12 @@
       }
     ],
     "ready_to_build": []
+  },
+  "sre": {
+    "verdict": "DEGRADED",
+    "issues": [
+      "UNCOMMITTED (2 files): job-match"
+    ],
+    "warnings": []
   }
 }

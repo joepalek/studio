@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-agent-20260403-042",
+  "name": "Blake Miller",
+  "universe": "original-fiction",
+  "archetype": "anti_hero",
+  "created_date": "2026-04-04T05:30:44.004453",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Miller",
+    "pronouns": "he/him",
+    "age": 35,
+    "personality_traits": [
+      "destructive",
+      "vindictive",
+      "spontaneous",
+      "impulsive",
+      "delusional",
+      "courageous"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Grew up in a small town before moving to the city looking for opportunity."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:44.004467",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

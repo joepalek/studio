@@ -172,6 +172,53 @@
       "health_score": 57,
       "health_status": "YELLOW",
       "notes": "12 agents in | missed: janitor, ai-intel, agency-build, vintage-agent | -10 missed agent: janitor"
+    },
+    {
+      "date": "2026-04-04",
+      "generated_at": "2026-04-04T07:30:01.710356",
+      "audit_summary": {
+        "total_entries": 3,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "agency-build",
+          "agency-spec-grader",
+          "ai-intel-agent",
+          "ai-services-rankings",
+          "auto-answer-gemini",
+          "check-drift",
+          "git-commit",
+          "janitor",
+          "product-archaeology",
+          "supervisor",
+          "vector-reindex",
+          "vintage-agent",
+          "whiteboard-scorer"
+        ],
+        "missed": [
+          "nightly-rollup",
+          "ai-intel"
+        ]
+      },
+      "pending_inbox_items": 6,
+      "pending_flags": 1,
+      "health_score": 77,
+      "health_status": "YELLOW",
+      "notes": "13 agents in | missed: nightly-rollup, ai-intel | -10 missed agent: nightly-rollup"
     }
   ]
 }

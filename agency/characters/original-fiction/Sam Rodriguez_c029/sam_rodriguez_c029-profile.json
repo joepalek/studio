@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-20260403-029",
+  "name": "Sam Rodriguez",
+  "universe": "original-fiction",
+  "archetype": "innocent",
+  "created_date": "2026-04-04T05:30:06.731066",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Rodriguez",
+    "pronouns": "he/him",
+    "age": 35,
+    "personality_traits": [
+      "technical",
+      "jaded",
+      "diplomatic",
+      "ambitious",
+      "conflicted"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Carries deep regrets about choices made years ago."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:06.731082",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

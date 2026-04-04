@@ -1,0 +1,57 @@
+{
+  "id": "char-spec-claude-20260403-045",
+  "name": "Jordan Miller",
+  "universe": "original-fiction",
+  "archetype": "everyman",
+  "created_date": "2026-04-04T05:30:09.611995",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Jordan Miller",
+    "pronouns": "they/them",
+    "age": 35,
+    "personality_traits": [
+      "meticulous",
+      "intuitive",
+      "determined",
+      "possessive",
+      "analytical",
+      "conflicted",
+      "patient"
+    ],
+    "voice": "playful and irreverent",
+    "archetype_description": "",
+    "backstory": "Made a pivotal decision that changed the course of their life."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:09.612008",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

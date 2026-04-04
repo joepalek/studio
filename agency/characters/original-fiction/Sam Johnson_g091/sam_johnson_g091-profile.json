@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-gemini-20260403-091",
+  "name": "Sam Johnson",
+  "universe": "original-fiction",
+  "archetype": "mentor",
+  "created_date": "2026-04-04T05:30:33.233203",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Sam Johnson",
+    "pronouns": "they/them",
+    "age": 35,
+    "personality_traits": [
+      "paranoid",
+      "haunted",
+      "reckless",
+      "insightful",
+      "obsessive",
+      "thoughtful"
+    ],
+    "voice": "direct and blunt",
+    "archetype_description": "",
+    "backstory": "Has a complicated relationship with their past that shapes everything they do."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:33.233216",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

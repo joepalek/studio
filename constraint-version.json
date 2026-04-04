@@ -1,0 +1,82 @@
+{
+  "snapshot_ts": "2026-04-04T10:30:38.333681",
+  "version": "v1.2.0+5566246f",
+  "registry": {
+    "version": "v1.2.0+5566246f",
+    "released": "2026-04-04",
+    "constraints": {
+      "shannon": {
+        "mode": "enforced",
+        "threshold": 200,
+        "unit": "tokens",
+        "gate": "shannon_check"
+      },
+      "hamilton": {
+        "mode": "enforced",
+        "threshold": 1.5,
+        "unit": "ttl_multiplier",
+        "gate": "hamilton_watchdog"
+      },
+      "hopper": {
+        "mode": "enforced",
+        "threshold": null,
+        "unit": "schema",
+        "gate": "hopper_validate"
+      },
+      "kay": {
+        "mode": "enforced",
+        "threshold": null,
+        "unit": "pattern",
+        "gate": "kay_validate"
+      },
+      "codd": {
+        "mode": "enforced",
+        "threshold": 0.95,
+        "unit": "confidence",
+        "gate": "codd_gate"
+      },
+      "lovelace": {
+        "mode": "enforced",
+        "threshold": null,
+        "unit": "baseline_ref",
+        "gate": "lovelace_start"
+      },
+      "bezos": {
+        "mode": "enforced",
+        "threshold": 3,
+        "unit": "consecutive_failures",
+        "gate": "circuit_breaker"
+      },
+      "compounding": {
+        "mode": "enforced",
+        "threshold": 3,
+        "unit": "attempts",
+        "gate": "compounding_guard"
+      },
+      "turing": {
+        "mode": "enforced",
+        "threshold": 1,
+        "unit": "min_citations",
+        "gate": "turing_check"
+      }
+    }
+  },
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2026-04-04",
+      "change": "Initial enforcement — Shannon, Hamilton, Hopper, Kay, Codd, Lovelace, Bezos, Compounding"
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-04",
+      "change": "Phase 2 validation: Codd VALIDATES (+22.9% predicted). Shannon gate applied live (356t->200t)"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-04-04",
+      "change": "Turing Rule added — source citation enforcement on all assessment/extraction outputs"
+    }
+  ],
+  "registry_hash": "5566246f"
+}

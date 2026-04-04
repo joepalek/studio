@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-claude-20260403-020",
+  "name": "Alex Garcia",
+  "universe": "inmates-vs-guards",
+  "archetype": "prison_mentor",
+  "created_date": "2026-04-04T05:30:05.290969",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Alex Garcia",
+    "pronouns": "she/her",
+    "age": 55,
+    "personality_traits": [
+      "destructive",
+      "practical",
+      "energetic",
+      "principled",
+      "ambitious"
+    ],
+    "voice": "warm and empathetic",
+    "archetype_description": "",
+    "backstory": "Made a pivotal decision that changed the course of their life."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:05.290982",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

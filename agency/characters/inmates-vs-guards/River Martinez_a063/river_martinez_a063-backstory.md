@@ -1,0 +1,38 @@
+# River Martinez (char-spec-agent-20260403-063)
+
+**Universe:** inmates-vs-guards
+**Archetype:** political_prisoner
+**Status:** ungraded
+
+## Core Profile
+
+**Pronouns:** they/them
+**Age:** 28
+**Voice:** passionate and intense
+
+## Personality Traits
+
+- intuitive
+- impulsive
+- artistic
+- delusional
+- patient
+
+## Backstory
+
+Found solace in an unexpected place and built their life around it.
+
+## Visual Direction
+
+Art department will define visual identity.
+
+### Art Notes
+
+Waiting for art department input.
+
+## Social Media Plan
+
+Marketing strategy to be defined.
+
+---
+*Character created: 2026-04-04T05:30:47.657969*

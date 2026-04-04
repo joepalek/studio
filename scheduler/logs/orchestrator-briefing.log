@@ -442,3 +442,65 @@ STRESS VERDICT: WARNING
 
 Briefing saved to `orchestrator-briefing.json`. **Note:** Gemini Flash was unreachable (404/503 across all model variants) — briefing generated via Claude fallback. You may want to verify your Gemini API key hasn't hit quota limits.
 [Fri 04/03/2026  9:48:13.02] Daily briefing starting 
+[Sat 04/04/2026  8:00:02.01] Daily briefing starting 
+---
+
+## SRE SCOUT REPORT — 2026-04-04
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.12 ✓
+- Repomix 1.12.0 ✓
+- Ollama 0.20.0 UP — 2 models (gemma3:4b active)
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: SET ✓
+- Gemini key: SET ✓ — UP (gemini-2.5-flash; gemini-2.0-flash-001 returns 404 — endpoint updated)
+- OpenRouter: SET ✓ UP
+- YouTube key: SET ✓
+- Ollama: UP ✓
+
+**PROJECTS (13 checked)**
+- `!` UNCOMMITTED (2 files): job-match
+- 12 projects clean ✓
+
+**STUDIO FILES**
+- All critical files present ✓
+- All optional files present ✓
+
+**MOBILE ANSWERS**
+- No pending answers ✓
+
+**VERDICT: DEGRADED (1 issue)**
+**ACTION: Commit job-match dirty files**
+
+---
+
+## STRESS REPORT
+**WARNING (1):** `[~]` UNCOMMITTED (2 files): job-match
+**WATCH (1):** `[-]` gemini-2.0-flash-001 endpoint is 404 — briefing routed to gemini-2.5-flash
+
+**STRESS VERDICT: WARNING**
+
+---
+
+## ORCHESTRATOR DAILY BRIEFING — 2026-04-04
+
+**TOP 3 JOE TASKS:**
+1. **Job Match** — Address 5 pending decisions. Blackdot ends May, this is P1 income replacement.
+2. **Listing Optimizer** — Resolve 2 pending decisions. 565 active listings = daily revenue.
+3. **CTW** — Generate portrait images for 4 characters via Perchance (current 40% blocker).
+
+**TOP 3 AGENT TASKS:**
+- None identified today (all projects need human decisions to unblock).
+
+**CRITICAL BLOCKERS:**
+- CTW: portrait images not yet generated → SVG placeholders, blocks Phase 3.
+
+**DEFER TODAY:** All other projects with pending decisions until top 3 are cleared.
+
+---
+
+Briefing saved to `orchestrator-briefing.json`. Note: `gemini-2.0-flash-001` URL in orchestrator.md is stale — working model is `models/gemini-2.5-flash` via the `v1beta` path.

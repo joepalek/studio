@@ -267,6 +267,106 @@ compounding_guard("my_operation")  # raises after 3rd attempt
 
 ---
 
+### `turing_gate.py`
+Turing Rule enforcement — every agent output citing factual claims must include
+inline source markers `[source_id]`. Outputs without citations are flagged, scored,
+and logged. Named after Alan Turing: outputs must be verifiable, not just plausible.
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `turing_check(output, agent_name, min_citations, min_density)` | Check output text for citation markers. Returns compliance dict. Logs violations. |
+| `turing_wrap` | Decorator — auto-checks string return values of agent functions. |
+| `turing_annotate(value, source_id, confidence)` | Helper: append `[source_id]` marker to an extracted value. |
+| `turing_report(outputs)` | Batch audit across multiple agent outputs. Returns summary stats. |
+
+**Import:**
+```python
+import sys
+sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from turing_gate import turing_check, turing_wrap, turing_annotate, turing_report
+```
+
+**Quick examples:**
+```python
+# Check single output
+result = turing_check(agent_output, agent_name="legal-agent")
+if not result["compliant"]:
+    print(f"Missing citations: {result['issues']}")
+
+# Decorator on assessment functions
+@turing_wrap
+def assess_game(game): ...  # returned string auto-checked
+
+# Annotate extracted values with source
+title = turing_annotate("Hellmaze", source_id="ia:web20100601", confidence=0.88)
+# Returns: "Hellmaze [ia:web20100601][confidence:0.88]"
+
+# Batch audit
+report = turing_report([
+    {"text": output1, "agent": "legal-agent"},
+    {"text": output2, "agent": "archaeology-crawler"},
+])
+```
+
+**Accepted citation formats:**
+- `[source_id]`, `[source:wayback]`, `(source:internet_archive)`
+- `Source: wayback_machine`, `Evidence: title_field`
+- `Extracted from listing`, `[confidence:0.97]`
+
+**Violation log:** `G:/My Drive/Projects/_studio/error-log.json`
+
+---
+
+### `constraint_version.py`
+Constraint versioning system. Tags every agent decision with the active constraint
+ruleset version. Enables quality delta measurement as thresholds are tuned over time.
+All violation logs in `error-log.json` include `constraint_version` automatically.
+
+**Current version:** v1.2.0 (Shannon, Hamilton, Hopper, Kay, Codd, Lovelace, Bezos, Compounding, Turing)
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `get_version()` | Returns current version string e.g. `v1.2.0+5566246f` |
+| `get_active_constraints()` | Full registry of active rules, thresholds, gates |
+| `log_decision_with_version(decision_id, agent, summary, quality_signals)` | Log a decision stamped with current version |
+| `get_quality_delta_by_version(target_version)` | Aggregate quality signals per version — the optimization loop |
+| `save_version_snapshot()` | Write current state to constraint-version.json |
+| `bump_version(change_description, bump)` | Increment version + add changelog entry |
+
+**Import:**
+```python
+from constraint_version import get_version, log_decision_with_version, bump_version
+```
+
+**Quick examples:**
+```python
+# Get current version
+v = get_version()  # "v1.2.0+5566246f"
+
+# Log a decision with version stamp
+log_decision_with_version(
+    decision_id="ga-legal-hellmaze-20260404",
+    agent="game_archaeology_legal",
+    decision_summary="Hellmaze assessed GREEN",
+    quality_signals={"codd_passed": False, "turing_citations": 3}
+)
+
+# After tuning Codd threshold, bump version
+bump_version("Raised Codd confidence threshold from 0.95 to 0.97", bump="minor")
+
+# Measure quality delta across versions
+delta = get_quality_delta_by_version()
+# Returns: {version: {total_decisions, codd_pass_rate, turing_avg_citations, ...}}
+```
+
+**Files written:**
+- `constraint-version.json` — current snapshot
+- `constraint-version-log.json` — decision history (last 1000 entries)
+
+---
+
 ## Adding a New Utility
 
 1. Create `utilities/your_utility.py` with a module docstring explaining the problem it solves

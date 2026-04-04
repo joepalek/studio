@@ -1,0 +1,54 @@
+{
+  "id": "char-spec-agent-20260403-093",
+  "name": "Alex Miller",
+  "universe": "original-fiction",
+  "archetype": "trickster",
+  "created_date": "2026-04-04T05:30:55.209148",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Alex Miller",
+    "pronouns": "she/her",
+    "age": 18,
+    "personality_traits": [
+      "principled",
+      "technical",
+      "resilient",
+      "patient"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Has been searching for something they can't quite name."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:55.209166",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

@@ -27,6 +27,15 @@ ERROR_LOG = STUDIO_ROOT / "error-log.json"
 DECISION_LOG = STUDIO_ROOT / "decision-log.json"
 
 
+def _get_constraint_version() -> str:
+    """Get current constraint version without circular import."""
+    try:
+        from constraint_version import get_version
+        return get_version()
+    except Exception:
+        return "unknown"
+
+
 # ---------------------------------------------------------------------------
 # SHARED: violation logger
 # ---------------------------------------------------------------------------
@@ -36,6 +45,7 @@ def log_violation(rule: str, detail: dict) -> None:
     entry = {
         "rule": rule,
         "ts": datetime.now().isoformat(),
+        "constraint_version": _get_constraint_version(),
         **detail
     }
     try:

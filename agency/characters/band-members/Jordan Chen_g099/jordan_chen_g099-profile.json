@@ -1,0 +1,56 @@
+{
+  "id": "char-spec-gemini-20260403-099",
+  "name": "Jordan Chen",
+  "universe": "band-members",
+  "archetype": "keyboardist",
+  "created_date": "2026-04-04T05:30:35.742609",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Jordan Chen",
+    "pronouns": "they/them",
+    "age": 65,
+    "personality_traits": [
+      "haunted",
+      "meticulous",
+      "logical",
+      "creative",
+      "ambitious",
+      "delusional"
+    ],
+    "voice": "sarcastic and witty",
+    "archetype_description": "",
+    "backstory": "Struggles with the gap between who they are and who they want to be."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:35.742628",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-gemini-20260403-054",
+  "name": "Blake Miller",
+  "universe": "inmates-vs-guards",
+  "archetype": "corrupt_guard",
+  "created_date": "2026-04-04T05:30:26.313748",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Blake Miller",
+    "pronouns": "he/him",
+    "age": 22,
+    "personality_traits": [
+      "destructive",
+      "meticulous",
+      "insightful",
+      "logical",
+      "suspicious"
+    ],
+    "voice": "measured and careful",
+    "archetype_description": "",
+    "backstory": "Has a complicated relationship with their past that shapes everything they do."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:26.313760",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}

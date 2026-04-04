@@ -1,0 +1,55 @@
+{
+  "id": "char-spec-agent-20260403-039",
+  "name": "Riley Torres",
+  "universe": "inmates-vs-guards",
+  "archetype": "informant",
+  "created_date": "2026-04-04T05:30:43.341983",
+  "created_by": "manual",
+  "status": "ungraded",
+  "core_profile": {
+    "name": "Riley Torres",
+    "pronouns": "they/them",
+    "age": 28,
+    "personality_traits": [
+      "destructive",
+      "independent",
+      "diplomatic",
+      "resilient",
+      "suspicious"
+    ],
+    "voice": "poetic and philosophical",
+    "archetype_description": "",
+    "backstory": "Made a pivotal decision that changed the course of their life."
+  },
+  "visual_specs": {
+    "status": "draft",
+    "locked_date": null,
+    "locked_by": null,
+    "description": "",
+    "references": [],
+    "art_dept_notes": "",
+    "approved_visual_assets": {}
+  },
+  "social_presence": {
+    "accounts": [],
+    "interaction_history": [],
+    "marketing_plan": ""
+  },
+  "appearances": [],
+  "media_assets": {
+    "images": [],
+    "video": [],
+    "voice": []
+  },
+  "interaction_log": [],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-04-04T05:30:43.341997",
+    "updated_by": "character-creator",
+    "total_appearances": 0,
+    "total_media_assets": 0,
+    "total_interactions": 0,
+    "revenue_potential": "MEDIUM",
+    "notes": ""
+  }
+}
