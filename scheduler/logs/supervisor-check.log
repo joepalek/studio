@@ -1431,3 +1431,12 @@
 [2026-04-04 10:30:03] Dispatched: 0 tasks
 [2026-04-04 10:30:03] Supervisor check complete
 [Sat 04/04/2026 10:30:03.86] Done 
+[Sat 04/04/2026 11:00:01.24] Supervisor check starting 
+[2026-04-04 11:00:01] Supervisor check starting
+[2026-04-04 11:00:03] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 11:00:03] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 11:00:03] Work queue: 0 | Task queue: 0
+[2026-04-04 11:00:03] Active agents (25h): --list, supervisor
+[2026-04-04 11:00:03] Dispatched: 0 tasks
+[2026-04-04 11:00:03] Supervisor check complete
+[Sat 04/04/2026 11:00:03.74] Done 

@@ -1,19 +1,22 @@
 {
-  "time": "2026-04-04T10:30:03.704386",
+  "time": "2026-04-04T11:00:03.591800",
   "ollama_up": true,
   "gemini_available": true,
   "providers_available": [
     "cerebras",
+    "groq",
     "mistral",
     "gemini",
     "ollama"
   ],
   "providers_degraded": [
-    "groq/llama-3.3-70b-versatile (degraded)"
+    "gemini/gemini-2.0-flash (defunct)",
+    "gemini/gemini-2.5-flash-preview-04-17 (defunct)"
   ],
   "best_free_provider": "cerebras",
   "free_models": [],
   "agents_recently_active": [
+    "--list",
     "supervisor"
   ],
   "work_queue_depth": 0,

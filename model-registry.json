@@ -156,6 +156,16 @@
           ],
           "cost_tier": "free_very_generous",
           "studio_use": "janitor-style tasks, tag extraction, simple scoring"
+        },
+        "gemma-4": {
+          "display": "Gemma 4",
+          "tier": "free",
+          "free_limits": "via Groq / local Ollama",
+          "context_window": 128000,
+          "status": "active",
+          "best_for": "local inference, fast scoring, overnight batch",
+          "notes": "Launched 2026-04-03. Available via Groq API and Ollama. Successor to Gemma 3.",
+          "added": "2026-04-04"
         }
       },
       "default_model": "gemini-2.5-flash",
