@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 """
 model_validator.py — Nightly Model Health Check
 ================================================
@@ -8,11 +10,17 @@ updates provider-health.json, and pushes findings to supervisor inbox.
 Schedule: Add to Task Scheduler — daily 06:30 AM after AIServicesRankings
 Run manually: python model_validator.py
 """
+
+# EXPECTED_RUNTIME_SECONDS: 120
 import json, urllib.request, sys, os
 sys.path.insert(0, "G:/My Drive/Projects/_studio")
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 from datetime import datetime
 import provider_health as ph
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 STUDIO        = "G:/My Drive/Projects/_studio"
 REGISTRY_PATH = STUDIO + "/model-registry.json"
@@ -85,6 +93,7 @@ def fetch_live_models(cfg):
     gemini_models = ["gemini-2.5-flash", "gemini-2.0-flash-001", "gemini-flash-lite", "gemini-1.5-pro"]
     live["gemini"] = []
     key = cfg.get("gemini_api_key", "")
+    _consecutive_failures = 0
     for model in gemini_models:
         try:
             url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
@@ -176,6 +185,7 @@ def push_findings_to_inbox(findings):
     return pushed
 
 
+@hamilton_watchdog("model_validator", expected_seconds=120)
 def main():
     log("Model validator starting")
     cfg = load_cfg()

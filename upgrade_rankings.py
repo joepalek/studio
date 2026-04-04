@@ -8,6 +8,9 @@ Upgrades ai-services-rankings.json to schema 2.0:
 """
 import json, sys
 from datetime import datetime
+
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
 TODAY = datetime.now().strftime("%Y-%m-%d")

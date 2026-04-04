@@ -63,3 +63,22 @@
 [2026-04-03 03:08:50] Active listings saved: G:/My Drive/Projects/job-match/job-listings.json
 [2026-04-03 03:08:50] Archive updated: 676 expired total
 [2026-04-03 03:08:50] Done.
+[2026-04-04 03:00:02] Job daily harvest starting
+[2026-04-04 03:00:02] Registry: 58 boards + 605 career pages
+[2026-04-04 03:00:02] Yesterday: 1083 active listings
+[2026-04-04 03:00:02] Harvesting 663 total sources...
+[2026-04-04 03:01:47]   100/663 sources -- 918 jobs so far
+[2026-04-04 03:02:42]   200/663 sources -- 959 jobs so far
+[2026-04-04 03:03:44]   300/663 sources -- 981 jobs so far
+[2026-04-04 03:05:02]   400/663 sources -- 981 jobs so far
+[2026-04-04 03:06:28]   500/663 sources -- 1109 jobs so far
+[2026-04-04 03:08:07]   600/663 sources -- 1405 jobs so far
+[2026-04-04 03:09:10] Harvest complete:
+[2026-04-04 03:09:10]   Total extracted: 1590
+[2026-04-04 03:09:10]   Unique active:   1087
+[2026-04-04 03:09:10]   New today:       115
+[2026-04-04 03:09:10]   Expired:         111
+[2026-04-04 03:09:10]   Errors:          33
+[2026-04-04 03:09:10] Active listings saved: G:/My Drive/Projects/job-match/job-listings.json
+[2026-04-04 03:09:10] Archive updated: 787 expired total
+[2026-04-04 03:09:10] Done.

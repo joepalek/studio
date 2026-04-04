@@ -105,6 +105,25 @@
       "answer": "Fix now",
       "date": "2026-04-01T04:59:54.205Z",
       "source": "sidebar"
+    },
+    {
+      "id": "DEC-20260404-001",
+      "date": "2026-04-04",
+      "decision": "Upgraded all five named constraints (Shannon, Hamilton, Hopper, Kay, Codd) from behavioral guidelines to structurally enforced gates. Added Lovelace Rule (savepoint/variant test). Built constraint_gates.py utility and constraint_audit.py SRE scanner.",
+      "reason": "Simulation data showed +14.3% avg quality improvement with positive enforcement vs negative-only. Codd alone +22.9%, Shannon +18.1%, Kay +15.1%. At 16-agent scale, behavioral-only constraints are aspirations not guarantees.",
+      "permanence": "permanent",
+      "status": "active",
+      "superseded_by": null,
+      "files_changed": [
+        "_studio/CLAUDE.md",
+        "ROOT-CLAUDE.md",
+        "_studio/utilities/constraint_gates.py",
+        "_studio/constraint_audit.py",
+        "_studio/register_constraint_audit.ps1",
+        "_studio/session-startup.py",
+        "_studio/utilities/README.md",
+        "_studio/supervisor.md"
+      ]
     }
   ]
 }

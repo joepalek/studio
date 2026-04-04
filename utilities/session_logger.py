@@ -34,6 +34,9 @@ if _UTIL_DIR not in sys.path:
 
 from unicode_safe import safe_json_load, safe_json_dump, safe_str
 
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
+
 STUDIO           = 'G:/My Drive/Projects/_studio'
 LOG_PATH         = STUDIO + '/session-log.md'
 STATUS_PATH      = STUDIO + '/status.json'

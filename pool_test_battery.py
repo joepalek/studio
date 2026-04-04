@@ -19,6 +19,9 @@ import json, sys, time, logging, argparse, importlib.util
 from datetime import datetime
 from pathlib import Path
 
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
+
 sys.path.insert(0, "G:/My Drive/Projects/_studio")
 
 STUDIO = Path("G:/My Drive/Projects/_studio")

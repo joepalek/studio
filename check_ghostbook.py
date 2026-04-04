@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 import json, sys
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
@@ -21,6 +23,7 @@ if real:
     print("\nTop 10 real scores:")
     top = sorted([b for b in lines if b['scores']['composite'] != 6.02],
                  key=lambda x: x['scores']['composite'], reverse=True)[:10]
+    _consecutive_failures = 0
     for b in top:
         print(f"  [{b['scores']['composite']:.2f} {b.get('salvage_grade','?')}] {b.get('book_title','?')[:65]}")
 else:

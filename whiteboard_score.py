@@ -1,3 +1,5 @@
+
+# EXPECTED_RUNTIME_SECONDS: 180
 import json, time, os, sys
 sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from datetime import datetime
@@ -122,6 +124,10 @@ print(f'\nPushed {pushed} top-10 items to mobile-inbox.json')
 
 # Heartbeat
 import sys; sys.path.insert(0, 'G:/My Drive/Projects/_studio')
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 try:
     from utilities.heartbeat import write as hb_write
     hb_write('whiteboard-scorer', 'clean', f'scored={scored_count} top10_pushed={pushed}')

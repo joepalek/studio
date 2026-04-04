@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 """
 supervisor_check.py — Autonomous Supervisor Dispatch Engine
 Runs every 30 min via Task Scheduler (SupervisorCheck.xml).
@@ -102,6 +104,7 @@ def get_routing_tags(rankings):
     free_models = []
     for cat, services in cats.items():
         if isinstance(services, list):
+            _consecutive_failures = 0
             for s in services:
                 if s.get("free_tier") and "free-offload" in s.get("routing_tags", []):
                     free_models.append(s.get("name","") + " (" + cat + ")")

@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 """
 wasde_parser.py  v2.0
 =====================
@@ -20,12 +22,18 @@ USAGE:
 SCHEDULER: \\Studio\\wasde-parser | 02:15 daily | TTL 600s
 """
 
+# EXPECTED_RUNTIME_SECONDS: 300
+
 import json, os, sys, time, hashlib, logging, argparse, io
 from datetime import datetime, timedelta
 from pathlib import Path
 
 sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from ai_gateway import call as gw_call
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 # ══════════════════════════════════════════════════════════════
 # URL BUILDER
@@ -384,6 +392,7 @@ def _normalize_with_gemini(records, cfg, log):
         text = text.split("```",2)[-1].lstrip("json").strip().rstrip("```").strip()
     try:
         lst = json.loads(text)
+        _consecutive_failures = 0
         for r in lst:
             c = r.get("commodity") or r.get("Commodity","")
             if c in narratives: r["narrative"] = narratives[c]

@@ -17,6 +17,8 @@ EXPECTED RUNTIME: ~120s | TTL: 480s | Hamilton kill at 2x = 960s (set in XML)
 RULES ENFORCED: Bezos, Hamilton, Hopper, Codd, Shannon, Gall
 """
 
+# EXPECTED_RUNTIME_SECONDS: 300
+
 import json, os, sys, time, hashlib, logging, argparse
 import xml.etree.ElementTree as ET
 import csv, io, urllib.request
@@ -26,6 +28,10 @@ from pathlib import Path
 sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from ai_gateway import call as gw_call
 import provider_health as ph
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 # ══════════════════════════════════════════════════════════════════
 # CONFIG

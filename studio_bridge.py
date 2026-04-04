@@ -4,11 +4,17 @@ Location: G:/My Drive/Projects/_studio/studio_bridge.py
 Execute: VS Code terminal - python studio_bridge.py
 """
 
+# EXPECTED_RUNTIME_SECONDS: 300
+
 from flask import Flask, request, jsonify, make_response, send_file, abort
 from datetime import datetime
 import json
 import os
 from pathlib import Path
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 app = Flask(__name__)
 
@@ -318,6 +324,64 @@ def update_supervisor_status():
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({'status': 'ok'})
+
+@app.route('/inbox', methods=['GET'])
+def get_inbox():
+    """Return live inbox items from disk, filtered against inbox-log.jsonl answered IDs."""
+    RESOLVED = ('resolved','RESOLVED','auto-resolved','build','done','DONE','answered','ANSWERED')
+
+    # Load answered IDs from log
+    answered_ids = set()
+    try:
+        with open(INBOX_LOG_FILE, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    entry = json.loads(line)
+                    if entry.get('id'):
+                        answered_ids.add(entry['id'])
+    except Exception:
+        pass
+
+    inbox = []
+
+    # supervisor-inbox.json
+    try:
+        sup = json.load(open(STUDIO_DIR / 'supervisor-inbox.json', encoding='utf-8'))
+        sup_items = sup if isinstance(sup, list) else sup.get('items', [])
+        for i in sup_items:
+            if isinstance(i, dict) and i.get('status') not in RESOLVED and i.get('id') not in answered_ids:
+                inbox.append({
+                    'id': i.get('id', ''), 'title': i.get('title', '')[:80],
+                    'finding': i.get('finding', '')[:120], 'urgency': i.get('urgency', 'INFO'),
+                    'date': i.get('date', ''), 'source': 'supervisor',
+                    'project': i.get('project', 'studio'),
+                    'options': i.get('options', [])[:4], 'recommendation': i.get('recommendation', '')
+                })
+    except Exception:
+        pass
+
+    # mobile-inbox.json
+    try:
+        mob = json.load(open(STUDIO_DIR / 'mobile-inbox.json', encoding='utf-8'))
+        mob_items = mob if isinstance(mob, list) else mob.get('items', [])
+        for i in mob_items:
+            if isinstance(i, dict) and i.get('status') not in RESOLVED and i.get('id') not in answered_ids:
+                title = i.get('question', i.get('title', ''))
+                if 'WHITEBOARD' in title or str(i.get('id', '')).startswith('wb-'):
+                    continue
+                inbox.append({
+                    'id': i.get('id', ''), 'title': title[:80],
+                    'finding': i.get('context', i.get('description', ''))[:120],
+                    'urgency': 'WARN' if i.get('priority') == 'high' else 'INFO',
+                    'date': i.get('created_at', i.get('date', '')), 'source': 'mobile',
+                    'project': i.get('project', ''),
+                    'options': i.get('options', [])[:4], 'recommendation': i.get('recommendation', '')
+                })
+    except Exception:
+        pass
+
+    return jsonify(inbox)
 
 @app.route('/docs/<path:filename>')
 def serve_doc(filename):

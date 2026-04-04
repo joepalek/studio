@@ -293,14 +293,22 @@ runs this check **before** requesting a new build from Claude:
 
 ```python
 UTILITIES_REGISTRY = {
-    'UnicodeEncodeError':     ('unicode_safe.py', 'safe_print / safe_str'),
-    'charmap codec':          ('unicode_safe.py', 'safe_print / safe_str'),
-    "list.*has no attribute": ('unicode_safe.py', 'to_str'),
-    'HTTP Error 403':         ('scraper_utils.py', 'fetch with retry'),
-    'HTTP Error 429':         ('scraper_utils.py', 'fetch with exponential backoff'),
-    'JSONDecodeError':        ('unicode_safe.py', 'safe_json_load'),
-    'ConnectionRefused.*11434': (None, 'ollama_utils.py — NOT YET BUILT'),
-    'Gemini.*quota':          (None, 'gemini_utils.py — NOT YET BUILT'),
+    'UnicodeEncodeError':       ('unicode_safe.py',      'safe_print / safe_str'),
+    'charmap codec':            ('unicode_safe.py',      'safe_print / safe_str'),
+    "list.*has no attribute":   ('unicode_safe.py',      'to_str'),
+    'HTTP Error 403':           ('scraper_utils.py',     'fetch with retry'),
+    'HTTP Error 429':           ('scraper_utils.py',     'fetch with exponential backoff'),
+    'JSONDecodeError':          ('unicode_safe.py',      'safe_json_load'),
+    'ConnectionRefused.*11434': ('ollama_utils.py',      'is_up() before calling'),
+    'Gemini.*quota':            ('gemini_utils.py',      'batch_ask with rate limit'),
+    # Constraint gate violations
+    'SHANNON.*token':           ('constraint_gates.py',  'shannon_check()'),
+    'HOPPER.*schema':           ('constraint_gates.py',  'hopper_validate() / hopper_append()'),
+    'KAY.*directive':           ('constraint_gates.py',  'kay_validate()'),
+    'CODD.*confidence':         ('constraint_gates.py',  'codd_gate decorator / codd_check()'),
+    'LOVELACE.*baseline':       ('constraint_gates.py',  'lovelace_start() / lovelace_complete()'),
+    'HAMILTON.*TTL':            ('constraint_gates.py',  'hamilton_watchdog() decorator'),
+    'COMPOUNDING.*attempt':     ('constraint_gates.py',  'compounding_guard() / compounding_reset()'),
 }
 # Canonical utility location: G:/My Drive/Projects/_studio/utilities/
 # README: G:/My Drive/Projects/_studio/utilities/README.md

@@ -1,3 +1,7 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
+
+# EXPECTED_RUNTIME_SECONDS: 300
 # ai_intel_run.py - AI Intel daily scraper v2
 # Sources: YouTube, Reddit (5 subs), HackerNews, Anthropic news, OpenAI RSS,
 #          GitHub Trending, arXiv AI abstracts
@@ -5,6 +9,10 @@
 
 import urllib.request, urllib.parse, json, re, html, time
 from datetime import datetime, timedelta, timezone
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 STUDIO = "G:/My Drive/Projects/_studio"
 DAILY_FILE   = STUDIO + "/ai-intel-daily.json"
@@ -67,6 +75,7 @@ yt_count = 0
 if YOUTUBE_KEY:
     try:
         after_iso = cutoff_24h.strftime("%Y-%m-%dT%H:%M:%SZ")
+        _consecutive_failures = 0
         for q in ["AI news today","AI tools 2026","Claude Anthropic update",
                   "ChatGPT OpenAI update","AI automation workflow","new AI model release","LLM breakthrough"]:
             params = urllib.parse.urlencode({

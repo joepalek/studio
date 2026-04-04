@@ -22,6 +22,10 @@ provider-health.json structure:
 import json, os
 from datetime import datetime
 
+import sys as _hoppersys
+_hoppersys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from constraint_gates import hopper_append as _hopper_append
+
 STUDIO      = "G:/My Drive/Projects/_studio"
 HEALTH_PATH = STUDIO + "/provider-health.json"
 

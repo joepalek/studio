@@ -40,6 +40,21 @@
     "date": "2026-04-03T11:08:07.132646"
   },
   {
+    "id": "test-inbox-roundtrip-002",
+    "source": "supervisor",
+    "type": "decision",
+    "urgency": "INFO",
+    "title": "INBOX TEST 2 — Click reload button to see this appear",
+    "finding": "If you are reading this after clicking the reload button without a full page refresh, the live reload is working.",
+    "options": [
+      "Reload button works",
+      "Had to hard refresh"
+    ],
+    "recommendation": "Answer this to confirm reload button pulls live messages",
+    "status": "PENDING",
+    "date": "2026-04-03T23:00:00Z"
+  },
+  {
     "id": "test-inbox-roundtrip-001",
     "source": "supervisor",
     "type": "decision",
@@ -55,32 +70,1202 @@
     "date": "2026-04-03T22:45:00Z"
   },
   {
-    "id": "supervisor-cycle-202604032200",
+    "id": "AUDIT-HOPPER-whiteboard_score-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: whiteboard_score.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.046937"
+  },
+  {
+    "id": "AUDIT-HOPPER-run_inbox_sync-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: run_inbox_sync.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.109165"
+  },
+  {
+    "id": "AUDIT-BEZOS-generate-context-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: generate-context.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.137349"
+  },
+  {
+    "id": "AUDIT-BEZOS-auto_answer_gemini-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: auto_answer_gemini.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.165522"
+  },
+  {
+    "id": "AUDIT-BEZOS-context-test-harness-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: context-test-harness.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.194656"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_intel_run-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_intel_run.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.221715"
+  },
+  {
+    "id": "AUDIT-HOPPER-ai_intel_run-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: ai_intel_run.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.248684"
+  },
+  {
+    "id": "AUDIT-CODD-ai_intel_run-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "CODD missing: ai_intel_run.py",
+    "finding": "Extraction agent missing @codd_gate decorator | Fix: Wrap extraction functions with @codd_gate",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.275504"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_services_rankings-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_services_rankings.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.302213"
+  },
+  {
+    "id": "AUDIT-BEZOS-update_asset_usage-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: update_asset_usage.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.327681"
+  },
+  {
+    "id": "AUDIT-HOPPER-studio_bridge-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: studio_bridge.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.353155"
+  },
+  {
+    "id": "AUDIT-BEZOS-check_ghostbook-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: check_ghostbook.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.375881"
+  },
+  {
+    "id": "AUDIT-BEZOS-upgrade_rankings-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: upgrade_rankings.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.401935"
+  },
+  {
+    "id": "AUDIT-BEZOS-studio_inventory-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: studio_inventory.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.423861"
+  },
+  {
+    "id": "AUDIT-BEZOS-rebuild_sidebar-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: rebuild_sidebar.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.464583"
+  },
+  {
+    "id": "AUDIT-BEZOS-supervisor_check-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: supervisor_check.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.520989"
+  },
+  {
+    "id": "AUDIT-CODD-product_archaeology_run-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "CODD missing: product_archaeology_run.py",
+    "finding": "Extraction agent missing @codd_gate decorator | Fix: Wrap extraction functions with @codd_gate",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.546976"
+  },
+  {
+    "id": "AUDIT-BEZOS-vintage_agent-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: vintage_agent.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.573667"
+  },
+  {
+    "id": "AUDIT-CODD-vintage_agent-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "CODD missing: vintage_agent.py",
+    "finding": "Extraction agent missing @codd_gate decorator | Fix: Wrap extraction functions with @codd_gate",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.598286"
+  },
+  {
+    "id": "AUDIT-BEZOS-git_commit-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: git_commit.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.623511"
+  },
+  {
+    "id": "AUDIT-BEZOS-populate_orchestrator_plan-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: populate_orchestrator_plan.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.655679"
+  },
+  {
+    "id": "AUDIT-BEZOS-agent_summary-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: agent_summary.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.687165"
+  },
+  {
+    "id": "AUDIT-BEZOS-test_groq_debug-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: test_groq_debug.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.711243"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_gateway-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_gateway.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.738079"
+  },
+  {
+    "id": "AUDIT-BEZOS-check_models-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: check_models.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.762299"
+  },
+  {
+    "id": "AUDIT-HOPPER-provider_health-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: provider_health.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.788511"
+  },
+  {
+    "id": "AUDIT-BEZOS-model_validator-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: model_validator.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.826847"
+  },
+  {
+    "id": "AUDIT-HOPPER-model_validator-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: model_validator.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.857330"
+  },
+  {
+    "id": "AUDIT-HOPPER-tier1_pipeline_template-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: tier1_pipeline_template.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.884699"
+  },
+  {
+    "id": "AUDIT-HOPPER-sanctions_ingestor-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: sanctions_ingestor.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.925890"
+  },
+  {
+    "id": "AUDIT-BEZOS-wasde_parser-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: wasde_parser.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.957112"
+  },
+  {
+    "id": "AUDIT-HOPPER-wasde_parser-20260404025806",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: wasde_parser.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:06.995774"
+  },
+  {
+    "id": "AUDIT-BEZOS-wasde_dual_ai-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: wasde_dual_ai.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.039160"
+  },
+  {
+    "id": "AUDIT-BEZOS-pool_test_battery-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: pool_test_battery.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.068166"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_news_scraper-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_news_scraper.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.099712"
+  },
+  {
+    "id": "AUDIT-HOPPER-send_digest_to_inbox-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: send_digest_to_inbox.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.131955"
+  },
+  {
+    "id": "AUDIT-HOPPER-scraper_utils-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: scraper_utils.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.172469"
+  },
+  {
+    "id": "AUDIT-BEZOS-session_logger-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: session_logger.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.199414"
+  },
+  {
+    "id": "AUDIT-BEZOS-ollama_utils-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ollama_utils.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.230143"
+  },
+  {
+    "id": "AUDIT-BEZOS-gemini_utils-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: gemini_utils.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.260039"
+  },
+  {
+    "id": "AUDIT-BEZOS-constraint_gates-20260404025807",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: constraint_gates.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T02:58:07.295224"
+  },
+  {
+    "id": "AUDIT-HOPPER-whiteboard_score-20260404030010",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: whiteboard_score.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:10.848901"
+  },
+  {
+    "id": "AUDIT-HOPPER-run_inbox_sync-20260404030010",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: run_inbox_sync.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:10.875491"
+  },
+  {
+    "id": "AUDIT-BEZOS-generate-context-20260404030010",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: generate-context.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:10.927911"
+  },
+  {
+    "id": "AUDIT-BEZOS-auto_answer_gemini-20260404030010",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: auto_answer_gemini.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:10.960125"
+  },
+  {
+    "id": "AUDIT-BEZOS-context-test-harness-20260404030010",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: context-test-harness.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:10.989358"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_intel_run-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_intel_run.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.015644"
+  },
+  {
+    "id": "AUDIT-HOPPER-ai_intel_run-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: ai_intel_run.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.044473"
+  },
+  {
+    "id": "AUDIT-CODD-ai_intel_run-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "CODD missing: ai_intel_run.py",
+    "finding": "Extraction agent missing @codd_gate decorator | Fix: Wrap extraction functions with @codd_gate",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.070416"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_services_rankings-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_services_rankings.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.095286"
+  },
+  {
+    "id": "AUDIT-BEZOS-update_asset_usage-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: update_asset_usage.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.122117"
+  },
+  {
+    "id": "AUDIT-HOPPER-studio_bridge-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: studio_bridge.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.147285"
+  },
+  {
+    "id": "AUDIT-BEZOS-check_ghostbook-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: check_ghostbook.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.174648"
+  },
+  {
+    "id": "AUDIT-BEZOS-upgrade_rankings-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: upgrade_rankings.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.202883"
+  },
+  {
+    "id": "AUDIT-BEZOS-studio_inventory-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: studio_inventory.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.233755"
+  },
+  {
+    "id": "AUDIT-BEZOS-rebuild_sidebar-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: rebuild_sidebar.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.262496"
+  },
+  {
+    "id": "AUDIT-BEZOS-supervisor_check-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: supervisor_check.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.288814"
+  },
+  {
+    "id": "AUDIT-CODD-product_archaeology_run-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "CODD missing: product_archaeology_run.py",
+    "finding": "Extraction agent missing @codd_gate decorator | Fix: Wrap extraction functions with @codd_gate",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.330394"
+  },
+  {
+    "id": "AUDIT-BEZOS-vintage_agent-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: vintage_agent.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.363412"
+  },
+  {
+    "id": "AUDIT-CODD-vintage_agent-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "CODD missing: vintage_agent.py",
+    "finding": "Extraction agent missing @codd_gate decorator | Fix: Wrap extraction functions with @codd_gate",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.392128"
+  },
+  {
+    "id": "AUDIT-BEZOS-git_commit-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: git_commit.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.438492"
+  },
+  {
+    "id": "AUDIT-BEZOS-populate_orchestrator_plan-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: populate_orchestrator_plan.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.465457"
+  },
+  {
+    "id": "AUDIT-BEZOS-agent_summary-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: agent_summary.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.493139"
+  },
+  {
+    "id": "AUDIT-BEZOS-test_groq_debug-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: test_groq_debug.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.523969"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_gateway-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_gateway.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.551242"
+  },
+  {
+    "id": "AUDIT-BEZOS-check_models-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: check_models.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.581641"
+  },
+  {
+    "id": "AUDIT-HOPPER-provider_health-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: provider_health.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.613852"
+  },
+  {
+    "id": "AUDIT-BEZOS-model_validator-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: model_validator.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.646440"
+  },
+  {
+    "id": "AUDIT-HOPPER-model_validator-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: model_validator.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.677834"
+  },
+  {
+    "id": "AUDIT-HOPPER-tier1_pipeline_template-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: tier1_pipeline_template.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.709215"
+  },
+  {
+    "id": "AUDIT-HOPPER-sanctions_ingestor-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: sanctions_ingestor.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.740311"
+  },
+  {
+    "id": "AUDIT-BEZOS-wasde_parser-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: wasde_parser.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.781961"
+  },
+  {
+    "id": "AUDIT-HOPPER-wasde_parser-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: wasde_parser.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.811278"
+  },
+  {
+    "id": "AUDIT-BEZOS-wasde_dual_ai-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: wasde_dual_ai.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.840862"
+  },
+  {
+    "id": "AUDIT-BEZOS-pool_test_battery-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: pool_test_battery.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.868635"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_news_scraper-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_news_scraper.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.896241"
+  },
+  {
+    "id": "AUDIT-HOPPER-send_digest_to_inbox-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: send_digest_to_inbox.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.922838"
+  },
+  {
+    "id": "AUDIT-HOPPER-scraper_utils-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: scraper_utils.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.952897"
+  },
+  {
+    "id": "AUDIT-BEZOS-session_logger-20260404030011",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: session_logger.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:11.982292"
+  },
+  {
+    "id": "AUDIT-BEZOS-ollama_utils-20260404030012",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ollama_utils.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:12.010488"
+  },
+  {
+    "id": "AUDIT-BEZOS-gemini_utils-20260404030012",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: gemini_utils.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:12.043540"
+  },
+  {
+    "id": "AUDIT-BEZOS-constraint_gates-20260404030012",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: constraint_gates.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:00:12.071905"
+  },
+  {
+    "id": "HAMILTON-WIRE-20260404030331",
+    "source": "wire_hamilton",
+    "type": "constraint_enforcement",
+    "urgency": "low",
+    "title": "Hamilton wired: 8 agents patched",
+    "finding": "Patched: model_validator.py, product_archaeology_run.py, vintage_agent.py, auto_answer_gemini.py, nightly_rollup.py.... Manual review needed: sanctions_ingestor.py, wasde_parser.py, serve_sidebar_server.py, studio_bridge.py, ai_intel_run.py, ai_news_scraper.py, whiteboard_score.py, vector_reindex.py, inject_sidebar_data.py, ai_services_rankings.py, run_inbox_sync.py, send_digest_to_inbox.py",
+    "status": "pending",
+    "date": "2026-04-04T03:03:31.441825"
+  },
+  {
+    "id": "AUDIT-BEZOS-generate-context-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: generate-context.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.566214"
+  },
+  {
+    "id": "AUDIT-BEZOS-auto_answer_gemini-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: auto_answer_gemini.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.603402"
+  },
+  {
+    "id": "AUDIT-BEZOS-context-test-harness-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: context-test-harness.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.636811"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_intel_run-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_intel_run.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.670993"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_services_rankings-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_services_rankings.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.703791"
+  },
+  {
+    "id": "AUDIT-BEZOS-update_asset_usage-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: update_asset_usage.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.751393"
+  },
+  {
+    "id": "AUDIT-BEZOS-check_ghostbook-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: check_ghostbook.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.780612"
+  },
+  {
+    "id": "AUDIT-BEZOS-upgrade_rankings-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: upgrade_rankings.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.810689"
+  },
+  {
+    "id": "AUDIT-BEZOS-studio_inventory-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: studio_inventory.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.840062"
+  },
+  {
+    "id": "AUDIT-BEZOS-rebuild_sidebar-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: rebuild_sidebar.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.868694"
+  },
+  {
+    "id": "AUDIT-BEZOS-supervisor_check-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: supervisor_check.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.898316"
+  },
+  {
+    "id": "AUDIT-BEZOS-vintage_agent-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: vintage_agent.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.931498"
+  },
+  {
+    "id": "AUDIT-BEZOS-git_commit-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: git_commit.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.958025"
+  },
+  {
+    "id": "AUDIT-BEZOS-populate_orchestrator_plan-20260404030405",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: populate_orchestrator_plan.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:05.983594"
+  },
+  {
+    "id": "AUDIT-BEZOS-agent_summary-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: agent_summary.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.011605"
+  },
+  {
+    "id": "AUDIT-BEZOS-test_groq_debug-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: test_groq_debug.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.041906"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_gateway-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_gateway.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.071942"
+  },
+  {
+    "id": "AUDIT-BEZOS-check_models-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: check_models.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.100927"
+  },
+  {
+    "id": "AUDIT-HOPPER-provider_health-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: provider_health.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.129179"
+  },
+  {
+    "id": "AUDIT-BEZOS-model_validator-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: model_validator.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.169586"
+  },
+  {
+    "id": "AUDIT-HOPPER-tier1_pipeline_template-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: tier1_pipeline_template.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.197565"
+  },
+  {
+    "id": "AUDIT-BEZOS-wasde_parser-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: wasde_parser.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.225294"
+  },
+  {
+    "id": "AUDIT-BEZOS-wasde_dual_ai-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: wasde_dual_ai.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.251416"
+  },
+  {
+    "id": "AUDIT-BEZOS-pool_test_battery-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: pool_test_battery.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.278556"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_news_scraper-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_news_scraper.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.306620"
+  },
+  {
+    "id": "AUDIT-HOPPER-scraper_utils-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "HOPPER missing: scraper_utils.py",
+    "finding": "Raw inbox write detected — no hopper_append | Fix: Replace json.dump to inbox with hopper_append()",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.336764"
+  },
+  {
+    "id": "AUDIT-BEZOS-session_logger-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: session_logger.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.371606"
+  },
+  {
+    "id": "AUDIT-BEZOS-ollama_utils-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ollama_utils.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.406510"
+  },
+  {
+    "id": "AUDIT-BEZOS-gemini_utils-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: gemini_utils.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.436277"
+  },
+  {
+    "id": "AUDIT-BEZOS-constraint_gates-20260404030406",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: constraint_gates.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:04:06.467264"
+  },
+  {
+    "id": "AUDIT-BEZOS-update_asset_usage-20260404030849",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: update_asset_usage.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:08:49.234109"
+  },
+  {
+    "id": "AUDIT-BEZOS-test_groq_debug-20260404030849",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: test_groq_debug.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:08:49.270885"
+  },
+  {
+    "id": "AUDIT-BEZOS-ai_gateway-20260404030849",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: ai_gateway.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:08:49.297383"
+  },
+  {
+    "id": "AUDIT-BEZOS-constraint_gates-20260404030849",
+    "source": "constraint_audit",
+    "type": "constraint_violation",
+    "urgency": "medium",
+    "title": "BEZOS missing: constraint_gates.py",
+    "finding": "API loop detected without circuit breaker | Fix: Import MAX_CONSECUTIVE_FAILURES pattern from constraint_gates docs",
+    "status": "pending",
+    "date": "2026-04-04T03:08:49.325350"
+  },
+  {
+    "id": "supervisor-cycle-202604040230",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-03 22:00",
-    "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-04 02:30",
+    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604032230",
+    "id": "supervisor-cycle-202604040300",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-03 22:30",
-    "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-04 03:00",
+    "finding": "0 tasks dispatched | 9 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604032300",
+    "id": "supervisor-cycle-202604040330",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-03 23:00",
-    "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
+    "title": "Supervisor Cycle — 2026-04-04 03:30",
+    "finding": "0 tasks dispatched | 10 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
     "status": "INFO"
   }

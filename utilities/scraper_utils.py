@@ -5,6 +5,10 @@ import urllib.request, urllib.parse, time, random, json, os
 from urllib.error import HTTPError, URLError
 from datetime import datetime
 
+import sys as _hoppersys
+_hoppersys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from constraint_gates import hopper_append as _hopper_append
+
 AGENTS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36',
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/119.0.0.0 Safari/537.36',

@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 import sys, json, urllib.request
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 cfg = json.load(open('G:/My Drive/Projects/_studio/studio-config.json', encoding='utf-8'))
@@ -9,6 +11,7 @@ req = urllib.request.Request('https://api.groq.com/openai/v1/models',
 data = json.loads(urllib.request.urlopen(req, timeout=15).read())
 groq_models = sorted([m['id'] for m in data.get('data', [])])
 print('=== GROQ MODELS ===')
+_consecutive_failures = 0
 for m in groq_models:
     print(f'  {m}')
 

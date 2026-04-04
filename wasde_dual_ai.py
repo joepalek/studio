@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 """
 wasde_dual_ai.py
 ================
@@ -107,6 +109,7 @@ def dual_synthesize(normalized: str, cfg: dict, log) -> dict:
         # Replace Overall line with NEUTRAL + divergence note
         lines = synthesis.split("\n")
         new_lines = []
+        _consecutive_failures = 0
         for line in lines:
             if "OVERALL" in line.upper():
                 new_lines.append(

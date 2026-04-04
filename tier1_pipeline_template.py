@@ -34,6 +34,10 @@ sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from ai_gateway import call as gw_call
 import provider_health as ph
 
+import sys as _hoppersys
+_hoppersys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from constraint_gates import hopper_append as _hopper_append
+
 # ══════════════════════════════════════════════════════════════════
 # CONFIG — FILL THIS IN PER POOL. TOUCH NOTHING ELSE.
 # ══════════════════════════════════════════════════════════════════

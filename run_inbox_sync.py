@@ -1,3 +1,5 @@
+
+# EXPECTED_RUNTIME_SECONDS: 300
 """Inbox Manager Daily Sync — runs all 7 passes."""
 import json, os, subprocess, sys, hashlib
 from datetime import datetime, timedelta
@@ -193,6 +195,10 @@ print(f'Pass 6: mobile-inbox.json regenerated - {len(final_inbox)} items ({len(n
 # ── Pass 7 ── Push to GitHub + update status.json ───────────────────
 sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
 from session_logger import update_status
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 subprocess.run(['git', '-C', 'G:/My Drive/Projects/_studio', 'add',
                 'mobile-inbox.json', 'inbox-ledger.json'], check=True)

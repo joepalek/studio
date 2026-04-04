@@ -4,6 +4,8 @@ Rebuilds ChromaDB vector store from studio files.
 Calls session-startup.py which runs the full reindex.
 Zero LLM cost — pure ChromaDB/Ollama.
 """
+
+# EXPECTED_RUNTIME_SECONDS: 300
 import sys, os, subprocess
 from datetime import datetime
 
@@ -35,6 +37,10 @@ log("VectorReindex complete — exit code " + str(result.returncode))
 
 # Write heartbeat
 import json
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 hb_path = STUDIO + "/heartbeat-log.json"
 try:
     hb = json.load(open(hb_path, encoding='utf-8')) if os.path.exists(hb_path) else {"entries": []}

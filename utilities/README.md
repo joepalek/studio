@@ -192,6 +192,81 @@ check_efficiency(
 
 ---
 
+---
+
+### `constraint_gates.py`
+Structural enforcement for all named studio constraints. Every named rule in CLAUDE.md
+is implemented here as a callable gate. Import and use instead of relying on behavioral
+compliance. All violations write to `error-log.json`.
+
+**Functions:**
+| Function | Rule | Description |
+|---|---|---|
+| `shannon_check(text, max_tokens, source_file)` | Shannon | Token-count handoff text. Truncates + logs if > 200t. Returns safe text. |
+| `hopper_validate(item, inbox_path)` | Hopper | Validates inbox item dict against schema. Raises on violation. |
+| `hopper_append(inbox_path, item)` | Hopper | Validated write to any *-inbox.json. Use instead of raw json.dump. |
+| `kay_validate(directive, agent_name)` | Kay | Checks supervisor directive for scripted patterns + required fields. Raises on violation. |
+| `codd_gate` | Codd | Decorator — nulls fields with confidence < 0.95. Apply to all extraction functions. |
+| `codd_check(field, value, confidence, ...)` | Codd | Inline version of codd_gate for single-field checks. |
+| `lovelace_start(baseline_ref, variant_description, success_criteria)` | Lovelace | Opens a variant test record. Blocks if no baseline_ref. Returns record dict. |
+| `lovelace_complete(record, outcome, decision)` | Lovelace | Closes record. decision: 'adopt'/'restore'/'iterate'. Logs adopted to decision-log.json. |
+| `hamilton_watchdog(task_name, expected_seconds)` | Hamilton | Decorator factory — kills task at expected_seconds * 1.5. Windows-compatible. |
+| `compounding_guard(operation_key, max_attempts)` | Compounding | Blocks retries after 3 attempts without new information. Escalates to supervisor inbox. |
+| `compounding_reset(operation_key)` | Compounding | Reset attempt counter after success. |
+| `log_violation(rule, detail)` | All | Direct violation logger. Used internally; available for custom gates. |
+
+**Standard import:**
+```python
+import sys
+sys.path.insert(0, 'G:/My Drive/Projects/_studio/utilities')
+from constraint_gates import (
+    shannon_check, hopper_append, kay_validate,
+    codd_gate, codd_check,
+    lovelace_start, lovelace_complete,
+    hamilton_watchdog, compounding_guard, compounding_reset
+)
+```
+
+**Quick examples:**
+```python
+# Shannon — before writing handoff
+from constraint_gates import shannon_check
+handoff = shannon_check(handoff_text)  # auto-truncates if bloated
+
+# Hopper — validated inbox write
+from constraint_gates import hopper_append
+hopper_append("G:/My Drive/Projects/_studio/supervisor-inbox.json", item_dict)
+
+# Kay — before sending directive to agent
+from constraint_gates import kay_validate
+kay_validate(directive_text, "vintage-agent")
+
+# Codd — extraction function decorator
+from constraint_gates import codd_gate
+@codd_gate
+def extract_listing(html): ...
+
+# Lovelace — variant test wrapper
+from constraint_gates import lovelace_start, lovelace_complete
+record = lovelace_start("git:abc1234", "Testing new model", "< 5% variance")
+# ... test runs ...
+lovelace_complete(record, outcome="3.2% variance", decision="adopt")
+
+# Hamilton — scheduled task TTL
+from constraint_gates import hamilton_watchdog
+@hamilton_watchdog("job-harvest-daily", expected_seconds=300)
+def run(): ...
+
+# Compounding Failure — retry guard
+from constraint_gates import compounding_guard, compounding_reset
+compounding_guard("my_operation")  # raises after 3rd attempt
+```
+
+**Violation log location:** `G:/My Drive/Projects/_studio/error-log.json`
+**Lovelace log:** `G:/My Drive/Projects/_studio/lovelace-log.json`
+
+---
+
 ## Adding a New Utility
 
 1. Create `utilities/your_utility.py` with a module docstring explaining the problem it solves

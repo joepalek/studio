@@ -17,6 +17,9 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
+
 STUDIO = "G:/My Drive/Projects/_studio"
 RESULTS_PATH = os.path.join(STUDIO, "context-test-results.json")
 CONFIG_PATH  = os.path.join(STUDIO, "studio-config.json")

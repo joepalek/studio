@@ -1222,3 +1222,84 @@
 [2026-04-03 23:00:04] Dispatched: 0 tasks
 [2026-04-03 23:00:04] Supervisor check complete
 [Fri 04/03/2026 23:00:04.66] Done 
+[Fri 04/03/2026 23:30:02.07] Supervisor check starting 
+[2026-04-03 23:30:02] Supervisor check starting
+[2026-04-03 23:30:04] Providers available (3): cerebras, mistral, ollama
+[2026-04-03 23:30:04] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-03 23:30:04] Work queue: 0 | Task queue: 0
+[2026-04-03 23:30:04] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, supervisor, vintage-agent
+[2026-04-03 23:30:04] Dispatched: 0 tasks
+[2026-04-03 23:30:04] Supervisor check complete
+[Fri 04/03/2026 23:30:04.78] Done 
+[Sat 04/04/2026  0:00:02.33] Supervisor check starting 
+[2026-04-04 00:00:03] Supervisor check starting
+[2026-04-04 00:00:05] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 00:00:05] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 00:00:05] Work queue: 0 | Task queue: 0
+[2026-04-04 00:00:05] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, supervisor, vintage-agent
+[2026-04-04 00:00:05] Dispatched: 0 tasks
+[2026-04-04 00:00:06] Supervisor check complete
+[Sat 04/04/2026  0:00:06.09] Done 
+[Sat 04/04/2026  0:30:02.33] Supervisor check starting 
+[2026-04-04 00:30:02] Supervisor check starting
+[2026-04-04 00:30:04] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 00:30:04] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 00:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 00:30:04] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, supervisor, vintage-agent
+[2026-04-04 00:30:04] Dispatched: 0 tasks
+[2026-04-04 00:30:05] Supervisor check complete
+[Sat 04/04/2026  0:30:05.16] Done 
+[Sat 04/04/2026  1:00:02.32] Supervisor check starting 
+[2026-04-04 01:00:02] Supervisor check starting
+[2026-04-04 01:00:05] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 01:00:05] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 01:00:05] Work queue: 0 | Task queue: 0
+[2026-04-04 01:00:05] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, supervisor, vintage-agent
+[2026-04-04 01:00:05] Dispatched: 0 tasks
+[2026-04-04 01:00:05] Supervisor check complete
+[Sat 04/04/2026  1:00:05.29] Done 
+[Sat 04/04/2026  1:30:02.14] Supervisor check starting 
+[2026-04-04 01:30:02] Supervisor check starting
+[2026-04-04 01:30:04] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 01:30:04] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 01:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 01:30:04] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, supervisor, vector-reindex, vintage-agent
+[2026-04-04 01:30:04] Dispatched: 0 tasks
+[2026-04-04 01:30:04] Supervisor check complete
+[Sat 04/04/2026  1:30:04.96] Done 
+[Sat 04/04/2026  2:00:02.08] Supervisor check starting 
+[2026-04-04 02:00:02] Supervisor check starting
+[2026-04-04 02:00:04] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 02:00:04] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 02:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 02:00:04] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, supervisor, vector-reindex, vintage-agent
+[2026-04-04 02:00:04] Dispatched: 0 tasks
+[2026-04-04 02:00:04] Supervisor check complete
+[Sat 04/04/2026  2:00:04.71] Done 
+[Sat 04/04/2026  2:30:02.08] Supervisor check starting 
+[2026-04-04 02:30:02] Supervisor check starting
+[2026-04-04 02:30:04] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 02:30:04] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 02:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 02:30:04] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, product-archaeology, supervisor, vector-reindex, vintage-agent
+[2026-04-04 02:30:04] Dispatched: 0 tasks
+[2026-04-04 02:30:04] Supervisor check complete
+[Sat 04/04/2026  2:30:04.62] Done 
+[Sat 04/04/2026  3:00:02.23] Supervisor check starting 
+[2026-04-04 03:00:02] Supervisor check starting
+[2026-04-04 03:00:05] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 03:00:05] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 03:00:05] Work queue: 0 | Task queue: 0
+[2026-04-04 03:00:05] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, git-commit, janitor, product-archaeology, supervisor, vector-reindex, vintage-agent
+[2026-04-04 03:00:05] Dispatched: 0 tasks
+[2026-04-04 03:00:05] Supervisor check complete
+[Sat 04/04/2026  3:00:05.21] Done 
+[Sat 04/04/2026  3:30:02.07] Supervisor check starting 
+[2026-04-04 03:30:02] Supervisor check starting
+[2026-04-04 03:30:04] Providers available (3): cerebras, mistral, ollama
+[2026-04-04 03:30:04] Degraded: groq/llama-3.3-70b-versatile (degraded)
+[2026-04-04 03:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 03:30:04] Active agents (25h): agency-build, agency-spec-grader, ai-intel-agent, auto-answer-gemini, git-commit, janitor, product-archaeology, supervisor, vector-reindex, vintage-agent
+[2026-04-04 03:30:04] Dispatched: 0 tasks
+[2026-04-04 03:30:04] Supervisor check complete
+[Sat 04/04/2026  3:30:04.56] Done 

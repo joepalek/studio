@@ -5,10 +5,16 @@ Scans graveyard sources, scores via AI Gateway (free tier routing).
 Does NOT push to whiteboard.json or mobile-inbox.json.
 Output: product-archaeology-results.json (raw) + product-archaeology-scored.json (scored)
 """
+
+# EXPECTED_RUNTIME_SECONDS: 600
 import urllib.request, urllib.parse, json, re, time, os, sys
 sys.path.insert(0, "G:/My Drive/Projects/_studio")
 from datetime import datetime
 from ai_gateway import score as gw_score
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 STUDIO  = "G:/My Drive/Projects/_studio"
 OUTPUT  = STUDIO + "/product-archaeology-results.json"
@@ -135,6 +141,7 @@ def score_items(results):
         time.sleep(1)
     return scored
 
+@hamilton_watchdog("product_archaeology_run", expected_seconds=600)
 def main():
     log("Product Archaeology starting")
 

@@ -7,10 +7,19 @@ Zero LLM cost — pure Python aggregation.
 Replaces: nightly-rollup.md Claude Code agent run
 """
 
+# EXPECTED_RUNTIME_SECONDS: 180
+
 import json
 import os
 import sys
 from datetime import datetime, timedelta
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
+
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
 
 STUDIO = "G:/My Drive/Projects/_studio"
 DIGEST_PATH    = os.path.join(STUDIO, "daily-digest.json")
@@ -279,6 +288,7 @@ def update_handoff(date_str, status, score):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+@hamilton_watchdog("nightly_rollup", expected_seconds=180)
 def main():
     log("Nightly rollup starting")
     now = datetime.now()

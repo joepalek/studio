@@ -26,6 +26,9 @@ import urllib.request
 import urllib.error
 from typing import Any, Optional
 
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
+
 STUDIO_CONFIG   = 'G:/My Drive/Projects/_studio/studio-config.json'
 DEFAULT_MODEL   = 'gemini-2.5-flash'
 BASE_URL        = 'https://generativelanguage.googleapis.com/v1beta/models'

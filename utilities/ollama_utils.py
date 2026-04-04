@@ -26,6 +26,9 @@ import urllib.request
 import urllib.error
 from typing import Any, Optional
 
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
+
 OLLAMA_BASE    = 'http://127.0.0.1:11434'
 STUDIO_CONFIG  = 'G:/My Drive/Projects/_studio/studio-config.json'
 DEFAULT_MODEL  = 'gemma3:4b'

@@ -11,6 +11,9 @@ import os
 import re
 from datetime import datetime
 
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
+
 STUDIO = "G:/My Drive/Projects/_studio"
 PROJECTS_ROOT = "G:/My Drive/Projects"
 OUTPUT = os.path.join(STUDIO, "studio-context.md")

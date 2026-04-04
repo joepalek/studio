@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 """
 rebuild_sidebar.py
 Single source of truth for sidebar-agent.html structure.
@@ -86,6 +88,7 @@ inbox = []
 for i in sup_items:
     if isinstance(i,dict) and i.get('status') not in RESOLVED and i.get('id') not in answered_ids:
         inbox.append(sanitize({'id':i.get('id','sup-'+str(len(inbox))),'title':i.get('title','')[:80],'finding':i.get('finding','')[:120],'urgency':i.get('urgency','INFO'),'date':i.get('date',''),'source':'supervisor','project':i.get('project','studio'),'options':[],'recommendation':''}))
+_consecutive_failures = 0
 for i in mob_items:
     if isinstance(i,dict) and i.get('status') not in RESOLVED and i.get('id') not in answered_ids:
         title = i.get('question',i.get('title',''))

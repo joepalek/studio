@@ -4,8 +4,17 @@ Converted from Claude call to Gemini Flash free tier.
 Checks which decade profiles are missing or incomplete, fills them via Gemini.
 Output: vintage/[decade]-profile.json for each decade 1920s-2010s
 """
+
+# EXPECTED_RUNTIME_SECONDS: 300
 import json, os, urllib.request, time
 from datetime import datetime
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
+
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
 
 STUDIO   = "G:/My Drive/Projects/_studio"
 VINT_DIR = STUDIO + "/vintage"
@@ -63,6 +72,7 @@ def build_profile(decade):
     text = text.replace("```json","").replace("```","").strip()
     return json.loads(text)
 
+@hamilton_watchdog("vintage_agent", expected_seconds=300)
 def main():
     log("Vintage Agent starting")
     os.makedirs(VINT_DIR, exist_ok=True)

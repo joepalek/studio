@@ -93,3 +93,11 @@
 2026-04-03 20:13:27,731 - INFO - Downloading LoRA civitai_12345...
 2026-04-03 20:13:27,737 - ERROR - LoRA civitai_12345 not found in inventory
 2026-04-03 20:13:27,737 - INFO - ============================================================
+2026-04-03 23:07:00,194 - INFO - ============================================================
+2026-04-03 23:07:00,198 - INFO - STUDIO AUTOMATION ENGINE - LORA-DOWNLOAD
+2026-04-03 23:07:00,199 - INFO - ============================================================
+2026-04-03 23:07:00,199 - INFO - Downloading LoRA civitai_782684...
+2026-04-03 23:07:00,217 - INFO -   Attempting to download from https://civitai.com/models/782684
+2026-04-03 23:07:00,263 - INFO - ✓ LoRA marked for download: G:\My Drive\Projects\_studio\ml_models\loras\historical_figures\Realistic_Horror_Flux_1.0.safetensors
+2026-04-03 23:07:00,265 - INFO -   (Actual download requires CivitAI API authentication)
+2026-04-03 23:07:00,265 - INFO - ============================================================

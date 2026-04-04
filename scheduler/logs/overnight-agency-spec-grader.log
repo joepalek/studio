@@ -1296,3 +1296,20 @@ spec-claude-20260403-046: Expecting property name enclosed in double quotes: lin
 [2026-04-03 13:07:27] Grades saved: 600 total
 [2026-04-03 13:07:27] passing-specs.json: 218 passing / 300 total
 [2026-04-03 13:07:27] === COMPLETE === graded=262 failed=0 passing=218 pass_rate=73% elapsed=2017s
+[Sat 04/04/2026  3:30:01.39] Spec Grader starting 
+Traceback (most recent call last):
+  File "G:\My Drive\Projects\_studio\agency\spec-queue\spec_auto_grader.py", line 214, in <module>
+    main()
+    ~~~~^^
+  File "G:\My Drive\Projects\_studio\agency\spec-queue\spec_auto_grader.py", line 140, in main
+    log = setup_log()
+  File "G:\My Drive\Projects\_studio\agency\spec-queue\spec_auto_grader.py", line 57, in setup_log
+    fh = logging.FileHandler(SCHED_LOG, encoding="utf-8")
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1219, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ~~~~~~~~~~^^
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1248, in _open
+    return open_func(self.baseFilename, self.mode,
+                     encoding=self.encoding, errors=self.errors)
+PermissionError: [Errno 13] Permission denied: 'G:\\My Drive\\Projects\\_studio\\scheduler\\logs\\overnight-agency-spec-grader.log'
+[Sat 04/04/2026  3:30:01.90] Done 

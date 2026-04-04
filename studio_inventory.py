@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 import json, os, sys
 from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -127,6 +129,7 @@ try:
     items = wb.get('items', [])
     agent_items = [i for i in items if i.get('gemini_score', {}).get('total_score', 0) >= 7]
     agent_items.sort(key=lambda x: x['gemini_score']['total_score'], reverse=True)
+    _consecutive_failures = 0
     for i in agent_items[:20]:
         score = i['gemini_score']['total_score']
         action = i['gemini_score'].get('recommended_action', '?')

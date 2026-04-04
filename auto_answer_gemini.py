@@ -5,8 +5,17 @@ Reads mobile-inbox.json, applies standing-rules.json, uses
 Gemini Flash for remaining items. Writes results back to inbox.
 """
 
+# EXPECTED_RUNTIME_SECONDS: 300
+
 import json, os, urllib.request, urllib.error
 from datetime import datetime
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
+
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
 
 STUDIO = "G:/My Drive/Projects/_studio"
 INBOX_PATH   = os.path.join(STUDIO, "mobile-inbox.json")
@@ -76,6 +85,7 @@ def write_heartbeat(status, notes):
     save_json(HB_PATH, data)
 
 
+@hamilton_watchdog("auto_answer_gemini", expected_seconds=300)
 def main():
     config = load_json(CONFIG_PATH, {})
     gemini_key = config.get("gemini_api_key", "")

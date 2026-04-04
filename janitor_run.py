@@ -5,8 +5,14 @@ Keeps studio clean: truncates oversized logs, removes stale temp files,
 reports dead/orphaned files, writes heartbeat.
 Zero LLM cost — pure Python.
 """
+
+# EXPECTED_RUNTIME_SECONDS: 300
 import os, sys, json, shutil
 from datetime import datetime, timedelta
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
@@ -209,6 +215,7 @@ def weekly_deep_review():
     return findings
 
 
+@hamilton_watchdog("janitor_run", expected_seconds=300)
 def main():
     log("Janitor starting")
     is_sunday = datetime.now().weekday() == 6

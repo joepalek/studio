@@ -1,5 +1,14 @@
 {
-  "downloads": [],
+  "downloads": [
+    {
+      "lora_id": "civitai_782684",
+      "lora_name": "Realistic Horror Flux 1.0",
+      "category": "historical_figures",
+      "downloaded_date": "2026-04-03T23:07:00.249720",
+      "local_path": "ml_models\\loras\\historical_figures\\Realistic_Horror_Flux_1.0.safetensors",
+      "reason": "On-demand download"
+    }
+  ],
   "usage": [],
   "feedback": []
 }

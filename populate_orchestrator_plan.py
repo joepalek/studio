@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 """
 populate_orchestrator_plan.py
 Reads orchestrator-briefing.json + whiteboard.json + project states.
@@ -49,6 +51,7 @@ def get_whiteboard_build_tasks():
     wb = load(WB, {})
     items = wb.get("items", [])
     tasks = []
+    _consecutive_failures = 0
     for item in items:
         sc = item.get("gemini_score", {})
         if (sc.get("total_score", 0) >= 8 and

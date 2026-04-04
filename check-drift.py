@@ -9,10 +9,16 @@ Usage:
     python check-drift.py
 """
 
+# EXPECTED_RUNTIME_SECONDS: 60
+
 import json
 import os
 import sys
 from datetime import datetime, timedelta
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 STUDIO_ROOT  = "G:/My Drive/Projects/_studio"
 PROJECTS_ROOT = "G:/My Drive/Projects"
@@ -120,6 +126,7 @@ def write_inbox(findings):
     save_json(INBOX_FILE, data)
 
 
+@hamilton_watchdog("check-drift", expected_seconds=60)
 def main():
     today_str = datetime.now().strftime("%Y-%m-%d")
     results   = []

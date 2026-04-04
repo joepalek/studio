@@ -1,0 +1,36 @@
+[Sat 04/04/2026  3:00:01.38] Spec Generator starting 
+Generating character specs batch...
+  Claude: 100 specs
+  Gemini: 100 specs
+  Agent: 100 specs
+
+======================================================================
+Batch generated: 300 total specs
+By universe:
+  band_members: 64 (21%)
+  inmates_vs_guards: 93 (31%)
+  original_fiction: 117 (39%)
+  other: 26 (9%)
+
+Saved to: G:\My Drive\Projects\_studio\agency\spec-queue\spec-batch-20260404_030001.json
+Queue file: G:\My Drive\Projects\_studio\agency\spec-queue\spec-queue-current.json
+======================================================================
+
+Sample specs (first 3):
+
+  Marcus Martinez (other)
+    Archetype: activist
+    Traits: independent, intelligent, paranoid
+    Voice: loud and confident
+
+  River Williams (other)
+    Archetype: athlete
+    Traits: thoughtful, resilient, suspicious
+    Voice: passionate and intense
+
+  River Anderson (original_fiction)
+    Archetype: sage
+    Traits: analytical, loyal, cautious
+    Voice: playful and irreverent
+
+[Sat 04/04/2026  3:00:01.62] Done 

@@ -137,6 +137,22 @@ def main():
     print(context)
     print(f"\n[session-startup: path={path_used}, {len(context)} chars / ~{len(context)//4} tokens]")
 
+    # Shannon gate — enforce handoff token limit on read
+    if os.path.exists(HANDOFF):
+        try:
+            sys.path.insert(0, os.path.join(STUDIO, "utilities"))
+            from constraint_gates import shannon_check
+            with open(HANDOFF, "r", encoding="utf-8") as f:
+                handoff_text = f.read()
+            safe_handoff = shannon_check(handoff_text, max_tokens=200, source_file="session-handoff.md")
+            if safe_handoff != handoff_text:
+                # Handoff was bloated — write the truncated version back
+                with open(HANDOFF, "w", encoding="utf-8") as f:
+                    f.write(safe_handoff)
+                log("SHANNON: session-handoff.md was over 200t — truncated on read", verbose=args.verbose)
+        except Exception as e:
+            log(f"Shannon gate skipped: {e}", verbose=args.verbose)
+
 
 if __name__ == "__main__":
     main()

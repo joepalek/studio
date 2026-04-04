@@ -4,8 +4,17 @@ Nightly git commit agent — replaces claude --dangerously-skip-permissions.
 Uses Gemini Flash for commit messages. Zero Claude quota.
 Also scans GitHub Trending and pushes relevant repos to whiteboard.
 """
+
+# EXPECTED_RUNTIME_SECONDS: 60
 import subprocess, json, urllib.request, urllib.parse, os, sys, re, time
 from datetime import datetime
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
+
+# Bezos Rule: circuit breaker constant
+MAX_CONSECUTIVE_FAILURES = 3
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 
@@ -131,6 +140,7 @@ def scan_github_trending():
         log("Whiteboard write error: " + str(e)[:60])
         return 0
 
+@hamilton_watchdog("git_commit", expected_seconds=60)
 def main():
     log("Git commit agent starting")
     results = {"committed": [], "clean": [], "error": []}

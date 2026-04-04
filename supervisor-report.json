@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-03T23:00:04.489149",
+  "time": "2026-04-04T03:30:04.431987",
   "ollama_up": true,
   "gemini_available": false,
   "providers_available": [
@@ -16,8 +16,12 @@
     "agency-build",
     "agency-spec-grader",
     "ai-intel-agent",
+    "auto-answer-gemini",
+    "git-commit",
     "janitor",
+    "product-archaeology",
     "supervisor",
+    "vector-reindex",
     "vintage-agent"
   ],
   "work_queue_depth": 0,

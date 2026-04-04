@@ -1,3 +1,5 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 import sys, json, os
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 STUDIO = 'G:/My Drive/Projects/_studio'
@@ -33,6 +35,7 @@ top3 = sorted(scored, key=lambda x: x.get('gemini_score',{}).get('total_score',0
 print()
 print('WHITEBOARD:')
 print('  Total: ' + str(len(items)) + ' | Scored: ' + str(len(scored)))
+_consecutive_failures = 0
 for i in top3:
     sc = i.get('gemini_score',{})
     print('  #' + str(sc.get('total_score','?')) + ' ' + i.get('title','')[:50] + ' — ' + sc.get('recommended_action','?'))

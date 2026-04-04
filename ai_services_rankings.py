@@ -1,3 +1,7 @@
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
+
+# EXPECTED_RUNTIME_SECONDS: 120
 # ai_services_rankings.py
 # Generates ai-services-rankings.json from model-registry.json (source of truth).
 # Falls back to static list if registry unavailable.
@@ -6,6 +10,10 @@
 
 import urllib.request, json, re, html, time
 from datetime import datetime, timezone
+
+import sys as _sys
+_sys.path.insert(0, "G:/My Drive/Projects/_studio/utilities")
+from constraint_gates import hamilton_watchdog
 
 STUDIO = "G:/My Drive/Projects/_studio"
 OUT_FILE = STUDIO + "/ai-services-rankings.json"
@@ -149,6 +157,7 @@ try:
         "&numericFilters=created_at_i>" + str(cutoff)
         + "&query=AI+model+release"
     ))
+    _consecutive_failures = 0
     for hit in hn.get("hits", []):
         title = hit.get("title", "").lower()
         for svc in ["midjourney","runway","sora","kling","elevenlabs","flux","ideogram",

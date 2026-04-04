@@ -1593,6 +1593,102 @@
         "python"
       ],
       "added_at": "2026-04-02T23:00:37.799253"
+    },
+    {
+      "id": "gh-onyx-dot-app-onyx",
+      "title": "GitHub Trending: onyx-dot-app/onyx",
+      "description": "Hunt down social media accounts by username across social networks",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328555"
+    },
+    {
+      "id": "gh-apps-github-merge-queue",
+      "title": "GitHub Trending: apps/github-merge-queue",
+      "description": "\u57fa\u4e8e\u591a\u667a\u80fd\u4f53LLM\u7684\u4e2d\u6587\u91d1\u878d\u4ea4\u6613\u6846\u67b6 - TradingAgents\u4e2d\u6587\u589e\u5f3a\u7248",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328578"
+    },
+    {
+      "id": "gh-hsliuping-TradingAgents-CN",
+      "title": "GitHub Trending: hsliuping/TradingAgents-CN",
+      "description": "Hindsight: Agent Memory That Learns",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328586"
+    },
+    {
+      "id": "gh-microsoft-apm",
+      "title": "GitHub Trending: microsoft/apm",
+      "description": "Use claude-code for free in the terminal, VSCode extension or via discord like openclaw",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328592"
+    },
+    {
+      "id": "gh-apps-copilot-swe-agent",
+      "title": "GitHub Trending: apps/copilot-swe-agent",
+      "description": "MLX-VLM is a package for inference and fine-tuning of Vision Language Models (VLMs) on your Mac using MLX.",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328596"
+    },
+    {
+      "id": "gh-apps-copilot-pull-request-reviewer",
+      "title": "GitHub Trending: apps/copilot-pull-request-reviewer",
+      "description": "PraisonAI \ud83e\udd9e - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans,",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328601"
+    },
+    {
+      "id": "gh-vectorize-io-hindsight",
+      "title": "GitHub Trending: vectorize-io/hindsight",
+      "description": "Local Deep Research achieves ~95% on SimpleQA benchmark (tested with GPT-4.1-mini). Supports local and cloud LLMs (Ollam",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328605"
+    },
+    {
+      "id": "gh-PostHog-posthog",
+      "title": "GitHub Trending: PostHog/posthog",
+      "description": "Easily fine-tune, evaluate and deploy gpt-oss, Qwen3, DeepSeek-R1, or any open source LLM / VLM!",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-03T23:00:27.328609"
     }
   ]
 }
