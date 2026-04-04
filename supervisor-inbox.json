@@ -40,31 +40,46 @@
     "date": "2026-04-03T11:08:07.132646"
   },
   {
-    "id": "supervisor-cycle-202604031400",
+    "id": "test-inbox-roundtrip-001",
+    "source": "supervisor",
+    "type": "decision",
+    "urgency": "INFO",
+    "title": "INBOX TEST — Does this message appear, get answered, and clear?",
+    "finding": "This is a test message to verify the full inbox round trip. Answer it in the sidebar, confirm it logs to inbox-log.jsonl, and confirm it disappears after rebuild.",
+    "options": [
+      "Yes it worked",
+      "Something is broken"
+    ],
+    "recommendation": "Answer via sidebar Submit button to test the full flow",
+    "status": "PENDING",
+    "date": "2026-04-03T22:45:00Z"
+  },
+  {
+    "id": "supervisor-cycle-202604032200",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-03 14:00",
+    "title": "Supervisor Cycle — 2026-04-03 22:00",
     "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604031430",
+    "id": "supervisor-cycle-202604032230",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-03 14:30",
+    "title": "Supervisor Cycle — 2026-04-03 22:30",
     "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
     "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604031500",
+    "id": "supervisor-cycle-202604032300",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-03 15:00",
+    "title": "Supervisor Cycle — 2026-04-03 23:00",
     "finding": "0 tasks dispatched | 6 agents active | Free tier: none | Ollama: UP | Gemini: DOWN",
     "dispatched": [],
     "status": "INFO"

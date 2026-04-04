@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Orchestrator Sidebar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #16213e 100%);
+            color: #00ff41;
+            padding: 8px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        
+        .section {
+            background: rgba(0, 255, 65, 0.08);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 4px;
+            padding: 8px;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+            color: #00ff41;
+            font-weight: bold;
+            font-size: 11px;
+        }
+        
+        .section-header .status {
+            font-size: 9px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .status-active {
+            background: rgba(0, 255, 65, 0.3);
+            color: #00ff41;
+        }
+        
+        .status-blocked {
+            background: rgba(255, 68, 68, 0.3);
+            color: #ff4444;
+        }
+        
+        .status-complete {
+            background: rgba(100, 200, 255, 0.3);
+            color: #64c8ff;
+        }
+        
+        .project-item {
+            border-left: 3px solid;
+            padding: 6px;
+            margin-bottom: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .project-item:hover {
+            background: rgba(0, 255, 65, 0.1);
+            transform: translateX(2px);
+        }
+        
+        .project-item.active {
+            border-left-color: #00ff41;
+        }
+        
+        .project-item.blocked {
+            border-left-color: #ff4444;
+        }
+        
+        .project-item.complete {
+            border-left-color: #64c8ff;
+        }
+        
+        .project-name {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: bold;
+            color: #00ff41;
+        }
+        
+        .project-icon {
+            font-size: 12px;
+        }
+        
+        .project-meta {
+            font-size: 9px;
+            color: #888;
+            margin-top: 2px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .project-milestone {
+            font-size: 9px;
+            color: #aaa;
+            margin-top: 3px;
+            padding: 2px 4px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 2px;
+            max-height: 40px;
+            overflow: hidden;
+        }
+        
+        .escalation-item {
+            border-left: 3px solid #ff4444;
+            padding: 6px;
+            margin-bottom: 4px;
+            background: rgba(255, 68, 68, 0.1);
+            border-radius: 2px;
+        }
+        
+        .escalation-type {
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+        
+        .escalation-desc {
+            color: #ff8888;
+            font-size: 9px;
+            margin-top: 2px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            margin-top: 4px;
+        }
+        
+        .stat-item {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 4px;
+            border-radius: 2px;
+            text-align: center;
+        }
+        
+        .stat-label {
+            color: #888;
+            font-size: 8px;
+            text-transform: uppercase;
+        }
+        
+        .stat-value {
+            color: #00ff41;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 2px;
+        }
+        
+        .loading {
+            color: #888;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .timestamp {
+            text-align: right;
+            font-size: 8px;
+            color: #555;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0, 255, 65, 0.1);
+        }
+        
+        .blink {
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0.5; }
+        }
+        
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 65, 0.3);
+            border-radius: 3px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 255, 65, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- DAILY STATS -->
+        <div class="section">
+            <div class="section-header">
+                <span>📊 TODAY</span>
+                <span class="status" id="last-update">loading...</span>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Active</div>
+                    <div class="stat-value" id="stat-active">—</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Blocked</div>
+                    <div class="stat-value" id="stat-blocked" style="color: #ff4444;">—</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Assets</div>
+                    <div class="stat-value" id="stat-assets">—</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Cost</div>
+                    <div class="stat-value" id="stat-cost">—</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ACTIVE ESCALATIONS -->
+        <div class="section" id="escalation-section" style="display: none;">
+            <div class="section-header">
+                <span>⛔ ESCALATIONS</span>
+                <span class="status" id="escalation-count">0</span>
+            </div>
+            <div id="escalation-list"></div>
+        </div>
+        
+        <!-- PROJECTS -->
+        <div class="section">
+            <div class="section-header">
+                <span>🟢 PROJECTS</span>
+                <span class="status" id="project-count">loading...</span>
+            </div>
+            <div id="project-list" class="loading">Loading projects...</div>
+        </div>
+        
+        <!-- MILESTONES DUE THIS WEEK -->
+        <div class="section">
+            <div class="section-header">
+                <span>📅 DUE THIS WEEK</span>
+                <span class="status" id="milestone-count">—</span>
+            </div>
+            <div id="milestone-list"></div>
+        </div>
+        
+        <div class="timestamp" id="timestamp"></div>
+    </div>
+    
+    <script>
+        const API_BASE = "http://127.0.0.1:11436";
+        const UPDATE_INTERVAL = 60000;  // 1 minute
+        
+        async function updateDashboard() {
+            try {
+                // Fetch all data
+                const [stats, projects, escalations, milestones] = await Promise.all([
+                    fetch(`${API_BASE}/api/stats/daily`).then(r => r.json()),
+                    fetch(`${API_BASE}/api/projects/status`).then(r => r.json()),
+                    fetch(`${API_BASE}/api/escalations/active`).then(r => r.json()),
+                    fetch(`${API_BASE}/api/milestones/due-week`).then(r => r.json())
+                ]);
+                
+                // Update stats
+                document.getElementById("stat-active").textContent = stats.projects_active;
+                document.getElementById("stat-blocked").textContent = stats.projects_blocked;
+                document.getElementById("stat-assets").textContent = stats.assets_produced_today;
+                document.getElementById("stat-cost").textContent = `$${stats.cost_today_usd.toFixed(2)}`;
+                
+                // Update projects
+                const activeProjects = projects.filter(p => p.status === "active").sort((a, b) => a.priority - b.priority);
+                document.getElementById("project-count").textContent = `${activeProjects.length} active`;
+                
+                const projectList = document.getElementById("project-list");
+                if (activeProjects.length === 0) {
+                    projectList.innerHTML = '<div class="loading">No active projects</div>';
+                } else {
+                    projectList.innerHTML = activeProjects
+                        .slice(0, 12)
+                        .map(p => `
+                            <div class="project-item ${p.status}">
+                                <div class="project-name">
+                                    <span class="project-icon">${p.status === 'blocked' ? '🔴' : '🟢'}</span>
+                                    <span>${p.name}</span>
+                                </div>
+                                <div class="project-meta">
+                                    <span>${p.division}</span>
+                                    <span>P${p.priority}</span>
+                                </div>
+                            </div>
+                        `).join("");
+                }
+                
+                // Update escalations
+                const escalationSection = document.getElementById("escalation-section");
+                if (escalations.length > 0) {
+                    escalationSection.style.display = "block";
+                    document.getElementById("escalation-count").textContent = escalations.length;
+                    document.getElementById("escalation-count").classList.add("blink");
+                    
+                    document.getElementById("escalation-list").innerHTML = escalations
+                        .slice(0, 5)
+                        .map(e => `
+                            <div class="escalation-item">
+                                <div class="escalation-type">${e.escalation_type}</div>
+                                <div class="escalation-desc">${e.description.substring(0, 60)}${e.description.length > 60 ? '…' : ''}</div>
+                            </div>
+                        `).join("");
+                } else {
+                    escalationSection.style.display = "none";
+                }
+                
+                // Update milestones
+                document.getElementById("milestone-count").textContent = milestones.length;
+                document.getElementById("milestone-list").innerHTML = milestones.length === 0
+                    ? '<div class="loading">None due this week</div>'
+                    : milestones.slice(0, 8)
+                        .map(m => `
+                            <div class="project-item active">
+                                <div class="project-name">
+                                    <span class="project-icon">📌</span>
+                                    <span>${m.project}</span>
+                                </div>
+                                <div class="project-milestone">${m.milestone}</div>
+                                <div class="project-meta">
+                                    <span>${m.due_date}</span>
+                                    <span>${m.agent}</span>
+                                </div>
+                            </div>
+                        `).join("");
+                
+                // Update timestamp
+                const now = new Date();
+                document.getElementById("timestamp").textContent = now.toLocaleTimeString();
+                document.getElementById("last-update").textContent = "live";
+                
+            } catch (error) {
+                console.error("Update error:", error);
+                document.getElementById("last-update").textContent = "error";
+            }
+        }
+        
+        // Initial load
+        updateDashboard();
+        
+        // Periodic updates
+        setInterval(updateDashboard, UPDATE_INTERVAL);
+        
+        // Hot reload on focus
+        window.addEventListener("focus", updateDashboard);
+    </script>
+</body>
+</html>

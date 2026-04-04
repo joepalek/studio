@@ -65,15 +65,29 @@ rq_data    = load_json('data/review-queue.json', {'entries': []})
 rq_entries = rq_data.get('entries', [])
 
 RESOLVED = ('resolved','RESOLVED','auto-resolved','build','done','DONE','answered','ANSWERED')
+
+# Load answered IDs from inbox-log.jsonl — written by bridge on every Submit
+answered_ids = set()
+try:
+    with open(STUDIO + '/inbox-log.jsonl', encoding='utf-8') as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line:
+                _entry = json.loads(_line)
+                if _entry.get('id'):
+                    answered_ids.add(_entry['id'])
+except Exception:
+    pass
+
 sup_items = sup.get('items', sup) if isinstance(sup, dict) else sup
 mob_items = mob if isinstance(mob, list) else mob.get('items', [])
 
 inbox = []
 for i in sup_items:
-    if isinstance(i,dict) and i.get('status') not in RESOLVED:
+    if isinstance(i,dict) and i.get('status') not in RESOLVED and i.get('id') not in answered_ids:
         inbox.append(sanitize({'id':i.get('id','sup-'+str(len(inbox))),'title':i.get('title','')[:80],'finding':i.get('finding','')[:120],'urgency':i.get('urgency','INFO'),'date':i.get('date',''),'source':'supervisor','project':i.get('project','studio'),'options':[],'recommendation':''}))
 for i in mob_items:
-    if isinstance(i,dict) and i.get('status') not in RESOLVED:
+    if isinstance(i,dict) and i.get('status') not in RESOLVED and i.get('id') not in answered_ids:
         title = i.get('question',i.get('title',''))
         if 'WHITEBOARD' in title or i.get('id','').startswith('wb-'): continue
         inbox.append(sanitize({'id':i.get('id','mob-'+str(len(inbox))),'title':title[:80],'finding':i.get('context',i.get('description',''))[:120],'urgency':'WARN' if i.get('priority')=='high' else 'INFO','date':i.get('created_at',i.get('date','')),'source':'mobile','project':i.get('project',''),'options':i.get('options',[])[:4],'recommendation':i.get('recommendation','')[:100]}))

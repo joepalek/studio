@@ -1,0 +1,95 @@
+2026-04-03 19:59:38,954 - INFO - ============================================================
+2026-04-03 19:59:38,959 - INFO - STUDIO AUTOMATION ENGINE - FULL
+2026-04-03 19:59:38,959 - INFO - ============================================================
+2026-04-03 19:59:38,960 - INFO - ============================================================
+2026-04-03 19:59:38,960 - INFO - STUDIO AUTOMATION ENGINE - FULL CYCLE
+2026-04-03 19:59:38,960 - INFO - ============================================================
+2026-04-03 19:59:38,961 - INFO - 
+[1/4] Art Department Output Scan
+2026-04-03 19:59:38,961 - INFO - Scanning Art Department outputs...
+2026-04-03 19:59:38,997 - INFO - 
+[2/4] LoRA Discovery from CivitAI
+2026-04-03 19:59:38,997 - INFO - Discovering LoRAs from CivitAI...
+2026-04-03 19:59:38,997 - INFO -   Discovering historical_figures...
+2026-04-03 19:59:39,491 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=historical+portrait+photorealistic&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:39,876 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=classical+painting+style&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:40,286 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=period+costume+historical&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:40,805 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=victorian+era+portrait&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:41,187 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=renaissance+portrait&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:41,189 - INFO -   Discovering football_sports...
+2026-04-03 19:59:41,562 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=football+player+photorealistic&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:41,949 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=athlete+action+pose&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:42,330 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=sports+photorealistic&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:42,750 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=football+uniform&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:43,133 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=athlete+portrait&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:43,134 - INFO -   Discovering regular_human...
+2026-04-03 19:59:43,497 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=human+portrait+photorealistic&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:43,896 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=realistic+human+everyday&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:44,285 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=modern+portrait+photorealistic&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:44,660 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=diverse+human+portrait&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:45,034 - ERROR - CivitAI API error: 400 Client Error: Bad Request for url: https://civitai.com/api/v1/models?query=casual+human+portrait&types=LORA&sort=Trending&period=AllTime&limit=20
+2026-04-03 19:59:45,037 - INFO - 
+[3/4] Generate Weekly Intelligence Brief
+2026-04-03 19:59:45,038 - INFO - Generating weekly intelligence brief...
+2026-04-03 19:59:45,090 - INFO - 
+============================================================
+2026-04-03 19:59:45,093 - INFO - ============================================================
+2026-04-03 19:59:45,093 - INFO - ============================================================
+2026-04-03 20:01:21,690 - INFO - ============================================================
+2026-04-03 20:01:21,695 - INFO - STUDIO AUTOMATION ENGINE - FULL
+2026-04-03 20:01:21,695 - INFO - ============================================================
+2026-04-03 20:01:21,695 - INFO - ============================================================
+2026-04-03 20:01:21,696 - INFO - STUDIO AUTOMATION ENGINE - FULL CYCLE
+2026-04-03 20:01:21,696 - INFO - ============================================================
+2026-04-03 20:01:21,697 - INFO - 
+[1/4] Art Department Output Scan
+2026-04-03 20:01:21,697 - INFO - Scanning Art Department outputs...
+2026-04-03 20:01:21,742 - INFO - 
+[2/4] LoRA Discovery from CivitAI
+2026-04-03 20:01:21,742 - INFO - Discovering LoRAs from CivitAI...
+2026-04-03 20:01:21,743 - INFO -   Discovering historical_figures...
+2026-04-03 20:01:26,148 - INFO -   Discovering football_sports...
+2026-04-03 20:01:30,612 - INFO -   Discovering regular_human...
+2026-04-03 20:01:34,366 - INFO - Ingesting 252 discovered LoRAs...
+2026-04-03 20:01:34,394 - INFO - ✓ LoRA inventory updated. Total: 252
+2026-04-03 20:01:34,394 - INFO - 
+[3/4] Generate Weekly Intelligence Brief
+2026-04-03 20:01:34,395 - INFO - Generating weekly intelligence brief...
+2026-04-03 20:01:34,420 - INFO - ✓ Weekly brief generated: G:\My Drive\Projects\_studio\agency\output_library_weekly_brief.json
+2026-04-03 20:01:34,421 - INFO - 
+============================================================
+2026-04-03 20:01:34,421 - INFO - ✓ FULL CYCLE COMPLETE
+2026-04-03 20:01:34,422 - INFO - ============================================================
+2026-04-03 20:01:34,422 - INFO - ============================================================
+2026-04-03 20:12:05,111 - INFO - ============================================================
+2026-04-03 20:12:05,115 - INFO - STUDIO AUTOMATION ENGINE - FULL
+2026-04-03 20:12:05,115 - INFO - ============================================================
+2026-04-03 20:12:05,115 - INFO - ============================================================
+2026-04-03 20:12:05,116 - INFO - STUDIO AUTOMATION ENGINE - FULL CYCLE
+2026-04-03 20:12:05,117 - INFO - ============================================================
+2026-04-03 20:12:05,117 - INFO - 
+[1/4] Art Department Output Scan
+2026-04-03 20:12:05,117 - INFO - Scanning Art Department outputs...
+2026-04-03 20:12:05,170 - INFO - 
+[2/4] LoRA Discovery from CivitAI
+2026-04-03 20:12:05,170 - INFO - Discovering LoRAs from CivitAI...
+2026-04-03 20:12:05,171 - INFO -   Discovering historical_figures...
+2026-04-03 20:12:09,161 - INFO -   Discovering football_sports...
+2026-04-03 20:12:12,116 - INFO -   Discovering regular_human...
+2026-04-03 20:12:15,564 - INFO - Ingesting 252 discovered LoRAs...
+2026-04-03 20:12:15,597 - INFO - ✓ LoRA inventory updated. Total: 252
+2026-04-03 20:12:15,597 - INFO - 
+[3/4] Generate Weekly Intelligence Brief
+2026-04-03 20:12:15,598 - INFO - Generating weekly intelligence brief...
+2026-04-03 20:12:15,618 - INFO - ✓ Weekly brief generated: G:\My Drive\Projects\_studio\agency\output_library_weekly_brief.json
+2026-04-03 20:12:15,618 - INFO - 
+============================================================
+2026-04-03 20:12:15,619 - INFO - ✓ FULL CYCLE COMPLETE
+2026-04-03 20:12:15,619 - INFO - ============================================================
+2026-04-03 20:12:15,619 - INFO - ============================================================
+2026-04-03 20:13:27,727 - INFO - ============================================================
+2026-04-03 20:13:27,730 - INFO - STUDIO AUTOMATION ENGINE - LORA-DOWNLOAD
+2026-04-03 20:13:27,731 - INFO - ============================================================
+2026-04-03 20:13:27,731 - INFO - Downloading LoRA civitai_12345...
+2026-04-03 20:13:27,737 - ERROR - LoRA civitai_12345 not found in inventory
+2026-04-03 20:13:27,737 - INFO - ============================================================
