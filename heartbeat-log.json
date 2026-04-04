@@ -29,6 +29,12 @@
       "agent": "supervisor",
       "status": "clean",
       "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04 10:41",
+      "agent": "--list",
+      "status": "flagged",
+      "notes": "unknown agent name \u2014 dispatch failed"
     }
   ]
 }

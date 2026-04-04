@@ -150,14 +150,17 @@ def _call_gemini(cfg, model, prompt, max_tokens):
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/"
            f"{model}:generateContent?key={key}")
     gen_cfg = {"maxOutputTokens": max_tokens}
-    # NOTE: response_mime_type="application/json" disabled — Gemini streams chunks
-    # that urllib reads partially, causing truncated JSON. Plain text + markdown
-    # stripping is more reliable across all models.
+    # gemini-2.5-flash enters thinking mode and returns empty parts without this
+    if "2.5" in model:
+        gen_cfg["thinkingConfig"] = {"thinkingBudget": 0}
     r = _post(url, {"Content-Type": "application/json"}, {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": gen_cfg
     })
-    return r["candidates"][0]["content"]["parts"][0]["text"].strip()
+    parts = r["candidates"][0]["content"].get("parts", [])
+    if not parts:
+        raise ValueError(f"Gemini {model} returned empty parts (thinking mode leak?)")
+    return parts[0]["text"].strip()
 
 
 def _call_groq(cfg, model, prompt, max_tokens):

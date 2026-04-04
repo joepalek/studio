@@ -148,28 +148,59 @@ def main():
     print(f"[constraint_audit] Scanned {report['scanned']} files | "
           f"{len(report['violations'])} violations found")
 
-    for v in report["violations"]:
-        print(f"  [{v['rule']}] {Path(v['file']).name}: {v['issue']}")
-        try:
-            hopper_append(
-                str(STUDIO_ROOT / "supervisor-inbox.json"),
-                {
-                    "id": (f"AUDIT-{v['rule']}-{Path(v['file']).stem}-"
-                           f"{datetime.now().strftime('%Y%m%d%H%M%S')}"),
-                    "source": "constraint_audit",
-                    "type": "constraint_violation",
-                    "urgency": "medium",
-                    "title": f"{v['rule']} missing: {Path(v['file']).name}",
-                    "finding": f"{v['issue']} | Fix: {v['fix']}",
-                    "status": "pending",
-                    "date": datetime.now().isoformat()
-                }
-            )
-        except Exception as e:
-            print(f"  WARNING: inbox write failed: {e}")
+    # Load existing inbox — resolve stale audit items before adding new ones
+    inbox_path = STUDIO_ROOT / "supervisor-inbox.json"
+    try:
+        existing = json.loads(inbox_path.read_text(encoding="utf-8"))
+    except Exception:
+        existing = []
 
+    # Mark old audit items as resolved (don't delete — keep audit trail)
+    audit_prefixes = ("AUDIT-BEZOS-", "AUDIT-HOPPER-", "AUDIT-CODD-",
+                      "AUDIT-TURING-", "AUDIT-HAMILTON-")
+    for item in existing:
+        if (any(item.get("id", "").startswith(p) for p in audit_prefixes)
+                and item.get("status") == "pending"):
+            item["status"] = "resolved"
+            item["resolved_at"] = datetime.now().isoformat()
+            item["resolution"] = "constraint_audit_pass"
+
+    # Only push NEW violations not already in inbox
+    existing_ids = {i.get("id") for i in existing}
+    new_violations = 0
+    for v in report["violations"]:
+        vid = (f"AUDIT-{v['rule']}-{Path(v['file']).stem}-"
+               f"{datetime.now().strftime('%Y%m%d%H%M%S')}")
+        print(f"  [{v['rule']}] {Path(v['file']).name}: {v['issue']}")
+        if vid not in existing_ids:
+            try:
+                hopper_append(
+                    str(inbox_path),
+                    {
+                        "id": vid,
+                        "source": "constraint_audit",
+                        "type": "constraint_violation",
+                        "urgency": "medium",
+                        "title": f"{v['rule']} missing: {Path(v['file']).name}",
+                        "finding": f"{v['issue']} | Fix: {v['fix']}",
+                        "status": "pending",
+                        "date": datetime.now().isoformat()
+                    }
+                )
+                new_violations += 1
+            except Exception as e:
+                print(f"  WARNING: inbox write failed: {e}")
+
+    # Write back with resolved items updated
     if not report["violations"]:
-        print("[constraint_audit] All scanned files: COMPLIANT")
+        # Audit clean — write resolved items back
+        inbox_path.write_text(
+            json.dumps(existing, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
+        print("[constraint_audit] All scanned files: COMPLIANT — stale violations resolved")
+    else:
+        print(f"[constraint_audit] {new_violations} new violations pushed to inbox")
 
     try:
         with open(STUDIO_ROOT / "claude-status.txt", "a", encoding="utf-8") as f:

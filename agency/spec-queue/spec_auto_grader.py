@@ -46,7 +46,8 @@ Voice: {voice}
 Backstory: {backstory}
 Age: {age}
 
-Return only valid JSON with keys: grade (int 1-10), pass (bool true if grade>=8), distinctiveness (int 1-10), commercial_appeal (int 1-10), narrative_potential (int 1-10), reason (string under 100 chars). No markdown."""
+Return ONLY this exact JSON and nothing else. Keep reason under 60 chars:
+{{"grade":8,"pass":true,"distinctiveness":8,"commercial_appeal":7,"narrative_potential":8,"reason":"brief reason here"}}
 
 
 def setup_log():
@@ -96,12 +97,12 @@ def grade_spec(spec, log):
         archetype=spec.get("archetype",""), traits=", ".join(spec.get("personality_traits",[])),
         voice=spec.get("voice",""), backstory=spec.get("backstory",""), age=spec.get("age","")
     )
-    # Provider priority: Cerebras (fast, generous rate limits) → Mistral → Groq
-    # Gemini excluded — SSE streaming causes partial JSON reads via urllib
-    for provider, model in [("cerebras", "llama3.1-8b"),
-                             ("mistral",  "mistral-small-latest"),
-                             ("groq",     "llama-3.3-70b-versatile")]:
-        resp = gw_call(prompt, task_type="scoring", max_tokens=500,
+    # Provider priority: Gemini → Groq → Cerebras → Mistral (mistral wraps in fences)
+    for provider, model in [("gemini",   "gemini-2.5-flash"),
+                             ("groq",     "llama-3.3-70b-versatile"),
+                             ("cerebras", "llama3.1-8b"),
+                             ("mistral",  "mistral-small-latest")]:
+        resp = gw_call(prompt, task_type="scoring", max_tokens=200,
                        force_provider=provider, force_model=model)
         if not resp.success:
             if "429" in str(resp.error):
@@ -116,6 +117,15 @@ def grade_spec(spec, log):
             text = text[brace:]
         if "```" in text:
             text = text.split("```")[0].strip()
+        # Repair common truncation: close any open string/object
+        if text and not text.rstrip().endswith("}"):
+            # Strip trailing partial field and close the object
+            text = text.rstrip().rstrip(",").rstrip()
+            # Remove any dangling open string field
+            import re as _re
+            text = _re.sub(r',?\s*"[^"]*":\s*"[^"]*$', "", text)
+            text = _re.sub(r',?\s*"[^"]*":\s*$', "", text)
+            text = text.rstrip(",").rstrip() + "}"
         try:
             result = json.loads(text)
             result["pass"] = result.get("grade", 0) >= PASS_THRESHOLD
