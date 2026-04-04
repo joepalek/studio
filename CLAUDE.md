@@ -341,6 +341,38 @@ Does NOT apply to: internal state writes, log entries, config files.
 
 ---
 
+## BABBAGE RULE [ENFORCED]
+
+**Behavioral intent:** Extracted data must be schema-validated before downstream use.
+Prevents garbage-in-garbage-out at read-time. Complements Hopper (write-time).
+Named after Charles Babbage: garbage in = garbage out, always.
+**Structural enforcement:** Any function that consumes extracted pipeline data for
+decisions, scoring, or output generation MUST call babbage_validate() on the input
+before proceeding. Functions decorated with @babbage_guard block automatically.
+
+Schemas defined in: utilities/babbage_gate.py — SCHEMAS dict.
+Current schemas: inbox_item, legal_assessment, job_listing, extraction_result,
+whiteboard_item, game_candidate, source_registry_entry.
+
+Implementation:
+    from utilities.babbage_gate import babbage_validate, babbage_guard, babbage_load
+
+    # Inline check before decision function
+    result = babbage_validate(data, "legal_assessment", agent="scorer")
+    if not result["valid"]: return None
+
+    # Decorator — auto-blocks on schema failure
+    @babbage_guard("legal_assessment")
+    def score_assessment(assessment: dict): ...
+
+    # File loader with built-in validation
+    data = babbage_load("legal_results.json", schema_name="legal_assessment")
+
+Add new schemas to SCHEMAS dict whenever a new data type enters the pipeline.
+Run babbage_report() periodically to audit schema compliance across all data files.
+
+---
+
 ## VECTOR CONTEXT RULE
 
 On session start run:
@@ -569,6 +601,8 @@ Applied to: product_archaeology_run.py, whiteboard_score.py — extend to all fu
 | Bezos | ENFORCED | Circuit breaker in all API loop scripts | Abort after 3 consecutive failures |
 | Compounding Failure | ENFORCED | 3-attempt cap without new information | Block + escalate |
 | Turing | ENFORCED | turing_check on all assessment/extraction outputs | Flag + log, warn agent |
+| Babbage | ENFORCED | babbage_validate on all data reads before downstream use | Block function + log |
 
 All violations write to: G:/My Drive/Projects/_studio/error-log.json
-SRE-scout audits constraint compliance weekly.
+All violations stamped with constraint_version from utilities/constraint_version.py
+SRE-scout audits constraint compliance weekly (Monday 07:00).

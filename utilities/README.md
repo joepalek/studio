@@ -367,6 +367,54 @@ delta = get_quality_delta_by_version()
 
 ---
 
+### `babbage_gate.py`
+Babbage Rule enforcement — schema validation at read-time before downstream use.
+Complements Hopper (write-time) and Codd (confidence-gating).
+Prevents garbage-in-garbage-out at every pipeline decision point.
+
+**Built-in schemas:** inbox_item, legal_assessment, job_listing, extraction_result,
+whiteboard_item, game_candidate, source_registry_entry
+
+**Functions:**
+| Function | Description |
+|---|---|
+| `babbage_validate(data, schema_name, agent, raise_on_fail)` | Validate dict or list against named schema. Returns compliance dict. |
+| `babbage_guard(schema_name, arg_index, raise_on_fail)` | Decorator — auto-validates specified argument, blocks on failure. |
+| `babbage_load(path, schema_name, agent, strict)` | Load JSON file and validate before returning. Drop-in for json.load(). |
+| `babbage_report(paths_and_schemas)` | Batch audit across multiple data files. Returns compliance summary. |
+
+**Import:**
+```python
+from babbage_gate import babbage_validate, babbage_guard, babbage_load, babbage_report
+```
+
+**Quick examples:**
+```python
+# Inline validation
+result = babbage_validate(data, "legal_assessment", agent="scorer")
+if not result["valid"]:
+    print(result["violations"])
+    return None
+
+# Decorator — blocks function if input fails schema
+@babbage_guard("legal_assessment")
+def score_assessment(assessment: dict) -> float: ...
+
+# File loader with validation
+data = babbage_load("legal_results.json", schema_name="legal_assessment")
+
+# Batch audit
+report = babbage_report([
+    ("game_archaeology_legal_results.json", "legal_assessment"),
+    ("supervisor-inbox.json",               "inbox_item"),
+])
+print(f"Compliance: {report['compliance_pct']}%")
+```
+
+**Add new schemas** in the `SCHEMAS` dict in `babbage_gate.py`.
+
+---
+
 ## Adding a New Utility
 
 1. Create `utilities/your_utility.py` with a module docstring explaining the problem it solves

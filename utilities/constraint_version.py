@@ -32,18 +32,19 @@ STATUS_FILE   = STUDIO_ROOT / "claude-status.txt"
 # ─────────────────────────────────────────────────────────────────
 
 CONSTRAINT_REGISTRY = {
-    "version": "1.2.0",
+    "version": "1.3.0",
     "released": "2026-04-04",
     "constraints": {
-        "shannon":    {"mode": "enforced", "threshold": 200,   "unit": "tokens",  "gate": "shannon_check"},
-        "hamilton":   {"mode": "enforced", "threshold": 1.5,   "unit": "ttl_multiplier", "gate": "hamilton_watchdog"},
-        "hopper":     {"mode": "enforced", "threshold": None,  "unit": "schema",  "gate": "hopper_validate"},
-        "kay":        {"mode": "enforced", "threshold": None,  "unit": "pattern", "gate": "kay_validate"},
-        "codd":       {"mode": "enforced", "threshold": 0.95,  "unit": "confidence", "gate": "codd_gate"},
-        "lovelace":   {"mode": "enforced", "threshold": None,  "unit": "baseline_ref", "gate": "lovelace_start"},
+        "shannon":    {"mode": "enforced", "threshold": 200,   "unit": "tokens",               "gate": "shannon_check"},
+        "hamilton":   {"mode": "enforced", "threshold": 1.5,   "unit": "ttl_multiplier",        "gate": "hamilton_watchdog"},
+        "hopper":     {"mode": "enforced", "threshold": None,  "unit": "schema",               "gate": "hopper_validate"},
+        "kay":        {"mode": "enforced", "threshold": None,  "unit": "pattern",              "gate": "kay_validate"},
+        "codd":       {"mode": "enforced", "threshold": 0.95,  "unit": "confidence",           "gate": "codd_gate"},
+        "lovelace":   {"mode": "enforced", "threshold": None,  "unit": "baseline_ref",         "gate": "lovelace_start"},
         "bezos":      {"mode": "enforced", "threshold": 3,     "unit": "consecutive_failures", "gate": "circuit_breaker"},
-        "compounding":{"mode": "enforced", "threshold": 3,     "unit": "attempts", "gate": "compounding_guard"},
-        "turing":     {"mode": "enforced", "threshold": 1,     "unit": "min_citations", "gate": "turing_check"},
+        "compounding":{"mode": "enforced", "threshold": 3,     "unit": "attempts",             "gate": "compounding_guard"},
+        "turing":     {"mode": "enforced", "threshold": 1,     "unit": "min_citations",        "gate": "turing_check"},
+        "babbage":    {"mode": "enforced", "threshold": None,  "unit": "schema_name",          "gate": "babbage_validate"},
     },
     "changelog": [
         {"version": "1.0.0", "date": "2026-04-04",
@@ -52,6 +53,8 @@ CONSTRAINT_REGISTRY = {
          "change": "Phase 2 validation: Codd VALIDATES (+22.9% predicted). Shannon gate applied live (356t->200t)"},
         {"version": "1.2.0", "date": "2026-04-04",
          "change": "Turing Rule added — source citation enforcement on all assessment/extraction outputs"},
+        {"version": "1.3.0", "date": "2026-04-04",
+         "change": "Babbage Rule added — read-time schema validation before downstream use. 10 constraints enforced."},
     ]
 }
 
