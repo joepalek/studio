@@ -686,7 +686,7 @@
     {
       "id": "nost-0025",
       "type": "product_archaeology",
-      "title": "Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
+      "title": "Remember when you didnâ€™t have to enter your personal info online to win a soda?",
       "description": "",
       "signal": "remember when",
       "source": "reddit_r_nostalgia",
@@ -865,7 +865,7 @@
     },
     {
       "id": "ebay-identifier-app",
-      "title": "eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
+      "title": "eBay Item Identifier â€” Consensus Engine",
       "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
@@ -892,7 +892,7 @@
       "id": "client-services-website",
       "title": "AI Services Client Website",
       "description": "Lead generation website for AI project services. Intake triggers Client Solutions Agent pipeline. High upfront / low monthly quoting model. Funds Joe as employee and system wishlist. Full agent backend already blueprinted in Synthetic Talent Agency files.",
-      "status": "WHITEBOARD",
+      "status": "LIVE",
       "priority": "CRITICAL",
       "source": "Sidebar sessions",
       "type": "product",
@@ -911,7 +911,9 @@
         "revenue_estimate": "LARGE",
         "top_risk": "Client acquisition and standing out in a highly competitive AI services market."
       },
-      "scored_at": "2026-03-25T04:00:37.270038"
+      "scored_at": "2026-03-25T04:00:37.270038",
+      "url": "https://joepalek.github.io/client-services-website/",
+      "deployed": "2026-04-04"
     },
     {
       "id": "historical-twins-division",
@@ -1103,7 +1105,7 @@
       ],
       "social_media_angle": "Public brainstorm for novel use cases on launch",
       "added": "2026-03-26",
-      "source": "Joe session \u2014 expanded from Historical Twins concept",
+      "source": "Joe session — expanded from Historical Twins concept",
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 9,
@@ -1177,14 +1179,14 @@
     {
       "id": "vedic-ai-inference-os",
       "title": "Vedic AI Inference Operating System",
-      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency \u2014 every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
+      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency — every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
       "type": "infrastructure+patent+product",
       "tiers": {
-        "tier1": "Custom CUDA Vedic kernels for Ollama \u2014 2-4 weeks",
-        "tier2": "Stripped Linux AI inference OS \u2014 3-6 months",
-        "tier3": "Full Vedic AI OS with HAL integration \u2014 1-2 years"
+        "tier1": "Custom CUDA Vedic kernels for Ollama — 2-4 weeks",
+        "tier2": "Stripped Linux AI inference OS — 3-6 months",
+        "tier3": "Full Vedic AI OS with HAL integration — 1-2 years"
       },
       "patent_angle": "Novel OS architecture combining Vedic arithmetic at kernel HAL level with AI-native design and environment-aware portability",
       "added": "2026-03-29",
@@ -1206,7 +1208,7 @@
     {
       "id": "vedic-upgrade-service",
       "title": "Vedic AI Upgrade as a Service",
-      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison \u2014 original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
+      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison — original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
       "type": "service+patent+revenue",
@@ -1261,7 +1263,7 @@
     {
       "id": "ghost-book-script-vault",
       "title": "Ghost Book Script Vault + Salvage Protocol",
-      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage \u2014 scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
+      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage — scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
       "status": "ACTIVE",
       "priority": "HIGH",
       "type": "content-management",
@@ -1283,7 +1285,7 @@
     },
     {
       "id": "higgsfield-backwards-design",
-      "title": "Higgsfield Original Series \u2014 Backwards Design",
+      "title": "Higgsfield Original Series — Backwards Design",
       "description": "Monitor platform weekly for genre gaps and vote velocity. Build CTW characters specifically for underserved genres. Design story structure for 2-10 minute episode format from day one. Soul ID consistency built into character spec. Enter contests in low-competition genres. Sponsored production if contest win.",
       "status": "WHITEBOARD",
       "priority": "MEDIUM",
@@ -1308,12 +1310,12 @@
     },
     {
       "id": "vedic-build-status",
-      "title": "Vedic Math Build \u2014 Active Status",
+      "title": "Vedic Math Build — Active Status",
       "description": "Stack B (_studio_vedic) staged and ready. Config G vector context wired in. Scan runs tonight at 2:30 AM to produce conversion manifest. Build agent spec complete. Kernel stubs written with shadow verification and ab-report logging. A/B dispatcher wires after manifest confirms scope.",
       "status": "IN_PROGRESS",
       "priority": "HIGH",
       "type": "infrastructure",
-      "next_action": "Read vedic-conversion-manifest.json tomorrow morning \u2014 it tells us scope of conversion and which files to tackle first",
+      "next_action": "Read vedic-conversion-manifest.json tomorrow morning — it tells us scope of conversion and which files to tackle first",
       "added": "2026-03-29",
       "gemini_score": {
         "total_score": 6,
@@ -1357,7 +1359,7 @@
     {
       "id": "gh-microsoft-VibeVoice",
       "title": "GitHub Trending: microsoft/VibeVoice",
-      "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that b",
+      "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that b",
       "type": "github_trending",
       "tags": [
         "github",
@@ -1429,7 +1431,7 @@
     {
       "id": "gh-apps-github-actions",
       "title": "GitHub Trending: apps/github-actions",
-      "description": "\u2b50AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.\ud83c\udfaf \u544a\u522b\u4fe1\u606f\u8fc7\u8f7d\uff0c\u4f60\u7684 AI \u8206\u60c5\u76d1\u63a7",
+      "description": "⭐AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控",
       "type": "github_trending",
       "tags": [
         "github",
@@ -1513,7 +1515,7 @@
     {
       "id": "gh-MervinPraison-PraisonAI",
       "title": "GitHub Trending: MervinPraison/PraisonAI",
-      "description": "GLM-OCR: Accurate \u00d7 Fast \u00d7 Comprehensive",
+      "description": "GLM-OCR: Accurate × Fast × Comprehensive",
       "type": "github_trending",
       "tags": [
         "github",
@@ -1525,7 +1527,7 @@
     {
       "id": "gh-apps-claude",
       "title": "GitHub Trending: apps/claude",
-      "description": "We write your reusable computer vision tools. \ud83d\udc9c",
+      "description": "We write your reusable computer vision tools. 💜",
       "type": "github_trending",
       "tags": [
         "github",
@@ -1609,7 +1611,7 @@
     {
       "id": "gh-apps-github-merge-queue",
       "title": "GitHub Trending: apps/github-merge-queue",
-      "description": "\u57fa\u4e8e\u591a\u667a\u80fd\u4f53LLM\u7684\u4e2d\u6587\u91d1\u878d\u4ea4\u6613\u6846\u67b6 - TradingAgents\u4e2d\u6587\u589e\u5f3a\u7248",
+      "description": "基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版",
       "type": "github_trending",
       "tags": [
         "github",
@@ -1657,7 +1659,7 @@
     {
       "id": "gh-apps-copilot-pull-request-reviewer",
       "title": "GitHub Trending: apps/copilot-pull-request-reviewer",
-      "description": "PraisonAI \ud83e\udd9e - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans,",
+      "description": "PraisonAI 🦞 - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans,",
       "type": "github_trending",
       "tags": [
         "github",
