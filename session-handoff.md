@@ -1,3 +1,10 @@
-# STUDIO SESSION HANDOFF This file is maintained by the nightly-rollup agent and the System Tightness Review protocol. It provides a reliable ground-truth status line for session-to-session continuity. ## Last Known State System tightness last reviewed: 2026-04-04 — YELLOW (77/100) Last nightly rollup: not yet run (digest starts 2026-03-26) Last NIT fire drill: 2026-03-25 — PARTIAL (T05 dismissed, T06 fixed) ## Standing Notes - claude CLI path: C:\Users\jpalek\AppData\Roaming\npm\claude.cmd - Task Scheduler: 14 tasks registered under Studio\ - Supervisor inbox panel: dismissed (inbox.json feeds existing flow) - YouTube Data API key: confirmed working (AIzaSyDGgdr4...) ## Sidebar v2 — COMPLETED 2026-03-30 sidebar-agent.html is fully operational in Opera sidebar panel. File: G:\My Drive\Projects\_studio\sidebar-agent.html Tabs: STATUS | INBOX | CHAT | PLAN | ASSETS | DATA | CFG ### Studio Bridge — NEW, needs Task Scheduler registration - File: G:\My Drive\Projects\_studio\studio_bridge.py - Port: 11435 - Function: HTTP bridge between sidebar chat and ChromaDB vector store - Runs
+# STUDIO SESSION HANDOFF This file is maintained by the nightly-rollup agent and the System Tightness Review protocol. It provides a reliable ground-truth status line for session-to-session continuity. ## Last Known State System tightness last reviewed: 2026-04-04 — YELLOW (self-healing, spec grader fixed)
 
 [SHANNON: truncated from ~356t to ~200t]
+
+## 2026-04-04 Session
+- client-services-website LIVE: https://joepalek.github.io/client-services-website/
+- Traitor Protocol LIVE: Mon/Wed/Fri 02:15, smoke test PASS (2/2 runs)
+- Gemini gateway fix: thinkingBudget:0 for 2.5-flash
+- Spec grader: 0 parse failures confirmed
+- Inbox cleared, model registry updated (+gemma-4, +gpt-5.4-mini/nano)
