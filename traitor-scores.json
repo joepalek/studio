@@ -1,0 +1,10 @@
+{
+  "git-scout": 100,
+  "ai-intel-agent": 90,
+  "whiteboard-scorer": 105,
+  "janitor": 70,
+  "peer-reviewer": 100,
+  "nightly-rollup": 125,
+  "market-scout": 105,
+  "mayor": 100
+}

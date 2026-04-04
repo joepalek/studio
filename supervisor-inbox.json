@@ -130,17 +130,6 @@
     "resolution": "fixed_this_session"
   },
   {
-    "id": "supervisor-cycle-202604041000",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 10:00",
-    "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-    "dispatched": [],
-    "status": "expired",
-    "expired_at": "2026-04-04T10:58:13.607938"
-  },
-  {
     "id": "supervisor-cycle-202604041030",
     "source": "supervisor-cycle",
     "type": "status",
@@ -160,5 +149,15 @@
     "finding": "0 tasks dispatched | 2 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "expired"
+  },
+  {
+    "id": "supervisor-cycle-202604041130",
+    "source": "supervisor-cycle",
+    "type": "status",
+    "urgency": "INFO",
+    "title": "Supervisor Cycle — 2026-04-04 11:30",
+    "finding": "0 tasks dispatched | 2 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+    "dispatched": [],
+    "status": "INFO"
   }
 ]

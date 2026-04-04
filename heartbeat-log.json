@@ -34,13 +34,31 @@
       "date": "2026-04-04 10:41",
       "agent": "--list",
       "status": "flagged",
-      "notes": "unknown agent name — dispatch failed"
+      "notes": "unknown agent name \u2014 dispatch failed"
     },
     {
       "date": "2026-04-04T11:00:03.672796",
       "agent": "supervisor",
       "status": "clean",
       "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T11:30:04.024845",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T11:48:35.058904",
+      "agent": "traitor-protocol",
+      "status": "flagged",
+      "notes": "Mayor FALSE_POS | traitor=nightly-rollup | accused=ai-intel-agent | 7.0s"
+    },
+    {
+      "date": "2026-04-04T11:49:28.926311",
+      "agent": "traitor-protocol",
+      "status": "clean",
+      "notes": "Mayor CORRECT | traitor=janitor | accused=janitor | 6.6s"
     }
   ]
 }

@@ -13,9 +13,9 @@
   },
   "groq/llama-3.3-70b-versatile": {
     "status": "ok",
-    "last_success": "2026-04-04T10:48:52.685324",
+    "last_success": "2026-04-04T11:49:26.613947",
     "consecutive_failures": 0,
-    "total_calls": 202,
+    "total_calls": 209,
     "last_failure": "2026-04-03T13:07:15.144019",
     "last_error": "HTTP Error 429: Too Many Requests",
     "total_failures": 130,
@@ -31,9 +31,9 @@
   },
   "gemini/gemini-2.5-flash": {
     "status": "ok",
-    "last_success": "2026-04-04T10:56:45.325492",
+    "last_success": "2026-04-04T11:49:28.794887",
     "consecutive_failures": 0,
-    "total_calls": 12
+    "total_calls": 14
   },
   "gemini/gemini-2.0-flash": {
     "status": "defunct",
