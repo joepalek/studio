@@ -1,0 +1,6 @@
+Asset_ID,Figure_Name,Era_Dates,Data_Gathering_Progress,Sources_Collected,Voice_Profile_Status,Completeness_Percent,Grade_Status,Source_Notes,Roles_Played,Last_Updated,Feedback_Loop_Status
+HIST-2026-001,Nikola Tesla,1856-1943,in_progress,biographies;diaries;patents;interviews,pending,45,data_gathering,Seifer_A+;Cheney_A;My_Inventions_A+;coast_to_coast_references,PENDING,2026-04-04,awaiting_voice_profile
+HIST-2026-002,Leonardo da Vinci,1452-1519,in_progress,notebooks;letters;artwork_analysis;historical_texts,pending,50,data_gathering,Isaacson_A+;Pedretti_A;Renaissance_sources,PENDING,2026-04-04,awaiting_voice_profile
+HIST-2026-003,Marie Curie,1867-1934,queued,none_yet,pending,0,queued,priority_candidate,PENDING,2026-04-04,awaiting_data_gathering
+HIST-2026-004,Stephen Hawking,1942-2018,queued,none_yet,pending,0,queued,priority_candidate,PENDING,2026-04-04,awaiting_data_gathering
+HIST-2026-005,Richard Feynman,1918-1988,queued,none_yet,pending,0,queued,priority_candidate,PENDING,2026-04-04,awaiting_data_gathering

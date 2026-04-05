@@ -34,7 +34,7 @@
       "date": "2026-04-04 10:41",
       "agent": "--list",
       "status": "flagged",
-      "notes": "unknown agent name \u2014 dispatch failed"
+      "notes": "unknown agent name — dispatch failed"
     },
     {
       "date": "2026-04-04T11:00:03.672796",
@@ -59,6 +59,144 @@
       "agent": "traitor-protocol",
       "status": "clean",
       "notes": "Mayor CORRECT | traitor=janitor | accused=janitor | 6.6s"
+    },
+    {
+      "date": "2026-04-04T12:00:04.491788",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T12:30:04.577891",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T13:00:04.025903",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T13:30:03.840126",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T14:00:04.510491",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T14:30:04.061961",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T15:00:04.185758",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T15:30:04.543384",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T16:00:05.171817",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T16:30:03.935733",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T17:00:04.727902",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T17:30:04.762438",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T18:00:05.075065",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T18:30:04.284154",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T19:00:04.729776",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T19:30:05.028054",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T20:00:04.617743",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T20:30:04.368621",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T21:00:04.336653",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T21:30:04.590695",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T22:00:04.164764",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T22:30:04.589078",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
+    },
+    {
+      "date": "2026-04-04T23:00:04.749361",
+      "agent": "supervisor",
+      "status": "clean",
+      "notes": "0 dispatched | ollama=True gemini=True"
     }
   ]
 }

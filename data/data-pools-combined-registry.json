@@ -1,0 +1,652 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "created": "2026-04-04",
+    "updated": "2026-04-04",
+    "sources": [
+      "https://claude.ai/chat/501d0237-49a3-476e-a043-e8105b769166",
+      "studio_data_mining_master_inventory.md"
+    ],
+    "total_global_pools": 101,
+    "total_studio_pools": 50,
+    "total_unique_pools": 151,
+    "status": "combined_catalog_complete"
+  },
+  "studio_pools": [
+    {
+      "pool_id": "P-001",
+      "name": "NIH Orphaned Grant Index",
+      "tier": "1A",
+      "source": "Grants.gov",
+      "nature": "90% complete biomedical projects",
+      "status": "2,000+ grants suspended FY2026-Q1",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Talent Insight Engine", "Data Pool Scraper"]
+    },
+    {
+      "pool_id": "P-002",
+      "name": "NSF Terminated Grants (1,752 list)",
+      "tier": "1A",
+      "source": "NSF Updates on Priorities",
+      "nature": "STEM Education, Social/Behavioral",
+      "status": "$1.4B terminated 2025-2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Talent Insight Engine", "Data Pool Scraper"]
+    },
+    {
+      "pool_id": "P-003",
+      "name": "NIH Non-Competing Lapse",
+      "tier": "1A",
+      "source": "eRA Commons",
+      "nature": "Stalled awards without NoA",
+      "status": "Jan 31, 2026 lapse ongoing",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Unfunded PhD Network"]
+    },
+    {
+      "pool_id": "P-004",
+      "name": "Biographical Sketch Common Form Mine",
+      "tier": "1A",
+      "source": "NIH Guide",
+      "nature": "Human talent metadata attached to orphaned projects",
+      "status": "Updated Jan 25, 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Talent Insight Engine", "Orphaned Researcher Pool"]
+    },
+    {
+      "pool_id": "P-005",
+      "name": "NIH Under Review for Modification",
+      "tier": "1A",
+      "source": "NIH Repositories",
+      "nature": "20+ petabytes chronic disease, overdose, adolescent health",
+      "status": "Under Review tag active",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Medical research recovery"]
+    },
+    {
+      "pool_id": "P-006",
+      "name": "AIAA 2026 Defense Right-to-Repair",
+      "tier": "1A",
+      "source": "AIAA Conference Papers",
+      "nature": "Technical Data Packages for legacy military/industrial hardware",
+      "status": "2026 focus shift published",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Sentinel Suite", "Defense Right-to-Repair"]
+    },
+    {
+      "pool_id": "P-007",
+      "name": "Sandia Laser Cooling Papers",
+      "tier": "1A",
+      "source": "Sandia National Labs",
+      "nature": "Nature-inspired computing for thermal limits",
+      "status": "April 2025-March 2026 release",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Research"]
+    },
+    {
+      "pool_id": "P-008",
+      "name": "JPO English-First Expireds",
+      "tier": "1B",
+      "source": "Japan Patent Office 2026 Status Report",
+      "nature": "Terminated-by-non-payment ceramics/thermal patents",
+      "status": "Full English mapping Jan 1, 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Patent Reverse Engineering", "Historical Figures"]
+    },
+    {
+      "pool_id": "P-009",
+      "name": "CNIPA Algorithm Ethics Rejections",
+      "tier": "1B",
+      "source": "China CNIPA 2026 Guidelines Article 5.1",
+      "nature": "AI patents rejected for controversial value judgments",
+      "status": "Q1 2026 rejections cataloged",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Struggle-Born Innovation Index"]
+    },
+    {
+      "pool_id": "P-010",
+      "name": "USPTO Abandoned Patents",
+      "tier": "1B",
+      "source": "USPTO Abandonment List",
+      "nature": "Section 101 fallout AI/software patents",
+      "status": "2026 Recentive decision wave",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Patent Reverse Engineering"]
+    },
+    {
+      "pool_id": "P-011",
+      "name": "War Department Patent Holiday",
+      "tier": "1B",
+      "source": "US Patent Holiday Initiative",
+      "nature": "No-fee licenses for defense lab IP",
+      "status": "Launched Jan 22, 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Patent Holiday Monitor", "Sentinel Suite"]
+    },
+    {
+      "pool_id": "P-012",
+      "name": "Expired International Patents",
+      "tier": "1B",
+      "source": "JPO/CNIPA/MOIP Unified Concordance",
+      "nature": "Bridge-mapped Japanese/Chinese/Korean tech",
+      "status": "Concordance published Jan 1, 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Patent Reverse Engineering"]
+    },
+    {
+      "pool_id": "P-013",
+      "name": "NDC FY2026-Q1 Release",
+      "tier": "2A",
+      "source": "National Declassification Center",
+      "nature": "98 new declassified entries Nov-Dec 2025",
+      "status": "Guided Missile & Signal Intelligence",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Declassified Tech Commercialization", "Ghost Book"]
+    },
+    {
+      "pool_id": "P-014",
+      "name": "Guided Missile & Research Files",
+      "tier": "2A",
+      "source": "NDC / Special Assistant for Guided Missiles",
+      "nature": "1960s physics/engineering theories",
+      "status": "Recently declassified",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Analog Resilience Algorithm", "Ghost Book"]
+    },
+    {
+      "pool_id": "P-015",
+      "name": "Project Teapot & Signal Intelligence",
+      "tier": "2A",
+      "source": "NDC / Signal Technical Intelligence",
+      "nature": "ECM & analog signal processing",
+      "status": "FY2026-Q1 release",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Sentinel Suite", "Ghost Book"]
+    },
+    {
+      "pool_id": "P-016",
+      "name": "MWD Mutual Weapons Development",
+      "tier": "2A",
+      "source": "NDC",
+      "nature": "1950s-60s mechanical logic without microchips",
+      "status": "Feb 2026 declassification",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Analog Resilience Algorithm"]
+    },
+    {
+      "pool_id": "P-017",
+      "name": "Green Fireballs Documents",
+      "tier": "2A",
+      "source": "NDC / Atomic Frontier archives",
+      "nature": "1945-1957 military technical reports",
+      "status": "Recently highlighted declassified",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Ghost Book", "Fortean narratives"]
+    },
+    {
+      "pool_id": "P-018",
+      "name": "Cosmic Trigger Archives",
+      "tier": "2A",
+      "source": "Fortean/Nuclear science intersection",
+      "nature": "Bridge between nuclear science & unexplained phenomena",
+      "status": "Newly digitized 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Ghost Book"]
+    },
+    {
+      "pool_id": "P-019",
+      "name": "EDGI Federal Web Tracker",
+      "tier": "2B",
+      "source": "Environmental Data & Governance Initiative",
+      "nature": "Diffs of 8,000 removed federal webpages",
+      "status": "Live tracking 3,000 datasets",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Removed Science Narratives", "Climate Intelligence"]
+    },
+    {
+      "pool_id": "P-020",
+      "name": "USGS National Geological Data Preservation",
+      "tier": "2B",
+      "source": "USGS / State Geological Organizations",
+      "nature": "Maps, well logs, mineral/mine waste data",
+      "status": "Seeking preservation partners",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Climate Intelligence"]
+    },
+    {
+      "pool_id": "P-021",
+      "name": "Redaction Deltas (Epstein Files)",
+      "tier": "2B",
+      "source": "Epstein Files Transparency Act March 2026",
+      "nature": "50,000 restored files + comparison with 2024 redactions",
+      "status": "Recently released post-DOJ review",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Removed Science Narratives"]
+    },
+    {
+      "pool_id": "P-022",
+      "name": "Withdrawn Research Pool",
+      "tier": "2B",
+      "source": "Retraction Watch Database",
+      "nature": "Legitimately withdrawn research",
+      "status": "Growing pool 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Removed Science Narratives"]
+    },
+    {
+      "pool_id": "P-023",
+      "name": "BreachForums-James Leak",
+      "tier": "2C",
+      "source": "BreachForums (RaidForums successor)",
+      "nature": "324,000 user records + private messages",
+      "status": "Jan 2026 leak",
+      "legal_barrier": "HIGH - AVOID",
+      "studio_alignment": ["DO NOT USE"]
+    },
+    {
+      "pool_id": "P-024",
+      "name": "LeakBase Archive Seizure",
+      "tier": "2C",
+      "source": "DOJ / Europol March 2026",
+      "nature": "100M+ credentials + internal corporate database schemas",
+      "status": "FBI seized",
+      "legal_barrier": "HIGH - AVOID",
+      "studio_alignment": ["Schema analysis only - no credentials"]
+    },
+    {
+      "pool_id": "P-025",
+      "name": "BCCC-DarkNet-2025 Pool",
+      "tier": "2C",
+      "source": "York University / Encrypted Traffic Research",
+      "nature": "Sanitized encrypted traffic data",
+      "status": "Recently released 2026",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Research only"]
+    },
+    {
+      "pool_id": "P-026",
+      "name": "Disappearing Data Chronology",
+      "tier": "2C",
+      "source": "National Security Archive",
+      "nature": "Government-removed data tracking",
+      "status": "Tracked April 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Disappearing Science Archive"]
+    },
+    {
+      "pool_id": "P-027",
+      "name": "DROP (Delete Request Opt-out Platform)",
+      "tier": "2C",
+      "source": "California Delete Act effective Aug 1, 2026",
+      "nature": "Deletion lists - hashes of people requesting removal",
+      "status": "Pre-August metadata",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Privacy compliance research"]
+    },
+    {
+      "pool_id": "P-028",
+      "name": "Terminal-Bench CLI Logic Pools",
+      "tier": "3A",
+      "source": "2026 research release",
+      "nature": "Raw CLI logs from thousands of system architectures",
+      "status": "89 benchmark tasks v2.0",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Ray-Ban MVP", "Synthetic Reasoning"]
+    },
+    {
+      "pool_id": "P-029",
+      "name": "Superior-Reasoning-SFT (Long-CoT)",
+      "tier": "3A",
+      "source": "Private AI clusters 2026 release",
+      "nature": "Millions of multi-step reasoning chains",
+      "status": "Private to public migration",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Analog Resilience Algorithm", "Training packs"]
+    },
+    {
+      "pool_id": "P-030",
+      "name": "Digital Twin Dark Data",
+      "tier": "3A",
+      "source": "Industrial microgrids 2026",
+      "nature": "90% internal-only simulation metadata",
+      "status": "24/7 operation but gated",
+      "legal_barrier": "HIGH - proprietary",
+      "studio_alignment": ["Future partnership only"]
+    },
+    {
+      "pool_id": "P-031",
+      "name": "10Kh-RealOmin Dataset",
+      "tier": "3A",
+      "source": "Robotics bimanual manipulation 2026",
+      "nature": "10,000+ hours sensor data",
+      "status": "Recently released 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Ray-Ban MVP", "Physical task learning"]
+    },
+    {
+      "pool_id": "P-032",
+      "name": "SSID (Sequential Storytelling Image Dataset)",
+      "tier": "3B",
+      "source": "2026 public release",
+      "nature": "13,892 stories + 17,365 images",
+      "status": "Full dataset available",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Ghost Book Division", "Narrative Seed Library"]
+    },
+    {
+      "pool_id": "P-033",
+      "name": "Fortean Journal & Archives",
+      "tier": "3B",
+      "source": "Charles Fort / Fortean Society",
+      "nature": "Unexplained phenomena reports + physicalization data",
+      "status": "Digitized 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Ghost Book Division", "Narrative Seed Library"]
+    },
+    {
+      "pool_id": "P-034",
+      "name": "PacificVis Visual Data Storytelling",
+      "tier": "3B",
+      "source": "2026 contest data",
+      "nature": "Physicalization records",
+      "status": "2026 contest archive",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Narrative Seed Library"]
+    },
+    {
+      "pool_id": "P-035",
+      "name": "Stanford Lead Selenide (PbSe) Breakthrough",
+      "tier": "4A",
+      "source": "Stanford Engineering March 2026",
+      "nature": "100-year-old semiconductor defect-tolerant IR sensors",
+      "status": "Published March 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Material Science Applied"]
+    },
+    {
+      "pool_id": "P-036",
+      "name": "Penn State Barium Titanate Nanoscale",
+      "tier": "4A",
+      "source": "Penn State Materials Lab March 24, 2026",
+      "nature": "1941 crystal re-engineered for 10x photon conversion",
+      "status": "Published March 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Material Science Applied"]
+    },
+    {
+      "pool_id": "P-037",
+      "name": "AIAA Materials Science Backfiles",
+      "tier": "4A",
+      "source": "AIAA Conference Proceedings",
+      "nature": "200,000+ pre-digital materials records 1920s-1990s",
+      "status": "2026 digitization expansion",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Material Science Applied", "Product Archaeology"]
+    },
+    {
+      "pool_id": "P-038",
+      "name": "Century-Old Materials Revival Pool",
+      "tier": "4A",
+      "source": "Stanford + MIT + Penn State coordination",
+      "nature": "Cross-institutional obsolete to superior materials",
+      "status": "Active research 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Material Science Applied"]
+    },
+    {
+      "pool_id": "P-039",
+      "name": "CNIPA Algorithm Contribution Guidelines",
+      "tier": "4B",
+      "source": "China CNIPA Jan 1, 2026",
+      "nature": "Codified AI evaluation criteria before Western commercialization",
+      "status": "Published guidelines 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Struggle-Born Innovation Index"]
+    },
+    {
+      "pool_id": "P-040",
+      "name": "Unified Concordance (JPO/CNIPA/MOIP)",
+      "tier": "4B",
+      "source": "International Patent Bridge Jan 1, 2026",
+      "nature": "Language-gap bridge between Asian codes & Western standards",
+      "status": "Live database 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Struggle-Born Innovation Index", "Patent analysis"]
+    },
+    {
+      "pool_id": "P-041",
+      "name": "Carroll County Tax Sale Fourth List",
+      "tier": "5A",
+      "source": "Carroll County Collector Atwood TN",
+      "nature": "Properties failed at 1st/2nd/3rd auctions",
+      "status": "Active April 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["eBay Agent", "Estate Liquidation Sourcing"]
+    },
+    {
+      "pool_id": "P-042",
+      "name": "US Treasury Seized Property Auctions",
+      "tier": "5A",
+      "source": "US Treasury April 7-May 29, 2026",
+      "nature": "Vacant office condos, 58-acre parcels, single-family homes",
+      "status": "Live auction 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Estate Liquidation Sourcing"]
+    },
+    {
+      "pool_id": "P-043",
+      "name": "GSA Surplus Aircraft & Heavy Tech",
+      "tier": "5A",
+      "source": "General Services Administration April 2026",
+      "nature": "Chinook helicopters, Cessna aircraft, industrial equipment",
+      "status": "Active closing April 7-10",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Research only - high ticket items"]
+    },
+    {
+      "pool_id": "P-044",
+      "name": "R&R Towing Liquidation",
+      "tier": "5A",
+      "source": "Huntingdon TN April 10, 2026",
+      "nature": "Abandoned vehicles past legal storage claim periods",
+      "status": "Cash-bid-only auction",
+      "legal_barrier": "Low",
+      "studio_alignment": ["eBay Agent", "Estate Liquidation Sourcing"]
+    },
+    {
+      "pool_id": "P-045",
+      "name": "Tennessee Treasury Unclaimed Property",
+      "tier": "5A",
+      "source": "TN Dept of Treasury",
+      "nature": "$248M pool cash, checks, safe deposit box contents",
+      "status": "Updated March 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Estate Liquidation Sourcing"]
+    },
+    {
+      "pool_id": "P-046",
+      "name": "IRS Notice 2026-20 Digital Assets Relief",
+      "tier": "5B",
+      "source": "US Internal Revenue Service",
+      "nature": "Extended reporting relief for orphaned crypto/digital assets",
+      "status": "Effective through Dec 2026",
+      "legal_barrier": "Medium",
+      "studio_alignment": ["Crypto compliance research"]
+    },
+    {
+      "pool_id": "P-047",
+      "name": "War Department Patent Holiday Initiative",
+      "tier": "5B",
+      "source": "US Defense Labs Jan 22, 2026",
+      "nature": "No-fee commercial evaluation licenses for curated defense IP",
+      "status": "Active 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Patent Holiday Monitor", "Sentinel Suite"]
+    },
+    {
+      "pool_id": "P-048",
+      "name": "IPCC & UNFCCC Orphaned Datasets",
+      "tier": "6",
+      "source": "UN Climate/Biodiversity post-US withdrawal Jan 7, 2026",
+      "nature": "Global monitoring data climate, biodiversity without US funding",
+      "status": "Archived but accessible",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Climate Intelligence", "Renewable IP Arbitrage"]
+    },
+    {
+      "pool_id": "P-049",
+      "name": "IRENA Renewable Energy Patents",
+      "tier": "6",
+      "source": "IRENA post-US withdrawal",
+      "nature": "Global renewable tech from developing nations",
+      "status": "Archived 2026",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Renewable IP Arbitrage"]
+    },
+    {
+      "pool_id": "P-050",
+      "name": "UNESCO International Archives",
+      "tier": "6",
+      "source": "UNESCO post-US withdrawal",
+      "nature": "Cultural, scientific, historical data",
+      "status": "Accessible via partner institutions",
+      "legal_barrier": "Low",
+      "studio_alignment": ["Historical Figures", "Ghost Book"]
+    }
+  ],
+  "studio_ideas": [
+    {
+      "idea_id": "I-005",
+      "name": "Estate Liquidation Sourcing",
+      "pools": ["P-041", "P-042", "P-043", "P-044", "P-045"],
+      "ease": 9, "profit": 9, "agentic": 9, "alignment": 9,
+      "grade": "A+",
+      "revenue": "$5K-15K/mo",
+      "time": "2-3 weeks",
+      "status": "IMMEDIATE BUILD"
+    },
+    {
+      "idea_id": "I-013",
+      "name": "Narrative Seed Library",
+      "pools": ["P-032", "P-033", "P-034"],
+      "ease": 9, "profit": 7, "agentic": 9, "alignment": 10,
+      "grade": "A+",
+      "revenue": "$3K-8K/mo",
+      "time": "2 weeks",
+      "status": "IMMEDIATE BUILD"
+    },
+    {
+      "idea_id": "I-008",
+      "name": "Patent Holiday Monitor",
+      "pools": ["P-011", "P-047"],
+      "ease": 9, "profit": 6, "agentic": 9, "alignment": 8,
+      "grade": "A",
+      "revenue": "$1K-3K/mo",
+      "time": "1 week",
+      "status": "IMMEDIATE BUILD"
+    },
+    {
+      "idea_id": "I-007",
+      "name": "Data Pool Scraper Agent",
+      "pools": ["P-001", "P-002", "P-003", "P-004"],
+      "ease": 8, "profit": 5, "agentic": 8, "alignment": 9,
+      "grade": "B+",
+      "revenue": "$1K-2K/mo",
+      "time": "2 weeks",
+      "status": "IMMEDIATE BUILD"
+    },
+    {
+      "idea_id": "I-011",
+      "name": "Unfunded PhD Network",
+      "pools": ["P-003", "P-004"],
+      "ease": 8, "profit": 8, "agentic": 7, "alignment": 9,
+      "grade": "A",
+      "revenue": "$5K-12K/mo",
+      "time": "4-5 weeks",
+      "status": "BUILD v1.0"
+    },
+    {
+      "idea_id": "I-018",
+      "name": "Defense Right-to-Repair Logic",
+      "pools": ["P-006", "P-047"],
+      "ease": 7, "profit": 9, "agentic": 8, "alignment": 10,
+      "grade": "A",
+      "revenue": "$10K-25K/mo",
+      "time": "6-8 weeks",
+      "status": "WHITEBOARD→BUILD"
+    },
+    {
+      "idea_id": "I-016",
+      "name": "Expired Patent Reverse Engineering",
+      "pools": ["P-008", "P-009", "P-010", "P-012"],
+      "ease": 6, "profit": 9, "agentic": 7, "alignment": 9,
+      "grade": "A",
+      "revenue": "$8K-20K/mo",
+      "time": "4-6 weeks",
+      "status": "WHITEBOARD→BUILD"
+    },
+    {
+      "idea_id": "I-021",
+      "name": "Declassified Tech Commercialization",
+      "pools": ["P-013", "P-014", "P-015", "P-047"],
+      "ease": 5, "profit": 10, "agentic": 6, "alignment": 7,
+      "grade": "B+",
+      "revenue": "$20K-50K/mo",
+      "time": "8-12 weeks",
+      "status": "WHITEBOARD"
+    },
+    {
+      "idea_id": "I-030",
+      "name": "Struggle-Born Innovation Index",
+      "pools": ["P-039", "P-040", "P-008", "P-009"],
+      "ease": 8, "profit": 8, "agentic": 8, "alignment": 7,
+      "grade": "A",
+      "revenue": "$2K-6K/mo",
+      "time": "2-3 weeks",
+      "status": "WHITEBOARD→BUILD"
+    }
+  ],
+  "cross_pool_synergies": [
+    {
+      "name": "Orphaned Innovation Stack",
+      "global_pools": [5, 21, 86],
+      "studio_pools": ["P-001", "P-002", "P-003", "P-004", "P-008", "P-009", "P-010", "P-011", "P-012"],
+      "product": "Unified abandoned R&D recovery platform",
+      "buyer": "VC/PE firms, corporate R&D, universities"
+    },
+    {
+      "name": "Physical Asset Intelligence",
+      "global_pools": [24, 36, 64],
+      "studio_pools": ["P-041", "P-042", "P-043", "P-044", "P-045"],
+      "product": "Asset discovery + valuation platform",
+      "buyer": "Real estate investors, estate liquidators"
+    },
+    {
+      "name": "Material Science Revival",
+      "global_pools": [23, 62],
+      "studio_pools": ["P-035", "P-036", "P-037", "P-038"],
+      "product": "Obsolete-to-superior materials database",
+      "buyer": "Hardware startups, defense contractors"
+    },
+    {
+      "name": "Narrative + Declassified",
+      "global_pools": [30],
+      "studio_pools": ["P-013", "P-014", "P-015", "P-017", "P-032", "P-033", "P-034"],
+      "product": "Based on true events narrative engine",
+      "buyer": "Ghost Book Division, documentary producers"
+    }
+  ],
+  "legal_risk_matrix": {
+    "high_avoid": ["P-023", "P-024", "P-030"],
+    "medium_verify": ["P-005", "P-009", "P-017", "P-025", "P-046"],
+    "low_proceed": "All others"
+  },
+  "next_actions": [
+    "Configure email infrastructure (1-2 hours)",
+    "Enable Google Analytics on studio dashboard",
+    "Build I-005 Estate Liquidation Agent (Week 1-2)",
+    "Build I-008 Patent Holiday Monitor (Week 1)",
+    "Build I-007 Data Pool Scraper Agent (Week 2)",
+    "Spec I-018 Sentinel Right-to-Repair (Week 2-3)"
+  ]
+}

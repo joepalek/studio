@@ -70,10 +70,32 @@ Scrape: Active trailers, vote counts, genres represented
 Track: Vote velocity — which trailers gaining momentum
 Flag: New contest announcements, new genre openings,
       any trailer crossing 1000 votes
-Output: higgsfield-intelligence.json in _studio
-Escalate to inbox if: Contest announced OR
-                      Genre gap identified that
-                      matches CTW active characters
+
+Output: Write to `G:/My Drive/Projects/_studio/higgsfield-intelligence.json`
+Schema (overwrite full file each weekly run):
+```json
+{
+  "last_updated": "<ISO timestamp>",
+  "active_trailers": [
+    {"title": "", "genre": "", "votes": 0, "url": "", "velocity": "rising|stable|falling"}
+  ],
+  "genre_gaps": ["<genres with few or no entries>"],
+  "contest_status": "<none active | contest name and deadline>",
+  "high_performers": [
+    {"title": "", "genre": "", "votes": 0, "characteristics": ["<what makes it work"]}
+  ],
+  "notes": ["<anything notable about platform trends this week>"]
+}
+```
+
+Also write to `G:/My Drive/Projects/_studio/higgsfield-top10.json`:
+- Do NOT overwrite the top_10 array — that is maintained by Mirofish from agency pipeline
+- Only update `last_updated` and `_quality_bar` fields if contest criteria have changed
+
+Escalate to supervisor-inbox.json if:
+- Contest announced (priority: high)
+- Genre gap identified that matches any character in agency/characters/ folder (priority: high)
+- Any trailer crosses 1000 votes (priority: medium)
 
 ---
 

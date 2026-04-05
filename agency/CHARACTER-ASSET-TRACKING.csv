@@ -1,0 +1,4 @@
+Asset_ID,Character_Name,Type,Visual_Reference,Archetype,Current_Grade_Status,Approval_Stage,Roles_Played,Platforms_Deployed,Last_Feedback,Source_Notes,Supervisor_Status,Last_Updated
+FIC-2026-001,PENDING,fictional,image_ref,PENDING,raw,awaiting_analysis,,none,none,platform_scan_data,pending,2026-04-04
+HIST-2026-001,Nikola Tesla,historical,image_ref,The_Visionary,data_gathering,voice_profile_in_progress,PENDING,none,pending_voice_depth,Seifer_A+;Cheney_A,pending,2026-04-04
+HIST-2026-002,Leonardo da Vinci,historical,image_ref,The_Visionary,data_gathering,voice_profile_in_progress,PENDING,none,pending_voice_depth,Isaacson_A+;Pedretti_A,pending,2026-04-04

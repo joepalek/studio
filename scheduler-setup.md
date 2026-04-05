@@ -13,6 +13,8 @@ or repair them. All tasks are idempotent — safe to run multiple times.
 | Supervisor Check | Every 30 minutes | supervisor-check.bat |
 | Nightly Commit | Every day 11:00 PM | nightly-commit.bat |
 | Ghost Book Rescan | Sunday 2:00 AM | ghost-book-rescan.bat |
+| Whiteboard Scanner | Every day 4:00 AM | whiteboard-scanner.bat |
+| SEO Agent | Every Monday 6:00 AM | seo-agent.bat |
 
 ## Execution
 

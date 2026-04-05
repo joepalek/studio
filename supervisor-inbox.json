@@ -130,33 +130,32 @@
     "resolution": "fixed_this_session"
   },
   {
-    "id": "supervisor-cycle-202604041030",
+    "id": "supervisor-cycle-202604042200",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 10:30",
-    "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+    "title": "Supervisor Cycle — 2026-04-04 22:00",
+    "finding": "0 tasks dispatched | 3 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
-    "status": "expired",
-    "expired_at": "2026-04-04T10:58:13.607939"
+    "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604041100",
+    "id": "supervisor-cycle-202604042230",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 11:00",
-    "finding": "0 tasks dispatched | 2 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+    "title": "Supervisor Cycle — 2026-04-04 22:30",
+    "finding": "0 tasks dispatched | 3 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
-    "status": "expired"
+    "status": "INFO"
   },
   {
-    "id": "supervisor-cycle-202604041130",
+    "id": "supervisor-cycle-202604042300",
     "source": "supervisor-cycle",
     "type": "status",
     "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 11:30",
-    "finding": "0 tasks dispatched | 2 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+    "title": "Supervisor Cycle — 2026-04-04 23:00",
+    "finding": "0 tasks dispatched | 3 agents active | Free tier: none | Ollama: UP | Gemini: OK",
     "dispatched": [],
     "status": "INFO"
   }

@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-04T11:30:03.922866",
+  "time": "2026-04-04T23:00:04.627241",
   "ollama_up": true,
   "gemini_available": true,
   "providers_available": [
@@ -17,7 +17,8 @@
   "free_models": [],
   "agents_recently_active": [
     "--list",
-    "supervisor"
+    "supervisor",
+    "traitor-protocol"
   ],
   "work_queue_depth": 0,
   "dispatched": []

@@ -1,0 +1,15 @@
+{
+  "_schema": "1.0",
+  "_description": "Top 10 studio assets scored against Higgsfield quality bar. Updated each production run by Mirofish. FASTTRACK items trigger supervisor-inbox entry.",
+  "_quality_bar": {
+    "cinematography": 7,
+    "pacing": 7,
+    "story_coherence": 7,
+    "runtime_fit": 7,
+    "overall_minimum": 7.0,
+    "_note": "Scores 0-10. All four dimensions must meet minimum. Overall is average. FASTTRACK threshold: overall >= 8.0"
+  },
+  "last_updated": null,
+  "fasttrack_threshold": 8.0,
+  "top_10": []
+}

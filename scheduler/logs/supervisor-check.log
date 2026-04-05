@@ -1449,3 +1449,210 @@
 [2026-04-04 11:30:03] Dispatched: 0 tasks
 [2026-04-04 11:30:04] Supervisor check complete
 [Sat 04/04/2026 11:30:04.08] Done 
+[Sat 04/04/2026 12:00:01.29] Supervisor check starting 
+[2026-04-04 12:00:02] Supervisor check starting
+[2026-04-04 12:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 12:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 12:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 12:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 12:00:04] Dispatched: 0 tasks
+[2026-04-04 12:00:04] Supervisor check complete
+[Sat 04/04/2026 12:00:04.59] Done 
+[Sat 04/04/2026 12:30:01.23] Supervisor check starting 
+[2026-04-04 12:30:01] Supervisor check starting
+[2026-04-04 12:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 12:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 12:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 12:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 12:30:04] Dispatched: 0 tasks
+[2026-04-04 12:30:04] Supervisor check complete
+[Sat 04/04/2026 12:30:04.69] Done 
+[Sat 04/04/2026 13:00:01.31] Supervisor check starting 
+[2026-04-04 13:00:01] Supervisor check starting
+[2026-04-04 13:00:03] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 13:00:03] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 13:00:03] Work queue: 0 | Task queue: 0
+[2026-04-04 13:00:03] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 13:00:03] Dispatched: 0 tasks
+[2026-04-04 13:00:04] Supervisor check complete
+[Sat 04/04/2026 13:00:04.09] Done 
+[Sat 04/04/2026 13:30:01.26] Supervisor check starting 
+[2026-04-04 13:30:01] Supervisor check starting
+[2026-04-04 13:30:03] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 13:30:03] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 13:30:03] Work queue: 0 | Task queue: 0
+[2026-04-04 13:30:03] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 13:30:03] Dispatched: 0 tasks
+[2026-04-04 13:30:03] Supervisor check complete
+[Sat 04/04/2026 13:30:03.89] Done 
+[Sat 04/04/2026 14:00:01.56] Supervisor check starting 
+[2026-04-04 14:00:02] Supervisor check starting
+[2026-04-04 14:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 14:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 14:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 14:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 14:00:04] Dispatched: 0 tasks
+[2026-04-04 14:00:04] Supervisor check complete
+[Sat 04/04/2026 14:00:04.58] Done 
+[Sat 04/04/2026 14:30:01.34] Supervisor check starting 
+[2026-04-04 14:30:01] Supervisor check starting
+[2026-04-04 14:30:03] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 14:30:03] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 14:30:03] Work queue: 0 | Task queue: 0
+[2026-04-04 14:30:03] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 14:30:03] Dispatched: 0 tasks
+[2026-04-04 14:30:04] Supervisor check complete
+[Sat 04/04/2026 14:30:04.14] Done 
+[Sat 04/04/2026 15:00:01.29] Supervisor check starting 
+[2026-04-04 15:00:01] Supervisor check starting
+[2026-04-04 15:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 15:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 15:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 15:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 15:00:04] Dispatched: 0 tasks
+[2026-04-04 15:00:04] Supervisor check complete
+[Sat 04/04/2026 15:00:04.26] Done 
+[Sat 04/04/2026 15:30:01.46] Supervisor check starting 
+[2026-04-04 15:30:02] Supervisor check starting
+[2026-04-04 15:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 15:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 15:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 15:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 15:30:04] Dispatched: 0 tasks
+[2026-04-04 15:30:04] Supervisor check complete
+[Sat 04/04/2026 15:30:04.61] Done 
+[Sat 04/04/2026 16:00:01.56] Supervisor check starting 
+[2026-04-04 16:00:02] Supervisor check starting
+[2026-04-04 16:00:05] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 16:00:05] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 16:00:05] Work queue: 0 | Task queue: 0
+[2026-04-04 16:00:05] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 16:00:05] Dispatched: 0 tasks
+[2026-04-04 16:00:05] Supervisor check complete
+[Sat 04/04/2026 16:00:05.28] Done 
+[Sat 04/04/2026 16:30:01.32] Supervisor check starting 
+[2026-04-04 16:30:01] Supervisor check starting
+[2026-04-04 16:30:03] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 16:30:03] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 16:30:03] Work queue: 0 | Task queue: 0
+[2026-04-04 16:30:03] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 16:30:03] Dispatched: 0 tasks
+[2026-04-04 16:30:03] Supervisor check complete
+[Sat 04/04/2026 16:30:04.03] Done 
+[Sat 04/04/2026 17:00:01.59] Supervisor check starting 
+[2026-04-04 17:00:02] Supervisor check starting
+[2026-04-04 17:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 17:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 17:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 17:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 17:00:04] Dispatched: 0 tasks
+[2026-04-04 17:00:04] Supervisor check complete
+[Sat 04/04/2026 17:00:04.80] Done 
+[Sat 04/04/2026 17:30:01.36] Supervisor check starting 
+[2026-04-04 17:30:02] Supervisor check starting
+[2026-04-04 17:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 17:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 17:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 17:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 17:30:04] Dispatched: 0 tasks
+[2026-04-04 17:30:04] Supervisor check complete
+[Sat 04/04/2026 17:30:04.87] Done 
+[Sat 04/04/2026 18:00:01.56] Supervisor check starting 
+[2026-04-04 18:00:02] Supervisor check starting
+[2026-04-04 18:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 18:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 18:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 18:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 18:00:04] Dispatched: 0 tasks
+[2026-04-04 18:00:05] Supervisor check complete
+[Sat 04/04/2026 18:00:05.18] Done 
+[Sat 04/04/2026 18:30:01.38] Supervisor check starting 
+[2026-04-04 18:30:01] Supervisor check starting
+[2026-04-04 18:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 18:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 18:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 18:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 18:30:04] Dispatched: 0 tasks
+[2026-04-04 18:30:04] Supervisor check complete
+[Sat 04/04/2026 18:30:04.36] Done 
+[Sat 04/04/2026 19:00:01.51] Supervisor check starting 
+[2026-04-04 19:00:02] Supervisor check starting
+[2026-04-04 19:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 19:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 19:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 19:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 19:00:04] Dispatched: 0 tasks
+[2026-04-04 19:00:04] Supervisor check complete
+[Sat 04/04/2026 19:00:04.84] Done 
+[Sat 04/04/2026 19:30:01.63] Supervisor check starting 
+[2026-04-04 19:30:02] Supervisor check starting
+[2026-04-04 19:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 19:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 19:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 19:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 19:30:04] Dispatched: 0 tasks
+[2026-04-04 19:30:05] Supervisor check complete
+[Sat 04/04/2026 19:30:05.12] Done 
+[Sat 04/04/2026 20:00:01.65] Supervisor check starting 
+[2026-04-04 20:00:02] Supervisor check starting
+[2026-04-04 20:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 20:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 20:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 20:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 20:00:04] Dispatched: 0 tasks
+[2026-04-04 20:00:04] Supervisor check complete
+[Sat 04/04/2026 20:00:04.69] Done 
+[Sat 04/04/2026 20:30:01.43] Supervisor check starting 
+[2026-04-04 20:30:01] Supervisor check starting
+[2026-04-04 20:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 20:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 20:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 20:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 20:30:04] Dispatched: 0 tasks
+[2026-04-04 20:30:04] Supervisor check complete
+[Sat 04/04/2026 20:30:04.49] Done 
+[Sat 04/04/2026 21:00:01.58] Supervisor check starting 
+[2026-04-04 21:00:02] Supervisor check starting
+[2026-04-04 21:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 21:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 21:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 21:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 21:00:04] Dispatched: 0 tasks
+[2026-04-04 21:00:04] Supervisor check complete
+[Sat 04/04/2026 21:00:04.43] Done 
+[Sat 04/04/2026 21:30:01.63] Supervisor check starting 
+[2026-04-04 21:30:02] Supervisor check starting
+[2026-04-04 21:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 21:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 21:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 21:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 21:30:04] Dispatched: 0 tasks
+[2026-04-04 21:30:04] Supervisor check complete
+[Sat 04/04/2026 21:30:04.65] Done 
+[Sat 04/04/2026 22:00:01.45] Supervisor check starting 
+[2026-04-04 22:00:01] Supervisor check starting
+[2026-04-04 22:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 22:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 22:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 22:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 22:00:04] Dispatched: 0 tasks
+[2026-04-04 22:00:04] Supervisor check complete
+[Sat 04/04/2026 22:00:04.22] Done 
+[Sat 04/04/2026 22:30:01.56] Supervisor check starting 
+[2026-04-04 22:30:02] Supervisor check starting
+[2026-04-04 22:30:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 22:30:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 22:30:04] Work queue: 0 | Task queue: 0
+[2026-04-04 22:30:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 22:30:04] Dispatched: 0 tasks
+[2026-04-04 22:30:04] Supervisor check complete
+[Sat 04/04/2026 22:30:04.66] Done 
+[Sat 04/04/2026 23:00:01.53] Supervisor check starting 
+[2026-04-04 23:00:02] Supervisor check starting
+[2026-04-04 23:00:04] Providers available (5): cerebras, groq, mistral, gemini, ollama
+[2026-04-04 23:00:04] Degraded: gemini/gemini-2.0-flash (defunct), gemini/gemini-2.5-flash-preview-04-17 (defunct)
+[2026-04-04 23:00:04] Work queue: 0 | Task queue: 0
+[2026-04-04 23:00:04] Active agents (25h): --list, supervisor, traitor-protocol
+[2026-04-04 23:00:04] Dispatched: 0 tasks
+[2026-04-04 23:00:04] Supervisor check complete
+[Sat 04/04/2026 23:00:04.84] Done 

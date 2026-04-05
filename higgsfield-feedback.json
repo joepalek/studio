@@ -1,0 +1,13 @@
+{
+  "_schema": "1.0",
+  "_description": "Performance feedback from Higgsfield submissions. AI Intel agent monitors and writes here after each piece is submitted. Used as training signal for future production.",
+  "last_updated": null,
+  "submissions": [],
+  "signal_summary": {
+    "top_performing_genres": [],
+    "top_performing_runtimes": [],
+    "top_performing_story_types": [],
+    "characteristics_to_prioritize": [],
+    "characteristics_to_avoid": []
+  }
+}

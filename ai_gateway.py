@@ -39,9 +39,10 @@ sys.path.insert(0, "G:/My Drive/Projects/_studio")
 import provider_health as ph
 
 STUDIO = "G:/My Drive/Projects/_studio"
-CONFIG_PATH = STUDIO + "/studio-config.json"
+CONFIG_PATH  = STUDIO + "/studio-config.json"
+VAULT_PATH   = STUDIO + "/.studio-vault.json"
 REGISTRY_PATH = STUDIO + "/model-registry.json"
-GATEWAY_LOG = STUDIO + "/gateway-log.txt"
+GATEWAY_LOG  = STUDIO + "/gateway-log.txt"
 
 # Browser UA — required for Cloudflare-protected APIs (Groq, Cerebras)
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -51,6 +52,40 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
 def _load_cfg():
     # utf-8-sig handles BOM that Windows tools (Notepad, etc.) may add
     return json.load(open(CONFIG_PATH, encoding="utf-8-sig", errors="replace"))
+
+
+def _load_vault():
+    """
+    Load API keys from .studio-vault.json.
+    os.environ takes priority — Task Scheduler can inject keys without any file.
+    Vault file is gitignored and only readable by the studio user account.
+    Never called directly by agents — only ai_gateway internals use this.
+    """
+    vault = json.load(open(VAULT_PATH, encoding="utf-8-sig", errors="replace"))
+    # Strip metadata keys (prefixed with _)
+    vault = {k: v for k, v in vault.items() if not k.startswith("_")}
+    # os.environ overrides file — normalize key names to match vault schema
+    env_map = {
+        "ANTHROPIC_API_KEY":  "anthropic_api_key",
+        "GEMINI_API_KEY":     "gemini_api_key",
+        "OPENROUTER_API_KEY": "openrouter_api_key",
+        "GROQ_API_KEY":       "Groq API Key",
+        "CEREBRAS_API_KEY":   "Cerebras API Key",
+        "MISTRAL_API_KEY":    "Mistral API Key",
+        "GITHUB_TOKEN":       "Github Token",
+        "YOUTUBE_API_KEY":    "youtube_api_key",
+    }
+    for env_key, vault_key in env_map.items():
+        if env_key in os.environ:
+            vault[vault_key] = os.environ[env_key]
+    return vault
+
+
+def _load_keys():
+    """Merge config + vault into one dict for provider callers."""
+    cfg   = _load_cfg()
+    vault = _load_vault()
+    return {**cfg, **vault}  # vault wins on any overlap
 
 
 @dataclass
@@ -287,7 +322,7 @@ def call(prompt: str,
     Returns:
         GatewayResponse with .text, .provider, .model, .cost_tier, .latency_ms
     """
-    cfg = _load_cfg()
+    cfg = _load_keys()
 
     # Build route list
     if force_provider and force_model:
