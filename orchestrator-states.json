@@ -1,4 +1,12 @@
 {
+  "_studio": {
+    "status": "no_state",
+    "progress": 0,
+    "nextAction": "",
+    "blockers": [],
+    "decisions": 0,
+    "lastUpdated": "unknown"
+  },
   "acuscan-ar": {
     "status": "unknown",
     "progress": 0,

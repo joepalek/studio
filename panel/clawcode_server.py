@@ -26,6 +26,7 @@ from flask_cors import CORS
 # Configuration
 STUDIO = os.environ.get("STUDIO_PATH", "G:/My Drive/Projects/_studio")
 CLAWCODE_PATH = os.environ.get("CLAWCODE_PATH", r"C:\tools\claw\claw.exe")
+CLAWCODE_MODEL = os.environ.get("CLAWCODE_MODEL", "ollama:qwen3:14b")
 SIDEBAR_SECRET = os.environ.get("SIDEBAR_SECRET", "change-this-secret-in-production")
 PORT = int(os.environ.get("CLAWCODE_PORT", 11435))
 
@@ -203,8 +204,8 @@ def execute_clawcode(message: str, session_id: str = None) -> dict:
         }
     
     try:
-        # Build command
-        cmd = [CLAWCODE_PATH]
+        # Build command with model
+        cmd = [CLAWCODE_PATH, "--model", CLAWCODE_MODEL]
         
         # Add session if provided
         if session_id:
@@ -213,8 +214,10 @@ def execute_clawcode(message: str, session_id: str = None) -> dict:
         # Add message via stdin to avoid shell escaping issues
         # Ensure HOME is set for ClawCode (required on Windows)
         home_dir = os.environ.get("HOME") or os.environ.get("USERPROFILE") or "C:/Users/jpalek"
-        print(f"DEBUG: home_dir = {home_dir}")
-        print(f"DEBUG: USERPROFILE = {os.environ.get('USERPROFILE')}")
+        import sys
+        print(f"DEBUG: home_dir = {home_dir}", flush=True)
+        print(f"DEBUG: USERPROFILE = {os.environ.get('USERPROFILE')}", flush=True)
+        sys.stdout.flush()
         proc_env = {**os.environ, "STUDIO_PATH": STUDIO, "HOME": home_dir}
         
         result = subprocess.run(

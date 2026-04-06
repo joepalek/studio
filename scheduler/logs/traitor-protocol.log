@@ -28,3 +28,25 @@
 [11:49:28]   Score market-scout: +5 (honest agent, round survived) -> 105
 [11:49:28] === DONE === outcome=CORRECT elapsed=6.6s
 [11:49:28] Scores: {'whiteboard-scorer': 105, 'janitor': 70, 'market-scout': 105, 'mayor': 100}
+[Mon 04/06/2026  2:15:00.90] Traitor Protocol starting 
+Traceback (most recent call last):
+  File "G:\My Drive\Projects\_studio\traitor_protocol.py", line 361, in <module>
+    main()
+    ~~~~^^
+  File "G:\My Drive/Projects/_studio\utilities\constraint_gates.py", line 501, in wrapper
+    raise error_holder[0]
+  File "G:\My Drive/Projects/_studio\utilities\constraint_gates.py", line 477, in _run
+    result_holder[0] = func(*args, **kwargs)
+                       ~~~~^^^^^^^^^^^^^^^^^
+  File "G:\My Drive\Projects\_studio\traitor_protocol.py", line 267, in main
+    log = setup_log()
+  File "G:\My Drive\Projects\_studio\traitor_protocol.py", line 68, in setup_log
+    fh = logging.FileHandler(str(SCHED_LOG), encoding="utf-8")
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1219, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ~~~~~~~~~~^^
+  File "C:\Users\jpalek\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1248, in _open
+    return open_func(self.baseFilename, self.mode,
+                     encoding=self.encoding, errors=self.errors)
+PermissionError: [Errno 13] Permission denied: 'G:\\My Drive\\Projects\\_studio\\scheduler\\logs\\traitor-protocol.log'
+[Mon 04/06/2026  2:15:01.41] Done 

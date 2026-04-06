@@ -1,0 +1,51 @@
+[03:06:07] INFO Validator: 2 months to evaluate
+[03:06:07] INFO   Processing 2026-03...
+[03:06:17] WARNING   Price fetch failed ZW=F 2026-03-10: float() argument must be a string or a real number, not 'Ser
+[03:06:17] INFO     Wheat: synth=MIXED actual=UNKNOWN (None%)
+[03:06:17] WARNING   Price fetch failed ZC=F 2026-03-10: float() argument must be a string or a real number, not 'Ser
+[03:06:17] INFO     Corn: synth=MIXED actual=UNKNOWN (None%)
+[03:06:17] WARNING   Price fetch failed ZS=F 2026-03-10: float() argument must be a string or a real number, not 'Ser
+[03:06:17] INFO     Soybeans: synth=MIXED actual=UNKNOWN (None%)
+[03:06:18] INFO   Processing 2026-02...
+[03:06:22] WARNING   Price fetch failed ZW=F 2026-02-10: float() argument must be a string or a real number, not 'Ser
+[03:06:22] INFO     Wheat: synth=MIXED actual=UNKNOWN (None%)
+[03:06:23] WARNING   Price fetch failed ZC=F 2026-02-10: float() argument must be a string or a real number, not 'Ser
+[03:06:23] INFO     Corn: synth=MIXED actual=UNKNOWN (None%)
+[03:06:23] WARNING   Price fetch failed ZS=F 2026-02-10: float() argument must be a string or a real number, not 'Ser
+[03:06:23] INFO     Soybeans: synth=MIXED actual=UNKNOWN (None%)
+[03:06:47] INFO Validator: 2 months to evaluate
+[03:06:47] INFO   Processing 2026-03...
+[03:06:52] INFO     Wheat: synth=MIXED actual=UNKNOWN (None%)
+[03:06:52] INFO     Corn: synth=MIXED actual=UNKNOWN (None%)
+[03:06:52] INFO     Soybeans: synth=MIXED actual=UNKNOWN (None%)
+[03:06:53] INFO   Processing 2026-02...
+[03:06:57] INFO     Wheat: synth=MIXED actual=UNKNOWN (None%)
+[03:06:57] INFO     Corn: synth=MIXED actual=UNKNOWN (None%)
+[03:06:57] INFO     Soybeans: synth=MIXED actual=UNKNOWN (None%)
+[03:07:33] INFO Validator: 2 months to evaluate
+[03:07:33] INFO   Processing 2026-03...
+[03:07:38] INFO     Wheat: synth=MIXED actual=UNKNOWN (None%)
+[03:07:38] INFO     Corn: synth=MIXED actual=UNKNOWN (None%)
+[03:07:38] INFO     Soybeans: synth=MIXED actual=UNKNOWN (None%)
+[03:07:39] INFO   Processing 2026-02...
+[03:07:43] INFO     Wheat: synth=MIXED actual=UNKNOWN (None%)
+[03:07:43] INFO     Corn: synth=MIXED actual=UNKNOWN (None%)
+[03:07:43] INFO     Soybeans: synth=MIXED actual=UNKNOWN (None%)
+[03:10:09] INFO Validator: 2 months to evaluate
+[03:10:09] INFO   Processing 2026-03...
+[03:10:16] INFO     Wheat: synth=MIXED actual=NEUTRAL (0.68%)
+[03:10:16] INFO     Corn: synth=MIXED actual=BULLISH (3.09%)
+[03:10:16] INFO     Soybeans: synth=MIXED actual=NEUTRAL (-1.94%)
+[03:10:17] INFO   Processing 2026-02...
+[03:10:23] INFO     Wheat: synth=MIXED actual=BULLISH (12.12%)
+[03:10:23] INFO     Corn: synth=MIXED actual=BULLISH (4.55%)
+[03:10:23] INFO     Soybeans: synth=MIXED actual=BULLISH (8.06%)
+[03:10:56] INFO Validator: 2 months to evaluate
+[03:10:56] INFO   Processing 2026-03...
+[03:11:04] INFO     Wheat: synth=MIXED actual=NEUTRAL (0.68%)
+[03:11:04] INFO     Corn: synth=MIXED actual=BULLISH (3.04%)
+[03:11:04] INFO     Soybeans: synth=MIXED actual=NEUTRAL (-1.94%)
+[03:11:05] INFO   Processing 2026-02...
+[03:11:11] INFO     Wheat: synth=MIXED actual=BULLISH (12.12%)
+[03:11:11] INFO     Corn: synth=MIXED actual=BULLISH (4.55%)
+[03:11:11] INFO     Soybeans: synth=MIXED actual=BULLISH (8.06%)

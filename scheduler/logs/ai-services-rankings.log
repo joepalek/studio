@@ -102,3 +102,20 @@ Categories: chat, image_gen, video_gen, code, embedding, voice, search
   voice: 0 services
   search: 0 services
 Done.
+Built from model-registry.json:
+  Chat models: 5
+  Code models: 0
+  Local models: 3
+  Engines: 4
+  Task routes: 24
+HN recency signals: 1 services mentioned
+
+Written: ai-services-rankings.json
+Categories: image_gen, video_gen, search, voice, embedding
+  image_gen: 6 services
+  video_gen: 6 services
+  search: 5 services
+  voice: 4 services
+  embedding: 4 services
+Heartbeat written
+Done.

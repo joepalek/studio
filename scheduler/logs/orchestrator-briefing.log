@@ -506,3 +506,80 @@ Briefing saved to `orchestrator-briefing.json`. **Note:** Gemini Flash was unrea
 Briefing saved to `orchestrator-briefing.json`. Note: `gemini-2.0-flash-001` URL in orchestrator.md is stale — working model is `models/gemini-2.5-flash` via the `v1beta` path.
 [Sun 04/05/2026  8:00:02.06] Daily briefing starting 
 You've hit your limit · resets 2pm (America/Chicago)
+[Mon 04/06/2026  8:00:01.78] Daily briefing starting 
+---
+
+## SRE SCOUT REPORT — 2026-04-06
+
+**TOOLS**
+- Git 2.53.0 ✓
+- Node v24.14.0 ✓
+- npm 11.9.0 ✓
+- Python 3.13.12 ✓ (above expected 3.13.7)
+- Repomix 1.12.0 ✓
+- Ollama 0.20.2 — UP, 5 models ✓
+- gh 2.88.1 ✓
+
+**GATEWAY ENDPOINTS**
+- Anthropic key: MISSING in studio-config.json (non-blocking — Claude Code is active)
+- Gemini key: MISSING in studio-config.json
+- OpenRouter key: MISSING in studio-config.json
+- YouTube key: MISSING in studio-config.json
+- Ollama: UP — 5 models (model: gemma3:4b)
+
+**PROJECTS (13 checked)**
+- UNCOMMITTED (2 files): job-match
+- UNCOMMITTED (65 files): _studio
+- 11 projects clean
+
+**STUDIO FILES**
+- All critical files present ✓
+
+**MOBILE / SUPABASE**
+- Not configured in studio-config.json — skipped
+
+**VERDICT: DEGRADED (5 issues)**
+
+---
+
+## STRESS REPORT
+
+```
+CRITICAL (1):
+  [!] anthropic_api_key MISSING in studio-config.json
+      (note: Claude Code session active — this is a config gap, not a hard block)
+
+WARNING (4):
+  [~] gemini_api_key MISSING — Gemini Flash routing disabled
+  [~] openrouter_api_key MISSING — OpenRouter routing disabled
+  [~] UNCOMMITTED (65 files): _studio
+  [~] UNCOMMITTED (2 files): job-match
+
+WATCH (1):
+  [-] SUPABASE not configured in studio-config.json
+
+STRESS VERDICT: WARNING
+```
+
+---
+
+## ORCHESTRATOR DAILY BRIEFING — 2026-04-06
+
+**TODAY'S FOCUS (highest revenue impact):**
+1. **[job-match]** — 5 pending decisions. Blackdot ends May 2026 — income replacement priority. Resolve these to unblock.
+2. **[listing-optimizer]** — 2 pending decisions. eBay is direct daily revenue (565 active listings).
+3. **[CTW]** — Active at 40%, blocked on portrait image generation (SVG placeholders in use). Generate real portraits to unblock.
+
+**AGENT QUEUE:**
+- No autonomous tasks available — projects are blocked behind human decisions.
+- Commit dirty repos: `_studio` (65 files) and `job-match` (2 files).
+
+**CRITICAL BLOCKERS:**
+- `studio-config.json` missing all API keys — Gemini/OpenRouter routing is dark.
+- CTW blocked on: portrait images, trait calibration, comfort bar overcorrection.
+- 8 projects have pending decision backlogs.
+
+**DEFER TODAY:**
+- acuscan-ar, arbitrage-pulse, hibid-analyzer, nutrimind, squeeze-empire, whatnot-apps
+
+`orchestrator-briefing.json` saved. Heartbeat written.

@@ -1,7 +1,6 @@
 {
-  "generated": "2026-04-04T08:02:42.065758",
-  "model_used": "models/gemini-2.5-flash",
-  "briefing": "**DAILY BRIEFING: 2026-04-04**\n\n**1. TOP 3 Joe Tasks:**\n*   **Job Match:** Address the 5 pending decisions to directly impact income replacement (P1).\n*   **Listing Optimizer:** Resolve the 2 pending decisions for immediate daily revenue (P2).\n*   **CTW:** Generate portrait images for all 4 characters using Perchance, per the existing `nextAction` (P4 blocker).\n\n**2. TOP 3 Agent Tasks:**\n*   No agent-runnable tasks identified today.\n\n**3. Critical Blockers:**\n*   **CTW:** Real portrait images are not yet generated, currently blocking progress to Phase 3 build and causing SVG placeholders.\n\n**4. Deferral:**\n*   Defer all other projects with pending decisions until top revenue priorities are addressed.",
+  "generated": "2026-04-06T08:01:41.419207",
+  "briefing": "=== ORCHESTRATOR DAILY BRIEFING \u2014 2026-04-06 ===\n\nTODAY'S FOCUS (Joe's time \u2014 highest revenue impact):\n1. [job-match] 5 pending decisions \u2014 Blackdot ends May 2026, this is the income replacement priority. Resolve decisions to unblock.\n2. [listing-optimizer] 2 pending decisions \u2014 eBay is direct daily revenue (565 active listings). Answer decisions to let agent run.\n3. [CTW] Active at 40%, blocked on portrait images (SVG placeholders in use). Generate real portraits via Perchance or similar to unblock agent.\n\nAGENT QUEUE (no Joe needed):\n- No agent-runnable tasks identified \u2014 most projects need human decisions first.\n- Commit dirty repos: _studio (65 files) and job-match (2 files).\n\nCRITICAL BLOCKERS:\n- studio-config.json missing ALL API keys (gemini, openrouter, anthropic, youtube) \u2014 gateway routing disabled.\n- CTW blocked: portrait images, trait calibration, comfort bar overcorrection.\n- 8 projects have pending decisions queued \u2014 backlog is growing.\n\nDEFER TODAY:\n- acuscan-ar, arbitrage-pulse, hibid-analyzer, nutrimind, squeeze-empire, whatnot-apps \u2014 low revenue priority vs job-match deadline.\n\nVERDICT: DEGRADED \u2014 resolve API keys and job-match decisions first.",
   "plan": {
     "agent_runnable": [],
     "human_required": [
@@ -58,11 +57,71 @@
     ],
     "ready_to_build": []
   },
-  "sre": {
-    "verdict": "DEGRADED",
-    "issues": [
-      "UNCOMMITTED (2 files): job-match"
-    ],
-    "warnings": []
+  "states_summary": {
+    "_studio": {
+      "status": "no_state",
+      "progress": 0,
+      "decisions": 0
+    },
+    "acuscan-ar": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 1
+    },
+    "arbitrage-pulse": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 2
+    },
+    "CTW": {
+      "status": "active",
+      "progress": 40,
+      "decisions": 0
+    },
+    "hibid-analyzer": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 1
+    },
+    "job-match": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 5
+    },
+    "listing-optimizer": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 2
+    },
+    "nutrimind": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 1
+    },
+    "sentinel-core": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 0
+    },
+    "sentinel-performer": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 0
+    },
+    "sentinel-viewer": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 0
+    },
+    "squeeze-empire": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 1
+    },
+    "whatnot-apps": {
+      "status": "unknown",
+      "progress": 0,
+      "decisions": 1
+    }
   }
 }

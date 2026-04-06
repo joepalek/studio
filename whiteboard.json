@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-05T04:04:26.345774",
+  "updated": "2026-04-06T11:02:57.584596",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -2724,7 +2724,21 @@
       "tags": [
         "product_archaeology"
       ],
-      "added_at": "2026-04-05T08:01:14.800057"
+      "added_at": "2026-04-05T08:01:14.800057",
+      "gemini_score": {
+        "total_score": 5,
+        "market_gap_score": 4,
+        "build_feasibility": 7,
+        "revenue_potential": 5,
+        "urgency": 4,
+        "why_now": "With increasing concerns about data ownership and the desire for centralized personal archives, a robust solution for orphaned Google photo/video content could find a dedicated user base.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Lack of genuine user demand for a dedicated solution for legacy Google archived content, given existing alternatives (Google Photos, takeout)."
+      },
+      "scored_at": "2026-04-06T04:00:03.633650",
+      "scored_by": "gemini"
     },
     {
       "id": "pa-1775394074-1",
@@ -2736,7 +2750,21 @@
       "tags": [
         "product_archaeology"
       ],
-      "added_at": "2026-04-05T08:01:14.800096"
+      "added_at": "2026-04-05T08:01:14.800096",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 6,
+        "why_now": "The rise of flexible workforces, gig economy expansion, and demand for real-time operational efficiency make a modern, specialized workforce management tool highly relevant in 2026.",
+        "recommended_action": "PITCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Market saturation with existing workforce management, field service, and fleet tracking solutions."
+      },
+      "scored_at": "2026-04-06T04:00:09.013651",
+      "scored_by": "gemini"
     },
     {
       "id": "pa-1775394074-2",
@@ -2748,7 +2776,21 @@
       "tags": [
         "product_archaeology"
       ],
-      "added_at": "2026-04-05T08:01:14.800108"
+      "added_at": "2026-04-05T08:01:14.800108",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 6,
+        "why_now": "The increased awareness of personalized fitness, coupled with advancements in AI and a desire for convenient home workouts, creates a fertile ground for a revived and improved Fitbit Coach.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Market saturation with existing fitness apps and the challenge of differentiating a new offering."
+      },
+      "scored_at": "2026-04-06T04:00:14.546652",
+      "scored_by": "gemini"
     },
     {
       "id": "pa-1775394074-3",
@@ -2760,7 +2802,21 @@
       "tags": [
         "product_archaeology"
       ],
-      "added_at": "2026-04-05T08:01:14.800114"
+      "added_at": "2026-04-05T08:01:14.800114",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 6,
+        "why_now": "The increased focus on personalized wellness, at-home fitness, and AI-driven customization makes 2026 an opportune time for a sophisticated, adaptive yoga platform.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Market saturation with existing yoga/fitness apps and the need to differentiate effectively beyond basic customization."
+      },
+      "scored_at": "2026-04-06T04:00:19.914249",
+      "scored_by": "gemini"
     },
     {
       "id": "pa-1775394074-4",
@@ -2772,18 +2828,37 @@
       "tags": [
         "product_archaeology"
       ],
-      "added_at": "2026-04-05T08:01:14.800120"
+      "added_at": "2026-04-05T08:01:14.800120",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 7,
+        "urgency": 8,
+        "why_now": "The explosion of AI chatbots and custom LLM applications in 2024-2025 creates a massive, underserved demand for robust, agnostic analytics to understand their performance, user engagement, and areas for improvement.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Google or another major AI player launching their own comprehensive, cross-platform analytics solution that becomes the de facto standard."
+      },
+      "scored_at": "2026-04-06T04:00:25.549560",
+      "scored_by": "gemini"
     },
     {
       "id": "weekend-hunter-project",
-      "title": "Weekend Hunter — Garage Sale Route Optimizer",
+      "title": "Weekend Hunter \u2014 Garage Sale Route Optimizer",
       "description": "Automated garage sale discovery and route optimization. Scrapes EstateSales.net, Craigslist, and Facebook Marketplace for weekend sales. Generates optimized Google Maps routes for Friday night/Saturday morning pickup runs. Includes sidebar widget integration.",
       "type": "project",
       "source": "studio_internal",
       "status": "LIVE",
       "deployed": true,
       "project_path": "G:/My Drive/Projects/_studio/weekend-hunter/",
-      "tags": ["project", "reselling", "automation", "maps"],
+      "tags": [
+        "project",
+        "reselling",
+        "automation",
+        "maps"
+      ],
       "gemini_score": {
         "total_score": 9,
         "market_gap_score": 8,
@@ -2804,7 +2879,12 @@
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "wearable", "vision", "reselling"],
+      "tags": [
+        "whiteboard",
+        "wearable",
+        "vision",
+        "reselling"
+      ],
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 8,
@@ -2825,7 +2905,12 @@
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "reselling", "finance", "tracking"],
+      "tags": [
+        "whiteboard",
+        "reselling",
+        "finance",
+        "tracking"
+      ],
       "gemini_score": {
         "total_score": 8,
         "market_gap_score": 7,
@@ -2846,7 +2931,12 @@
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "hunter", "3d", "passive_income"],
+      "tags": [
+        "whiteboard",
+        "hunter",
+        "3d",
+        "passive_income"
+      ],
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 6,
@@ -2867,7 +2957,13 @@
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "hunter", "blender", "ai", "workflow"],
+      "tags": [
+        "whiteboard",
+        "hunter",
+        "blender",
+        "ai",
+        "workflow"
+      ],
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 7,
@@ -2888,7 +2984,12 @@
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "security", "monitoring", "personal"],
+      "tags": [
+        "whiteboard",
+        "security",
+        "monitoring",
+        "personal"
+      ],
       "gemini_score": {
         "total_score": 6,
         "market_gap_score": 5,
@@ -2909,7 +3010,12 @@
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "hunter", "music", "aggregator"],
+      "tags": [
+        "whiteboard",
+        "hunter",
+        "music",
+        "aggregator"
+      ],
       "gemini_score": {
         "total_score": 6,
         "market_gap_score": 6,
@@ -2925,12 +3031,18 @@
     },
     {
       "id": "institutional-twin-councils",
-      "title": "Institutional Twin Councils — AI Expert Panels",
+      "title": "Institutional Twin Councils \u2014 AI Expert Panels",
       "description": "Domain-expert AI panels replacing expensive consultants. B2B SaaS model. Multi-agent consensus architecture for institutional decision support.",
       "type": "whiteboard",
       "source": "chat_idea",
       "status": "WHITEBOARD",
-      "tags": ["whiteboard", "b2b", "saas", "consulting", "ai"],
+      "tags": [
+        "whiteboard",
+        "b2b",
+        "saas",
+        "consulting",
+        "ai"
+      ],
       "gemini_score": {
         "total_score": 8,
         "market_gap_score": 8,
@@ -2943,6 +3055,188 @@
         "revenue_estimate": "B2B_SAAS"
       },
       "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "gh-HKUDS-RAG-Anything",
+      "title": "GitHub Trending: HKUDS/RAG-Anything",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-05T23:00:35.968522",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The rapid advancement and adoption of RAG models, coupled with increasing demand for multimodal AI and content generation, makes 2026 ideal for a versatile 'RAG-Anything' solution.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid obsolescence or commoditization due to fast-paced AI research and development."
+      },
+      "scored_at": "2026-04-06T04:00:31.081189",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-google-deepmind-gemma",
+      "title": "GitHub Trending: google-deepmind/gemma",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-05T23:00:35.968541",
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 9,
+        "urgency": 9,
+        "why_now": "The rapid evolution of AI models and a growing demand for accessible, powerful alternatives to proprietary systems make 2026 a prime time for widely adoptable open-source AI.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid pace of AI research leading to quick obsolescence or the emergence of a superior, truly open-source competitor."
+      },
+      "scored_at": "2026-04-06T04:00:36.566638",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-sponsors-atilaahmettaner",
+      "title": "GitHub Trending: sponsors/atilaahmettaner",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-05T23:00:35.968548",
+      "gemini_score": {
+        "total_score": 2,
+        "market_gap_score": 1,
+        "build_feasibility": 10,
+        "revenue_potential": 1,
+        "urgency": 1,
+        "why_now": "This appears to be a personal sponsorship link, not a product or idea with market viability in 2026.",
+        "recommended_action": "KILL",
+        "effort_estimate": "days",
+        "revenue_estimate": "NICHE",
+        "top_risk": "It's not a product or idea, so there's no inherent market risk beyond misinterpretation."
+      },
+      "scored_at": "2026-04-06T04:00:41.820335",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-atilaahmettaner-tradingview-mcp",
+      "title": "GitHub Trending: atilaahmettaner/tradingview-mcp",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-05T23:00:35.968554",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 6,
+        "why_now": "The ongoing democratization of financial tools and increased retail trading sophistication makes this a relevant time for enhanced analytical aids.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Lack of unique differentiation from existing commercial or open-source trading analysis tools."
+      },
+      "scored_at": "2026-04-06T04:00:47.224895",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "pa-1775480476-0",
+      "title": "Google My Business (app)",
+      "description": "Google My Business was an app that allowed businesses to manage their Google Maps Business profiles.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-06T08:01:16.554025",
+      "gemini_score": {
+        "total_score": 5,
+        "market_gap_score": 3,
+        "build_feasibility": 8,
+        "revenue_potential": 4,
+        "urgency": 2,
+        "why_now": "The core functionality of GMB is still handled by Google Business Profile, making a direct replacement challenging without a significant shift in how local businesses manage their online presence.",
+        "recommended_action": "KILL",
+        "effort_estimate": "months",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Direct competition with Google's own actively developed and integrated Google Business Profile."
+      },
+      "scored_at": "2026-04-06T11:02:42.626933",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "pa-1775480476-1",
+      "title": "Google Contributor",
+      "description": "Google Contributor was a program run by Google that allowed users in the Google Network of content sites to view the websites without any advertisements that are administered, sorted, and maintained b",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-06T08:01:16.554038",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The growing frustration with ad-heavy internet experiences and the increasing willingness of users to pay for premium, ad-free content make 2026 an opportune time to revisit this model.",
+        "recommended_action": "PITCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Achieving widespread publisher adoption and overcoming user inertia to pay for content they previously got for free (even with ads)."
+      },
+      "scored_at": "2026-04-06T11:02:48.092256",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "pa-1775491325-0",
+      "title": "YouTube Go",
+      "description": "YouTube Go was an app aimed at making YouTube easier to access on mobile devices in emerging markets through special features like downloading video on wifi for viewing later.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-06T11:02:05.553858",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "With continued growth in emerging markets and increasing demand for offline-first and data-efficient solutions, a renewed focus on YouTube Go's core value proposition is timely.",
+        "recommended_action": "PITCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Google's existing YouTube app capabilities potentially negating the need for a separate 'Go' version, and the challenge of monetization in low-ARPU markets."
+      },
+      "scored_at": "2026-04-06T11:02:53.584177",
+      "scored_by": "gemini"
     }
   ]
 }

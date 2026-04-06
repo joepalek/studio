@@ -64,3 +64,47 @@
 [2026-04-05 07:30:02] session-handoff.md updated
 [2026-04-05 07:30:02] Audit entry written
 [2026-04-05 07:30:02] Nightly rollup complete: YELLOW 57/100
+[2026-04-06 03:23:45] Nightly rollup starting
+[2026-04-06 03:23:45] Audit: 2 entries, 0 gate fails
+[2026-04-06 03:23:45] Check-ins: 13 agents in, 1 missed: ['ai-intel']
+[2026-04-06 03:23:45] Inbox: 0 pending | Flags: 1 pending
+[2026-04-06 03:23:45] Health: GREEN 87/100 — 13 agents in | missed: ai-intel | -10 missed agent: ai-intel
+[2026-04-06 03:23:45] Digest entry written to daily-digest.json
+[2026-04-06 03:23:45] Supervisor briefing written to supervisor-inbox.json
+[2026-04-06 03:23:45] Heartbeat written
+[2026-04-06 03:23:45] session-handoff.md updated
+[2026-04-06 03:23:45] Audit entry written
+[2026-04-06 03:23:45] Nightly rollup complete: GREEN 87/100
+[2026-04-06 07:30:01] Nightly rollup starting
+[2026-04-06 07:30:01] Audit: 3 entries, 0 gate fails
+[2026-04-06 07:30:01] Check-ins: 13 agents in, 1 missed: ['ai-intel']
+[2026-04-06 07:30:01] Inbox: 0 pending | Flags: 1 pending
+[2026-04-06 07:30:01] Health: GREEN 87/100 � 13 agents in | missed: ai-intel | -10 missed agent: ai-intel
+[2026-04-06 07:30:01] Digest entry written to daily-digest.json
+[2026-04-06 07:30:01] Supervisor briefing written to supervisor-inbox.json
+[2026-04-06 07:30:01] Heartbeat written
+[2026-04-06 07:30:01] session-handoff.md updated
+[2026-04-06 07:30:02] Audit entry written
+[2026-04-06 07:30:02] Nightly rollup complete: GREEN 87/100
+[2026-04-06 10:01:21] Nightly rollup starting
+[2026-04-06 10:01:21] Audit: 3 entries, 0 gate fails
+[2026-04-06 10:01:21] Check-ins: 1 agents in, 10 missed: ['nightly-rollup', 'vector-reindex', 'janitor', 'whiteboard-scorer', 'ai-intel', 'agency-build', 'vintage-agent', 'product-archaeology', 'git-commit', 'check-drift']
+[2026-04-06 10:01:21] Inbox: 0 pending | Flags: 1 pending
+[2026-04-06 10:01:21] Health: RED 0/100 — 1 agents in | missed: nightly-rollup, vector-reindex, janitor, whiteboard-scorer, ai-intel, agency-build, vintage-agent, product-archaeology, git-commit, check-drift | -10 missed agent: nightly-rollup
+[2026-04-06 10:01:21] Digest entry written to daily-digest.json
+[2026-04-06 10:01:21] Supervisor briefing written to supervisor-inbox.json
+[2026-04-06 10:01:21] Heartbeat written
+[2026-04-06 10:01:21] session-handoff.md updated
+[2026-04-06 10:01:21] Audit entry written
+[2026-04-06 10:01:21] Nightly rollup complete: RED 0/100
+[2026-04-06 10:59:33] Nightly rollup starting
+[2026-04-06 10:59:33] Audit: 4 entries, 0 gate fails
+[2026-04-06 10:59:33] Check-ins: 5 agents in, 7 missed: ['nightly-rollup', 'vector-reindex', 'whiteboard-scorer', 'ai-intel', 'agency-build', 'git-commit', 'check-drift']
+[2026-04-06 10:59:33] Inbox: 0 pending | Flags: 1 pending
+[2026-04-06 10:59:33] Health: RED 27/100 — 5 agents in | missed: nightly-rollup, vector-reindex, whiteboard-scorer, ai-intel, agency-build, git-commit, check-drift | -10 missed agent: nightly-rollup
+[2026-04-06 10:59:33] Digest entry written to daily-digest.json
+[2026-04-06 10:59:33] Supervisor briefing written to supervisor-inbox.json
+[2026-04-06 10:59:33] Heartbeat written
+[2026-04-06 10:59:33] session-handoff.md updated
+[2026-04-06 10:59:33] Audit entry written
+[2026-04-06 10:59:33] Nightly rollup complete: RED 27/100

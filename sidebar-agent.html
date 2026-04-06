@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -263,8 +263,8 @@ if(b)b.style.width=p+"%";if(t)t.textContent=p<40?m[0]:p<70?m[1]:m[2];
 if(p>=90)clearInterval(iv);},150);})();
 </script>
 <script>
-// INJECTED STUDIO DATA - generated: 2026-04-06T00:02:34Z
-const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-inbox-roundtrip-002", "title": "INBOX TEST 2 - Click reload button to see this appear", "finding": "If you are reading this after clicking the reload button without a full page refresh, the live reload is working.", "urgency": "INFO", "date": "2026-04-03T23:00:00Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "test-inbox-roundtrip-001", "title": "INBOX TEST - Does this message appear, get answered, and clear?", "finding": "This is a test message to verify the full inbox round trip. Answer it in the sidebar, confirm it logs to inbox-log.jsonl", "urgency": "INFO", "date": "2026-04-03T22:45:00Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "ai-intel-2026-04-05", "title": "AI Intel - 5 HIGH PRIORITY - 2026-04-05", "finding": "Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up using. See ai-intel-summary.t", "urgency": "WARN", "date": "2026-04-05T19:42:08Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "ai-intel-2026-04-05", "title": "AI Intel - 4 HIGH PRIORITY - 2026-04-05", "finding": "Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up using. See ai-intel-summary.t", "urgency": "WARN", "date": "2026-04-05T19:52:58Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "supervisor-cycle-202604051800", "title": "Supervisor Cycle - 2026-04-05 18:00", "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "supervisor-cycle-202604051830", "title": "Supervisor Cycle - 2026-04-05 18:30", "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "supervisor-cycle-202604051900", "title": "Supervisor Cycle - 2026-04-05 19:00", "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}], "whiteboard": [{"title": "Higgsfield Original Series - Backwards Design", "description": "Monitor platform weekly for genre gaps and vote velocity. Bu", "score": 9, "action": "BUILD"}, {"title": "GitHub Trending: sansan0/TrendRadar", "description": "Netflix-level subtitle cutting, translation, alignment, and ", "score": 9, "action": "BUILD"}, {"title": "GitHub Trending: roboflow/supervision", "description": "", "score": 9, "action": "BUILD"}, {"title": "Externalize TASK_ROUTING - Supervisor Owns Model Selection", "description": "Move hardcoded TASK_ROUTING dict out of ai_gateway.py into t", "score": 9, "action": "BUILD"}, {"title": "Add Gemma 4 (26B MoE) to Model Registry + Ollama Pull + Benc", "description": "Google released Gemma 4 April 2 under Apache 2.0. Four sizes", "score": 9, "action": "BUILD"}, {"title": "GitHub Trending: ml-explore/mlx-lm", "description": "", "score": 9, "action": "BUILD"}, {"title": "Weekend Hunter - Garage Sale Route Optimizer", "description": "Automated garage sale discovery and route optimization. Scra", "score": 9, "action": "LIVE"}, {"title": "I've played and reviewed 1.000+ horror games, here are some ", "description": "I've been in love with the genre for all my life and could w", "score": 8, "action": "PUBLISH"}, {"title": "DuPont Corfam", "description": "Yes, the search for a perfect synthetic leather that perfect", "score": 8, "action": "RESEARCH"}, {"title": "Bring back the original SoBe Elixir drink line nationwide", "description": "Remember SoBe Elixirs? That tangy, refreshing drink that jus", "score": 8, "action": "BUILD"}], "assets": [{"id": "anthropic-claude", "name": "Anthropic Claude API", "type": "llm", "service_type": "chat", "status": "active", "tier": "paid", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Primary reasoning engine. claude-sonnet-4-6 default.", "url": "https://console.anthropic.com"}, {"id": "gemini", "name": "Google Gemini API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 1500, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Used for spec grading, batch work, Gemini Flash free tier.", "url": "https://aistudio.google.com"}, {"id": "openrouter", "name": "OpenRouter API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Sidebar chat backend. Routes to best free model.", "url": "https://openrouter.ai"}, {"id": "ollama", "name": "Ollama (Local)", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Local LLM fallback. llama3.2 default.", "url": "http://localhost:11434"}, {"id": "youtube-data-v3", "name": "YouTube Data API v3", "type": "api", "service_type": "search", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 10000, "usage_this_month": {"calls": 0, "units": 10}, "last_used": "2026-03-30", "notes": "AI Intel agent. 100 units per search query. 7 queries = 700 units/day.", "url": "https://console.cloud.google.com"}, {"id": "ebay-api", "name": "eBay Developer API", "type": "api", "service_type": "ecommerce", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "eBay agent. OAuth2. Listing audit, pricing comps.", "url": "https://developer.ebay.com"}, {"id": "supabase", "name": "Supabase", "type": "database", "service_type": "database", "status": "active", "tier": "free", "monthly_limit": 500, "daily_limit": null, "usage_this_month": {"calls": 1, "storage_mb": 0}, "last_used": "2026-03-30", "notes": "Job Match platform DB. Free tier 500MB.", "url": "https://supabase.com"}, {"id": "adzuna", "name": "Adzuna Job API", "type": "api", "service_type": "jobs", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Job discovery. Free tier.", "url": "https://developer.adzuna.com"}], "services": {"image_gen": [{"rank": 1, "name": "DALL-E 3", "provider": "OpenAI", "tier": "paid", "notes": "Best prompt adherence", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Midjourney v6", "provider": "Midjourney", "tier": "paid", "notes": "Best aesthetics", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "FLUX.1", "provider": "Black Forest Labs", "tier": "free", "notes": "Open source, local option", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Stable Diffusion XL", "provider": "Stability AI", "tier": "free", "notes": "Local, controlnet support", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Ideogram 2.0", "provider": "Ideogram", "tier": "free", "notes": "Best for text in images", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Leonardo.ai", "provider": "Leonardo", "tier": "free", "notes": "150 free credits/day", "studio_connected": false, "buzz_score": 0, "trending": false}], "video_gen": [{"rank": 1, "name": "Sora", "provider": "OpenAI", "tier": "paid", "notes": "Best quality, limited access", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Kling", "provider": "Kuaishou", "tier": "free", "notes": "Best free option", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Runway Gen-3", "provider": "Runway", "tier": "paid", "notes": "Fast iteration", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Higgsfield", "provider": "Higgsfield", "tier": "free", "notes": "Original Series contests", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Pika Labs", "provider": "Pika", "tier": "free", "notes": "Free tier available", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Luma Dream Machine", "provider": "Luma AI", "tier": "free", "notes": "Free generations daily", "studio_connected": false, "buzz_score": 0, "trending": false}], "search": [{"rank": 1, "name": "Perplexity Pro", "provider": "Perplexity", "tier": "paid", "notes": "Best for research", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "You.com", "provider": "You.com", "tier": "free", "notes": "Free API available", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Tavily", "provider": "Tavily", "tier": "free", "notes": "MCP connected", "studio_connected": true, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Brave Search API", "provider": "Brave", "tier": "free", "notes": "2000 free/month", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 5, "name": "SerpAPI", "provider": "SerpAPI", "tier": "free", "notes": "100 free/month", "studio_connected": false, "buzz_score": 0, "trending": false}], "voice": [{"rank": 1, "name": "ElevenLabs", "provider": "ElevenLabs", "tier": "paid", "notes": "Best voice cloning", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "OpenAI TTS", "provider": "OpenAI", "tier": "paid", "notes": "Good quality, fast", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Whisper", "provider": "OpenAI/Local", "tier": "free", "notes": "Local transcription", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Coqui TTS", "provider": "Coqui", "tier": "free", "notes": "Open source", "studio_connected": false, "buzz_score": 0, "trending": false}], "embedding": [{"rank": 1, "name": "text-embedding-3-large", "provider": "OpenAI", "tier": "paid", "notes": "Best quality", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "voyage-3", "provider": "Voyage AI", "tier": "paid", "notes": "Best for RAG", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "nomic-embed-text", "provider": "Ollama/Local", "tier": "free", "notes": "Local via Ollama", "studio_connected": true, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "all-MiniLM-L6-v2", "provider": "HuggingFace/Local", "tier": "free", "notes": "ChromaDB default", "studio_connected": true, "buzz_score": 0, "trending": false}]}, "servicesDate": "2026-04-05", "intelSummary": "AI INTEL - 2026-04-05\nGenerated: 2026-04-05T19:52:58Z\nSources: 11/11 OK | 4 HIGH / 64 WORTH / 128 LOGGED | YouTube: 12 videos surfaced\n\nHIGH PRIORITY (4):\n  * Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up | score:28 | https://reddit.com/r/artificial/comments/1sckc3j/kept_hitting_chatgpt_and_claude_limits_during/\n  * Claude Code Update Tool Bug | score:28 | https://reddit.com/r/ClaudeAI/comments/1sdas5n/claude_code_update_tool_bug/\n  * benchmarks of gemma4 and multiple others on Raspberry Pi5 | score:28 | https://reddit.com/r/LocalLLaMA/comments/1sdcdno/benchmarks_of_gemma4_and_multiple_others_on/\n  * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano\n\nWORTH READING (64):\n  * Claude vs Gemini", "studioBriefing": "# STUDIO BRIEFING\n*Auto-generated context for new Claude sessions. Read this file first.*\n*Updated: 2026-04-05 | Owner: Joe Palek | Studio: G:\\\\My Drive\\\\Projects\\\\_studio*\n\n---\n\n## WHO YOU ARE TALKING TO\n\nJoe runs a multi-agent AI studio from Windows. He is the executive director.\nYou are a reasoning engine. You do not manually manage files or run agents.\nThe supervisor agent and Python scripts do the mechanical work.\nJoe gives directives. You translate them into specific file edits, script commands, or agent dispatches.\n\n---\n\n## STUDIO ROOT\n\n'''\nG:\\\\My Drive\\\\Projects\\\\_studio\\\\\n'''\n\nAll paths below are relative to this root unless noted.\n\n---\n\n## CURRENT TOP DIRECTIVE (Apr 1 2026)\n\n**Maximize daily free-tier image and video generation for art department.**\n- Agency has 283 built character folders (all specs passed, all folders created)\n- Characters need to move from agency ? CX agent ? art department daily image pipeline\n- Art dept should be generating as many images/videos per day as free quotas allow\n- Goal: high-quality content that doesn't need revision ? maximum throughput, not maximum volume\n\n---\n\n## AGENCY STATUS\n\n| Item | Value |\n|------|-------|\n| Total passing specs | 283 |\n| Total character folders built | 507 (some duplicates from two build runs) |\n| Last build run | 2026-03-30 13:15 |\n| Build log | 'agency/spec-queue/build-log.json' |\n| Character folders | 'agency/characters/{universe}/{name}_{id}/' |\n| Universes | band-members (49), inmates-vs-guards (84), other (30), original-fiction (120) |\n| Historical figures | 'agency/historical-figures/' ? Tesla, da Vinci, Darwin, Curie, Galileo specs exist |\n\n**Character folder path pattern:**\n'agency/characters/band-members/Sam Torres_c001/'\n\n**Passing specs file:** 'agency/spec-queue/passing-specs.json'\nAll 283 specs have 'status: \"ungraded\"' ? grading/scoring not yet wired to CX agent scan.\n\n---\n\n## CX AGENT\n\n| Item | Value |\n|------|-------|\n| Script | 'cx_agent/cx_agent.py' |\n| Integration guide | 'cx_agent/CX_Agent_Integration_Guide.md' |\n| Manifest (routing rules) | 'cx_agent/asset_distribution_manifest.json' |\n| Task Scheduler | '\\\\Studio\\\\CX_Agent_Daily_Scan' (2 AM daily) + '\\\\Studio\\\\CX_Agent_Hourly_Monitor' |\n| Logs | 'cx_agent/logs/' |\n| Data | 'cx_agent/data/' |\n\n**CX Agent role:** Quality gate. Receives assets from creator agents, validates format+quality+brand,\nroutes to final destination, tracks usage, feeds social media intel.\nPass threshold: quality >= 8.\n\n**What CX agent does NOT yet do:**\n- Pick characters from agency and dispatch to art department\n- Track per-character image generation status\n- Report art dept quota usage back to supervisor\n\n---\n\n## ART DEPARTMENT / IMAGE GENERATION\n\n**Free tier quota stack (confirmed live as of 2026-04-01):**\n\n| Provider | Daily Free | API? | Best For |\n|----------|------------|------|---------|\n| Cloudflare FLUX.1 Schnell | ~50-100 images/day | YES | Volume ? API wired |\n| Ideogram 2 | ~10 images/day | YES | Text-in-image, logos |\n| Playground ", "lastDigest": {"date": "2026-04-05", "generated_at": "2026-04-05T07:30:02.095768", "audit_summary": {"total_entries": 1, "gate_decisions": {"total": 0, "passed": 0, "failed": 0}, "scheduler_fires": {"total": 0, "confirmed": 0, "silent": 0}, "heartbeats": 0, "inbox_items_written": 0, "flags_raised": 0, "top_failure_category": null}, "agent_checkins": {"checked_in": ["--list", "agency-build", "ai-services-rankings", "auto-answer-gemini", "check-drift", "git-commit", "product-archaeology", "supervisor", "traitor-protocol", "vector-reindex", "whiteboard-scorer"], "missed": ["nightly-rollup", "janitor", "ai-intel", "vintage-agent"]}, "pending_inbox_items": 0, "pending_flags": 1, "health_score": 57, "health_status": "YELLOW", "notes": "11 agents in | missed: nightly-rollup, janitor, ai-intel, vintage-agent | -10 missed agent: nightly-rollup"}, "modelRegistry": {}, "modelRegistryDate": "2026-04-05", "reviewQueue": [{"pool_id": "wasde-parser", "pool_number": 56, "pool_name": "USDA WASDE Food Cost Alert", "status": "AWAITING_REVIEW", "overall": "PASS", "sellability_score": 6.7, "recommended_tier": "Pro", "queued_at": "2026-04-03T00:13:51.349164", "test_results": {"T1_fetch": "PASS", "T2_parse": "PASS", "T3_plausibility": "PASS", "T4_consistency": "PASS", "T5_dual_ai": "WARN", "T6_trend": "PASS", "T7_sellability": "PASS", "T8_schema": "PASS"}, "test_detail": {"T1_fetch": {"result": "PASS", "bytes": 104123, "seconds": 11.3}, "T2_parse": {"result": "PASS", "records": 5, "coverage": 0.0, "narrative_coverage": 100.0, "mode": "narrative"}, "T3_plausibility": {"result": "PASS", "checked": 26}, "T4_consistency": {"result": "PASS", "checksum": "aa117945e48c", "note": "Monthly cadence - single-run check"}, "T5_dual_ai": {"result": "WARN", "confidence": "divergent", "model_a": "NEUTRAL", "model_b": "UNKNOWN", "note": "Divergent signals - human review needed but not a hard fail"}, "T6_trend": {"result": "PASS", "trend_score": "MEDIUM", "directions": ["NEUTRAL", "BEARISH"]}, "T7_sellability": {"result": "PASS", "score": 6.7, "breakdown": {"freshness": 6, "signal_clarity": 6, "trend": 7, "reliability": 9.2, "uniqueness": 5}, "recommended_tier": "Pro"}, "T8_schema": {"result": "PASS", "run_status": "skipped"}}, "sample_synthesis": "NEUTRAL", "hard_fails": [], "warnings": ["T5_dual_ai"], "human_decision": null, "rejection_reason": null, "approved_at": null}, {"pool_id": "wb-commodity-prices", "pool_number": 58, "pool_name": "World Bank Pink Sheet Commodity Prices", "status": "AWAITING_REVIEW", "overall": "LOW_SIGNAL", "sellability_score": 5.8, "recommended_tier": "Free", "queued_at": "2026-04-03T00:45:02.207277", "test_results": {"T1_fetch": "PASS", "T2_parse": "PASS", "T3_plausibility": "WARN", "T4_consistency": "PASS", "T5_dual_ai": "WARN", "T6_trend": "WARN", "T7_sellability": "PASS", "T8_schema": "PASS"}, "test_detail": {"T1_fetch": {"result": "PASS", "bytes": 1484027, "seconds": 1.9}, "T2_parse": {"result": "PASS", "records": 3725, "coverage": 100.0, "narrative_coverage": 0.0, "mode": "table"}, "T3_plausibility": {"result": "WARN", "implausible_pct": 11.7, "flags": ["date=1960M01 year out of range", "date=1960M02 year out of range", "date=1960M03 year out of range", "date=1960M04 year out of range", "date=1960M05 year out of range"]}, "T4_consistency": {"result": "PASS", "checksum": "bb685254f3b7", "note": "Monthly cadence - single-run check"}, "T5_dual_ai": {"result": "WARN", "confidence": "divergent", "model_a": "BEARISH", "model_b": "NEUTRAL", "note": "Divergent signals - human review needed but not a hard fail"}, "T6_trend": {"result": "WARN", "trend_score": "LOW", "directions": ["UNKNOWN", "UNKNOWN", "UNKNOWN"]}, "T7_sellability": {"result": "PASS", "score": 5.8, "breakdown": {"freshness": 6, "signal_clarity": 6, "trend": 4, "reliability": 7.6, "uniqueness": 5}, "recommended_tier": "Free"}, "T8_schema": {"result": "PASS", "run_status": "ok"}}, "sample_synthesis": "BEARISH", "hard_fails": [], "warnings": ["T3_plausibility", "T5_dual_ai", "T6_trend"], "human_decision": null, "rejection_reason": null, "approved_at": null}, {"pool_id": "gdelt-agri-sentiment", "pool_number": 40, "pool_name": "GDELT News Sentiment - Agriculture & Food", "status": "AWAITING_REVIEW", "overall": "PASS", "sellability_score": 7.5, "recommended_tier": "Pro", "queued_at": "2026-04-03T00:48:39.169436", "test_results": {"T1_fetch": "PASS", "T2_parse": "SKIP", "T3_plausibility": "SKIP", "T4_consistency": "PASS", "T5_dual_ai": "PASS", "T6_trend": "PASS", "T7_sellability": "PASS", "T8_schema": "PASS"}, "test_detail": {"T1_fetch": {"result": "PASS", "bytes": 10550, "seconds": 58.8}, "T2_parse": {"result": "SKIP", "reason": "T1 failed or no agent"}, "T3_plausibility": {"result": "SKIP", "reason": "No records from T2"}, "T4_consistency": {"result": "PASS", "checksum": "7d9e6a331a60"}, "T5_dual_ai": {"result": "PASS", "confidence": "consensus", "model_a": "NEUTRAL", "model_b": "NEUTRAL"}, "T6_trend": {"result": "PASS", "note": "Non-monthly cadence - trend check on live data"}, "T7_sellability": {"result": "PASS", "score": 7.5, "breakdown": {"freshness": 10, "signal_clarity": 10, "trend": 4, "reliability": 6.0, "uniqueness": 5}, "recommended_tier": "Pro"}, "T8_schema": {"result": "PASS", "run_status": "ok"}}, "sample_synthesis": "NEUTRAL", "hard_fails": [], "warnings": [], "human_decision": null, "rejection_reason": null, "approved_at": null}]};
+// INJECTED STUDIO DATA - generated: 2026-04-06T11:00:02Z
+const INJECTED = {"generated": "2026-04-06T11:00:02Z", "inbox": [{"id": "test-inbox-roundtrip-002", "title": "INBOX TEST 2 - Click reload button to see this appear", "finding": "If you are reading this after clicking the reload button without a full page refresh, the live reload is working.", "urgency": "INFO", "date": "2026-04-03T23:00:00Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "test-inbox-roundtrip-001", "title": "INBOX TEST - Does this message appear, get answered, and clear?", "finding": "This is a test message to verify the full inbox round trip. Answer it in the sidebar, confirm it logs to inbox-log.jsonl", "urgency": "INFO", "date": "2026-04-03T22:45:00Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "ai-intel-2026-04-05", "title": "AI Intel - 5 HIGH PRIORITY - 2026-04-05", "finding": "Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up using. See ai-intel-summary.t", "urgency": "WARN", "date": "2026-04-05T19:42:08Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "ai-intel-2026-04-05", "title": "AI Intel - 4 HIGH PRIORITY - 2026-04-05", "finding": "Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up using. See ai-intel-summary.t", "urgency": "WARN", "date": "2026-04-05T19:52:58Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "ai-intel-2026-04-06", "title": "AI Intel - 3 HIGH PRIORITY - 2026-04-06", "finding": "reddit removed my last post so reposting - i made a thing that saves your claude context when you get rate limited. See ", "urgency": "WARN", "date": "2026-04-06T08:23:20Z", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "nightly-rollup-20260406", "title": "Nightly Rollup - 2026-04-06 - GREEN", "finding": "Score: 87/100. 13 agents checked in; missed: ai-intel. Gate: 0 pass / 0 fail.", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "wb-scan-2026-04-06", "title": "", "finding": "", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "supervisor-cycle-202604060430", "title": "Supervisor Cycle - 2026-04-06 04:30", "finding": "0 tasks dispatched | 13 agents active | Free tier: none | Ollama: UP | Gemini: OK", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "supervisor-cycle-202604060500", "title": "Supervisor Cycle - 2026-04-06 05:00", "finding": "0 tasks dispatched | 13 agents active | Free tier: none | Ollama: UP | Gemini: OK", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}, {"id": "supervisor-cycle-202604060530", "title": "Supervisor Cycle - 2026-04-06 05:30", "finding": "0 tasks dispatched | 13 agents active | Free tier: none | Ollama: UP | Gemini: OK", "urgency": "INFO", "date": "", "source": "supervisor", "project": "studio", "options": [], "recommendation": ""}], "whiteboard": [{"title": "Higgsfield Original Series - Backwards Design", "description": "Monitor platform weekly for genre gaps and vote velocity. Bu", "score": 9, "action": "BUILD"}, {"title": "GitHub Trending: sansan0/TrendRadar", "description": "Netflix-level subtitle cutting, translation, alignment, and ", "score": 9, "action": "BUILD"}, {"title": "GitHub Trending: roboflow/supervision", "description": "", "score": 9, "action": "BUILD"}, {"title": "Externalize TASK_ROUTING - Supervisor Owns Model Selection", "description": "Move hardcoded TASK_ROUTING dict out of ai_gateway.py into t", "score": 9, "action": "BUILD"}, {"title": "Add Gemma 4 (26B MoE) to Model Registry + Ollama Pull + Benc", "description": "Google released Gemma 4 April 2 under Apache 2.0. Four sizes", "score": 9, "action": "BUILD"}, {"title": "GitHub Trending: ml-explore/mlx-lm", "description": "", "score": 9, "action": "BUILD"}, {"title": "Weekend Hunter - Garage Sale Route Optimizer", "description": "Automated garage sale discovery and route optimization. Scra", "score": 9, "action": "LIVE"}, {"title": "GitHub Trending: google-deepmind/gemma", "description": "", "score": 9, "action": "BUILD"}, {"title": "I've played and reviewed 1.000+ horror games, here are some ", "description": "I've been in love with the genre for all my life and could w", "score": 8, "action": "PUBLISH"}, {"title": "DuPont Corfam", "description": "Yes, the search for a perfect synthetic leather that perfect", "score": 8, "action": "RESEARCH"}], "assets": [{"id": "anthropic-claude", "name": "Anthropic Claude API", "type": "llm", "service_type": "chat", "status": "active", "tier": "paid", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Primary reasoning engine. claude-sonnet-4-6 default.", "url": "https://console.anthropic.com"}, {"id": "gemini", "name": "Google Gemini API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 1500, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Used for spec grading, batch work, Gemini Flash free tier.", "url": "https://aistudio.google.com"}, {"id": "openrouter", "name": "OpenRouter API", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0, "tokens": 0}, "last_used": "2026-03-30", "notes": "Sidebar chat backend. Routes to best free model.", "url": "https://openrouter.ai"}, {"id": "ollama", "name": "Ollama (Local)", "type": "llm", "service_type": "chat", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Local LLM fallback. llama3.2 default.", "url": "http://localhost:11434"}, {"id": "youtube-data-v3", "name": "YouTube Data API v3", "type": "api", "service_type": "search", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": 10000, "usage_this_month": {"calls": 0, "units": 10}, "last_used": "2026-03-30", "notes": "AI Intel agent. 100 units per search query. 7 queries = 700 units/day.", "url": "https://console.cloud.google.com"}, {"id": "ebay-api", "name": "eBay Developer API", "type": "api", "service_type": "ecommerce", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "eBay agent. OAuth2. Listing audit, pricing comps.", "url": "https://developer.ebay.com"}, {"id": "supabase", "name": "Supabase", "type": "database", "service_type": "database", "status": "active", "tier": "free", "monthly_limit": 500, "daily_limit": null, "usage_this_month": {"calls": 1, "storage_mb": 0}, "last_used": "2026-03-30", "notes": "Job Match platform DB. Free tier 500MB.", "url": "https://supabase.com"}, {"id": "adzuna", "name": "Adzuna Job API", "type": "api", "service_type": "jobs", "status": "active", "tier": "free", "monthly_limit": null, "daily_limit": null, "usage_this_month": {"calls": 0}, "last_used": "2026-03-30", "notes": "Job discovery. Free tier.", "url": "https://developer.adzuna.com"}], "services": {"image_gen": [{"rank": 1, "name": "DALL-E 3", "provider": "OpenAI", "tier": "paid", "notes": "Best prompt adherence", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Midjourney v6", "provider": "Midjourney", "tier": "paid", "notes": "Best aesthetics", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "FLUX.1", "provider": "Black Forest Labs", "tier": "free", "notes": "Open source, local option", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Stable Diffusion XL", "provider": "Stability AI", "tier": "free", "notes": "Local, controlnet support", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Ideogram 2.0", "provider": "Ideogram", "tier": "free", "notes": "Best for text in images", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Leonardo.ai", "provider": "Leonardo", "tier": "free", "notes": "150 free credits/day", "studio_connected": false, "buzz_score": 0, "trending": false}], "video_gen": [{"rank": 1, "name": "Sora", "provider": "OpenAI", "tier": "paid", "notes": "Best quality, limited access", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "Kling", "provider": "Kuaishou", "tier": "free", "notes": "Best free option", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Runway Gen-3", "provider": "Runway", "tier": "paid", "notes": "Fast iteration", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Higgsfield", "provider": "Higgsfield", "tier": "free", "notes": "Original Series contests", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 5, "name": "Pika Labs", "provider": "Pika", "tier": "free", "notes": "Free tier available", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 6, "name": "Luma Dream Machine", "provider": "Luma AI", "tier": "free", "notes": "Free generations daily", "studio_connected": false, "buzz_score": 0, "trending": false}], "search": [{"rank": 1, "name": "Perplexity Pro", "provider": "Perplexity", "tier": "paid", "notes": "Best for research", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "You.com", "provider": "You.com", "tier": "free", "notes": "Free API available", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Tavily", "provider": "Tavily", "tier": "free", "notes": "MCP connected", "studio_connected": true, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Brave Search API", "provider": "Brave", "tier": "free", "notes": "2000 free/month", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 5, "name": "SerpAPI", "provider": "SerpAPI", "tier": "free", "notes": "100 free/month", "studio_connected": false, "buzz_score": 0, "trending": false}], "voice": [{"rank": 1, "name": "ElevenLabs", "provider": "ElevenLabs", "tier": "paid", "notes": "Best voice cloning", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "OpenAI TTS", "provider": "OpenAI", "tier": "paid", "notes": "Good quality, fast", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "Whisper", "provider": "OpenAI/Local", "tier": "free", "notes": "Local transcription", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "Coqui TTS", "provider": "Coqui", "tier": "free", "notes": "Open source", "studio_connected": false, "buzz_score": 0, "trending": false}], "embedding": [{"rank": 1, "name": "text-embedding-3-large", "provider": "OpenAI", "tier": "paid", "notes": "Best quality", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 2, "name": "voyage-3", "provider": "Voyage AI", "tier": "paid", "notes": "Best for RAG", "studio_connected": false, "buzz_score": 0, "trending": false}, {"rank": 3, "name": "nomic-embed-text", "provider": "Ollama/Local", "tier": "free", "notes": "Local via Ollama", "studio_connected": true, "buzz_score": 0, "trending": false}, {"rank": 4, "name": "all-MiniLM-L6-v2", "provider": "HuggingFace/Local", "tier": "free", "notes": "ChromaDB default", "studio_connected": true, "buzz_score": 0, "trending": false}]}, "servicesDate": "2026-04-06", "intelSummary": "AI INTEL - 2026-04-06\nGenerated: 2026-04-06T08:23:20Z\nSources: 11/11 OK | 3 HIGH / 63 WORTH / 147 LOGGED | YouTube: 14 videos surfaced\n\nHIGH PRIORITY (3):\n  * reddit removed my last post so reposting ? i made a thing that saves your claude context w | score:29 | https://reddit.com/r/ClaudeAI/comments/1sdscqq/reddit_removed_my_last_post_so_reposting_i_made_a/\n  * Claude Code heavy users ? biggest game-changer and most frustrating moment? | score:28 | https://reddit.com/r/ClaudeAI/comments/1sdqttp/claude_code_heavy_users_biggest_gamechanger_and/\n  * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano\n\nWORTH READING (63):\n  * Latest AI News | 5th Apr 2026 (EDT) | AI News April 2026: NVIDIA Robotics, Anthropic Deals | score:25 | https://www", "studioBriefing": "# STUDIO BRIEFING\n*Auto-generated context for new Claude sessions. Read this file first.*\n*Updated: 2026-04-06 | Owner: Joe Palek | Studio: G:\\\\My Drive\\\\Projects\\\\_studio*\n\n---\n\n## WHO YOU ARE TALKING TO\n\nJoe runs a multi-agent AI studio from Windows. He is the executive director.\nYou are a reasoning engine. You do not manually manage files or run agents.\nThe supervisor agent and Python scripts do the mechanical work.\nJoe gives directives. You translate them into specific file edits, script commands, or agent dispatches.\n\n---\n\n## STUDIO ROOT\n\n'''\nG:\\\\My Drive\\\\Projects\\\\_studio\\\\\n'''\n\nAll paths below are relative to this root unless noted.\n\n---\n\n## CURRENT TOP DIRECTIVE (Apr 1 2026)\n\n**Maximize daily free-tier image and video generation for art department.**\n- Agency has 283 built character folders (all specs passed, all folders created)\n- Characters need to move from agency ? CX agent ? art department daily image pipeline\n- Art dept should be generating as many images/videos per day as free quotas allow\n- Goal: high-quality content that doesn't need revision ? maximum throughput, not maximum volume\n\n---\n\n## AGENCY STATUS\n\n| Item | Value |\n|------|-------|\n| Total passing specs | 283 |\n| Total character folders built | 507 (some duplicates from two build runs) |\n| Last build run | 2026-03-30 13:15 |\n| Build log | 'agency/spec-queue/build-log.json' |\n| Character folders | 'agency/characters/{universe}/{name}_{id}/' |\n| Universes | band-members (49), inmates-vs-guards (84), other (30), original-fiction (120) |\n| Historical figures | 'agency/historical-figures/' ? Tesla, da Vinci, Darwin, Curie, Galileo specs exist |\n\n**Character folder path pattern:**\n'agency/characters/band-members/Sam Torres_c001/'\n\n**Passing specs file:** 'agency/spec-queue/passing-specs.json'\nAll 283 specs have 'status: \"ungraded\"' ? grading/scoring not yet wired to CX agent scan.\n\n---\n\n## CX AGENT\n\n| Item | Value |\n|------|-------|\n| Script | 'cx_agent/cx_agent.py' |\n| Integration guide | 'cx_agent/CX_Agent_Integration_Guide.md' |\n| Manifest (routing rules) | 'cx_agent/asset_distribution_manifest.json' |\n| Task Scheduler | '\\\\Studio\\\\CX_Agent_Daily_Scan' (2 AM daily) + '\\\\Studio\\\\CX_Agent_Hourly_Monitor' |\n| Logs | 'cx_agent/logs/' |\n| Data | 'cx_agent/data/' |\n\n**CX Agent role:** Quality gate. Receives assets from creator agents, validates format+quality+brand,\nroutes to final destination, tracks usage, feeds social media intel.\nPass threshold: quality >= 8.\n\n**What CX agent does NOT yet do:**\n- Pick characters from agency and dispatch to art department\n- Track per-character image generation status\n- Report art dept quota usage back to supervisor\n\n---\n\n## ART DEPARTMENT / IMAGE GENERATION\n\n**Free tier quota stack (confirmed live as of 2026-04-01):**\n\n| Provider | Daily Free | API? | Best For |\n|----------|------------|------|---------|\n| Cloudflare FLUX.1 Schnell | ~50-100 images/day | YES | Volume ? API wired |\n| Ideogram 2 | ~10 images/day | YES | Text-in-image, logos |\n| Playground ", "lastDigest": {"date": "2026-04-06", "generated_at": "2026-04-06T03:23:45.108868", "audit_summary": {"total_entries": 2, "gate_decisions": {"total": 0, "passed": 0, "failed": 0}, "scheduler_fires": {"total": 0, "confirmed": 0, "silent": 0}, "heartbeats": 0, "inbox_items_written": 0, "flags_raised": 0, "top_failure_category": null}, "agent_checkins": {"checked_in": ["agency-build", "ai-intel-agent", "ai-services-rankings", "auto-answer-gemini", "check-drift", "git-commit", "janitor", "nightly-rollup", "product-archaeology", "supervisor", "vector-reindex", "vintage-agent", "whiteboard-scorer"], "missed": ["ai-intel"]}, "pending_inbox_items": 0, "pending_flags": 1, "health_score": 87, "health_status": "GREEN", "notes": "13 agents in | missed: ai-intel | -10 missed agent: ai-intel"}, "modelRegistry": {}, "modelRegistryDate": "2026-04-06", "reviewQueue": [{"pool_id": "wasde-parser", "pool_number": 56, "pool_name": "USDA WASDE Food Cost Alert", "status": "AWAITING_REVIEW", "overall": "PASS", "sellability_score": 6.7, "recommended_tier": "Pro", "queued_at": "2026-04-03T00:13:51.349164", "test_results": {"T1_fetch": "PASS", "T2_parse": "PASS", "T3_plausibility": "PASS", "T4_consistency": "PASS", "T5_dual_ai": "WARN", "T6_trend": "PASS", "T7_sellability": "PASS", "T8_schema": "PASS"}, "test_detail": {"T1_fetch": {"result": "PASS", "bytes": 104123, "seconds": 11.3}, "T2_parse": {"result": "PASS", "records": 5, "coverage": 0.0, "narrative_coverage": 100.0, "mode": "narrative"}, "T3_plausibility": {"result": "PASS", "checked": 26}, "T4_consistency": {"result": "PASS", "checksum": "aa117945e48c", "note": "Monthly cadence - single-run check"}, "T5_dual_ai": {"result": "WARN", "confidence": "divergent", "model_a": "NEUTRAL", "model_b": "UNKNOWN", "note": "Divergent signals - human review needed but not a hard fail"}, "T6_trend": {"result": "PASS", "trend_score": "MEDIUM", "directions": ["NEUTRAL", "BEARISH"]}, "T7_sellability": {"result": "PASS", "score": 6.7, "breakdown": {"freshness": 6, "signal_clarity": 6, "trend": 7, "reliability": 9.2, "uniqueness": 5}, "recommended_tier": "Pro"}, "T8_schema": {"result": "PASS", "run_status": "skipped"}}, "sample_synthesis": "NEUTRAL", "hard_fails": [], "warnings": ["T5_dual_ai"], "human_decision": null, "rejection_reason": null, "approved_at": null}, {"pool_id": "wb-commodity-prices", "pool_number": 58, "pool_name": "World Bank Pink Sheet Commodity Prices", "status": "AWAITING_REVIEW", "overall": "LOW_SIGNAL", "sellability_score": 5.8, "recommended_tier": "Free", "queued_at": "2026-04-03T00:45:02.207277", "test_results": {"T1_fetch": "PASS", "T2_parse": "PASS", "T3_plausibility": "WARN", "T4_consistency": "PASS", "T5_dual_ai": "WARN", "T6_trend": "WARN", "T7_sellability": "PASS", "T8_schema": "PASS"}, "test_detail": {"T1_fetch": {"result": "PASS", "bytes": 1484027, "seconds": 1.9}, "T2_parse": {"result": "PASS", "records": 3725, "coverage": 100.0, "narrative_coverage": 0.0, "mode": "table"}, "T3_plausibility": {"result": "WARN", "implausible_pct": 11.7, "flags": ["date=1960M01 year out of range", "date=1960M02 year out of range", "date=1960M03 year out of range", "date=1960M04 year out of range", "date=1960M05 year out of range"]}, "T4_consistency": {"result": "PASS", "checksum": "bb685254f3b7", "note": "Monthly cadence - single-run check"}, "T5_dual_ai": {"result": "WARN", "confidence": "divergent", "model_a": "BEARISH", "model_b": "NEUTRAL", "note": "Divergent signals - human review needed but not a hard fail"}, "T6_trend": {"result": "WARN", "trend_score": "LOW", "directions": ["UNKNOWN", "UNKNOWN", "UNKNOWN"]}, "T7_sellability": {"result": "PASS", "score": 5.8, "breakdown": {"freshness": 6, "signal_clarity": 6, "trend": 4, "reliability": 7.6, "uniqueness": 5}, "recommended_tier": "Free"}, "T8_schema": {"result": "PASS", "run_status": "ok"}}, "sample_synthesis": "BEARISH", "hard_fails": [], "warnings": ["T3_plausibility", "T5_dual_ai", "T6_trend"], "human_decision": null, "rejection_reason": null, "approved_at": null}, {"pool_id": "gdelt-agri-sentiment", "pool_number": 40, "pool_name": "GDELT News Sentiment - Agriculture & Food", "status": "AWAITING_REVIEW", "overall": "PASS", "sellability_score": 7.5, "recommended_tier": "Pro", "queued_at": "2026-04-03T00:48:39.169436", "test_results": {"T1_fetch": "PASS", "T2_parse": "SKIP", "T3_plausibility": "SKIP", "T4_consistency": "PASS", "T5_dual_ai": "PASS", "T6_trend": "PASS", "T7_sellability": "PASS", "T8_schema": "PASS"}, "test_detail": {"T1_fetch": {"result": "PASS", "bytes": 10550, "seconds": 58.8}, "T2_parse": {"result": "SKIP", "reason": "T1 failed or no agent"}, "T3_plausibility": {"result": "SKIP", "reason": "No records from T2"}, "T4_consistency": {"result": "PASS", "checksum": "7d9e6a331a60"}, "T5_dual_ai": {"result": "PASS", "confidence": "consensus", "model_a": "NEUTRAL", "model_b": "NEUTRAL"}, "T6_trend": {"result": "PASS", "note": "Non-monthly cadence - trend check on live data"}, "T7_sellability": {"result": "PASS", "score": 7.5, "breakdown": {"freshness": 10, "signal_clarity": 10, "trend": 4, "reliability": 6.0, "uniqueness": 5}, "recommended_tier": "Pro"}, "T8_schema": {"result": "PASS", "run_status": "ok"}}, "sample_synthesis": "NEUTRAL", "hard_fails": [], "warnings": [], "human_decision": null, "rejection_reason": null, "approved_at": null}]};
 // END INJECTED DATA
 </script>
 <!-- TAB BAR: INBOX ONLY -->
@@ -272,14 +272,14 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   <div class="tab active" onclick="switchTab('status')">STATUS</div>
   <div class="tab" onclick="switchTab('inbox')">INBOX<span class="tab-badge" id="inbox-badge">0</span></div>
   <div class="tab" onclick="switchTab('chat')">CHAT<span class="tab-badge" id="chat-badge" style="background:var(--green);display:none;">AI</span></div>
-  <div class="tab" onclick="switchTab('studio')">🎬 STUDIO<span class="tab-badge" id="studio-badge" style="background:var(--blue);display:none;">NEW</span></div>
+  <div class="tab" onclick="switchTab('studio')">ðŸŽ¬ STUDIO<span class="tab-badge" id="studio-badge" style="background:var(--blue);display:none;">NEW</span></div>
   <div class="tab" onclick="switchTab('plan')">PLAN</div>
   <div class="tab" onclick="switchTab('assets')">ASSETS</div>
   <div class="tab" onclick="switchTab('data')">DATA</div>
   <div class="tab" onclick="switchTab('config')">CFG</div>
 </div>
 
-<!-- ═══ STATUS ═════════════════════════════════════════════════ -->
+<!-- â•â•â• STATUS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-status" class="panel active">
 <div class="panel-scroll">
 
@@ -296,7 +296,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   <div id="intel-card" onclick="openIntelModal()" style="display:none;">
     <div class="intel-hdr">
       <span class="intel-title">AI Intel Today</span>
-      <span class="intel-hint">tap to expand ↗</span>
+      <span class="intel-hint">tap to expand â†—</span>
     </div>
     <div id="intel-preview"></div>
   </div>
@@ -305,18 +305,18 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   <div id="digest-card" onclick="openDigestModal()" style="display:none;background:var(--panel);border:1px solid var(--border);border-radius:5px;padding:7px 10px;margin-bottom:8px;cursor:pointer;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
       <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;" id="digest-status-label">Last Night</span>
-      <span style="font-size:9px;color:var(--text-dim);">tap to read ↗</span>
+      <span style="font-size:9px;color:var(--text-dim);">tap to read â†—</span>
     </div>
     <div id="digest-preview" style="font-size:11px;color:var(--text);"></div>
   </div>
 
   <!-- AI Services Metrics Card -->
   <div id="services-card" style="display:none;background:var(--panel);border:1px solid var(--border);border-radius:5px;padding:7px 10px;margin-bottom:8px;">
-    <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:6px;">Art Dept · Free Capacity</div>
+    <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);margin-bottom:6px;">Art Dept Â· Free Capacity</div>
     <div id="services-metrics" style="display:flex;flex-direction:column;gap:4px;"></div>
   </div>
 
-  <button class="btn btn-g btn-w" onclick="loadStatus()">↻ Refresh</button>
+  <button class="btn btn-g btn-w" onclick="loadStatus()">â†» Refresh</button>
 
   <div class="block">
     <div class="lbl">System</div>
@@ -370,7 +370,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
 </div>
 </div>
 
-<!-- ═══ INBOX ══════════════════════════════════════════════════ -->
+<!-- â•â•â• INBOX â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-inbox" class="panel">
   <!-- Filter bar -->
   <div style="display:flex;gap:5px;padding:8px 10px 0;flex-shrink:0;flex-wrap:wrap;">
@@ -386,42 +386,42 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
       <option value="oldest">Oldest</option>
       <option value="source">By Source</option>
     </select>
-    <button class="btn" style="padding:4px 8px;font-size:10px;" onclick="reloadInbox(this)">↻</button>
+    <button class="btn" style="padding:4px 8px;font-size:10px;" onclick="reloadInbox(this)">â†»</button>
   </div>
   <div class="panel-scroll" id="inbox-list" style="padding-top:8px;">
     <div class="empty">Loading inbox...</div>
   </div>
   
-  <!-- SUPERVISOR INBOX LOG — COLLAPSIBLE -->
+  <!-- SUPERVISOR INBOX LOG â€” COLLAPSIBLE -->
   <div style="border-top:1px solid var(--border);margin-top:10px;padding:10px;flex-shrink:0;">
     <div onclick="toggleSupervisorInbox()" style="cursor:pointer;display:flex;align-items:center;gap:8px;padding:8px;background:var(--panel);border:1px solid var(--border);border-radius:4px;margin-bottom:8px;user-select:none;">
       <span style="font-size:11px;font-weight:bold;color:var(--text);">Supervisor Inbox</span>
-      <span id="sup-inbox-toggle" style="margin-left:auto;color:var(--text-dim);font-size:10px;">▼</span>
+      <span id="sup-inbox-toggle" style="margin-left:auto;color:var(--text-dim);font-size:10px;">â–¼</span>
     </div>
     <div id="supervisor-inbox-messages" style="max-height:200px;overflow-y:auto;display:none;"></div>
   </div>
 </div>
 
-<!-- ═══ CHAT ═══════════════════════════════════════════════════ -->
+<!-- â•â•â• CHAT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-chat" class="panel">
   <div id="chat-msgs">
-    <div class="msg msg-s">Studio AI · OpenRouter free (no cost) · Anthropic optional</div>
+    <div class="msg msg-s">Studio AI Â· OpenRouter free (no cost) Â· Anthropic optional</div>
     <div class="msg msg-a">Connected to your studio. Ask about projects, agents, inbox items, or anything in the system.</div>
   </div>
   <div id="chat-bottom">
     <div id="chat-attach-tray"></div>
     <div id="chat-row">
-      <label id="chat-attach-btn" title="Attach file">📎
+      <label id="chat-attach-btn" title="Attach file">ðŸ“Ž
         <input type="file" id="chat-file-in" style="display:none;" onchange="attachFile(event)">
       </label>
       <textarea id="chat-in" placeholder="Ask AI..." rows="1"
         onkeydown="chatKey(event)" oninput="autoSize(this)"></textarea>
-      <button id="chat-send" onclick="sendChat()">➤</button>
+      <button id="chat-send" onclick="sendChat()">âž¤</button>
     </div>
   </div>
 </div>
 
-<!-- ═══ PLAN ═══════════════════════════════════════════════════ -->
+<!-- â•â•â• PLAN â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-plan" class="panel" style="flex-direction:column;">
   <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 10px 6px;flex-shrink:0;border-bottom:1px solid var(--border);">
     <span style="font-size:9px;letter-spacing:2px;color:var(--text-dim);text-transform:uppercase;">Whiteboard</span>
@@ -445,7 +445,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   </div>
 </div>
 
-<!-- ═══ ASSETS ═════════════════════════════════════════════════ -->
+<!-- â•â•â• ASSETS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-assets" class="panel">
   <div style="display:flex;border-bottom:1px solid var(--border);flex-shrink:0;">
     <button class="subtab active" id="at-res" onclick="assetsTab('res')" style="flex:1;font-size:10px;padding:7px 3px;text-align:center;cursor:pointer;color:var(--green);border-bottom:2px solid var(--green);background:none;border-top:none;border-left:none;border-right:none;">RESOURCES</button>
@@ -456,7 +456,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   <div id="ap-res" class="panel-scroll" style="display:block;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 0 8px;">
       <div class="sec" style="margin:0;border:none;">API & Resource Status</div>
-      <button class="btn" style="padding:3px 7px;font-size:10px;" onclick="loadResources()">↻</button>
+      <button class="btn" style="padding:3px 7px;font-size:10px;" onclick="loadResources()">â†»</button>
     </div>
     <div id="resource-list"><div class="empty">Loading...</div></div>
   </div>
@@ -487,7 +487,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   </div>
 </div>
 
-<!-- ═══ DATA EXPLORER ══════════════════════════════════════════ -->
+<!-- â•â•â• DATA EXPLORER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-data" class="panel">
 <div class="panel-scroll">
   <div class="sec" style="margin-bottom:8px;">Data Explorer</div>
@@ -517,15 +517,25 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
     <div style="display:flex;gap:6px;">
       <input class="fi" id="data-q" placeholder="Ask a question about this data..." style="flex:1;margin:0;"
         onkeydown="if(event.key==='Enter')dataQ()">
-      <button class="btn btn-g" onclick="dataQ()">➤</button>
+      <button class="btn btn-g" onclick="dataQ()">âž¤</button>
     </div>
   </div>
 </div>
 </div>
 
-<!-- ═══ CONFIG ══════════════════════════════════════════════════ -->
+<!-- â•â•â• CONFIG â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div id="panel-config" class="panel">
 <div class="panel-scroll">
+
+  <!-- AI Server Control -->
+  <div style="margin-bottom:14px;">
+    <div class="sec">AI Server (localhost:11435)</div>
+    <div id="server-status" style="font-size:10px;color:var(--text-dim);padding:4px 0;">Checking server status...</div>
+    <div style="display:flex;gap:8px;margin-top:6px;">
+      <button class="btn btn-g" style="padding:5px 12px;" onclick="checkServer()">Check Status</button>
+      <button class="btn btn-a" style="padding:5px 12px;" onclick="restartServer()">Restart Server</button>
+    </div>
+  </div>
 
   <!-- Vector RAG Status -->
   <div style="margin-bottom:14px;">
@@ -539,7 +549,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
 
   <!-- Anthropic API Key -->
   <div style="margin-bottom:14px;">
-    <div class="sec">Anthropic API (Optional · Billed to API account)</div>
+    <div class="sec">Anthropic API (Optional Â· Billed to API account)</div>
     <div style="font-size:10px;color:var(--text-dim);margin-bottom:6px;">
       Not required. OpenRouter free tier handles chat at zero cost.<br>
       Add this only if you want Claude-quality responses in the sidebar.<br>
@@ -602,7 +612,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
   <div id="modal-box">
     <div id="modal-title">
       AI Intel
-      <button id="modal-close" onclick="closeModal()">✕</button>
+      <button id="modal-close" onclick="closeModal()">âœ•</button>
     </div>
     <div id="modal-content"></div>
   </div>
@@ -611,7 +621,7 @@ const INJECTED = {"generated": "2026-04-06T00:02:34Z", "inbox": [{"id": "test-in
 <div id="toast"></div>
 
 <script>
-// ═══ STATE ════════════════════════════════════════════════════
+// â•â•â• STATE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 const SK = 'sb_cfg_v3';
 let cfg = {antKey:'',orKey:'',ollamaUrl:'http://localhost:11434',ollamaModel:'gemma3:4b'};
 let chatHist = [], attachedFiles = [], inboxItems = [], servicesData = null;
@@ -641,12 +651,12 @@ function bootDone() {
 
 // Default launch buttons
 const DEFAULT_LAUNCHES = [
-  {id:'gh-pages', name:'Studio GitHub Pages', icon:'🌐', url:'https://joepalek.github.io/studio/'},
-  {id:'claude-ai', name:'Claude.ai', icon:'🤖', url:'https://claude.ai'},
-  {id:'ebay-seller', name:'eBay Seller Hub', icon:'🛒', url:'https://www.ebay.com/sh/ovw'},
+  {id:'gh-pages', name:'Studio GitHub Pages', icon:'ðŸŒ', url:'https://joepalek.github.io/studio/'},
+  {id:'claude-ai', name:'Claude.ai', icon:'ðŸ¤–', url:'https://claude.ai'},
+  {id:'ebay-seller', name:'eBay Seller Hub', icon:'ðŸ›’', url:'https://www.ebay.com/sh/ovw'},
 ];
 
-// ═══ INIT ════════════════════════════════════════════════════
+// â•â•â• INIT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 window.onerror = (msg, src, line, col, err) => {
   console.error('SIDEBAR ERR line ' + line + ': ' + msg);
   const el = document.getElementById('sys-status');
@@ -665,7 +675,7 @@ window.onload = () => {
   setTimeout(() => { try { bootDone(); } catch(e) {} }, 200);
 };
 
-// ═══ CFG ═════════════════════════════════════════════════════
+// â•â•â• CFG â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function loadCfg() {
   try { const s = localStorage.getItem(SK); if(s) cfg = {...cfg,...JSON.parse(s)}; } catch(e){}
   const urlEl = document.getElementById('cfg-ollama-url');
@@ -714,7 +724,7 @@ function updateKeyBadges() {
   const chatBadge = document.getElementById('chat-badge');
   if (antEl) {
     if (cfg.antKey && cfg.antKey.length > 10) {
-      antEl.textContent = 'SET ✓'; antEl.className = 'key-badge key-set';
+      antEl.textContent = 'SET âœ“'; antEl.className = 'key-badge key-set';
       if (chatBadge) chatBadge.style.display = 'inline-block';
     } else {
       antEl.textContent = 'NOT SET'; antEl.className = 'key-badge key-miss';
@@ -722,7 +732,7 @@ function updateKeyBadges() {
   }
   if (orEl) {
     if (cfg.orKey && cfg.orKey.length > 10) {
-      orEl.textContent = 'SET ✓'; orEl.className = 'key-badge key-set';
+      orEl.textContent = 'SET âœ“'; orEl.className = 'key-badge key-set';
     } else {
       orEl.textContent = 'NOT SET'; orEl.className = 'key-badge key-miss';
     }
@@ -741,24 +751,24 @@ async function testOR() {
       body: JSON.stringify({model:'google/gemma-3-4b-it:free',
         messages:[{role:'user',content:'reply with just the word OK'}], max_tokens:5})
     });
-    if (r.ok) { el.style.color='var(--green)'; el.textContent = '✓ Connected - free tier active'; }
-    else { const d=await r.json(); el.style.color='var(--red)'; el.textContent = '✗ ' + (d.error?.message||r.status); }
-  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ ' + e.message.substring(0,40); }
+    if (r.ok) { el.style.color='var(--green)'; el.textContent = 'âœ“ Connected - free tier active'; }
+    else { const d=await r.json(); el.style.color='var(--red)'; el.textContent = 'âœ— ' + (d.error?.message||r.status); }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = 'âœ— ' + e.message.substring(0,40); }
 }
 
 async function testAnt() {
   const el = document.getElementById('ant-test-result');
   el.textContent = 'Testing...';
-  if (!cfg.antKey) { el.textContent = '✗ No key saved'; return; }
+  if (!cfg.antKey) { el.textContent = 'âœ— No key saved'; return; }
   try {
     const r = await fetch('https://api.anthropic.com/v1/messages', {
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':cfg.antKey,'anthropic-version':'2023-06-01'},
       body: JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:10,messages:[{role:'user',content:'hi'}]})
     });
-    if (r.ok) { el.style.color='var(--green)'; el.textContent = '✓ Connected'; }
-    else { const d = await r.json(); el.style.color='var(--red)'; el.textContent = '✗ ' + (d.error?.message||r.status); }
-  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ ' + e.message.substring(0,40); }
+    if (r.ok) { el.style.color='var(--green)'; el.textContent = 'âœ“ Connected'; }
+    else { const d = await r.json(); el.style.color='var(--red)'; el.textContent = 'âœ— ' + (d.error?.message||r.status); }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = 'âœ— ' + e.message.substring(0,40); }
 }
 
 async function testOllama() {
@@ -769,9 +779,9 @@ async function testOllama() {
     if (r.ok) {
       const d = await r.json();
       const models = (d.models||[]).map(m=>m.name).join(', ') || '(none)';
-      el.style.color='var(--green)'; el.textContent = '✓ Connected · ' + models.substring(0,60);
-    } else { el.style.color='var(--red)'; el.textContent = '✗ HTTP ' + r.status; }
-  } catch(e) { el.style.color='var(--red)'; el.textContent = '✗ Not reachable'; }
+      el.style.color='var(--green)'; el.textContent = 'âœ“ Connected Â· ' + models.substring(0,60);
+    } else { el.style.color='var(--red)'; el.textContent = 'âœ— HTTP ' + r.status; }
+  } catch(e) { el.style.color='var(--red)'; el.textContent = 'âœ— Not reachable'; }
 }
 
 async function checkRagStatus() {
@@ -782,15 +792,15 @@ async function checkRagStatus() {
     const r = await fetch(cfg.ollamaUrl + '/api/tags', {signal:AbortSignal.timeout(3000)});
     if (r.ok) {
       el.style.background = '#1a4a1e'; el.style.color = 'var(--green)'; el.style.border = '1px solid var(--green)';
-      el.textContent = '✓ Ollama running - Config G (Vector RAG) active';
+      el.textContent = 'âœ“ Ollama running - Config G (Vector RAG) active';
     } else { throw new Error('HTTP ' + r.status); }
   } catch(e) {
     el.style.background = '#2a2200'; el.style.color = 'var(--amber)'; el.style.border = '1px solid var(--amber)';
-    el.textContent = '⚠ Ollama offline - chat uses OpenRouter/Anthropic instead. This is fine.';
+    el.textContent = 'âš  Ollama offline - chat uses OpenRouter/Anthropic instead. This is fine.';
   }
 }
 
-// ═══ TABS ════════════════════════════════════════════════════
+// â•â•â• TABS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function switchTab(name) {
   // Match by onclick content, not by index - immune to extra elements with class 'tab'
   document.querySelectorAll('.tab').forEach(t => {
@@ -808,7 +818,7 @@ function switchTab(name) {
   if (name === 'config') checkRagStatus();
 }
 
-// ═══ CLOCK ═══════════════════════════════════════════════════
+// â•â•â• CLOCK â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function startClock() {
   function tick() {
     try {
@@ -825,7 +835,7 @@ function startClock() {
   tick(); setInterval(tick, 15000);
 }
 
-// ═══ STATUS ══════════════════════════════════════════════════
+// â•â•â• STATUS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function loadStatus() {
   const sysEl = document.getElementById('sys-status');
   const isMobile = window.innerWidth < 600;
@@ -834,7 +844,7 @@ async function loadStatus() {
   try { loadDigestCard(); } catch(e) { console.error('loadDigestCard:', e); }
   try { loadServicesCard(); } catch(e) { console.error('loadServicesCard:', e); }
   try { loadProjects(); } catch(e) { console.error('loadProjects:', e); }
-  // Skip network check on mobile — saves 4s timeout
+  // Skip network check on mobile â€” saves 4s timeout
   if (!isMobile) {
     try {
       const r = await fetch('https://joepalek.github.io/studio/status.json',
@@ -867,7 +877,7 @@ function loadIntelStrip() {
   if (!items.length) return;
   document.getElementById('intel-card').style.display = 'block';
   document.getElementById('intel-preview').innerHTML = items.slice(0,2).map(l =>
-    `<div class="intel-item">▸ ${esc(l.replace(/^\s*\*/,'').replace(/\|score:\d+.*/,'').trim())}</div>`
+    `<div class="intel-item">â–¸ ${esc(l.replace(/^\s*\*/,'').replace(/\|score:\d+.*/,'').trim())}</div>`
   ).join('');
 }
 
@@ -889,8 +899,8 @@ function loadDigestCard() {
   label.innerHTML = `<span style="color:${color};font-weight:bold;">${esc(status)} ${score}/100</span> <span style="color:var(--text-dim);font-size:8px;">${esc(date)}</span>`;
 
   const missedTxt = missed.length ? missed.length + ' agents missed' : 'all agents checked in';
-  preview.innerHTML = `${checkedIn.length} agents ran · ${esc(missedTxt)}` +
-    (d.pending_inbox_items ? ` · ${d.pending_inbox_items} inbox pending` : '');
+  preview.innerHTML = `${checkedIn.length} agents ran Â· ${esc(missedTxt)}` +
+    (d.pending_inbox_items ? ` Â· ${d.pending_inbox_items} inbox pending` : '');
 
   card.style.borderColor = color;
   card.style.display = 'block';
@@ -904,7 +914,7 @@ function openDigestModal() {
   const color  = status === 'GREEN' ? 'var(--green)' : status === 'YELLOW' ? 'var(--amber)' : 'var(--red)';
 
   document.getElementById('modal-title').innerHTML =
-    `Nightly Digest — ${esc(d.date||'')} <button id="modal-close" onclick="closeModal()">✕</button>`;
+    `Nightly Digest â€” ${esc(d.date||'')} <button id="modal-close" onclick="closeModal()">âœ•</button>`;
 
   const missed    = (d.agent_checkins||{}).missed || [];
   const checkedIn = (d.agent_checkins||{}).checked_in || [];
@@ -923,7 +933,7 @@ function openDigestModal() {
   </div>`;
 
   html += `<div style="font-size:11px;margin-bottom:8px;padding:6px 8px;background:var(--bg);border-radius:4px;">
-    <div><strong>Gates:</strong> ${gates.passed||0} passed · ${gates.failed||0} failed</div>
+    <div><strong>Gates:</strong> ${gates.passed||0} passed Â· ${gates.failed||0} failed</div>
     <div><strong>Inbox pending:</strong> ${d.pending_inbox_items||0}</div>
     <div><strong>Flags pending:</strong> ${d.pending_flags||0}</div>
   </div>`;
@@ -943,9 +953,9 @@ function loadServicesCard() {
   if (!card || !metrics) return;
 
   const CATS = {
-    image_gen: {label: '🖼 Images', icon: '📷'},
-    video_gen: {label: '🎬 Video',  icon: '🎥'},
-    chat:      {label: '💬 AI Chat', icon: '🤖'},
+    image_gen: {label: 'ðŸ–¼ Images', icon: 'ðŸ“·'},
+    video_gen: {label: 'ðŸŽ¬ Video',  icon: 'ðŸŽ¥'},
+    chat:      {label: 'ðŸ’¬ AI Chat', icon: 'ðŸ¤–'},
   };
 
   let rows = [];
@@ -956,7 +966,7 @@ function loadServicesCard() {
     const free = items.filter(i => i.tier === 'free');
     if (!free.length) continue;
     const top = free[0];
-    const note = (top.notes || '').replace('ART DEPT daily quota — ','').replace('ART DEPT — ','').substring(0,45);
+    const note = (top.notes || '').replace('ART DEPT daily quota â€” ','').replace('ART DEPT â€” ','').substring(0,45);
     rows.push(
       `<div style="display:flex;justify-content:space-between;align-items:baseline;">
         <span style="font-size:11px;color:var(--text);">${info.label}: <span style="color:var(--green);">${esc(top.name||'')}</span></span>
@@ -973,7 +983,7 @@ function loadServicesCard() {
 
 function openIntelModal() {
   if (typeof INJECTED === 'undefined' || !INJECTED.intelSummary) return;
-  document.getElementById('modal-title').innerHTML = 'AI Intel Today <button id="modal-close" onclick="closeModal()">✕</button>';
+  document.getElementById('modal-title').innerHTML = 'AI Intel Today <button id="modal-close" onclick="closeModal()">âœ•</button>';
   const content = INJECTED.intelSummary;
   // Format into readable sections with clickable links
   let html = '';
@@ -986,7 +996,7 @@ function openIntelModal() {
       const urlM = line.match(/https?:\/\/[^\s]+/);
       const clean = line.replace(/^\s*\*/,'').replace(/\|score:\d+/,'').replace(/https?:\/\/[^\s]+/,'').trim();
       html += `<div style="font-size:11px;padding:3px 0;border-bottom:1px solid var(--border);">
-        ${esc(clean)}${urlM ? ` <a href="${urlM[0]}" target="_blank" style="color:var(--blue);font-size:10px;">→ link</a>` : ''}
+        ${esc(clean)}${urlM ? ` <a href="${urlM[0]}" target="_blank" style="color:var(--blue);font-size:10px;">â†’ link</a>` : ''}
       </div>`;
     } else if (line.trim()) {
       html += `<div style="font-size:10px;color:var(--text-dim);padding:1px 0;">${esc(line)}</div>`;
@@ -998,7 +1008,7 @@ function openIntelModal() {
 
 function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
 
-// ═══ LAUNCH BUTTONS ══════════════════════════════════════════
+// â•â•â• LAUNCH BUTTONS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function loadLaunches() {
   let saved = [];
   try { saved = JSON.parse(localStorage.getItem('sb_launches') || '[]'); } catch(e){}
@@ -1009,9 +1019,9 @@ function loadLaunches() {
 function renderLaunches(items) {
   document.getElementById('launch-list').innerHTML = items.map((item,i) =>
     `<div class="lbtn" onclick="openLaunch('${esc(item.url)}')">
-      <span class="lbtn-icon">${item.icon||'🔗'}</span>
+      <span class="lbtn-icon">${item.icon||'ðŸ”—'}</span>
       <span class="lbtn-name">${esc(item.name)}</span>
-      <span class="lbtn-del" onclick="deleteLaunch(event,${i})">✕</span>
+      <span class="lbtn-del" onclick="deleteLaunch(event,${i})">âœ•</span>
     </div>`).join('');
 }
 
@@ -1040,7 +1050,7 @@ function saveLaunch() {
   const url  = document.getElementById('launch-url-in').value.trim();
   if (!name || !url) { toast('Name and URL required'); return; }
   let saved = JSON.parse(localStorage.getItem('sb_launches') || '[]');
-  saved.push({id: 'u-' + Date.now(), name, url, icon:'🔗'});
+  saved.push({id: 'u-' + Date.now(), name, url, icon:'ðŸ”—'});
   localStorage.setItem('sb_launches', JSON.stringify(saved));
   renderLaunches(saved);
   hideLaunchForm();
@@ -1056,7 +1066,7 @@ function queueAgent(name) {
   toast('Noted: Run ' + name);
 }
 
-// ═══ INBOX ═══════════════════════════════════════════════════
+// â•â•â• INBOX â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function reloadInbox(btn) {
   btn.textContent = '...';
   btn.disabled = true;
@@ -1068,12 +1078,12 @@ async function reloadInbox(btn) {
       updateInboxBadge();
       renderInbox();
       toast('Inbox refreshed');
-      btn.textContent = '↻';
+      btn.textContent = 'â†»';
       btn.disabled = false;
       return;
     }
-  } catch(e) { /* bridge offline — try full rebuild */ }
-  // Step 2: Bridge offline — try rebuild server to regenerate INJECTED data
+  } catch(e) { /* bridge offline â€” try full rebuild */ }
+  // Step 2: Bridge offline â€” try rebuild server to regenerate INJECTED data
   try {
     const r = await fetch('http://localhost:8765/rebuild', {method:'POST', signal: AbortSignal.timeout(35000)});
     const data = await r.json();
@@ -1081,18 +1091,18 @@ async function reloadInbox(btn) {
       location.reload();
     } else {
       toast('Rebuild failed: ' + (data.output || 'unknown error'));
-      btn.textContent = '↻';
+      btn.textContent = 'â†»';
       btn.disabled = false;
     }
   } catch(e) {
-    toast('Bridge offline — restart serve-sidebar.bat');
-    btn.textContent = '↻';
+    toast('Bridge offline â€” restart serve-sidebar.bat');
+    btn.textContent = 'â†»';
     btn.disabled = false;
   }
 }
 
 async function loadInbox() {
-  // Try to get live items from bridge — reads supervisor-inbox.json fresh from disk
+  // Try to get live items from bridge â€” reads supervisor-inbox.json fresh from disk
   // and filters answered IDs server-side
   const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
   if (isLocal) {
@@ -1104,7 +1114,7 @@ async function loadInbox() {
         renderInbox();
         return;
       }
-    } catch(e) { /* bridge offline — fall through to INJECTED */ }
+    } catch(e) { /* bridge offline â€” fall through to INJECTED */ }
   }
   // Fallback: use INJECTED data (filtered client-side by localStorage)
   inboxItems = (typeof INJECTED !== 'undefined') ? (INJECTED.inbox || []) : [];
@@ -1124,10 +1134,10 @@ function renderInbox() {
   } catch(e) {}
   let items = inboxItems.filter(i => !answeredIds.has(i.id));
 
-  // ── NOISE FILTER ────────────────────────────────────────────────────────────
+  // â”€â”€ NOISE FILTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   // Suppress AI Intel updates unless top-3 ranked services have changed
   // Suppress supervisor cycle heartbeats (no decision needed)
-  // Suppress AUDIT-* floods (code-level audit noise — handled by agents, not Joe)
+  // Suppress AUDIT-* floods (code-level audit noise â€” handled by agents, not Joe)
   const top3Key = (typeof INJECTED !== 'undefined' && INJECTED.services?.chat)
     ? INJECTED.services.chat.slice(0,3).map(s=>s.name).join('|') : '';
   const suppressedPatterns = [/^supervisor-cycle-/i, /^AUDIT-BEZOS-/i, /^AUDIT-HOPPER-/i, /^AUDIT-CODD-/i];
@@ -1139,13 +1149,13 @@ function renderInbox() {
     // Suppress AI Intel unless top-3 changed (compare stored snapshot)
     if (/^ai-intel-/i.test(id)) {
       const stored = sessionStorage.getItem('sb_top3') || '';
-      if (stored === top3Key) return false;   // no change — suppress
+      if (stored === top3Key) return false;   // no change â€” suppress
       sessionStorage.setItem('sb_top3', top3Key);
-      return true;  // top-3 changed — show it
+      return true;  // top-3 changed â€” show it
     }
     return true;
   });
-  // ── END NOISE FILTER ────────────────────────────────────────────────────────
+  // â”€â”€ END NOISE FILTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   const reconciled = inboxItems.length - items.length;
   if (filter) items = items.filter(i => i.urgency === filter);
@@ -1156,14 +1166,14 @@ function renderInbox() {
   else if (sort === 'source') items.sort((a,b) => (a.source||'').localeCompare(b.source||''));
   const el = document.getElementById('inbox-list');
   if (!items.length) {
-    el.innerHTML = `<div class="empty">✓ Inbox clear${reconciled > 0 ? ' · ' + reconciled + ' already answered' : ''}</div>`;
+    el.innerHTML = `<div class="empty">âœ“ Inbox clear${reconciled > 0 ? ' Â· ' + reconciled + ' already answered' : ''}</div>`;
     return;
   }
   el.innerHTML = items.map(item => {
     const urg = item.urgency || 'INFO';
     const proj = item.project || '';
     const projLabel = proj ? proj.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) : '';
-    const srcIcon = item.source === 'supervisor' ? '🤖' : '📋';
+    const srcIcon = item.source === 'supervisor' ? 'ðŸ¤–' : 'ðŸ“‹';
     // Use options from data first, fall back to keyword inference
     const opts = (item.options && item.options.length) ? item.options : getItemOptions(item);
     const optsHtml = opts.map(o =>
@@ -1182,9 +1192,9 @@ function renderInbox() {
         ${opts.length ? `<div class="icard-opts" style="margin-top:10px;">${optsHtml}</div>` : ''}
         <textarea class="icard-free" placeholder="Type your answer..." rows="2" style="margin-top:8px;"></textarea>
         <div class="icard-acts">
-          <button style="border-color:var(--green);color:var(--green);" onclick="submitAnswer(event,this)">✓ Submit</button>
-          <button style="border-color:var(--text-dim);" onclick="snoozeCard(event,this)">⏱ Snooze</button>
-          <button style="border-color:var(--red);color:var(--red);" onclick="dismissCard(event,this)">✕ Dismiss</button>
+          <button style="border-color:var(--green);color:var(--green);" onclick="submitAnswer(event,this)">âœ“ Submit</button>
+          <button style="border-color:var(--text-dim);" onclick="snoozeCard(event,this)">â± Snooze</button>
+          <button style="border-color:var(--red);color:var(--red);" onclick="dismissCard(event,this)">âœ• Dismiss</button>
         </div>
       </div>
     </div>`;
@@ -1265,7 +1275,7 @@ async function submitAnswer(e, btn) {
       toast('Answer saved locally'); 
     }
   } else {
-    toast('Answer queued — syncs overnight');
+    toast('Answer queued â€” syncs overnight');
   }
 
   // Remove card regardless
@@ -1298,10 +1308,10 @@ function dismissCard(e, btn) {
 function updateInboxBadge() {
   let answeredIds = new Set();
   try {
-    // localStorage — written synchronously on every Submit
+    // localStorage â€” written synchronously on every Submit
     const saved = JSON.parse(localStorage.getItem('sb_answers') || '{}');
     Object.keys(saved).forEach(id => answeredIds.add(id));
-    // sessionStorage — refreshed from bridge on every ↻ click
+    // sessionStorage â€” refreshed from bridge on every â†» click
     const logIds = JSON.parse(sessionStorage.getItem('sb_inbox_log') || '[]');
     logIds.forEach(id => answeredIds.add(id));
   } catch(e) {}
@@ -1310,12 +1320,12 @@ function updateInboxBadge() {
   if (pending > 0) { b.textContent = pending > 99 ? '99+' : pending; b.style.display = 'inline-block'; }
   else { b.style.display = 'none'; }
   const reconciled = inboxItems.length - pending;
-  document.getElementById('sys-inbox').textContent = pending + ' pending' + (reconciled > 0 ? ' · ' + reconciled + ' answered' : '');
+  document.getElementById('sys-inbox').textContent = pending + ' pending' + (reconciled > 0 ? ' Â· ' + reconciled + ' answered' : '');
 }
 
-// ═══ PLAN / WHITEBOARD ═══════════════════════════════════════
+// â•â•â• PLAN / WHITEBOARD â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function loadPlanData() {
-  // Try live fetch from bridge first — reads whiteboard.json fresh from disk
+  // Try live fetch from bridge first â€” reads whiteboard.json fresh from disk
   try {
     const r = await fetch('http://localhost:11435/whiteboard', {signal: AbortSignal.timeout(2000)});
     if (r.ok) {
@@ -1325,7 +1335,7 @@ async function loadPlanData() {
         if (typeof INJECTED !== 'undefined') INJECTED.whiteboard = data;
       }
     }
-  } catch(e) { /* bridge offline — fall through to INJECTED */ }
+  } catch(e) { /* bridge offline â€” fall through to INJECTED */ }
   renderWhiteboard();
 }
 
@@ -1360,7 +1370,7 @@ function renderWhiteboard() {
         </div>
         <div style="flex:1;min-width:0;">
           <div style="font-size:11px;color:var(--text);line-height:1.4;">${esc(i.title||'')}</div>
-          ${i.description ? `<div style="font-size:10px;color:var(--text-dim);margin-top:3px;line-height:1.4;">${esc((i.description||'').substring(0,100))}${(i.description||'').length > 100 ? '…' : ''}</div>` : ''}
+          ${i.description ? `<div style="font-size:10px;color:var(--text-dim);margin-top:3px;line-height:1.4;">${esc((i.description||'').substring(0,100))}${(i.description||'').length > 100 ? 'â€¦' : ''}</div>` : ''}
         </div>
         <div style="flex-shrink:0;">
           <span style="font-size:8px;font-weight:bold;padding:2px 6px;border-radius:3px;border:1px solid ${aColor};color:${aColor};">${action}</span>
@@ -1373,7 +1383,7 @@ function renderWhiteboard() {
   }).join('');
 }
 
-// ═══ ASSETS TABS ═════════════════════════════════════════════
+// â•â•â• ASSETS TABS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function assetsTab(which) {
   ['res','svc'].forEach(t => {
     const panel = document.getElementById('ap-' + t);
@@ -1386,7 +1396,7 @@ function assetsTab(which) {
   });
 }
 
-// ═══ RESOURCES ════════════════════════════════════════════════
+// â•â•â• RESOURCES â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function loadResources() {
   const assets = (typeof INJECTED !== 'undefined' && INJECTED.assets) ? INJECTED.assets : [];
   const el = document.getElementById('resource-list');
@@ -1431,7 +1441,7 @@ function loadResources() {
   el.innerHTML = html;
 }
 
-// ═══ AI SERVICES ══════════════════════════════════════════════
+// â•â•â• AI SERVICES â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function loadServices() {
   if (typeof INJECTED !== 'undefined' && INJECTED.services && Object.keys(INJECTED.services).length) {
     servicesData = {categories: INJECTED.services};
@@ -1457,15 +1467,15 @@ function renderServices() {
 
   el.innerHTML = items.map(s => {
     const tierCls = s.tier === 'free' ? 'tier-f' : s.tier === 'paid' ? 'tier-p' : 'tier-fp';
-    const buzz = s.buzz_score > 0 ? '🔥'.repeat(Math.min(s.buzz_score, 3)) : '';
-    const trending = s.trending ? ' <span style="font-size:9px;color:var(--amber);">↑ trending</span>' : '';
+    const buzz = s.buzz_score > 0 ? 'ðŸ”¥'.repeat(Math.min(s.buzz_score, 3)) : '';
+    const trending = s.trending ? ' <span style="font-size:9px;color:var(--amber);">â†‘ trending</span>' : '';
     // Pricing display
     let priceStr = '';
     if (s.free_tier && s.tier !== 'paid') {
       priceStr = '<span style="color:var(--green);font-weight:bold;">FREE</span>';
       if (s.price_input_per_1m) priceStr += ' <span style="color:var(--text-dim);">+ $' + s.price_input_per_1m + '/1M in</span>';
     } else if (s.price_input_per_1m) {
-      priceStr = '$' + s.price_input_per_1m + '/1M in · $' + (s.price_output_per_1m||'?') + '/1M out';
+      priceStr = '$' + s.price_input_per_1m + '/1M in Â· $' + (s.price_output_per_1m||'?') + '/1M out';
     } else if (s.tier === 'paid') {
       priceStr = '<span style="color:var(--text-dim);">Paid</span>';
     }
@@ -1500,7 +1510,7 @@ function renderServices() {
   }).join('');
 }
 
-// ═══ CHAT ════════════════════════════════════════════════════
+// â•â•â• CHAT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 function chatKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); } }
 
 async function sendChat() {
@@ -1520,7 +1530,7 @@ async function sendChat() {
   let _secs = 0; const _timer = setInterval(() => { const el = document.getElementById(typingId+'-lbl'); if(el) el.textContent = 'trying ' + backendLabel + '... ' + (++_secs) + 's'; else clearInterval(_timer); }, 1000);
   msgsEl.scrollTop = msgsEl.scrollHeight;
 
-  // Build system context — pulls from STUDIO_BRIEFING.md injected at 6AM daily
+  // Build system context â€” pulls from STUDIO_BRIEFING.md injected at 6AM daily
   let sysCtx = 'You are a studio AI assistant for Joe Palek\'s autonomous AI development studio.\n';
   sysCtx += 'Today: ' + new Date().toLocaleDateString('en-US',{timeZone:'America/Chicago',weekday:'short',month:'short',day:'numeric',year:'numeric'}) + ' CT.\n\n';
 
@@ -1565,12 +1575,12 @@ function attachFile(event) {
     attachedFiles.push({name: file.name, content: e.target.result.substring(0, 4000)});
     const tray = document.getElementById('chat-attach-tray');
     tray.style.display = 'block';
-    tray.innerHTML = '📎 ' + attachedFiles.map(f => `<span style="color:var(--green);">${esc(f.name)}</span>`).join(', ');
+    tray.innerHTML = 'ðŸ“Ž ' + attachedFiles.map(f => `<span style="color:var(--green);">${esc(f.name)}</span>`).join(', ');
   };
   reader.readAsText(file);
 }
 
-// ═══ AI BACKEND ═══════════════════════════════════════════════
+// â•â•â• AI BACKEND â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // PRIMARY: OpenRouter free (no cost) - routes to Llama/Gemini free models
 // OPTIONAL: Anthropic API (billed to your API account, ~fractions of a cent/msg)
 // FALLBACK: Ollama local (free, needs Ollama running)
@@ -1618,7 +1628,7 @@ async function callAI(messages, systemPrompt) {
       }
     } catch(e) {}
   }
-  // Studio Bridge — localhost only, skip entirely on mobile/remote
+  // Studio Bridge â€” localhost only, skip entirely on mobile/remote
   const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
   if (isLocal) {
     try {
@@ -1651,7 +1661,7 @@ async function callAI(messages, systemPrompt) {
   return 'Chat requires OpenRouter or Anthropic API key (see CFG tab).';
 }
 
-// ═══ DATA EXPLORER ════════════════════════════════════════════
+// â•â•â• DATA EXPLORER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 async function loadData() {
   const sel = document.getElementById('data-sel').value;
   if (!sel) { toast('Choose a file first'); return; }
@@ -1666,7 +1676,7 @@ async function loadData() {
     else if (sel === 'ai-services-rankings.json') content = JSON.stringify({categories: INJECTED.services}, null, 2);
     if (content) {
       el.dataset.content = content.substring(0,8000);
-      el.innerHTML = `<div class="msg msg-a"><strong>📄 ${esc(sel)}</strong> (${(content.length/1024).toFixed(1)}KB - embedded data)<br><br><pre style="max-height:200px;overflow-y:auto;">${esc(content.substring(0,1500))}</pre></div>`;
+      el.innerHTML = `<div class="msg msg-a"><strong>ðŸ“„ ${esc(sel)}</strong> (${(content.length/1024).toFixed(1)}KB - embedded data)<br><br><pre style="max-height:200px;overflow-y:auto;">${esc(content.substring(0,1500))}</pre></div>`;
       document.getElementById('data-followup').style.display = 'block';
       return;
     }
@@ -1679,7 +1689,7 @@ async function uploadData(event) {
   const text = await file.text();
   const el = document.getElementById('data-msgs');
   el.dataset.content = text.substring(0,8000);
-  el.innerHTML = `<div class="msg msg-a"><strong>📄 ${esc(file.name)}</strong><br><pre style="max-height:200px;overflow-y:auto;">${esc(text.substring(0,1500))}</pre></div>`;
+  el.innerHTML = `<div class="msg msg-a"><strong>ðŸ“„ ${esc(file.name)}</strong><br><pre style="max-height:200px;overflow-y:auto;">${esc(text.substring(0,1500))}</pre></div>`;
   document.getElementById('data-followup').style.display = 'block';
 }
 
@@ -1696,7 +1706,53 @@ async function dataQ() {
   document.getElementById('data-q').value = '';
 }
 
-// ═══ UTILS ════════════════════════════════════════════════════
+// â•â•â• UTILS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// ═══ SERVER CONTROL ═══════════════════════════════════════════
+async function checkServer() {
+  const el = document.getElementById('server-status');
+  el.innerHTML = '<span class="spin" style="display:inline-block;"></span> Checking...';
+  try {
+    const r = await fetch('http://localhost:11435/ping', {signal: AbortSignal.timeout(3000)});
+    if (r.ok) {
+      const data = await r.json();
+      // Also check provider health
+      const h = await fetch('http://localhost:11435/clawcode/health', {signal: AbortSignal.timeout(3000)});
+      if (h.ok) {
+        const health = await h.json();
+        const primary = health.primary || 'unknown';
+        el.innerHTML = `<span style="color:var(--green);">&#x2714; Server running</span> · Primary: <strong>${primary}</strong>`;
+      } else {
+        el.innerHTML = '<span style="color:var(--green);">&#x2714; Server running</span>';
+      }
+    }
+  } catch (e) {
+    el.innerHTML = '<span style="color:var(--red);">&#x2718; Server offline</span> · Click Restart to start';
+  }
+}
+
+async function restartServer() {
+  const el = document.getElementById('server-status');
+  el.innerHTML = '<span class="spin" style="display:inline-block;"></span> Restarting server...';
+  try {
+    await fetch('http://localhost:11435/restart', {method: 'POST', signal: AbortSignal.timeout(2000)});
+  } catch (e) {
+    // Expected - server stops during restart
+  }
+  // Wait for restart
+  await new Promise(r => setTimeout(r, 3000));
+  checkServer();
+}
+
+// Check server on CFG tab load
+document.addEventListener('DOMContentLoaded', () => {
+  // Auto-check server when switching to config tab
+  const origSwitch = window.switchTab;
+  window.switchTab = function(tab) {
+    origSwitch(tab);
+    if (tab === 'config') checkServer();
+  };
+});
+
 function esc(s) {
   if (!s) return '';
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
@@ -1717,9 +1773,9 @@ function toast(msg) {
   setTimeout(()=>el.classList.remove('show'), 2200);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// INBOX LOG INTEGRATION — Agent question deduplication
-// ═══════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+// INBOX LOG INTEGRATION â€” Agent question deduplication
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 let inboxLog = [];
 
@@ -1729,10 +1785,10 @@ async function loadInboxLog() {
     const response = await fetch('http://localhost:11435/inbox-log');
     if (response.ok) {
       inboxLog = await response.json();
-      console.log(`✓ Inbox log loaded: ${inboxLog.length} entries`);
+      console.log(`âœ“ Inbox log loaded: ${inboxLog.length} entries`);
     }
   } catch (e) {
-    console.warn('⚠️ Bridge offline; duplicate check skipped');
+    console.warn('âš ï¸ Bridge offline; duplicate check skipped');
   }
 }
 
@@ -1757,7 +1813,7 @@ async function logInboxAnswer(question, answer) {
     });
     
     if (response.ok) {
-      console.log(`✓ Logged: "${question.question}"`);
+      console.log(`âœ“ Logged: "${question.question}"`);
       
       // Check for duplicate in past 24h
       const yesterday = Date.now() - (24 * 60 * 60 * 1000);
@@ -1772,7 +1828,7 @@ async function logInboxAnswer(question, answer) {
       
       if (recentDupes.length > 0) {
         const dupDate = new Date(recentDupes[0].timestamp).toLocaleDateString();
-        console.warn(`⚠️ DUPLICATE: Same question answered on ${dupDate}`);
+        console.warn(`âš ï¸ DUPLICATE: Same question answered on ${dupDate}`);
       }
       
       // Add to log so next answer check catches this
@@ -1788,9 +1844,9 @@ document.addEventListener('DOMContentLoaded', () => {
   loadInboxLog();
 });
 
-// ═══════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 // SUPERVISOR INBOX LOG VIEWER
-// ═══════════════════════════════════════════════════════════════
+// â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 let supervisorInboxLog = [];
 let supervisorLogPollActive = false;
@@ -1804,13 +1860,13 @@ async function loadSupervisorInboxLog() {
       renderSupervisorInboxLog();
       if (!supervisorBridgeOnline) {
         supervisorBridgeOnline = true;
-        console.log(`✓ Supervisor inbox log connected`);
+        console.log(`âœ“ Supervisor inbox log connected`);
       }
     }
   } catch (e) {
     if (supervisorBridgeOnline) {
       supervisorBridgeOnline = false;
-      console.warn('⚠️ Supervisor inbox log disconnected');
+      console.warn('âš ï¸ Supervisor inbox log disconnected');
     }
   }
 }
@@ -1829,7 +1885,7 @@ function toggleSupervisorInbox() {
   if (messages) {
     const isHidden = messages.style.display === 'none';
     messages.style.display = isHidden ? 'block' : 'none';
-    toggle.textContent = isHidden ? '▲' : '▼';
+    toggle.textContent = isHidden ? 'â–²' : 'â–¼';
   }
 }
 
@@ -1844,8 +1900,8 @@ function renderSupervisorInboxLog() {
   
   container.innerHTML = supervisorInboxLog.map(msg => {
     const sentTime = new Date(msg.sent_at).toLocaleTimeString();
-    const readTime = msg.read_at ? new Date(msg.read_at).toLocaleTimeString() : '—';
-    const completedTime = msg.completed_at ? new Date(msg.completed_at).toLocaleTimeString() : '—';
+    const readTime = msg.read_at ? new Date(msg.read_at).toLocaleTimeString() : 'â€”';
+    const completedTime = msg.completed_at ? new Date(msg.completed_at).toLocaleTimeString() : 'â€”';
     
     const statusColor = msg.status === 'error' ? 'var(--red)' : 
                         msg.status === 'completed' ? 'var(--green)' : 
@@ -1885,3 +1941,4 @@ function renderSupervisorInboxLog() {
 
 </body>
 </html>
+

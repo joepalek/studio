@@ -7,8 +7,8 @@
 
   <Triggers>
     <CalendarTrigger>
-      <!-- Daily at 02:15 — WASDE releases monthly but check daily to catch release day -->
-      <StartBoundary>2026-04-03T02:15:00</StartBoundary>
+      <!-- Daily at 13:00 ET — WASDE releases monthly at ~12:00 PM ET; 1 PM buffer ensures PDF is live -->
+      <StartBoundary>2026-04-09T13:00:00</StartBoundary>
       <Enabled>true</Enabled>
       <ScheduleByDay>
         <DaysInterval>1</DaysInterval>

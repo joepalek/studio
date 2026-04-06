@@ -69,3 +69,39 @@ Sample specs (first 3):
     Traits: cautious, determined, thoughtful
     Voice: quiet and introspective
 
+[Mon 04/06/2026  3:00:01.67] Spec Generator starting 
+Generating character specs batch...
+  Claude: 100 specs
+  Gemini: 100 specs
+  Agent: 100 specs
+
+======================================================================
+Batch generated: 300 total specs
+By universe:
+  band_members: 57 (19%)
+  inmates_vs_guards: 88 (29%)
+  original_fiction: 128 (43%)
+  other: 27 (9%)
+
+Saved to: G:\My Drive\Projects\_studio\agency\spec-queue\spec-batch-20260406_030001.json
+Queue file: G:\My Drive\Projects\_studio\agency\spec-queue\spec-queue-current.json
+======================================================================
+
+Sample specs (first 3):
+
+  Morgan Smith (inmates_vs_guards)
+    Archetype: lifer
+    Traits: loyal, patient, empathetic
+    Voice: quiet and introspective
+
+  Alex Miller (other)
+    Archetype: activist
+    Traits: artistic, empathetic, observant
+    Voice: playful and irreverent
+
+  Sam Davis (original_fiction)
+    Archetype: sage
+    Traits: charismatic, technical, paranoid
+    Voice: cold and analytical
+
+[Mon 04/06/2026  3:00:01.92] Done 

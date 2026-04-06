@@ -1,1 +1,13 @@
-invalid type: string "\"Project added to studio\"\n      ],\n      \"blockers\": [],\n      \"next_action\": \"Answer geographic and category decisions, then design scraping approach\"\n    }\n  ],\n  \"strategy_notes\": []\n}", expected a booleanist drives everything. More specific = less noise = better digest.\",\n      \"answer\": null,\n      \"answered_date\": null,\n      \"unlocks\": \"ÿÿÿÿ
+{
+  "project": "LightworkAI Website",
+  "brand": "LightworkAI",
+  "tagline": "Heavy problems. Lightwork.",
+  "status": "live",
+  "version": "1.1.0",
+  "last_updated": "2026-03-25",
+  "repo": "https://github.com/joepalek/jlp-studio-website",
+  "live_url": "https://joepalek.github.io/jlp-studio-website/",
+  "domain_target": "lightworkai.com",
+  "accent_color": "#1D9E75",
+  "pages": [
+    "index.html

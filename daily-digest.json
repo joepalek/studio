@@ -266,6 +266,185 @@
       "health_score": 57,
       "health_status": "YELLOW",
       "notes": "11 agents in | missed: nightly-rollup, janitor, ai-intel, vintage-agent | -10 missed agent: nightly-rollup"
+    },
+    {
+      "date": "2026-04-06",
+      "generated_at": "2026-04-06T03:23:45.108868",
+      "audit_summary": {
+        "total_entries": 2,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "agency-build",
+          "ai-intel-agent",
+          "ai-services-rankings",
+          "auto-answer-gemini",
+          "check-drift",
+          "git-commit",
+          "janitor",
+          "nightly-rollup",
+          "product-archaeology",
+          "supervisor",
+          "vector-reindex",
+          "vintage-agent",
+          "whiteboard-scorer"
+        ],
+        "missed": [
+          "ai-intel"
+        ]
+      },
+      "pending_inbox_items": 0,
+      "pending_flags": 1,
+      "health_score": 87,
+      "health_status": "GREEN",
+      "notes": "13 agents in | missed: ai-intel | -10 missed agent: ai-intel"
+    },
+    {
+      "date": "2026-04-06",
+      "generated_at": "2026-04-06T07:30:01.729601",
+      "audit_summary": {
+        "total_entries": 3,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "agency-build",
+          "ai-intel-agent",
+          "ai-services-rankings",
+          "auto-answer-gemini",
+          "check-drift",
+          "git-commit",
+          "janitor",
+          "nightly-rollup",
+          "product-archaeology",
+          "supervisor",
+          "vector-reindex",
+          "vintage-agent",
+          "whiteboard-scorer"
+        ],
+        "missed": [
+          "ai-intel"
+        ]
+      },
+      "pending_inbox_items": 0,
+      "pending_flags": 1,
+      "health_score": 87,
+      "health_status": "GREEN",
+      "notes": "13 agents in | missed: ai-intel | -10 missed agent: ai-intel"
+    },
+    {
+      "date": "2026-04-06",
+      "generated_at": "2026-04-06T10:01:21.235603",
+      "audit_summary": {
+        "total_entries": 3,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "supervisor"
+        ],
+        "missed": [
+          "nightly-rollup",
+          "vector-reindex",
+          "janitor",
+          "whiteboard-scorer",
+          "ai-intel",
+          "agency-build",
+          "vintage-agent",
+          "product-archaeology",
+          "git-commit",
+          "check-drift"
+        ]
+      },
+      "pending_inbox_items": 0,
+      "pending_flags": 1,
+      "health_score": 0,
+      "health_status": "RED",
+      "notes": "1 agents in | missed: nightly-rollup, vector-reindex, janitor, whiteboard-scorer, ai-intel, agency-build, vintage-agent, product-archaeology, git-commit, check-drift | -10 missed agent: nightly-rollup"
+    },
+    {
+      "date": "2026-04-06",
+      "generated_at": "2026-04-06T10:59:33.127760",
+      "audit_summary": {
+        "total_entries": 4,
+        "gate_decisions": {
+          "total": 0,
+          "passed": 0,
+          "failed": 0
+        },
+        "scheduler_fires": {
+          "total": 0,
+          "confirmed": 0,
+          "silent": 0
+        },
+        "heartbeats": 0,
+        "inbox_items_written": 0,
+        "flags_raised": 0,
+        "top_failure_category": null
+      },
+      "agent_checkins": {
+        "checked_in": [
+          "ai-intel-agent",
+          "janitor",
+          "product-archaeology",
+          "supervisor",
+          "vintage-agent"
+        ],
+        "missed": [
+          "nightly-rollup",
+          "vector-reindex",
+          "whiteboard-scorer",
+          "ai-intel",
+          "agency-build",
+          "git-commit",
+          "check-drift"
+        ]
+      },
+      "pending_inbox_items": 0,
+      "pending_flags": 1,
+      "health_score": 27,
+      "health_status": "RED",
+      "notes": "5 agents in | missed: nightly-rollup, vector-reindex, whiteboard-scorer, ai-intel, agency-build, git-commit, check-drift | -10 missed agent: nightly-rollup"
     }
   ]
 }

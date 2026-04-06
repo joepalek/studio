@@ -1,12 +1,18 @@
 {
-  "timestamp": "2026-04-04T08:02:49.996799",
+  "timestamp": "2026-04-06T08:01:11.722489",
   "verdict": "WARNING",
-  "critical": [],
+  "critical": [
+    "anthropic_api_key MISSING in studio-config.json (note: Claude Code session is active)"
+  ],
   "warning": [
-    "UNCOMMITTED (2 files): job-match"
+    "gemini_api_key MISSING in studio-config.json",
+    "openrouter_api_key MISSING in studio-config.json",
+    "youtube_api_key MISSING in studio-config.json",
+    "UNCOMMITTED (2 files): job-match",
+    "UNCOMMITTED (65 files): _studio"
   ],
   "watch": [
-    "gemini-2.0-flash-001 endpoint 404 \u2014 active model is gemini-2.5-flash"
+    "SUPABASE not configured in studio-config.json"
   ],
-  "action_required": "Commit job-match dirty files"
+  "action_required": "Add API keys to studio-config.json; commit _studio and job-match"
 }

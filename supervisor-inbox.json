@@ -163,34 +163,125 @@
       "date": "2026-04-05T19:52:58Z"
     },
     {
-      "id": "supervisor-cycle-202604052200",
+      "id": "ai-intel-2026-04-06",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 3 HIGH PRIORITY - 2026-04-06",
+      "finding": "reddit removed my last post so reposting — i made a thing that saves your claude context when you get rate limited. See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-06T08:23:20Z"
+    },
+    {
+      "id": "nightly-rollup-20260406",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "INFO",
+      "title": "Nightly Rollup — 2026-04-06 — GREEN",
+      "finding": "Score: 87/100. 13 agents checked in; missed: ai-intel. Gate: 0 pass / 0 fail.",
+      "status": "PENDING"
+    },
+    {
+      "id": "wb-scan-2026-04-06",
+      "type": "whiteboard_scan_report",
+      "created_at": "2026-04-06T09:00:01.679402+00:00",
+      "priority": "low",
+      "summary": "Whiteboard scan: 5 closed, 61 still open.",
+      "closed": [
+        {
+          "id": "client-services-website",
+          "title": "AI Services Client Website",
+          "reason": "status='live'"
+        },
+        {
+          "id": "traitor-protocol",
+          "title": "Traitor Protocol Adversarial Testing",
+          "reason": "status='live'"
+        },
+        {
+          "id": "war-room-protocol",
+          "title": "War Room Decision Protocol",
+          "reason": "status='active'"
+        },
+        {
+          "id": "ghost-book-script-vault",
+          "title": "Ghost Book Script Vault + Salvage Protocol",
+          "reason": "status='active'"
+        },
+        {
+          "id": "weekend-hunter-project",
+          "title": "Weekend Hunter — Garage Sale Route Optimizer",
+          "reason": "status='live'"
+        }
+      ],
+      "open_count": 61
+    },
+    {
+      "id": "nightly-rollup-20260406",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "INFO",
+      "title": "Nightly Rollup — 2026-04-06 — GREEN",
+      "finding": "Score: 87/100. 13 agents checked in; missed: ai-intel. Gate: 0 pass / 0 fail.",
+      "status": "PENDING"
+    },
+    {
+      "id": "nightly-rollup-20260406",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "ALERT",
+      "title": "Nightly Rollup — 2026-04-06 — RED",
+      "finding": "Score: 0/100. 1 agents checked in; missed: nightly-rollup, vector-reindex, janitor, whiteboard-scorer, ai-intel, agency-build, vintage-agent, product-archaeology, git-commit, check-drift. Gate: 0 pass / 0 fail.",
+      "status": "PENDING"
+    },
+    {
+      "id": "ai-intel-2026-04-06",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 3 HIGH PRIORITY - 2026-04-06",
+      "finding": "Is ChatGPT Free Forever? 2026 Update (Free Tier Limits &amp; GPT-5 Access Fix!). See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-06T15:58:00Z"
+    },
+    {
+      "id": "supervisor-cycle-202604061000",
       "source": "supervisor-cycle",
       "type": "status",
       "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-05 22:00",
-      "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+      "title": "Supervisor Cycle — 2026-04-06 10:00",
+      "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
       "dispatched": [],
       "status": "INFO"
     },
     {
-      "id": "supervisor-cycle-202604052230",
+      "id": "supervisor-cycle-202604061030",
       "source": "supervisor-cycle",
       "type": "status",
       "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-05 22:30",
-      "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+      "title": "Supervisor Cycle — 2026-04-06 10:30",
+      "finding": "0 tasks dispatched | 1 agents active | Free tier: none | Ollama: UP | Gemini: OK",
       "dispatched": [],
       "status": "INFO"
     },
     {
-      "id": "supervisor-cycle-202604052300",
+      "id": "supervisor-cycle-202604061059",
       "source": "supervisor-cycle",
       "type": "status",
       "urgency": "INFO",
-      "title": "Supervisor Cycle — 2026-04-05 23:00",
-      "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+      "title": "Supervisor Cycle — 2026-04-06 10:59",
+      "finding": "0 tasks dispatched | 5 agents active | Free tier: none | Ollama: UP | Gemini: OK",
       "dispatched": [],
       "status": "INFO"
+    },
+    {
+      "id": "nightly-rollup-20260406",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "ALERT",
+      "title": "Nightly Rollup — 2026-04-06 — RED",
+      "finding": "Score: 27/100. 5 agents checked in; missed: nightly-rollup, vector-reindex, whiteboard-scorer, ai-intel, agency-build, git-commit, check-drift. Gate: 0 pass / 0 fail.",
+      "status": "PENDING"
     }
   ]
 }

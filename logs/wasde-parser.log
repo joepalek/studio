@@ -283,3 +283,34 @@ Soybeans: Increased imports and crush are offse
 [2026-04-03 00:13:51] INFO Fetched 104,123 chars (attempt 1)
 [2026-04-03 00:13:51] INFO HOPPER: unchanged — skipping
 [2026-04-03 00:13:51] INFO state.json saved — run #5
+[2026-04-06 02:41:30] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-06 02:41:30] INFO URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-06 02:41:30] INFO Step 1: Fetch PDF...
+[2026-04-06 02:41:37] INFO Fetched 104,123 chars (attempt 1)
+[2026-04-06 02:41:37] INFO HOPPER: unchanged — skipping
+[2026-04-06 02:41:37] INFO state.json saved — run #5
+[2026-04-06 02:42:02] INFO === wasde-parser START === pool #56 | dry=True
+[2026-04-06 02:42:02] INFO URL: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[2026-04-06 02:42:02] INFO Step 1: Fetch PDF...
+[2026-04-06 02:42:08] INFO Fetched 104,123 chars (attempt 1)
+[2026-04-06 02:42:08] INFO HOPPER: 104,123b checksum=aa117945e48c
+[2026-04-06 02:42:08] INFO Step 2: Parse commodities...
+[2026-04-06 02:42:08] INFO Parsed 5 | 0 high-conf | 5 narrative-only
+[2026-04-06 02:42:08] INFO Step 3: Normalize (Gemini)...
+[2026-04-06 02:42:09] INFO Normalized via groq/llama-3.3-70b-versatile (1099ms)
+[2026-04-06 02:42:09] INFO Step 4: Classify (Ollama)...
+[2026-04-06 02:42:22] INFO Classified: NEUTRAL via ollama/gemma3:4b
+[2026-04-06 02:42:22] INFO Step 5: Dual AI synthesis (Mistral + Gemini)...
+[2026-04-06 02:42:29] INFO Dual AI Model A (Mistral): MIXED via mistral/mistral-large-latest
+[2026-04-06 02:42:31] INFO Dual AI Model B (Gemini): NEUTRAL via gemini/gemini-2.5-flash
+[2026-04-06 02:42:31] WARNING Dual AI DIVERGENT: Mistral=MIXED vs Gemini=NEUTRAL — forced NEUTRAL
+[2026-04-06 02:42:31] INFO Signal override: Rice LLM=NEUTRAL -> BULLISH
+[2026-04-06 02:42:31] INFO AI confidence: divergent | A=MIXED B=NEUTRAL
+[2026-04-06 02:42:31] INFO Step 6: Deliver...
+[2026-04-06 02:42:31] INFO HTML written: G:\My Drive\Projects\_studio\data\wasde\wasde-parser-dryrun.html
+[2026-04-06 02:42:31] INFO [DRY RUN] synthesis preview:
+Wheat: Global supplies rise slightly due to increased output in Ukraine and Kazakhstan, offset by lower production in Australia -- NEUTRAL for prices.
+Corn: Global coarse grain production and ending stocks increase -- BEARISH for prices.
+Soybeans: Increased imports and crush are offset by unchanged 
+[2026-04-06 02:42:31] INFO state.json saved — run #6
+[2026-04-06 02:42:31] INFO === COMPLETE === 29.3s | NEUTRAL [divergent]

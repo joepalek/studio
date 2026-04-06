@@ -1,0 +1,214 @@
+[02:46:16] INFO Backfill: 3 months | resume=False | DB: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[02:46:16] INFO   Fetching 2026-04: https://www.usda.gov/oce/commodity/wasde/wasde0426.pdf
+[02:46:17] WARNING   FAIL 2026-04: PDF too small (369b) — not released or wrong URL
+[02:46:19] INFO   Fetching 2026-03: https://www.usda.gov/oce/commodity/wasde/wasde0326.pdf
+[02:46:25] INFO   OK 2026-03: 5 commodities stored
+[02:46:26] INFO   Fetching 2026-02: https://www.usda.gov/oce/commodity/wasde/wasde0226.pdf
+[02:46:33] INFO   OK 2026-02: 5 commodities stored
+[02:46:35] INFO === BACKFILL COMPLETE === ok=2 skip=0 fail=1
+[02:46:35] INFO DB rows: 10 | path: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[02:46:48] INFO Backfill: 60 months | resume=True | DB: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[02:46:48] INFO   Fetching 2026-04: https://www.usda.gov/oce/commodity/wasde/wasde0426.pdf
+[02:46:49] WARNING   FAIL 2026-04: PDF too small (369b) — not released or wrong URL
+[02:46:51] INFO   SKIP 2026-03 (already in DB)
+[02:46:51] INFO   SKIP 2026-02 (already in DB)
+[02:46:51] INFO   Fetching 2026-01: https://www.usda.gov/oce/commodity/wasde/wasde0126.pdf
+[02:46:51] WARNING   FAIL 2026-01: HTTP Error 404: Not Found
+[02:46:53] INFO   Fetching 2025-12: https://www.usda.gov/oce/commodity/wasde/wasde1225.pdf
+[02:46:54] WARNING   FAIL 2025-12: HTTP Error 404: Not Found
+[02:46:54] ERROR CIRCUIT BREAKER: 3 consecutive fetch failures — aborting
+[02:46:54] INFO === BACKFILL COMPLETE === ok=0 skip=2 fail=3
+[02:46:54] INFO DB rows: 10 | path: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[02:50:00] INFO Backfill: 60 months | resume=True | DB: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[02:50:00] INFO   Fetching 2026-04: https://www.usda.gov/oce/commodity/wasde/wasde0426.pdf
+[02:50:01] WARNING   FAIL 2026-04: PDF too small (369b) — not released or wrong URL
+[02:50:03] INFO   SKIP 2026-03 (already in DB)
+[02:50:03] INFO   SKIP 2026-02 (already in DB)
+[02:50:03] INFO   Fetching 2026-01: https://www.usda.gov/oce/commodity/wasde/wasde0126.pdf
+[02:50:03] INFO     USDA 404 — trying Wayback Machine...
+[02:50:09] WARNING   FAIL 2026-01: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0126.pdf
+[02:50:11] INFO   Fetching 2025-12: https://www.usda.gov/oce/commodity/wasde/wasde1225.pdf
+[02:50:11] INFO     USDA 404 — trying Wayback Machine...
+[02:50:17] WARNING   FAIL 2025-12: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1225.pdf
+[02:50:17] ERROR CIRCUIT BREAKER: 3 consecutive fetch failures — aborting
+[02:50:17] INFO === BACKFILL COMPLETE === ok=0 skip=2 fail=3
+[02:50:17] INFO DB rows: 10 | path: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[03:01:29] INFO Backfill: 60 months | resume=True | DB: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db
+[03:01:29] INFO   Fetching 2026-04: https://www.usda.gov/oce/commodity/wasde/wasde0426.pdf
+[03:01:30] INFO   UNAVAILABLE 2026-04: PDF too small (369b) — not released or wrong URL
+[03:01:31] INFO   SKIP 2026-03 (already in DB)
+[03:01:31] INFO   SKIP 2026-02 (already in DB)
+[03:01:31] INFO   Fetching 2026-01: https://www.usda.gov/oce/commodity/wasde/wasde0126.pdf
+[03:01:31] INFO     USDA 404 — trying Wayback Machine...
+[03:01:33] INFO     Wayback: http://web.archive.org/web/20260208015426/https://www.usda.gov/oce/commodity/wasde/wasde0126.pdf
+[03:01:37] WARNING   FAIL 2026-01: No /Root object! - Is this really a PDF?
+[03:01:39] INFO   Fetching 2025-12: https://www.usda.gov/oce/commodity/wasde/wasde1225.pdf
+[03:01:39] INFO     USDA 404 — trying Wayback Machine...
+[03:01:40] INFO   UNAVAILABLE 2025-12: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1225.pdf
+[03:01:41] INFO   Fetching 2025-11: https://www.usda.gov/oce/commodity/wasde/wasde1125.pdf
+[03:01:41] INFO     USDA 404 — trying Wayback Machine...
+[03:01:41] INFO   UNAVAILABLE 2025-11: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1125.pdf
+[03:01:42] INFO   Fetching 2025-10: https://www.usda.gov/oce/commodity/wasde/wasde1025.pdf
+[03:01:42] INFO     USDA 404 — trying Wayback Machine...
+[03:01:43] INFO   UNAVAILABLE 2025-10: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1025.pdf
+[03:01:44] INFO   Fetching 2025-09: https://www.usda.gov/oce/commodity/wasde/wasde0925.pdf
+[03:01:44] INFO     USDA 404 — trying Wayback Machine...
+[03:01:44] INFO   UNAVAILABLE 2025-09: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0925.pdf
+[03:01:45] INFO   Fetching 2025-08: https://www.usda.gov/oce/commodity/wasde/wasde0825.pdf
+[03:01:46] INFO     USDA 404 — trying Wayback Machine...
+[03:01:46] INFO   UNAVAILABLE 2025-08: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0825.pdf
+[03:01:47] INFO   Fetching 2025-07: https://www.usda.gov/oce/commodity/wasde/wasde0725.pdf
+[03:01:47] INFO     USDA 404 — trying Wayback Machine...
+[03:01:48] INFO   UNAVAILABLE 2025-07: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0725.pdf
+[03:01:49] INFO   Fetching 2025-06: https://www.usda.gov/oce/commodity/wasde/wasde0625.pdf
+[03:01:49] INFO     USDA 404 — trying Wayback Machine...
+[03:01:49] INFO   UNAVAILABLE 2025-06: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0625.pdf
+[03:01:50] INFO   Fetching 2025-05: https://www.usda.gov/oce/commodity/wasde/wasde0525.pdf
+[03:01:51] INFO     USDA 404 — trying Wayback Machine...
+[03:01:51] INFO   UNAVAILABLE 2025-05: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0525.pdf
+[03:01:52] INFO   Fetching 2025-04: https://www.usda.gov/oce/commodity/wasde/wasde0425.pdf
+[03:01:53] INFO     USDA 404 — trying Wayback Machine...
+[03:01:53] INFO   UNAVAILABLE 2025-04: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0425.pdf
+[03:01:54] INFO   Fetching 2025-03: https://www.usda.gov/oce/commodity/wasde/wasde0325.pdf
+[03:01:54] INFO     USDA 404 — trying Wayback Machine...
+[03:01:55] INFO   UNAVAILABLE 2025-03: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0325.pdf
+[03:01:56] INFO   Fetching 2025-02: https://www.usda.gov/oce/commodity/wasde/wasde0225.pdf
+[03:01:56] INFO     USDA 404 — trying Wayback Machine...
+[03:01:57] INFO   UNAVAILABLE 2025-02: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0225.pdf
+[03:01:58] INFO   Fetching 2025-01: https://www.usda.gov/oce/commodity/wasde/wasde0125.pdf
+[03:01:58] INFO     USDA 404 — trying Wayback Machine...
+[03:01:59] INFO   UNAVAILABLE 2025-01: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0125.pdf
+[03:02:00] INFO   Fetching 2024-12: https://www.usda.gov/oce/commodity/wasde/wasde1224.pdf
+[03:02:00] INFO     USDA 404 — trying Wayback Machine...
+[03:02:00] INFO   UNAVAILABLE 2024-12: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1224.pdf
+[03:02:01] INFO   Fetching 2024-11: https://www.usda.gov/oce/commodity/wasde/wasde1124.pdf
+[03:02:01] INFO     USDA 404 — trying Wayback Machine...
+[03:02:02] INFO   UNAVAILABLE 2024-11: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1124.pdf
+[03:02:03] INFO   Fetching 2024-10: https://www.usda.gov/oce/commodity/wasde/wasde1024.pdf
+[03:02:03] INFO     USDA 404 — trying Wayback Machine...
+[03:02:03] INFO   UNAVAILABLE 2024-10: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1024.pdf
+[03:02:04] INFO   Fetching 2024-09: https://www.usda.gov/oce/commodity/wasde/wasde0924.pdf
+[03:02:05] INFO     USDA 404 — trying Wayback Machine...
+[03:02:05] INFO   UNAVAILABLE 2024-09: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0924.pdf
+[03:02:06] INFO   Fetching 2024-08: https://www.usda.gov/oce/commodity/wasde/wasde0824.pdf
+[03:02:07] INFO     USDA 404 — trying Wayback Machine...
+[03:02:07] INFO   UNAVAILABLE 2024-08: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0824.pdf
+[03:02:08] INFO   Fetching 2024-07: https://www.usda.gov/oce/commodity/wasde/wasde0724.pdf
+[03:02:08] INFO     USDA 404 — trying Wayback Machine...
+[03:02:09] INFO   UNAVAILABLE 2024-07: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0724.pdf
+[03:02:10] INFO   Fetching 2024-06: https://www.usda.gov/oce/commodity/wasde/wasde0624.pdf
+[03:02:10] INFO     USDA 404 — trying Wayback Machine...
+[03:02:10] INFO   UNAVAILABLE 2024-06: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0624.pdf
+[03:02:11] INFO   Fetching 2024-05: https://www.usda.gov/oce/commodity/wasde/wasde0524.pdf
+[03:02:12] INFO     USDA 404 — trying Wayback Machine...
+[03:02:12] INFO   UNAVAILABLE 2024-05: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0524.pdf
+[03:02:13] INFO   Fetching 2024-04: https://www.usda.gov/oce/commodity/wasde/wasde0424.pdf
+[03:02:13] INFO     USDA 404 — trying Wayback Machine...
+[03:02:14] INFO   UNAVAILABLE 2024-04: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0424.pdf
+[03:02:15] INFO   Fetching 2024-03: https://www.usda.gov/oce/commodity/wasde/wasde0324.pdf
+[03:02:15] INFO     USDA 404 — trying Wayback Machine...
+[03:02:15] INFO   UNAVAILABLE 2024-03: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0324.pdf
+[03:02:16] INFO   Fetching 2024-02: https://www.usda.gov/oce/commodity/wasde/wasde0224.pdf
+[03:02:17] INFO     USDA 404 — trying Wayback Machine...
+[03:02:17] INFO   UNAVAILABLE 2024-02: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0224.pdf
+[03:02:18] INFO   Fetching 2024-01: https://www.usda.gov/oce/commodity/wasde/wasde0124.pdf
+[03:02:18] INFO     USDA 404 — trying Wayback Machine...
+[03:02:20] INFO   UNAVAILABLE 2024-01: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0124.pdf
+[03:02:21] INFO   Fetching 2023-12: https://www.usda.gov/oce/commodity/wasde/wasde1223.pdf
+[03:02:21] INFO     USDA 404 — trying Wayback Machine...
+[03:02:21] INFO   UNAVAILABLE 2023-12: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1223.pdf
+[03:02:22] INFO   Fetching 2023-11: https://www.usda.gov/oce/commodity/wasde/wasde1123.pdf
+[03:02:23] INFO     USDA 404 — trying Wayback Machine...
+[03:02:23] INFO   UNAVAILABLE 2023-11: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1123.pdf
+[03:02:24] INFO   Fetching 2023-10: https://www.usda.gov/oce/commodity/wasde/wasde1023.pdf
+[03:02:24] INFO     USDA 404 — trying Wayback Machine...
+[03:02:25] INFO   UNAVAILABLE 2023-10: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1023.pdf
+[03:02:26] INFO   Fetching 2023-09: https://www.usda.gov/oce/commodity/wasde/wasde0923.pdf
+[03:02:26] INFO     USDA 404 — trying Wayback Machine...
+[03:02:27] INFO   UNAVAILABLE 2023-09: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0923.pdf
+[03:02:28] INFO   Fetching 2023-08: https://www.usda.gov/oce/commodity/wasde/wasde0823.pdf
+[03:02:28] INFO     USDA 404 — trying Wayback Machine...
+[03:02:30] INFO   UNAVAILABLE 2023-08: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0823.pdf
+[03:02:31] INFO   Fetching 2023-07: https://www.usda.gov/oce/commodity/wasde/wasde0723.pdf
+[03:02:31] INFO     USDA 404 — trying Wayback Machine...
+[03:02:32] INFO   UNAVAILABLE 2023-07: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0723.pdf
+[03:02:33] INFO   Fetching 2023-06: https://www.usda.gov/oce/commodity/wasde/wasde0623.pdf
+[03:02:33] INFO     USDA 404 — trying Wayback Machine...
+[03:02:33] INFO   UNAVAILABLE 2023-06: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0623.pdf
+[03:02:34] INFO   Fetching 2023-05: https://www.usda.gov/oce/commodity/wasde/wasde0523.pdf
+[03:02:35] INFO     USDA 404 — trying Wayback Machine...
+[03:02:35] INFO   UNAVAILABLE 2023-05: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0523.pdf
+[03:02:36] INFO   Fetching 2023-04: https://www.usda.gov/oce/commodity/wasde/wasde0423.pdf
+[03:02:36] INFO     USDA 404 — trying Wayback Machine...
+[03:02:37] INFO   UNAVAILABLE 2023-04: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0423.pdf
+[03:02:38] INFO   Fetching 2023-03: https://www.usda.gov/oce/commodity/wasde/wasde0323.pdf
+[03:02:38] INFO     USDA 404 — trying Wayback Machine...
+[03:02:39] INFO   UNAVAILABLE 2023-03: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0323.pdf
+[03:02:40] INFO   Fetching 2023-02: https://www.usda.gov/oce/commodity/wasde/wasde0223.pdf
+[03:02:40] INFO     USDA 404 — trying Wayback Machine...
+[03:02:40] INFO   UNAVAILABLE 2023-02: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0223.pdf
+[03:02:42] INFO   Fetching 2023-01: https://www.usda.gov/oce/commodity/wasde/wasde0123.pdf
+[03:02:42] INFO     USDA 404 — trying Wayback Machine...
+[03:02:44] INFO   UNAVAILABLE 2023-01: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0123.pdf
+[03:02:45] INFO   Fetching 2022-12: https://www.usda.gov/oce/commodity/wasde/wasde1222.pdf
+[03:02:46] INFO     USDA 404 — trying Wayback Machine...
+[03:02:46] INFO   UNAVAILABLE 2022-12: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1222.pdf
+[03:02:47] INFO   Fetching 2022-11: https://www.usda.gov/oce/commodity/wasde/wasde1122.pdf
+[03:02:47] INFO     USDA 404 — trying Wayback Machine...
+[03:02:48] INFO   UNAVAILABLE 2022-11: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1122.pdf
+[03:02:49] INFO   Fetching 2022-10: https://www.usda.gov/oce/commodity/wasde/wasde1022.pdf
+[03:02:49] INFO     USDA 404 — trying Wayback Machine...
+[03:02:50] INFO   UNAVAILABLE 2022-10: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1022.pdf
+[03:02:51] INFO   Fetching 2022-09: https://www.usda.gov/oce/commodity/wasde/wasde0922.pdf
+[03:02:51] INFO     USDA 404 — trying Wayback Machine...
+[03:02:52] INFO   UNAVAILABLE 2022-09: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0922.pdf
+[03:02:53] INFO   Fetching 2022-08: https://www.usda.gov/oce/commodity/wasde/wasde0822.pdf
+[03:02:54] INFO     USDA 404 — trying Wayback Machine...
+[03:02:54] INFO   UNAVAILABLE 2022-08: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0822.pdf
+[03:02:55] INFO   Fetching 2022-07: https://www.usda.gov/oce/commodity/wasde/wasde0722.pdf
+[03:02:55] INFO     USDA 404 — trying Wayback Machine...
+[03:02:56] INFO   UNAVAILABLE 2022-07: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0722.pdf
+[03:02:57] INFO   Fetching 2022-06: https://www.usda.gov/oce/commodity/wasde/wasde0622.pdf
+[03:02:58] INFO     USDA 404 — trying Wayback Machine...
+[03:02:58] INFO   UNAVAILABLE 2022-06: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0622.pdf
+[03:02:59] INFO   Fetching 2022-05: https://www.usda.gov/oce/commodity/wasde/wasde0522.pdf
+[03:02:59] INFO     USDA 404 — trying Wayback Machine...
+[03:03:00] INFO   UNAVAILABLE 2022-05: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0522.pdf
+[03:03:01] INFO   Fetching 2022-04: https://www.usda.gov/oce/commodity/wasde/wasde0422.pdf
+[03:03:01] INFO     USDA 404 — trying Wayback Machine...
+[03:03:02] INFO   UNAVAILABLE 2022-04: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0422.pdf
+[03:03:03] INFO   Fetching 2022-03: https://www.usda.gov/oce/commodity/wasde/wasde0322.pdf
+[03:03:03] INFO     USDA 404 — trying Wayback Machine...
+[03:03:06] INFO   UNAVAILABLE 2022-03: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0322.pdf
+[03:03:07] INFO   Fetching 2022-02: https://www.usda.gov/oce/commodity/wasde/wasde0222.pdf
+[03:03:07] INFO     USDA 404 — trying Wayback Machine...
+[03:03:08] INFO   UNAVAILABLE 2022-02: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0222.pdf
+[03:03:09] INFO   Fetching 2022-01: https://www.usda.gov/oce/commodity/wasde/wasde0122.pdf
+[03:03:09] INFO     USDA 404 — trying Wayback Machine...
+[03:03:09] INFO   UNAVAILABLE 2022-01: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0122.pdf
+[03:03:10] INFO   Fetching 2021-12: https://www.usda.gov/oce/commodity/wasde/wasde1221.pdf
+[03:03:11] INFO     USDA 404 — trying Wayback Machine...
+[03:03:11] INFO   UNAVAILABLE 2021-12: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1221.pdf
+[03:03:12] INFO   Fetching 2021-11: https://www.usda.gov/oce/commodity/wasde/wasde1121.pdf
+[03:03:12] INFO     USDA 404 — trying Wayback Machine...
+[03:03:13] INFO   UNAVAILABLE 2021-11: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1121.pdf
+[03:03:14] INFO   Fetching 2021-10: https://www.usda.gov/oce/commodity/wasde/wasde1021.pdf
+[03:03:14] INFO     USDA 404 — trying Wayback Machine...
+[03:03:15] INFO   UNAVAILABLE 2021-10: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde1021.pdf
+[03:03:16] INFO   Fetching 2021-09: https://www.usda.gov/oce/commodity/wasde/wasde0921.pdf
+[03:03:16] INFO     USDA 404 — trying Wayback Machine...
+[03:03:16] INFO   UNAVAILABLE 2021-09: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0921.pdf
+[03:03:17] INFO   Fetching 2021-08: https://www.usda.gov/oce/commodity/wasde/wasde0821.pdf
+[03:03:18] INFO     USDA 404 — trying Wayback Machine...
+[03:03:18] INFO   UNAVAILABLE 2021-08: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0821.pdf
+[03:03:19] INFO   Fetching 2021-07: https://www.usda.gov/oce/commodity/wasde/wasde0721.pdf
+[03:03:19] INFO     USDA 404 — trying Wayback Machine...
+[03:03:20] INFO   UNAVAILABLE 2021-07: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0721.pdf
+[03:03:21] INFO   Fetching 2021-06: https://www.usda.gov/oce/commodity/wasde/wasde0621.pdf
+[03:03:21] INFO     USDA 404 — trying Wayback Machine...
+[03:03:21] INFO   UNAVAILABLE 2021-06: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0621.pdf
+[03:03:22] INFO   Fetching 2021-05: https://www.usda.gov/oce/commodity/wasde/wasde0521.pdf
+[03:03:23] INFO     USDA 404 — trying Wayback Machine...
+[03:03:23] INFO   UNAVAILABLE 2021-05: Not on USDA or Wayback Machine: https://www.usda.gov/oce/commodity/wasde/wasde0521.pdf
+[03:03:24] INFO === BACKFILL COMPLETE === ok=0 skip=2 fail=58
+[03:03:24] INFO DB rows: 10 | path: G:/My Drive/Projects/_studio/data/wasde/wasde_historical.db

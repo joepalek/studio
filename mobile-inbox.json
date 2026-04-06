@@ -884,5 +884,27 @@
     "priority": "high",
     "created": "2026-04-05T04:04:26.383303",
     "status": "pending"
+  },
+  {
+    "id": "wb-top-weekend-hunter-project",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#7 WHITEBOARD] Weekend Hunter \u2014 Garage Sale Route Optimizer",
+    "context": "LIVE | Score: 9/10 | Direct revenue support for eBay reselling operation. Eliminates manual sale discovery. | Est: done | Revenue: PERSONAL_USE | Risk: ",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-06T04:00:51.278488",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-gh-google-deepmind-gemma",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#8 WHITEBOARD] GitHub Trending: google-deepmind/gemma",
+    "context": "BUILD | Score: 9/10 | The rapid evolution of AI models and a growing demand for accessible, powerful alternatives to proprietary systems make 2026 a prime time for widely adoptable open-source AI. | Est: months | Revenue: LARGE | Risk: Rapid pace of AI research leading to quick obsolescence or the emergence of a superior, truly open-source competitor.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-06T04:00:51.278501",
+    "status": "pending"
   }
 ]

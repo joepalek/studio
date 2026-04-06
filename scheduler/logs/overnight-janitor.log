@@ -43,3 +43,23 @@
 [2026-04-03 10:45:05] Janitor report saved. Status: flagged
 [2026-04-03 10:45:05] Janitor complete — flagged
 [Fri 04/03/2026 10:45:05.64] Done 
+[2026-04-06 03:21:38] Janitor starting
+[2026-04-06 03:21:43] Removed 9 __pycache__ dirs
+[2026-04-06 03:21:43] Orphaned bat files (no matching XML task): overnight-agency-spec-generator.bat, overnight-agency-spec-grader.bat, whiteboard-scanner.bat, seo-agent.bat, run-whiteboard-scanner.bat, run-seo-agent.bat, run-whiteboard-agent.bat, run-whiteboard-scorer.bat
+[2026-04-06 03:21:52] Janitor report saved. Status: flagged
+[2026-04-06 03:21:52] Janitor complete — flagged
+[2026-04-06 10:21:35] Janitor starting
+[2026-04-06 10:21:41] Removed 4 __pycache__ dirs
+[2026-04-06 10:21:41] Orphaned bat files (no matching XML task): overnight-agency-spec-generator.bat, overnight-agency-spec-grader.bat, whiteboard-scanner.bat, seo-agent.bat, run-whiteboard-scanner.bat, run-seo-agent.bat, run-whiteboard-agent.bat, run-whiteboard-scorer.bat
+[2026-04-06 10:21:51] Janitor report saved. Status: flagged
+[2026-04-06 10:21:51] Janitor complete — flagged
+[2026-04-06 10:57:35] Janitor starting
+[2026-04-06 10:57:45] Removed 1 __pycache__ dirs
+[2026-04-06 10:57:45] Orphaned bat files (no matching XML task): overnight-agency-spec-generator.bat, overnight-agency-spec-grader.bat, whiteboard-scanner.bat, seo-agent.bat, run-whiteboard-scanner.bat, run-seo-agent.bat, run-whiteboard-agent.bat, run-whiteboard-scorer.bat
+[2026-04-06 10:57:59] Janitor report saved. Status: flagged
+[2026-04-06 10:57:59] Janitor complete — flagged
+[2026-04-06 11:00:10] Janitor starting
+[2026-04-06 11:00:16] Removed 2 __pycache__ dirs
+[2026-04-06 11:00:16] Orphaned bat files (no matching XML task): overnight-agency-spec-generator.bat, overnight-agency-spec-grader.bat, whiteboard-scanner.bat, seo-agent.bat, run-whiteboard-scanner.bat, run-seo-agent.bat, run-whiteboard-agent.bat, run-whiteboard-scorer.bat
+[2026-04-06 11:00:26] Janitor report saved. Status: flagged
+[2026-04-06 11:00:26] Janitor complete — flagged

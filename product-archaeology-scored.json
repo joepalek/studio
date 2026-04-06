@@ -1,6 +1,6 @@
 {
-  "count": 17,
-  "updated": "2026-04-05T08:01:14.728347",
+  "count": 16,
+  "updated": "2026-04-06T11:02:05.493871",
   "results": [
     {
       "product_name": "Chromecast",
@@ -17,14 +17,14 @@
       "score": {
         "market_void_exists": false,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "Chromecast continues to evolve and thrive as a product line, not a failed product.",
+        "why_could_work_now": "Chromecast continues to evolve and thrive, so there's no need for a 'resurrection' of a dead product; rather, it is a testament to its successful integration and continuous improvement within Google's ecosystem.",
         "market_size": "LARGE",
         "build_effort": 1,
-        "revenue_potential": 5,
-        "total_score": 6,
-        "whiteboard_priority": "KILL"
+        "revenue_potential": 4,
+        "total_score": 5,
+        "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:00:27.155304",
+      "scored_at": "2026-04-06T11:01:14.865598",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -42,14 +42,14 @@
       "score": {
         "market_void_exists": false,
         "2026_viability": "LOW",
-        "why_could_work_now": "The short-form vertical video market is saturated, and Stories offered little differentiation to attract creators or viewers away from existing platforms.",
+        "why_could_work_now": "The short-form video market is saturated, and Stories offered limited differentiation and reach compared to established platforms.",
         "market_size": "LARGE",
         "build_effort": 2,
         "revenue_potential": 2,
         "total_score": 4,
         "whiteboard_priority": "KILL"
       },
-      "scored_at": "2026-04-05T08:00:31.988412",
+      "scored_at": "2026-04-06T11:01:20.484887",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -67,14 +67,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "A dedicated, privacy-focused platform for long-term photo archiving and sharing, with robust search and organization features, is still in demand.",
+        "why_could_work_now": "People still need a reliable, private, and well-integrated platform to store and share their personal photo albums with granular control.",
         "market_size": "LARGE",
-        "build_effort": 4,
+        "build_effort": 3,
         "revenue_potential": 4,
-        "total_score": 8,
-        "whiteboard_priority": "PUSH_UP"
+        "total_score": 7,
+        "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:00:34.080790",
+      "scored_at": "2026-04-06T11:01:22.597049",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -92,14 +92,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "Many small businesses and individuals value simplicity and reliability in domain registration, and Google's brand could still command trust for a no-frills, integrated service.",
+        "why_could_work_now": "The demand for straightforward, reliable domain registration with value-added features remains strong among small businesses and individuals.",
         "market_size": "LARGE",
-        "build_effort": 2,
-        "revenue_potential": 3,
-        "total_score": 5,
+        "build_effort": 3,
+        "revenue_potential": 4,
+        "total_score": 7,
         "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:00:36.421298",
+      "scored_at": "2026-04-06T11:01:24.632510",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -115,16 +115,16 @@
         "app"
       ],
       "score": {
-        "market_void_exists": true,
-        "2026_viability": "MEDIUM",
-        "why_could_work_now": "Integration with smart home devices and a focus on modular, easily upgradeable components could address prior limitations.",
+        "market_void_exists": false,
+        "2026_viability": "LOW",
+        "why_could_work_now": "The initial product was ahead of its time; recent advancements in conductive thread technology and miniaturization could lead to more practical applications.",
         "market_size": "NICHE",
         "build_effort": 4,
-        "revenue_potential": 3,
-        "total_score": 7,
+        "revenue_potential": 2,
+        "total_score": 6,
         "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:00:39.415140",
+      "scored_at": "2026-04-06T11:01:27.403679",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -142,15 +142,15 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "Modern AI could automate survey creation, targeting, and analysis, making it significantly more efficient and insightful for users.",
-        "market_size": "LARGE",
+        "why_could_work_now": "The need for convenient and cost-effective survey tools still exists, making a similar product viable in today's market.",
+        "market_size": "MEDIUM",
         "build_effort": 4,
         "revenue_potential": 4,
-        "total_score": 8,
+        "total_score": 4,
         "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:00:41.710287",
-      "scored_by": "gemini/gemini-2.5-flash"
+      "scored_at": "2026-04-06T11:01:30.125599",
+      "scored_by": "groq/llama-3.3-70b-versatile"
     },
     {
       "product_name": "Google Code Competitions",
@@ -167,14 +167,14 @@
       "score": {
         "market_void_exists": false,
         "2026_viability": "LOW",
-        "why_could_work_now": "The competitive programming landscape is well-served by established platforms.",
+        "why_could_work_now": "Dedicated competitive programming platforms already exist with large user bases and established ecosystems.",
         "market_size": "NICHE",
         "build_effort": 5,
-        "revenue_potential": 2,
-        "total_score": 7,
+        "revenue_potential": 1,
+        "total_score": 6,
         "whiteboard_priority": "KILL"
       },
-      "scored_at": "2026-04-05T08:00:44.334562",
+      "scored_at": "2026-04-06T11:01:32.939281",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -192,14 +192,14 @@
       "score": {
         "market_void_exists": false,
         "2026_viability": "LOW",
-        "why_could_work_now": "The core problem of simple, high-quality video calls is well-served by existing market leaders, offering little room for a new entrant without significant differentiation.",
+        "why_could_work_now": "The market is saturated with mature, feature-rich video communication apps, and there isn't a compelling new angle Duo could take.",
         "market_size": "LARGE",
-        "build_effort": 3,
-        "revenue_potential": 2,
-        "total_score": 5,
+        "build_effort": 1,
+        "revenue_potential": 1,
+        "total_score": 1,
         "whiteboard_priority": "KILL"
       },
-      "scored_at": "2026-04-05T08:00:49.542056",
+      "scored_at": "2026-04-06T11:01:38.347930",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -215,16 +215,16 @@
         "app"
       ],
       "score": {
-        "market_void_exists": true,
-        "2026_viability": "MEDIUM",
-        "why_could_work_now": "A dedicated phone-based driving mode with integrated navigation, communication, and media controls could cater to users without in-car infotainment systems.",
-        "market_size": "MEDIUM",
+        "market_void_exists": false,
+        "2026_viability": "LOW",
+        "why_could_work_now": "Modern phones have more processing power and better displays, potentially allowing for a more seamless and feature-rich in-car experience without relying on a dedicated head unit.",
+        "market_size": "SMALL",
         "build_effort": 3,
-        "revenue_potential": 3,
-        "total_score": 6,
-        "whiteboard_priority": "NEUTRAL"
+        "revenue_potential": 2,
+        "total_score": 5,
+        "whiteboard_priority": "KILL"
       },
-      "scored_at": "2026-04-05T08:00:52.299236",
+      "scored_at": "2026-04-06T11:01:41.218337",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -242,14 +242,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "Local businesses still need a dedicated and intuitive platform for managing their online presence without being buried in Google Maps' complexity.",
+        "why_could_work_now": "Small businesses need a dedicated, simple, and powerful app to manage their online presence, reviews, and customer interactions directly, without being buried in the general Google Maps app.",
         "market_size": "LARGE",
         "build_effort": 3,
         "revenue_potential": 4,
-        "total_70_score": 70,
+        "total_score": 7,
         "whiteboard_priority": "PUSH_UP"
       },
-      "scored_at": "2026-04-05T08:00:54.538971",
+      "scored_at": "2026-04-06T11:01:43.835311",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -267,14 +267,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "A modern, data-lite YouTube version could thrive in regions with expensive data or limited connectivity, especially with improved offline capabilities and creator monetization.",
+        "why_could_work_now": "A lightweight YouTube Go could thrive as a default app on entry-level Android devices given growing smartphone penetration in emerging markets.",
         "market_size": "LARGE",
         "build_effort": 3,
         "revenue_potential": 4,
         "total_score": 7,
-        "whiteboard_priority": "NEUTRAL"
+        "whiteboard_priority": "PUSH_UP"
       },
-      "scored_at": "2026-04-05T08:00:59.770645",
+      "scored_at": "2026-04-06T11:01:50.118037",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -292,14 +292,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "The rise of AI-generated content and the increasing desire for ad-free experiences could make a micropayment system for content more attractive.",
+        "why_could_work_now": "Increased desire for ad-free experiences and creator support combined with a more mature micropayment infrastructure.",
         "market_size": "LARGE",
-        "build_effort": 4,
+        "build_effort": 3,
         "revenue_potential": 4,
-        "total_score": 8,
-        "whiteboard_priority": "NEUTRAL"
+        "total_score": 7,
+        "whiteboard_priority": "PUSH_UP"
       },
-      "scored_at": "2026-04-05T08:01:01.921397",
+      "scored_at": "2026-04-06T11:01:52.316815",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -317,14 +317,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "Modern real-time collaboration tools and the increasing need for precise location data in field operations could make a dedicated, enterprise-focused coordinate sharing platform valuable.",
+        "why_could_work_now": "Modern communication tools and more sophisticated mapping APIs could allow for a more integrated and user-friendly experience for location coordination.",
         "market_size": "MEDIUM",
-        "build_effort": 6,
-        "revenue_potential": 6,
-        "total_score": 12,
-        "whiteboard_priority": "PUSH_UP"
+        "build_effort": 3,
+        "revenue_potential": 3,
+        "total_score": 6,
+        "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:01:04.092337",
+      "scored_at": "2026-04-06T11:01:54.533844",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -342,14 +342,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "The demand for at-home personalized fitness coaching has surged, with advancements in AI making highly customized and adaptive programs more accessible and affordable than ever.",
+        "why_could_work_now": "People are increasingly focused on personalized wellness and are comfortable with digital coaching, especially when combined with wearable data.",
         "market_size": "LARGE",
-        "build_effort": 4,
+        "build_effort": 3,
         "revenue_potential": 4,
-        "total_score": 8,
-        "whiteboard_priority": "PUSH_UP"
+        "total_score": 7,
+        "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:01:06.287615",
+      "scored_at": "2026-04-06T11:01:56.989367",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -367,39 +367,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "Modern generative AI can create highly personalized and interactive yoga flows, offering unique selling propositions beyond basic video libraries.",
+        "why_could_work_now": "A modern, AI-driven yoga app could offer personalized experiences and real-time feedback, addressing user desire for customized wellness.",
         "market_size": "LARGE",
         "build_effort": 4,
         "revenue_potential": 4,
         "total_score": 8,
-        "whiteboard_priority": "PUSH_UP"
+        "whiteboard_priority": "NEUTRAL"
       },
-      "scored_at": "2026-04-05T08:01:08.470037",
-      "scored_by": "gemini/gemini-2.5-flash"
-    },
-    {
-      "product_name": "Google OnHub",
-      "category": "google_killed",
-      "source": "killedbygoogle.com",
-      "killed_date": "2023-01-11",
-      "description": "Google OnHub was a series of residential wireless routers manufactured by Asus and TP-Link that were powered by Google software, managed by Google apps, and offered enhanced special features like Google Assistant.",
-      "why_failed": "Google acquisition/shutdown",
-      "whiteboard_tags": [
-        "product_archaeology",
-        "tech",
-        "app"
-      ],
-      "score": {
-        "market_void_exists": false,
-        "2026_viability": "LOW",
-        "why_could_work_now": "The original OnHub was ahead of its time for user-friendly home networking, but current market saturation with robust mesh Wi-Fi systems diminishes its unique appeal.",
-        "market_size": "MEDIUM",
-        "build_effort": 3,
-        "revenue_potential": 2,
-        "total_score": 5,
-        "whiteboard_priority": "KILL"
-      },
-      "scored_at": "2026-04-05T08:01:11.572700",
+      "scored_at": "2026-04-06T11:01:59.118777",
       "scored_by": "gemini/gemini-2.5-flash"
     },
     {
@@ -417,14 +392,14 @@
       "score": {
         "market_void_exists": true,
         "2026_viability": "MEDIUM",
-        "why_could_work_now": "The current generative AI landscape makes automated chatbot analysis and optimization more crucial than ever for businesses leveraging AI-powered customer service.",
+        "why_could_work_now": "The demand for easy-to-implement, customizable chatbot analytics has only grown with the proliferation of AI tools and conversational interfaces, especially if it integrates seamlessly with diverse platforms beyond just Dialogflow.",
         "market_size": "LARGE",
-        "build_effort": 4,
-        "revenue_potential": 4,
-        "total_score": 8,
+        "build_effort": 6,
+        "revenue_potential": 7,
+        "total_score": 13,
         "whiteboard_priority": "PUSH_UP"
       },
-      "scored_at": "2026-04-05T08:01:13.727982",
+      "scored_at": "2026-04-06T11:02:04.493366",
       "scored_by": "gemini/gemini-2.5-flash"
     }
   ]

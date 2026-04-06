@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-04-06T03:11:12.651031",
+  "months_evaluated": 2,
+  "total_calls": 6,
+  "correct": 2,
+  "wrong_dangerous": 0,
+  "neutral_miss": 4,
+  "accuracy_pct": 33.3,
+  "wrong_pct": 0.0,
+  "target_accuracy": 88.0,
+  "target_wrong_max": 8.0,
+  "pass": false,
+  "monthly_detail": [
+    {
+      "month": "2026-03",
+      "release_date": "2026-03-10",
+      "synth_dir": "MIXED",
+      "synthesis": "Corn: No changes in outlook or price forecast -- NEUTRAL for prices.\nCotton: Global production forecast raised over 1.1 million bales -- BEARISH for prices.\nRice: Lower supplies and reduced exports with steady ending stocks -- BULLISH for prices.\nSoybeans: Increased imports and crush with unchanged ending stocks -- NEUTRAL for prices.\nWheat: No changes in supply and use categories, slight price in",
+      "commodities": [
+        {
+          "commodity": "Wheat",
+          "ticker": "ZW=F",
+          "synth_dir": "MIXED",
+          "actual_dir": "NEUTRAL",
+          "pct_change": 0.68,
+          "outcome": "correct"
+        },
+        {
+          "commodity": "Corn",
+          "ticker": "ZC=F",
+          "synth_dir": "MIXED",
+          "actual_dir": "BULLISH",
+          "pct_change": 3.04,
+          "outcome": "neutral_miss"
+        },
+        {
+          "commodity": "Soybeans",
+          "ticker": "ZS=F",
+          "synth_dir": "MIXED",
+          "actual_dir": "NEUTRAL",
+          "pct_change": -1.94,
+          "outcome": "correct"
+        }
+      ]
+    },
+    {
+      "month": "2026-02",
+      "release_date": "2026-02-10",
+      "synth_dir": "MIXED",
+      "synthesis": "Corn: Exports are raised and ending stocks are lowered -- BULLISH for prices.\nCotton: Export projection reduced due to lagging sales -- BULLISH for prices.\nRice: Lower supplies and reduced exports -- BULLISH for prices.\nSoybeans: No changes in supply and use projections -- NEUTRAL for prices.\nWheat: Unchanged supplies with slightly higher ending stocks -- BEARISH for prices.\n\nOverall: MIXED -- Mon",
+      "commodities": [
+        {
+          "commodity": "Wheat",
+          "ticker": "ZW=F",
+          "synth_dir": "MIXED",
+          "actual_dir": "BULLISH",
+          "pct_change": 12.12,
+          "outcome": "neutral_miss"
+        },
+        {
+          "commodity": "Corn",
+          "ticker": "ZC=F",
+          "synth_dir": "MIXED",
+          "actual_dir": "BULLISH",
+          "pct_change": 4.55,
+          "outcome": "neutral_miss"
+        },
+        {
+          "commodity": "Soybeans",
+          "ticker": "ZS=F",
+          "synth_dir": "MIXED",
+          "actual_dir": "BULLISH",
+          "pct_change": 8.06,
+          "outcome": "neutral_miss"
+        }
+      ]
+    }
+  ]
+}

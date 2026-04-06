@@ -1,6 +1,6 @@
 # STUDIO SYSTEM CONTEXT
-Generated: 2026-04-05 10:36 | Auto-built by generate-context.py
-Next regeneration: 2026-04-05 18:36 (approximate — runs at every session start)
+Generated: 2026-04-06 08:00 | Auto-built by generate-context.py
+Next regeneration: 2026-04-06 16:00 (approximate — runs at every session start)
 Handoff: - Inbox cleared, model registry updated (+gemma-4, +gpt-5.4-mini/nano)
 
 ## WHO IS JOE
@@ -1848,8 +1848,8 @@ Total: 12 rules
 
 ## WHITEBOARD
 
-Last updated: 2026-04-05T04:04:26.345774
-Total items: 99
+Last updated: 2026-04-06T04:00:51.224940
+Total items: 111
 
   [9/10] Higgsfield Original Series — Backwards Design
     id:      higgsfield-backwards-design
@@ -1962,6 +1962,44 @@ Total items: 99
       effort_estimate: months
       revenue_estimate: LARGE
       top_risk: Rapid evolution of alternative efficient LLM frameworks/libraries.
+    tags:    github, trending, python
+    added:   
+
+  [9/10] Weekend Hunter — Garage Sale Route Optimizer
+    id:      weekend-hunter-project
+    type:    project
+    status:  LIVE
+    source:  studio_internal
+    description: Automated garage sale discovery and route optimization. Scrapes EstateSales.net, Craigslist, and Facebook Marketplace for weekend sales. Generates optimized Google Maps routes for Friday night/Saturday morning pickup runs. Includes sidebar widget integration.
+    score_breakdown:
+      total_score: 9
+      market_gap_score: 8
+      build_feasibility: 10
+      revenue_potential: 8
+      urgency: 9
+      why_now: Direct revenue support for eBay reselling operation. Eliminates manual sale discovery.
+      recommended_action: LIVE
+      effort_estimate: done
+      revenue_estimate: PERSONAL_USE
+    tags:    project, reselling, automation, maps
+    added:   
+
+  [9/10] GitHub Trending: google-deepmind/gemma
+    id:      gh-google-deepmind-gemma
+    type:    github_trending
+    status:  
+    source:  
+    score_breakdown:
+      total_score: 9
+      market_gap_score: 8
+      build_feasibility: 7
+      revenue_potential: 9
+      urgency: 9
+      why_now: The rapid evolution of AI models and a growing demand for accessible, powerful alternatives to proprietary systems make 2026 a prime time for widely adoptable open-source AI.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: Rapid pace of AI research leading to quick obsolescence or the emergence of a superior, truly open-source competitor.
     tags:    github, trending, python
     added:   
 
@@ -2394,6 +2432,63 @@ Total items: 99
       effort_estimate: months
       revenue_estimate: LARGE
       top_risk: Rapid evolution of underlying AI models and agent paradigms could quickly outdate framework design.
+    tags:    github, trending, python
+    added:   
+
+  [8/10] Personal Reseller P&L Tracker
+    id:      personal-reseller-pnl
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Comprehensive profit/loss tracking for eBay reselling. eBay API integration + CSV bank imports + SQLite backend. Competitor analysis: My Reseller Genie charges $20/mo. ~40-60 hours for personal MVP.
+    score_breakdown:
+      total_score: 8
+      market_gap_score: 7
+      build_feasibility: 7
+      revenue_potential: 6
+      urgency: 7
+      why_now: Direct operational need. Existing tools are expensive or don't integrate with personal workflow.
+      recommended_action: BUILD
+      effort_estimate: weeks
+      revenue_estimate: PERSONAL_USE
+    tags:    whiteboard, reselling, finance, tracking
+    added:   
+
+  [8/10] Institutional Twin Councils — AI Expert Panels
+    id:      institutional-twin-councils
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Domain-expert AI panels replacing expensive consultants. B2B SaaS model. Multi-agent consensus architecture for institutional decision support.
+    score_breakdown:
+      total_score: 8
+      market_gap_score: 8
+      build_feasibility: 5
+      revenue_potential: 9
+      urgency: 6
+      why_now: B2B AI consulting replacement is a massive market. Requires significant architecture work.
+      recommended_action: RESEARCH
+      effort_estimate: months
+      revenue_estimate: B2B_SAAS
+    tags:    whiteboard, b2b, saas, consulting, ai
+    added:   
+
+  [8/10] GitHub Trending: HKUDS/RAG-Anything
+    id:      gh-HKUDS-RAG-Anything
+    type:    github_trending
+    status:  
+    source:  
+    score_breakdown:
+      total_score: 8
+      market_gap_score: 7
+      build_feasibility: 8
+      revenue_potential: 8
+      urgency: 9
+      why_now: The rapid advancement and adoption of RAG models, coupled with increasing demand for multimodal AI and content generation, makes 2026 ideal for a versatile 'RAG-Anything' solution.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: Rapid obsolescence or commoditization due to fast-paced AI research and development.
     tags:    github, trending, python
     added:   
 
@@ -3111,6 +3206,162 @@ On returning to it 30 years later, it certainly scratc
     tags:    github, trending, python
     added:   
 
+  [7/10] Google Maps Coordinate
+    id:      pa-1775394074-1
+    type:    product_archaeology
+    status:  
+    source:  killedbygoogle.com
+    description: Google Maps Coordinate was a service for managing mobile workforces with the help of mobile apps and a web-based dashboard.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 7
+      build_feasibility: 8
+      revenue_potential: 7
+      urgency: 6
+      why_now: The rise of flexible workforces, gig economy expansion, and demand for real-time operational efficiency make a modern, specialized workforce management tool highly relevant in 2026.
+      recommended_action: PITCH
+      effort_estimate: months
+      revenue_estimate: MEDIUM
+      top_risk: Market saturation with existing workforce management, field service, and fleet tracking solutions.
+    tags:    product_archaeology
+    added:   
+
+  [7/10] Fitbit Coach
+    id:      pa-1775394074-2
+    type:    product_archaeology
+    status:  
+    source:  killedbygoogle.com
+    description: Fitbit Coach (formerly Fitstar) was a video-based bodyweight workout app that used AI to personalize workouts based on user feedback.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 7
+      build_feasibility: 8
+      revenue_potential: 7
+      urgency: 6
+      why_now: The increased awareness of personalized fitness, coupled with advancements in AI and a desire for convenient home workouts, creates a fertile ground for a revived and improved Fitbit Coach.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: MEDIUM
+      top_risk: Market saturation with existing fitness apps and the challenge of differentiating a new offering.
+    tags:    product_archaeology
+    added:   
+
+  [7/10] Fitstar Yoga
+    id:      pa-1775394074-3
+    type:    product_archaeology
+    status:  
+    source:  killedbygoogle.com
+    description: Fitstar Yoga was a video-based yoga app that created unique yoga sessions based on user preference and skill level.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 7
+      build_feasibility: 8
+      revenue_potential: 7
+      urgency: 6
+      why_now: The increased focus on personalized wellness, at-home fitness, and AI-driven customization makes 2026 an opportune time for a sophisticated, adaptive yoga platform.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: MEDIUM
+      top_risk: Market saturation with existing yoga/fitness apps and the need to differentiate effectively beyond basic customization.
+    tags:    product_archaeology
+    added:   
+
+  [7/10] Chatbase
+    id:      pa-1775394074-4
+    type:    product_archaeology
+    status:  
+    source:  killedbygoogle.com
+    description: Analytics platform for Google's Dialogflow chatbot & others, started by the Google-funded Area120 incubator then retired and partially merged into Dialogflow itself.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 8
+      build_feasibility: 7
+      revenue_potential: 7
+      urgency: 8
+      why_now: The explosion of AI chatbots and custom LLM applications in 2024-2025 creates a massive, underserved demand for robust, agnostic analytics to understand their performance, user engagement, and areas for improvement.
+      recommended_action: BUILD
+      effort_estimate: months
+      revenue_estimate: LARGE
+      top_risk: Google or another major AI player launching their own comprehensive, cross-platform analytics solution that becomes the de facto standard.
+    tags:    product_archaeology
+    added:   
+
+  [7/10] Ray-Ban Meta Smart Glasses Item Identifier
+    id:      ray-ban-meta-identifier
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Wearable item identification using Ray-Ban Meta smart glasses DAT SDK (~1fps JPEG stream). Claude/Gemini Vision + eBay Browse API for real-time price lookup while picking items at estate sales.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 8
+      build_feasibility: 5
+      revenue_potential: 7
+      urgency: 6
+      why_now: Wearable AI is maturing. Phone camera MVP recommended first before glasses investment.
+      recommended_action: RESEARCH
+      effort_estimate: weeks
+      revenue_estimate: PERSONAL_USE
+    tags:    whiteboard, wearable, vision, reselling
+    added:   
+
+  [7/10] TurboSquid 3D Asset Sales (Hunter)
+    id:      turbosquid-3d-assets
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Leverage Hunter's Blender skills for passive income via 3D asset marketplace. TurboSquid: 40% royalty for new sellers, 50-60% via SquidGuild. Long-tail revenue potential.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 6
+      build_feasibility: 8
+      revenue_potential: 6
+      urgency: 5
+      why_now: Hunter has Blender skills. Low barrier to entry. Could generate passive income while building other projects.
+      recommended_action: RESEARCH
+      effort_estimate: ongoing
+      revenue_estimate: NICHE
+    tags:    whiteboard, hunter, 3d, passive_income
+    added:   
+
+  [7/10] BlenderMCP AI-Assisted Workflow (Hunter)
+    id:      blendermcp-workflow
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Few-shot prompting doubles usable Blender AI output (25-35% to 65-75%). RTX 3060 12GB recommended for local AI texturing. MCP server integration for Claude-assisted 3D modeling.
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 7
+      build_feasibility: 6
+      revenue_potential: 5
+      urgency: 5
+      why_now: BlenderMCP and AI-assisted 3D workflows are emerging. Early adoption could compound Hunter's skills.
+      recommended_action: RESEARCH
+      effort_estimate: weeks
+      revenue_estimate: SKILL_BUILDING
+    tags:    whiteboard, hunter, blender, ai, workflow
+    added:   
+
+  [7/10] GitHub Trending: atilaahmettaner/tradingview-mcp
+    id:      gh-atilaahmettaner-tradingview-mcp
+    type:    github_trending
+    status:  
+    source:  
+    score_breakdown:
+      total_score: 7
+      market_gap_score: 7
+      build_feasibility: 8
+      revenue_potential: 6
+      urgency: 6
+      why_now: The ongoing democratization of financial tools and increased retail trading sophistication makes this a relevant time for enhanced analytical aids.
+      recommended_action: RESEARCH
+      effort_estimate: weeks
+      revenue_estimate: NICHE
+      top_risk: Lack of unique differentiation from existing commercial or open-source trading analysis tools.
+    tags:    github, trending, python
+    added:   
+
   [6/10] Google Glass
     id:      vint-0020
     type:    product_gap
@@ -3247,6 +3498,44 @@ On returning to it 30 years later, it certainly scratc
     tags:    maintenance, whiteboard, supervisor, automation
     added:   
 
+  [6/10] SysGuard/Watchdog Personal Security Scanner
+    id:      sysguard-watchdog-scanner
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Personal system security monitoring. Components built: SentinelScan.ps1, SentinelDashboard.html, Setup-SentinelScan.ps1. Needs Task Scheduler registration to activate.
+    score_breakdown:
+      total_score: 6
+      market_gap_score: 5
+      build_feasibility: 9
+      revenue_potential: 3
+      urgency: 4
+      why_now: Personal security hygiene. Already partially built, just needs scheduling.
+      recommended_action: BUILD
+      effort_estimate: hours
+      revenue_estimate: PERSONAL_USE
+    tags:    whiteboard, security, monitoring, personal
+    added:   
+
+  [6/10] Guitar Tab Aggregator/Ranker (Hunter)
+    id:      guitar-tab-aggregator
+    type:    whiteboard
+    status:  WHITEBOARD
+    source:  chat_idea
+    description: Meta-search/ranker for guitar tabs. Links out (no hosting). YouTube Data API for lesson ranking. Spotify basic-pitch for accuracy scoring. Avoids copyright issues by not hosting content.
+    score_breakdown:
+      total_score: 6
+      market_gap_score: 6
+      build_feasibility: 7
+      revenue_potential: 5
+      urgency: 4
+      why_now: Hunter interest area. Low-risk entry point for content aggregation business model.
+      recommended_action: RESEARCH
+      effort_estimate: weeks
+      revenue_estimate: NICHE
+    tags:    whiteboard, hunter, music, aggregator
+    added:   
+
   [5/10] Tucker Torpedo
     id:      vint-0008
     type:    product_gap
@@ -3320,6 +3609,26 @@ On returning to it 30 years later, it certainly scratc
       revenue_estimate: NICHE
       top_risk: Dependabot is an existing, widely adopted, and well-integrated GitHub product, making direct competition challenging without significant innovation or a different target audience.
     tags:    github, trending, python
+    added:   
+
+  [5/10] Google Album Archive
+    id:      pa-1775394074-0
+    type:    product_archaeology
+    status:  
+    source:  killedbygoogle.com
+    description: Google Album Archive was a platform that allowed users to access and manage their archived photos and videos from various Google services, such as Hangouts and Picasa Web Albums.
+    score_breakdown:
+      total_score: 5
+      market_gap_score: 4
+      build_feasibility: 7
+      revenue_potential: 5
+      urgency: 4
+      why_now: With increasing concerns about data ownership and the desire for centralized personal archives, a robust solution for orphaned Google photo/video content could find a dedicated user base.
+      recommended_action: RESEARCH
+      effort_estimate: weeks
+      revenue_estimate: NICHE
+      top_risk: Lack of genuine user demand for a dedicated solution for legacy Google archived content, given existing alternatives (Google Photos, takeout).
+    tags:    product_archaeology
     added:   
 
   [4/10] I miss having that previous channel button on remotes
@@ -3433,6 +3742,25 @@ On returning to it 30 years later, it certainly scratc
       top_risk: Market irrelevance due to current smartphones and tablets offering superior functionality and convenience.
     tags:    product_archaeology, vintage, vintage-1990s
     added:   2026-03-19T15:16:03.025784
+
+  [2/10] GitHub Trending: sponsors/atilaahmettaner
+    id:      gh-sponsors-atilaahmettaner
+    type:    github_trending
+    status:  
+    source:  
+    score_breakdown:
+      total_score: 2
+      market_gap_score: 1
+      build_feasibility: 10
+      revenue_potential: 1
+      urgency: 1
+      why_now: This appears to be a personal sponsorship link, not a product or idea with market viability in 2026.
+      recommended_action: KILL
+      effort_estimate: days
+      revenue_estimate: NICHE
+      top_risk: It's not a product or idea, so there's no inherent market risk beyond misinterpretation.
+    tags:    github, trending, python
+    added:   
 
   [1/10] The 'Autodynophone'
     id:      vint-0003
@@ -3694,55 +4022,10 @@ On returning to it 30 years later, it certainly scratc
     tags:    product_archaeology, vintage, vintage-2010s
     added:   2026-03-19T15:16:03.025794
 
-  [0/10] Google Album Archive
-    id:      pa-1775394074-0
-    type:    product_archaeology
-    status:  
-    source:  killedbygoogle.com
-    description: Google Album Archive was a platform that allowed users to access and manage their archived photos and videos from various Google services, such as Hangouts and Picasa Web Albums.
-    tags:    product_archaeology
-    added:   
-
-  [0/10] Google Maps Coordinate
-    id:      pa-1775394074-1
-    type:    product_archaeology
-    status:  
-    source:  killedbygoogle.com
-    description: Google Maps Coordinate was a service for managing mobile workforces with the help of mobile apps and a web-based dashboard.
-    tags:    product_archaeology
-    added:   
-
-  [0/10] Fitbit Coach
-    id:      pa-1775394074-2
-    type:    product_archaeology
-    status:  
-    source:  killedbygoogle.com
-    description: Fitbit Coach (formerly Fitstar) was a video-based bodyweight workout app that used AI to personalize workouts based on user feedback.
-    tags:    product_archaeology
-    added:   
-
-  [0/10] Fitstar Yoga
-    id:      pa-1775394074-3
-    type:    product_archaeology
-    status:  
-    source:  killedbygoogle.com
-    description: Fitstar Yoga was a video-based yoga app that created unique yoga sessions based on user preference and skill level.
-    tags:    product_archaeology
-    added:   
-
-  [0/10] Chatbase
-    id:      pa-1775394074-4
-    type:    product_archaeology
-    status:  
-    source:  killedbygoogle.com
-    description: Analytics platform for Google's Dialogflow chatbot & others, started by the Google-funded Area120 incubator then retired and partially merged into Dialogflow itself.
-    tags:    product_archaeology
-    added:   
-
 
 ## STUDIO CURRENT STATE
 
   ERROR: [Errno 2] No such file or directory: 'G:/My Drive/Projects/_studio\\state.json'
 
 ---
-End of context. Generated: 2026-04-05 10:36
+End of context. Generated: 2026-04-06 08:00

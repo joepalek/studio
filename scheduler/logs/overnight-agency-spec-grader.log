@@ -1319,3 +1319,9 @@ PermissionError: [Errno 13] Permission denied: 'G:\\My Drive\\Projects\\_studio\
                    ^
 SyntaxError: unterminated triple-quoted string literal (detected at line 224)
 [Sun 04/05/2026  3:30:02.15] Done 
+[Mon 04/06/2026  3:30:01.91] Spec Grader starting 
+  File "G:\My Drive\Projects\_studio\agency\spec-queue\spec_auto_grader.py", line 32
+    GRADE_PROMPT = """You are a character development director for a solo AI content studio.
+                   ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 224)
+[Mon 04/06/2026  3:30:02.11] Done 

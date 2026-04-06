@@ -244,6 +244,61 @@
       "findings_count": 0,
       "notes": "YELLOW score=57/100 entries=1",
       "session_id": ""
+    },
+    {
+      "id": "ACT-20260406-0323-nightlyrollu-022",
+      "timestamp": "2026-04-06T03:23:45.402062",
+      "agent": "nightly-rollup",
+      "action_type": "rollup",
+      "target": "daily-digest.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "GREEN score=87/100 entries=2",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260406-0600-checkdrift-023",
+      "timestamp": "2026-04-06T06:00:01.978739",
+      "agent": "check-drift",
+      "action_type": "rollup",
+      "target": "supervisor-inbox.json",
+      "result": "clean",
+      "findings_count": 0,
+      "notes": "[check-drift] 0/12 projects drift_risk HIGH",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260406-0730-nightlyrollu-024",
+      "timestamp": "2026-04-06T07:30:02.066710",
+      "agent": "nightly-rollup",
+      "action_type": "rollup",
+      "target": "daily-digest.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "GREEN score=87/100 entries=3",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260406-1001-nightlyrollu-025",
+      "timestamp": "2026-04-06T10:01:21.509508",
+      "agent": "nightly-rollup",
+      "action_type": "rollup",
+      "target": "daily-digest.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "RED score=0/100 entries=3",
+      "session_id": ""
+    },
+    {
+      "id": "ACT-20260406-1059-nightlyrollu-026",
+      "timestamp": "2026-04-06T10:59:33.454861",
+      "agent": "nightly-rollup",
+      "action_type": "rollup",
+      "target": "daily-digest.json",
+      "result": "pass",
+      "findings_count": 0,
+      "notes": "RED score=27/100 entries=4",
+      "session_id": ""
     }
   ]
 }

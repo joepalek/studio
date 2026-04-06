@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-05T23:00:04.343751",
+  "time": "2026-04-06T11:00:04.600970",
   "ollama_up": true,
   "gemini_available": true,
   "providers_available": [
@@ -15,22 +15,7 @@
   ],
   "best_free_provider": "cerebras",
   "free_models": [],
-  "agents_recently_active": [
-    "--list",
-    "agency-build",
-    "ai-intel-agent",
-    "ai-services-rankings",
-    "auto-answer-gemini",
-    "check-drift",
-    "git-commit",
-    "nightly-rollup",
-    "product-archaeology",
-    "supervisor",
-    "traitor-protocol",
-    "vector-reindex",
-    "vintage-agent",
-    "whiteboard-scorer"
-  ],
+  "agents_recently_active": [],
   "work_queue_depth": 0,
   "dispatched": []
 }
