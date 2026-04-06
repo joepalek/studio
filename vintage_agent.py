@@ -18,10 +18,34 @@ MAX_CONSECUTIVE_FAILURES = 3
 
 STUDIO   = "G:/My Drive/Projects/_studio"
 VINT_DIR = STUDIO + "/vintage"
-CONFIG   = json.load(open(STUDIO + "/studio-config.json", encoding="utf-8"))
-KEY      = CONFIG.get("gemini_api_key", "")
-GEMINI   = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent?key=" + KEY
 LOG_PATH = STUDIO + "/scheduler/logs/overnight-vintage-agent.log"
+
+# Load API key from vault (primary) or studio-config (fallback)
+def get_gemini_key():
+    """Load Gemini API key from vault, falling back to studio-config."""
+    # Try vault first
+    vault_path = STUDIO + "/.studio-vault.json"
+    if os.path.exists(vault_path):
+        try:
+            vault = json.load(open(vault_path, encoding="utf-8"))
+            key = vault.get("gemini_api_key", "")
+            if key:
+                return key
+        except Exception:
+            pass
+    # Fallback to studio-config
+    config_path = STUDIO + "/studio-config.json"
+    if os.path.exists(config_path):
+        try:
+            cfg = json.load(open(config_path, encoding="utf-8"))
+            return cfg.get("gemini_api_key", "")
+        except Exception:
+            pass
+    return ""
+
+KEY = get_gemini_key()
+# Use gemini-2.0-flash (not gemini-2.0-flash-001 which was deprecated)
+GEMINI = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" + KEY
 
 DECADES  = ["1920s","1930s","1940s","1950s","1960s","1970s","1980s","1990s","2000s","2010s"]
 
@@ -78,7 +102,22 @@ def main():
     os.makedirs(VINT_DIR, exist_ok=True)
 
     if not KEY:
-        log("ERROR: no gemini_api_key in studio-config.json")
+        log("ERROR: no gemini_api_key in .studio-vault.json or studio-config.json")
+        # Still write heartbeat to prevent "missed" status
+        try:
+            hb_path = STUDIO + "/heartbeat-log.json"
+            hb = json.load(open(hb_path, encoding="utf-8")) if os.path.exists(hb_path) else {"_schema": "1.0", "entries": []}
+            if isinstance(hb, list):
+                hb = {"_schema": "1.0", "entries": hb}
+            hb.setdefault("entries", []).append({
+                "date": datetime.now().isoformat(),
+                "agent": "vintage-agent",
+                "status": "flagged",
+                "notes": "ERROR: no gemini_api_key configured"
+            })
+            json.dump(hb, open(hb_path, "w", encoding="utf-8"), indent=2)
+        except Exception as e:
+            log("Heartbeat write failed: " + str(e)[:60])
         return
 
     filled = 0
@@ -127,12 +166,22 @@ def main():
 
     log("Vintage Agent complete: " + str(filled) + " filled, " + str(skipped) + " already complete")
 
-    # Heartbeat
-    import sys as _sys; _sys.path.insert(0, STUDIO)
+    # Heartbeat - always write to prevent "missed" in nightly rollup
     try:
-        from utilities.heartbeat import write as hb_write
-        hb_write('vintage-agent', 'clean', 'filled=' + str(filled) + ' skipped=' + str(skipped))
-    except Exception as e: log('[heartbeat] ' + str(e)[:60])
+        hb_path = STUDIO + "/heartbeat-log.json"
+        hb = json.load(open(hb_path, encoding="utf-8")) if os.path.exists(hb_path) else {"_schema": "1.0", "entries": []}
+        if isinstance(hb, list):
+            hb = {"_schema": "1.0", "entries": hb}
+        hb.setdefault("entries", []).append({
+            "date": datetime.now().isoformat(),
+            "agent": "vintage-agent",
+            "status": "clean",
+            "notes": "filled=" + str(filled) + " skipped=" + str(skipped)
+        })
+        json.dump(hb, open(hb_path, "w", encoding="utf-8"), indent=2)
+        log("Heartbeat written")
+    except Exception as e:
+        log("Heartbeat write failed: " + str(e)[:60])
 
 if __name__ == "__main__":
     main()

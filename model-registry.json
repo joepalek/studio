@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "version": "2.0.0",
-    "updated": "2026-04-04",
+    "version": "2.0.1",
+    "updated": "2026-04-05",
     "description": "Studio AI Model Registry — Supervisor routing source of truth",
     "note": "Supervisor reads this file to select model/engine per task. Cost tiers guide offload decisions."
   },
@@ -9,7 +9,7 @@
   "engines": {
     "clawcode_ollama": {
       "type": "local_harness",
-      "binary": "G:\\tools\\claw\\claw.exe",
+      "binary": "C:\\tools\\claw\\claw.exe",
       "provider": "ollama",
       "base_url": "http://localhost:11434",
       "api_cost_per_1k_tokens": 0.00,
@@ -178,24 +178,27 @@
   },
 
   "clawcode_install": {
-    "_note": "One-time setup instructions for Windows studio machine",
+    "_note": "One-time setup completed 2026-04-05. ClawCode is live at C:\\tools\\claw\\claw.exe",
     "repo": "https://github.com/codetwentyfive/claw-code-local",
+    "install_location": "C:\\tools\\claw-src",
+    "binary_location": "C:\\tools\\claw\\claw.exe",
     "build_steps": [
-      "git clone https://github.com/codetwentyfive/claw-code-local.git G:\\tools\\claw-src",
-      "cd G:\\tools\\claw-src\\rust",
+      "git clone https://github.com/codetwentyfive/claw-code-local.git C:\\tools\\claw-src",
+      "cd C:\\tools\\claw-src\\rust",
       "cargo build -p rusty-claude-cli --release",
-      "copy rust\\target\\release\\claw.exe G:\\tools\\claw\\claw.exe"
+      "copy rust\\target\\release\\claw.exe C:\\tools\\claw\\claw.exe"
     ],
-    "env_vars_required": {
+    "env_vars_set": {
       "OPENAI_BASE_URL": "http://127.0.0.1:11434/v1",
       "OPENAI_API_KEY": "ollama",
       "OPENAI_MODEL": "qwen3:14b"
     },
-    "ollama_models_to_pull": [
-      "ollama pull qwen3:14b",
-      "ollama pull qwen3.5:27b",
-      "ollama pull qwen3:8b"
+    "ollama_models_pulled": [
+      "qwen3:14b",
+      "qwen3:27b",
+      "qwen3:8b"
     ],
-    "test_command": "claw.exe --provider ollama --ollama-url http://localhost:11434 -m qwen3:14b -q \"write a Python function that returns the current timestamp\""
+    "test_command": "claw --model qwen3:14b \"write a Python function that returns the current timestamp\"",
+    "status": "verified_working"
   }
 }

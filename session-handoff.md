@@ -1,4 +1,4 @@
-# STUDIO SESSION HANDOFF This file is maintained by the nightly-rollup agent and the System Tightness Review protocol. It provides a reliable ground-truth status line for session-to-session continuity. ## Last Known State System tightness last reviewed: 2026-04-04 — YELLOW (self-healing, spec grader fixed)
+# STUDIO SESSION HANDOFF This file is maintained by the nightly-rollup agent and the System Tightness Review protocol. It provides a reliable ground-truth status line for session-to-session continuity. ## Last Known State System tightness last reviewed: 2026-04-05 — YELLOW (57/100)
 
 [SHANNON: truncated from ~356t to ~200t]
 

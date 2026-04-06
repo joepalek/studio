@@ -183,3 +183,6 @@ You've hit your limit · resets 4am (America/Chicago)
 
 [auto-answer] auto-resolved 0, escalated 0 of 0 pending
 [Sat 04/04/2026  3:30:02.47] Done 
+[Sun 04/05/2026  3:30:02.07] Auto-answer agent starting (Gemini Flash) 
+[auto-answer] ERROR: no gemini_api_key in studio-config.json
+[Sun 04/05/2026  3:30:02.40] Done 

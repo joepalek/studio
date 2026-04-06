@@ -1313,3 +1313,9 @@ Traceback (most recent call last):
                      encoding=self.encoding, errors=self.errors)
 PermissionError: [Errno 13] Permission denied: 'G:\\My Drive\\Projects\\_studio\\scheduler\\logs\\overnight-agency-spec-grader.log'
 [Sat 04/04/2026  3:30:01.90] Done 
+[Sun 04/05/2026  3:30:01.93] Spec Grader starting 
+  File "G:\My Drive\Projects\_studio\agency\spec-queue\spec_auto_grader.py", line 32
+    GRADE_PROMPT = """You are a character development director for a solo AI content studio.
+                   ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 224)
+[Sun 04/05/2026  3:30:02.15] Done 

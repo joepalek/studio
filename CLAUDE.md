@@ -323,6 +323,61 @@ A variant declared better without a recorded baseline_ref is a Lovelace violatio
 
 ---
 
+## WATKINS RULE (PLANNING GATE) [ENFORCED]
+
+**Behavioral intent:** Before starting any complex build that touches multiple files
+or agents, produce a 5-line plan. No code before planning gate passes.
+Named after Gloria Jean Watkins (bell hooks) for clarity of intent before action.
+
+**Structural enforcement:** Any task touching 3+ files OR requiring 2+ tool calls
+MUST produce a plan block before implementation begins.
+
+Required plan format:
+```
+PLAN: [task name]
+1. [first action]
+2. [second action]
+3. [third action]
+EXPECTED OUTCOME: [what success looks like]
+ROLLBACK: [how to undo if needed]
+```
+
+Enforcement:
+- Tasks without plan block are blocked
+- Plans longer than 5 numbered steps require decomposition
+- Complex plans decompose into sub-plans, each with its own block
+- Plan approval is implicit unless explicitly rejected by user
+
+---
+
+## AUTODREAM RULE [ENFORCED]
+
+**Behavioral intent:** The nightly autodream.py script consolidates session memory
+and updates health metrics. Claude sessions should never modify autodream outputs
+directly — they are system-generated artifacts.
+
+**Structural enforcement:** Files matching `autodream-*.json` and `memory-distill-*.json`
+are READ-ONLY to Claude sessions. Only autodream.py writes to these files.
+
+Protected files:
+- `autodream-distill.json` — nightly memory consolidation
+- `memory-distill-*.json` — per-project memory extracts
+- `studio-health.json` — nightly health score (written by autodream)
+
+Claude sessions MAY:
+- Read these files for context
+- Reference their contents in responses
+- Suggest changes to autodream.py logic
+
+Claude sessions MUST NOT:
+- Write directly to protected files
+- Modify autodream.py without explicit user instruction
+- Override health scores manually
+
+Violation: Any write attempt to protected files logs to error-log.json and aborts.
+
+---
+
 ## TURING RULE [ENFORCED]
 
 **Behavioral intent:** Agent output must cite information sources inline using [source_id]

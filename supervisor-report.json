@@ -1,5 +1,5 @@
 {
-  "time": "2026-04-04T23:00:04.627241",
+  "time": "2026-04-05T23:00:04.343751",
   "ollama_up": true,
   "gemini_available": true,
   "providers_available": [
@@ -17,8 +17,19 @@
   "free_models": [],
   "agents_recently_active": [
     "--list",
+    "agency-build",
+    "ai-intel-agent",
+    "ai-services-rankings",
+    "auto-answer-gemini",
+    "check-drift",
+    "git-commit",
+    "nightly-rollup",
+    "product-archaeology",
     "supervisor",
-    "traitor-protocol"
+    "traitor-protocol",
+    "vector-reindex",
+    "vintage-agent",
+    "whiteboard-scorer"
   ],
   "work_queue_depth": 0,
   "dispatched": []

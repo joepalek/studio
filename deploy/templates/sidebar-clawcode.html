@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Sidebar - ClawCode</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a12;
+            color: #e0e0e0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: #12121a;
+            border-bottom: 1px solid #2a2a3a;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: #888;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        
+        .tab:hover {
+            color: #ccc;
+            background: #1a1a2a;
+        }
+        
+        .tab.active {
+            color: #4a9eff;
+            border-bottom: 2px solid #4a9eff;
+            background: #1a1a2a;
+        }
+        
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            flex: 1;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        
+        .tab-content.active {
+            display: flex;
+        }
+        
+        /* Chat Panel */
+        .chat-header {
+            padding: 12px 16px;
+            background: #1a1a2e;
+            border-bottom: 1px solid #2a2a3a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        #connection-status {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            background: #2a2a3a;
+        }
+        
+        #connection-status.connected {
+            color: #4ade80;
+        }
+        
+        #connection-status.disconnected {
+            color: #ef4444;
+        }
+        
+        /* Quick Actions */
+        .quick-actions {
+            padding: 10px 12px;
+            background: #14141e;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            border-bottom: 1px solid #2a2a3a;
+        }
+        
+        .quick-btn {
+            padding: 6px 10px;
+            font-size: 11px;
+            border-radius: 6px;
+            border: 1px solid #3a3a4a;
+            background: #1a1a2e;
+            color: #aaa;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        
+        .quick-btn:hover {
+            background: #2a2a4e;
+            color: #fff;
+            border-color: #4a4a6a;
+        }
+        
+        /* Messages */
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+            background: #0e0e16;
+        }
+        
+        .message {
+            margin-bottom: 12px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .message.user {
+            background: #1e3a5f;
+            margin-left: 15%;
+        }
+        
+        .message.assistant {
+            background: #1a1a2e;
+        }
+        
+        .message.system {
+            background: #2a2a3a;
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .message.error {
+            background: #3a1a1a;
+            color: #ff6b6b;
+        }
+        
+        .message-meta {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .message-content {
+            white-space: pre-wrap;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 12px;
+        }
+        
+        /* Typing Indicator */
+        .typing {
+            padding: 8px 12px;
+            color: #888;
+            font-style: italic;
+            font-size: 12px;
+            display: none;
+        }
+        
+        .typing.active {
+            display: block;
+        }
+        
+        /* Input Area */
+        .input-area {
+            padding: 12px;
+            background: #1a1a2e;
+            border-top: 1px solid #2a2a3a;
+        }
+        
+        .input-row {
+            display: flex;
+            gap: 8px;
+        }
+        
+        #message-input {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #3a3a4a;
+            background: #0e0e16;
+            color: #fff;
+            font-size: 13px;
+            resize: none;
+        }
+        
+        #message-input:focus {
+            outline: none;
+            border-color: #4a9eff;
+        }
+        
+        #send-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            background: #4a9eff;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        
+        #send-btn:hover {
+            background: #3a8eef;
+        }
+        
+        #send-btn:disabled {
+            background: #3a3a4a;
+            cursor: not-allowed;
+        }
+        
+        /* Status Panel */
+        .status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 12px;
+        }
+        
+        .status-card {
+            background: #1a1a2e;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        
+        .status-card h4 {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+        
+        .status-value {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .status-value.good { color: #4ade80; }
+        .status-value.warn { color: #fbbf24; }
+        .status-value.bad { color: #ef4444; }
+        
+        /* Dashboard iframe */
+        #dashboard-frame {
+            flex: 1;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="chat">🦀 Chat</button>
+            <button class="tab" data-tab="status">📊 Status</button>
+            <button class="tab" data-tab="dashboard">🖥️ Dashboard</button>
+        </div>
+        
+        <!-- Chat Tab -->
+        <div class="tab-content active" id="chat-tab">
+            <div class="chat-header">
+                <h3>🦀 ClawCode</h3>
+                <span id="connection-status" class="disconnected">● Connecting...</span>
+            </div>
+            
+            <div class="quick-actions" id="quick-actions">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="messages" id="messages">
+                <div class="message system">
+                    Loading ClawCode...
+                </div>
+            </div>
+            
+            <div class="typing" id="typing">
+                <span id="typing-text">ClawCode thinking...</span>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-row">
+                    <input type="text" id="message-input" placeholder="Ask ClawCode..." autocomplete="off">
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Status Tab -->
+        <div class="tab-content" id="status-tab">
+            <div class="status-grid">
+                <div class="status-card">
+                    <h4>ClawCode</h4>
+                    <div class="status-value" id="clawcode-status">—</div>
+                </div>
+                <div class="status-card">
+                    <h4>Ollama</h4>
+                    <div class="status-value" id="ollama-status">—</div>
+                </div>
+                <div class="status-card">
+                    <h4>Agents</h4>
+                    <div class="status-value" id="agents-status">—</div>
+                </div>
+                <div class="status-card">
+                    <h4>Circuits</h4>
+                    <div class="status-value" id="circuits-status">—</div>
+                </div>
+            </div>
+            <button id="refresh-status" style="margin: 12px; padding: 10px; background: #1a1a2e; border: 1px solid #3a3a4a; color: #aaa; border-radius: 6px; cursor: pointer;">
+                🔄 Refresh Status
+            </button>
+        </div>
+        
+        <!-- Dashboard Tab -->
+        <div class="tab-content" id="dashboard-tab">
+            <iframe id="dashboard-frame" src="http://localhost:8765/dashboard"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const CONFIG = {
+            serverUrl: 'http://localhost:11435',
+            secret: 'change-this-secret-in-production',  // TODO: Load from env
+            timeout: 120000
+        };
+        
+        // State
+        let isLoading = false;
+        
+        // DOM Elements
+        const messagesEl = document.getElementById('messages');
+        const inputEl = document.getElementById('message-input');
+        const sendBtn = document.getElementById('send-btn');
+        const typingEl = document.getElementById('typing');
+        const typingTextEl = document.getElementById('typing-text');
+        const statusEl = document.getElementById('connection-status');
+        const quickActionsEl = document.getElementById('quick-actions');
+        
+        // Generate HMAC signature
+        async function generateSignature(payload) {
+            const encoder = new TextEncoder();
+            const keyData = encoder.encode(CONFIG.secret);
+            const messageData = encoder.encode(payload);
+            
+            const key = await crypto.subtle.importKey(
+                'raw', keyData,
+                { name: 'HMAC', hash: 'SHA-256' },
+                false, ['sign']
+            );
+            
+            const signature = await crypto.subtle.sign('HMAC', key, messageData);
+            return Array.from(new Uint8Array(signature))
+                .map(b => b.toString(16).padStart(2, '0'))
+                .join('');
+        }
+        
+        // Escape HTML
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        // Add message to chat
+        function addMessage(role, content, elapsed = null) {
+            const div = document.createElement('div');
+            div.className = `message ${role}`;
+            
+            const roleLabels = {
+                user: '👤 You',
+                assistant: '🦀 ClawCode',
+                system: '⚙️ System',
+                error: '❌ Error'
+            };
+            
+            div.innerHTML = `
+                <div class="message-meta">
+                    <span>${roleLabels[role] || role}</span>
+                    ${elapsed ? `<span>${elapsed}s</span>` : ''}
+                </div>
+                <div class="message-content">${escapeHtml(content)}</div>
+            `;
+            
+            messagesEl.appendChild(div);
+            messagesEl.scrollTop = messagesEl.scrollHeight;
+        }
+        
+        // Send message to ClawCode
+        async function sendMessage(message) {
+            if (isLoading || !message.trim()) return;
+            
+            isLoading = true;
+            inputEl.disabled = true;
+            sendBtn.disabled = true;
+            
+            addMessage('user', message);
+            
+            // Show typing indicator
+            typingEl.classList.add('active');
+            const startTime = Date.now();
+            let timerInterval = setInterval(() => {
+                const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+                typingTextEl.textContent = `ClawCode thinking... ${elapsed}s`;
+            }, 100);
+            
+            try {
+                const payload = JSON.stringify({ message });
+                const signature = await generateSignature(payload);
+                
+                const response = await fetch(`${CONFIG.serverUrl}/clawcode/chat`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Sidebar-Signature': signature
+                    },
+                    body: payload,
+                    signal: AbortSignal.timeout(CONFIG.timeout)
+                });
+                
+                const data = await response.json();
+                const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+                
+                if (response.ok && data.success) {
+                    addMessage('assistant', data.response, elapsed);
+                } else {
+                    addMessage('error', data.error || 'Unknown error', elapsed);
+                }
+            } catch (error) {
+                const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+                addMessage('error', error.message || 'Connection failed', elapsed);
+            } finally {
+                clearInterval(timerInterval);
+                typingEl.classList.remove('active');
+                isLoading = false;
+                inputEl.disabled = false;
+                sendBtn.disabled = false;
+                inputEl.focus();
+            }
+        }
+        
+        // Check server health
+        async function checkHealth() {
+            try {
+                const response = await fetch(`${CONFIG.serverUrl}/clawcode/health`, {
+                    signal: AbortSignal.timeout(5000)
+                });
+                const data = await response.json();
+                
+                if (data.healthy) {
+                    statusEl.textContent = '● Connected';
+                    statusEl.className = 'connected';
+                } else {
+                    statusEl.textContent = '● Degraded';
+                    statusEl.className = 'disconnected';
+                }
+                
+                // Update status tab
+                document.getElementById('clawcode-status').textContent = 
+                    data.clawcode?.available ? '✓ Ready' : '✗ Missing';
+                document.getElementById('clawcode-status').className = 
+                    'status-value ' + (data.clawcode?.available ? 'good' : 'bad');
+                    
+                document.getElementById('ollama-status').textContent = 
+                    data.ollama?.available ? '✓ Running' : '✗ Down';
+                document.getElementById('ollama-status').className = 
+                    'status-value ' + (data.ollama?.available ? 'good' : 'bad');
+                
+                return data;
+            } catch (error) {
+                statusEl.textContent = '● Offline';
+                statusEl.className = 'disconnected';
+                return null;
+            }
+        }
+        
+        // Load quick actions
+        async function loadQuickActions() {
+            try {
+                const response = await fetch(`${CONFIG.serverUrl}/clawcode/quick-actions`, {
+                    signal: AbortSignal.timeout(5000)
+                });
+                const actions = await response.json();
+                
+                quickActionsEl.innerHTML = actions.map(a => `
+                    <button class="quick-btn" data-command="${escapeHtml(a.command)}">
+                        ${escapeHtml(a.label)}
+                    </button>
+                `).join('');
+                
+                // Bind clicks
+                quickActionsEl.querySelectorAll('.quick-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        inputEl.value = btn.dataset.command;
+                        sendMessage(btn.dataset.command);
+                        inputEl.value = '';
+                    });
+                });
+            } catch (error) {
+                quickActionsEl.innerHTML = '<span style="color:#666;font-size:11px;">Quick actions unavailable</span>';
+            }
+        }
+        
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(`${tab.dataset.tab}-tab`).classList.add('active');
+            });
+        });
+        
+        // Input handling
+        inputEl.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                const message = inputEl.value.trim();
+                if (message) {
+                    sendMessage(message);
+                    inputEl.value = '';
+                }
+            }
+        });
+        
+        sendBtn.addEventListener('click', () => {
+            const message = inputEl.value.trim();
+            if (message) {
+                sendMessage(message);
+                inputEl.value = '';
+            }
+        });
+        
+        // Refresh status
+        document.getElementById('refresh-status').addEventListener('click', checkHealth);
+        
+        // Initialize
+        async function init() {
+            messagesEl.innerHTML = '';
+            addMessage('system', 'Connecting to ClawCode...');
+            
+            const health = await checkHealth();
+            
+            if (health?.healthy) {
+                messagesEl.innerHTML = '';
+                addMessage('system', 'ClawCode ready. Ask me anything about your studio!');
+                await loadQuickActions();
+            } else {
+                addMessage('error', 'Could not connect to ClawCode server. Is it running?');
+            }
+        }
+        
+        init();
+        
+        // Periodic health check
+        setInterval(checkHealth, 30000);
+    </script>
+</body>
+</html>

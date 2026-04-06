@@ -829,5 +829,60 @@
     "answer": "it needs to go to testing for version 1.0, then analyze feedback",
     "answered_at": "2026-04-02T19:30:45Z",
     "answered_via": "sidebar"
+  },
+  {
+    "id": "wb-top-gh-sansan0-TrendRadar",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#2 WHITEBOARD] GitHub Trending: sansan0/TrendRadar",
+    "context": "BUILD | Score: 9/10 | The proliferation of video content across platforms combined with advancements in AI for language processing and generative audio makes 2026 ideal for a fully automated, high-quality subtitle and dubbing solution. | Est: months | Revenue: LARGE | Risk: Achieving 'Netflix-level' quality consistently across diverse video content and languages, especially for dubbing and natural-sounding voices.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-05T04:04:26.383280",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-gh-roboflow-supervision",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#3 WHITEBOARD] GitHub Trending: roboflow/supervision",
+    "context": "BUILD | Score: 9/10 | The accelerating adoption of computer vision across industries, coupled with the need for efficient model development and deployment, makes 2026 prime for robust, user-friendly CV frameworks. | Est: months | Revenue: LARGE | Risk: Rapidly evolving open-source landscape could introduce competing, equally comprehensive tools.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-05T04:04:26.383292",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-wb-2026-04-04-001",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#4 WHITEBOARD] Externalize TASK_ROUTING \u2014 Supervisor Owns Model Selection",
+    "context": "BUILD | Score: 9/10 | The rapid evolution and frequent changes in AI models necessitate dynamic, code-free routing solutions to maintain agility and efficiency. | Est: weeks | Revenue: MEDIUM | Risk: Complexity in ensuring real-time consistency and atomicity of updates across distributed systems.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-05T04:04:26.383297",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-wb-2026-04-04-002",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#5 WHITEBOARD] Add Gemma 4 (26B MoE) to Model Registry + Ollama Pull + Benchmark",
+    "context": "BUILD | Score: 9/10 | The rapid advancement of local AI inference capabilities and the increasing demand for efficient, powerful models make 2026 ideal for integrating cutting-edge models like Gemma 4's MoE variant. | Est: weeks | Revenue: MEDIUM | Risk: Gemma 4 might not perform as well as expected against competitors on specific tasks, or a superior open-source model could be released shortly after.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-05T04:04:26.383300",
+    "status": "pending"
+  },
+  {
+    "id": "wb-top-gh-ml-explore-mlx-lm",
+    "type": "whiteboard_top10",
+    "project": "_studio",
+    "question": "[#6 WHITEBOARD] GitHub Trending: ml-explore/mlx-lm",
+    "context": "BUILD | Score: 9/10 | 2026 will see increased demand for efficient and deployable on-device AI models, making an accessible framework like MLX-LM highly relevant. | Est: months | Revenue: LARGE | Risk: Rapid evolution of alternative efficient LLM frameworks/libraries.",
+    "decision_type": "proactive",
+    "priority": "high",
+    "created": "2026-04-05T04:04:26.383303",
+    "status": "pending"
   }
 ]

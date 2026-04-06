@@ -1,12 +1,14 @@
-
-MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
+"""
+ai_services_rankings.py
+Generates ai-services-rankings.json from model-registry.json (source of truth).
+Includes comprehensive engine/model data for supervisor routing decisions.
+Output: ai-services-rankings.json in _studio
+Schedule: daily 05:30 AM via Task Scheduler
+"""
 
 # EXPECTED_RUNTIME_SECONDS: 120
-# ai_services_rankings.py
-# Generates ai-services-rankings.json from model-registry.json (source of truth).
-# Falls back to static list if registry unavailable.
-# Output: ai-services-rankings.json in _studio
-# Schedule: daily 05:30 AM via Task Scheduler \Studio\AIServicesRankings
+
+MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 
 import urllib.request, json, re, html, time
 from datetime import datetime, timezone
@@ -27,141 +29,169 @@ def fetch(url, timeout=15):
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode("utf-8", errors="replace")
 
-# ── Build categories from model-registry.json ──────────────────────────────
-def _build_search(registry):
-    search_section = registry.get("search", {})
-    result = []
-    for key, svc in search_section.items():
-        if key.startswith("_") or not isinstance(svc, dict):
-            continue
-        result.append({
-            "name": svc.get("name", key),
-            "provider": svc.get("name", key),
-            "url": svc.get("url", ""),
-            "tier": "free" if svc.get("free_tier") else "paid",
-            "free_tier": svc.get("free_tier", False),
-            "notes": svc.get("studio_use", "")[:100],
-            "free_limits": svc.get("free_limits", ""),
-            "studio_connected": svc.get("studio_connected", False),
-            "api_available": svc.get("api_available", False),
-        })
-    return result
-
+# ── Build categories from current model-registry.json schema ──────────────────
 def build_from_registry():
+    """Parse the current model-registry.json schema (engines + models + task_routing_table)."""
     registry = json.load(open(REGISTRY_FILE, encoding="utf-8", errors="replace"))
-    providers = registry.get("providers", {})
-    image_gen = registry.get("image_generation", {})
-    video_gen = registry.get("video_generation", {})
-
+    
+    engines = registry.get("engines", {})
+    models = registry.get("models", {})
+    routing = registry.get("task_routing_table", {})
+    cost_gates = registry.get("cost_gates", {})
+    clawcode = registry.get("clawcode_install", {})
+    
+    # Build engine lookup
+    engine_info = {}
+    for eng_name, eng_data in engines.items():
+        if eng_name.startswith("_"):
+            continue
+        engine_info[eng_name] = {
+            "type": eng_data.get("type", "unknown"),
+            "provider": eng_data.get("provider", eng_name),
+            "base_url": eng_data.get("base_url", ""),
+            "api_cost_per_1k": eng_data.get("api_cost_per_1k_tokens", "varies"),
+            "status": eng_data.get("status", "unknown"),
+            "note": eng_data.get("note", "")
+        }
+    
+    # Categorize models
     chat = []
     code = []
-    embedding = []
-    voice = []
-
-    for prov_key, prov in providers.items():
-        prov_name = prov.get("name", prov_key)
-        prov_url  = prov.get("url", "")
-        studio_connected = prov.get("studio_connected", False)
-        for model_key, model in prov.get("models", {}).items():
-            tier = model.get("tier", "paid")
-            if "local" in tier:
-                tier = "free"
-            display = model.get("display", model_key)
-            notes = model.get("studio_use", model.get("notes", ""))
-            if model.get("status","").startswith("active"):
-                best = model.get("best_for", [])
-                entry = {
-                    "name": display,
-                    "provider": prov_name,
-                    "url": prov_url,
-                    "tier": tier,
-                    "notes": notes[:100],
-                    "model_id": model_key,
-                    "studio_connected": studio_connected,
-                    "free_limits": model.get("free_limits", ""),
-                    "context_window": str(model.get("context_window", "")),
-                }
-                # Route to correct category
-                if any(k in best for k in ["embeddings", "semantic search"]):
-                    embedding.append(entry)
-                elif any(k in best for k in ["code generation", "code review", "coding"]):
-                    code.append(entry)
-                elif "speech" in " ".join(best) or "transcription" in " ".join(best):
-                    voice.append(entry)
-                elif model.get("status") not in ["active_legacy", "active_but_superseded", "leaked_codename_in_development", "just_released"]:
-                    chat.append(entry)
-
-    # Image gen from registry
-    img = []
-    for key, svc in image_gen.items():
-        if key.startswith('_') or not isinstance(svc, dict):
+    local = []
+    
+    for model_id, model_data in models.items():
+        if model_id.startswith("_"):
             continue
-        img.append({
-            "name": svc.get("name", key),
-            "provider": svc.get("name", key),
-            "url": svc.get("url", ""),
-            "tier": "free" if svc.get("free_tier") else "paid",
-            "notes": svc.get("studio_use", ""),
-            "free_limits": svc.get("free_limits", ""),
-            "api_available": svc.get("api_available", False),
-        })
-
-    # Video gen from registry
-    vid = []
-    for key, svc in video_gen.items():
-        if key.startswith('_') or not isinstance(svc, dict):
+        
+        engine_name = model_data.get("engine", "")
+        eng = engine_info.get(engine_name, {})
+        tier = model_data.get("tier", "paid")
+        task_types = model_data.get("task_types", [])
+        
+        entry = {
+            "name": model_id,
+            "display": model_id,
+            "provider": eng.get("provider", engine_name),
+            "engine": engine_name,
+            "tier": tier,
+            "cost_input": model_data.get("cost_per_1k_input", 0),
+            "cost_output": model_data.get("cost_per_1k_output", 0),
+            "context_window": model_data.get("context_window", 0),
+            "task_types": task_types,
+            "supervisor_rule": model_data.get("supervisor_rule", ""),
+            "tool_calling": model_data.get("tool_calling", "unknown"),
+            "studio_connected": True,
+            "notes": model_data.get("supervisor_rule", "")[:100]
+        }
+        
+        # Route to correct category
+        if "free_local" in tier or "local" in engine_name:
+            local.append(entry)
+        elif any(t in task_types for t in ["scraper", "boilerplate", "formatter", "one_shot_script", "test_writer"]):
+            code.append(entry)
+        else:
+            chat.append(entry)
+    
+    # Build task routing summary
+    routing_summary = []
+    for task_type, route in routing.items():
+        if task_type.startswith("_"):
             continue
-        vid.append({
-            "name": svc.get("name", key),
-            "provider": svc.get("name", key),
-            "url": svc.get("url", ""),
-            "tier": "free" if svc.get("free_tier") else "paid",
-            "notes": svc.get("studio_use", ""),
+        routing_summary.append({
+            "task_type": task_type,
+            "primary": route.get("primary", ""),
+            "engine": route.get("engine", ""),
+            "fallback": route.get("fallback", "none")
         })
-
-    return {"chat": chat, "image_gen": img, "video_gen": vid,
-            "code": code, "embedding": embedding, "voice": voice,
-            "search": _build_search(registry)}
-
-try:
-    SERVICES = build_from_registry()
-    print("Built from model-registry.json: " +
-          str(sum(len(v) for v in SERVICES.values())) + " total models")
-except Exception as e:
-    print("Registry load failed (" + str(e)[:60] + ") — using static fallback")
-    SERVICES = {
-        "chat": [
-            {"name":"Claude Sonnet 4.6","provider":"Anthropic","url":"https://anthropic.com","tier":"paid","notes":"Primary reasoning engine"},
-            {"name":"Gemini 2.5 Flash","provider":"Google","url":"https://aistudio.google.com","tier":"free","notes":"Primary free workhorse — 1500 RPD"},
-            {"name":"Groq Llama 3.3 70B","provider":"Groq","url":"https://console.groq.com","tier":"free","notes":"Fastest free inference — 14400 RPD"},
-            {"name":"Mistral Large","provider":"Mistral","url":"https://console.mistral.ai","tier":"free","notes":"1B tokens/month free"},
-            {"name":"Cerebras Qwen3 235B","provider":"Cerebras","url":"https://cloud.cerebras.ai","tier":"free","notes":"1M tokens/day free"},
-            {"name":"gemma3:4b","provider":"Ollama/Local","url":"http://localhost:11434","tier":"free","notes":"Local — zero API cost"},
-        ],
-        "image_gen": [],
-        "video_gen": [],
-        "code": [],
-        "embedding": [],
-        "voice": [],
+    
+    return {
+        "chat": chat,
+        "code": code, 
+        "local": local,
+        "engines": list(engine_info.values()),
+        "routing": routing_summary,
+        "cost_gates": cost_gates,
+        "clawcode_status": clawcode.get("status", "unknown")
     }
 
-# Try to fetch recency signals from a few public sources
-# to flag newly trending or newly released services
-recency_flags = {}
+# ── Static fallback services (image gen, video, search, voice) ────────────────
+STATIC_SERVICES = {
+    "image_gen": [
+        {"name": "DALL-E 3", "provider": "OpenAI", "tier": "paid", "notes": "Best prompt adherence", "studio_connected": False},
+        {"name": "Midjourney v6", "provider": "Midjourney", "tier": "paid", "notes": "Best aesthetics", "studio_connected": False},
+        {"name": "FLUX.1", "provider": "Black Forest Labs", "tier": "free", "notes": "Open source, local option", "studio_connected": False},
+        {"name": "Stable Diffusion XL", "provider": "Stability AI", "tier": "free", "notes": "Local, controlnet support", "studio_connected": False},
+        {"name": "Ideogram 2.0", "provider": "Ideogram", "tier": "free", "notes": "Best for text in images", "studio_connected": False},
+        {"name": "Leonardo.ai", "provider": "Leonardo", "tier": "free", "notes": "150 free credits/day", "studio_connected": False},
+    ],
+    "video_gen": [
+        {"name": "Sora", "provider": "OpenAI", "tier": "paid", "notes": "Best quality, limited access", "studio_connected": False},
+        {"name": "Kling", "provider": "Kuaishou", "tier": "free", "notes": "Best free option", "studio_connected": False},
+        {"name": "Runway Gen-3", "provider": "Runway", "tier": "paid", "notes": "Fast iteration", "studio_connected": False},
+        {"name": "Higgsfield", "provider": "Higgsfield", "tier": "free", "notes": "Original Series contests", "studio_connected": False},
+        {"name": "Pika Labs", "provider": "Pika", "tier": "free", "notes": "Free tier available", "studio_connected": False},
+        {"name": "Luma Dream Machine", "provider": "Luma AI", "tier": "free", "notes": "Free generations daily", "studio_connected": False},
+    ],
+    "search": [
+        {"name": "Perplexity Pro", "provider": "Perplexity", "tier": "paid", "notes": "Best for research", "studio_connected": False},
+        {"name": "You.com", "provider": "You.com", "tier": "free", "notes": "Free API available", "studio_connected": False},
+        {"name": "Tavily", "provider": "Tavily", "tier": "free", "notes": "MCP connected", "studio_connected": True},
+        {"name": "Brave Search API", "provider": "Brave", "tier": "free", "notes": "2000 free/month", "studio_connected": False},
+        {"name": "SerpAPI", "provider": "SerpAPI", "tier": "free", "notes": "100 free/month", "studio_connected": False},
+    ],
+    "voice": [
+        {"name": "ElevenLabs", "provider": "ElevenLabs", "tier": "paid", "notes": "Best voice cloning", "studio_connected": False},
+        {"name": "OpenAI TTS", "provider": "OpenAI", "tier": "paid", "notes": "Good quality, fast", "studio_connected": False},
+        {"name": "Whisper", "provider": "OpenAI/Local", "tier": "free", "notes": "Local transcription", "studio_connected": False},
+        {"name": "Coqui TTS", "provider": "Coqui", "tier": "free", "notes": "Open source", "studio_connected": False},
+    ],
+    "embedding": [
+        {"name": "text-embedding-3-large", "provider": "OpenAI", "tier": "paid", "notes": "Best quality", "studio_connected": False},
+        {"name": "voyage-3", "provider": "Voyage AI", "tier": "paid", "notes": "Best for RAG", "studio_connected": False},
+        {"name": "nomic-embed-text", "provider": "Ollama/Local", "tier": "free", "notes": "Local via Ollama", "studio_connected": True},
+        {"name": "all-MiniLM-L6-v2", "provider": "HuggingFace/Local", "tier": "free", "notes": "ChromaDB default", "studio_connected": True},
+    ]
+}
 
+# ── Main execution ────────────────────────────────────────────────────────────
 try:
-    # Check HN for AI service mentions in last 7 days
-    cutoff = int((now - __import__("datetime").timedelta(days=7)).timestamp())
+    registry_data = build_from_registry()
+    print("Built from model-registry.json:")
+    print("  Chat models: " + str(len(registry_data["chat"])))
+    print("  Code models: " + str(len(registry_data["code"])))
+    print("  Local models: " + str(len(registry_data["local"])))
+    print("  Engines: " + str(len(registry_data["engines"])))
+    print("  Task routes: " + str(len(registry_data["routing"])))
+except Exception as e:
+    print("Registry load failed (" + str(e)[:60] + ") - using minimal fallback")
+    registry_data = {
+        "chat": [
+            {"name": "claude-sonnet-4-6", "provider": "Anthropic", "tier": "standard", "notes": "Primary workhorse"},
+            {"name": "gemini-2.0-flash", "provider": "Google", "tier": "free", "notes": "Free tier"},
+        ],
+        "code": [],
+        "local": [],
+        "engines": [],
+        "routing": [],
+        "cost_gates": {},
+        "clawcode_status": "unknown"
+    }
+
+# Try to fetch recency signals from HN
+recency_flags = {}
+try:
+    import datetime as dt
+    cutoff = int((now - dt.timedelta(days=7)).timestamp())
     hn = json.loads(fetch(
         "https://hn.algolia.com/api/v1/search_by_date?tags=story&hitsPerPage=50"
         "&numericFilters=created_at_i>" + str(cutoff)
         + "&query=AI+model+release"
     ))
-    _consecutive_failures = 0
     for hit in hn.get("hits", []):
         title = hit.get("title", "").lower()
         for svc in ["midjourney","runway","sora","kling","elevenlabs","flux","ideogram",
-                    "gemini","claude","gpt","mistral","deepseek","cursor","copilot"]:
+                    "gemini","claude","gpt","mistral","deepseek","cursor","copilot",
+                    "ollama","qwen","llama","anthropic","openai"]:
             if svc in title:
                 recency_flags[svc] = recency_flags.get(svc, 0) + 1
     print("HN recency signals: " + str(len(recency_flags)) + " services mentioned")
@@ -169,16 +199,29 @@ try:
 except Exception as e:
     print("HN recency fetch failed: " + str(e)[:60])
 
-# Build output structure with rank + recency signal
+# Build output structure
 output = {
-    "_schema": "1.0",
-    "_description": "AI services ranked by category. Updated daily 05:30 AM.",
+    "_schema": "2.0",
+    "_description": "AI services ranked by category. Built from model-registry.json + static additions.",
+    "_note": "Supervisor uses this for routing decisions. Updated daily 05:30 AM.",
     "generated_at": now_iso,
     "date": today,
+    
+    # Registry-derived categories
+    "chat_models": registry_data["chat"],
+    "code_models": registry_data["code"],
+    "local_models": registry_data["local"],
+    "engines": registry_data["engines"],
+    "task_routing": registry_data["routing"],
+    "cost_gates": registry_data["cost_gates"],
+    "clawcode_status": registry_data["clawcode_status"],
+    
+    # Static service categories (for sidebar display)
     "categories": {}
 }
 
-for category, services in SERVICES.items():
+# Add static services with buzz scores
+for category, services in STATIC_SERVICES.items():
     ranked = []
     for i, svc in enumerate(services):
         name_lower = svc["name"].lower()
@@ -191,9 +234,9 @@ for category, services in SERVICES.items():
             "rank": i + 1,
             "name": svc["name"],
             "provider": svc["provider"],
-            "url": svc["url"],
             "tier": svc["tier"],
             "notes": svc["notes"],
+            "studio_connected": svc.get("studio_connected", False),
             "buzz_score": buzz,
             "trending": buzz >= 2
         })
@@ -205,10 +248,12 @@ for category, services in SERVICES.items():
 
 # Write output
 json.dump(output, open(OUT_FILE, "w", encoding="utf-8"), indent=2)
-print("Written: ai-services-rankings.json")
+print("\nWritten: ai-services-rankings.json")
 print("Categories: " + ", ".join(output["categories"].keys()))
+
+# Summary
 for cat, items in output["categories"].items():
-    trending = [i["name"] for i in items if i["trending"]]
+    trending = [i["name"] for i in items if i.get("trending")]
     print("  " + cat + ": " + str(len(items)) + " services" +
           (" | TRENDING: " + ", ".join(trending) if trending else ""))
 
@@ -218,15 +263,19 @@ try:
     try:
         hb = json.load(open(hb_path, encoding="utf-8"))
     except Exception:
-        hb = []
+        hb = {"_schema": "1.0", "entries": []}
     if isinstance(hb, list):
         hb = {"_schema": "1.0", "entries": hb}
     hb.setdefault("entries", []).append({
-        "date": now_iso, "agent": "ai-services-rankings",
+        "date": now_iso, 
+        "agent": "ai-services-rankings",
         "status": "clean",
-        "notes": str(len(SERVICES)) + " categories updated"
+        "notes": (str(len(registry_data["chat"])) + " chat + " 
+                  + str(len(registry_data["local"])) + " local + "
+                  + str(len(output["categories"])) + " static categories")
     })
     json.dump(hb, open(hb_path, "w", encoding="utf-8"), indent=2)
+    print("Heartbeat written")
 except Exception as e:
     print("Heartbeat error: " + str(e)[:60])
 

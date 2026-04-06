@@ -80,3 +80,21 @@ All 10 decades now pass schema validation: 13/13 required keys, 10/10 slang term
 [2026-04-04 06:15:02] eBay intel file updated: 34 hot, 34 sleepers, 30 gaps
 [2026-04-04 06:15:02] Vintage Agent complete: 0 filled, 10 already complete
 [Sat 04/04/2026  6:15:02.55] Done 
+[Sun 04/05/2026  6:15:01.73] Vintage Agent starting 
+[2026-04-05 06:15:02] Vintage Agent starting
+[2026-04-05 06:15:02] ERROR: no gemini_api_key in studio-config.json
+[Sun 04/05/2026  6:15:02.46] Done 
+[2026-04-05 14:42:20] Vintage Agent starting
+[2026-04-05 14:42:20]   1920s: OK (complete)
+[2026-04-05 14:42:20]   1930s: OK (complete)
+[2026-04-05 14:42:20]   1940s: OK (complete)
+[2026-04-05 14:42:20]   1950s: OK (complete)
+[2026-04-05 14:42:20]   1960s: OK (complete)
+[2026-04-05 14:42:20]   1970s: OK (complete)
+[2026-04-05 14:42:20]   1980s: OK (complete)
+[2026-04-05 14:42:20]   1990s: OK (complete)
+[2026-04-05 14:42:20]   2000s: OK (complete)
+[2026-04-05 14:42:20]   2010s: OK (complete)
+[2026-04-05 14:42:20] eBay intel file updated: 34 hot, 34 sleepers, 30 gaps
+[2026-04-05 14:42:20] Vintage Agent complete: 0 filled, 10 already complete
+[2026-04-05 14:42:21] Heartbeat written

@@ -1,369 +1,422 @@
 {
-  "_schema": "1.0",
-  "_description": "AI services ranked by category. Updated daily 05:30 AM.",
-  "generated_at": "2026-04-04T10:30:02Z",
-  "date": "2026-04-04",
+  "_schema": "2.0",
+  "_description": "AI services ranked by category. Built from model-registry.json + static additions.",
+  "_note": "Supervisor uses this for routing decisions. Updated daily 05:30 AM.",
+  "generated_at": "2026-04-05T19:47:13Z",
+  "date": "2026-04-05",
+  "chat_models": [
+    {
+      "name": "claude-opus-4-6",
+      "display": "claude-opus-4-6",
+      "provider": "anthropic",
+      "engine": "anthropic_api",
+      "tier": "premium",
+      "cost_input": 0.015,
+      "cost_output": 0.075,
+      "context_window": 200000,
+      "task_types": [
+        "planning",
+        "architecture",
+        "complex_reasoning",
+        "quality_review"
+      ],
+      "supervisor_rule": "PLANNING_GATE tasks only (Watkins Rule). Require explicit approval for runs > 5k tokens.",
+      "tool_calling": "unknown",
+      "studio_connected": true,
+      "notes": "PLANNING_GATE tasks only (Watkins Rule). Require explicit approval for runs > 5k tokens."
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "display": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "engine": "anthropic_api",
+      "tier": "standard",
+      "cost_input": 0.003,
+      "cost_output": 0.015,
+      "context_window": 200000,
+      "task_types": [
+        "agent_coordination",
+        "inbox_decisions",
+        "content_generation",
+        "ebay_listings",
+        "multi_step_reasoning"
+      ],
+      "supervisor_rule": "Default workhorse model. Primary engine for all mid-complexity tasks.",
+      "tool_calling": "unknown",
+      "studio_connected": true,
+      "notes": "Default workhorse model. Primary engine for all mid-complexity tasks."
+    },
+    {
+      "name": "claude-haiku-4-5-20251001",
+      "display": "claude-haiku-4-5-20251001",
+      "provider": "anthropic",
+      "engine": "anthropic_api",
+      "tier": "economy",
+      "cost_input": 0.00025,
+      "cost_output": 0.00125,
+      "context_window": 200000,
+      "task_types": [
+        "classification",
+        "extraction",
+        "summarization",
+        "autodream_distillation",
+        "health_scoring",
+        "inbox_triage"
+      ],
+      "supervisor_rule": "AutoDream nightly distillation runs on Haiku exclusively. Also use for high-volume classification where Sonnet is overkill.",
+      "tool_calling": "unknown",
+      "studio_connected": true,
+      "notes": "AutoDream nightly distillation runs on Haiku exclusively. Also use for high-volume classification wh"
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "display": "gemini-2.5-pro",
+      "provider": "google",
+      "engine": "gemini_api",
+      "tier": "premium",
+      "cost_input": 0,
+      "cost_output": 0,
+      "context_window": 1000000,
+      "task_types": [
+        "large_document_analysis",
+        "vision_complex",
+        "gaussian_splat_prep"
+      ],
+      "supervisor_rule": "Use when context > 150k tokens or task involves image batch processing.",
+      "tool_calling": "unknown",
+      "studio_connected": true,
+      "notes": "Use when context > 150k tokens or task involves image batch processing."
+    },
+    {
+      "name": "gemini-2.0-flash",
+      "display": "gemini-2.0-flash",
+      "provider": "google",
+      "engine": "gemini_api",
+      "tier": "standard",
+      "cost_input": 0,
+      "cost_output": 0,
+      "context_window": 1000000,
+      "task_types": [
+        "vision_standard",
+        "fast_extraction",
+        "game_arch_ocr"
+      ],
+      "supervisor_rule": "Game Archaeology vision tasks default here. Fast and cheap for image analysis.",
+      "tool_calling": "unknown",
+      "studio_connected": true,
+      "notes": "Game Archaeology vision tasks default here. Fast and cheap for image analysis."
+    }
+  ],
+  "code_models": [],
+  "local_models": [
+    {
+      "name": "qwen3:14b",
+      "display": "qwen3:14b",
+      "provider": "ollama",
+      "engine": "clawcode_ollama",
+      "tier": "free_local",
+      "cost_input": 0,
+      "cost_output": 0,
+      "context_window": 32768,
+      "task_types": [
+        "scraper",
+        "boilerplate",
+        "formatter",
+        "one_shot_script",
+        "data_parser"
+      ],
+      "supervisor_rule": "Primary ClawCode model. Invoke via Lovelace Rule. Strong tool-calling at this size. Default for all approved ClawCode task types.",
+      "tool_calling": "reliable",
+      "studio_connected": true,
+      "notes": "Primary ClawCode model. Invoke via Lovelace Rule. Strong tool-calling at this size. Default for all "
+    },
+    {
+      "name": "qwen3.5:27b",
+      "display": "qwen3.5:27b",
+      "provider": "ollama",
+      "engine": "clawcode_ollama",
+      "tier": "free_local",
+      "cost_input": 0,
+      "cost_output": 0,
+      "context_window": 32768,
+      "task_types": [
+        "scraper_complex",
+        "multi_function_script",
+        "html_extractor_large"
+      ],
+      "supervisor_rule": "ClawCode fallback when qwen3:14b produces incomplete output or task prompt > 2000 tokens.",
+      "tool_calling": "reliable",
+      "studio_connected": true,
+      "notes": "ClawCode fallback when qwen3:14b produces incomplete output or task prompt > 2000 tokens."
+    },
+    {
+      "name": "qwen3:8b",
+      "display": "qwen3:8b",
+      "provider": "ollama_direct",
+      "engine": "ollama_direct",
+      "tier": "free_local",
+      "cost_input": 0,
+      "cost_output": 0,
+      "context_window": 32768,
+      "task_types": [
+        "quick_classification",
+        "embedding_assist",
+        "chromadb_query_rewrite"
+      ],
+      "supervisor_rule": "Direct Ollama only (not ClawCode). Use for sub-tasks within pipeline steps where a full harness is overkill.",
+      "tool_calling": "unreliable_at_this_size",
+      "studio_connected": true,
+      "notes": "Direct Ollama only (not ClawCode). Use for sub-tasks within pipeline steps where a full harness is o"
+    }
+  ],
+  "engines": [
+    {
+      "type": "local_harness",
+      "provider": "ollama",
+      "base_url": "http://localhost:11434",
+      "api_cost_per_1k": 0.0,
+      "status": "available",
+      "note": "ClawCode-local Rust build pointed at Ollama. Zero API cost. Use for scraping scripts, boilerplate, formatters, one-shot tasks. See Lovelace Rule in CLAUDE.md."
+    },
+    {
+      "type": "cloud_api",
+      "provider": "anthropic",
+      "base_url": "",
+      "api_cost_per_1k": "varies_by_model",
+      "status": "available",
+      "note": "Primary cloud provider. Route via ai_gateway.py task_type mapping."
+    },
+    {
+      "type": "cloud_api",
+      "provider": "google",
+      "base_url": "",
+      "api_cost_per_1k": "varies_by_model",
+      "status": "available",
+      "note": "Secondary cloud provider. Use for vision tasks, large context windows."
+    },
+    {
+      "type": "local_inference",
+      "provider": "ollama_direct",
+      "base_url": "http://localhost:11434",
+      "api_cost_per_1k": 0.0,
+      "status": "available",
+      "note": "Direct Ollama API calls without ClawCode harness. Use for ChromaDB RAG, embeddings, quick classification. Anthropic-compatible endpoint available via /v1."
+    }
+  ],
+  "task_routing": [
+    {
+      "task_type": "scraper",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "boilerplate",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "claude-haiku-4-5-20251001"
+    },
+    {
+      "task_type": "formatter",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "claude-haiku-4-5-20251001"
+    },
+    {
+      "task_type": "one_shot_script",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "data_parser",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "claude-haiku-4-5-20251001"
+    },
+    {
+      "task_type": "game_arch_pipeline_script",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "html_extractor",
+      "primary": "qwen3:14b",
+      "engine": "clawcode_ollama",
+      "fallback": "gemini-2.0-flash"
+    },
+    {
+      "task_type": "classification",
+      "primary": "claude-haiku-4-5-20251001",
+      "engine": "anthropic_api",
+      "fallback": "qwen3:8b"
+    },
+    {
+      "task_type": "extraction",
+      "primary": "claude-haiku-4-5-20251001",
+      "engine": "anthropic_api",
+      "fallback": "qwen3:8b"
+    },
+    {
+      "task_type": "summarization",
+      "primary": "claude-haiku-4-5-20251001",
+      "engine": "anthropic_api",
+      "fallback": "qwen3:14b"
+    },
+    {
+      "task_type": "autodream_distillation",
+      "primary": "claude-haiku-4-5-20251001",
+      "engine": "anthropic_api",
+      "fallback": null
+    },
+    {
+      "task_type": "inbox_triage",
+      "primary": "claude-haiku-4-5-20251001",
+      "engine": "anthropic_api",
+      "fallback": null
+    },
+    {
+      "task_type": "agent_coordination",
+      "primary": "claude-sonnet-4-6",
+      "engine": "anthropic_api",
+      "fallback": null
+    },
+    {
+      "task_type": "inbox_decisions",
+      "primary": "claude-sonnet-4-6",
+      "engine": "anthropic_api",
+      "fallback": null
+    },
+    {
+      "task_type": "content_generation",
+      "primary": "claude-sonnet-4-6",
+      "engine": "anthropic_api",
+      "fallback": "gemini-2.0-flash"
+    },
+    {
+      "task_type": "ebay_listings",
+      "primary": "claude-sonnet-4-6",
+      "engine": "anthropic_api",
+      "fallback": null
+    },
+    {
+      "task_type": "multi_step_reasoning",
+      "primary": "claude-sonnet-4-6",
+      "engine": "anthropic_api",
+      "fallback": "gemini-2.5-pro"
+    },
+    {
+      "task_type": "planning",
+      "primary": "claude-opus-4-6",
+      "engine": "anthropic_api",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "architecture",
+      "primary": "claude-opus-4-6",
+      "engine": "anthropic_api",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "complex_reasoning",
+      "primary": "claude-opus-4-6",
+      "engine": "anthropic_api",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "vision_standard",
+      "primary": "gemini-2.0-flash",
+      "engine": "gemini_api",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "vision_complex",
+      "primary": "gemini-2.5-pro",
+      "engine": "gemini_api",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "large_document_analysis",
+      "primary": "gemini-2.5-pro",
+      "engine": "gemini_api",
+      "fallback": "claude-sonnet-4-6"
+    },
+    {
+      "task_type": "gaussian_splat_prep",
+      "primary": "gemini-2.5-pro",
+      "engine": "gemini_api",
+      "fallback": null
+    }
+  ],
+  "cost_gates": {
+    "_note": "Supervisor enforces these before dispatching any task",
+    "opus_requires_approval_above_tokens": 5000,
+    "sonnet_daily_budget_usd": 5.0,
+    "haiku_daily_budget_usd": 2.0,
+    "clawcode_ollama_budget_usd": 0.0,
+    "alert_supervisor_if_daily_spend_exceeds_usd": 8.0
+  },
+  "clawcode_status": "verified_working",
   "categories": {
-    "chat": [
-      {
-        "rank": 1,
-        "name": "Claude Opus 4.6",
-        "provider": "Anthropic",
-        "url": "https://console.anthropic.com",
-        "tier": "paid",
-        "notes": "executive decisions only",
-        "buzz_score": 1,
-        "trending": false
-      },
-      {
-        "rank": 2,
-        "name": "Claude Haiku 4.5",
-        "provider": "Anthropic",
-        "url": "https://console.anthropic.com",
-        "tier": "paid",
-        "notes": "batch tasks where Gemini unavailable",
-        "buzz_score": 1,
-        "trending": false
-      },
-      {
-        "rank": 3,
-        "name": "Gemini 2.5 Pro",
-        "provider": "Google AI Studio / Gemini",
-        "url": "https://aistudio.google.com",
-        "tier": "free+paid",
-        "notes": "heavy reasoning tasks during off-peak",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 4,
-        "name": "Gemini 2.5 Flash",
-        "provider": "Google AI Studio / Gemini",
-        "url": "https://aistudio.google.com",
-        "tier": "free+paid",
-        "notes": "PRIMARY free workhorse \u2014 replace all 2AM Gemini calls with this",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 5,
-        "name": "Gemini Flash Lite",
-        "provider": "Google AI Studio / Gemini",
-        "url": "https://aistudio.google.com",
-        "tier": "free",
-        "notes": "janitor-style tasks, tag extraction, simple scoring",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 6,
-        "name": "Llama 3.1 8B Instant",
-        "provider": "Groq",
-        "url": "https://console.groq.com",
-        "tier": "free",
-        "notes": "bulk classification, tagging, quick yes/no decisions",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 7,
-        "name": "Llama 4 Scout",
-        "provider": "Groq",
-        "url": "https://console.groq.com",
-        "tier": "free",
-        "notes": "image understanding tasks \u2014 art dept quality checks",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 8,
-        "name": "Mixtral 8x7B",
-        "provider": "Groq",
-        "url": "https://console.groq.com",
-        "tier": "free",
-        "notes": "fallback general purpose",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 9,
-        "name": "Gemma 2 9B",
-        "provider": "Groq",
-        "url": "https://console.groq.com",
-        "tier": "free",
-        "notes": "simple extraction, lightweight scoring",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 10,
-        "name": "Llama 3.1 8B",
-        "provider": "Cerebras",
-        "url": "https://cloud.cerebras.ai",
-        "tier": "free",
-        "notes": "Groq overflow \u2014 fast free inference",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 11,
-        "name": "Qwen3 235B",
-        "provider": "Cerebras",
-        "url": "https://cloud.cerebras.ai",
-        "tier": "free",
-        "notes": "high quality free reasoning tasks",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 12,
-        "name": "DeepSeek R1 (free)",
-        "provider": "OpenRouter",
-        "url": "https://openrouter.ai",
-        "tier": "free",
-        "notes": "reasoning tasks when Claude quota tight",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 13,
-        "name": "Llama 3.2 3B (free)",
-        "provider": "OpenRouter",
-        "url": "https://openrouter.ai",
-        "tier": "free",
-        "notes": "bulk simple tasks",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 14,
-        "name": "Mistral 7B (free)",
-        "provider": "OpenRouter",
-        "url": "https://openrouter.ai",
-        "tier": "free",
-        "notes": "general fallback",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 15,
-        "name": "Gemma 3 27B (free)",
-        "provider": "OpenRouter",
-        "url": "https://openrouter.ai",
-        "tier": "free",
-        "notes": "mid-tier free tasks",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 16,
-        "name": "Ministral 8B",
-        "provider": "Mistral AI",
-        "url": "https://console.mistral.ai",
-        "tier": "free",
-        "notes": "bulk lightweight scoring",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 17,
-        "name": "Command A",
-        "provider": "Cohere",
-        "url": "https://dashboard.cohere.com",
-        "tier": "free",
-        "notes": "RAG generation",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 18,
-        "name": "Command R+",
-        "provider": "Cohere",
-        "url": "https://dashboard.cohere.com",
-        "tier": "free",
-        "notes": "ChromaDB RAG alternative",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 19,
-        "name": "Rerank 3.5",
-        "provider": "Cohere",
-        "url": "https://dashboard.cohere.com",
-        "tier": "free",
-        "notes": "improve ChromaDB result quality",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 20,
-        "name": "Llama 3.3 70B (edge)",
-        "provider": "Cloudflare Workers AI",
-        "url": "https://developers.cloudflare.com/workers-ai",
-        "tier": "free",
-        "notes": "low-volume edge tasks",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 21,
-        "name": "FLUX.1 Schnell (image gen)",
-        "provider": "Cloudflare Workers AI",
-        "url": "https://developers.cloudflare.com/workers-ai",
-        "tier": "free",
-        "notes": "ART DEPT \u2014 free image gen quota",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 22,
-        "name": "GPT-4o (via GitHub)",
-        "provider": "GitHub Models",
-        "url": "https://github.com/marketplace/models",
-        "tier": "free",
-        "notes": "GPT-4o access without OpenAI bill",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 23,
-        "name": "GPT-4.1 (via GitHub)",
-        "provider": "GitHub Models",
-        "url": "https://github.com/marketplace/models",
-        "tier": "free",
-        "notes": "very long context when Gemini unavailable",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 24,
-        "name": "o3 (via GitHub)",
-        "provider": "GitHub Models",
-        "url": "https://github.com/marketplace/models",
-        "tier": "free",
-        "notes": "hard reasoning tasks \u2014 otherwise too rate-limited",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 25,
-        "name": "DeepSeek R1 (via GitHub)",
-        "provider": "GitHub Models",
-        "url": "https://github.com/marketplace/models",
-        "tier": "free",
-        "notes": "reasoning fallback",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 26,
-        "name": "Llama 3.2 3B",
-        "provider": "Hugging Face Inference API",
-        "url": "https://huggingface.co/inference-api",
-        "tier": "free",
-        "notes": "last resort / experimentation only",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 27,
-        "name": "Gemma 3 4B (currently loaded)",
-        "provider": "Ollama (Local)",
-        "url": "http://localhost:11434",
-        "tier": "free",
-        "notes": "PRIMARY local fallback \u2014 no API cost ever",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 28,
-        "name": "GPT-4o",
-        "provider": "OpenAI",
-        "url": "https://platform.openai.com",
-        "tier": "paid",
-        "notes": "not wired \u2014 use GitHub Models for free access",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 29,
-        "name": "GPT-4.1",
-        "provider": "OpenAI",
-        "url": "https://platform.openai.com",
-        "tier": "paid",
-        "notes": "not wired \u2014 use GitHub Models for free access",
-        "buzz_score": 0,
-        "trending": false
-      }
-    ],
     "image_gen": [
       {
         "rank": 1,
-        "name": "Ideogram 2",
-        "provider": "Ideogram 2",
-        "url": "https://ideogram.ai",
-        "tier": "free",
-        "notes": "ART DEPT daily quota \u2014 best for text overlay images",
+        "name": "DALL-E 3",
+        "provider": "OpenAI",
+        "tier": "paid",
+        "notes": "Best prompt adherence",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 2,
-        "name": "Playground v3",
-        "provider": "Playground v3",
-        "url": "https://playground.com",
-        "tier": "free",
-        "notes": "ART DEPT daily quota \u2014 best aesthetic quality free",
+        "name": "Midjourney v6",
+        "provider": "Midjourney",
+        "tier": "paid",
+        "notes": "Best aesthetics",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 3,
-        "name": "FLUX.1 Schnell (Cloudflare)",
-        "provider": "FLUX.1 Schnell (Cloudflare)",
-        "url": "https://developers.cloudflare.com/workers-ai",
+        "name": "FLUX.1",
+        "provider": "Black Forest Labs",
         "tier": "free",
-        "notes": "ART DEPT \u2014 highest volume free tier via API",
+        "notes": "Open source, local option",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 4,
-        "name": "Stable Diffusion (local ComfyUI)",
-        "provider": "Stable Diffusion (local ComfyUI)",
-        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "name": "Stable Diffusion XL",
+        "provider": "Stability AI",
         "tier": "free",
-        "notes": "BLOCKED on GPU \u2014 RTX 3060 12GB is unlock path (~$230-270)",
+        "notes": "Local, controlnet support",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 5,
-        "name": "Higgsfield",
-        "provider": "Higgsfield",
-        "url": "https://higgsfield.ai",
+        "name": "Ideogram 2.0",
+        "provider": "Ideogram",
         "tier": "free",
-        "notes": "Agency character video content \u2014 #1 whiteboard item (9/10)",
+        "notes": "Best for text in images",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 6,
-        "name": "Midjourney v6",
-        "provider": "Midjourney v6",
-        "url": "https://midjourney.com",
-        "tier": "paid",
-        "notes": "paid only \u2014 not currently subscribed",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 7,
-        "name": "DALL-E 3",
-        "provider": "DALL-E 3",
-        "url": "https://openai.com",
-        "tier": "paid",
-        "notes": "paid \u2014 skip until revenue warrants",
+        "name": "Leonardo.ai",
+        "provider": "Leonardo",
+        "tier": "free",
+        "notes": "150 free credits/day",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       }
@@ -371,127 +424,61 @@
     "video_gen": [
       {
         "rank": 1,
-        "name": "Kling 1.6",
-        "provider": "Kling 1.6",
-        "url": "https://klingai.com",
-        "tier": "free",
-        "notes": "Agency character video",
+        "name": "Sora",
+        "provider": "OpenAI",
+        "tier": "paid",
+        "notes": "Best quality, limited access",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 2,
-        "name": "Hailuo MiniMax",
-        "provider": "Hailuo MiniMax",
-        "url": "https://hailuoai.com",
+        "name": "Kling",
+        "provider": "Kuaishou",
         "tier": "free",
-        "notes": "highest volume free video gen",
+        "notes": "Best free option",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 3,
         "name": "Runway Gen-3",
-        "provider": "Runway Gen-3",
-        "url": "https://runwayml.com",
+        "provider": "Runway",
         "tier": "paid",
-        "notes": "paid only",
+        "notes": "Fast iteration",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 4,
-        "name": "Sora",
-        "provider": "Sora",
-        "url": "https://openai.com",
-        "tier": "paid",
-        "notes": "paid only",
-        "buzz_score": 0,
-        "trending": false
-      }
-    ],
-    "code": [
-      {
-        "rank": 1,
-        "name": "Claude Sonnet 4.6",
-        "provider": "Anthropic",
-        "url": "https://console.anthropic.com",
-        "tier": "paid",
-        "notes": "primary reasoning engine",
-        "buzz_score": 1,
-        "trending": false
-      },
-      {
-        "rank": 2,
-        "name": "Llama 3.3 70B Versatile",
-        "provider": "Groq",
-        "url": "https://console.groq.com",
+        "name": "Higgsfield",
+        "provider": "Higgsfield",
         "tier": "free",
-        "notes": "overnight batch routing \u2014 fastest free model available",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 3,
-        "name": "Mistral Small 3.1",
-        "provider": "Mistral AI",
-        "url": "https://console.mistral.ai",
-        "tier": "free",
-        "notes": "EU-safe free option \u2014 no data training concern",
-        "buzz_score": 0,
-        "trending": false
-      },
-      {
-        "rank": 4,
-        "name": "Mistral Large 3",
-        "provider": "Mistral AI",
-        "url": "https://console.mistral.ai",
-        "tier": "free",
-        "notes": "high quality free reasoning",
+        "notes": "Original Series contests",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 5,
-        "name": "Codestral",
-        "provider": "Mistral AI",
-        "url": "https://console.mistral.ai",
+        "name": "Pika Labs",
+        "provider": "Pika",
         "tier": "free",
-        "notes": "code-specific tasks",
-        "buzz_score": 0,
-        "trending": false
-      }
-    ],
-    "embedding": [
-      {
-        "rank": 1,
-        "name": "Embed English v3",
-        "provider": "Cohere",
-        "url": "https://dashboard.cohere.com",
-        "tier": "free",
-        "notes": "ChromaDB embedding alternative to nomic",
+        "notes": "Free tier available",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
-        "rank": 2,
-        "name": "Nomic Embed Text",
-        "provider": "Ollama (Local)",
-        "url": "http://localhost:11434",
+        "rank": 6,
+        "name": "Luma Dream Machine",
+        "provider": "Luma AI",
         "tier": "free",
-        "notes": "ChromaDB vector store \u2014 currently in use",
-        "buzz_score": 0,
-        "trending": false
-      }
-    ],
-    "voice": [
-      {
-        "rank": 1,
-        "name": "Whisper Large v3 (STT)",
-        "provider": "Groq",
-        "url": "https://console.groq.com",
-        "tier": "free",
-        "notes": "future voice pipeline",
+        "notes": "Free generations daily",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       }
@@ -499,41 +486,41 @@
     "search": [
       {
         "rank": 1,
-        "name": "Tavily",
-        "provider": "Tavily",
-        "url": "https://tavily.com",
-        "tier": "free",
-        "notes": "PRIMARY search API \u2014 connected via MCP, used by AI Intel agent",
+        "name": "Perplexity Pro",
+        "provider": "Perplexity",
+        "tier": "paid",
+        "notes": "Best for research",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 2,
-        "name": "Perplexity API",
-        "provider": "Perplexity API",
-        "url": "https://api.perplexity.ai",
-        "tier": "paid",
-        "notes": "not connected \u2014 good for research tasks",
+        "name": "You.com",
+        "provider": "You.com",
+        "tier": "free",
+        "notes": "Free API available",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 3,
-        "name": "DuckDuckGo (free)",
-        "provider": "DuckDuckGo (free)",
-        "url": "https://duckduckgo.com",
+        "name": "Tavily",
+        "provider": "Tavily",
         "tier": "free",
-        "notes": "free fallback \u2014 no API key required",
+        "notes": "MCP connected",
+        "studio_connected": true,
         "buzz_score": 0,
         "trending": false
       },
       {
         "rank": 4,
         "name": "Brave Search API",
-        "provider": "Brave Search API",
-        "url": "https://api.search.brave.com",
+        "provider": "Brave",
         "tier": "free",
-        "notes": "good free alternative to Google \u2014 independent index",
+        "notes": "2000 free/month",
+        "studio_connected": false,
         "buzz_score": 0,
         "trending": false
       },
@@ -541,9 +528,93 @@
         "rank": 5,
         "name": "SerpAPI",
         "provider": "SerpAPI",
-        "url": "https://serpapi.com",
         "tier": "free",
-        "notes": "Google results scraping \u2014 use sparingly",
+        "notes": "100 free/month",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "voice": [
+      {
+        "rank": 1,
+        "name": "ElevenLabs",
+        "provider": "ElevenLabs",
+        "tier": "paid",
+        "notes": "Best voice cloning",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "OpenAI TTS",
+        "provider": "OpenAI",
+        "tier": "paid",
+        "notes": "Good quality, fast",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "Whisper",
+        "provider": "OpenAI/Local",
+        "tier": "free",
+        "notes": "Local transcription",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "Coqui TTS",
+        "provider": "Coqui",
+        "tier": "free",
+        "notes": "Open source",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      }
+    ],
+    "embedding": [
+      {
+        "rank": 1,
+        "name": "text-embedding-3-large",
+        "provider": "OpenAI",
+        "tier": "paid",
+        "notes": "Best quality",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 2,
+        "name": "voyage-3",
+        "provider": "Voyage AI",
+        "tier": "paid",
+        "notes": "Best for RAG",
+        "studio_connected": false,
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 3,
+        "name": "nomic-embed-text",
+        "provider": "Ollama/Local",
+        "tier": "free",
+        "notes": "Local via Ollama",
+        "studio_connected": true,
+        "buzz_score": 0,
+        "trending": false
+      },
+      {
+        "rank": 4,
+        "name": "all-MiniLM-L6-v2",
+        "provider": "HuggingFace/Local",
+        "tier": "free",
+        "notes": "ChromaDB default",
+        "studio_connected": true,
         "buzz_score": 0,
         "trending": false
       }

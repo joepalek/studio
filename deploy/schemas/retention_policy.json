@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RetentionPolicy",
+  "version": "1.0.0",
+  "description": "Data retention policy for studio files",
+  
+  "policies": {
+    "legal_assessment": {
+      "retention_days": 2555,
+      "retention_human": "7 years",
+      "description": "Legal qualification data for IP compliance",
+      "applies_to": ["legal_assessments/*.json", "provenance/*.json"],
+      "legal_hold_eligible": true
+    },
+    "challenge_log": {
+      "retention_days": 730,
+      "retention_human": "2 years",
+      "description": "Challenge and appeal records",
+      "applies_to": ["challenge_log.json", "appeals/*.json"],
+      "legal_hold_eligible": true
+    },
+    "operational_log": {
+      "retention_days": 90,
+      "retention_human": "90 days",
+      "description": "Check-ins, heartbeats, operational data",
+      "applies_to": ["checkin_queue.jsonl", "heartbeat*.json", "supervisor-heartbeat.json"],
+      "legal_hold_eligible": false
+    },
+    "security_events": {
+      "retention_days": 365,
+      "retention_human": "1 year",
+      "description": "Security audit trail",
+      "applies_to": ["logs/security-events.jsonl", "logs/sidebar-clawcode-audit.jsonl"],
+      "legal_hold_eligible": true
+    },
+    "score_history": {
+      "retention_days": 365,
+      "retention_human": "1 year",
+      "description": "Agent score change history",
+      "applies_to": ["score_change_log.json", "panel/shadow_grades.jsonl"],
+      "legal_hold_eligible": false
+    },
+    "test_results": {
+      "retention_days": 30,
+      "retention_human": "30 days",
+      "description": "Synthetic test and chaos test results",
+      "applies_to": ["test_checkins/*.json", "chaos_results.json", "nightly_test_results.json"],
+      "legal_hold_eligible": false
+    },
+    "experiment_data": {
+      "retention_days": 180,
+      "retention_human": "6 months",
+      "description": "A/B testing and experiment metrics",
+      "applies_to": ["experiments/metrics.jsonl", "experiments/*.json"],
+      "legal_hold_eligible": false
+    },
+    "ground_truth": {
+      "retention_days": 365,
+      "retention_human": "1 year",
+      "description": "Ground truth validation data for calibration",
+      "applies_to": ["ground_truth/*.jsonl", "ground_truth/*.json"],
+      "legal_hold_eligible": false
+    }
+  },
+  
+  "legal_hold": {
+    "description": "Records with legal_hold=true are excluded from automatic purge",
+    "override_requires": "manual removal of legal_hold flag",
+    "notification": "Log purge skip to security events"
+  },
+  
+  "purge_schedule": {
+    "frequency": "daily",
+    "time": "03:00",
+    "task_scheduler_name": "DataRetentionPurge"
+  }
+}

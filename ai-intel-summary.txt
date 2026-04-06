@@ -1,31 +1,30 @@
-AI INTEL - 2026-04-03
-Generated: 2026-04-03T15:45:08Z
-Sources: 11/11 OK | 5 HIGH / 71 WORTH / 156 LOGGED | YouTube: 15 videos surfaced
+AI INTEL - 2026-04-05
+Generated: 2026-04-05T19:52:58Z
+Sources: 11/11 OK | 4 HIGH / 64 WORTH / 128 LOGGED | YouTube: 12 videos surfaced
 
-HIGH PRIORITY (5):
-  * The Gemma evolution nobody expected #ai #google #gemini | score:28 | https://www.youtube.com/watch?v=jCuU946Y_jQ
-  * i use claude code alongside codex cli and cline. there was no way to see total cost or cat | score:28 | https://reddit.com/r/ClaudeAI/comments/1sbgxe8/i_use_claude_code_alongside_codex_cli_and_cline/
-  * Hitting limits on 5x & Claude said False Positive on a North Korean RAT alerts in my EDS. | score:29 | https://reddit.com/r/ClaudeAI/comments/1sbf5mo/hitting_limits_on_5x_claude_said_false_positive/
-  * Qwen3.5 vs Gemma 4: Benchmarks vs real world use? | score:28 | https://reddit.com/r/LocalLLaMA/comments/1sbec70/qwen35_vs_gemma_4_benchmarks_vs_real_world_use/
+HIGH PRIORITY (4):
+  * Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up | score:28 | https://reddit.com/r/artificial/comments/1sckc3j/kept_hitting_chatgpt_and_claude_limits_during/
+  * Claude Code Update Tool Bug | score:28 | https://reddit.com/r/ClaudeAI/comments/1sdas5n/claude_code_update_tool_bug/
+  * benchmarks of gemma4 and multiple others on Raspberry Pi5 | score:28 | https://reddit.com/r/LocalLLaMA/comments/1sdcdno/benchmarks_of_gemma4_and_multiple_others_on/
   * Introducing GPT-5.4 mini and nano | score:28 | https://openai.com/index/introducing-gpt-5-4-mini-and-nano
 
-WORTH READING (71):
-  * Seedance 2.0 Is Here (Again) &amp; AI Agent Video Calls?! | score:23 | https://www.youtube.com/watch?v=qj2mi4RmuFU
-  * AI Tools For Content Creation (Full Guide 2026) | score:20 | https://www.youtube.com/watch?v=e7layTBt4aY
-  * We need to talk about the Claude Code rate limits | score:23 | https://www.youtube.com/watch?v=j_kJNYLI6Tw
-  * ChatGPT Codex Plugins Are Here... But Why Is Netlify Included? | score:23 | https://www.youtube.com/watch?v=8YUEXoaMuDg
-  * ChatGPT Can Now Control Your Entire Computer (GPT-5.4) | score:23 | https://www.youtube.com/watch?v=xr5P6a2IzrM
-  * How I Make VIRAL 3D Shorts Using FREE AI Tools (Full Workflow) | score:22 | https://www.youtube.com/watch?v=eivlFouREho
-  * Upgrade your Claude workflow#ai #coding #tools | score:26 | https://www.youtube.com/watch?v=odpRSsEue-4
-  * Automating Your Life with The Zero Code AI Workflow | score:20 | https://www.youtube.com/watch?v=NOn5wbhZgjY
-  * Gemma 4 Has Landed! | score:21 | https://www.youtube.com/watch?v=5aqF1HVpjdc
-  * Gemma 4 Is Google’s Next Big AI Strike | score:21 | https://www.youtube.com/watch?v=zekDZvYAQ_4
+WORTH READING (64):
+  * Claude vs Gemini: Which AI Is Actually Worth $20 in 2026? | score:22 | https://www.youtube.com/watch?v=RJWjZ6NONx4
+  * Stop Using Paperclip AI Until You Watch This (The AI Tools Actually Making Money in 2026) | score:20 | https://www.youtube.com/watch?v=E8Bk7a5SR8c
+  * Claude Mythos UPDATE, GPT-6 Leaks &amp; DeepSeek V4&#39;s Biggest Challenge Yet! | score:25 | https://www.youtube.com/watch?v=vcH4OwK2U1s
+  * Claude Code LEAKED: Don&#39;t Install This! | score:24 | https://www.youtube.com/watch?v=ycnrPUDnjxU
+  * Why EVERYONE Is Talking About ChatGPT 5 This Changes Everything | score:23 | https://www.youtube.com/watch?v=j8h3-LMM9HA
+  * OpenAI Just Quietly Dropped GPT-5.4 Mini (Free in ChatGPT) | score:22 | https://www.youtube.com/watch?v=omqkfHnEzRw
+  * How Multi-Agent AI Is Replacing Entire Workflows #ai #automation #robotics | score:20 | https://www.youtube.com/watch?v=vzQjaDvFcOM
+  * New AI tool Lox#ai #tools  #automation | score:20 | https://www.youtube.com/watch?v=n4DxynMd9pA
+  * Gemma 4 vs everything else you&#39;ve tried #ai #aimodels | score:21 | https://www.youtube.com/watch?v=Spj6rK5ErsE
+  * Anthropic just had the biggest AI leak of the year and it changes everything | score:25 | https://www.youtube.com/watch?v=3wDVrA8E0TI
 
 YOUTUBE PICKS:
-  * The Gemma evolution nobody expected #ai #google #gemini [DIY Smart Code] | https://www.youtube.com/watch?v=jCuU946Y_jQ
-  * Seedance 2.0 Is Here (Again) &amp; AI Agent Video Calls?! [Theoretically Media] | https://www.youtube.com/watch?v=qj2mi4RmuFU
-  * AI Tools For Content Creation (Full Guide 2026) [Future AI] | https://www.youtube.com/watch?v=e7layTBt4aY
-  * We need to talk about the Claude Code rate limits [Theo - t3․gg] | https://www.youtube.com/watch?v=j_kJNYLI6Tw
-  * ChatGPT Codex Plugins Are Here... But Why Is Netlify Included? [Robert Ta] | https://www.youtube.com/watch?v=8YUEXoaMuDg
+  * Claude vs Gemini: Which AI Is Actually Worth $20 in 2026? [The AI Productivity Coach] | https://www.youtube.com/watch?v=RJWjZ6NONx4
+  * Stop Using Paperclip AI Until You Watch This (The AI Tools Actually Making Money [Nick Ponte] | https://www.youtube.com/watch?v=E8Bk7a5SR8c
+  * Claude Mythos UPDATE, GPT-6 Leaks &amp; DeepSeek V4&#39;s Biggest Challenge Yet! [Universe of AI] | https://www.youtube.com/watch?v=vcH4OwK2U1s
+  * Claude Code LEAKED: Don&#39;t Install This! [Ken Khamphiphone] | https://www.youtube.com/watch?v=ycnrPUDnjxU
+  * Why EVERYONE Is Talking About ChatGPT 5 This Changes Everything [Elite Audio Mindset] | https://www.youtube.com/watch?v=j8h3-LMM9HA
 
 DEPENDENCY FLAGS: none

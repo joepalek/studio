@@ -46,3 +46,8 @@
 [2026-04-04 05:30:56]   By universe: {'original_fiction': 90, 'inmates_vs_guards': 73, 'other': 20, 'band_members': 35}
 [2026-04-04 05:30:58]   Total character folders now: 725
 [2026-04-04 05:30:58] Done.
+[2026-04-05 05:30:02] Agency character batch build starting
+[2026-04-05 05:30:02] Passing specs loaded: 218
+[2026-04-05 05:30:02] Already built: 501 characters (will skip)
+[2026-04-05 05:30:02] To build this run: 0 new characters
+[2026-04-05 05:30:02] Nothing new to build -- all passing specs already have character folders

@@ -7,7 +7,7 @@ MAX_CONSECUTIVE_FAILURES = 3  # Bezos Rule
 #          GitHub Trending, arXiv AI abstracts
 # Schedule: 05:00 AM daily via Task Scheduler \Studio\AgentAIIntel
 
-import urllib.request, urllib.parse, json, re, html, time
+import urllib.request, urllib.parse, json, re, html, time, os
 from datetime import datetime, timedelta, timezone
 
 import sys as _sys
@@ -19,6 +19,7 @@ DAILY_FILE   = STUDIO + "/ai-intel-daily.json"
 SUMMARY_FILE = STUDIO + "/ai-intel-summary.txt"
 INBOX_FILE   = STUDIO + "/supervisor-inbox.json"
 CONFIG_FILE  = STUDIO + "/studio-config.json"
+VAULT_FILE   = STUDIO + "/.studio-vault.json"
 
 now = datetime.now(timezone.utc)
 cutoff_24h = now - timedelta(hours=24)
@@ -26,8 +27,28 @@ cutoff_unix = int(cutoff_24h.timestamp())
 today_str = now.strftime("%Y-%m-%d")
 now_iso   = now.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-cfg = json.load(open(CONFIG_FILE, encoding="utf-8"))
-YOUTUBE_KEY = cfg.get("youtube_api_key", "")
+# Load API key from vault (primary) or config (fallback)
+def get_youtube_key():
+    """Load YouTube API key from vault, falling back to studio-config."""
+    # Try vault first
+    if os.path.exists(VAULT_FILE):
+        try:
+            vault = json.load(open(VAULT_FILE, encoding="utf-8"))
+            key = vault.get("youtube_api_key", "")
+            if key:
+                return key
+        except Exception:
+            pass
+    # Fallback to studio-config
+    if os.path.exists(CONFIG_FILE):
+        try:
+            cfg = json.load(open(CONFIG_FILE, encoding="utf-8"))
+            return cfg.get("youtube_api_key", "")
+        except Exception:
+            pass
+    return ""
+
+YOUTUBE_KEY = get_youtube_key()
 
 AI_KW = [
     "ai", "llm", "claude", "gpt", "anthropic", "openai", "gemini",

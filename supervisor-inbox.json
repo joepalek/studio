@@ -1,162 +1,196 @@
-[
-  {
-    "id": "ai-intel-2026-04-03",
-    "source": "ai-intel-agent",
-    "type": "intel",
-    "urgency": "WARN",
-    "title": "AI Intel -- 61 HIGH PRIORITY items -- 2026-04-03",
-    "finding": "SLOP – A protocol for local LLMs to observe and interact with application state.  Dependency flags: squeeze-empire, hibid-analyzer, _studio.See ai-intel-summary.txt.",
-    "status": "resolved",
-    "date": "2026-04-03T15:26:52.851746+00:00",
-    "resolved_at": "2026-04-04T11:02:35.029365",
-    "resolution": "triaged: GPT-5.4+Gemma4 noted for model registry; no critical deps"
-  },
-  {
-    "id": "ai-intel-20260403",
-    "source": "ai-intel-agent",
-    "type": "intel",
-    "urgency": "WARN",
-    "title": "AI Intel -- 37 HIGH PRIORITY items -- 2026-04-03",
-    "finding": "[P] Gemma 4 running on NVIDIA B200 and AMD MI355X from the same inference stack, 15% throughput gain. DEPENDENCY FLAG: _studio, hibid-analyzer, listing-optimizer, squeeze-empire. See ai-intel-summary.txt.",
-    "status": "resolved",
-    "date": "2026-04-03T15:37:25.335170+00:00",
-    "resolved_at": "2026-04-04T11:02:35.029393",
-    "resolution": "triaged: GPT-5.4+Gemma4 noted for model registry; no critical deps"
-  },
-  {
-    "id": "ai-intel-2026-04-03",
-    "source": "ai-intel-agent",
-    "type": "intel",
-    "urgency": "WARN",
-    "title": "AI Intel - 5 HIGH PRIORITY - 2026-04-03",
-    "finding": "The Gemma evolution nobody expected #ai #google #gemini. See ai-intel-summary.txt.",
-    "status": "resolved",
-    "date": "2026-04-03T15:45:08Z",
-    "resolved_at": "2026-04-04T11:02:35.029396",
-    "resolution": "triaged: GPT-5.4+Gemma4 noted for model registry; no critical deps"
-  },
-  {
-    "id": "spec-grader-warn-20260403",
-    "source": "agency-spec-grader",
-    "type": "agent_error",
-    "urgency": "WARN",
-    "title": "Spec grader: 300 grade failures",
-    "finding": "graded=0 failed=300 passing=0 pass_rate=0% elapsed=551s",
-    "status": "resolved",
-    "date": "2026-04-03T11:08:07.132646",
-    "resolved_at": "2026-04-04T10:58:13.607908",
-    "resolution": "fixed_this_session"
-  },
-  {
-    "id": "test-inbox-roundtrip-002",
-    "source": "supervisor",
-    "type": "decision",
-    "urgency": "INFO",
-    "title": "INBOX TEST 2 — Click reload button to see this appear",
-    "finding": "If you are reading this after clicking the reload button without a full page refresh, the live reload is working.",
-    "options": [
-      "Reload button works",
-      "Had to hard refresh"
-    ],
-    "recommendation": "Answer this to confirm reload button pulls live messages",
-    "status": "expired",
-    "date": "2026-04-03T23:00:00Z",
-    "expired_at": "2026-04-04T10:58:13.607928"
-  },
-  {
-    "id": "test-inbox-roundtrip-001",
-    "source": "supervisor",
-    "type": "decision",
-    "urgency": "INFO",
-    "title": "INBOX TEST — Does this message appear, get answered, and clear?",
-    "finding": "This is a test message to verify the full inbox round trip. Answer it in the sidebar, confirm it logs to inbox-log.jsonl, and confirm it disappears after rebuild.",
-    "options": [
-      "Yes it worked",
-      "Something is broken"
-    ],
-    "recommendation": "Answer via sidebar Submit button to test the full flow",
-    "status": "expired",
-    "date": "2026-04-03T22:45:00Z",
-    "expired_at": "2026-04-04T10:58:13.607931"
-  },
-  {
-    "id": "HAMILTON-WIRE-20260404030331",
-    "source": "wire_hamilton",
-    "type": "constraint_enforcement",
-    "urgency": "low",
-    "title": "Hamilton wired: 8 agents patched",
-    "finding": "Patched: model_validator.py, product_archaeology_run.py, vintage_agent.py, auto_answer_gemini.py, nightly_rollup.py.... Manual review needed: sanctions_ingestor.py, wasde_parser.py, serve_sidebar_server.py, studio_bridge.py, ai_intel_run.py, ai_news_scraper.py, whiteboard_score.py, vector_reindex.py, inject_sidebar_data.py, ai_services_rankings.py, run_inbox_sync.py, send_digest_to_inbox.py",
-    "status": "resolved",
-    "date": "2026-04-04T03:03:31.441825",
-    "resolved_at": "2026-04-04T10:58:13.607933",
-    "resolution": "fixed_this_session"
-  },
-  {
-    "id": "nightly-rollup-20260404",
-    "source": "nightly-rollup",
-    "type": "audit",
-    "urgency": "WARN",
-    "title": "Nightly Rollup — 2026-04-04 — YELLOW",
-    "finding": "Score: 77/100. 13 agents checked in; missed: nightly-rollup, ai-intel. Gate: 0 pass / 0 fail.",
-    "status": "resolved",
-    "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
-    "answered_at": "2026-04-04T07:30:04.581375",
-    "answered_by": "supervisor-auto",
-    "resolved_at": "2026-04-04T11:02:35.029401",
-    "resolution": "known_cause: spec_grader_failure blocked agent runs, fixed 2026-04-04"
-  },
-  {
-    "id": "defunct-model-gemini_gemini-2.0-flash",
-    "source": "provider-health",
-    "type": "model_defunct",
-    "urgency": "WARN",
-    "title": "DEFUNCT MODEL: gemini/gemini-2.0-flash",
-    "finding": "Model gemini/gemini-2.0-flash appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-    "status": "resolved",
-    "date": "2026-04-04T10:43:01.237365",
-    "resolved_at": "2026-04-04T10:58:13.607941",
-    "resolution": "fixed_this_session"
-  },
-  {
-    "id": "defunct-model-gemini_gemini-2.5-flash-preview-04-17",
-    "source": "provider-health",
-    "type": "model_defunct",
-    "urgency": "WARN",
-    "title": "DEFUNCT MODEL: gemini/gemini-2.5-flash-preview-04-17",
-    "finding": "Model gemini/gemini-2.5-flash-preview-04-17 appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
-    "status": "resolved",
-    "date": "2026-04-04T10:45:33.952358",
-    "resolved_at": "2026-04-04T10:58:13.607942",
-    "resolution": "fixed_this_session"
-  },
-  {
-    "id": "supervisor-cycle-202604042200",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 22:00",
-    "finding": "0 tasks dispatched | 3 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-    "dispatched": [],
-    "status": "INFO"
-  },
-  {
-    "id": "supervisor-cycle-202604042230",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 22:30",
-    "finding": "0 tasks dispatched | 3 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-    "dispatched": [],
-    "status": "INFO"
-  },
-  {
-    "id": "supervisor-cycle-202604042300",
-    "source": "supervisor-cycle",
-    "type": "status",
-    "urgency": "INFO",
-    "title": "Supervisor Cycle — 2026-04-04 23:00",
-    "finding": "0 tasks dispatched | 3 agents active | Free tier: none | Ollama: UP | Gemini: OK",
-    "dispatched": [],
-    "status": "INFO"
-  }
-]
+{
+  "items": [
+    {
+      "id": "ai-intel-2026-04-03",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel -- 61 HIGH PRIORITY items -- 2026-04-03",
+      "finding": "SLOP – A protocol for local LLMs to observe and interact with application state.  Dependency flags: squeeze-empire, hibid-analyzer, _studio.See ai-intel-summary.txt.",
+      "status": "resolved",
+      "date": "2026-04-03T15:26:52.851746+00:00",
+      "resolved_at": "2026-04-04T11:02:35.029365",
+      "resolution": "triaged: GPT-5.4+Gemma4 noted for model registry; no critical deps"
+    },
+    {
+      "id": "ai-intel-20260403",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel -- 37 HIGH PRIORITY items -- 2026-04-03",
+      "finding": "[P] Gemma 4 running on NVIDIA B200 and AMD MI355X from the same inference stack, 15% throughput gain. DEPENDENCY FLAG: _studio, hibid-analyzer, listing-optimizer, squeeze-empire. See ai-intel-summary.txt.",
+      "status": "resolved",
+      "date": "2026-04-03T15:37:25.335170+00:00",
+      "resolved_at": "2026-04-04T11:02:35.029393",
+      "resolution": "triaged: GPT-5.4+Gemma4 noted for model registry; no critical deps"
+    },
+    {
+      "id": "ai-intel-2026-04-03",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 5 HIGH PRIORITY - 2026-04-03",
+      "finding": "The Gemma evolution nobody expected #ai #google #gemini. See ai-intel-summary.txt.",
+      "status": "resolved",
+      "date": "2026-04-03T15:45:08Z",
+      "resolved_at": "2026-04-04T11:02:35.029396",
+      "resolution": "triaged: GPT-5.4+Gemma4 noted for model registry; no critical deps"
+    },
+    {
+      "id": "spec-grader-warn-20260403",
+      "source": "agency-spec-grader",
+      "type": "agent_error",
+      "urgency": "WARN",
+      "title": "Spec grader: 300 grade failures",
+      "finding": "graded=0 failed=300 passing=0 pass_rate=0% elapsed=551s",
+      "status": "resolved",
+      "date": "2026-04-03T11:08:07.132646",
+      "resolved_at": "2026-04-04T10:58:13.607908",
+      "resolution": "fixed_this_session"
+    },
+    {
+      "id": "test-inbox-roundtrip-002",
+      "source": "supervisor",
+      "type": "decision",
+      "urgency": "INFO",
+      "title": "INBOX TEST 2 — Click reload button to see this appear",
+      "finding": "If you are reading this after clicking the reload button without a full page refresh, the live reload is working.",
+      "options": [
+        "Reload button works",
+        "Had to hard refresh"
+      ],
+      "recommendation": "Answer this to confirm reload button pulls live messages",
+      "status": "expired",
+      "date": "2026-04-03T23:00:00Z",
+      "expired_at": "2026-04-04T10:58:13.607928"
+    },
+    {
+      "id": "test-inbox-roundtrip-001",
+      "source": "supervisor",
+      "type": "decision",
+      "urgency": "INFO",
+      "title": "INBOX TEST — Does this message appear, get answered, and clear?",
+      "finding": "This is a test message to verify the full inbox round trip. Answer it in the sidebar, confirm it logs to inbox-log.jsonl, and confirm it disappears after rebuild.",
+      "options": [
+        "Yes it worked",
+        "Something is broken"
+      ],
+      "recommendation": "Answer via sidebar Submit button to test the full flow",
+      "status": "expired",
+      "date": "2026-04-03T22:45:00Z",
+      "expired_at": "2026-04-04T10:58:13.607931"
+    },
+    {
+      "id": "HAMILTON-WIRE-20260404030331",
+      "source": "wire_hamilton",
+      "type": "constraint_enforcement",
+      "urgency": "low",
+      "title": "Hamilton wired: 8 agents patched",
+      "finding": "Patched: model_validator.py, product_archaeology_run.py, vintage_agent.py, auto_answer_gemini.py, nightly_rollup.py.... Manual review needed: sanctions_ingestor.py, wasde_parser.py, serve_sidebar_server.py, studio_bridge.py, ai_intel_run.py, ai_news_scraper.py, whiteboard_score.py, vector_reindex.py, inject_sidebar_data.py, ai_services_rankings.py, run_inbox_sync.py, send_digest_to_inbox.py",
+      "status": "resolved",
+      "date": "2026-04-04T03:03:31.441825",
+      "resolved_at": "2026-04-04T10:58:13.607933",
+      "resolution": "fixed_this_session"
+    },
+    {
+      "id": "nightly-rollup-20260404",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "WARN",
+      "title": "Nightly Rollup — 2026-04-04 — YELLOW",
+      "finding": "Score: 77/100. 13 agents checked in; missed: nightly-rollup, ai-intel. Gate: 0 pass / 0 fail.",
+      "status": "resolved",
+      "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
+      "answered_at": "2026-04-04T07:30:04.581375",
+      "answered_by": "supervisor-auto",
+      "resolved_at": "2026-04-04T11:02:35.029401",
+      "resolution": "known_cause: spec_grader_failure blocked agent runs, fixed 2026-04-04"
+    },
+    {
+      "id": "defunct-model-gemini_gemini-2.0-flash",
+      "source": "provider-health",
+      "type": "model_defunct",
+      "urgency": "WARN",
+      "title": "DEFUNCT MODEL: gemini/gemini-2.0-flash",
+      "finding": "Model gemini/gemini-2.0-flash appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
+      "status": "resolved",
+      "date": "2026-04-04T10:43:01.237365",
+      "resolved_at": "2026-04-04T10:58:13.607941",
+      "resolution": "fixed_this_session"
+    },
+    {
+      "id": "defunct-model-gemini_gemini-2.5-flash-preview-04-17",
+      "source": "provider-health",
+      "type": "model_defunct",
+      "urgency": "WARN",
+      "title": "DEFUNCT MODEL: gemini/gemini-2.5-flash-preview-04-17",
+      "finding": "Model gemini/gemini-2.5-flash-preview-04-17 appears deprecated/removed. Last error: HTTP Error 404: Not Found. Failures: 1 consecutive. Remove from TASK_ROUTING in ai_gateway.py.",
+      "status": "resolved",
+      "date": "2026-04-04T10:45:33.952358",
+      "resolved_at": "2026-04-04T10:58:13.607942",
+      "resolution": "fixed_this_session"
+    },
+    {
+      "id": "nightly-rollup-20260405",
+      "source": "nightly-rollup",
+      "type": "audit",
+      "urgency": "WARN",
+      "title": "Nightly Rollup — 2026-04-05 — YELLOW",
+      "finding": "Score: 57/100. 11 agents checked in; missed: nightly-rollup, janitor, ai-intel, vintage-agent. Gate: 0 pass / 0 fail.",
+      "status": "answered",
+      "answer": "Auto-acknowledged by supervisor. Score acceptable. Agents missed check-in will be flagged next cycle if still absent.",
+      "answered_at": "2026-04-05T07:30:04.606411",
+      "answered_by": "supervisor-auto"
+    },
+    {
+      "id": "ai-intel-2026-04-05",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 5 HIGH PRIORITY - 2026-04-05",
+      "finding": "Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up using. See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-05T19:42:08Z"
+    },
+    {
+      "id": "ai-intel-2026-04-05",
+      "source": "ai-intel-agent",
+      "type": "intel",
+      "urgency": "WARN",
+      "title": "AI Intel - 4 HIGH PRIORITY - 2026-04-05",
+      "finding": "Kept hitting ChatGPT and Claude limits during real work. This is the free setup I ended up using. See ai-intel-summary.txt.",
+      "status": "PENDING",
+      "date": "2026-04-05T19:52:58Z"
+    },
+    {
+      "id": "supervisor-cycle-202604052200",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-05 22:00",
+      "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+      "dispatched": [],
+      "status": "INFO"
+    },
+    {
+      "id": "supervisor-cycle-202604052230",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-05 22:30",
+      "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+      "dispatched": [],
+      "status": "INFO"
+    },
+    {
+      "id": "supervisor-cycle-202604052300",
+      "source": "supervisor-cycle",
+      "type": "status",
+      "urgency": "INFO",
+      "title": "Supervisor Cycle — 2026-04-05 23:00",
+      "finding": "0 tasks dispatched | 14 agents active | Free tier: none | Ollama: UP | Gemini: OK",
+      "dispatched": [],
+      "status": "INFO"
+    }
+  ]
+}

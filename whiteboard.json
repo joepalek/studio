@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-04T04:00:17.670218",
+  "updated": "2026-04-05T04:04:26.345774",
   "items": [
     {
       "id": "arch-reddit-0001",
@@ -686,7 +686,7 @@
     {
       "id": "nost-0025",
       "type": "product_archaeology",
-      "title": "Remember when you didnâ€™t have to enter your personal info online to win a soda?",
+      "title": "Remember when you didn\u00e2\u20ac\u2122t have to enter your personal info online to win a soda?",
       "description": "",
       "signal": "remember when",
       "source": "reddit_r_nostalgia",
@@ -865,7 +865,8 @@
     },
     {
       "id": "ebay-identifier-app",
-      "title": "eBay Item Identifier â€” Consensus Engine",
+      "project_path": "G:/My Drive/Projects/_studio/ebay-identifier/",
+      "title": "eBay Item Identifier \u00e2\u20ac\u201d Consensus Engine",
       "description": "Mobile/VS Code app replacing Google Lens workflow for resellers. 6-track identification: pixel match, VLM attribute extraction, hallmark OCR, archive RAG, molded-mark OCR, manual cross-ref. Multi-image input, filter/rank layer, re-roll feature, eBay draft export.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
@@ -1107,7 +1108,7 @@
       ],
       "social_media_angle": "Public brainstorm for novel use cases on launch",
       "added": "2026-03-26",
-      "source": "Joe session — expanded from Historical Twins concept",
+      "source": "Joe session \u2014 expanded from Historical Twins concept",
       "gemini_score": {
         "total_score": 7,
         "market_gap_score": 9,
@@ -1181,14 +1182,14 @@
     {
       "id": "vedic-ai-inference-os",
       "title": "Vedic AI Inference Operating System",
-      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency — every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
+      "description": "Purpose-built lightweight OS optimized for AI inference workloads. Vedic arithmetic at kernel HAL level for memory allocation, process scheduling, and security hashing. Cascading efficiency \u2014 every process inherits faster math. GPU/CPU heat reduction via reduced switching activity.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
       "type": "infrastructure+patent+product",
       "tiers": {
-        "tier1": "Custom CUDA Vedic kernels for Ollama — 2-4 weeks",
-        "tier2": "Stripped Linux AI inference OS — 3-6 months",
-        "tier3": "Full Vedic AI OS with HAL integration — 1-2 years"
+        "tier1": "Custom CUDA Vedic kernels for Ollama \u2014 2-4 weeks",
+        "tier2": "Stripped Linux AI inference OS \u2014 3-6 months",
+        "tier3": "Full Vedic AI OS with HAL integration \u2014 1-2 years"
       },
       "patent_angle": "Novel OS architecture combining Vedic arithmetic at kernel HAL level with AI-native design and environment-aware portability",
       "added": "2026-03-29",
@@ -1210,7 +1211,7 @@
     {
       "id": "vedic-upgrade-service",
       "title": "Vedic AI Upgrade as a Service",
-      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison — original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
+      "description": "Install Vedic CUDA kernel layer on client AI systems. Run concurrent 30-day shadow comparison \u2014 original stack vs Vedic stack on identical workloads. Generate client-specific before/after efficiency report showing exact dollar savings. Ghost page calculator as lead magnet. Provisional patent on concurrent shadow deployment architecture.",
       "status": "WHITEBOARD",
       "priority": "HIGH",
       "type": "service+patent+revenue",
@@ -1265,7 +1266,7 @@
     {
       "id": "ghost-book-script-vault",
       "title": "Ghost Book Script Vault + Salvage Protocol",
-      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage — scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
+      "description": "Permanent archive for unused scripts with active salvage pass before retirement. Grade A scripts get full salvage \u2014 scenes, characters, dialogue, concepts extracted to salvage/ folder and indexed in salvage-log.json. Agents query salvage before generating new content. Higgsfield potential flag for scenes that work as standalone shorts. Nothing deleted, everything indexed.",
       "status": "ACTIVE",
       "priority": "HIGH",
       "type": "content-management",
@@ -1287,7 +1288,7 @@
     },
     {
       "id": "higgsfield-backwards-design",
-      "title": "Higgsfield Original Series — Backwards Design",
+      "title": "Higgsfield Original Series \u2014 Backwards Design",
       "description": "Monitor platform weekly for genre gaps and vote velocity. Build CTW characters specifically for underserved genres. Design story structure for 2-10 minute episode format from day one. Soul ID consistency built into character spec. Enter contests in low-competition genres. Sponsored production if contest win.",
       "status": "WHITEBOARD",
       "priority": "MEDIUM",
@@ -1312,12 +1313,12 @@
     },
     {
       "id": "vedic-build-status",
-      "title": "Vedic Math Build — Active Status",
+      "title": "Vedic Math Build \u2014 Active Status",
       "description": "Stack B (_studio_vedic) staged and ready. Config G vector context wired in. Scan runs tonight at 2:30 AM to produce conversion manifest. Build agent spec complete. Kernel stubs written with shadow verification and ab-report logging. A/B dispatcher wires after manifest confirms scope.",
       "status": "IN_PROGRESS",
       "priority": "HIGH",
       "type": "infrastructure",
-      "next_action": "Read vedic-conversion-manifest.json tomorrow morning — it tells us scope of conversion and which files to tackle first",
+      "next_action": "Read vedic-conversion-manifest.json tomorrow morning \u2014 it tells us scope of conversion and which files to tackle first",
       "added": "2026-03-29",
       "gemini_score": {
         "total_score": 6,
@@ -1344,7 +1345,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948701"
+      "added_at": "2026-04-01T18:20:54.948701",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The rapid advancements and widespread adoption of open-source AI, coupled with increasing demand for custom voice solutions, create a ripe opportunity for a robust, accessible open-source voice AI platform in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Market saturation with proprietary voice AI solutions and established open-source alternatives."
+      },
+      "scored_at": "2026-04-05T04:00:05.190604",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-trending-developers",
@@ -1356,19 +1371,47 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948714"
+      "added_at": "2026-04-01T18:20:54.948714",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 6,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The increasing complexity and volume of time-series data across industries (IoT, finance, healthcare) make sophisticated, accessible foundation models critical for actionable insights in 2026.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Google's existing momentum and resources in developing/productizing TimesFM, potentially leading to a crowded market or direct competition before a competing product can gain traction."
+      },
+      "scored_at": "2026-04-05T04:00:10.700663",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-microsoft-VibeVoice",
       "title": "GitHub Trending: microsoft/VibeVoice",
-      "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that b",
+      "description": "A visual, example-driven guide to Claude Code \u2014 from basic concepts to advanced agents, with copy-paste templates that b",
       "type": "github_trending",
       "tags": [
         "github",
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948717"
+      "added_at": "2026-04-01T18:20:54.948717",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The rapid evolution of LLMs like Claude necessitates up-to-date, practical guides to empower developers to leverage their full capabilities, making 2026 ideal for such a resource.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid obsolescence due to fast-paced AI model advancements requiring continuous updates."
+      },
+      "scored_at": "2026-04-05T04:00:16.051132",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-github-copilot-cli",
@@ -1380,7 +1423,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948719"
+      "added_at": "2026-04-01T18:20:54.948719",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The proliferation of AI models reliant on clean, structured data makes efficient document-to-data conversion a critical bottleneck that will only intensify by 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Existence of highly sophisticated commercial OCR solutions that are difficult to compete with on features or accuracy."
+      },
+      "scored_at": "2026-04-05T04:00:21.649264",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-google-research-timesfm",
@@ -1392,7 +1449,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948720"
+      "added_at": "2026-04-01T18:20:54.948720",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The increasing demand for advanced time-series forecasting across industries, coupled with the rapid evolution of AI/ML, makes 2026 an opportune time for a robust, adaptable forecasting agent.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid obsolescence or commoditization of time-series forecasting models due to new breakthroughs."
+      },
+      "scored_at": "2026-04-05T04:00:27.017447",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-sponsors-luongnv89",
@@ -1404,7 +1475,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948722"
+      "added_at": "2026-04-01T18:20:54.948722",
+      "gemini_score": {
+        "total_score": 6,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 5,
+        "urgency": 7,
+        "why_now": "The increasing focus on online privacy, cybersecurity, and verifying digital identities in 2026 makes tools for social media account discovery more relevant for both personal and professional use.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Existence of numerous similar open-source and commercial tools, making differentiation and value proposition challenging."
+      },
+      "scored_at": "2026-04-05T04:00:32.370470",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-luongnv89-claude-howto",
@@ -1416,7 +1501,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948724"
+      "added_at": "2026-04-01T18:20:54.948724",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 6,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "With AI model complexity continuously increasing, a unified library of SOTA optimization techniques is crucial for efficient deployment and reducing operational costs in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid obsolescence of specific optimization techniques due to ongoing research and new model architectures."
+      },
+      "scored_at": "2026-04-05T04:00:38.538455",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-PaddlePaddle-PaddleOCR",
@@ -1428,19 +1527,47 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948725"
+      "added_at": "2026-04-01T18:20:54.948725",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The increasing demand for robust, accurate, and easily integratable OCR solutions, especially those leveraging advanced AI models like OLMo, makes 2026 an opportune time for a polished product.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid advancements in alternative OCR models or proprietary solutions from major tech players."
+      },
+      "scored_at": "2026-04-05T04:00:43.949272",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-github-actions",
       "title": "GitHub Trending: apps/github-actions",
-      "description": "⭐AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控",
+      "description": "\u2b50AI-driven public opinion &amp; trend monitor with multi-platform aggregation, RSS, and smart alerts.\ud83c\udfaf \u544a\u522b\u4fe1\u606f\u8fc7\u8f7d\uff0c\u4f60\u7684 AI \u8206\u60c5\u76d1\u63a7",
       "type": "github_trending",
       "tags": [
         "github",
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948729"
+      "added_at": "2026-04-01T18:20:54.948729",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The proliferation of AI tools and the increasing need for curated, relevant information amidst a flood of content makes an AI-driven trend monitor highly valuable in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Achieving sufficient differentiation and accuracy in AI-driven trend detection compared to existing social listening tools or manual curation."
+      },
+      "scored_at": "2026-04-05T04:00:49.349144",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-NousResearch-hermes-agent",
@@ -1452,7 +1579,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948731"
+      "added_at": "2026-04-01T18:20:54.948731",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The rapid advancements in LLM capabilities and agentic systems make 2026 prime for sophisticated multi-agent development tools to streamline software creation.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid obsolescence due to faster-evolving foundational LLMs or alternative agent architectures."
+      },
+      "scored_at": "2026-04-05T04:00:54.944973",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-sherlock-project-sherlock",
@@ -1464,7 +1605,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948733"
+      "added_at": "2026-04-01T18:20:54.948733",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 8,
+        "why_now": "The rapid evolution of AI agents and multi-agent systems will necessitate robust frameworks for their orchestration and deployment by 2026, making this a critical infrastructure play.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid obsolescence due to faster-evolving, more integrated solutions from major cloud providers or open-source giants."
+      },
+      "scored_at": "2026-04-05T04:01:00.638320",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-NVIDIA-Model-Optimizer",
@@ -1476,7 +1631,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948734"
+      "added_at": "2026-04-01T18:20:54.948734",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The accelerating adoption of LLMs across industries in 2026 will make performance optimizations like faster KV cache layers critical for cost-efficiency and user experience.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapidly evolving hardware and software architectures from competitors (e.g., other chipmakers, cloud providers) could quickly render specific optimizations less relevant."
+      },
+      "scored_at": "2026-04-05T04:01:06.060671",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-allenai-OLMo-core",
@@ -1488,7 +1657,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948736"
+      "added_at": "2026-04-01T18:20:54.948736",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing demand for automation in design and engineering, coupled with the rise of AI-driven tools, creates a prime opportunity for sophisticated Python-based CAD programming.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Competition from established commercial CAD APIs and other open-source alternatives."
+      },
+      "scored_at": "2026-04-05T04:01:11.472623",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-sansan0-TrendRadar",
@@ -1500,7 +1683,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948738"
+      "added_at": "2026-04-01T18:20:54.948738",
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 9,
+        "urgency": 8,
+        "why_now": "The proliferation of video content across platforms combined with advancements in AI for language processing and generative audio makes 2026 ideal for a fully automated, high-quality subtitle and dubbing solution.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Achieving 'Netflix-level' quality consistently across diverse video content and languages, especially for dubbing and natural-sounding voices."
+      },
+      "scored_at": "2026-04-05T04:01:16.971102",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-OpenBMB-ChatDev",
@@ -1512,31 +1709,73 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-01T18:20:54.948740"
+      "added_at": "2026-04-01T18:20:54.948740",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 8,
+        "why_now": "The rapid adoption of AI assistants like Claude necessitates efficient, automated methods for converting vast amounts of unstructured information into actionable AI knowledge bases, making 2026 a prime time for such a solution.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "API dependency and potential changes in Claude's or other LLM's API, pricing, or capabilities, which could break or diminish the product's functionality."
+      },
+      "scored_at": "2026-04-05T04:01:22.651497",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-MervinPraison-PraisonAI",
       "title": "GitHub Trending: MervinPraison/PraisonAI",
-      "description": "GLM-OCR: Accurate × Fast × Comprehensive",
+      "description": "GLM-OCR: Accurate \u00d7 Fast \u00d7 Comprehensive",
       "type": "github_trending",
       "tags": [
         "github",
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799210"
+      "added_at": "2026-04-02T23:00:37.799210",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 9,
+        "urgency": 8,
+        "why_now": "The rapid advancement and accessibility of multimodal AI models in 2026 will make sophisticated OCR solutions like GLM-OCR highly demanded across various industries for data extraction and automation.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid obsolescence due to even more advanced, readily available foundation models or cloud provider offerings incorporating superior OCR capabilities."
+      },
+      "scored_at": "2026-04-05T04:01:28.179379",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-claude",
       "title": "GitHub Trending: apps/claude",
-      "description": "We write your reusable computer vision tools. 💜",
+      "description": "We write your reusable computer vision tools. \ud83d\udc9c",
       "type": "github_trending",
       "tags": [
         "github",
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799233"
+      "added_at": "2026-04-02T23:00:37.799233",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The rapid advancement and accessibility of AI models, especially for vision tasks, creates a strong demand for reusable and specialized computer vision tools that abstract complexity.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Intense competition from open-source alternatives and larger AI platforms offering similar tooling, requiring significant differentiation."
+      },
+      "scored_at": "2026-04-05T04:01:33.582013",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-yusufkaraaslan-Skill_Seekers",
@@ -1548,7 +1787,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799239"
+      "added_at": "2026-04-02T23:00:37.799239",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 8,
+        "why_now": "The accelerating adoption of AI assistants and the demand for readily accessible, free coding tools in developer workflows make 2026 an opportune time to expand and refine such a service.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Sustained competition from free or low-cost proprietary AI coding assistants, and the potential for Claude's own official integrations to reduce the need for third-party wrappers."
+      },
+      "scored_at": "2026-04-05T04:01:39.058580",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-zai-org-GLM-OCR",
@@ -1560,7 +1813,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799242"
+      "added_at": "2026-04-02T23:00:37.799242",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing sophistication and accessibility of AI models make fine-tuned OCR solutions for specialized tasks highly valuable in 2026.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Existence of superior open-source or commercial OCR solutions, potentially negating the need for a GLM-specific variant."
+      },
+      "scored_at": "2026-04-05T04:01:44.798197",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-roboflow-supervision",
@@ -1572,7 +1839,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799247"
+      "added_at": "2026-04-02T23:00:37.799247",
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 8,
+        "build_feasibility": 9,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The accelerating adoption of computer vision across industries, coupled with the need for efficient model development and deployment, makes 2026 prime for robust, user-friendly CV frameworks.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapidly evolving open-source landscape could introduce competing, equally comprehensive tools."
+      },
+      "scored_at": "2026-04-05T04:01:50.351706",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-pre-commit-ci",
@@ -1584,7 +1865,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799250"
+      "added_at": "2026-04-02T23:00:37.799250",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The continued adoption of CI/CD pipelines and the increasing complexity of development environments make robust pre-commit hooks for CI a growing necessity.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Existing, well-established pre-commit hook frameworks and potential difficulty in differentiating."
+      },
+      "scored_at": "2026-04-05T04:01:55.783664",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-Alishahryar1-free-claude-code",
@@ -1596,7 +1891,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-02T23:00:37.799253"
+      "added_at": "2026-04-02T23:00:37.799253",
+      "gemini_score": {
+        "total_score": 4,
+        "market_gap_score": 3,
+        "build_feasibility": 7,
+        "revenue_potential": 2,
+        "urgency": 2,
+        "why_now": "The demand for accessible AI models will continue to grow, but this specific offering is likely a transient workaround rather than a sustainable solution.",
+        "recommended_action": "KILL",
+        "effort_estimate": "days",
+        "revenue_estimate": "SMALL",
+        "top_risk": "Legality and terms of service violations, leading to swift takedown or irrelevance once official access improves."
+      },
+      "scored_at": "2026-04-05T04:02:01.169428",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-onyx-dot-app-onyx",
@@ -1608,19 +1917,47 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328555"
+      "added_at": "2026-04-03T23:00:27.328555",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing fragmentation of online identities and the need for comprehensive digital footprint analysis make a streamlined username search tool highly relevant in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapidly changing social media APIs and terms of service making maintenance challenging."
+      },
+      "scored_at": "2026-04-05T04:02:06.439496",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-github-merge-queue",
       "title": "GitHub Trending: apps/github-merge-queue",
-      "description": "基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版",
+      "description": "\u57fa\u4e8e\u591a\u667a\u80fd\u4f53LLM\u7684\u4e2d\u6587\u91d1\u878d\u4ea4\u6613\u6846\u67b6 - TradingAgents\u4e2d\u6587\u589e\u5f3a\u7248",
       "type": "github_trending",
       "tags": [
         "github",
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328578"
+      "added_at": "2026-04-03T23:00:27.328578",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The confluence of increasingly sophisticated LLMs, growing demand for AI-driven financial tools, and the specific focus on the Chinese market makes 2026 an opportune time.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Accuracy and reliability of LLM-driven trading in a highly dynamic and regulated financial market."
+      },
+      "scored_at": "2026-04-05T04:02:11.823798",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-hsliuping-TradingAgents-CN",
@@ -1632,7 +1969,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328586"
+      "added_at": "2026-04-03T23:00:27.328586",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 7,
+        "build_feasibility": 9,
+        "revenue_potential": 6,
+        "urgency": 8,
+        "why_now": "2026 is the right time to build on this project as AI and machine learning technologies continue to advance and gain traction in various industries, including finance and trading.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "integration with existing trading systems and regulatory compliance"
+      },
+      "scored_at": "2026-04-05T04:02:18.231114",
+      "scored_by": "groq"
     },
     {
       "id": "gh-microsoft-apm",
@@ -1644,7 +1995,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328592"
+      "added_at": "2026-04-03T23:00:27.328592",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 8,
+        "why_now": "The rapid advancement and adoption of AI models like Claude, coupled with increasing developer demand for integrated, accessible AI tooling, makes 2026 an opportune time to build an intuitive terminal/VSCode interface.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid evolution of AI models and competing interfaces, potentially rendering a specific integration obsolete quickly."
+      },
+      "scored_at": "2026-04-05T04:02:23.829789",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-copilot-swe-agent",
@@ -1656,19 +2021,47 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328596"
+      "added_at": "2026-04-03T23:00:27.328596",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The proliferation of powerful local ML models and Apple's continued push for on-device AI make 2026 prime for robust, user-friendly VLM tools on Macs.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid advancements in alternative cross-platform or cloud-based VLM solutions that diminish the unique value proposition of Mac-specific tooling."
+      },
+      "scored_at": "2026-04-05T04:02:29.241693",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-apps-copilot-pull-request-reviewer",
       "title": "GitHub Trending: apps/copilot-pull-request-reviewer",
-      "description": "PraisonAI 🦞 - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans,",
+      "description": "PraisonAI \ud83e\udd9e - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans,",
       "type": "github_trending",
       "tags": [
         "github",
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328601"
+      "added_at": "2026-04-03T23:00:27.328601",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The rapid advancement and adoption of AI, specifically multi-agent systems, combined with increasing developer demand for efficiency, makes 2026 an opportune moment for an AI-powered pull request reviewer.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Accuracy and reliability of AI-generated reviews, particularly for complex or nuanced codebases, leading to distrust or rework."
+      },
+      "scored_at": "2026-04-05T04:02:34.646824",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-vectorize-io-hindsight",
@@ -1680,7 +2073,21 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328605"
+      "added_at": "2026-04-03T23:00:27.328605",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing demand for private, verifiable, and explainable AI insights, coupled with advancements in local LLMs, makes 2026 ideal for a tool that grounds AI research locally.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid evolution of LLM capabilities and benchmarks, making current approaches quickly obsolete."
+      },
+      "scored_at": "2026-04-05T04:02:40.051116",
+      "scored_by": "gemini"
     },
     {
       "id": "gh-PostHog-posthog",
@@ -1692,16 +2099,30 @@
         "trending",
         "python"
       ],
-      "added_at": "2026-04-03T23:00:27.328609"
+      "added_at": "2026-04-03T23:00:27.328609",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 9,
+        "urgency": 8,
+        "why_now": "The rapid proliferation of open-source LLMs and VLMs creates an immediate need for robust, accessible, and scalable fine-tuning and deployment solutions.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid evolution of the underlying LLM/VLM ecosystem could lead to feature obsolescence."
+      },
+      "scored_at": "2026-04-05T04:02:45.344336",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-001",
-      "title": "Externalize TASK_ROUTING — Supervisor Owns Model Selection",
+      "title": "Externalize TASK_ROUTING \u2014 Supervisor Owns Model Selection",
       "type": "architecture",
       "priority": "high",
       "status": "done",
       "closed_at": "2026-04-04T14:00:00Z",
-      "closed_reason": "Already implemented — supervisor.md documents task_type routing, Supervisor never hardcodes model names. TASK_ROUTING in ai_gateway.py is an internal implementation detail agents never touch. Architecture is correct as-is.",
+      "closed_reason": "Already implemented \u2014 supervisor.md documents task_type routing, Supervisor never hardcodes model names. TASK_ROUTING in ai_gateway.py is an internal implementation detail agents never touch. Architecture is correct as-is.",
       "description": "Move hardcoded TASK_ROUTING dict out of ai_gateway.py into task-routing.json. Gateway reads file at runtime. Supervisor reads model-registry.json (grades, bandwidth, cost tier, best_for) and writes updated task-routing.json. No agent or script ever hardcodes a model name. Scrape preferred methods stay in scrape-registry.json, independent of AI model layer. Model names only live in model-registry.json. Supervisor is the only writer of routing decisions. IN PLAIN TERMS: Right now if a model goes away or a better one appears, someone has to edit Python code. After this change, Supervisor just updates a JSON file and the whole studio automatically uses the new model on the next run. Zero code edits needed for model changes.",
       "acceptance_criteria": [
         "task-routing.json exists, runtime-loaded by ai_gateway.py",
@@ -1711,7 +2132,27 @@
       ],
       "effort": "medium",
       "added_at": "2026-04-04T12:00:00Z",
-      "tags": ["architecture", "supervisor", "ai_gateway", "security", "model_registry"]
+      "tags": [
+        "architecture",
+        "supervisor",
+        "ai_gateway",
+        "security",
+        "model_registry"
+      ],
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 8,
+        "build_feasibility": 9,
+        "revenue_potential": 7,
+        "urgency": 9,
+        "why_now": "The rapid evolution and frequent changes in AI models necessitate dynamic, code-free routing solutions to maintain agility and efficiency.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Complexity in ensuring real-time consistency and atomicity of updates across distributed systems."
+      },
+      "scored_at": "2026-04-05T04:02:50.611124",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-002",
@@ -1719,7 +2160,7 @@
       "type": "model_integration",
       "priority": "medium",
       "status": "new",
-      "description": "Google released Gemma 4 April 2 under Apache 2.0. Four sizes: E2B, E4B, 26B MoE, 31B Dense. The 26B MoE activates only 3.8B params at inference — fast throughput, fits current hardware without GPU. Add to model-registry.json under ollama provider. Run: ollama pull gemma4:26b-moe. Benchmark vs gemma3:4b on batch and scoring tasks. Supervisor grades and updates task-routing.json if it wins. DO NOT hardcode into ai_gateway.py — routing update flows through Supervisor per wb-2026-04-04-001.",
+      "description": "Google released Gemma 4 April 2 under Apache 2.0. Four sizes: E2B, E4B, 26B MoE, 31B Dense. The 26B MoE activates only 3.8B params at inference \u2014 fast throughput, fits current hardware without GPU. Add to model-registry.json under ollama provider. Run: ollama pull gemma4:26b-moe. Benchmark vs gemma3:4b on batch and scoring tasks. Supervisor grades and updates task-routing.json if it wins. DO NOT hardcode into ai_gateway.py \u2014 routing update flows through Supervisor per wb-2026-04-04-001.",
       "acceptance_criteria": [
         "gemma4 entries added to model-registry.json under ollama",
         "ollama pull completed and model verified locally",
@@ -1728,15 +2169,34 @@
       ],
       "effort": "small",
       "added_at": "2026-04-04T12:00:00Z",
-      "tags": ["model_registry", "ollama", "gemma4", "local_inference"]
+      "tags": [
+        "model_registry",
+        "ollama",
+        "gemma4",
+        "local_inference"
+      ],
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 9,
+        "build_feasibility": 9,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The rapid advancement of local AI inference capabilities and the increasing demand for efficient, powerful models make 2026 ideal for integrating cutting-edge models like Gemma 4's MoE variant.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Gemma 4 might not perform as well as expected against competitors on specific tasks, or a superior open-source model could be released shortly after."
+      },
+      "scored_at": "2026-04-05T04:02:55.998981",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-003",
-      "title": "HITL Checkpoint — Web-Triggered Agent Actions Route Through Supervisor",
+      "title": "HITL Checkpoint \u2014 Web-Triggered Agent Actions Route Through Supervisor",
       "type": "security",
       "priority": "high",
       "status": "new",
-      "description": "OpenClaw security research: sandbox escape defense is 17% without HITL, 91.5% with it. Any agent action triggered by content scraped from the web (file write, subprocess, external API call) must route through Supervisor confirmation before execution. Pattern: agent proposes action → writes proposal to supervisor-inbox.json → Supervisor evaluates → approves or rejects → agent executes or aborts. Extends existing War Room decision protocol. Highest priority agents: AI Intel, Game Archaeology, Coordinator/scrape system.",
+      "description": "OpenClaw security research: sandbox escape defense is 17% without HITL, 91.5% with it. Any agent action triggered by content scraped from the web (file write, subprocess, external API call) must route through Supervisor confirmation before execution. Pattern: agent proposes action \u2192 writes proposal to supervisor-inbox.json \u2192 Supervisor evaluates \u2192 approves or rejects \u2192 agent executes or aborts. Extends existing War Room decision protocol. Highest priority agents: AI Intel, Game Archaeology, Coordinator/scrape system.",
       "acceptance_criteria": [
         "supervisor-inbox.json has action-proposal schema defined",
         "AI Intel, Game Archaeology, Coordinator route web-content-triggered actions through inbox",
@@ -1745,7 +2205,27 @@
       ],
       "effort": "medium",
       "added_at": "2026-04-04T12:00:00Z",
-      "tags": ["security", "supervisor", "hitl", "agent_safety", "war_room"]
+      "tags": [
+        "security",
+        "supervisor",
+        "hitl",
+        "agent_safety",
+        "war_room"
+      ],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 8,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "The rapid deployment of AI agents with internet access creates an urgent need for robust human-in-the-loop security protocols to prevent catastrophic sandbox escapes and misuse.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "User friction and potential bottlenecks introduced by mandatory human intervention, especially as the number of agent actions scales."
+      },
+      "scored_at": "2026-04-05T04:03:01.390553",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-004",
@@ -1762,21 +2242,41 @@
       ],
       "effort": "medium",
       "added_at": "2026-04-04T12:00:00Z",
-      "tags": ["reliability", "supervisor", "game_archaeology", "verification", "hopper_rule"]
+      "tags": [
+        "reliability",
+        "supervisor",
+        "game_archaeology",
+        "verification",
+        "hopper_rule"
+      ],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 8,
+        "why_now": "The increasing complexity of AI-driven pipelines and the growing demand for reliable, explainable AI outputs make robust verification critical in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Achieving sufficient accuracy in content plausibility scoring without generating excessive false positives or negatives."
+      },
+      "scored_at": "2026-04-05T04:03:06.828723",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-005",
-      "title": "Two-Layer Credential System — .studio-vault.json + Env Var Override",
+      "title": "Two-Layer Credential System \u2014 .studio-vault.json + Env Var Override",
       "type": "security",
       "priority": "high",
       "status": "done",
       "closed_at": "2026-04-04T14:00:00Z",
       "closed_reason": "Fully implemented today: .studio-vault.json created and populated, studio-config.json cleared of all keys, ai_gateway.py updated with _load_vault() and _load_keys(), os.environ override wired, key-rotation.json initialized, .gitignore updated.",
-      "description": "Split studio-config.json into two files. (1) studio-config.json: non-sensitive config only — ollama_url, model prefs, agent settings, email addresses. No keys. (2) .studio-vault.json: all API keys, gitignored, OS read-only permissions on the Windows user account. Gateway loads vault via _load_vault() separate from _load_cfg(). Gateway checks os.environ first per key — Task Scheduler can inject keys as env vars with no file on disk. No agent .md or scrape script ever references vault. Add key-rotation.json tracking last-changed date per key. Supervisor flags keys older than 90 days.",
+      "description": "Split studio-config.json into two files. (1) studio-config.json: non-sensitive config only \u2014 ollama_url, model prefs, agent settings, email addresses. No keys. (2) .studio-vault.json: all API keys, gitignored, OS read-only permissions on the Windows user account. Gateway loads vault via _load_vault() separate from _load_cfg(). Gateway checks os.environ first per key \u2014 Task Scheduler can inject keys as env vars with no file on disk. No agent .md or scrape script ever references vault. Add key-rotation.json tracking last-changed date per key. Supervisor flags keys older than 90 days.",
       "acceptance_criteria": [
         ".studio-vault.json created, all keys migrated out of studio-config.json",
         "ai_gateway.py uses _load_vault() separate from _load_cfg()",
-        "os.environ override works for all keys — tested",
+        "os.environ override works for all keys \u2014 tested",
         "studio-config.json contains zero API keys",
         "key-rotation.json initialized with today's date for all keys",
         "Supervisor 90-day key-age check added to weekly cycle",
@@ -1784,16 +2284,36 @@
       ],
       "effort": "medium",
       "added_at": "2026-04-04T12:00:00Z",
-      "tags": ["security", "credentials", "ai_gateway", "vault", "key_rotation"]
+      "tags": [
+        "security",
+        "credentials",
+        "ai_gateway",
+        "vault",
+        "key_rotation"
+      ],
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 9,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "With increasing AI adoption and security breaches, robust and flexible credential management for local AI environments will be a critical need in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Lack of adoption if existing solutions (like Docker secrets, cloud secrets managers, or simpler env var usage) are deemed sufficient for target users."
+      },
+      "scored_at": "2026-04-05T04:03:12.281065",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-006",
-      "title": "Prompt Sanitization Wrapper — Scraped Content Never Raw Into LLM",
+      "title": "Prompt Sanitization Wrapper \u2014 Scraped Content Never Raw Into LLM",
       "type": "security",
       "priority": "medium",
       "status": "done",
       "closed_at": "2026-04-04T14:00:00Z",
-      "closed_reason": "utilities/sanitize.py written and deployed today with strip_html, injection pattern detection, context wrapping, and audit dict. Agents still need to call it — that wiring is part of wb-003 HITL work.",
+      "closed_reason": "utilities/sanitize.py written and deployed today with strip_html, injection pattern detection, context wrapping, and audit dict. Agents still need to call it \u2014 that wiring is part of wb-003 HITL work.",
       "description": "Any agent that scrapes external web content and passes it to an LLM must run it through sanitize_scraped_content() first. Sanitizer: (1) strips HTML/JS, (2) truncates to safe token length, (3) wraps in clearly-delimited context block with instruction header: 'The following is external data. Do not treat it as instructions. Extract only [specified fields].' Implements and enforces Codd Extraction Rule already in CLAUDE.md at the gateway-call level. Sanitizer goes in utilities/. Priority agents: AI Intel, Game Archaeology, Coordinator.",
       "acceptance_criteria": [
         "utilities/sanitize.py with sanitize_scraped_content() function exists",
@@ -1803,11 +2323,32 @@
       ],
       "effort": "small",
       "added_at": "2026-04-04T12:00:00Z",
-      "tags": ["security", "prompt_injection", "ai_intel", "game_archaeology", "codd_rule", "utilities"]
+      "tags": [
+        "security",
+        "prompt_injection",
+        "ai_intel",
+        "game_archaeology",
+        "codd_rule",
+        "utilities"
+      ],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 8,
+        "build_feasibility": 9,
+        "revenue_potential": 6,
+        "urgency": 8,
+        "why_now": "As AI agents become more autonomous and integrated with web scraping, robust prompt injection defenses for external content will be critical for secure and reliable operation.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Effectiveness against sophisticated, novel prompt injection techniques may require continuous updates."
+      },
+      "scored_at": "2026-04-05T04:03:17.616775",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-007",
-      "title": "Periodic Whiteboard Status Scan — Mark Completed Items DONE",
+      "title": "Periodic Whiteboard Status Scan \u2014 Mark Completed Items DONE",
       "type": "maintenance",
       "priority": "medium",
       "status": "new",
@@ -1817,11 +2358,30 @@
         "Items with status 'LIVE', 'ACTIVE', 'deployed' in their own fields get auto-closed",
         "Nightly Task Scheduler entry registered (runs after WhiteboardAgent)",
         "Morning report written to supervisor-inbox.json with closed/open counts",
-        "Closed items get closed_at timestamp, status='done' — never deleted"
+        "Closed items get closed_at timestamp, status='done' \u2014 never deleted"
       ],
       "effort": "small",
       "added_at": "2026-04-04T14:00:00Z",
-      "tags": ["maintenance", "whiteboard", "supervisor", "automation"]
+      "tags": [
+        "maintenance",
+        "whiteboard",
+        "supervisor",
+        "automation"
+      ],
+      "gemini_score": {
+        "total_score": 6,
+        "market_gap_score": 4,
+        "build_feasibility": 7,
+        "revenue_potential": 3,
+        "urgency": 5,
+        "why_now": "The increasing complexity of project management and a desire for automated efficiency continue to drive interest in tools that streamline workflows and improve data hygiene.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Lack of universal whiteboard API access and variability in how 'completed' is defined across different systems."
+      },
+      "scored_at": "2026-04-05T04:03:23.013226",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-008",
@@ -1829,27 +2389,48 @@
       "type": "product",
       "priority": "high",
       "status": "new",
-      "description": "Three connected tasks. (1) BRAND NAME: LightworkAI taken. 50+ names checked. Slavic direction explored, Vedic direction abandoned after test results. Need systematic naming process: compound words, invented words, domain availability check, trademark screen, email domain availability. Studio naming agent should generate 50 candidates per session filtered by .com availability. No decision until a name clears domain + trademark + email. (2) SITE DECISION: ai-services-website/ (LightworkAI, full multi-page, production CSS, has services/process/about/contact pages) vs client-services-website/ (Palek AI Studio, single index.html stub). ai-services-website wins on assets — rebrand it to whatever name wins. Archive client-services-website/. Social media agent already points to ai-services-website. (3) GHOST PAGE SYSTEM: Once canonical site and name decided, build ghost page template — SEO-optimized, single vertical, minimal build time, intake CTA. Each new proven product or sellable service triggers automatic ghost page creation. Ghost pages are NOT listed in nav — exist for search only. SEO agent identifies top keyword opportunities per vertical and hands specs to ghost page builder.",
+      "description": "Three connected tasks. (1) BRAND NAME: LightworkAI taken. 50+ names checked. Slavic direction explored, Vedic direction abandoned after test results. Need systematic naming process: compound words, invented words, domain availability check, trademark screen, email domain availability. Studio naming agent should generate 50 candidates per session filtered by .com availability. No decision until a name clears domain + trademark + email. (2) SITE DECISION: ai-services-website/ (LightworkAI, full multi-page, production CSS, has services/process/about/contact pages) vs client-services-website/ (Palek AI Studio, single index.html stub). ai-services-website wins on assets \u2014 rebrand it to whatever name wins. Archive client-services-website/. Social media agent already points to ai-services-website. (3) GHOST PAGE SYSTEM: Once canonical site and name decided, build ghost page template \u2014 SEO-optimized, single vertical, minimal build time, intake CTA. Each new proven product or sellable service triggers automatic ghost page creation. Ghost pages are NOT listed in nav \u2014 exist for search only. SEO agent identifies top keyword opportunities per vertical and hands specs to ghost page builder.",
       "acceptance_criteria": [
         "Naming agent session generates 50+ candidates filtered by .com and email availability",
         "One name selected, email account created, brand identity established",
         "ai-services-website rebranded and deployed under chosen name",
         "client-services-website archived to _archive/",
-        "Ghost page template created — under 2 hours to produce one page",
-        "Ghost page trigger system: new proven product → auto-generates page spec → Joe approves → publishes",
+        "Ghost page template created \u2014 under 2 hours to produce one page",
+        "Ghost page trigger system: new proven product \u2192 auto-generates page spec \u2192 Joe approves \u2192 publishes",
         "Social media agent updated to new domain/brand"
       ],
       "effort": "medium",
       "added_at": "2026-04-04T14:00:00Z",
-      "tags": ["website", "brand", "naming", "seo", "ghost_pages", "client_services"]
+      "tags": [
+        "website",
+        "brand",
+        "naming",
+        "seo",
+        "ghost_pages",
+        "client_services"
+      ],
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 7,
+        "urgency": 7,
+        "why_now": "The rapid evolution of AI services and increasing competition necessitates a strong, unified brand and efficient SEO strategy to capture market share in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Choosing a brand name that doesn't resonate or has unforeseen trademark issues in the future."
+      },
+      "scored_at": "2026-04-05T04:03:28.342110",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-009",
-      "title": "SEO + Internet Intelligence Team — Advise Website and Social Assets",
+      "title": "SEO + Internet Intelligence Team \u2014 Advise Website and Social Assets",
       "type": "agent",
       "priority": "high",
       "status": "new",
-      "description": "New agent cluster: SEO/Internet Intelligence Team. Sits between AI Intel agent (which already gathers SEO/social/influencer news) and the Social Media Agent (which posts). Current gap: no one synthesizes that intelligence into actionable website and social decisions. Team function: (1) weekly audit of website pages against current SEO signals, (2) ghost page opportunity identification from keyword gaps, (3) social content angle recommendations per platform based on trending topics in AI/automation/reselling verticals, (4) influencer and creator signal tracking for partnership angles, (5) writes recommendations to a seo-recommendations.json inbox that Social Media Agent and Joe review. Does NOT post autonomously — advisory output only until trust is established.",
+      "description": "New agent cluster: SEO/Internet Intelligence Team. Sits between AI Intel agent (which already gathers SEO/social/influencer news) and the Social Media Agent (which posts). Current gap: no one synthesizes that intelligence into actionable website and social decisions. Team function: (1) weekly audit of website pages against current SEO signals, (2) ghost page opportunity identification from keyword gaps, (3) social content angle recommendations per platform based on trending topics in AI/automation/reselling verticals, (4) influencer and creator signal tracking for partnership angles, (5) writes recommendations to a seo-recommendations.json inbox that Social Media Agent and Joe review. Does NOT post autonomously \u2014 advisory output only until trust is established.",
       "acceptance_criteria": [
         "seo-agent.md spec written",
         "seo-recommendations.json schema defined",
@@ -1860,27 +2441,508 @@
       ],
       "effort": "medium",
       "added_at": "2026-04-04T14:00:00Z",
-      "tags": ["seo", "social_media", "agent", "website", "intelligence", "advisory"]
+      "tags": [
+        "seo",
+        "social_media",
+        "agent",
+        "website",
+        "intelligence",
+        "advisory"
+      ],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 8,
+        "why_now": "As AI content generation becomes ubiquitous, the need for sophisticated, data-driven optimization and strategic guidance for human oversight will skyrocket.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Over-reliance on real-time data accuracy and the ability to truly understand nuanced human-driven trends vs. statistical noise."
+      },
+      "scored_at": "2026-04-05T04:03:33.731718",
+      "scored_by": "gemini"
     },
     {
       "id": "wb-2026-04-04-010",
-      "title": "Higgsfield — Always-On Pipeline Scanner + Top 10 Asset Tracker + Feedback Loop",
+      "title": "Higgsfield \u2014 Always-On Pipeline Scanner + Top 10 Asset Tracker + Feedback Loop",
       "type": "division",
       "priority": "high",
       "status": "new",
-      "description": "Higgsfield integration is passive-first, not build-first. Three layers: (1) ALWAYS-ON SCANNER — AI Intel agent already runs nightly. Extend it to scan Higgsfield platform weekly: active contests, genre gap data, high-performer characteristics, vote velocity. Writes to higgsfield-intelligence.json (currently null). This runs permanently regardless of whether we have anything ready to submit. (2) TOP 10 TRACKER — Mirofish grades all assets in the agency pipeline against Higgsfield quality bar on each production run. Maintains a live top-10 list of our highest-scoring candidates in higgsfield-top10.json. Items sit in the list and age — score improves as production quality improves. When the top item crosses the quality bar threshold, it gets flagged as FASTTRACK and surfaced to Joe's inbox. No manual checking. (3) FEEDBACK LOOP — Once a piece is submitted to Higgsfield, the AI Intel agent monitors that piece's performance metrics (views, votes, comments, contest placement). Feeds results back as training signal: what characteristics of high-performers does our next batch need? Loop writes to higgsfield-feedback.json. Outcome: system always knows what Higgsfield wants, always knows our best current assets, always knows when one is ready. Joe only gets pinged at the FASTTRACK threshold.",
+      "description": "Higgsfield integration is passive-first, not build-first. Three layers: (1) ALWAYS-ON SCANNER \u2014 AI Intel agent already runs nightly. Extend it to scan Higgsfield platform weekly: active contests, genre gap data, high-performer characteristics, vote velocity. Writes to higgsfield-intelligence.json (currently null). This runs permanently regardless of whether we have anything ready to submit. (2) TOP 10 TRACKER \u2014 Mirofish grades all assets in the agency pipeline against Higgsfield quality bar on each production run. Maintains a live top-10 list of our highest-scoring candidates in higgsfield-top10.json. Items sit in the list and age \u2014 score improves as production quality improves. When the top item crosses the quality bar threshold, it gets flagged as FASTTRACK and surfaced to Joe's inbox. No manual checking. (3) FEEDBACK LOOP \u2014 Once a piece is submitted to Higgsfield, the AI Intel agent monitors that piece's performance metrics (views, votes, comments, contest placement). Feeds results back as training signal: what characteristics of high-performers does our next batch need? Loop writes to higgsfield-feedback.json. Outcome: system always knows what Higgsfield wants, always knows our best current assets, always knows when one is ready. Joe only gets pinged at the FASTTRACK threshold.",
       "acceptance_criteria": [
-        "AI Intel agent extended to scrape Higgsfield weekly — populates higgsfield-intelligence.json",
+        "AI Intel agent extended to scrape Higgsfield weekly \u2014 populates higgsfield-intelligence.json",
         "Mirofish grading includes Higgsfield quality bar fields (cinematography, pacing, story, runtime fit)",
-        "higgsfield-top10.json maintained — top 10 assets by Higgsfield score, updated each production run",
+        "higgsfield-top10.json maintained \u2014 top 10 assets by Higgsfield score, updated each production run",
         "FASTTRACK flag triggers supervisor-inbox.json entry when top item crosses quality threshold",
-        "higgsfield-feedback.json schema defined — performance metrics from submitted pieces",
+        "higgsfield-feedback.json schema defined \u2014 performance metrics from submitted pieces",
         "Ghost Book pipeline items have higgsfield_candidate boolean flag",
         "Quality bar defined numerically before any seeding begins"
       ],
       "effort": "large",
       "added_at": "2026-04-04T14:00:00Z",
-      "tags": ["higgsfield", "production", "ghost_book", "scoring", "feedback_loop", "always_on", "mirofish"]
+      "tags": [
+        "higgsfield",
+        "production",
+        "ghost_book",
+        "scoring",
+        "feedback_loop",
+        "always_on",
+        "mirofish"
+      ],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 9,
+        "build_feasibility": 7,
+        "revenue_potential": 8,
+        "urgency": 8,
+        "why_now": "The increasing saturation of creative platforms and the demand for data-driven content strategies make automated pipeline optimization critical for competitive advantage in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Accuracy and bias of AI Intel agent in consistently identifying 'Higgsfield quality' and providing actionable feedback."
+      },
+      "scored_at": "2026-04-05T04:03:39.159189",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-sponsors-Blaizzy",
+      "title": "GitHub Trending: sponsors/Blaizzy",
+      "description": "A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .N",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289395",
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 9,
+        "urgency": 8,
+        "why_now": "The rapid proliferation of AI agents and multi-agent systems necessitates robust frameworks for their management, making 2026 a critical window for standardized development.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid evolution of underlying AI models and agent paradigms could quickly outdate framework design."
+      },
+      "scored_at": "2026-04-05T04:03:44.490282",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-Blaizzy-mlx-vlm",
+      "title": "GitHub Trending: Blaizzy/mlx-vlm",
+      "description": "Hunt down social media accounts by username across social networks",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289412",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing concern for online privacy, digital identity, and the need for due diligence in various sectors makes a robust social media account hunter highly relevant for 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Maintaining accuracy and coverage as social media platforms frequently change their APIs and public data accessibility."
+      },
+      "scored_at": "2026-04-05T04:03:49.913295",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-microsoft-agent-framework",
+      "title": "GitHub Trending: microsoft/agent-framework",
+      "description": "Best and simplest tool for website change detection, web page monitoring, and website change alerts. Perfect for trackin",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289419",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing complexity and dynamic nature of web content, coupled with the need for data-driven decision making and competitive intelligence, makes 2026 an opportune time for robust website change detection.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Market saturation with existing monitoring tools and the challenge of differentiating advanced features effectively."
+      },
+      "scored_at": "2026-04-05T04:03:55.237267",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-HKUDS-LightRAG",
+      "title": "GitHub Trending: HKUDS/LightRAG",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289424",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The rapid evolution of RAG models and the increasing complexity of data sources will necessitate more robust and user-friendly frameworks by 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapid obsolescence due to new research breakthroughs in RAG or alternative AI architectures."
+      },
+      "scored_at": "2026-04-05T04:04:00.753358",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-imbue-ai-mngr",
+      "title": "GitHub Trending: imbue-ai/mngr",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289427",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing complexity of AI model management and a growing developer need for efficient orchestration tools make 2026 an opportune time for a robust solution like mngr.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Rapidly evolving AI tooling landscape and potential for well-funded competitors to enter the orchestration space."
+      },
+      "scored_at": "2026-04-05T04:04:06.139157",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-dgtlmoon-changedetection.io",
+      "title": "GitHub Trending: dgtlmoon/changedetection.io",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289430",
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "The increasing complexity of web applications and the need for timely, reliable data on competitor changes make a robust, open-source change detection tool highly valuable in 2026.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "MEDIUM",
+        "top_risk": "Market saturation with proprietary tools or existing open-source solutions that are 'good enough'."
+      },
+      "scored_at": "2026-04-05T04:04:11.403973",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-apps-dependabot",
+      "title": "GitHub Trending: apps/dependabot",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289433",
+      "gemini_score": {
+        "total_score": 5,
+        "market_gap_score": 3,
+        "build_feasibility": 8,
+        "revenue_potential": 4,
+        "urgency": 5,
+        "why_now": "The continuous evolution of software dependencies and security threats makes automated dependency management a perpetual need.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE",
+        "top_risk": "Dependabot is an existing, widely adopted, and well-integrated GitHub product, making direct competition challenging without significant innovation or a different target audience."
+      },
+      "scored_at": "2026-04-05T04:04:17.007260",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "gh-ml-explore-mlx-lm",
+      "title": "GitHub Trending: ml-explore/mlx-lm",
+      "description": "",
+      "type": "github_trending",
+      "tags": [
+        "github",
+        "trending",
+        "python"
+      ],
+      "added_at": "2026-04-04T23:00:33.289437",
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 8,
+        "build_feasibility": 9,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "2026 will see increased demand for efficient and deployable on-device AI models, making an accessible framework like MLX-LM highly relevant.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "months",
+        "revenue_estimate": "LARGE",
+        "top_risk": "Rapid evolution of alternative efficient LLM frameworks/libraries."
+      },
+      "scored_at": "2026-04-05T04:04:22.345445",
+      "scored_by": "gemini"
+    },
+    {
+      "id": "pa-1775394074-0",
+      "title": "Google Album Archive",
+      "description": "Google Album Archive was a platform that allowed users to access and manage their archived photos and videos from various Google services, such as Hangouts and Picasa Web Albums.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-05T08:01:14.800057"
+    },
+    {
+      "id": "pa-1775394074-1",
+      "title": "Google Maps Coordinate",
+      "description": "Google Maps Coordinate was a service for managing mobile workforces with the help of mobile apps and a web-based dashboard.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-05T08:01:14.800096"
+    },
+    {
+      "id": "pa-1775394074-2",
+      "title": "Fitbit Coach",
+      "description": "Fitbit Coach (formerly Fitstar) was a video-based bodyweight workout app that used AI to personalize workouts based on user feedback.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-05T08:01:14.800108"
+    },
+    {
+      "id": "pa-1775394074-3",
+      "title": "Fitstar Yoga",
+      "description": "Fitstar Yoga was a video-based yoga app that created unique yoga sessions based on user preference and skill level.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-05T08:01:14.800114"
+    },
+    {
+      "id": "pa-1775394074-4",
+      "title": "Chatbase",
+      "description": "Analytics platform for Google's Dialogflow chatbot & others, started by the Google-funded Area120 incubator then retired and partially merged into Dialogflow itself.",
+      "type": "product_archaeology",
+      "source": "killedbygoogle.com",
+      "why_failed": "Google acquisition/shutdown",
+      "tags": [
+        "product_archaeology"
+      ],
+      "added_at": "2026-04-05T08:01:14.800120"
+    },
+    {
+      "id": "weekend-hunter-project",
+      "title": "Weekend Hunter — Garage Sale Route Optimizer",
+      "description": "Automated garage sale discovery and route optimization. Scrapes EstateSales.net, Craigslist, and Facebook Marketplace for weekend sales. Generates optimized Google Maps routes for Friday night/Saturday morning pickup runs. Includes sidebar widget integration.",
+      "type": "project",
+      "source": "studio_internal",
+      "status": "LIVE",
+      "deployed": true,
+      "project_path": "G:/My Drive/Projects/_studio/weekend-hunter/",
+      "tags": ["project", "reselling", "automation", "maps"],
+      "gemini_score": {
+        "total_score": 9,
+        "market_gap_score": 8,
+        "build_feasibility": 10,
+        "revenue_potential": 8,
+        "urgency": 9,
+        "why_now": "Direct revenue support for eBay reselling operation. Eliminates manual sale discovery.",
+        "recommended_action": "LIVE",
+        "effort_estimate": "done",
+        "revenue_estimate": "PERSONAL_USE"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "ray-ban-meta-identifier",
+      "title": "Ray-Ban Meta Smart Glasses Item Identifier",
+      "description": "Wearable item identification using Ray-Ban Meta smart glasses DAT SDK (~1fps JPEG stream). Claude/Gemini Vision + eBay Browse API for real-time price lookup while picking items at estate sales.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "wearable", "vision", "reselling"],
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 8,
+        "build_feasibility": 5,
+        "revenue_potential": 7,
+        "urgency": 6,
+        "why_now": "Wearable AI is maturing. Phone camera MVP recommended first before glasses investment.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "PERSONAL_USE"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "personal-reseller-pnl",
+      "title": "Personal Reseller P&L Tracker",
+      "description": "Comprehensive profit/loss tracking for eBay reselling. eBay API integration + CSV bank imports + SQLite backend. Competitor analysis: My Reseller Genie charges $20/mo. ~40-60 hours for personal MVP.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "reselling", "finance", "tracking"],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 7,
+        "build_feasibility": 7,
+        "revenue_potential": 6,
+        "urgency": 7,
+        "why_now": "Direct operational need. Existing tools are expensive or don't integrate with personal workflow.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "PERSONAL_USE"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "turbosquid-3d-assets",
+      "title": "TurboSquid 3D Asset Sales (Hunter)",
+      "description": "Leverage Hunter's Blender skills for passive income via 3D asset marketplace. TurboSquid: 40% royalty for new sellers, 50-60% via SquidGuild. Long-tail revenue potential.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "hunter", "3d", "passive_income"],
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 6,
+        "build_feasibility": 8,
+        "revenue_potential": 6,
+        "urgency": 5,
+        "why_now": "Hunter has Blender skills. Low barrier to entry. Could generate passive income while building other projects.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "ongoing",
+        "revenue_estimate": "NICHE"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "blendermcp-workflow",
+      "title": "BlenderMCP AI-Assisted Workflow (Hunter)",
+      "description": "Few-shot prompting doubles usable Blender AI output (25-35% to 65-75%). RTX 3060 12GB recommended for local AI texturing. MCP server integration for Claude-assisted 3D modeling.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "hunter", "blender", "ai", "workflow"],
+      "gemini_score": {
+        "total_score": 7,
+        "market_gap_score": 7,
+        "build_feasibility": 6,
+        "revenue_potential": 5,
+        "urgency": 5,
+        "why_now": "BlenderMCP and AI-assisted 3D workflows are emerging. Early adoption could compound Hunter's skills.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "SKILL_BUILDING"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "sysguard-watchdog-scanner",
+      "title": "SysGuard/Watchdog Personal Security Scanner",
+      "description": "Personal system security monitoring. Components built: SentinelScan.ps1, SentinelDashboard.html, Setup-SentinelScan.ps1. Needs Task Scheduler registration to activate.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "security", "monitoring", "personal"],
+      "gemini_score": {
+        "total_score": 6,
+        "market_gap_score": 5,
+        "build_feasibility": 9,
+        "revenue_potential": 3,
+        "urgency": 4,
+        "why_now": "Personal security hygiene. Already partially built, just needs scheduling.",
+        "recommended_action": "BUILD",
+        "effort_estimate": "hours",
+        "revenue_estimate": "PERSONAL_USE"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "guitar-tab-aggregator",
+      "title": "Guitar Tab Aggregator/Ranker (Hunter)",
+      "description": "Meta-search/ranker for guitar tabs. Links out (no hosting). YouTube Data API for lesson ranking. Spotify basic-pitch for accuracy scoring. Avoids copyright issues by not hosting content.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "hunter", "music", "aggregator"],
+      "gemini_score": {
+        "total_score": 6,
+        "market_gap_score": 6,
+        "build_feasibility": 7,
+        "revenue_potential": 5,
+        "urgency": 4,
+        "why_now": "Hunter interest area. Low-risk entry point for content aggregation business model.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "weeks",
+        "revenue_estimate": "NICHE"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
+    },
+    {
+      "id": "institutional-twin-councils",
+      "title": "Institutional Twin Councils — AI Expert Panels",
+      "description": "Domain-expert AI panels replacing expensive consultants. B2B SaaS model. Multi-agent consensus architecture for institutional decision support.",
+      "type": "whiteboard",
+      "source": "chat_idea",
+      "status": "WHITEBOARD",
+      "tags": ["whiteboard", "b2b", "saas", "consulting", "ai"],
+      "gemini_score": {
+        "total_score": 8,
+        "market_gap_score": 8,
+        "build_feasibility": 5,
+        "revenue_potential": 9,
+        "urgency": 6,
+        "why_now": "B2B AI consulting replacement is a massive market. Requires significant architecture work.",
+        "recommended_action": "RESEARCH",
+        "effort_estimate": "months",
+        "revenue_estimate": "B2B_SAAS"
+      },
+      "added_at": "2026-04-05T15:30:00.000000"
     }
   ]
 }

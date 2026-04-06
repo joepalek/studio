@@ -1,0 +1,15 @@
+{"timestamp": "2026-04-05T22:50:40.693379", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "What is 2+2?", "session_id": null}}
+{"timestamp": "2026-04-05T22:50:49.129118", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T22:51:10.186137", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "What is 2+2? Answer in one word.", "session_id": null}}
+{"timestamp": "2026-04-05T22:51:15.065265", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T22:52:51.447483", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "What is 2+2? Answer only with the number.", "session_id": null}}
+{"timestamp": "2026-04-05T22:52:56.309519", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T22:54:17.296293", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "What is 2+2? Just reply with the number only.", "session_id": null}}
+{"timestamp": "2026-04-05T22:54:22.235755", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T22:56:49.221223", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "What is 2+2? Reply with only the number.", "session_id": null}}
+{"timestamp": "2026-04-05T22:56:54.123073", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T22:58:08.690820", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "hi", "session_id": null}}
+{"timestamp": "2026-04-05T22:58:14.445803", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T22:59:38.093256", "event_type": "execute", "client_ip": "127.0.0.1", "details": {"message": "test", "session_id": null}}
+{"timestamp": "2026-04-05T22:59:43.340758", "event_type": "response", "client_ip": "127.0.0.1", "details": {"success": false, "response_length": 0, "error": "error: io error: HOME is not set\n\nRun `claw --help` for usage.\n"}}
+{"timestamp": "2026-04-05T23:00:05.843553", "event_type": "signature_failure", "client_ip": "127.0.0.1", "details": {"reason": "Missing X-Sidebar-Signature header"}}

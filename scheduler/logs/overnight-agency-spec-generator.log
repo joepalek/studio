@@ -34,3 +34,38 @@ Sample specs (first 3):
     Voice: playful and irreverent
 
 [Sat 04/04/2026  3:00:01.62] Done 
+[Sun 04/05/2026  3:04:33.74] Spec Generator starting 
+Generating character specs batch...
+  Claude: 100 specs
+  Gemini: 100 specs
+  Agent: 100 specs
+
+======================================================================
+Batch generated: 300 total specs
+By universe:
+  band_members: 53 (18%)
+  inmates_vs_guards: 81 (27%)
+  original_fiction: 133 (44%)
+  other: 33 (11%)
+
+Saved to: G:\My Drive\Projects\_studio\agency\spec-queue\spec-batch-20260405_031518.json
+Queue file: G:\My Drive\Projects\_studio\agency\spec-queue\spec-queue-current.json
+======================================================================
+
+Sample specs (first 3):
+
+  Alex Davis (original_fiction)
+    Archetype: innocent
+    Traits: independent, reserved, charismatic
+    Voice: loud and confident
+
+  Phoenix Johnson (original_fiction)
+    Archetype: lover
+    Traits: courageous, conflicted, impulsive
+    Voice: direct and blunt
+
+  Marcus Brown (original_fiction)
+    Archetype: caregiver
+    Traits: cautious, determined, thoughtful
+    Voice: quiet and introspective
+

@@ -314,3 +314,49 @@ Done.
 [2026-04-04 08:00:29] Scored 0 items — saved to product-archaeology-scored.json
 [2026-04-04 08:00:29] Product Archaeology complete
 [Sat 04/04/2026  8:00:30.10] Done 
+[Sun 04/05/2026  2:36:17.18] Product Archaeology starting 
+[2026-04-05 03:16:17] Product Archaeology starting
+[2026-04-05 03:16:52] KilledByGoogle: 0 products
+[2026-04-05 03:16:52] r/shutdownsaddened: 0 posts
+[2026-04-05 03:16:55] r/discontinued: 50 posts
+[2026-04-05 03:16:58] r/DeadApps: 25 posts
+[2026-04-05 03:17:16] Wayback ERROR: timed out
+[2026-04-05 03:17:16] New items found: 0 | Total: 435
+[2026-04-05 03:17:17] Saved to product-archaeology-results.json
+[2026-04-05 03:17:17] Skipping score pass — hour 3 outside 6AM-11PM window
+[2026-04-05 03:17:17] Product Archaeology complete
+[Sun 04/05/2026  3:17:23.40] Done 
+[Sun 04/05/2026  8:00:01.92] Product Archaeology starting 
+[2026-04-05 08:00:03] Product Archaeology starting
+[2026-04-05 08:00:03] KilledByGoogle: 0 products
+[2026-04-05 08:00:06] r/shutdownsaddened: 0 posts
+[2026-04-05 08:00:12] r/discontinued: 50 posts
+[2026-04-05 08:00:16] r/DeadApps: 25 posts
+[2026-04-05 08:00:24] Wayback Kickstarter: -1 results
+[2026-04-05 08:00:25] New items found: 0 | Total: 435
+[2026-04-05 08:00:26] Saved to product-archaeology-results.json
+[2026-04-05 08:00:26] Scoring top 20 via AI Gateway (free tier with fallback)...
+[2026-04-05 08:00:27]   [KILL] Chromecast: 6/10 via gemini
+[2026-04-05 08:00:29]   SCORE ERROR: VPN by Google One — Expecting value: line 1 column 1 (char 0)
+[2026-04-05 08:00:31]   [KILL] YouTube Stories: 4/10 via gemini
+[2026-04-05 08:00:34]   [PUSH_UP] Google Album Archive: 8/10 via gemini
+[2026-04-05 08:00:36]   [NEUTRAL] Google Domains: 5/10 via gemini
+[2026-04-05 08:00:39]   [NEUTRAL] Jacquard: 7/10 via gemini
+[2026-04-05 08:00:41]   [NEUTRAL] Google Surveys: 8/10 via gemini
+[2026-04-05 08:00:44]   [KILL] Google Code Competitions: 7/10 via gemini
+[2026-04-05 08:00:47]   SCORE ERROR: Google Stadia — Expecting value: line 1 column 1 (char 0)
+[2026-04-05 08:00:49]   [KILL] Google Duo: 5/10 via gemini
+[2026-04-05 08:00:52]   [NEUTRAL] Android Auto for phone screens: 6/10 via gemini
+[2026-04-05 08:00:54]   [PUSH_UP] Google My Business (app): ?/10 via gemini
+[2026-04-05 08:00:57]   SCORE ERROR: Cameos on Google — Expecting value: line 1 column 1 (char 0)
+[2026-04-05 08:00:59]   [NEUTRAL] YouTube Go: 7/10 via gemini
+[2026-04-05 08:01:01]   [NEUTRAL] Google Contributor: 8/10 via gemini
+[2026-04-05 08:01:04]   [PUSH_UP] Google Maps Coordinate: 12/10 via gemini
+[2026-04-05 08:01:06]   [PUSH_UP] Fitbit Coach: 8/10 via gemini
+[2026-04-05 08:01:08]   [PUSH_UP] Fitstar Yoga: 8/10 via gemini
+[2026-04-05 08:01:11]   [KILL] Google OnHub: 5/10 via gemini
+[2026-04-05 08:01:13]   [PUSH_UP] Chatbase: 8/10 via gemini
+[2026-04-05 08:01:14] Scored 17 items — saved to product-archaeology-scored.json
+[2026-04-05 08:01:14] Promoted 5 items to whiteboard.json
+[2026-04-05 08:01:14] Product Archaeology complete
+[Sun 04/05/2026  8:01:15.02] Done 

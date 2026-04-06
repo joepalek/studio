@@ -1,184 +1,290 @@
+#!/usr/bin/env python3
 """
-autodream.py — Nightly Memory Consolidation (Item #2)
-Studio Rule: Shannon Rule compliant (outputs under 200 tokens per chunk)
-Schedule: Windows Task Scheduler — 2:00 AM daily
-Path: G:\My Drive\Projects\_studio\scripts\autodream.py
+AutoDream - Nightly Memory Consolidation Script
+Reads supervisor logs, distills key facts via Haiku, upserts to ChromaDB.
+Generates health score report for weekly digest.
 
-Reads yesterday's supervisor logs + inbox answers.
-Calls Claude Haiku to distill key facts/decisions.
-Upserts synthesized chunks into ChromaDB studio collection.
+Schedule: 2:00 AM daily via Windows Task Scheduler
+TTL: 1 hour (Hamilton Rule compliant)
 """
 
 import os
 import json
-import glob
 import datetime
-import chromadb
-import anthropic
+import hashlib
+from pathlib import Path
+from typing import Optional
 
-# ── Config ──────────────────────────────────────────────────────────────────
-STUDIO_ROOT     = r"G:\My Drive\Projects\_studio"
-LOG_DIR         = os.path.join(STUDIO_ROOT, "logs")
-INBOX_LOG       = os.path.join(STUDIO_ROOT, "inbox", "answered_log.jsonl")
-CHROMA_PATH     = os.path.join(STUDIO_ROOT, "chromadb")
-CHROMA_COL      = "studio"                  # existing collection
-DREAM_LOG       = os.path.join(STUDIO_ROOT, "logs", "autodream.log")
-MAX_CHUNK_TOKENS = 180                       # Shannon Rule: stay under 200
+# Paths - adjust to match your studio structure
+STUDIO_ROOT = Path(r"G:\My Drive\Projects\_studio")
+INBOX_LOG = STUDIO_ROOT / "logs" / "inbox_answered.json"
+SUPERVISOR_LOG = STUDIO_ROOT / "logs" / "supervisor.log"
+HEALTH_REPORT = STUDIO_ROOT / "reports" / "health_score.md"
+CHROMADB_PATH = STUDIO_ROOT / "chromadb"
 
-client_ai   = anthropic.Anthropic()          # uses ANTHROPIC_API_KEY env var
-client_db   = chromadb.PersistentClient(path=CHROMA_PATH)
-collection  = client_db.get_or_create_collection(CHROMA_COL)
+# Optional: If logs are elsewhere, override here
+ALTERNATIVE_LOG_PATHS = [
+    STUDIO_ROOT / "inbox" / "answered.json",
+    STUDIO_ROOT / "supervisor" / "decisions.log",
+]
 
-# ── Helpers ──────────────────────────────────────────────────────────────────
-def yesterday_str():
-    return (datetime.date.today() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
 
-def load_supervisor_logs(date_str: str) -> str:
-    """Grab all supervisor log lines from yesterday."""
-    pattern = os.path.join(LOG_DIR, f"*{date_str}*.log")
-    lines = []
-    for f in glob.glob(pattern):
-        with open(f, "r", encoding="utf-8", errors="ignore") as fh:
-            lines.extend(fh.readlines())
-    return "".join(lines[-300:])  # cap at 300 lines to control token cost
+def find_log_file() -> Optional[Path]:
+    """Find the inbox/supervisor log file."""
+    candidates = [INBOX_LOG, SUPERVISOR_LOG] + ALTERNATIVE_LOG_PATHS
+    for path in candidates:
+        if path.exists():
+            return path
+    return None
 
-def load_inbox_answers(date_str: str) -> str:
-    """Pull answered inbox decisions from yesterday."""
-    if not os.path.exists(INBOX_LOG):
-        return ""
+
+def get_yesterdays_entries(log_path: Path) -> list[dict]:
+    """Extract log entries from the past 24 hours."""
     entries = []
-    with open(INBOX_LOG, "r", encoding="utf-8") as fh:
-        for line in fh:
-            try:
-                rec = json.loads(line)
-                if rec.get("date", "").startswith(date_str):
-                    entries.append(f"[{rec.get('id','?')}] Q: {rec.get('question','')} A: {rec.get('answer','')}")
-            except Exception:
-                continue
-    return "\n".join(entries)
-
-def distill(raw_text: str, source_label: str) -> list[str]:
-    """
-    Call Haiku to extract discrete facts/decisions as a JSON list of strings.
-    Each string must be under MAX_CHUNK_TOKENS tokens (enforced by prompt).
-    """
-    if not raw_text.strip():
-        return []
-
-    prompt = f"""You are a memory consolidation agent for an autonomous AI studio.
-Extract ONLY concrete facts, decisions, or status changes from the text below.
-Output a JSON array of strings. Each string must be one self-contained fact,
-under 40 words, starting with the subject (e.g. "eBay agent:", "Game Arch:").
-Discard noise, errors, retries, and repetition. Return ONLY the JSON array.
-
-SOURCE: {source_label}
-DATE: {yesterday_str()}
-
-TEXT:
-{raw_text[:6000]}
-"""
-    resp = client_ai.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=1000,
-        messages=[{"role": "user", "content": prompt}]
-    )
-    raw = resp.content[0].text.strip()
-    # Strip markdown fences if present
-    raw = raw.replace("```json", "").replace("```", "").strip()
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+    cutoff = yesterday.replace(hour=0, minute=0, second=0, microsecond=0)
+    
     try:
-        facts = json.loads(raw)
-        return [f for f in facts if isinstance(f, str) and len(f) > 10]
-    except Exception:
+        if log_path.suffix == ".json":
+            with open(log_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    for entry in data:
+                        ts = entry.get("timestamp") or entry.get("answered_at") or entry.get("created_at")
+                        if ts:
+                            try:
+                                entry_time = datetime.datetime.fromisoformat(ts.replace("Z", "+00:00"))
+                                if entry_time.replace(tzinfo=None) >= cutoff:
+                                    entries.append(entry)
+                            except (ValueError, TypeError):
+                                continue
+        else:
+            # Plain text log - extract lines with timestamps
+            with open(log_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and len(line) > 10:
+                        entries.append({"raw": line})
+    except Exception as e:
+        print(f"[AutoDream] Error reading log: {e}")
+    
+    return entries
+
+
+def distill_via_haiku(entries: list[dict]) -> list[dict]:
+    """
+    Call Claude Haiku to extract key facts/decisions from log entries.
+    Returns distilled chunks ready for ChromaDB upsert.
+    """
+    if not entries:
+        return []
+    
+    # Prepare prompt
+    entries_text = "\n".join([
+        json.dumps(e, default=str) if isinstance(e, dict) else str(e)
+        for e in entries[:50]  # Cap at 50 entries to stay under token limits
+    ])
+    
+    prompt = f"""Extract the key facts, decisions, and learnings from these supervisor log entries.
+Return a JSON array of objects, each with:
+- "fact": A single atomic fact or decision (1-2 sentences)
+- "category": One of [decision, learning, preference, context, error]
+- "importance": 1-5 (5 = critical)
+
+Only include facts worth remembering long-term. Skip routine operations.
+
+Log entries:
+{entries_text}
+
+Respond with ONLY the JSON array, no other text."""
+
+    try:
+        import anthropic
+        client = anthropic.Anthropic()
+        
+        response = client.messages.create(
+            model="claude-haiku-3-5-sonnet-20241022",  # Haiku
+            max_tokens=2000,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        
+        result_text = response.content[0].text.strip()
+        # Clean potential markdown fencing
+        if result_text.startswith("```"):
+            result_text = result_text.split("```")[1]
+            if result_text.startswith("json"):
+                result_text = result_text[4:]
+        result_text = result_text.strip()
+        
+        distilled = json.loads(result_text)
+        return distilled if isinstance(distilled, list) else []
+        
+    except ImportError:
+        print("[AutoDream] anthropic package not installed. Run: pip install anthropic")
+        return []
+    except Exception as e:
+        print(f"[AutoDream] Haiku distillation failed: {e}")
         return []
 
-def upsert_to_chromadb(facts: list[str], source: str):
-    """Upsert distilled facts into ChromaDB with date + source metadata."""
-    if not facts:
+
+def upsert_to_chromadb(chunks: list[dict]) -> int:
+    """Upsert distilled chunks to ChromaDB."""
+    if not chunks:
         return 0
-    date_str = yesterday_str()
-    ids, docs, metas = [], [], []
-    for i, fact in enumerate(facts):
-        chunk_id = f"dream_{date_str}_{source}_{i:03d}"
-        ids.append(chunk_id)
-        docs.append(fact)
-        metas.append({"source": source, "date": date_str, "type": "autodream"})
-    collection.upsert(ids=ids, documents=docs, metadatas=metas)
-    return len(facts)
+    
+    try:
+        import chromadb
+        
+        client = chromadb.PersistentClient(path=str(CHROMADB_PATH))
+        collection = client.get_or_create_collection(
+            name="autodream",
+            metadata={"description": "Nightly distilled learnings from supervisor logs"}
+        )
+        
+        ids = []
+        documents = []
+        metadatas = []
+        
+        for chunk in chunks:
+            fact = chunk.get("fact", "")
+            if not fact:
+                continue
+                
+            # Generate stable ID from content hash
+            chunk_id = hashlib.sha256(fact.encode()).hexdigest()[:16]
+            ids.append(f"autodream_{chunk_id}")
+            documents.append(fact)
+            metadatas.append({
+                "category": chunk.get("category", "unknown"),
+                "importance": chunk.get("importance", 3),
+                "distilled_at": datetime.datetime.now().isoformat(),
+                "source": "autodream"
+            })
+        
+        if ids:
+            collection.upsert(ids=ids, documents=documents, metadatas=metadatas)
+            
+        return len(ids)
+        
+    except ImportError:
+        print("[AutoDream] chromadb package not installed. Run: pip install chromadb")
+        return 0
+    except Exception as e:
+        print(f"[AutoDream] ChromaDB upsert failed: {e}")
+        return 0
 
-def log(msg: str):
-    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    line = f"[{ts}] {msg}"
-    print(line)
-    with open(DREAM_LOG, "a", encoding="utf-8") as fh:
-        fh.write(line + "\n")
 
-# ── Health Score Helper (Item #6) ─────────────────────────────────────────────
-def compute_project_health() -> dict:
-    """
-    Scan studio project directories for simple health signals.
-    Returns a dict of project -> score (0-100).
-    """
-    health = {}
-    projects_dir = os.path.join(STUDIO_ROOT, "projects")
-    if not os.path.isdir(projects_dir):
-        return health
-    for proj in os.listdir(projects_dir):
-        proj_path = os.path.join(projects_dir, proj)
-        if not os.path.isdir(proj_path):
-            continue
-        todos = 0
-        py_files = 0
-        for root, _, files in os.walk(proj_path):
-            for f in files:
-                if f.endswith(".py"):
-                    py_files += 1
-                    try:
-                        content = open(os.path.join(root, f), encoding="utf-8", errors="ignore").read()
-                        todos += content.upper().count("TODO") + content.upper().count("FIXME")
-                    except Exception:
-                        pass
-        # Simple score: start at 100, -5 per TODO, floor 0
-        score = max(0, 100 - (todos * 5))
-        health[proj] = {"score": score, "todos": todos, "py_files": py_files}
+def generate_health_report() -> dict:
+    """Generate health score metrics for the studio."""
+    health = {
+        "generated_at": datetime.datetime.now().isoformat(),
+        "scores": {},
+        "alerts": []
+    }
+    
+    # Check key directories/files exist
+    checks = {
+        "chromadb": CHROMADB_PATH.exists(),
+        "logs_dir": (STUDIO_ROOT / "logs").exists(),
+        "inbox": (STUDIO_ROOT / "inbox").exists() or (STUDIO_ROOT / "decisions").exists(),
+        "model_registry": (STUDIO_ROOT / "model-registry.json").exists(),
+    }
+    
+    health["scores"]["infrastructure"] = sum(checks.values()) / len(checks) * 100
+    
+    # Check for stale scheduled tasks (Hamilton Rule)
+    # This is a placeholder - in production, read from Task Scheduler or a status file
+    health["scores"]["task_health"] = 100  # Assume healthy unless we detect otherwise
+    
+    # Count recent errors in logs
+    error_count = 0
+    if SUPERVISOR_LOG.exists():
+        try:
+            with open(SUPERVISOR_LOG, "r", encoding="utf-8") as f:
+                for line in f:
+                    if "ERROR" in line.upper() or "FAILED" in line.upper():
+                        error_count += 1
+        except Exception:
+            pass
+    
+    health["scores"]["error_rate"] = max(0, 100 - (error_count * 5))  # -5 per error
+    
+    # Overall health
+    health["scores"]["overall"] = sum(health["scores"].values()) / len(health["scores"])
+    
+    # Generate alerts
+    if health["scores"]["overall"] < 80:
+        health["alerts"].append("Overall health below 80% - review errors")
+    if not checks["chromadb"]:
+        health["alerts"].append("ChromaDB path not found")
+    
     return health
 
+
 def write_health_report(health: dict):
-    """Write health scores to a markdown file for Supervisor weekly digest."""
-    report_path = os.path.join(STUDIO_ROOT, "logs", f"health_{yesterday_str()}.md")
-    lines = [f"# Studio Health Report — {yesterday_str()}\n"]
-    lines.append("| Project | Score | TODOs | Files |\n|---|---|---|---|")
-    for proj, data in sorted(health.items(), key=lambda x: x[1]["score"]):
-        emoji = "🟢" if data["score"] >= 80 else ("🟡" if data["score"] >= 50 else "🔴")
-        lines.append(f"| {proj} | {emoji} {data['score']} | {data['todos']} | {data['py_files']} |")
-    with open(report_path, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines))
-    log(f"Health report written: {report_path}")
+    """Write health report as markdown."""
+    HEALTH_REPORT.parent.mkdir(parents=True, exist_ok=True)
+    
+    md = f"""# Studio Health Report
+Generated: {health['generated_at']}
 
-# ── Main ─────────────────────────────────────────────────────────────────────
+## Scores
+| Metric | Score |
+|--------|-------|
+"""
+    for metric, score in health["scores"].items():
+        emoji = "✅" if score >= 80 else "⚠️" if score >= 60 else "❌"
+        md += f"| {metric} | {emoji} {score:.0f}% |\n"
+    
+    if health["alerts"]:
+        md += "\n## Alerts\n"
+        for alert in health["alerts"]:
+            md += f"- ⚠️ {alert}\n"
+    else:
+        md += "\n## Alerts\nNo alerts. All systems nominal.\n"
+    
+    with open(HEALTH_REPORT, "w", encoding="utf-8") as f:
+        f.write(md)
+    
+    print(f"[AutoDream] Health report written to {HEALTH_REPORT}")
+
+
 def main():
-    date_str = yesterday_str()
-    log(f"=== AutoDream starting for {date_str} ===")
-    total_upserted = 0
-
-    # 1. Supervisor logs
-    sup_raw = load_supervisor_logs(date_str)
-    sup_facts = distill(sup_raw, "supervisor_logs")
-    n = upsert_to_chromadb(sup_facts, "supervisor_logs")
-    log(f"Supervisor logs → {n} facts upserted")
-    total_upserted += n
-
-    # 2. Inbox answers
-    inbox_raw = load_inbox_answers(date_str)
-    inbox_facts = distill(inbox_raw, "inbox_answers")
-    n = upsert_to_chromadb(inbox_facts, "inbox_answers")
-    log(f"Inbox answers → {n} facts upserted")
-    total_upserted += n
-
-    # 3. Health scores (Item #6)
-    health = compute_project_health()
+    print(f"[AutoDream] Starting nightly consolidation at {datetime.datetime.now().isoformat()}")
+    
+    # Step 1: Find and read logs
+    log_path = find_log_file()
+    if not log_path:
+        print("[AutoDream] No log file found. Creating health report only.")
+        entries = []
+    else:
+        print(f"[AutoDream] Reading from {log_path}")
+        entries = get_yesterdays_entries(log_path)
+        print(f"[AutoDream] Found {len(entries)} entries from past 24 hours")
+    
+    # Step 2: Distill via Haiku (if entries exist)
+    if entries:
+        print("[AutoDream] Distilling via Haiku...")
+        chunks = distill_via_haiku(entries)
+        print(f"[AutoDream] Distilled {len(chunks)} chunks")
+        
+        # Step 3: Upsert to ChromaDB
+        if chunks:
+            count = upsert_to_chromadb(chunks)
+            print(f"[AutoDream] Upserted {count} chunks to ChromaDB")
+    
+    # Step 4: Generate health report
+    print("[AutoDream] Generating health report...")
+    health = generate_health_report()
     write_health_report(health)
+    
+    print(f"[AutoDream] Complete. Overall health: {health['scores']['overall']:.0f}%")
+    
+    # Return non-zero if health is critical
+    if health["scores"]["overall"] < 50:
+        return 1
+    return 0
 
-    log(f"=== AutoDream complete. Total chunks upserted: {total_upserted} ===")
 
 if __name__ == "__main__":
-    main()
+    exit(main())

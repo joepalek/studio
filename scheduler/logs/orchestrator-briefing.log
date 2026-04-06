@@ -504,3 +504,5 @@ Briefing saved to `orchestrator-briefing.json`. **Note:** Gemini Flash was unrea
 ---
 
 Briefing saved to `orchestrator-briefing.json`. Note: `gemini-2.0-flash-001` URL in orchestrator.md is stale — working model is `models/gemini-2.5-flash` via the `v1beta` path.
+[Sun 04/05/2026  8:00:02.06] Daily briefing starting 
+You've hit your limit · resets 2pm (America/Chicago)
